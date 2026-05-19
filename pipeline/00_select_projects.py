@@ -153,6 +153,8 @@ def select_projects() -> list[dict]:
 
 
 def main():
+    from _db import load_env  # v2: auto-load repo .env for operator `!` runs
+    load_env()
     run_id = resolve_run_id()
     print(f"[00_select_projects] run_id={run_id}")
 

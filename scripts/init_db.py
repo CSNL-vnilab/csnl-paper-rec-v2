@@ -1,0 +1,61 @@
+#!/usr/bin/env python3
+"""
+scripts/init_db.py — create the csnl_paper_rec PostgreSQL ledger schema +
+tables from state/schema.sql (idempotent).
+
+Ported from the predecessor sqlite init_db.py: same intent (apply schema,
+verify tables), retargeted to PostgreSQL. Substitutes __SCHEMA__ with
+$CPR_LEDGER_SCHEMA. Touches NO data rows. Never touches csnl_research.
+
+OPERATOR-RUN (writes to the lab Supabase):
+    ! python scripts/init_db.py
+
+Safe to run repeatedly. Connection comes only from repo .env.
+"""
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "pipeline"))
+from _db import load_env, exec_sql, query_json, ledger_schema  # noqa: E402
+
+_REPO_ROOT = Path(__file__).resolve().parent.parent
+_SCHEMA_SQL = _REPO_ROOT / "state" / "schema.sql"
+
+_TABLES = (
+    "paper_recommendations",
+    "recommendation_messages",
+    "paper_recommendations_read",
+    "feedback_events",
+    "exclusion_rules",
+)
+
+
+def main() -> int:
+    load_env()
+    schema = ledger_schema()
+    if not _SCHEMA_SQL.exists():
+        print(f"ERROR: schema not found: {_SCHEMA_SQL}")
+        return 1
+
+    ddl = _SCHEMA_SQL.read_text(encoding="utf-8").replace("__SCHEMA__", schema)
+    print(f"[init_db] applying ledger schema '{schema}' (idempotent)…")
+    exec_sql(ddl)
+
+    present = query_json(
+        "SELECT table_name FROM information_schema.tables "
+        f"WHERE table_schema = '{schema}' ORDER BY table_name"
+    )
+    names = sorted(r["table_name"] for r in present)
+    print(f"[init_db] tables in {schema}: {names}")
+
+    missing = [t for t in _TABLES if t not in names]
+    if missing:
+        print(f"ERROR: tables missing after apply: {missing}")
+        return 1
+    print(f"[init_db] OK — {len(_TABLES)} ledger tables verified in '{schema}'.")
+    print("[init_db] csnl_research untouched (read-only interest source).")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
