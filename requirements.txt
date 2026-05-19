@@ -1,0 +1,14 @@
+# csnl-paper-rec-v2 — Python deps (reproducibility; REF-F).
+# Verified present in the lab env: pyyaml 6.0.3, requests 2.34.2.
+# psycopg2 is OPTIONAL — pipeline/_db.py + 00_select_projects.py fall back
+# to the `psql` CLI when it is absent (the lab's working pattern).
+#
+# DELIBERATELY ABSENT: anthropic, openai, ollama, openrouter — scoring and
+# drafting are done by the in-session Opus agent team (operator-driven),
+# never an API key, never cron (rules/00_scope.md, docs/DECISIONS-*).
+
+pyyaml>=6.0
+requests>=2.31
+# psycopg2-binary>=2.9   # optional; uncomment to use the psycopg2 fast path
+
+# Node deps (full-text crawler) are in package.json: playwright + pdfjs-dist.
