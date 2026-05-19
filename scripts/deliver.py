@@ -266,9 +266,128 @@ def real_send(drafts: list[dict], rid: str, banned: list[str],
     print(f"\n{'='*70}\n  done: {sent} sent, {skipped} skipped\n{'='*70}")
 
 
+# ---------------------------------------------------------------------------
+# DM mode (operator override 2026-05-19): full recommendation + reviewed
+# alternate list + ask, delivered as a DM to each researcher individually.
+# Reads state/runs/<RID>/08_dm_drafts.json. Same gate, same sequential ≥7 s,
+# same tone-lint backstop. SYJ & BHL are separate recipients here.
+# ---------------------------------------------------------------------------
+
+DM_REQ = ("unit_id", "member_init", "dm_channel", "dm_text",
+          "paper_doi", "paper_title", "paper_date", "tier")
+
+
+def _load_dm(rid: str) -> list[dict]:
+    f = run_dir(rid) / "08_dm_drafts.json"
+    if not f.exists():
+        print(f"ERROR: {f.relative_to(REPO_ROOT)} not found "
+              "(run scripts/build_dm_drafts.py first).")
+        sys.exit(1)
+    ds = json.loads(f.read_text()).get("drafts", [])
+    for d in ds:
+        for k in DM_REQ:
+            if not d.get(k):
+                print(f"ERROR: DM draft {d.get('member_init','?')} missing '{k}'.")
+                sys.exit(1)
+    return ds
+
+
+def write_ledger_dm(d: dict, rid: str, slack_ts: str, posted_at: str) -> None:
+    sys.path.insert(0, str(REPO_ROOT / "pipeline"))
+    from _db import load_env, exec_many, ledger_schema
+    load_env()
+    s = ledger_schema()
+    exec_many(
+        f"INSERT INTO {s}.paper_recommendations (run_id,unit_id,member_init,"
+        "channel_id,slack_ts,paper_doi,paper_title,paper_date,tier,posted_at) "
+        "VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s) ON CONFLICT DO NOTHING",
+        [(rid, d["unit_id"], d["member_init"], d["dm_channel"], slack_ts,
+          d["paper_doi"], d["paper_title"], d["paper_date"], d["tier"], posted_at)])
+    exec_many(
+        f"INSERT INTO {s}.recommendation_messages (id,channel_id,message_ts,"
+        "unit_id,paper_doi,posted_at,context_json) VALUES "
+        "(%s,%s,%s,%s,%s,%s,%s) ON CONFLICT DO NOTHING",
+        [(str(uuid.uuid4()), d["dm_channel"], slack_ts, d["unit_id"],
+          d["paper_doi"], posted_at, json.dumps(
+              {"run_id": rid, "mode": "dm", "member_init": d["member_init"],
+               "tier": d["tier"], "paper_title": d["paper_title"]}))])
+
+
+def dry_run_dm(ds: list[dict], rid: str, banned: list[str]) -> None:
+    print()
+    sep("═")
+    print(f"  DRY-RUN PREVIEW (DM mode)  |  RUN_ID = {rid}  |  recipients = {len(ds)}")
+    print("  NOTHING IS SENT. NO DB WRITE. Gate: --send --operator-approved"
+          f" + state/.APPROVED_{rid}")
+    sep("═")
+    all_ok = True
+    for i, d in enumerate(ds, 1):
+        print()
+        sep()
+        print(f"  {i}/{len(ds)}  {d['member_init']} ({d.get('display_name','')}) "
+              f"→ DM {d['dm_channel']}  · unit {d['unit_id']} · tier {d['tier']}")
+        print(f"  Paper : {d['paper_title']}")
+        print(f"  DOI   : https://doi.org/{d['paper_doi']}  · alts={d.get('alternates')}")
+        sep()
+        for ln in d["dm_text"].split("\n"):
+            print(f"  | {ln}")
+        sep()
+        hits = tone_lint(d["dm_text"], banned)
+        caps = cap_check(d["dm_text"])
+        if hits or caps:
+            all_ok = False
+            print(f"  Tone lint: FAIL banned={hits} caps={caps} → recipient ABORTED on send")
+        else:
+            print(f"  Tone lint: OK (no banned terms; paradigm/framework ≤1; "
+                  f"chars≈{len(re.sub(chr(92)+'s','',d['dm_text']))})")
+        print(f"  Ledger: paper_recommendations unit={d['unit_id']} "
+              f"member={d['member_init']} channel={d['dm_channel']} "
+              f"doi={d['paper_doi']} tier={d['tier']}  (+1 recommendation_messages)")
+    print()
+    sep("═")
+    print(f"  END PREVIEW — tone lint {'OK for ALL recipients' if all_ok else 'FAILED'}")
+    print(f"  Send (operator): touch state/.APPROVED_{rid} ; "
+          f"python scripts/deliver.py --run-id {rid} --mode dm --send --operator-approved")
+    sep("═")
+
+
+def real_send_dm(ds: list[dict], rid: str, banned: list[str], token: str) -> None:
+    print(f"\n{'='*70}\n  REAL SEND (DM mode)  |  RUN_ID={rid}  |  {len(ds)} recipient(s); "
+          f"≥{MIN_GAP_SECONDS}s gap\n{'='*70}")
+    sent = skipped = 0
+    for i, d in enumerate(ds, 1):
+        who = d["member_init"]
+        print(f"\n  [{i}/{len(ds)}] {who} → {d['dm_channel']}")
+        if tone_lint(d["dm_text"], banned) or cap_check(d["dm_text"]):
+            print(f"  [{who}] TONE LINT FAIL — recipient ABORTED")
+            skipped += 1
+            continue
+        try:
+            posted_at = kst_iso()
+            resp = slack_post(token, d["dm_channel"], d["dm_text"])
+            ts = resp.get("ts", "")
+            if not resp.get("ok", True):
+                raise RuntimeError("slack not ok")
+            pl = slack_permalink(token, d["dm_channel"], ts)
+            print(f"  [{who}] ok ts={ts} permalink={pl}")
+            write_ledger_dm(d, rid, ts, posted_at)
+            print(f"  [{who}] ledger written")
+            sent += 1
+        except RuntimeError as e:
+            print(f"  [{who}] send FAILED: {e} — recipient skipped")
+            skipped += 1
+        if i < len(ds):
+            print(f"  waiting {MIN_GAP_SECONDS}s…")
+            time.sleep(MIN_GAP_SECONDS)
+    print(f"\n{'='*70}\n  done: {sent} sent, {skipped} skipped\n{'='*70}")
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description="csnl-paper-rec-v2 gated delivery")
     ap.add_argument("--run-id", required=True, metavar="YYYYMMDD-HHMM")
+    ap.add_argument("--mode", choices=["channel", "dm"], default="channel",
+                    help="channel: 07_drafts (channel post + DM ping). "
+                         "dm: 08_dm_drafts (full DM to each researcher).")
     ap.add_argument("--send", action="store_true", default=False)
     ap.add_argument("--operator-approved", action="store_true", default=False)
     args = ap.parse_args()
@@ -292,6 +411,23 @@ def main() -> int:
             return 1
         print("  WARNING: BANNED_TERMS block missing — lint skipped in preview.")
         banned = []
+
+    if args.mode == "dm":
+        ds = _load_dm(rid)
+        if dry:
+            dry_run_dm(ds, rid, banned)
+            return 0
+        token = os.environ.get("SLACK_BOT_TOKEN", "")
+        if not token:
+            sys.path.insert(0, str(REPO_ROOT / "pipeline"))
+            from _db import load_env
+            load_env()
+            token = os.environ.get("SLACK_BOT_TOKEN", "")
+        if not token:
+            print("ERROR: SLACK_BOT_TOKEN not set (env or .env).")
+            return 1
+        real_send_dm(ds, rid, banned, token)
+        return 0
 
     df = run_dir(rid) / "07_drafts.json"
     if not df.exists():
