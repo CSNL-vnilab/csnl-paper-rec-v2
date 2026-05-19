@@ -1,0 +1,20 @@
+# secrets / env
+.env
+.env.local
+*.key
+credentials.json
+
+# state / runtime (ledger is in Postgres now; runs are local artifacts)
+state/runs/
+state/.APPROVED_*
+*.log
+
+# caches
+__pycache__/
+*.pyc
+.DS_Store
+*.anchor-vectors.json
+.embed-cache/
+
+# node (playwright/pdfjs crawl stack)
+node_modules/

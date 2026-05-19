@@ -1,0 +1,19 @@
+{
+  "name": "csnl-paper-rec-v2",
+  "version": "2.0.0",
+  "description": "Per-researcher personalized academic-paper recommendation automation for the CSNL lab. Harness-engineered multi-agent system driven by a PostgreSQL record of each member's latest research interests (csnl_research.projects), with a PostgreSQL recommendation ledger.",
+  "private": true,
+  "scripts": {
+    "test": "echo \"no automated test suite — see docs/VERIFICATION-v2.md\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CSNL-vnilab/csnl-paper-rec-v2.git"
+  },
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "pdfjs-dist": "^4.10.38",
+    "playwright": "^1.60.0"
+  }
+}

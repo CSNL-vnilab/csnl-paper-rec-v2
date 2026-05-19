@@ -1,0 +1,4281 @@
+{
+  "_provenance": "Ported read-only snapshot from csnl-paper-scout/data/reading-db/ (csnl_library_import.json + study_paper_reading_db.json). Generated 2026-05-18 by scripts/port_assets.sh. DO NOT EDIT — refresh by re-running port_assets.sh.",
+  "entries": [
+    {
+      "doi": "10.1016/j.cortex.2016.07.021",
+      "title": "No fixed item limit in visuospatial working memory"
+    },
+    {
+      "doi": "10.1101/771071",
+      "title": "Stochastic sampling provides a unifying account of visual working memory limits"
+    },
+    {
+      "doi": "10.1016/j.neuroimage.2007.09.034",
+      "title": "Population receptive field estimates in human visual cortex"
+    },
+    {
+      "doi": "10.1016/j.cub.2014.07.066",
+      "title": "Reconstructions of Information in Visual Spatial Working Memory Degrade with"
+    },
+    {
+      "doi": "10.1016/j.neuron.2016.07.006",
+      "title": "Restoring Latent Visual Working Memory Representations in Human Cortex"
+    },
+    {
+      "doi": "10.1038/s41598-023-45505-5",
+      "title": "Spatial correspondence in relative space regulates serial dependence"
+    },
+    {
+      "doi": "10.1162/jocn_a_01427",
+      "title": "Not-so-working Memory Drift in Functional Magnetic Resonance Imaging Pattern"
+    },
+    {
+      "doi": "10.1167/13.9.804",
+      "title": "Properties of high-fidelity visual working memory representations for"
+    },
+    {
+      "doi": "10.3758/s13414-017-1404-8)",
+      "title": "Interactions between visual working memory representations"
+    },
+    {
+      "doi": "10.1177/0956797619830398",
+      "title": "Reactivation of Previous Experiences in a Working Memory Task"
+    },
+    {
+      "doi": "10.3758/s13423-019-01678-7",
+      "title": "Serial dependence in vision Merely encoding the previous-trial target is not"
+    },
+    {
+      "doi": "10.1523/jneurosci.3204-13.2014",
+      "title": "Noise in Neural Populations Accounts for Errors in Working Memory"
+    },
+    {
+      "doi": "10.1167/jov",
+      "title": "Serial dependence in visual perception A review"
+    },
+    {
+      "doi": "10.1523/jneurosci.3493-16.2017",
+      "title": "Neural Architecture for Feature Binding in Visual Working Memory"
+    },
+    {
+      "doi": "10.1038/nn.3645",
+      "title": "Bump attractor dynamics in prefrontal cortex explains behavioral precision in"
+    },
+    {
+      "doi": "10.1101/2020.07.16.191445",
+      "title": "Concurrent visual working memory bias in sequential integration of approximate"
+    },
+    {
+      "doi": "10.1016/j.neuroimage.2017.11.022",
+      "title": "Population receptive field (pRF) measurements of chromatic responses in human"
+    },
+    {
+      "doi": "10.1101/2020.06.01.128173",
+      "title": "Prefrontal and Parietal Attractor Networks Mediate Working Memory Judgments"
+    },
+    {
+      "doi": "10.1016/j.tics.2013.06.006",
+      "title": "Visual working memory capacity from psychophysics and neurobiology to"
+    },
+    {
+      "doi": "10.1523/jneurosci.1018-18.2018",
+      "title": "Efficient Coding in Visual Working Memory Accounts for Stimulus-Specific"
+    },
+    {
+      "doi": "10.1016/j.tics.2011.02.005",
+      "title": "Visual crowding a fundamental limit on conscious perception and object"
+    },
+    {
+      "doi": "10.1038/srep25156",
+      "title": "Learning Bayesian Networks from Correlated Data"
+    },
+    {
+      "doi": "10.1101/699884",
+      "title": "Correspondence between population coding and psychophysical scaling models of"
+    },
+    {
+      "doi": "10.1016/j.neuroimage.2013.05.026",
+      "title": "A new method for estimating population receptive field topography in visual"
+    },
+    {
+      "doi": "10.3758/s13421-015-0558-7",
+      "title": "The relative roles of visuospatial and linguistic working memory systems in"
+    },
+    {
+      "doi": "10.1016/j.tics.2015.03.009",
+      "title": "Computational neuroimaging and population receptive fields"
+    },
+    {
+      "doi": "10.1167/14.1.17",
+      "title": "Measurement of population receptive fields in human early visual cortex using"
+    },
+    {
+      "doi": "10.1371/journal.pone.0037686.g002",
+      "title": "Population Receptive Field Dynamics in Human Visual Cortex"
+    },
+    {
+      "doi": "10.1523/jneurosci.2767-06.2006",
+      "title": "Neural Correlates of Vibrotactile Working Memory in the Human Brain"
+    },
+    {
+      "doi": "10.1038/nn.4546",
+      "title": "Dynamic hidden states underlying working-memory-guided behavior"
+    },
+    {
+      "doi": "10.1016/j.brainres.2017.05.005",
+      "title": "Frontoparietal neurostimulation modulates working memory training benefits and"
+    },
+    {
+      "doi": "10.1101/2020.04.07.030718",
+      "title": "Selective control of working memory in prefrontal, parietal, and visual cortex"
+    },
+    {
+      "doi": "10.1523/jneurosci.3754-12.2013",
+      "title": "Decoding Working Memory of Stimulus Contrast in Early Visual Cortex"
+    },
+    {
+      "doi": "10.1016/j.cub.2016.04.035",
+      "title": "Spatial Working Memory in Humans Depends on Theta and High Gamma"
+    },
+    {
+      "doi": "10.3389/fnhum.2015.00096",
+      "title": "Comparing different stimulus configurations for population receptive field"
+    },
+    {
+      "doi": "10.3389/fnhum.2014.00102",
+      "title": "Perceptual decision making drift-diffusion model is equivalent to a Bayesian"
+    },
+    {
+      "doi": "10.1371/journal.pcbi.1004442",
+      "title": "A Bayesian Attractor Model for Perceptual Decision Making"
+    },
+    {
+      "doi": "10.1016/j.tics.2010.03.006",
+      "title": "Beyond working memory the role of persistent activity in decision making"
+    },
+    {
+      "doi": "10.1523/jneurosci.5503-08.2009",
+      "title": "Visual Salience Affects Performance in a Working Memory Task"
+    },
+    {
+      "doi": "10.1101/667626",
+      "title": "Context information supports serial dependence of multiple visual objects"
+    },
+    {
+      "doi": "10.1016/j.visres.2019.04.011",
+      "title": "Serial dependence generalizes across different stimulus formats, but not"
+    },
+    {
+      "doi": "10.1016/j.neuroimage.2016.06.048",
+      "title": "Systematic variation of population receptive field properties across cortical"
+    },
+    {
+      "doi": "10.1523/jneurosci.3418-16.2017",
+      "title": "Visual Working Memory Enhances the Neural Response to Matching Visual Input"
+    },
+    {
+      "doi": "10.1037/xhp0000290",
+      "title": "Categorical working memory representations are used in delayed estimation of"
+    },
+    {
+      "doi": "10.1073/pnas.1918143117",
+      "title": "Humans incorporate trial-to-trial working memory uncertainty into rewarded"
+    },
+    {
+      "doi": "10.1007/s00426-024-02071-3",
+      "title": "Distinct serial dependence between small and large numerosity processing"
+    },
+    {
+      "doi": "10.1101/165399",
+      "title": "Serial dependence transfers between perceptual objects"
+    },
+    {
+      "doi": "10.1007/s00221-012-3305-3",
+      "title": "Frontal theta is a signature of successful working memory manipulation"
+    },
+    {
+      "doi": "10.1016/j.cub.2017.02.013",
+      "title": "Persistent Single-Neuron Activity during Working Memory in the Human Medial"
+    },
+    {
+      "doi": "10.1073/pnas.1619949114",
+      "title": "Correlated variability modifies working memory fidelity in primate prefrontal"
+    },
+    {
+      "doi": "10.1016/j.cub.2014.09.025",
+      "title": "Serial Dependence in the Perception of Faces"
+    },
+    {
+      "doi": "10.1016/j.neuron.2016.02.028",
+      "title": "Gamma and Beta Bursts Underlie Working Memory"
+    },
+    {
+      "doi": "10.1016/j.neubiorev.2019.03.017",
+      "title": "Neural mechanisms of attending to items in working memory"
+    },
+    {
+      "doi": "10.3389/fpsyg.2014.00880",
+      "title": "Attention and working memory two basic mechanisms for constructing temporal"
+    },
+    {
+      "doi": "10.1038/s41598-017-00680-0",
+      "title": "A Bayesian Perspective on Accumulation in the Magnitude System"
+    },
+    {
+      "doi": "10.1016/j.tics.2017.03.010",
+      "title": "Prioritizing Information during Working Memory Beyond Sustained Internal"
+    },
+    {
+      "doi": "10.1016/j.neuron.2009.09.006",
+      "title": "Bayesian Reconstruction of Natural Images from Human Brain Activity"
+    },
+    {
+      "doi": "10.1016/j.tics.2019.06.002",
+      "title": "Is Rehearsal an Effective Maintenance Strategy for Working Memory"
+    },
+    {
+      "doi": "10.1016/j.neuroimage.2015.06.085",
+      "title": "Nonlinear population receptive field changes in human area V5MT+ of healthy"
+    },
+    {
+      "doi": "10.1037/0096-1523.33.5.1062",
+      "title": "Concurrent working memory load can facilitate selective attention Evidence for"
+    },
+    {
+      "doi": "10.1038/s41598-019-52017-8",
+      "title": "Dynamically changing neuronal activity supporting working memory for"
+    },
+    {
+      "doi": "10.1016/j.cortex.2014.12.001",
+      "title": "Working Memory Updating in the Macaque Lateral Prefrontal Cortex"
+    },
+    {
+      "doi": "10.1037/a0013345",
+      "title": "Working memory capacity and the self-regulation of emotional expression and"
+    },
+    {
+      "doi": "10.1523/jneurosci.1513-16.2016",
+      "title": "Training Working Memory Anatomy Matters"
+    },
+    {
+      "doi": "10.1038/s41598-018-21896-8",
+      "title": "The role of medial prefrontal cortex in the working memory maintenance of one’s"
+    },
+    {
+      "doi": "10.1523/jneurosci.3364-16.2017",
+      "title": "Stable and Dynamic Coding for Working Memory in Primate Prefrontal Cortex"
+    },
+    {
+      "doi": "10.1037/xhp0000449",
+      "title": "Supplemental Material for Benefits of Flexible Prioritization in Working Memory"
+    },
+    {
+      "doi": "10.1016/j.jml.2017.05.001",
+      "title": "Attentional refreshing of information in working memory Increased immediate"
+    },
+    {
+      "doi": "10.1038/nn.4105",
+      "title": "A Bayesian observer model constrained by efficient coding can explain"
+    },
+    {
+      "doi": "10.1016/j.neuropsychologia.2018.01.010",
+      "title": "How context features modulate the involvement of the working memory system"
+    },
+    {
+      "doi": "10.1167/12.3.10",
+      "title": "Modeling center-surround configurations in population receptive fields using"
+    },
+    {
+      "doi": "10.1523/jneurosci.2272-16.2017",
+      "title": "Temporal Expectations Guide Dynamic Prioritization in Visual Working Memory"
+    },
+    {
+      "doi": "10.1371/journal.pone.0019551.g001",
+      "title": "Bayesian Inference Underlies the Contraction Bias in Delayed Comparison Tasks"
+    },
+    {
+      "doi": "10.1016/j.neuroimage.2014.11.051",
+      "title": "Frontoparietal networks involved in categorization and item working memory"
+    },
+    {
+      "doi": "10.1016/j.neuroimage.2014.11.018",
+      "title": "Parietal and early visual cortices encode working memory content across mental"
+    },
+    {
+      "doi": "10.1038/nature07832",
+      "title": "Decoding reveals the contents of visual working memory in early visual areas"
+    },
+    {
+      "doi": "10.1101/747329",
+      "title": "Visual working memory representations in visual and parietal cortex do not"
+    },
+    {
+      "doi": "10.1016/j.neuroimage.2017.12.067",
+      "title": "Effective connectivity during working memory and resting states A DCM study"
+    },
+    {
+      "doi": "10.1038/s41562-025-02362-8",
+      "title": "Large-scale mega-analysis indicates that serial dependence deteriorates"
+    },
+    {
+      "doi": "10.3389/fpsyg.2020.00939",
+      "title": "Is It Possible to Improve Working Memory With Prefrontal tDCS Bridging Currents"
+    },
+    {
+      "doi": "10.3758/s13414-017-1331-8",
+      "title": "Confident failures Lapses of working memory reveal a metacognitive blind spot"
+    },
+    {
+      "doi": "10.1152/jn.00362.2015.—the",
+      "title": "Neural circuit basis of visuo-spatial working memory precision a computational"
+    },
+    {
+      "doi": "10.1523/jneurosci.3620-15.2016",
+      "title": "Visual Population Receptive Fields in People with Schizophrenia Have Reduced"
+    },
+    {
+      "doi": "10.1016/j.neuron.2016.12.004",
+      "title": "Can vibrotactile working memory store multiple items"
+    },
+    {
+      "doi": "10.3389/fnagi.2017.00178",
+      "title": "Enhanced Working Memory Binding by Direct Electrical Stimulation of the"
+    },
+    {
+      "doi": "10.1101/187666",
+      "title": "Serial dependence is absent at the time of perception but increases in visual"
+    },
+    {
+      "doi": "10.7554/elife.86725",
+      "title": "Unifying network model links recency and central tendency biases in working"
+    },
+    {
+      "doi": "10.1038/nn.4568",
+      "title": "Thalamic projections sustain prefrontal activity during working memory"
+    },
+    {
+      "doi": "10.1016/j.neuron.2019.04.020",
+      "title": "A Flexible Model of Working Memory"
+    },
+    {
+      "doi": "10.1037/a0030779.supp",
+      "title": "A probabilistic model of visual working memory Incorporating higher order"
+    },
+    {
+      "doi": "10.1038/nrn.2016.181",
+      "title": "Working out working memory"
+    },
+    {
+      "doi": "10.1101/2025.04.24.650437",
+      "title": "Attractive and repulsive history effects in categorical and continuous"
+    },
+    {
+      "doi": "10.1093/cercor/bhw138",
+      "title": "The Role of Working Memory in the Probabilistic Inference of Future Sensory"
+    },
+    {
+      "doi": "10.3389/fpsyg.2020.570030",
+      "title": "Predicting Working Memory Training Benefits From Transcranial Direct Current"
+    },
+    {
+      "doi": "10.1016/j.cognition.2021.104709",
+      "title": "Serial dependence does not originate from low-level visual processing"
+    },
+    {
+      "doi": "10.1016/j.neuron.2014.01.002",
+      "title": "Corticostriatal Output Gating during Selection from Working Memory"
+    },
+    {
+      "doi": "10.3758/s13421-014-0496-9",
+      "title": "The scope and control of attention Sources of variance in working memory"
+    },
+    {
+      "doi": "10.1038/s41593-018-0094-4",
+      "title": "Cortical specialization for attended versus unattended working memory"
+    },
+    {
+      "doi": "10.1098/rspb.2018.1722",
+      "title": "The functional role of serial dependence"
+    },
+    {
+      "doi": "10.1038/nrn.2016.43",
+      "title": "The neuroscience of working memory capacity and training"
+    },
+    {
+      "doi": "10.1101/521849",
+      "title": "Cerebellar disruption impairs working memory"
+    },
+    {
+      "doi": "10.1162/jocn_a_00357",
+      "title": "A Neural Measure of Precision in Visual Working Memory"
+    },
+    {
+      "doi": "10.3389/fncom.2017.00029",
+      "title": "A Bayesian Reformulation of the Extended Drift-Diffusion Model in Perceptual"
+    },
+    {
+      "doi": "10.1038/nn.3689",
+      "title": "Serial dependence in visual perception"
+    },
+    {
+      "doi": "10.1038/ncomms2237",
+      "title": "Variability in the quality of visual working memory"
+    },
+    {
+      "doi": "10.1093/cercor/bhw305",
+      "title": "Uncovering the Spatial Profile of Contour Integration from Fixational Saccades"
+    },
+    {
+      "doi": "10.1016/j.neulet.2014.11.014",
+      "title": "Emotional content of stimuli improves visuospatial working memory"
+    },
+    {
+      "doi": "10.1101/2021.07.08.451663",
+      "title": "Neural substrate and underlying mechanisms of working memory insights from"
+    },
+    {
+      "doi": "10.1016/j.neuroimage.2017.11.021",
+      "title": "Radial asymmetries in population receptive field size and cortical"
+    },
+    {
+      "doi": "10.1016/j.brs.2015.10.006",
+      "title": "Effects of Anodal Transcranial Direct Current Stimulation on Working Memory A"
+    },
+    {
+      "doi": "10.1080/02699931.2016.1213703",
+      "title": "Emotional influences on perception and working memory"
+    },
+    {
+      "doi": "10.1016/j.neuropsychologia.2010.12.020",
+      "title": "Common neural mechanisms supporting spatial working memory, attention and motor"
+    },
+    {
+      "doi": "10.1038/s41586-019-0919-7",
+      "title": "Discrete attractor dynamics underlies persistent activity in the frontal cortex"
+    },
+    {
+      "doi": "10.1080/02699931.2017.1345720",
+      "title": "Eye gaze influences working memory for happy but not angry faces"
+    },
+    {
+      "doi": "10.1037/a0035545",
+      "title": "Working memory updating latency reflects the cost of switching between"
+    },
+    {
+      "doi": "10.1016/j.tics.2017.04.011",
+      "title": "Serial Dependence across Perception, Attention, and Memory"
+    },
+    {
+      "doi": "10.1016/j.visres.2016.03.006",
+      "title": "Eye movements between saccades Measuring ocular drift and tremor"
+    },
+    {
+      "doi": "10.1523/jneurosci.3061-17.2018",
+      "title": "Flexible Coding of Visual Working Memory Representations during Distraction"
+    },
+    {
+      "doi": "10.1167/17.1.13",
+      "title": "Bayesian microsaccade detection"
+    },
+    {
+      "doi": "10.1016/j.neuron.2018.09.023",
+      "title": "Working Memory 2.0"
+    },
+    {
+      "doi": "10.1080/02699931.2015",
+      "title": "Working memory affects false memory production for emotional events"
+    },
+    {
+      "doi": "10.1080/02699931.2017.1319340",
+      "title": "What happened first Working memory and negative emotion tell you better"
+    },
+    {
+      "doi": "10.1126/science.1150769",
+      "title": "Synaptic Theory of Working Memory"
+    },
+    {
+      "doi": "10.1162/jocn_a_01322",
+      "title": "Predictive Pre-updating and Working Memory Capacity Evidence from Event-related"
+    },
+    {
+      "doi": "10.1038/s41467-019-11298-3",
+      "title": "Error-correcting dynamics in visual working memory"
+    },
+    {
+      "doi": "10.1038/s41598-017-15249-0",
+      "title": "Working memory, attention, and salience in active inference"
+    },
+    {
+      "doi": "10.1016/j.jarmac.2017.01.002",
+      "title": "Event segmentation as a working memory process"
+    },
+    {
+      "doi": "10.1523/jneurosci.1892-12.2012",
+      "title": "The Relationship between Working Memory Storage and Elevated Activity as"
+    },
+    {
+      "doi": "10.3758/s13423-023-02320-3",
+      "title": "The push–pull of serial dependence effects Attraction to the prior response and"
+    },
+    {
+      "doi": "10.1167/17.14.10",
+      "title": "The effects of delay duration on visual working memory for orientation"
+    },
+    {
+      "doi": "10.3758/s13414-015-0899-0",
+      "title": "Working memory capacity and the scope and control of attention"
+    },
+    {
+      "doi": "10.1016/j.tics.2013.12.001",
+      "title": "Revisiting the role of persistent neural activity during working memory"
+    },
+    {
+      "doi": "10.1523/jneurosci.4390-15.2016",
+      "title": "Serial Dependence in Perceptual Decisions Is Reflected in Activity Patterns"
+    },
+    {
+      "doi": "10.1101/830471",
+      "title": "Disrupted serial dependence suggests deficits in synaptic potentiation in"
+    },
+    {
+      "doi": "10.1038/s41467-020-18033-3",
+      "title": "Reduced serial dependence suggests deficits in synaptic potentiation in"
+    },
+    {
+      "doi": "10.1016/j.tics.2015.05.004",
+      "title": "‘Activity-silent’ working memory in prefrontal cortex a dynamic coding framework"
+    },
+    {
+      "doi": "10.1038/s41562-019-0640-4",
+      "title": "Visual working memory directly alters perception"
+    },
+    {
+      "doi": "10.1016/j.tics.2016.12.007",
+      "title": "Cortical feedback loops bind distributed representations of working memory"
+    },
+    {
+      "doi": "10.3389/fpsyg.2013.00433",
+      "title": "What is working memory capacity, and how can we measure it"
+    },
+    {
+      "doi": "10.1080/02699931.2016.1223020",
+      "title": "Affective bias in visual working memory is associated with capacity"
+    },
+    {
+      "doi": "10.1016/j.tics.2017.06.013",
+      "title": "Reevaluating the Sensory Account of Visual Working Memory Storage"
+    },
+    {
+      "doi": "10.1038/srep35573",
+      "title": "Retro-dimension-cue benefit in visual working memory"
+    },
+    {
+      "doi": "10.1038/s41598-019-44998-3",
+      "title": "Working memory capacity affects trade-off between quality and quantity only"
+    },
+    {
+      "doi": "10.1038/s41598-018-34282-1",
+      "title": "Strategic allocation of working memory resource"
+    },
+    {
+      "doi": "10.1038/nn.3574",
+      "title": "Attention modulates spatial priority maps in the human occipital, parietal and"
+    },
+    {
+      "doi": "10.1093/cercor/bhw411",
+      "title": "Stimulus-Tuned Structure of Correlated fMRI Activity in Human Visual Cortex"
+    },
+    {
+      "doi": "10.1101/642710",
+      "title": "Inverted encoding models estimate sensible channel responses for sensible models"
+    },
+    {
+      "doi": "10.1523/jneurosci.6153-09.2011",
+      "title": "Attention Improves Encoding of Task-Relevant Features in the Human Visual Cortex"
+    },
+    {
+      "doi": "10.1523/jneurosci.4021-07.2007",
+      "title": "The Representation of Behavioral Choice for Motion in Human Visual Cortex"
+    },
+    {
+      "doi": "10.1523/jneurosci.2586-16.2016",
+      "title": "Nasal Respiration Entrains Human Limbic Oscillations and Modulates Cognitive"
+    },
+    {
+      "doi": "10.1126/science.1087839",
+      "title": "Flexible Retinotopy Motion-Dependent Position Coding in the Visual Cortex"
+    },
+    {
+      "doi": "10.1016/j.cognition.2004.11.004",
+      "title": "Capacity limits for face processing"
+    },
+    {
+      "doi": "10.1038/nn1691",
+      "title": "Optimal representation of sensory information by neural populations"
+    },
+    {
+      "doi": "10.1167/iovs.15-18439",
+      "title": "A Preliminary Study on Normalized Pattern-Reversal Peripheral Field SSVEPs as a"
+    },
+    {
+      "doi": "10.1073/pnas.1117465109",
+      "title": "Variability in encoding precision accounts for the limitations of visual"
+    },
+    {
+      "doi": "10.1038/s42256-019-0029-0",
+      "title": "Autonomous functional movements in a tendon-driven limb via limited experience"
+    },
+    {
+      "doi": "10.1038/nn.4560",
+      "title": "Pinging the brain to reveal hidden memories"
+    },
+    {
+      "doi": "10.1101/339200",
+      "title": "Simultaneous representation of sensory and mnemonic information in human visual"
+    },
+    {
+      "doi": "10.1038/s41593-019-0428-x",
+      "title": "Coexisting representations of sensory and mnemonic information in human visual"
+    },
+    {
+      "doi": "10.1016/j.cognition.2016.03.020",
+      "title": "Rate–distortion theory and human perception"
+    },
+    {
+      "doi": "10.1126/sciadv.1400254",
+      "title": "Stereopsis is adaptive for the natural environment"
+    },
+    {
+      "doi": "10.1523/eneuro.0098-18.2018",
+      "title": "Inverted Encoding Models Assay Population-Level Stimulus Representations, Not"
+    },
+    {
+      "doi": "10.1038/nn1669",
+      "title": "Noise characteristics and prior expectations in human visual speed perception"
+    },
+    {
+      "doi": "10.1007/s00484-018-1566-7",
+      "title": "Relationship between climatic variables and the variation in bulk tank"
+    },
+    {
+      "doi": "10.1093/brain/awu118",
+      "title": "Beyond the temporal pole limbic memory circuit in the semantic variant of"
+    },
+    {
+      "doi": "10.1038/nature05739",
+      "title": "A new perceptual illusion reveals mechanisms of sensory decoding"
+    },
+    {
+      "doi": "10.1038/nn.2590",
+      "title": "Temporal context calibrates interval timing"
+    },
+    {
+      "doi": "10.1016/j.neuropsychologia.2007.12.003",
+      "title": "Affective learning modulates spatial competition during low-load attentional"
+    },
+    {
+      "doi": "10.1038/nn.4158",
+      "title": "Inferring learning rules from distributions of firing rates in cortical neurons"
+    },
+    {
+      "doi": "10.1016/j.neuroimage.2009.04.037",
+      "title": "Neural correlates of narrative shifts during auditory story comprehension"
+    },
+    {
+      "doi": "10.1016/j.neuron.2017.02.035",
+      "title": "GABAergic Neurons in Ferret Visual Cortex Participate in Functionally Specific"
+    },
+    {
+      "doi": "10.1109/tciaig.2013.2290330",
+      "title": "A Computational Model of Narrative Generation for Surprise Arousal"
+    },
+    {
+      "doi": "10.1016/j.neubiorev.2013.07.001",
+      "title": "A revised limbic system model"
+    },
+    {
+      "doi": "10.1016/j.tics.2017.01.004",
+      "title": "Climbing Brain Levels of Organisation from Genes to Consciousness"
+    },
+    {
+      "doi": "10.1016/j.neuron.2016.08.026",
+      "title": "Investigating the Limits of Neurovascular Coupling"
+    },
+    {
+      "doi": "10.1038/s41598-017-00634-6",
+      "title": "In vivo evidence of functional and anatomical stripe-based subdivisions in"
+    },
+    {
+      "doi": "10.1016/j.neuron.2017.12.004",
+      "title": "Layers of Neuroscience"
+    },
+    {
+      "doi": "10.1016/j.jml.2013.10.002",
+      "title": "Knowing the crowd within Metacognitive limits on combining multiple judgments"
+    },
+    {
+      "doi": "10.1016/j.cub.2017.01.006",
+      "title": "Opposite Effects of Recent History on Perception and Decision"
+    },
+    {
+      "doi": "10.1016/j.pneurobio.2014.09.003",
+      "title": "The role of the medial temporal limbic system in processing"
+    },
+    {
+      "doi": "10.1038/nn.4173",
+      "title": "Mesolimbic dopamine signals the value of work"
+    },
+    {
+      "doi": "10.1016/j.neuron.2017.02.019",
+      "title": "Navigating the Neural Space in Search of the Neural Code"
+    },
+    {
+      "doi": "10.1523/jneurosci.0439-16.2016",
+      "title": "Transmission of Predictable Sensory Signals to the Cerebellum via Climbing"
+    },
+    {
+      "doi": "10.1523/jneurosci.2674-15.2015",
+      "title": "Selective Attention to Auditory Memory Neurally Enhances Perceptual Precision"
+    },
+    {
+      "doi": "10.1073/pnas.1420285111",
+      "title": "Endogenous cannabinoid release within prefrontal-limbic pathways affects memory"
+    },
+    {
+      "doi": "10.1016/j.neuroimage.2010.05.005",
+      "title": "Laminar analysis of 7T BOLD using an imposed spatial activation pattern in"
+    },
+    {
+      "doi": "10.1016/j.cortex.2013.12.005",
+      "title": "Limbic systems for emotion and for memory, but no single limbic system"
+    },
+    {
+      "doi": "10.1016/b978-0-12-809324-5.06857-7",
+      "title": "Limbic Structures, Emotion, and Memory"
+    },
+    {
+      "doi": "10.1126/science.1231059",
+      "title": "Interactions Between the Nucleus Accumbens and Auditory Cortices Predict Music"
+    },
+    {
+      "doi": "10.1016/j.conb.2014.02.011",
+      "title": "Nogo limits neural plasticity and recovery from injury"
+    },
+    {
+      "doi": "10.1126/science.1232437",
+      "title": "SalimpoorEtAl"
+    },
+    {
+      "doi": "10.1523/jneurosci.1164-16.2016",
+      "title": "A GABAergic Projection from the Centromedial Nuclei of the Amygdala to"
+    },
+    {
+      "doi": "10.1016/j.neuron.2007.06.015",
+      "title": "Feature-Based Attentional Modulations in the Absence of Direct Visual"
+    },
+    {
+      "doi": "10.1093/cercor/bhj146",
+      "title": "Spatially Selective Representations of Voluntary and Stimulus-Driven"
+    },
+    {
+      "doi": "10.1038/nn.4187",
+      "title": "Action initiation shapes mesolimbic dopamine encoding of future rewards"
+    },
+    {
+      "doi": "10.1523/jneurosci.0554-12.2012",
+      "title": "Contribution of Cholinergic and GABAergic Mechanisms to Direction Tuning"
+    },
+    {
+      "doi": "10.1038/ncomms7177",
+      "title": "Sensory integration dynamics in a hierarchical network explains choice"
+    },
+    {
+      "doi": "10.1214/11-aoas476",
+      "title": "Encoding and decoding V1 fMRI responses to natural images with sparse"
+    },
+    {
+      "doi": "10.1162/neco_a_00804",
+      "title": "Mutual Information, Fisher Information, and Efficient Coding"
+    },
+    {
+      "doi": "10.1016/j.neuron.2016.04.036",
+      "title": "Decision Making and Sequential Sampling from Memory"
+    },
+    {
+      "doi": "10.1016/j.neuron.2008.09.021",
+      "title": "Probabilistic Population Codes for Bayesian Decision Making"
+    },
+    {
+      "doi": "10.1016/j.csda.2004.08.001",
+      "title": "Bayesian model choice based on Monte Carlo estimates of posterior model"
+    },
+    {
+      "doi": "10.1016/j.visres.2014.10.004",
+      "title": "Surround suppression supports second-order feature encoding by macaque V1 and"
+    },
+    {
+      "doi": "10.1038/nn1790",
+      "title": "Bayesian inference with probabilistic population codes"
+    },
+    {
+      "doi": "10.1038/nn1404",
+      "title": "Receptive field structure varies with layer in the primary visual cortex"
+    },
+    {
+      "doi": "10.1038/nn1287",
+      "title": "A morphological basis for orientation tuning in primary visual cortex"
+    },
+    {
+      "doi": "10.1016/j.neuron.2016.07.015",
+      "title": "Efficient Receptive Field Tiling in Primate V1"
+    },
+    {
+      "doi": "10.1016/j.visres.2003.10.022",
+      "title": "BOLD fMRI and psychophysical measurements of contrast response to broadband"
+    },
+    {
+      "doi": "10.1016/j.neuron.2005.05.021",
+      "title": "Spatiotemporal Elements of Macaque V1 Receptive Fields"
+    },
+    {
+      "doi": "10.1167/14.3.31",
+      "title": "Emotion modulates eye movement patterns and subsequent memory for the gist and"
+    },
+    {
+      "doi": "10.1038/srep22536",
+      "title": "Population Code Dynamics in Categorical Perception"
+    },
+    {
+      "doi": "10.1016/j.neuroimage.2019.116398",
+      "title": "Comparing functional connectivity matrices A geometry-aware approach applied to"
+    },
+    {
+      "doi": "10.1152/jn.00871.2005",
+      "title": "Relationship Between Contrast Adaptation and Orientation Tuning in V1 and V2 of"
+    },
+    {
+      "doi": "10.1038/s41586-020-2319-4",
+      "title": "Feedback generates a second receptive field in neurons of the visual cortex"
+    },
+    {
+      "doi": "10.1523/jneurosci.5124-12.2013",
+      "title": "Corticocortical Feedback Contributes to Surround Suppression in V1 of the Alert"
+    },
+    {
+      "doi": "10.1152/jn.90749.2008",
+      "title": "Surround Suppression of V1 Neurons Mediates Orientation-Based Representation of"
+    },
+    {
+      "doi": "10.1016/j.neuroimage.2017.12.094",
+      "title": "Combined fMRI- and eye movement-based decoding of bistable plaid motion"
+    },
+    {
+      "doi": "10.1101/093203",
+      "title": "Comparing Bayesian and nonBayesian accounts of human confidence reports"
+    },
+    {
+      "doi": "10.1109/tgrs.2004.839547",
+      "title": "Learning bayesian classifiers for scene classification with a visual grammar"
+    },
+    {
+      "doi": "10.1037/a0035031",
+      "title": "The Effects of Numerical Magnitude"
+    },
+    {
+      "doi": "10.1371/journal.pcbi.1002086.g001",
+      "title": "Changes of Mind in an Attractor Network of Decision-Making"
+    },
+    {
+      "doi": "10.1371/journal.pone.0043388",
+      "title": "Bayesian Selection of Markov Models for Symbol Sequences Application to"
+    },
+    {
+      "doi": "10.1016/j.jedc.2015.09.004",
+      "title": "The stability of macroeconomic systems with Bayesian learners"
+    },
+    {
+      "doi": "10.1016/j.neuron.2009.08.003",
+      "title": "Harnessing Chaos in Recurrent Neural Networks"
+    },
+    {
+      "doi": "10.1152/jn.00125.2016•www.jn.org",
+      "title": "Similar prevalence and magnitude of auditory-evoked and visually evoked"
+    },
+    {
+      "doi": "10.1523/jneurosci.5208-12.2013",
+      "title": "Cortical-Like Receptive Fields in the Lateral Geniculate Nucleus of Marmoset"
+    },
+    {
+      "doi": "10.1152/jn.00411.2009",
+      "title": "Radial Biases in the Processing of Motion and Motion-Defined Contours by Human"
+    },
+    {
+      "doi": "10.1016/j.jml.2015.07.004",
+      "title": "Eye movements in reading and information processing Keith Rayner’s 40 year"
+    },
+    {
+      "doi": "10.16910/jemr.12.6.3",
+      "title": "Anticipation of cognitive conflict is reflected in microsaccades Evidence from"
+    },
+    {
+      "doi": "10.1523/jneurosci.4036-12.2012",
+      "title": "Efficient Coding of Spatial Information in the Primate Retina"
+    },
+    {
+      "doi": "10.1037/rev0000045",
+      "title": "Self-evaluation of decision-making A general Bayesian framework for"
+    },
+    {
+      "doi": "10.1016/j.neuron.2022.01.005",
+      "title": "Orthogonal representations for robust context-dependent task performance in"
+    },
+    {
+      "doi": "10.1016/j.neuroimage.2018.11.057",
+      "title": "Dynamic functional connectivity during task performance and rest predicts"
+    },
+    {
+      "doi": "10.1177/0037549716665712",
+      "title": "Analysis of driver fatigue causations based on the Bayesian network model"
+    },
+    {
+      "doi": "10.1162/neco_a_00638",
+      "title": "Efficient Sensory Encoding and Bayesian Inference with Heterogeneous Neural"
+    },
+    {
+      "doi": "10.1101/124867",
+      "title": "Increasing suppression of saccade-related transients along the human visual"
+    },
+    {
+      "doi": "10.1016/j.cub.2014.02.028",
+      "title": "Pupillometry The Eyes Shed Fresh Light on the Mind"
+    },
+    {
+      "doi": "10.1016/j.neuroimage.2011.02.077",
+      "title": "Topographically specific functional connectivity between visual field maps in"
+    },
+    {
+      "doi": "10.3758/s13428-017-1008-1",
+      "title": "Novel Blink Detection Method Based on Pupillometry Noise"
+    },
+    {
+      "doi": "10.1016/j.neuroimage.2016.07.003",
+      "title": "Eyetracker-based gaze correction for robust mapping of population receptive"
+    },
+    {
+      "doi": "10.1523/jneurosci.2201-12.2013",
+      "title": "Bayesian Prediction and Evaluation in the Anterior Cingulate Cortex"
+    },
+    {
+      "doi": "10.1016/j.visres.2008.09.007",
+      "title": "Bayesian surprise attracts human attention"
+    },
+    {
+      "doi": "10.1198/jasa.2011.ap09735",
+      "title": "Meta Analysis of Functional Neuroimaging Data via Bayesian Spatial Point"
+    },
+    {
+      "doi": "10.1038/nature06713",
+      "title": "Identifying natural images from human brain activity"
+    },
+    {
+      "doi": "10.1038/s41467-024-55599-8",
+      "title": "Hierarchical representations of relative numerical magnitudes in the human"
+    },
+    {
+      "doi": "10.1101/798553",
+      "title": "Recurrent neural network models of multi-area computation underlying"
+    },
+    {
+      "doi": "10.1080/17470218.2015.1055282",
+      "title": "The influence of linguistic and cognitive factors on the time course of"
+    },
+    {
+      "doi": "10.1073/pnas.1301725110",
+      "title": "Integrated strategy for improving functional connectivity mapping using"
+    },
+    {
+      "doi": "10.1016/j.neuron.2019.09.037",
+      "title": "Bayesian Decision Models A Primer"
+    },
+    {
+      "doi": "10.1167/18.7.5",
+      "title": "Eccentricity dependence of orientation anisotropy of surround suppression of"
+    },
+    {
+      "doi": "10.1038/s41467-018-04241-5",
+      "title": "Bayesian model selection for complex dynamic systems"
+    },
+    {
+      "doi": "10.3758/s13428-010-0049-5)",
+      "title": "A tutorial on a practical Bayesian alternative to null-hypothesis significance"
+    },
+    {
+      "doi": "10.3758/s13428-015-0695-8",
+      "title": "A Bayesian approach for estimating the probability of trigger failures in the"
+    },
+    {
+      "doi": "10.3389/fpsyg.2014.00417",
+      "title": "frontiersPsych BayesianModel SemanticHierarchies"
+    },
+    {
+      "doi": "10.1016/j.neuroimage.2011.07.043",
+      "title": "Occipital gamma-oscillations modulated during eye movement tasks Simultaneous"
+    },
+    {
+      "doi": "10.1038/nn.3021",
+      "title": "Saccade-confounded image statistics explain visual crowding"
+    },
+    {
+      "doi": "10.1167/17.1.11",
+      "title": "Eye movement-invariant representations in the human visual system"
+    },
+    {
+      "doi": "10.1038/s41467-018-05797-y",
+      "title": "Psychophysical reverse correlation reflects both sensory and decision-making"
+    },
+    {
+      "doi": "10.1371/journal.pcbi.1001048",
+      "title": "Risk Unexpected Uncertainty and Estimation Uncertainty Bayesian Learning in"
+    },
+    {
+      "doi": "10.1016/j.neuron.2006.11.022",
+      "title": "A Magnitude Code Common to Numerosities and Number Symbols in Human"
+    },
+    {
+      "doi": "10.1016/j.neuroimage.2011.10.018",
+      "title": "Spurious but systematic correlations in functional connectivity MRI networks"
+    },
+    {
+      "doi": "10.1093/pnasnexus/pgaf275;",
+      "title": "Bayesian estimation yields anti Weber"
+    },
+    {
+      "doi": "10.1109/tcsvt.2019.2894161",
+      "title": "stagNet An Attentive Semantic RNN for Group Activity and Individual Action"
+    },
+    {
+      "doi": "10.1017/s0140525x19001377",
+      "title": "The Bayesian brain What is it and do humans have it"
+    },
+    {
+      "doi": "10.1038/s41467-018-06726-9",
+      "title": "Late Bayesian inference in mental transformations"
+    },
+    {
+      "doi": "10.1016/j.eurpsy.2015.12.005",
+      "title": "Resting-state functional connectivity of emotion regulation networks in"
+    },
+    {
+      "doi": "10.1038/nn.4179",
+      "title": "A neuromarker of sustained attention from whole-brain functional connectivity"
+    },
+    {
+      "doi": "10.1038/s41598-019-39889-6",
+      "title": "Familiarity revealed by involuntary eye movements on the fringe of awareness"
+    },
+    {
+      "doi": "10.1016/j.neuron.2006.07.021",
+      "title": "The Radial Bias A Different Slant on Visual Orientation Sensitivity in Human"
+    },
+    {
+      "doi": "10.1016/j.copsyc.2017.04.019",
+      "title": "Formalizing emotion concepts within a Bayesian model of theory of mind"
+    },
+    {
+      "doi": "10.4119/unibi/2693180",
+      "title": "Temporal Statistics of Natural Image Sequences Generated by Movements with"
+    },
+    {
+      "doi": "10.1016/j.neuroimage.2018.07.043",
+      "title": "Generative adversarial networks for reconstructing natural images from brain"
+    },
+    {
+      "doi": "10.1016/j.neuron.2021.02.004",
+      "title": "Neural state space alignment for magnitude generalization in humans and"
+    },
+    {
+      "doi": "10.1016/j.neuron.2019.06.012",
+      "title": "Bayesian Computation through Cortical Latent Dynamics"
+    },
+    {
+      "doi": "10.1016/j.conb.2021.09.008",
+      "title": "Neural implementations of Bayesian inference"
+    },
+    {
+      "doi": "10.1016/j.neuroimage.2017.06.035",
+      "title": "The feature weighted receptive field"
+    },
+    {
+      "doi": "10.1167/12.1.16",
+      "title": "Temporal eye movement strategies during naturalistic viewing"
+    },
+    {
+      "doi": "10.1016/j.neuroimage.2018.05.042",
+      "title": "Generalized Recurrent Neural Network accommodating Dynamic Causal Modeling for"
+    },
+    {
+      "doi": "10.1167/14.7.15",
+      "title": "A formula for human retinal ganglion cell receptive field density as a function"
+    },
+    {
+      "doi": "10.3758/s13414-019-01932-z",
+      "title": "Context effects on reproduced magnitudes from short-term and long-term memory"
+    },
+    {
+      "doi": "10.1016/j.neuroimage.2009.05.005",
+      "title": "Correlations and anticorrelations in resting-state functional connectivity MRI"
+    },
+    {
+      "doi": "10.1016/j.biopsych.2015.06.026",
+      "title": "Mapping Thalamocortical Functional Connectivity in Chronic and Early Stages of"
+    },
+    {
+      "doi": "10.1167/16.15.11",
+      "title": "Spatiotopic buildup of saccade target representation depends on target size"
+    },
+    {
+      "doi": "10.3758/s13428-017-0940-4",
+      "title": "Using Bayesian regression to test hypotheses about relationships between"
+    },
+    {
+      "doi": "10.1016/j.neuroimage.2013.08.024",
+      "title": "Incorporating spatial dependence into Bayesian multiple testing of statistical"
+    },
+    {
+      "doi": "10.1016/j.neuroimage.2017.07.005",
+      "title": "Comparing test-retest reliability of dynamic functional connectivity methods"
+    },
+    {
+      "doi": "10.1016/j.neuroimage.2017.04.054",
+      "title": "Individual parcellation of resting fMRI with a group functional connectivity"
+    },
+    {
+      "doi": "10.1002/hbm.22718",
+      "title": "Personal experience with narrated events modulates functional connectivity"
+    },
+    {
+      "doi": "10.1523/jneurosci.1422-04.2004",
+      "title": "Natural Stimulus Statistics Alter the Receptive Field Structure of V1 Neurons"
+    },
+    {
+      "doi": "10.1073/pnas.1706906114",
+      "title": "Visual perception as retrospective Bayesian decoding from high- to low-level"
+    },
+    {
+      "doi": "10.1093/cercor/bhv175",
+      "title": "Functional Connectivity Patterns of Visual Cortex Reflect its Anatomical"
+    },
+    {
+      "doi": "10.1523/jneurosci.0449-17.2017",
+      "title": "Altered Balance of Receptive Field Excitation and Suppression in Visual Cortex"
+    },
+    {
+      "doi": "10.1016/j.neuroimage.2006.10.017",
+      "title": "Extra-classical receptive field effects measured in striate cortex with fMRI"
+    },
+    {
+      "doi": "10.1016/j.tics.2017.01.006",
+      "title": "Neuroadaptive Bayesian Optimization and Hypothesis Testing"
+    },
+    {
+      "doi": "10.1152/jn.00900.2011•www.jn.org",
+      "title": "Dissociated mean and functional connectivity BOLD signals in visual cortex"
+    },
+    {
+      "doi": "10.1371/journal.pone.0126255.g001",
+      "title": "Orthogonalization of Regressors in fMRI Models"
+    },
+    {
+      "doi": "10.1523/jneurosci.4558-05.2006",
+      "title": "Receptive Field Properties of Neurons in the Early Visual Cortex Revealed by"
+    },
+    {
+      "doi": "10.1016/j.neuroimage.2015.11.066",
+      "title": "Radial bias is not necessary for orientation decoding"
+    },
+    {
+      "doi": "10.1167/16.6",
+      "title": "Testing adaptive toolbox models A Bayesian hierarchical approach."
+    },
+    {
+      "doi": "10.1016/j.neuroimage.2018.04.078",
+      "title": "Disentangling reward anticipation with simultaneous pupillometry fMRI"
+    },
+    {
+      "doi": "10.1016/j.neuroimage.2017.07.044",
+      "title": "Resting state functional connectivity correlates of emotional awareness"
+    },
+    {
+      "doi": "10.3758/s13423-012-0295-x",
+      "title": "A default Bayesian hypothesis test for correlations and partial correlations"
+    },
+    {
+      "doi": "10.1093/cercor/bhj090",
+      "title": "Extraclassical Receptive Field Phenomena and Short-Range Connectivity in V1"
+    },
+    {
+      "doi": "10.1101/150052",
+      "title": "Bayesian comparison of explicit and implicit causal inference strategies in"
+    },
+    {
+      "doi": "10.1016/j.ergon.2006.04.002",
+      "title": "Using eye movement activity as a correlate of cognitive workload"
+    },
+    {
+      "doi": "10.1016/j.conb.2017.08.010",
+      "title": "With or without you predictive coding and Bayesian inference in the brain"
+    },
+    {
+      "doi": "10.1016/j.neuron.2014.05.005",
+      "title": "Increases in Functional Connectivity between Prefrontal Cortex and Striatum"
+    },
+    {
+      "doi": "10.1016/j.tics.2017.12.002",
+      "title": "Beyond Functional Connectivity Investigating Networks of Multivariate"
+    },
+    {
+      "doi": "10.1523/jneurosci.2458-14.2015",
+      "title": "Microsaccade Control Signals in the Cerebellum"
+    },
+    {
+      "doi": "10.7554/elife.08789",
+      "title": "Modulation of GABA and resting state functional connectivity by transcranial"
+    },
+    {
+      "doi": "10.1016/j.conb.2005.07.006",
+      "title": "Visual receptive field organization"
+    },
+    {
+      "doi": "10.1101/590422",
+      "title": "Mechanisms of Economic Decisions under Sequential Offers"
+    },
+    {
+      "doi": "10.1016/j.conb.2016.01.015",
+      "title": "Temporal trade-offs in psychophysics"
+    },
+    {
+      "doi": "10.1371/journal.pone.0012686.g001",
+      "title": "Learning Priors for Bayesian Computations in the Nervous System"
+    },
+    {
+      "doi": "10.1016/j.neuron.2013.06.022",
+      "title": "Natural Scenes Viewing Alters the Dynamics of Functional Connectivity in the"
+    },
+    {
+      "doi": "10.1523/jneurosci.1089-17.2018",
+      "title": "Topology of Functional Connectivity and Hub Dynamics in the Beta Band As"
+    },
+    {
+      "doi": "10.1037/rev0000123",
+      "title": "Decision by sampling implements efficient coding of psychoeconomic functions"
+    },
+    {
+      "doi": "10.1523/jneurosci.1599-12.2012",
+      "title": "Intrinsic Amygdala–Cortical Functional Connectivity Predicts Social Network"
+    },
+    {
+      "doi": "10.3389/fncom.2014.00131",
+      "title": "Bayesian networks in neuroscience a survey"
+    },
+    {
+      "doi": "10.1016/j.neuroimage.2012.01.016",
+      "title": "The role of physiological noise in resting-state functional connectivity"
+    },
+    {
+      "doi": "10.3389/fpsyg.2012.00406",
+      "title": "When Can Predictive Brains be Truly Bayesian"
+    },
+    {
+      "doi": "10.1523/jneurosci.1547-10.2010",
+      "title": "Expectation-Driven Changes in Cortical Functional Connectivity Influence"
+    },
+    {
+      "doi": "10.1167/15.9.11",
+      "title": "Contrast sensitivity revealed by microsaccades"
+    },
+    {
+      "doi": "10.3389/fnins.2018.01039",
+      "title": "Pupillometry of Groove Evidence for Noradrenergic Arousal in the Link Between"
+    },
+    {
+      "doi": "10.1016/j.neuroimage.2011.04.010",
+      "title": "Role of local network oscillations in resting-state functional connectivity"
+    },
+    {
+      "doi": "10.1152/jn.00692.2001",
+      "title": "Nature and Interaction of Signals From the Receptive Field Center and Surround"
+    },
+    {
+      "doi": "10.1523/jneurosci.2234-15.2016",
+      "title": "Intrinsic Functional Connectivity in the Adult Brain and Success in"
+    },
+    {
+      "doi": "10.1016/j.neuron.2017.10.035",
+      "title": "Good Vibrations Resting-State Functional Connectivity Reflects Entrainment of"
+    },
+    {
+      "doi": "10.1111/bjop.12728",
+      "title": "Opposing sequential biases in direction and time reproduction Influences of"
+    },
+    {
+      "doi": "10.1007/s00426-024-02023-x",
+      "title": "The impact of task measurements on sequential dependence a comparison between"
+    },
+    {
+      "doi": "10.1016/j.neunet.2004.05.002",
+      "title": "The contribution of vertical and horizontal connections to the receptive field"
+    },
+    {
+      "doi": "10.1038/nn2067",
+      "title": "Smokers' brains compute, but ignore, a fictive error signal in a sequential"
+    },
+    {
+      "doi": "10.1016/j.cogpsych.2012.01.003",
+      "title": "(Pea)nuts and bolts of visual narrative Structure and meaning in sequential"
+    },
+    {
+      "doi": "10.1371/journal.pone.0110889",
+      "title": "Fixational Eye Movement Correction of Blink-Induced Gaze Position Errors"
+    },
+    {
+      "doi": "10.1167/10.4.16",
+      "title": "Fast saccades toward faces Face detection in just 100 ms"
+    },
+    {
+      "doi": "10.1016/j.neuroimage.2015.02.001",
+      "title": "Predicting Functional Connectivity From Observed and Latent Structural"
+    },
+    {
+      "doi": "10.1037/a0017171",
+      "title": "Psychophysical reverse correlation with multiple response alternatives"
+    },
+    {
+      "doi": "10.1038/s41593-018-0233-y",
+      "title": "Neural implementation of Bayesian inference in a sensorimotor behavior"
+    },
+    {
+      "doi": "10.3758/pbr.16.1.121",
+      "title": "Sequential dependencies in the Eriksen flanker task A direct comparison of two"
+    },
+    {
+      "doi": "10.1152/jn.00575.2006",
+      "title": "Spectral Receptive Field Properties Explain Shape Selectivity in Area V4"
+    },
+    {
+      "doi": "10.1167/16.9.1",
+      "title": "Comparing models of contrast gain using psychophysical experiments"
+    },
+    {
+      "doi": "10.1371/journal.pcbi.1003810",
+      "title": "Inferring on the Intentions of Others by Hierarchical Bayesian Learning"
+    },
+    {
+      "doi": "10.1016/j.visres.2006.11.013",
+      "title": "Bayesian Statistics in Molecular and Structural Biology"
+    },
+    {
+      "doi": "10.1038/nn.2872",
+      "title": "Owl's behavior and neural representation predicted by Bayesian inference"
+    },
+    {
+      "doi": "10.1523/jneurosci.1263-13.2013",
+      "title": "The Irrationality of Categorical Perception"
+    },
+    {
+      "doi": "10.1002/acp.3229",
+      "title": "Reading Without Words Eye Movements in the Comprehension of Comic Strips"
+    },
+    {
+      "doi": "10.1080/17470218.2013.858170",
+      "title": "Window to the Wandering Mind Pupillometry of Spontaneous Thought While Reading"
+    },
+    {
+      "doi": "10.1016/j.biopsycho.2015.10.005",
+      "title": "Surprising sequential effects on MMN"
+    },
+    {
+      "doi": "10.1038/nn.4390",
+      "title": "Neural substrate of dynamic Bayesian inference in the cerebral cortex"
+    },
+    {
+      "doi": "10.1016/j.neuroimage.2016.04.047",
+      "title": "Functional connectivity and structural covariance between regions of interest"
+    },
+    {
+      "doi": "10.1016/j.neuron.2013.02.013",
+      "title": "Population Responses to Contour Integration Early Encoding of Discrete Elements"
+    },
+    {
+      "doi": "10.1037/a0016548",
+      "title": "Deficits in cross-race face learning Insights from eye movements and"
+    },
+    {
+      "doi": "10.1016/j.neuroimage.2017.08.006",
+      "title": "Task based dynamic functional connectivity"
+    },
+    {
+      "doi": "10.1093/cercor/bhn059",
+      "title": "Resting-State Functional Connectivity Reflects Structural Connectivity in the"
+    },
+    {
+      "doi": "10.1016/j.neuron.2012.12.014",
+      "title": "Alteration of Visual Perception prior to Microsaccades"
+    },
+    {
+      "doi": "10.1523/jneurosci.2240-13.2013",
+      "title": "On the Dissociation between Microsaccade Rate and Direction after Peripheral"
+    },
+    {
+      "doi": "10.1101/2025.06.25.661321",
+      "title": "Identifiability of Bayesian Models of Cognition"
+    },
+    {
+      "doi": "10.1111/ejn.13508",
+      "title": "Resting state functional connectivity measures correlate with the response to"
+    },
+    {
+      "doi": "10.1162/neco_a_00851",
+      "title": "Bayesian Inference and Online Learning in Poisson Neuronal Networks"
+    },
+    {
+      "doi": "10.1152/jn.00298.2007",
+      "title": "Response Facilitation From the “Suppressive” Receptive Field Surround of"
+    },
+    {
+      "doi": "10.1162/jocn_a_01487",
+      "title": "Distributed Intrinsic Functional Connectivity Patterns Predict Diagnostic"
+    },
+    {
+      "doi": "10.1016/j.neubiorev.2014.06.001",
+      "title": "Bayesian modeling of flexible cognitive control"
+    },
+    {
+      "doi": "10.1152/jn.00571.2004",
+      "title": "Tilt Aftereffect and Adaptation-Induced Changes in Orientation Tuning in Visual"
+    },
+    {
+      "doi": "10.1167/16.7.5",
+      "title": "Effects of a pretarget distractor on saccade reaction times across space and"
+    },
+    {
+      "doi": "10.1016/j.visres.2005.10.002",
+      "title": "Ultra-rapid object detection with saccadic eye movements Visual processing"
+    },
+    {
+      "doi": "10.1126/science.1171599",
+      "title": "Recruitment of an Area Involved in Eye Movements During Mental Arithmetic"
+    },
+    {
+      "doi": "10.1371/journal.pone.0084565",
+      "title": "Increased Functional Connectivity between Prefrontal Cortex and Reward System"
+    },
+    {
+      "doi": "10.1016/j.neuron.2019.01.018",
+      "title": "Neural Competitive Queuing of Ordinal Structure Underlies Skilled Sequential"
+    },
+    {
+      "doi": "10.1515/anglia-2014-0075",
+      "title": "Bayesian Narrative Probability, Plot and the Shape of the Fictional World"
+    },
+    {
+      "doi": "10.1167/5.5.8",
+      "title": "Bayesian inference for psychometric functions"
+    },
+    {
+      "doi": "10.1016/s0079-6123(07",
+      "title": "HigherOrderBayesianDecisionTheoryConsciousness"
+    },
+    {
+      "doi": "10.1177/0301006615594267",
+      "title": "No Relationship Between Binocular Rivalry Rate and Eye-Movement Profiles in"
+    },
+    {
+      "doi": "10.1371/journal.pone.0082104.t001",
+      "title": "Bayesian Network Analysis Reveals Alterations to Default Mode Network"
+    },
+    {
+      "doi": "10.1093/cercor/bhx296",
+      "title": "Recurrent Processing of Contour Integration"
+    },
+    {
+      "doi": "10.1073/pnas.1525505113",
+      "title": "Spatial structure of neuronal receptive field in awake monkey secondary visual"
+    },
+    {
+      "doi": "10.1016/j.visres.2004.07.033",
+      "title": "Dynamic competition between contour integration and contour segmentation probed"
+    },
+    {
+      "doi": "10.5772/56229",
+      "title": "Attractor Hypothesis of Associative Cortex Insights from a Biophysically"
+    },
+    {
+      "doi": "10.1016/j.visres.2017.01.001",
+      "title": "Revising the link between microsaccades and the spatial cueing of voluntary"
+    },
+    {
+      "doi": "10.1016/j.neuron.2015.09.039",
+      "title": "Confidence as Bayesian Probability From Neural Origins to Behavior"
+    },
+    {
+      "doi": "10.1152/jn.00116.2007",
+      "title": "Noise Induced Alternations in an Attractor Network Model of Perceptual"
+    },
+    {
+      "doi": "10.1111/j.1469-8986.2011.01226.x",
+      "title": "Pupillometry and P3 index the locus coeruleus–noradrenergic arousal function in"
+    },
+    {
+      "doi": "10.1371/journal.pcbi.0030129.g002",
+      "title": "A Primer on Learning in Bayesian Networks for Computational Biology"
+    },
+    {
+      "doi": "10.1523/jneurosci.6801-10.2011",
+      "title": "A Three-Dimensional Spatiotemporal Receptive Field Model Explains Responses of"
+    },
+    {
+      "doi": "10.1037/0033-295x.115.2.357",
+      "title": "Shortlist B A Bayesian model of continuous speech recognition"
+    },
+    {
+      "doi": "10.1016/s0042-6989(03",
+      "title": "Contour integration in peripheral vision reduces gradually with eccentricity"
+    },
+    {
+      "doi": "10.1016/j.visres.2016.01.009",
+      "title": "Pupil size influences the eyetracker signal during saccades"
+    },
+    {
+      "doi": "10.1016/j.neunet.2009.12.007",
+      "title": "Neural-Networks"
+    },
+    {
+      "doi": "10.1523/jneurosci.2211-15.2016",
+      "title": "Microsaccades Are Coupled to Heartbeat"
+    },
+    {
+      "doi": "10.3389/fnhum.2018.00061",
+      "title": "Computational Neuropsychology and Bayesian Inference"
+    },
+    {
+      "doi": "10.1016/j.neuron.2014.09.010",
+      "title": "Experience-Dependent Specialization of Receptive Field Surround for Selective"
+    },
+    {
+      "doi": "10.1038/s41593-018-0292-0",
+      "title": "Efficient coding of subjective value"
+    },
+    {
+      "doi": "10.1016/j.ejor.2011.05.007",
+      "title": "Simulation metamodeling with dynamic Bayesian networks"
+    },
+    {
+      "doi": "10.1101/2025.07.11.664261",
+      "title": "Fast efficient coding and sensory"
+    },
+    {
+      "doi": "10.1002/hbm.20531",
+      "title": "Default Mode Network Functional Connectivity"
+    },
+    {
+      "doi": "10.3758/s13415-016-0425-4)",
+      "title": "Functional connectivity dynamics during film viewing reveal common networks for"
+    },
+    {
+      "doi": "10.1007/s10827-014-0545-1",
+      "title": "Neural representation of probabilities for Bayesian inference"
+    },
+    {
+      "doi": "10.1016/j.neuroimage.2013.08.065",
+      "title": "Bayesian model selection for group studies Revisited"
+    },
+    {
+      "doi": "10.1038/s41467-019-09664-2",
+      "title": "The neural dynamics of hierarchical Bayesian causal inference in multisensory"
+    },
+    {
+      "doi": "10.1038/nature05866",
+      "title": "Miniature eye movements enhance fine spatial detail"
+    },
+    {
+      "doi": "10.1016/j.tics.2016.10.003",
+      "title": "Bayesian Brains without Probabilities"
+    },
+    {
+      "doi": "10.1167/12.11.1",
+      "title": "JoV smooth eye movements with RDK"
+    },
+    {
+      "doi": "10.1016/j.visres.2014.07.002",
+      "title": "Possible functions of contextual modulations and receptive field nonlinearities"
+    },
+    {
+      "doi": "10.1038/s41562-020-00938-0",
+      "title": "Psychophysical scaling reveals a unified theory of visual memory strength"
+    },
+    {
+      "doi": "10.1523/jneurosci.1253-06.2006",
+      "title": "The Role of Feedback in Shaping the Extra-Classical Receptive Field of Cortical"
+    },
+    {
+      "doi": "10.3758/pbr.17.4.443",
+      "title": "Exemplar models as a mechanism for performing Bayesian inference"
+    },
+    {
+      "doi": "10.1016/j.tics.2013.09.009",
+      "title": "Bayesian optimization of time perception"
+    },
+    {
+      "doi": "10.1016/j.copsyc.2015.02.007",
+      "title": "A brief, but nuanced, review of emotional granularity and emotion"
+    },
+    {
+      "doi": "10.1038/nn.3979",
+      "title": "Global network influences on local functional connectivity"
+    },
+    {
+      "doi": "10.1016/j.jml.2017.05.002",
+      "title": "A Bayesian approach to the mixed-effects analysis of accuracy data in"
+    },
+    {
+      "doi": "10.1101/560656",
+      "title": "Predicting synchronous firing of large neural populations from sequential"
+    },
+    {
+      "doi": "10.1021/sb300018h",
+      "title": "Ensemble Bayesian Analysis of Bistability in a Synthetic Transcriptional Switch"
+    },
+    {
+      "doi": "10.1016/j.tics.2017.04.005",
+      "title": "Evolution in Mind Evolutionary Dynamics, Cognitive Processes, and Bayesian"
+    },
+    {
+      "doi": "10.1016/j.neuroimage.2014.11.037",
+      "title": "Resting state functional connectivity changes induced by prior brain state are"
+    },
+    {
+      "doi": "10.1523/jneurosci.3455-06.2007",
+      "title": "Deficits in Short-Latency Tracking Eye Movements after Chemical Lesions in"
+    },
+    {
+      "doi": "10.1038/srep22740",
+      "title": "Love at second sight Sequential dependence of facial attractiveness in an"
+    },
+    {
+      "doi": "10.1016/j.tics.2006.05.009",
+      "title": "Theory-based Bayesian models of inductive learning and reasoning"
+    },
+    {
+      "doi": "10.1038/s41598-019-54018-z",
+      "title": "Evidence for confounding eye movements under attempted fixation and active"
+    },
+    {
+      "doi": "10.1037/emo0000342.supp",
+      "title": "Caution follows fear Evidence from hierarchical drift diffusion modelling"
+    },
+    {
+      "doi": "10.1523/jneurosci.0155-12.2012",
+      "title": "Psychophysical and Neural Evidence for Emotion-Enhanced Perceptual Vividness"
+    },
+    {
+      "doi": "10.1016/j.neuroimage.2009.07.052",
+      "title": "Event-related functional MRI of cortical activity evoked by microsaccades,"
+    },
+    {
+      "doi": "10.1007/978-1-4939-2236-9_10",
+      "title": "Constraining Cognitive Abstractions Through Bayesian Modeling"
+    },
+    {
+      "doi": "10.1038/s41598-019-40535-4",
+      "title": "Characterisation of nonlinear receptive fields of visual neurons by"
+    },
+    {
+      "doi": "10.3758/s13414-018-1618-4",
+      "title": "Correction to Attention, Perception, &amp; Psychophysics, Volume 81, Number 1,"
+    },
+    {
+      "doi": "10.3758/s13414-014-0830-0)",
+      "title": "Bayesian accounts of covert selective attention A tutorial review"
+    },
+    {
+      "doi": "10.1016/j.neuroimage.2014.04.039",
+      "title": "Functional connectivity of distant cortical regions Role of remote"
+    },
+    {
+      "doi": "10.1371/journal.pcbi.1004066",
+      "title": "A Bayesian Model of Category-Specific Emotional Brain Responses"
+    },
+    {
+      "doi": "10.1101/676643",
+      "title": "Increased task-dependent functional connectivity by stimulation of the"
+    },
+    {
+      "doi": "10.1038/nn1748",
+      "title": "Dynamic shifts of visual receptive fields in cortical area MT by spatial"
+    },
+    {
+      "doi": "10.1111/j.1467-7687.2007.00590.x",
+      "title": "Sensitivity to sampling in Bayesian word learning"
+    },
+    {
+      "doi": "10.1101/350082",
+      "title": "The role of sensory uncertainty in simple contour integration"
+    },
+    {
+      "doi": "10.1523/jneurosci.2311-07.2007",
+      "title": "The Sources of Variability in Saccadic Eye Movements"
+    },
+    {
+      "doi": "10.1111/j.1469-8986.2009.00884.x",
+      "title": "Resource allocation and fluid intelligence Insights from pupillometry"
+    },
+    {
+      "doi": "",
+      "title": "Hayashi, M., Kido, T., & Yotsumoto, Y. (2024). Hierarchical representations of relative numerical magnitudes in the human frontoparietal cortex."
+    },
+    {
+      "doi": "",
+      "title": "Summerfield 그룹의  Neural structure mapping in human probabilistic reward learning(2019)의 Abstract~ figure1까지, 그리고 결론부를 훑었습니다."
+    },
+    {
+      "doi": "",
+      "title": "Marshall, T. R., Ruesseler, M., Hunt, L. T., & O’Reilly, J. X. (2024). The representation of priors and decisions in the human parietal cortex. Plos Biology, 22(1), e3002383."
+    },
+    {
+      "doi": "",
+      "title": "민수씨, 준오씨 모두 디포짓 입금 확인 했습니다. 30일간 모두 화이팅 해봅시다."
+    },
+    {
+      "doi": "",
+      "title": "Kvam, P. D., Marley, A. A. J., & Heathcote, A. (2023). A unified theory of discrete and continuous responding. Psychological Review, 130(2), 368."
+    },
+    {
+      "doi": "",
+      "title": "Dumoulin SO, Wandell BA. Population receptive field estimates in human visual cortex. Neuroimage. 2008 Jan 15;39(2):647-60."
+    },
+    {
+      "doi": "",
+      "title": "Harvey, B. M., Klein, B. P., Petridou, N., & Dumoulin, S. O. (2013). Topographic representation of numerosity in the human parietal cortex. Science, 341(6150), 1123-1126."
+    },
+    {
+      "doi": "",
+      "title": "Bavard, S., Lebreton, M., Khamassi, M., Coricelli, G., & Palminteri, S. (2018). Reference-point centering and range-adaptation enhance human reinforcement learning at the cost of irrational preferences. Nature communications, 9(1), 4503."
+    },
+    {
+      "doi": "",
+      "title": "Fabrice Luyckx, Hamed Nili, Bernhard Spitzer, Christopher Summerfield (2019) Neural structure mapping in human probabilistic reward learning"
+    },
+    {
+      "doi": "",
+      "title": "Harvey, B. M., Fracasso, A., Petridou, N., & Dumoulin, S. O. (2015). Topographic representations of object size and relationships with numerosity reveal generalized quantity processing in human parietal cortex. Proceedings of the National Academy of Sciences, 112(44), 13525-13530."
+    },
+    {
+      "doi": "",
+      "title": "Polania, R., Woodford, M., & Ruff, C. C. (2019). Efficient coding of subjective value. Nature neuroscience, 22(1), 134-142."
+    },
+    {
+      "doi": "",
+      "title": "Lever, J., Krzywinski, M. & Altman, N. Regularization. Nat Methods 13, 803–804 (2016)."
+    },
+    {
+      "doi": "",
+      "title": "Cai, Y., Hofstetter, S., van Dijk, J., Zuiderbaan, W., van der Zwaag, W., Harvey, B. M., & Dumoulin, S. O. (2021). Topographic numerosity maps cover subitizing and estimation ranges. Nature Communications, 12(1), 3374."
+    },
+    {
+      "doi": "",
+      "title": "Polania, R., Woodford, M., & Ruff, C. C. (2019). Efficient coding of subjective value. Nature neuroscience, 22(1), 134-142."
+    },
+    {
+      "doi": "",
+      "title": "Sheahan H, Luyckx F, Nelli S, Teupe C, Summerfield C. Neural state space alignment for magnitude generalization in humans and recurrent networks."
+    },
+    {
+      "doi": "",
+      "title": "Katzin, N., Rosenbaum, D. & Usher, M. The averaging of numerosities: A psychometric investigation of the mental line. Atten Percept Psychophys 83, 1152–1168 (2021). <https:\\/\\/doi.org\\/10.3758\\/s13414-020-02140-w>"
+    },
+    {
+      "doi": "",
+      "title": "<@U06JA7D5XC7|여민수> <@U06JGAX5HD5|Joonoh Park> 여러분 저희가 슬렉에 올린 내용들을 그냥 슬렉에 두는 것 보다 spreadsheet로 정리해 놓으면 저희가 나중에 다시 돌아 볼 때 좋은 정리가 될 것 같습니다. 그래서 저희 <https:\\/\\/docs.google.com\\/spreadsheets�"
+    },
+    {
+      "doi": "",
+      "title": "Polania, R., Woodford, M., & Ruff, C. C. (2019). Efficient coding of subjective value. Nature neuroscience, 22(1), 134-142."
+    },
+    {
+      "doi": "",
+      "title": "Tadin, D. (2015). Suppressive mechanisms in visual motion processing: From perception to intelligence. Vision research, 115, 58-70."
+    },
+    {
+      "doi": "",
+      "title": "Viswanathan, P., Stein, A. M., & Nieder, A. (2024). Sequential neuronal processing of number values, abstract decision, and action in the primate prefrontal cortex. Plos Biology, 22(2), e3002520."
+    },
+    {
+      "doi": "",
+      "title": "Sixtus, E., Krause, F., Lindemann, O., & Fischer, M. H. (2023). A sensorimotor perspective on numerical cognition. Trends in Cognitive Sciences."
+    },
+    {
+      "doi": "",
+      "title": "Tadin, D. (2015). Suppressive mechanisms in visual motion processing: From perception to intelligence. Vision research, 115, 58-70."
+    },
+    {
+      "doi": "",
+      "title": "Schaffner, J., Bao, S. D., Tobler, P. N., Hare, T. A., & Polania, R. (2023). Sensory perception relies on fitness-maximizing codes. Nature Human Behaviour, 1-17."
+    },
+    {
+      "doi": "",
+      "title": "Schaffner, J., Bao, S. D., Tobler, P. N., Hare, T. A., & Polania, R. (2023). Sensory perception relies on fitness-maximizing codes. Nature Human Behaviour, 1-17."
+    },
+    {
+      "doi": "",
+      "title": "Yizhar O, et al. (2011) Neocortical excitation\\/inhibition balance in information processing and social dysfunction. Nature 477(7363):171–178."
+    },
+    {
+      "doi": "",
+      "title": "Webb, R., Glimcher, P. W., & Louie, K. (2021). The normalization of consumer valuations: Context-dependent preferences from neurobiological constraints. Management Science, 67(1), 93-125."
+    },
+    {
+      "doi": "",
+      "title": "Yoon JH, et al. (2010) GABA concentration is reduced in visual cortex in schizophrenia and correlates with orientation-specific surround suppression. J Neurosci 30(10): 3777–3781."
+    },
+    {
+      "doi": "",
+      "title": "Yacoub, E., Harel, N., & Uğurbil, K. (2008). High-field fMRI unveils orientation columns in humans. Proceedings of the National Academy of Sciences, 105(30), 10607-10612."
+    },
+    {
+      "doi": "",
+      "title": "Tibber MS, et al. (2013) Visual surround suppression in schizophrenia. Front Psychol 4:88."
+    },
+    {
+      "doi": "",
+      "title": "Schaffner, J., Bao, S. D., Tobler, P. N., Hare, T. A., & Polania, R. (2023). Sensory perception relies on fitness-maximizing codes. Nature Human Behaviour, 1-17."
+    },
+    {
+      "doi": "",
+      "title": "Yizhar O, et al. (2011)"
+    },
+    {
+      "doi": "",
+      "title": "Pergolizzi, D., & Chua, E. F. (2015). Transcranial direct current stimulation (tDCS) of the parietal cortex leads to increased false recognition. Neuropsychologia, 66, 88-98."
+    },
+    {
+      "doi": "",
+      "title": "Palminteri, S., Wyart, V., & Koechlin, E. (2017). The importance of falsification in computational cognitive modeling. Trends in cognitive sciences, 21(6), 425-433."
+    },
+    {
+      "doi": "",
+      "title": "Schaffner, J., Bao, S. D., Tobler, P. N., Hare, T. A., & Polania, R. (2023). Sensory perception relies on fitness-maximizing codes. Nature Human Behaviour, 1-17."
+    },
+    {
+      "doi": "",
+      "title": "Wen, T., & Egner, T. (2023). Context-independent scaling of neural responses to task difficulty in the multiple-demand network. Cerebral Cortex, 33(10), 6013-6027."
+    },
+    {
+      "doi": "",
+      "title": "Tadin, D., Kim, J., Doop, M. L., Gibson, C., Lappin, J. S., Blake, R., & Park, S. (2006). Weakened center-surround interactions in visual motion processing in schizophrenia. Journal of Neuroscience, 26(44), 11403-11412."
+    },
+    {
+      "doi": "",
+      "title": "DiCarlo, J. J., & Cox, D. D. (2007). Untangling invariant object recognition. Trends in cognitive sciences, 11(8), 333-341."
+    },
+    {
+      "doi": "",
+      "title": "Krause, B., Márquez-Ruiz, J., & Kadosh, R. C. (2013). The effect of transcranial direct current stimulation: a role for cortical excitation\\/inhibition balance?. Frontiers in human neuroscience, 7, 602."
+    },
+    {
+      "doi": "",
+      "title": "Liang, T., Peng, R. C., Rong, K. L., Li, J. X., Ke, Y., & Yung, W. H. (2024). Disparate processing of numerosity and associated continuous magnitudes in rats. Science Advances, 10(8), eadj2566."
+    },
+    {
+      "doi": "",
+      "title": "Cicchini, G. M., Mikellidou, K., & Burr, D. (2017). Serial dependencies act directly on perception. Journal of vision, 17(14), 6-6."
+    },
+    {
+      "doi": "",
+      "title": "Ozeki, H., Finn, I. M., Schaffer, E. S., Miller, K. D., & Ferster, D. (2009). Inhibitory stabilization of the cortical network underlies visual surround suppression. Neuron, 62(4), 578-592."
+    },
+    {
+      "doi": "",
+      "title": "Urai, A. E., Braun, A., & Donner, T. H. (2017). Pupil-linked arousal is driven by decision uncertainty and alters serial choice bias. Nature communications, 8(1), 14637."
+    },
+    {
+      "doi": "",
+      "title": "Liang, T., Peng, R. C., Rong, K. L., Li, J. X., Ke, Y., & Yung, W. H. (2024). Disparate processing of numerosity and associated continuous magnitudes in rats. Science Advances, 10(8), eadj2566."
+    },
+    {
+      "doi": "",
+      "title": "Kim, J., Norton, D., Ongur, D., & Chen, Y. (2013). Deficient biological motion perception in schizophrenia: results from a motion noise paradigm. Frontiers in psychology, 4, 46070."
+    },
+    {
+      "doi": "",
+      "title": "Bliss, D. P., Sun, J. J., & D’Esposito, M. (2017). Serial dependence is absent at the time of perception but increases in visual working memory. Scientific reports, 7(1), 14739."
+    },
+    {
+      "doi": "",
+      "title": "Roggeman, C., Santens, S., Fias, W., & Verguts, T. (2011). Stages of nonsymbolic number processing in occipitoparietal cortex disentangled by fMRI adaptation. Journal of Neuroscience, 31(19), 7168-7173."
+    },
+    {
+      "doi": "",
+      "title": "Angelucci, A., & Bressloff, P. C. (2006). Contribution of feedforward, lateral and feedback connections to the classical receptive field center and extra-classical receptive field surround of primate V1 neurons. Progress in brain research, 154, 93-120."
+    },
+    {
+      "doi": "",
+      "title": "Roggeman, C., Santens, S., Fias, W., & Verguts, T. (2011). Stages of nonsymbolic number processing in occipitoparietal cortex disentangled by fMRI adaptation. Journal of Neuroscience, 31(19), 7168-7173."
+    },
+    {
+      "doi": "",
+      "title": "Barack, D. L., & Krakauer, J. W. (2021). Two views on the cognitive brain. Nature Reviews Neuroscience, 22(6), 359-371"
+    },
+    {
+      "doi": "",
+      "title": "Nassi, J. J., & Callaway, E. M. (2009). Parallel processing strategies of the primate visual system. Nature reviews neuroscience, 10(5), 360-372."
+    },
+    {
+      "doi": "",
+      "title": "Nassi, J. J., & Callaway, E. M. (2009). Parallel processing strategies of the primate visual system. Nature reviews neuroscience, 10(5), 360-372."
+    },
+    {
+      "doi": "",
+      "title": "Sandbrink, K., & Summerfield, C. (2024). Modelling cognitive flexibility with deep neural networks. Current Opinion in Behavioral Sciences, 57, 101361."
+    },
+    {
+      "doi": "",
+      "title": "Gold, J. I., & Shadlen, M. N. (2007). The neural basis of decision making. Annu. Rev. Neurosci., 30, 535-574."
+    },
+    {
+      "doi": "",
+      "title": "Urai, A. E., Braun, A., & Donner, T. H. (2017). Pupil-linked arousal is driven by decision uncertainty and alters serial choice bias. Nature communications, 8(1), 14637."
+    },
+    {
+      "doi": "",
+      "title": "Bhatia, P., Longo, L., Chesnokova, H., & Prado, J. (2022). Neural representations of absolute and relative magnitudes in symbolic and nonsymbolic formats. Cerebral Cortex, 32(21), 4733-4745."
+    },
+    {
+      "doi": "",
+      "title": "Antonenko, D., Grittner, U., Puonti, O., Flöel, A., & Thielscher, A. (2021). Estimation of individually induced e-field strength during transcranial electric stimulation using the head circumference. Brain stimulation, 14(5), 1055-1058."
+    },
+    {
+      "doi": "",
+      "title": "Yang, G. R., & Molano-Mazón, M. (2021). Towards the next generation of recurrent network models for cognitive neuroscience. Current opinion in neurobiology, 70, 182-192."
+    },
+    {
+      "doi": "",
+      "title": "Gold, J. I., & Shadlen, M. N. (2007). The neural basis of decision making. Annu. Rev. Neurosci., 30, 535-574."
+    },
+    {
+      "doi": "",
+      "title": "Tadin, Duje, Joseph S. Lappin, Lee A. Gilroy, and Randolph Blake. “Perceptual Consequences of Centre–Surround Antagonism in Visual Motion Processing.” Nature 424, no. 6946 (July 1, 2003): 312–15"
+    },
+    {
+      "doi": "",
+      "title": "Jacob, S. N., Vallentin, D., & Nieder, A. (2012). Relating magnitudes: The brain’s code for proportions. Trends in cognitive sciences, 16(3), 157-166."
+    },
+    {
+      "doi": "",
+      "title": "Kandel, E. R., Schwartz, J. H., Jessell, T. M., Siegelbaum, S., Hudspeth, A. J., & Mack, S. (Eds.). (2000). Principles of neural science (Vol. 4, pp. 1227-1246). New York: McGraw-hill."
+    },
+    {
+      "doi": "",
+      "title": "Carandini, M. (2004). Receptive fields and suppressive fields in the early visual system. The cognitive neurosciences, 3, 313-326."
+    },
+    {
+      "doi": "",
+      "title": "Braun, A., Urai, A. E., & Donner, T. H. (2018). Adaptive history biases result from confidence-weighted accumulation of past choices. Journal of Neuroscience, 38(10), 2418-2429."
+    },
+    {
+      "doi": "",
+      "title": "Jacob, S. N., Vallentin, D., & Nieder, A. (2012). Relating magnitudes: The brain’s code for proportions. Trends in cognitive sciences, 16(3), 157-166."
+    },
+    {
+      "doi": "",
+      "title": "Carandini, M. (2004). Receptive fields and suppressive fields in the early visual system. The cognitive neurosciences, 3, 313-326."
+    },
+    {
+      "doi": "",
+      "title": "Petkov, N., & Subramanian, E. (2007). Motion detection, noise reduction, texture suppression, and contour enhancement by spatiotemporal Gabor filters with surround inhibition. Biological Cybernetics, 97, 423-439."
+    },
+    {
+      "doi": "",
+      "title": "Jacob, S. N., Vallentin, D., & Nieder, A. (2012). Relating magnitudes: The brain’s code for proportions. Trends in cognitive sciences, 16(3), 157-166."
+    },
+    {
+      "doi": "",
+      "title": "Samaha, J., Switzky, M., & Postle, B. R. (2019). Confidence boosts serial dependence in orientation estimation. Journal of vision, 19(4), 25-25."
+    },
+    {
+      "doi": "",
+      "title": "Cai, Y., Hofstetter, S., van der Zwaag, W., Zuiderbaan, W., & Dumoulin, S. O. (2021). Individualized cognitive neuroscience needs 7T: Comparing numerosity maps at 3T and 7T MRI. NeuroImage, 237, 118184."
+    },
+    {
+      "doi": "",
+      "title": "DiCarlo, J. J., Zoccolan, D., & Rust, N. C. (2012). How does the brain solve visual object recognition?. Neuron, 73(3), 415-434."
+    },
+    {
+      "doi": "",
+      "title": "Tsouli, A., Harvey, B. M., Hofstetter, S., Cai, Y., van der Smagt, M. J., Te Pas, S. F., & Dumoulin, S. O. (2022). The role of neural tuning in quantity perception. Trends in Cognitive Sciences, 26(1), 11-24. ISO 690"
+    },
+    {
+      "doi": "",
+      "title": "<@U06JA7D5XC7|여민수> <@U06JGAX5HD5|Joonoh Park> 다음 주 월요일에 저희 스터디의 시범 운영기간이 종료됩니다."
+    },
+    {
+      "doi": "",
+      "title": "DiCarlo, J. J., Zoccolan, D., & Rust, N. C. (2012). How does the brain solve visual object recognition?. Neuron, 73(3), 415-434."
+    },
+    {
+      "doi": "",
+      "title": "DiCarlo, J. J., Zoccolan, D., & Rust, N. C. (2012). How does the brain solve visual object recognition?. Neuron, 73(3), 415-434."
+    },
+    {
+      "doi": "",
+      "title": "Hanks, T. D., & Summerfield, C. (2017). Perceptual decision making in rodents, monkeys, and humans. Neuron, 93(1), 15-31."
+    },
+    {
+      "doi": "",
+      "title": "Kristensen, S., Fracasso, A., Dumoulin, S. O., Almeida, J., & Harvey, B. M. (2021). Size constancy affects the perception and parietal neural representation of object size. NeuroImage, 232, 117909."
+    },
+    {
+      "doi": "",
+      "title": "디포짓 반납 완료 하였습니다. 새로운 차수 진행을 위해 디포짓 3만원(5만원은 많은 것 같습니다) 입금 부탁 드립니다. 1002-736-339846 우리은행."
+    },
+    {
+      "doi": "",
+      "title": "Kristensen, S., Fracasso, A., Dumoulin, S. O., Almeida, J., & Harvey, B. M. (2021). Size constancy affects the perception and parietal neural representation of object size. NeuroImage, 232, 117909."
+    },
+    {
+      "doi": "",
+      "title": "Hanks, T. D., & Summerfield, C. (2017). Perceptual decision making in rodents, monkeys, and humans. Neuron, 93(1), 15-31."
+    },
+    {
+      "doi": "",
+      "title": "Hanks, T. D., & Summerfield, C. (2017). Perceptual decision making in rodents, monkeys, and humans. Neuron, 93(1), 15-31."
+    },
+    {
+      "doi": "",
+      "title": "Kristensen, S., Fracasso, A., Dumoulin, S. O., Almeida, J., & Harvey, B. M. (2021). Size constancy affects the perception and parietal neural representation of object size. NeuroImage, 232, 117909."
+    },
+    {
+      "doi": "",
+      "title": "뇌과학 협동과정 강연: Large-Scale Imaging & Computing for System Neuroscience by 윤영규 교수님(KAIST) 4\\/4 11:00~"
+    },
+    {
+      "doi": "",
+      "title": "Sanders, J. I., Hangya, B., & Kepecs, A. (2016). Signatures of a statistical computation in the human sense of confidence. Neuron, 90(3), 499-506."
+    },
+    {
+      "doi": "",
+      "title": "Kristensen, S., Fracasso, A., Dumoulin, S. O., Almeida, J., & Harvey, B. M. (2021). Size constancy affects the perception and parietal neural representation of object size. NeuroImage, 232, 117909."
+    },
+    {
+      "doi": "",
+      "title": "Kravitz, D. J., Saleem, K. S., Baker, C. I., & Mishkin, M. (2011). A new neural framework for visuospatial processing. Nature Reviews Neuroscience, 12(4), 217-230."
+    },
+    {
+      "doi": "",
+      "title": "Kravitz, D. J., Saleem, K. S., Baker, C. I., & Mishkin, M. (2011). A new neural framework for visuospatial processing. Nature Reviews Neuroscience, 12(4), 217-230."
+    },
+    {
+      "doi": "",
+      "title": "Kravitz, D. J., Saleem, K. S., Baker, C. I., & Mishkin, M. (2011). A new neural framework for visuospatial processing. Nature Reviews Neuroscience, 12(4), 217-230."
+    },
+    {
+      "doi": "",
+      "title": "Bosch, E., Fritsche, M., Ehinger, B. V., & de Lange, F. P. (2020). Opposite effects of choice history and evidence history resolve a paradox of sequential choice bias. Journal of vision, 20(12), 9-9."
+    },
+    {
+      "doi": "",
+      "title": "Harvey, B. M., Fracasso, A., Petridou, N., & Dumoulin, S. O. (2015). Topographic representations of object size and relationships with numerosity reveal generalized quantity processing in human parietal cortex. Proceedings of the National Academy of Sciences, 112(44), 13525-13530."
+    },
+    {
+      "doi": "",
+      "title": "Feigin, H., Baror, S., Bar, M., & Zaidel, A. (2021). Perceptual decisions are biased toward relevant prior choices. Scientific reports, 11(1), 648."
+    },
+    {
+      "doi": "",
+      "title": "Bosch, E., Fritsche, M., Ehinger, B. V., & de Lange, F. P. (2020). Opposite effects of choice history and evidence history resolve a paradox of sequential choice bias. Journal of vision, 20(12), 9-9."
+    },
+    {
+      "doi": "",
+      "title": "Chiou, R., Margulies, D., Soltanlou, M., Jefferies, E., & Kadosh, R. C. (2023). Semantic cognition versus numerical cognition: a topographical perspective. Trends in cognitive sciences."
+    },
+    {
+      "doi": "",
+      "title": "Stocker, A. A., & Simoncelli, E. P. (2006). Noise characteristics and prior expectations in human visual speed perception. Nature neuroscience, 9(4), 578-585."
+    },
+    {
+      "doi": "",
+      "title": "Summerfield, C. (2022). Natural General Intelligence: How understanding the brain can help us build AI. Oxford University Press."
+    },
+    {
+      "doi": "",
+      "title": "Lee, H., & Lee, S. H. (2023). Boundary updating as a source of history effect on decision uncertainty. Iscience, 26(11)."
+    },
+    {
+      "doi": "",
+      "title": "Bisley, J. W., & Goldberg, M. E. (2010). Attention, intention, and priority in the parietal lobe. Annual review of neuroscience, 33, 1-21."
+    },
+    {
+      "doi": "",
+      "title": "Vilares, I. and Kording, K. (2011), Bayesian models: the structure of the world, uncertainty, behavior, and the brain. Annals of the New York Academy of Sciences, 1224: 22-39."
+    },
+    {
+      "doi": "",
+      "title": "Masset, P., Ott, T., Lak, A., Hirokawa, J., & Kepecs, A. (2020). Behavior- and Modality-General Representation of Confidence in Orbitofrontal Cortex. Cell, 182(1), 112–126.e18."
+    },
+    {
+      "doi": "",
+      "title": "Bisley, J. W., & Goldberg, M. E. (2010). Attention, intention, and priority in the parietal lobe. Annual review of neuroscience, 33, 1-21."
+    },
+    {
+      "doi": "",
+      "title": "Rahnev, D., Koizumi, A., McCurdy, L. Y., D’Esposito, M., & Lau, H. (2015). Confidence leak in perceptual decision making. Psychological science, 26(11), 1664-1680."
+    },
+    {
+      "doi": "",
+      "title": "한국인지과학회 월례 세미나: 주제: 시각인공지능 개론, 서강대학교 4\\/18 18:00~"
+    },
+    {
+      "doi": "",
+      "title": "Rahnev, D., Koizumi, A., McCurdy, L. Y., D’Esposito, M., & Lau, H. (2015). Confidence leak in perceptual decision making. Psychological science, 26(11), 1664-1680."
+    },
+    {
+      "doi": "",
+      "title": "Machens, C. K., Romo, R., & Brody, C. D. (2005). Flexible control of mutual inhibition: a neural model of two-interval discrimination. Science, 307(5712), 1121-1124."
+    },
+    {
+      "doi": "",
+      "title": "Boksem, M. A., Meijman, T. F., & Lorist, M. M. (2005). Effects of mental fatigue on attention: an ERP study. Cognitive brain research, 25(1), 107-116."
+    },
+    {
+      "doi": "",
+      "title": "Machens, C. K., Romo, R., & Brody, C. D. (2005). Flexible control of mutual inhibition: a neural model of two-interval discrimination. Science, 307(5712), 1121-1124."
+    },
+    {
+      "doi": "",
+      "title": "Summerfield, C. (2022). Natural General Intelligence: How understanding the brain can help us build AI. Oxford University Press."
+    },
+    {
+      "doi": "",
+      "title": "Machens, C. K., Romo, R., & Brody, C. D. (2005). Flexible control of mutual inhibition: a neural model of two-interval discrimination. Science, 307(5712), 1121-1124. 의 supplementary & Abarbanel, H. D., & Rabinovich, M. I. (2001). Neurodynamics: nonlinear dynamics and neurobiology. Current opinion in neurobiology, 11(4), 423-430. 외 2편의 레퍼런스"
+    },
+    {
+      "doi": "",
+      "title": "Machens, C. K., Romo, R., & Brody, C. D. (2005). Flexible control of mutual inhibition: a neural model of two-interval discrimination. Science, 307(5712), 1121-1124."
+    },
+    {
+      "doi": "",
+      "title": "Summerfield, C. (2022). Natural General Intelligence: How understanding the brain can help us build AI. Oxford University Press."
+    },
+    {
+      "doi": "",
+      "title": "Summerfield, C. (2022). Natural General Intelligence: How understanding the brain can help us build AI. Oxford University Press."
+    },
+    {
+      "doi": "",
+      "title": "Kar, K., Kubilius, J., Schmidt, K., Issa, E. B., & DiCarlo, J. J. (2019). Evidence that recurrent circuits are critical to the ventral stream’s execution of core object recognition behavior. Nature neuroscience, 22(6), 974-983."
+    },
+    {
+      "doi": "",
+      "title": "Machens, C. K., Romo, R., & Brody, C. D. (2005). Flexible control of mutual inhibition: a neural model of two-interval discrimination. Science, 307(5712), 1121-1124."
+    },
+    {
+      "doi": "",
+      "title": "Summerfield, C. (2022). Natural General Intelligence: How understanding the brain can help us build Al. Oxford University Press."
+    },
+    {
+      "doi": "",
+      "title": "Kar, K., Kubilius, J., Schmidt, K., Issa, E. B., & DiCarlo, J. J. (2019). Evidence that recurrent circuits are critical to the ventral stream’s execution of core object recognition behavior. Nature neuroscience, 22(6), 974-983."
+    },
+    {
+      "doi": "",
+      "title": "Summerfield, C. (2022). Natural General Intelligence: How understanding the brain can help us build Al. Oxford University Press."
+    },
+    {
+      "doi": "",
+      "title": "Kar, K., Kubilius, J., Schmidt, K., Issa, E. B., & DiCarlo, J. J. (2019). Evidence that recurrent circuits are critical to the ventral stream’s execution of core object recognition behavior. Nature neuroscience, 22(6), 974-983."
+    },
+    {
+      "doi": "",
+      "title": "Brunton, B. W., Botvinick, M. M., & Brody, C. D. (2013). Rats and humans can optimally accumulate evidence for decision-making. Science, 340(6128), 95-98."
+    },
+    {
+      "doi": "",
+      "title": "Samborska, V., Butler, J. L., Walton, M. E., Behrens, T. E., & Akam, T. (2022). Complementary task representations in hippocampus and prefrontal cortex for generalizing the structure of problems. Nature Neuroscience, 25(10), 1314-1326."
+    },
+    {
+      "doi": "",
+      "title": "Brunton, B. W., Botvinick, M. M., & Brody, C. D. (2013). Rats and humans can optimally accumulate evidence for decision-making. Science, 340(6128), 95-98."
+    },
+    {
+      "doi": "",
+      "title": "Brunton, B. W., Botvinick, M. M., & Brody, C. D. (2013). Rats and humans can optimally accumulate evidence for decision-making. Science, 340(6128), 95-98."
+    },
+    {
+      "doi": "",
+      "title": "Gatys, L. A., Ecker, A. S., & Bethge, M. (2017). Texture and art with deep neural networks. Current opinion in neurobiology, 46, 178-186."
+    },
+    {
+      "doi": "",
+      "title": "Samborska, V., Butler, J. L., Walton, M. E., Behrens, T. E., & Akam, T. (2022). Complementary task representations in hippocampus and prefrontal cortex for generalizing the structure of problems. Nature Neuroscience, 25(10), 1314-1326."
+    },
+    {
+      "doi": "",
+      "title": "Samborska, V., Butler, J. L., Walton, M. E., Behrens, T. E., & Akam, T. (2022). Complementary task representations in hippocampus and prefrontal cortex for generalizing the structure of problems. Nature Neuroscience, 25(10), 1314-1326."
+    },
+    {
+      "doi": "",
+      "title": "Hanks, T., Kopec, C., Brunton, B. et al. Distinct relationships of parietal and prefrontal cortices to evidence accumulation. Nature 520, 220–223 (2015)."
+    },
+    {
+      "doi": "",
+      "title": "Hanks, T. D., Kopec, C. D., Brunton, B. W., Duan, C. A., Erlich, J. C., & Brody, C. D. (2015). Distinct relationships of parietal and prefrontal cortices to evidence accumulation. Nature, 520(7546), 220-223."
+    },
+    {
+      "doi": "",
+      "title": "Hanks, T. D., Kopec, C. D., Brunton, B. W., Duan, C. A., Erlich, J. C., & Brody, C. D. (2015). Distinct relationships of parietal and prefrontal cortices to evidence accumulation. Nature, 520(7546), 220-223."
+    },
+    {
+      "doi": "",
+      "title": "Samborska, V., Butler, J. L., Walton, M. E., Behrens, T. E., & Akam, T. (2022). Complementary task representations in hippocampus and prefrontal cortex for generalizing the structure of problems. Nature Neuroscience, 25(10), 1314-1326."
+    },
+    {
+      "doi": "",
+      "title": "Luu, L., & Stocker, A. A. (2018). Post-decision biases reveal a self-consistency principle in perceptual inference. Elife, 7, e33334."
+    },
+    {
+      "doi": "",
+      "title": "아 그리고 혹시 엑셀표에 o,x 표시 누락된 날짜 있으면 채워주세요"
+    },
+    {
+      "doi": "",
+      "title": "여러분 다음 주 중에 디포짓으로 회식 하시지요~ 어느 요일이 좋으신가요?"
+    },
+    {
+      "doi": "",
+      "title": "민수씨 8000원, 준오씨 12000원 반납 드렸습니다. 다음 회차에도 참여비 3만원 입금 부탁 드릴게요~! 우리 1002-736-339846"
+    },
+    {
+      "doi": "",
+      "title": "논문 읽기는 내일부터 다시 시작하도록 하겠습니다~~"
+    },
+    {
+      "doi": "",
+      "title": "이번 달은 모두 벌금이 많네요..:meltingface:"
+    },
+    {
+      "doi": "",
+      "title": "Bosch, E., Fritsche, M., Ehinger, B. V., & de Lange, F. P. (2020). Opposite effects of choice history and evidence history resolve a paradox of sequential choice bias. Journal of vision, 20(12), 9-9."
+    },
+    {
+      "doi": "",
+      "title": "Summerfield, C., Luyckx, F., & Sheahan, H. (2020). Structure learning and the posterior parietal cortex. Progress in neurobiology, 184, 101717."
+    },
+    {
+      "doi": "",
+      "title": "Summerfield, C., Luyckx, F., & Sheahan, H. (2020). Structure learning and the posterior parietal cortex. Progress in neurobiology, 184, 101717."
+    },
+    {
+      "doi": "",
+      "title": "어제 식사비는 총 49000원이었습니다. 벌금 잔액이 9000원 남았고 3분의1 해서 3천원씩 환급 드리렸습니다."
+    },
+    {
+      "doi": "",
+      "title": "Katz, L. N., Yates, J. L., Pillow, J. W., & Huk, A. C. (2016). Dissociated functional significance of decision-related activity in the primate dorsal stream. Nature, 535(7611), 285-288."
+    },
+    {
+      "doi": "",
+      "title": "Katz, L., Yates, J., Pillow, J. et al. Dissociated functional significance of decision-related activity in the primate dorsal stream. Nature 535, 285–288 (2016)."
+    },
+    {
+      "doi": "",
+      "title": "Pettine, W. W., Raman, D. V., Redish, A. D., & Murray, J. D. (2023). Human generalization of internal representations through prototype learning with goal-directed attention. Nature Human Behaviour, 7(3), 442-463."
+    },
+    {
+      "doi": "",
+      "title": "Pettine, W. W., Raman, D. V., Redish, A. D., & Murray, J. D. (2023). Human generalization of internal representations through prototype learning with goal-directed attention. Nature Human Behaviour, 7(3), 442-463."
+    },
+    {
+      "doi": "",
+      "title": "Kravitz, D., Saleem, K., Baker, C. et al. A new neural framework for visuospatial processing. Nat Rev Neurosci 12, 217–230 (2011)."
+    },
+    {
+      "doi": "",
+      "title": "Pettine, W. W., Raman, D. V., Redish, A. D., & Murray, J. D. (2023). Human generalization of internal representations through prototype learning with goal-directed attention. Nature Human Behaviour, 7(3), 442-463."
+    },
+    {
+      "doi": "",
+      "title": "T. O. Bergmann and G. Hartwigsen, \"Inferring Causality from Noninvasive Brain Stimulation in Cognitive Neuroscience,\" in Journal of Cognitive Neuroscience, vol. 33, no. 2, pp. 195-225, Feb. 2021"
+    },
+    {
+      "doi": "",
+      "title": "Hayashi, M., Kido, T., & Yotsumoto, Y. (2024). Hierarchical representations of relative numerical magnitudes in the human frontoparietal cortex."
+    },
+    {
+      "doi": "",
+      "title": "Pettine, W. W., Raman, D. V., Redish, A. D., & Murray, J. D. (2023). Human generalization of internal representations through prototype learning with goal-directed attention. Nature Human Behaviour, 7(3), 442-463."
+    },
+    {
+      "doi": "",
+      "title": "Hanks, T. D., & Summerfield, C. (2017). Perceptual decision making in rodents, monkeys, and humans. Neuron, 93(1), 15-31."
+    },
+    {
+      "doi": "",
+      "title": "Love, B. C., Medin, D. L., & Gureckis, T. M. (2004). SUSTAIN: a network model of category learning. Psychological review, 111(2), 309."
+    },
+    {
+      "doi": "",
+      "title": "Machens, C. K., Romo, R., & Brody, C. D. (2005). Flexible control of mutual inhibition: a neural model of two-interval discrimination. Science, 307(5712), 1121-1124."
+    },
+    {
+      "doi": "",
+      "title": "Love, B. C., Medin, D. L., & Gureckis, T. M. (2004). SUSTAIN: a network model of category learning. Psychological review, 111(2), 309."
+    },
+    {
+      "doi": "",
+      "title": "Sheahan, H., Luyckx, F., Nelli, S., Teupe, C., & Summerfield, C. (2021). Neural state space alignment for magnitude generalization in humans and recurrent networks. Neuron, 109(7), 1214-1226."
+    },
+    {
+      "doi": "",
+      "title": "Lak, A., Costa, G. M., Romberg, E., Koulakov, A. A., Mainen, Z. F., & Kepecs, A. (2014). Orbitofrontal cortex is required for optimal waiting based on decision confidence. Neuron, 84(1), 190-201."
+    },
+    {
+      "doi": "",
+      "title": "Dehaene, S. (2021). How we learn: Why brains learn better than any machine... for now. Penguin."
+    },
+    {
+      "doi": "",
+      "title": "Lak, A., Costa, G. M., Romberg, E., Koulakov, A. A., Mainen, Z. F., & Kepecs, A. (2014). Orbitofrontal cortex is required for optimal waiting based on decision confidence. Neuron, 84(1), 190-201."
+    },
+    {
+      "doi": "",
+      "title": "Brunton, B. W., Botvinick, M. M., & Brody, C. D. (2013). Rats and humans can optimally accumulate evidence for decision-making. Science, 340(6128), 95-98."
+    },
+    {
+      "doi": "",
+      "title": "Hanks, T. D., Kopec, C. D., Brunton, B. W., Duan, C. A., Erlich, J. C., & Brody, C. D. (2015). Distinct relationships of parietal and prefrontal cortices to evidence accumulation. Nature, 520(7546), 220-223."
+    },
+    {
+      "doi": "",
+      "title": "Paul, J.M., van Ackooij, M., ten Cate, T.C. et al. Numerosity tuning in human association cortices and local image contrast representations in early visual cortex. Nat Commun 13, 1340 (2022)."
+    },
+    {
+      "doi": "",
+      "title": "Leibovich, T., Katzin, N., Harel, M., & Henik, A. (2017). From “sense of number” to “sense of magnitude”: The role of continuous magnitudes in numerical cognition. Behavioral and Brain Sciences, 40, e164."
+    },
+    {
+      "doi": "",
+      "title": "Katz, L. N., Yates, J. L., Pillow, J. W., & Huk, A. C. (2016). Dissociated functional significance of decision-related activity in the primate dorsal stream. Nature, 535(7611), 285-288."
+    },
+    {
+      "doi": "",
+      "title": "Xie, T., Adamek, M., Cho, H., Adamo, M. A., Ritaccio, A. L., Willie, J. T., ... & Kubanek, J. (2024). Graded decisions in the human brain. Nature communications, 15(1), 4308."
+    },
+    {
+      "doi": "",
+      "title": "Dehaene, S. (2021). How we learn: Why brains learn better than any machine... for now. Penguin."
+    },
+    {
+      "doi": "",
+      "title": "Paul, J. M., van Ackooij, M., Ten Cate, T. C., & Harvey, B. M. (2022). Numerosity tuning in human association cortices and local image contrast representations in early visual cortex. Nature Communications, 13(1), 1340."
+    },
+    {
+      "doi": "",
+      "title": "Iigaya, K., Yi, S., Wahle, I. A., Tanwisuth, S., Cross, L., & O’Doherty, J. P. (2023). Neural mechanisms underlying the hierarchical construction of perceived aesthetic value. Nature Communications, 14(1), 127."
+    },
+    {
+      "doi": "",
+      "title": "Iigaya, K., Yi, S., Wahle, I.A. et al. Neural mechanisms underlying the hierarchical construction of perceived aesthetic value. Nat Commun 14, 127 (2023)."
+    },
+    {
+      "doi": "",
+      "title": "Xie, T., Adamek, M., Cho, H., Adamo, M. A., Ritaccio, A. L., Willie, J. T., ... & Kubanek, J. (2024). Graded decisions in the human brain. Nature communications, 15(1), 4308."
+    },
+    {
+      "doi": "",
+      "title": "Masset, P., Ott, T., Lak, A., Hirokawa, J., & Kepecs, A. (2020). Behavior- and Modality-General Representation of Confidence in Orbitofrontal Cortex. Cell, 182(1), 112–126.e18."
+    },
+    {
+      "doi": "",
+      "title": "Masset, P., Ott, T., Lak, A., Hirokawa, J., & Kepecs, A. (2020). Behavior-and modality-general representation of confidence in orbitofrontal cortex. Cell, 182(1), 112-126."
+    },
+    {
+      "doi": "",
+      "title": "Dehaene, S. (2021). How we learn: Why brains learn better than any machine... for now. Penguin."
+    },
+    {
+      "doi": "",
+      "title": "Masset, P., Ott, T., Lak, A., Hirokawa, J., & Kepecs, A. (2020). Behavior- and Modality-General Representation of Confidence in Orbitofrontal Cortex. Cell, 182(1), 112–126.e18."
+    },
+    {
+      "doi": "",
+      "title": "Dehaene, S. (2021). How we learn: Why brains learn better than any machine... for now. Penguin."
+    },
+    {
+      "doi": "",
+      "title": "Lak A, Costa GM, Romberg E, Koulakov AA, Mainen ZF, Kepecs A. Orbitofrontal cortex is required for optimal waiting based on decision confidence. Neuron. 2014 Oct 1;84(1):190-201."
+    },
+    {
+      "doi": "",
+      "title": "Kar, K., Kubilius, J., Schmidt, K., Issa, E. B., & DiCarlo, J. J. (2019). Evidence that recurrent circuits are critical to the ventral stream’s execution of core object recognition behavior. Nature neuroscience, 22(6), 974-983."
+    },
+    {
+      "doi": "",
+      "title": "Okazawa, G., & Kiani, R. (2023). Neural mechanisms that make perceptual decisions flexible. Annual review of physiology, 85, 191-215."
+    },
+    {
+      "doi": "",
+      "title": "Lak, A., Costa, G. M., Romberg, E., Koulakov, A. A., Mainen, Z. F., & Kepecs, A. (2014). Orbitofrontal cortex is required for optimal waiting based on decision confidence. Neuron, 84(1), 190-201."
+    },
+    {
+      "doi": "",
+      "title": "Summerfield, C., Luyckx, F., & Sheahan, H. (2020). Structure learning and the posterior parietal cortex. Progress in neurobiology, 184, 101717."
+    },
+    {
+      "doi": "",
+      "title": "Huang, J., Wang, T., Dai, W., Li, Y., Yang, Y., Zhang, Y., ... & Xing, D. (2024). Neuronal representation of visual working memory content in the primate primary visual cortex. Science Advances, 10(24), eadk3953."
+    },
+    {
+      "doi": "",
+      "title": "OHBM2024 - Ben Harvey 포스터 발표"
+    },
+    {
+      "doi": "",
+      "title": "OHBM2024 - 이진우(뇌인지과학과) 포스터 발표"
+    },
+    {
+      "doi": "",
+      "title": "OHBM2024-Increasing international collaboration opportunities for early career researchers (Katie Moran, Joseph Chen, Patcharaporn Srisaikaew, Brendan Williams)"
+    },
+    {
+      "doi": "",
+      "title": "OHBM2024 - Yaron Caspi 포스터 발표"
+    },
+    {
+      "doi": "",
+      "title": "OHBM2024-Frontoparietal contribution to the construction of conscious visual representations and its relationship with perceptual confidence"
+    },
+    {
+      "doi": "",
+      "title": "아 그리고 체크 다 하신분은 자신 벌금도 계산해서 표에 기입해 주세요~~!"
+    },
+    {
+      "doi": "",
+      "title": "벌써 7월이 되었네요.. 6월 논문 스터디 정산을 위해 내일까지 읽기 표에 체크를 완료 부탁 드립니다!"
+    },
+    {
+      "doi": "",
+      "title": "저는 모두 좋습니다!"
+    },
+    {
+      "doi": "",
+      "title": "논문 스터디는 내일(7\\/4)부터 재개하겠습니다!"
+    },
+    {
+      "doi": "",
+      "title": "Park, H., Arazi, A., Talluri, B. C., Celotto, M., Panzeri, S., Stocker, A. A., & Donner, T. H. (2024). Confirmation Bias through Selective Use of Evidence in Human Cortex. bioRxiv, 2024-06."
+    },
+    {
+      "doi": "",
+      "title": "네 그럼 7\\/9에 같이 점심 하시죠!"
+    },
+    {
+      "doi": "",
+      "title": "저는 화요일이 더 좋습니다!"
+    },
+    {
+      "doi": "",
+      "title": "Adler, W. T., & Ma, W. J. (2018). Comparing Bayesian and non-Bayesian accounts of human confidence reports. PLoS computational biology, 14(11), e1006572."
+    },
+    {
+      "doi": "",
+      "title": "Rollwage, M., Loosen, A., Hauser, T. U., Moran, R., Dolan, R. J., & Fleming, S. M. (2020). Confidence drives a neural confirmation bias. Nature communications, 11(1), 2634."
+    },
+    {
+      "doi": "",
+      "title": "Dehaene, S. (2021). How we learn: Why brains learn better than any machine... . for now. Penguin."
+    },
+    {
+      "doi": "",
+      "title": "Suárez-Pinilla M, Seth AK, Roseboom W. Serial dependence in the perception of visual variance. J Vis. 2018 Jul 2;18(7):4."
+    },
+    {
+      "doi": "",
+      "title": "오늘 11시나 11:30에 식사할까요? 쌀국수 집이나 비비큐나 라운지오나 가볼까요?"
+    },
+    {
+      "doi": "",
+      "title": "Lee H, Lee SH. Boundary updating as a source of history effect on decision uncertainty. iScience. 2023 Oct 28;26(11):108314."
+    },
+    {
+      "doi": "",
+      "title": "Barretto-García, M., de Hollander, G., Grueschow, M., Polanía, R., Woodford, M., & Ruff, C. C. (2023). Individual risk attitudes arise from noise in neurocognitive magnitude representations. Nature Human Behaviour, 7(9), 1551-1567."
+    },
+    {
+      "doi": "",
+      "title": "Adler, W. T., & Ma, W. J. (2018). Comparing Bayesian and non-Bayesian accounts of human confidence reports. PLoS computational biology, 14(11), e1006572."
+    },
+    {
+      "doi": "",
+      "title": "다들 이번 달 디포짓 3만원도 입금 부탁 드립니다."
+    },
+    {
+      "doi": "",
+      "title": "지난달 정산 드립니다."
+    },
+    {
+      "doi": "",
+      "title": "Barretto-García, M., de Hollander, G., Grueschow, M., Polanía, R., Woodford, M., & Ruff, C. C. (2023). Individual risk attitudes arise from noise in neurocognitive magnitude representations. Nature Human Behaviour, 7(9), 1551-1567."
+    },
+    {
+      "doi": "",
+      "title": "Ma, W. J. (2019). Bayesian decision models: A primer. Neuron, 104(1), 164-175."
+    },
+    {
+      "doi": "",
+      "title": "Yates, J. L., Park, I. M., Katz, L. N., Pillow, J. W., & Huk, A. C. (2017). Functional dissection of signal and noise in MT and LIP during decision-making. Nature neuroscience, 20(9), 1285-1292."
+    },
+    {
+      "doi": "",
+      "title": "Lever, J., Krzywinski, M. & Altman, N. Regularization. Nat Methods 13, 803–804 (2016)."
+    },
+    {
+      "doi": "",
+      "title": "Goodwin, I., Kugel, J., Hester, R., & Garrido, M. I. (2023). Bayesian accounts of perceptual decisions in the nonclinical continuum of psychosis: Greater imprecision in both top-down and bottom-up processes. PLOS Computational Biology, 19(11), e1011670."
+    },
+    {
+      "doi": "",
+      "title": "Rafiei, F., Shekhar, M., & Rahnev, D. (2024). The neural network RTNet exhibits the signatures of human perceptual decision-making. Nature Human Behaviour, 1-19.ISO 690"
+    },
+    {
+      "doi": "",
+      "title": "Driscoll, L. N., Shenoy, K., & Sussillo, D. (2024). Flexible multitask computation in recurrent networks utilizes shared dynamical motifs. Nature Neuroscience, 1-15."
+    },
+    {
+      "doi": "",
+      "title": "Driscoll, L. N., Shenoy, K., & Sussillo, D. (2024). Flexible multitask computation in recurrent networks utilizes shared dynamical motifs. Nature Neuroscience, 1-15."
+    },
+    {
+      "doi": "",
+      "title": "Rahnev, D., Koizumi, A., McCurdy, L. Y., D’Esposito, M., & Lau, H. (2015). Confidence Leak in Perceptual Decision Making. Psychological Science, 26(11), 1664-1680."
+    },
+    {
+      "doi": "",
+      "title": "Bzdok, D., Krzywinski, M. & Altman, N. Machine learning: supervised methods. Nat Methods 15, 5–6 (2018)."
+    },
+    {
+      "doi": "",
+      "title": "Zhang, R., Pitkow, X., & Angelaki, D. E. (2024). Inductive biases of neural network modularity in spatial navigation. Science Advances, 10(29), eadk1256."
+    },
+    {
+      "doi": "",
+      "title": "Goodwin, I., Kugel, J., Hester, R., & Garrido, M. I. (2023). Bayesian accounts of perceptual decisions in the nonclinical continuum of psychosis: Greater imprecision in both top-down and bottom-up processes. PLOS Computational Biology, 19(11), e1011670."
+    },
+    {
+      "doi": "",
+      "title": "Qamar, A. T., Cotton, R. J., George, R. G., Beck, J. M., Prezhdo, E., Laudano, A., ... & Ma, W. J. (2013). Trial-to-trial, uncertainty-based adjustment of decision boundaries in visual categorization. Proceedings of the National Academy of Sciences, 110(50), 20332-20337."
+    },
+    {
+      "doi": "",
+      "title": "Altman, N., Krzywinski, M. Clustering. Nat Methods 14, 545–546 (2017)."
+    },
+    {
+      "doi": "",
+      "title": "<@U06JA7D5XC7|여민수> <@U06JGAX5HD5|Joonoh Park> 혹시 이번 주 수요일 점심이나 저녁에 저희 마지막 식사하면 시간 되시나요?"
+    },
+    {
+      "doi": "",
+      "title": "아니면 금요일 저녁이나요"
+    },
+    {
+      "doi": "",
+      "title": "Long Luu, Alan A Stocker (2018) Post-decision biases reveal a self-consistency principle in perceptual inference. eLife 7:e33334."
+    },
+    {
+      "doi": "",
+      "title": "<@U06JA7D5XC7|여민수> <@U06JGAX5HD5|Joonoh Park> 두 분께 스터디 환급액 환급 드렸습니다. 내역은 저희 시트에서 확인 가능합니다."
+    },
+    {
+      "doi": "",
+      "title": "Van Vugt, B., Dagnino, B., Vartak, D., Safaai, H., Panzeri, S., Dehaene, S., & Roelfsema, P. R. (2018). The threshold for conscious report: Signal loss and response bias in visual and frontal cortex. Science, 360(6388), 537-542."
+    },
+    {
+      "doi": "",
+      "title": "아 지난번 회식 정산을 잊고 있었네요.. 얼른 하도록 하겠습니다.."
+    },
+    {
+      "doi": "",
+      "title": "스프레드시트 링크입니다. <https:\\/\\/docs.google.com\\/spreadsheets\\/d\\/1M4-71AnGkWZ0M6FWAfEHQ2DbdIOdteh2jMrLSyfzUfQ\\/edit?usp=sharing>"
+    },
+    {
+      "doi": "",
+      "title": "Long Luu, Alan A Stocker (2018) Post-decision biases reveal a self-consistency principle in perceptual inference. eLife 7:e33334."
+    },
+    {
+      "doi": "",
+      "title": "Barack, D.L., Krakauer, J.W. Two views on the cognitive brain. Nat Rev Neurosci 22, 359–371 (2021)."
+    },
+    {
+      "doi": "",
+      "title": "Kawakita, G., Zeleznikow-Johnston, A. M., Takeda, K., Tsuchiya, N., & Oizumi, M. (2023, January). Is my” red” your” red”?: Unsupervised alignment of qualia structures via optimal transport. In ICLR 2024 Workshop on Representational Alignment."
+    },
+    {
+      "doi": "",
+      "title": "Long Luu, Alan A Stocker (2018) Post-decision biases reveal a self-consistency principle in perceptual inference. eLife 7:e33334."
+    },
+    {
+      "doi": "",
+      "title": "Krakauer JW, Ghazanfar AA, Gomez-Marin A, MacIver MA, Poeppel D. Neuroscience Needs Behavior: Correcting a Reductionist Bias. Neuron. 2017 Feb 8;93(3):480-490."
+    },
+    {
+      "doi": "",
+      "title": "Bear Neuroscience, Chapter 19 - Brain Rhythms and Sleep"
+    },
+    {
+      "doi": "",
+      "title": "Koide-Majima, N., Nishimoto, S., & Majima, K. (2024). Mental image reconstruction from human brain activity: Neural decoding of mental imagery via deep neural network-based Bayesian estimation. Neural Networks, 170, 349-363."
+    },
+    {
+      "doi": "",
+      "title": "Heeseung Lee, Jaeseob Lim, Sang-Hun Lee. (2023). Evidence for belief updating in decision-variable space: past decisions with finer granularity attract future ones more strongly. bioRxiv, 608767."
+    },
+    {
+      "doi": "",
+      "title": "Long Luu, Alan A Stocker (2018) Post-decision biases reveal a self-consistency principle in perceptual inference. eLife 7:e33334."
+    },
+    {
+      "doi": "",
+      "title": "Koide-Majima, N., Nishimoto, S., & Majima, K. (2024). Mental image reconstruction from human brain activity: Neural decoding of mental imagery via deep neural network-based Bayesian estimation. Neural Networks, 170, 349-363."
+    },
+    {
+      "doi": "",
+      "title": "Long Luu, Alan A Stocker (2018) Post-decision biases reveal a self-consistency principle in perceptual inference. eLife 7:e33334."
+    },
+    {
+      "doi": "",
+      "title": "Bear Neuroscience, Chapter 23 - Wiring The Brain"
+    },
+    {
+      "doi": "",
+      "title": "Zamboni Elisa, Ledgeway Timothy, McGraw Paul V. and Schluppeck Denis (2016) Do perceptual biases emerge early or late in visual processing? Decision-biases in motion perception. Proc. R. Soc. B.283: 20160263."
+    },
+    {
+      "doi": "",
+      "title": "C. Summerfield. (2008). A Neural Representation of Prior Information during Perceptual Inference. Neuron, 59(2), 336-347."
+    },
+    {
+      "doi": "",
+      "title": "Zamboni Elisa, Ledgeway Timothy, McGraw Paul V. and Schluppeck Denis (2016) Do perceptual biases emerge early or late in visual processing? Decision-biases in motion perception. Proc. R. Soc. B.283: 20160263."
+    },
+    {
+      "doi": "",
+      "title": "Adler, W. T., & Ma, W. J. (2018). Comparing Bayesian and non-Bayesian accounts of human confidence reports. PLoS computational biology, 14(11), e1006572."
+    },
+    {
+      "doi": "",
+      "title": "Zamboni Elisa, Ledgeway Timothy, McGraw Paul V. and Schluppeck Denis (2016) Do perceptual biases emerge early or late in visual processing? Decision-biases in motion perception. Proc. R. Soc. B.283: 20160263."
+    },
+    {
+      "doi": "",
+      "title": "Zamboni Elisa, Ledgeway Timothy, McGraw Paul V. and Schluppeck Denis (2016) Do perceptual biases emerge early or late in visual processing? Decision-biases in motion perception. Proc. R. Soc. B.283: 20160263."
+    },
+    {
+      "doi": "",
+      "title": "Adler, W. T., & Ma, W. J. (2018). Comparing Bayesian and non-Bayesian accounts of human confidence reports. PLoS Computational Biology, 14(11), e1006572."
+    },
+    {
+      "doi": "",
+      "title": "Adler, W. T., & Ma, W. J. (2018). Comparing Bayesian and non-Bayesian accounts of human confidence reports. PLoS computational biology, 14(11), e1006572."
+    },
+    {
+      "doi": "",
+      "title": "Aitchison, L., Bang, D., Bahrami, B., & Latham, P. E. (2015). Doubly Bayesian analysis of confidence in perceptual decision-making. PLoS computational biology, 11(10), e1004519."
+    },
+    {
+      "doi": "",
+      "title": "Adler, W. T., & Ma, W. J. (2018). Comparing Bayesian and non-Bayesian accounts of human confidence reports. PLoS computational biology, 14(11), e1006572."
+    },
+    {
+      "doi": "",
+      "title": "Adler, W. T., & Ma, W. J. (2018). Comparing Bayesian and non-Bayesian accounts of human confidence reports. PLoS computational biology, 14(11), e1006572."
+    },
+    {
+      "doi": "",
+      "title": "Keogh, R., & Pearson, J. (2018). The blind mind: No sensory visual imagery in aphantasia. Cortex, 105, 53-60."
+    },
+    {
+      "doi": "",
+      "title": "Adler, W. T., & Ma, W. J. (2018). Comparing Bayesian and non-Bayesian accounts of human confidence reports. PLoS computational biology, 14(11), e1006572."
+    },
+    {
+      "doi": "",
+      "title": "Kriegeskorte, N., Douglas, P.K. Cognitive computational neuroscience. Nat Neurosci 21, 1148–1160 (2018)."
+    },
+    {
+      "doi": "",
+      "title": "뇌인지과학 콜로키엄2 - 박형동 (240909)"
+    },
+    {
+      "doi": "",
+      "title": "Barack, D. L., & Krakauer, J. W. (2021). Two views on the Cognitive Brain. Nature Reviews Neuroscience, 22(6), 359–371."
+    },
+    {
+      "doi": "",
+      "title": "Ergen, B., & Abut, S. (2013). Gender recognition using facial images. In proceedings of International Conference on Agriculture and Biotechnology IPCBEE (Vol. 60, No. 22, pp. 112-117)."
+    },
+    {
+      "doi": "",
+      "title": "Barack, D. L., & Krakauer, J. W. (2021). Two views on the Cognitive Brain. Nature Reviews Neuroscience, 22(6), 359–371."
+    },
+    {
+      "doi": "",
+      "title": "Parada, F. J., & Rossi, A. (2018). If neuroscience needs behavior, what does psychology need?. Frontiers in psychology, 9, 433."
+    },
+    {
+      "doi": "",
+      "title": "Barack, D. L., & Krakauer, J. W. (2021). Two views on the Cognitive Brain. Nature Reviews Neuroscience, 22(6), 359–371."
+    },
+    {
+      "doi": "",
+      "title": "Bear Neuroscience, Chapter 25 - Molecular Mechanisms of Learning and Memory"
+    },
+    {
+      "doi": "",
+      "title": "Karatum, O., Han, M., Erdogan, E. T., Karamursel, S., & Nizamoglu, S. (2023). Physical mechanisms of emerging neuromodulation modalities. Journal of Neural Engineering, 20(3), 031001."
+    },
+    {
+      "doi": "",
+      "title": "Barack, D. L., & Krakauer, J. W. (2021). Two views on the Cognitive Brain. Nature Reviews Neuroscience, 22(6), 359–371."
+    },
+    {
+      "doi": "",
+      "title": "Kriegeskorte, N., Douglas, P.K. Cognitive computational neuroscience. Nat Neurosci 21, 1148–1160 (2018)."
+    },
+    {
+      "doi": "",
+      "title": "Barack, D. L., & Krakauer, J. W. (2021). Two views on the Cognitive Brain. Nature Reviews Neuroscience, 22(6), 359–371."
+    },
+    {
+      "doi": "",
+      "title": "Kriegeskorte, N., Douglas, P.K. Cognitive computational neuroscience. Nat Neurosci 21, 1148–1160 (2018)."
+    },
+    {
+      "doi": "",
+      "title": "Yuste, R. (2015). From the neuron doctrine to neural networks. Nature Reviews Neuroscience, 16(8), 487–497."
+    },
+    {
+      "doi": "",
+      "title": "그리고 저희 다음 주 회식 날짜를 잡아볼까요?"
+    },
+    {
+      "doi": "",
+      "title": "벌써 한 달이 다 되었네요... 스프레드 시트에 각자 벌금을 계산해서 기입해주시기 바랍니다!"
+    },
+    {
+      "doi": "",
+      "title": "Heeseung Lee, Jaeseob Lim, Sang-Hun Lee. (2023). Evidence for belief updating in decision-variable space: past decisions with finer granularity attract future ones more strongly. bioRxiv, 608767."
+    },
+    {
+      "doi": "",
+      "title": "Yuste, R. (2015). From the neuron doctrine to neural networks. Nature Reviews Neuroscience, 16(8), 487–497."
+    },
+    {
+      "doi": "",
+      "title": "뇌인지과학 콜로키엄2 - 이은이 (240923)"
+    },
+    {
+      "doi": "",
+      "title": "Waskom, M. L., Okazawa, G., & Kiani, R. (2019). Designing and interpreting psychophysical investigations of cognition. Neuron, 104(1), 100-112."
+    },
+    {
+      "doi": "",
+      "title": "<@U06JGAX5HD5|Joonoh Park> <@U07728304R5|Boyun Lee> 예치금을 까먹고 있었네요ㅋㅋ"
+    },
+    {
+      "doi": "",
+      "title": "Hahn, M., Wei, XX. A unifying theory explains seemingly contradictory biases in perceptual estimation. Nat Neurosci 27, 793–804 (2024)."
+    },
+    {
+      "doi": "",
+      "title": "Collins, T. (2022). Serial dependence occurs at the level of both features and integrated object representations. Journal of Experimental Psychology: General, 151(8), 1821."
+    },
+    {
+      "doi": "",
+      "title": "Matthias FritscheEelke SpaakFloris P de Lange (2020) A Bayesian and efficient observer model explains concurrent attractive and repulsive history biases in visual perception eLife 9:e55389."
+    },
+    {
+      "doi": "",
+      "title": "Jazayeri, M., & Movshon, J. A. (2006). Optimal representation of sensory information by neural populations. Nature Neuroscience, 9(5), 690–696."
+    },
+    {
+      "doi": "",
+      "title": "Jazayeri, M., & Movshon, J. A. (2006). Optimal representation of sensory information by neural populations. Nature Neuroscience, 9(5), 690–696."
+    },
+    {
+      "doi": "",
+      "title": "Wei Ji Ma - Tutorial: Bayesian modeling of behavior (Cosyne 2019)"
+    },
+    {
+      "doi": "",
+      "title": "Waskom, M. L., Okazawa, G., & Kiani, R. (2019). Designing and interpreting psychophysical investigations of cognition. Neuron, 104(1), 100-112."
+    },
+    {
+      "doi": "",
+      "title": "Lee, H., Lim, J., & Lee, S.-H. (2024). Evidence for Belief Updating in Decision-Variable Space: Past Decisions with Finer Granularity Attract Future Ones More Strongly."
+    },
+    {
+      "doi": "",
+      "title": "Taubert, J., Alais, D., & Burr, D. (2016). Different coding strategies for the perception of stable and changeable facial attributes. Scientific reports, 6(1), 32239."
+    },
+    {
+      "doi": "",
+      "title": "Lee, H., Lim, J., & Lee, S.-H. (2024). Evidence for Belief Updating in Decision-Variable Space: Past Decisions with Finer Granularity Attract Future Ones More Strongly."
+    },
+    {
+      "doi": "",
+      "title": "Toward building a decision-making paradigm for dynamic and real-world addictive behaviors (심리학과 특강 안우영 교수님 강연 10:00~11:30)"
+    },
+    {
+      "doi": "",
+      "title": "Ma WJ. Bayesian Decision Models: A Primer. Neuron. 2019 Oct 9;104(1):164-175. doi: 10.1016\\/j.neuron.2019.09.037. PMID: 31600512."
+    },
+    {
+      "doi": "",
+      "title": "Beck, J. M., Ma, W. J., Pitkow, X., Latham, P. E., & Pouget, A. (2012). Not noisy, just wrong: The role of suboptimal inference in behavioral variability. Neuron, 74(1), 30–39."
+    },
+    {
+      "doi": "",
+      "title": "Waskom, M. L., Okazawa, G., & Kiani, R. (2019). Designing and interpreting psychophysical investigations of cognition. Neuron, 104(1), 100-112."
+    },
+    {
+      "doi": "",
+      "title": "Beck, J. M., Ma, W. J., Pitkow, X., Latham, P. E., & Pouget, A. (2012). Not noisy, just wrong: The role of suboptimal inference in behavioral variability. Neuron, 74(1), 30–39."
+    },
+    {
+      "doi": "",
+      "title": "Ernst, M. O., & Banks, M. S. (2002). Humans integrate visual and haptic information in a statistically optimal fashion. Nature, 415(6870), 429–433."
+    },
+    {
+      "doi": "",
+      "title": "뇌인지과학 콜로키엄2 - Joshua Jacobs (241014)"
+    },
+    {
+      "doi": "",
+      "title": "Lee, H., Lim, J., & Lee, S. H. (2024). Evidence for belief updating in decision-variable space: past decisions with finer granularity attract future ones more strongly. bioRxiv, 2024-08."
+    },
+    {
+      "doi": "",
+      "title": "Ernst, M., Banks, M. Humans integrate visual and haptic information in a statistically optimal fashion. Nature 415, 429–433 (2002)."
+    },
+    {
+      "doi": "",
+      "title": "Taubert, J., Alais, D., & Burr, D. (2016). Different coding strategies for the perception of stable and changeable facial attributes. Scientific reports, 6(1), 32239."
+    },
+    {
+      "doi": "",
+      "title": "Loetscher, T., Schwarz, U., Schubiger, M., & Brugger, P. (2008). Head turns bias the brain’s internal random generator. Current Biology, 18(2)."
+    },
+    {
+      "doi": "",
+      "title": "Ernst, M., Banks, M. Humans integrate visual and haptic information in a statistically optimal fashion. Nature 415, 429–433 (2002)."
+    },
+    {
+      "doi": "",
+      "title": "Rosenthal, D. (2019). Consciousness and confidence. Neuropsychologia, 128, 255-265."
+    },
+    {
+      "doi": "",
+      "title": "van Bergen, R. S., Ji Ma, W., Pratte, M. S., & Jehee, J. F. (2015). Sensory uncertainty decoded from visual cortex predicts behavior. Nature Neuroscience, 18(12), 1728–1730."
+    },
+    {
+      "doi": "",
+      "title": "Lee, H., Lim, J., & Lee, S. H. (2024). Evidence for belief updating in decision-variable space: past decisions with finer granularity attract future ones more strongly. bioRxiv, 2024-08."
+    },
+    {
+      "doi": "",
+      "title": "Rosenthal, D. (2019). Consciousness and confidence. Neuropsychologia, 128, 255-265."
+    },
+    {
+      "doi": "",
+      "title": "Lee, H., Lim, J., & Lee, S. H. (2024). Evidence for belief updating in decision-variable space: past decisions with finer granularity attract future ones more strongly. bioRxiv, 2024-08."
+    },
+    {
+      "doi": "",
+      "title": "van Bergen, R. S., Ji Ma, W., Pratte, M. S., & Jehee, J. F. (2015). Sensory uncertainty decoded from visual cortex predicts behavior. Nature Neuroscience, 18(12), 1728–1730."
+    },
+    {
+      "doi": "",
+      "title": "<@U06JGAX5HD5|Joonoh Park> <@U07728304R5|Boyun Lee> 어느덧 한 달이 지났네요. 시트에 정산해주시기 바랍니다."
+    },
+    {
+      "doi": "",
+      "title": "뇌인지과학 콜로키엄2 - 김학진 (241021)"
+    },
+    {
+      "doi": "",
+      "title": "Körding, K. P., & Wolpert, D. M. (2004). Bayesian integration in Sensorimotor Learning. Nature, 427(6971), 244–247."
+    },
+    {
+      "doi": "",
+      "title": "Shepard, R. N., Hovland, C. I., & Jenkins, H. M. (1961). Learning and memorization of classifications. Psychological monographs: General and applied, 75(13), 1."
+    },
+    {
+      "doi": "",
+      "title": "Körding, K. P., & Wolpert, D. M. (2004a). Bayesian integration in Sensorimotor Learning. Nature, 427(6971), 244–247."
+    },
+    {
+      "doi": "",
+      "title": "Revilla, M. A., Saris, W. E., & Krosnick, J. A. (2014). Choosing the number of categories in agree–disagree scales. Sociological methods & research, 43(1), 73-97."
+    },
+    {
+      "doi": "",
+      "title": "Ma, W., Beck, J., Latham, P. et al. Bayesian inference with probabilistic population codes. Nat Neurosci 9, 1432–1438 (2006)."
+    },
+    {
+      "doi": "",
+      "title": "뇌인지과학 콜로키엄2 - 김성연 (241028)"
+    },
+    {
+      "doi": "",
+      "title": "Ma, W., Beck, J., Latham, P. et al. Bayesian inference with probabilistic population codes. Nat Neurosci 9, 1432–1438 (2006)."
+    },
+    {
+      "doi": "",
+      "title": "Ma, W., Beck, J., Latham, P. et al. Bayesian inference with probabilistic population codes. Nat Neurosci 9, 1432–1438 (2006)."
+    },
+    {
+      "doi": "",
+      "title": "뇌인지과학 콜로키엄2 - 김성연 (241028)"
+    },
+    {
+      "doi": "",
+      "title": "플라톤의 카메라 - 폴 처칠랜드"
+    },
+    {
+      "doi": "",
+      "title": "뇌인지과학 콜로키엄2 - 김재경 (241104)"
+    },
+    {
+      "doi": "",
+      "title": "Walker, E.Y., Cotton, R.J., Ma, W.J. et al. A neural basis of probabilistic computation in visual cortex. Nat Neurosci 23, 122–129 (2020)"
+    },
+    {
+      "doi": "",
+      "title": "Campbell, D., Kumar, S., Giallanza, T., Cohen, J. D., & Griffiths, T. L. (2023). Relational Constraints On Neural Networks Reproduce Human Biases towards Abstract Geometric Regularity. arXiv preprint arXiv:2309.17363."
+    },
+    {
+      "doi": "",
+      "title": "Tom, S. M., Fox, C. R., Trepel, C., & Poldrack, R. A. (2007). The neural basis of loss aversion in decision-making under risk. Science, 315(5811), 515-518."
+    },
+    {
+      "doi": "",
+      "title": "Butlin, P., Long, R., Elmoznino, E., Bengio, Y., Birch, J., Constant, A., ... & VanRullen, R. (2023). Consciousness in artificial intelligence: insights from the science of consciousness. arXiv preprint arXiv:2308.08708."
+    },
+    {
+      "doi": "",
+      "title": "Walker, E.Y., Cotton, R.J., Ma, W.J. et al. A neural basis of probabilistic computation in visual cortex. Nat Neurosci 23, 122–129 (2020)"
+    },
+    {
+      "doi": "",
+      "title": "Walker, E.Y., Cotton, R.J., Ma, W.J. et al. A neural basis of probabilistic computation in visual cortex. Nat Neurosci 23, 122–129 (2020)"
+    },
+    {
+      "doi": "",
+      "title": "Bays, P. M. (2014). Noise in neural populations accounts for errors in working memory. Journal of Neuroscience, 34(10), 3632-3645."
+    },
+    {
+      "doi": "",
+      "title": "Ryu, J., & Lee, S.-H. (2024). Bounded contribution of human early visual cortex to the topographic anisotropy in spatial extent perception. Communications Biology, 7(1)."
+    },
+    {
+      "doi": "",
+      "title": "Bays, P. M. (2014). Noise in neural populations accounts for errors in working memory. Journal of Neuroscience, 34(10), 3632-3645."
+    },
+    {
+      "doi": "",
+      "title": "Bays, P. M. (2014). Noise in neural populations accounts for errors in working memory. Journal of Neuroscience, 34(10), 3632-3645."
+    },
+    {
+      "doi": "",
+      "title": "Van Bergen, R. S., Ji Ma, W., Pratte, M. S., & Jehee, J. F. (2015). Sensory uncertainty decoded from visual cortex predicts behavior. Nature neuroscience, 18(12), 1728-1730."
+    },
+    {
+      "doi": "",
+      "title": "Bays, P. M. (2014). Noise in neural populations accounts for errors in working memory. Journal of Neuroscience, 34(10), 3632-3645."
+    },
+    {
+      "doi": "",
+      "title": "Bays, P. M. (2014). Noise in neural populations accounts for errors in working memory. Journal of Neuroscience, 34(10), 3632-3645."
+    },
+    {
+      "doi": "",
+      "title": "Van Bergen, R. S., Ji Ma, W., Pratte, M. S., & Jehee, J. F. (2015). Sensory uncertainty decoded from visual cortex predicts behavior. Nature neuroscience, 18(12), 1728-1730.읽은 범위: method 일부"
+    },
+    {
+      "doi": "",
+      "title": "Van Bergen, R. S., Ji Ma, W., Pratte, M. S., & Jehee, J. F. (2015). Sensory uncertainty decoded from visual cortex predicts behavior. Nature neuroscience, 18(12), 1728-1730."
+    },
+    {
+      "doi": "",
+      "title": "Butlin, P., Long, R., Elmoznino, E., Bengio, Y., Birch, J., Constant, A., ... & VanRullen, R. (2023). Consciousness in artificial intelligence: insights from the science of consciousness. arXiv preprint arXiv:2308.08708."
+    },
+    {
+      "doi": "",
+      "title": "Bays, P. M. (2014). Noise in neural populations accounts for errors in working memory. Journal of Neuroscience, 34(10), 3632-3645."
+    },
+    {
+      "doi": "",
+      "title": "Tomassini, A., Morgan, M. J., & Solomon, J. A. (2010). Orientation uncertainty reduces perceived obliquity. Vision Research, 50(5), 541–547."
+    },
+    {
+      "doi": "",
+      "title": "뇌인지과학 콜로키엄2 - 박혜연 (241118)"
+    },
+    {
+      "doi": "",
+      "title": "Moon, J., Kwon, OS. Attractive and repulsive effects of sensory history concurrently shape visual perception. BMC Biol 20, 247 (2022)."
+    },
+    {
+      "doi": "",
+      "title": "Tomassini, A., Morgan, M. J., & Solomon, J. A. (2010). Orientation uncertainty reduces perceived obliquity. Vision Research, 50(5), 541–547."
+    },
+    {
+      "doi": "",
+      "title": "Moon, J., Kwon, OS. Attractive and repulsive effects of sensory history concurrently shape visual perception. BMC Biol 20, 247 (2022)."
+    },
+    {
+      "doi": "",
+      "title": "Berkes, P., Orbán, G., Lengyel, M., & Fiser, J. (2011). Spontaneous cortical activity reveals hallmarks of an optimal internal model of the environment. Science, 331(6013), 83-87."
+    },
+    {
+      "doi": "",
+      "title": "Moon, J., Kwon, OS. Attractive and repulsive effects of sensory history concurrently shape visual perception. BMC Biol 20, 247 (2022)."
+    },
+    {
+      "doi": "",
+      "title": "<철학하는 과학 과학하는 철학 4 -뇌와 인공지능의 철학> 박제윤 지음"
+    },
+    {
+      "doi": "",
+      "title": "Berkes, P., Orbán, G., Lengyel, M., & Fiser, J. (2011). Spontaneous cortical activity reveals hallmarks of an optimal internal model of the environment. Science, 331(6013), 83-87."
+    },
+    {
+      "doi": "",
+      "title": "Berkes P, Orbán G, Lengyel M, Fiser J. Spontaneous cortical activity reveals hallmarks of an optimal internal model of the environment. Science. 2011 Jan 7;331(6013):83-7"
+    },
+    {
+      "doi": "",
+      "title": "Ashby, F. G., & Maddox, W. T. (2005). Human category learning. Annu. Rev. Psychol., 56(1), 149-178."
+    },
+    {
+      "doi": "",
+      "title": "Berkes P, Orbán G, Lengyel M, Fiser J. Spontaneous cortical activity reveals hallmarks of an optimal internal model of the environment. Science. 2011 Jan 7;331(6013):83-7"
+    },
+    {
+      "doi": "",
+      "title": "Ashby, F. G., & Maddox, W. T. (2005). Human category learning. Annu. Rev. Psychol., 56(1), 149-178."
+    },
+    {
+      "doi": "",
+      "title": "Butlin, P., Long, R., Elmoznino, E., Bengio, Y., Birch, J., Constant, A., ... & VanRullen, R. (2023). Consciousness in artificial intelligence: insights from the science of consciousness. arXiv preprint arXiv:2308.0870"
+    },
+    {
+      "doi": "",
+      "title": "Ashby, F. G., & Maddox, W. T. (2005). Human category learning. Annu. Rev. Psychol., 56(1), 149-178."
+    },
+    {
+      "doi": "",
+      "title": "Jazayeri, M., Shadlen, M. Temporal context calibrates interval timing. Nat Neurosci 13, 1020–1026 (2010)"
+    },
+    {
+      "doi": "",
+      "title": "Orbán, G., Lengyel, M. (2016). Neural Variability and Sampling-Based Probabilistic Representations in the Visual Cortex. Neuron."
+    },
+    {
+      "doi": "",
+      "title": "Orbán, G., Lengyel, M. (2016). Neural Variability and Sampling-Based Probabilistic Representations in the Visual Cortex. Neuron."
+    },
+    {
+      "doi": "",
+      "title": "Ng, C. B., Tay, Y. H., & Goi, B. M. (2015). A review of facial gender recognition. Pattern Analysis and Applications, 18, 739-755."
+    },
+    {
+      "doi": "",
+      "title": "Orbán, G., Lengyel, M. (2016). Neural Variability and Sampling-Based Probabilistic Representations in the Visual Cortex. Neuron."
+    },
+    {
+      "doi": "",
+      "title": "Jara-Ettinger, J., Gweon, H., Schulz, L. E., & Tenenbaum, J. B. (2016). The naïve utility calculus: Computational principles underlying commonsense psychology. Trends in cognitive sciences, 20(8), 589-604."
+    },
+    {
+      "doi": "",
+      "title": "유동규 선배님 manuscript"
+    },
+    {
+      "doi": "",
+      "title": "Lee, H., Lim, J., & Lee, S. H. (2024). Evidence for belief updating in decision-variable space: past decisions with finer granularity attract future ones more strongly. bioRxiv, 2024-08"
+    },
+    {
+      "doi": "",
+      "title": "유동규 선배님 manuscript"
+    },
+    {
+      "doi": "",
+      "title": "Jara-Ettinger, J., Gweon, H., Schulz, L. E., & Tenenbaum, J. B. (2016). The naïve utility calculus: Computational principles underlying commonsense psychology. Trends in cognitive sciences, 20(8), 589-604."
+    },
+    {
+      "doi": "",
+      "title": "Jara-Ettinger, J., Gweon, H., Schulz, L. E., & Tenenbaum, J. B. (2016). The naïve utility calculus: Computational principles underlying commonsense psychology. Trends in cognitive sciences, 20(8), 589-604."
+    },
+    {
+      "doi": "",
+      "title": "Hahn, M., & Wei, X.-X. (2024). A unifying theory explains seemingly contradictory biases in perceptual estimation. Nature Neuroscience, 27(4), 793–804."
+    },
+    {
+      "doi": "",
+      "title": "Lever, J., Krzywinski, M., & Altman, N. (2017). Principal component analysis. Nature Methods, 14(7), 641–642."
+    },
+    {
+      "doi": "",
+      "title": "Tsuchiya, N., Kawasaki, H., Oya, H., Howard III, M. A., & Adolphs, R. (2008). Decoding face information in time, frequency and space from direct intracranial recordings of the human brain. PloS one, 3(12), e3892."
+    },
+    {
+      "doi": "",
+      "title": "Jara-Ettinger, J., Gweon, H., Schulz, L. E., & Tenenbaum, J. B. (2016). The naïve utility calculus: Computational principles underlying commonsense psychology. Trends in cognitive sciences, 20(8), 589-604."
+    },
+    {
+      "doi": "",
+      "title": "Hahn, M., & Wei, X.-X. (2024). A unifying theory explains seemingly contradictory biases in perceptual estimation. Nature Neuroscience, 27(4), 793–804."
+    },
+    {
+      "doi": "",
+      "title": "Tsuchiya, N., Kawasaki, H., Oya, H., Howard III, M. A., & Adolphs, R. (2008). Decoding face information in time, frequency and space from direct intracranial recordings of the human brain. PloS one, 3(12), e3892."
+    },
+    {
+      "doi": "",
+      "title": "Hahn, M., & Wei, X.-X. (2024). A unifying theory explains seemingly contradictory biases in perceptual estimation. Nature Neuroscience, 27(4), 793–804."
+    },
+    {
+      "doi": "",
+      "title": "Dayan, P., & Abbott, L. F. (2005). Theoretical neuroscience: computational and mathematical modeling of neural systems. MIT press. - Chapter 3. Neural Decoding"
+    },
+    {
+      "doi": "",
+      "title": "Yang, G. R., & Wang, X. J. (2020). Artificial neural networks for neuroscientists: a primer. Neuron, 107(6), 1048-1070."
+    },
+    {
+      "doi": "",
+      "title": "LeCun, Y., Bengio, Y., & Hinton, G. (2015). Deep learning. nature, 521(7553), 436-444."
+    },
+    {
+      "doi": "",
+      "title": "Yang, G. R., & Wang, X. J. (2020). Artificial neural networks for neuroscientists: a primer. Neuron, 107(6), 1048-1070."
+    },
+    {
+      "doi": "",
+      "title": "Yang, G. R., & Wang, X. J. (2020). Artificial neural networks for neuroscientists: a primer. Neuron, 107(6), 1048-1070."
+    },
+    {
+      "doi": "",
+      "title": "유동규 선배님 manuscript"
+    },
+    {
+      "doi": "",
+      "title": "Yang, G. R., & Wang, X. J. (2020). Artificial neural networks for neuroscientists: a primer. Neuron, 107(6), 1048-1070."
+    },
+    {
+      "doi": "",
+      "title": "유동규 선배님 manuscript"
+    },
+    {
+      "doi": "",
+      "title": "Yang, G. R., & Wang, X. J. (2020). Artificial neural networks for neuroscientists: a primer. Neuron, 107(6), 1048-1070."
+    },
+    {
+      "doi": "",
+      "title": "Deneve, S., Latham, P. E., & Pouget, A. (1999). Reading population codes: a neural implementation of ideal observers. Nature neuroscience, 2(8), 740-745."
+    },
+    {
+      "doi": "",
+      "title": "유동규 선배님 manuscript"
+    },
+    {
+      "doi": "",
+      "title": "Butlin, P., Long, R., Elmoznino, E., Bengio, Y., Birch, J., Constant, A., ... & VanRullen, R. (2023). Consciousness in artificial intelligence: insights from the science of consciousness. arXiv preprint arXiv:2308.08708."
+    },
+    {
+      "doi": "",
+      "title": "Pascucci, D., Tanrikulu, Ö. D., Ozkirli, A., Houborg, C., Ceylan, G., Zerr, P., Rafiei, M., & Kristjánsson, Á. (2023). Serial dependence in visual perception: A Review. Journal of Vision, 23(1), 9."
+    },
+    {
+      "doi": "",
+      "title": "Nieder, A. The neuronal code for number. Nat Rev Neurosci 17, 366–382 (2016)."
+    },
+    {
+      "doi": "",
+      "title": "Nieder, A. The neuronal code for number. Nat Rev Neurosci 17, 366–382 (2016)."
+    },
+    {
+      "doi": "",
+      "title": "Pascucci, D., Tanrikulu, Ö. D., Ozkirli, A., Houborg, C., Ceylan, G., Zerr, P., Rafiei, M., & Kristjánsson, Á. (2023). Serial dependence in visual perception: A Review. Journal of Vision, 23(1), 9."
+    },
+    {
+      "doi": "",
+      "title": "Rahnev, D., Koizumi, A., McCurdy, L. Y., D’Esposito, M., & Lau, H. (2015). Confidence leak in perceptual decision making. Psychological science, 26(11), 1664-1680."
+    },
+    {
+      "doi": "",
+      "title": "de Gardelle, V., Kouider, S., & Sackur, J. (2010). An oblique illusion modulated by visibility: Non-monotonic sensory integration in orientation processing. Journal of Vision, 10(10), 6, 1–9."
+    },
+    {
+      "doi": "",
+      "title": "Padoa-Schioppa, C. (2011). Neurobiology of economic choice: a good-based model. Annual review of neuroscience, 34(1), 333-359."
+    },
+    {
+      "doi": "",
+      "title": "de Gardelle, V., Kouider, S., & Sackur, J. (2010). An oblique illusion modulated by visibility: Non-monotonic sensory integration in orientation processing. Journal of Vision, 10(10), 6, 1–9."
+    },
+    {
+      "doi": "",
+      "title": "Butlin, P., Long, R., Elmoznino, E., Bengio, Y., Birch, J., Constant, A., ... & VanRullen, R. (2023). Consciousness in artificial intelligence: insights from the science of consciousness. arXiv preprint arXiv:2308.08708."
+    },
+    {
+      "doi": "",
+      "title": "Watanabe, M. (2022). From Biological to Artificial Consciousness. Springer."
+    },
+    {
+      "doi": "",
+      "title": "Padoa-Schioppa, C. (2011). Neurobiology of economic choice: a good-based model. Annual review of neuroscience, 34(1), 333-359."
+    },
+    {
+      "doi": "",
+      "title": "Pascucci, D., Tanrikulu, Ö. D., Ozkirli, A., Houborg, C., Ceylan, G., Zerr, P., Rafiei, M., & Kristjánsson, Á. (2023). Serial dependence in visual perception: A Review. Journal of Vision, 23(1), 9."
+    },
+    {
+      "doi": "",
+      "title": "Mauro Manassi, Yuki Murai, David Whitney; Serial dependence in visual perception: A meta-analysis and review. Journal of Vision 2023;23(8):18."
+    },
+    {
+      "doi": "",
+      "title": "Wichmann, F. A., & Hill, N. J. (2001). The psychometric function: I. Fitting, sampling, and goodness of fit. Perception & Psychophysics, 63(8), 1293–1313."
+    },
+    {
+      "doi": "",
+      "title": "Padoa-Schioppa, C. (2011). Neurobiology of economic choice: a good-based model. Annual review of neuroscience, 34(1), 333-359."
+    },
+    {
+      "doi": "",
+      "title": "Rosedahl, L.A., Eckstein, M.P. & Ashby, F.G. Retinal-specific category learning. Nat Hum Behav 2, 500–506 (2018). <https:\\/\\/doi.org\\/10.1038\\/s41562-018-0370-z>"
+    },
+    {
+      "doi": "",
+      "title": "Wichmann, F. A., & Hill, N. J. (2001). The psychometric function: I. Fitting, sampling, and goodness of fit. Perception & Psychophysics, 63(8), 1293–1313."
+    },
+    {
+      "doi": "",
+      "title": "Rosedahl, L.A., Eckstein, M.P. & Ashby, F.G. Retinal-specific category learning. Nat Hum Behav 2, 500–506 (2018)."
+    },
+    {
+      "doi": "",
+      "title": "Armann, R., & Bülthoff, I. (2012). Male and female faces are only perceived categorically when linked to familiar identities–and when in doubt, he is a male. Vision research, 63, 69-80."
+    },
+    {
+      "doi": "",
+      "title": "Wichmann, F. A., & Hill, N. J. (2001). The psychometric function: I. Fitting, sampling, and goodness of fit. Perception & Psychophysics, 63(8), 1293–1313."
+    },
+    {
+      "doi": "",
+      "title": "Bosch, E., Fritsche, M., Ehinger, B. V., & de Lange, F. P. (2020). Opposite effects of choice history and evidence history resolve a paradox of sequential choice bias. Journal of vision, 20(12), 9-9."
+    },
+    {
+      "doi": "",
+      "title": "Lee et al. manuscript"
+    },
+    {
+      "doi": "",
+      "title": "Ulrich, R., & Miller, J. (2004). Threshold estimation in two-alternative forced-choice (2AFC) tasks: The Spearman–Kärber method. Perception & Psychophysics, 66(3), 517-533."
+    },
+    {
+      "doi": "",
+      "title": "Gu, H., Lee, J., Kim, S., Lim, J., Lee, H.-J., Lee, H., Choe, M., Yoo, D.-G., Ryu, J. H., Lim, S., & Lee, S.-H. (2023). Decision-consistent bias mediated by drift dynamics of human visual working memory. bioRxiv."
+    },
+    {
+      "doi": "",
+      "title": "Armann, R., & Bülthoff, I. (2012). Male and female faces are only perceived categorically when linked to familiar identities–and when in doubt, he is a male. Vision research, 63, 69-80."
+    },
+    {
+      "doi": "",
+      "title": "Gu, H., Lee, J., Kim, S., Lim, J., Lee, H.-J., Lee, H., Choe, M., Yoo, D.-G., Ryu, J. H., Lim, S., & Lee, S.-H. (2023). Decision-consistent bias mediated by drift dynamics of human visual working memory. bioRxiv."
+    },
+    {
+      "doi": "",
+      "title": "McIntosh, L., Maheswaranathan, N., Nayebi, A., Ganguli, S., & Baccus, S. (2016). Deep learning models of the retinal response to natural scenes. Advances in neural information processing systems, 29."
+    },
+    {
+      "doi": "",
+      "title": "Armann, R., & Bülthoff, I. (2012). Male and female faces are only perceived categorically when linked to familiar identities–and when in doubt, he is a male. Vision research, 63, 69-80."
+    },
+    {
+      "doi": "",
+      "title": "Karras, T., Aittala, M., Hellsten, J., Laine, S., Lehtinen, J., & Aila, T. (2020). Training generative adversarial networks with limited data. Advances in neural information processing systems, 33, 12104-12114."
+    },
+    {
+      "doi": "",
+      "title": "Gu, H., Lee, J., Kim, S., Lim, J., Lee, H.-J., Lee, H., Choe, M., Yoo, D.-G., Ryu, J. H., Lim, S., & Lee, S.-H. (2023). Decision-consistent bias mediated by drift dynamics of human visual working memory. bioRxiv."
+    },
+    {
+      "doi": "",
+      "title": "Gu, H., Lee, J., Kim, S., Lim, J., Lee, H.-J., Lee, H., Choe, M., Yoo, D.-G., Ryu, J. H., Lim, S., & Lee, S.-H. (2023). Decision-consistent bias mediated by drift dynamics of human visual working memory. bioRxiv."
+    },
+    {
+      "doi": "",
+      "title": "Armann, R., & Bülthoff, I. (2012). Male and female faces are only perceived categorically when linked to familiar identities–and when in doubt, he is a male. Vision research, 63, 69-80."
+    },
+    {
+      "doi": "",
+      "title": "Karras, T., Aittala, M., Hellsten, J., Laine, S., Lehtinen, J., & Aila, T. (2020). Training generative adversarial networks with limited data. Advances in neural information processing systems, 33, 12104-12114."
+    },
+    {
+      "doi": "",
+      "title": "Fischer, J., Whitney, D. Serial dependence in visual perception. Nat Neurosci 17, 738–743 (2014)."
+    },
+    {
+      "doi": "",
+      "title": "Wichmann, F. A., & Hill, N. J. (2001). The psychometric function: I. Fitting, sampling, and goodness of fit. Perception & Psychophysics, 63(8), 1293–1313."
+    },
+    {
+      "doi": "",
+      "title": "Lim, J., Lee, SH. Spatial correspondence in relative space regulates serial dependence. Sci Rep 13, 18162 (2023)"
+    },
+    {
+      "doi": "",
+      "title": "Sadil, P., Cowell, R.A. & Huber, D.E. The push–pull of serial dependence effects: Attraction to the prior response and repulsion from the prior stimulus. Psychon Bull Rev 31, 259–273 (2024)."
+    },
+    {
+      "doi": "",
+      "title": "Wichmann, F. A., & Hill, N. J. (2001). The psychometric function: II. Boostrap-based confidence intervals and sampling. Perception & Psychophysics, 63(8), 1314–1329."
+    },
+    {
+      "doi": "",
+      "title": "Akaishi R, Umeda K, Nagase A, Sakai K. Autonomous mechanism of internal choice estimate underlies decision inertia. Neuron. 2014 Jan 8;81(1):195-206."
+    },
+    {
+      "doi": "",
+      "title": "Härkönen, E., Hertzmann, A., Lehtinen, J., & Paris, S. (2020). Ganspace: Discovering interpretable gan controls. Advances in neural information processing systems, 33, 9841-9850."
+    },
+    {
+      "doi": "",
+      "title": "Waskom, M. L., Okazawa, G., & Kiani, R. (2019). Designing and Interpreting Psychophysical Investigations of Cognition. Neuron, 104(1), 100–112."
+    },
+    {
+      "doi": "",
+      "title": "Pascucci, D., Tanrikulu, Ö. D., Ozkirli, A., Houborg, C., Ceylan, G., Zerr, P., ... & Kristjánsson, Á. (2023). Serial dependence in visual perception: A review. Journal of Vision, 23(1), 9-9."
+    },
+    {
+      "doi": "",
+      "title": "Barak, O. (2017). Recurrent neural networks as versatile tools of neuroscience research. Current Opinion in Neurobiology, 46, 1–6."
+    },
+    {
+      "doi": "",
+      "title": "뇌인지 기능조절 - 이석호 (250310)"
+    },
+    {
+      "doi": "",
+      "title": "Shen, Y., & Zhou, B. (2021). Closed-form factorization of latent semantics in gans. In Proceedings of the IEEE\\/CVF conference on computer vision and pattern recognition (pp. 1532-1540)."
+    },
+    {
+      "doi": "",
+      "title": "Körding, K. P., & Wolpert, D. M. (2004). The loss function of sensorimotor learning. Proceedings of the National Academy of Sciences, 101(26), 9839–9842."
+    },
+    {
+      "doi": "",
+      "title": "Shen, Y., & Zhou, B. (2021). Closed-form factorization of latent semantics in gans. In Proceedings of the IEEE\\/CVF conference on computer vision and pattern recognition (pp. 1532-1540)."
+    },
+    {
+      "doi": "",
+      "title": "Wang, T., Luo, Y., Ivry, R. B., Tsay, J. S., Pöppel, E., & Bao, Y. (2023). A unitary mechanism underlies adaptation to both local and global environmental statistics in time perception. PLOS Computational Biology, 19(5), e1011116."
+    },
+    {
+      "doi": "",
+      "title": "Matthews WJ (2011) Stimulus Repetition and the Perception of Time: The Effects of Prior Exposure on Temporal Discrimination, Judgment, and Production. PLoS ONE 6(5): e19815."
+    },
+    {
+      "doi": "",
+      "title": "Hanks, T. D., & Summerfield, C. (2017). Perceptual decision making in rodents, monkeys, and humans. Neuron, 93(1), 15–31."
+    },
+    {
+      "doi": "",
+      "title": "Ma, W. J. (2012). Organizing probabilistic models of perception. Trends in Cognitive Sciences, 16(10), 511-518."
+    },
+    {
+      "doi": "",
+      "title": "Karras, T., Laine, S., & Aila, T. (2019). A style-based generator architecture for generative adversarial networks. In Proceedings of the IEEE\\/CVF conference on computer vision and pattern recognition (pp. 4401-4410)."
+    },
+    {
+      "doi": "",
+      "title": "Hanks, T. D., & Summerfield, C. (2017). Perceptual Decision Making in Rodents, Monkeys, and Humans. Neuron, 93(1), 15–31."
+    },
+    {
+      "doi": "",
+      "title": "Rosedahl, L.A., Eckstein, M.P. & Ashby, F.G. Retinal-specific category learning. Nat Hum Behav 2, 500–506 (2018)"
+    },
+    {
+      "doi": "",
+      "title": "Cheng, S., Chen, S., & Shi, Z. (2024). Opposing sequential biases in direction and time reproduction: Influences of task relevance and working memory. British Journal of Psychology, 115, 825–842."
+    },
+    {
+      "doi": "",
+      "title": "Dehaene, S., Lau, H., & Kouider, S. (2021). What is consciousness, and could machines have it?. Robotics, AI, and humanity: Science, ethics, and policy, 43-56."
+    },
+    {
+      "doi": "",
+      "title": "Brunton, B. W., Botvinick, M. M., & Brody, C. D. (2013). Rats and humans can optimally accumulate evidence for decision-making. Science, 340(6128), 95–98."
+    },
+    {
+      "doi": "",
+      "title": "Fornaciai, M., & Park, J. (2018). Serial dependence in numerosity perception. Journal of vision, 18(9), 15-15."
+    },
+    {
+      "doi": "",
+      "title": "Brunton, B. W., Botvinick, M. M., & Brody, C. D. (2013). Rats and humans can optimally accumulate evidence for decision-making. Science, 340(6128), 95–98."
+    },
+    {
+      "doi": "",
+      "title": "Collins, E., Park, J., & Behrmann, M. (2017). Numerosity representation is encoded in human subcortex. Proceedings of the National Academy of Sciences, 114(14), E2806-E2815."
+    },
+    {
+      "doi": "",
+      "title": "Rangelov, D., Bitzer, S., & Mattingley, J. B. (2025). Dynamic reduction of neural uncertainty regulates perceptual decisions in a Bayes-optimal manner. PLOS Computational Biology. (Manuscript)"
+    },
+    {
+      "doi": "",
+      "title": "McIntosh, L., Maheswaranathan, N., Nayebi, A., Ganguli, S., & Baccus, S. (2016). Deep learning models of the retinal response to natural scenes. Advances in neural information processing systems, 29."
+    },
+    {
+      "doi": "",
+      "title": "Rangelov, D., Bitzer, S., & Mattingley, J. (2023). Dynamic reduction of neural uncertainty regulates perceptual decisions in a Bayes-optimal manner."
+    },
+    {
+      "doi": "",
+      "title": "Alexi, J., Cleary, D., Dommisse, K., Palermo, R., Kloth, N., Burr, D., & Bell, J. (2018). Past visual experiences weigh in on body size estimation. Scientific reports, 8(1), 215."
+    },
+    {
+      "doi": "",
+      "title": "Fritsche, M., Mostert, P., & de Lange, F. P. (2017). Opposite effects of recent history on perception and decision. Current Biology, 27(4), 590-595."
+    },
+    {
+      "doi": "",
+      "title": "Polanía, R., Woodford, M. & Ruff, C.C. Efficient coding of subjective value. Nat Neurosci 22, 134–142 (2019)."
+    },
+    {
+      "doi": "",
+      "title": "Pratte, M. S., Park, Y. E., Rademaker, R. L., & Tong, F. (2017). Accounting for stimulus-specific variation in precision reveals a discrete capacity limit in visual working memory. Journal of Experimental Psychology: Human Perception and Performance, 43(1), 6–17."
+    },
+    {
+      "doi": "",
+      "title": "Hanks, T. D., Brunton, B. W., Brody, C. D., & Churchland, A. K. (2015). Distinct relationships of parietal and prefrontal cortices to evidence accumulation. Nature, 520(7546), 220–223"
+    },
+    {
+      "doi": "",
+      "title": "Tonelli A, Cuturi LF, Gori M. The Influence of Auditory Information on Visual Size Adaptation."
+    },
+    {
+      "doi": "",
+      "title": "Hahn, M., & Wei, X.-X. (2024). A unifying theory explains seemingly contradictory biases in perceptual estimation. Nature Neuroscience, 27(4), 793–804."
+    },
+    {
+      "doi": "",
+      "title": "Hojin Jang, Syed Suleman Abbas Zaidi, Xavier Boix, Neeraj Prasad, Sharon Gilad-Gutnick, Shlomit Ben-Ami, Pawan Sinha; Robustness to Transformations Across Categories: Is Robustness Driven by Invariant Neural Representations?. Neural Comput 2023; 35 (12): 1910–1937."
+    },
+    {
+      "doi": "",
+      "title": "Hahn, M., & Wei, X.-X. (2024). A unifying theory explains seemingly contradictory biases in perceptual estimation. Nature Neuroscience, 27(4), 793–804."
+    },
+    {
+      "doi": "",
+      "title": "Qian, K., Zhang, Y., Chang, S., Hasegawa-Johnson, M., & Cox, D. (2020, November). Unsupervised speech decomposition via triple information bottleneck. In International Conference on Machine Learning (pp. 7836-7846). PMLR."
+    },
+    {
+      "doi": "",
+      "title": "Cheng, S., Chen, S., & Shi, Z. (2024). Opposing sequential biases in direction and time reproduction: Influences of task relevance and working memory. British Journal of Psychology, 115, 825–842."
+    },
+    {
+      "doi": "",
+      "title": "Sanders, J. I., Hangya, B., & Kepecs, A. (2016). Signatures of a Statistical Computation in the Human Sense of Confidence. Neuron, 90(3), 499–506."
+    },
+    {
+      "doi": "",
+      "title": "Qian, K., Zhang, Y., Chang, S., Hasegawa-Johnson, M., & Cox, D. (2020, November). Unsupervised speech decomposition via triple information bottleneck. In International Conference on Machine Learning (pp. 7836-7846). PMLR."
+    },
+    {
+      "doi": "",
+      "title": "Hahn, M., & Wei, X.-X. (2024). A unifying theory explains seemingly contradictory biases in perceptual estimation. Nature Neuroscience, 27(4), 793–804."
+    },
+    {
+      "doi": "",
+      "title": "Lee, H., Lim, J., & Lee, S. H. (2024). Evidence for belief updating in decision-variable space: past decisions with finer granularity attract future ones more strongly. bioRxiv, 2024-08."
+    },
+    {
+      "doi": "",
+      "title": "Akaishi, R., Umeda, K., Nagase, A., & Sakai, K. (2014). Autonomous mechanism of internal choice estimate underlies decision inertia. Neuron, 81(1), 195-206."
+    },
+    {
+      "doi": "",
+      "title": "Masset, P., Ott, T., Lak, A., Hirokawa, J., & Kepecs, A. (2020). Behavior- and modality-general representation of confidence in orbitofrontal cortex. Cell, 182(1), 112–126."
+    },
+    {
+      "doi": "",
+      "title": "Heeseung Lee, Hyang-Jung Lee, Kyoung Whan Choe, and Sang-Hun Lee. Disambiguating categorization and classification with distinct serial dependences in human choice behavior"
+    },
+    {
+      "doi": "",
+      "title": "Heeseung Lee, Hyang-Jung Lee, Kyoung Whan Choe, and Sang-Hun Lee. Disambiguating categorization and classification with distinct serial dependences in human choice behavior"
+    },
+    {
+      "doi": "",
+      "title": "Noel, J.-P., Zhang, L.-Q., Stocker, A. A., & Angelaki, D. E. (2021). Individuals with autism spectrum disorder have altered visual encoding capacity. PLOS Biology, 19(5), e3001215."
+    },
+    {
+      "doi": "",
+      "title": "Fritsche, M., Mostert, P., & de Lange, F. P. (2017). Opposite effects of recent history on perception and decision. Current Biology, 27(4), 590–595."
+    },
+    {
+      "doi": "",
+      "title": "Jacob, E. K. (2004). Classification and categorization: a difference that makes a difference."
+    },
+    {
+      "doi": "",
+      "title": "Sun, Y., Wang, X., Liu, Z., Miller, J., Efros, A., & Hardt, M. (2020, November). Test-time training with self-supervision for generalization under distribution shifts. In International conference on machine learning (pp. 9229-9248). PMLR."
+    },
+    {
+      "doi": "",
+      "title": "Noel, J.-P., Zhang, L.-Q., Stocker, A. A., & Angelaki, D. E. (2021). Individuals with autism spectrum disorder have altered visual encoding capacity. PLOS Biology, 19(5), e3001215."
+    },
+    {
+      "doi": "",
+      "title": "Ayhan, I., & Ozbagci, D. (2020). Action-induced changes in the perceived temporal features of visual events. Vision Research, 175, 1-13."
+    },
+    {
+      "doi": "",
+      "title": "Lee, H., Lim, J., & Lee, S. H. (2024). Evidence for belief updating in decision-variable space: past decisions with finer granularity attract future ones more strongly. bioRxiv, 2024-08."
+    },
+    {
+      "doi": "",
+      "title": "Okazawa, G., Hatch, C. E., Mancoo, A., Machens, C. K., & Kiani, R. (2021). Representational geometry of perceptual decisions in the monkey parietal cortex. Cell, 184(14), 3748-3761."
+    },
+    {
+      "doi": "",
+      "title": "Ayhan, I., & Ozbagci, D. (2020). Action-induced changes in the perceived temporal features of visual events. Vision Research, 175, 1-13."
+    },
+    {
+      "doi": "",
+      "title": "Okazawa, G., Hatch, C. E., Mancoo, A., Machens, C. K., & Kiani, R. (2021). Representational geometry of perceptual decisions in the monkey parietal cortex. Cell, 184(14), 3748-3761."
+    },
+    {
+      "doi": "",
+      "title": "Solstad, T., Boccara, C. N., Kropff, E., Moser, M.-B., & Moser, E. I. (2008). Representation of geometric borders in the entorhinal cortex. Science, 322(5909), 1865–1868."
+    },
+    {
+      "doi": "",
+      "title": "Krakauer, J. W., Ghazanfar, A. A., Gomez-Marin, A., MacIver, M. A., & Poeppel, D. (2017). Neuroscience needs behavior: correcting a reductionist bias. Neuron, 93(3), 480-490."
+    },
+    {
+      "doi": "",
+      "title": "Taylor, R., & Bays, P. M. (2018). Efficient coding in visual working memory accounts for stimulus-specific variations in recall. Journal of Neuroscience, 38(32), 7132–7142."
+    },
+    {
+      "doi": "",
+      "title": "Lim, P. C., Ward, E. J., Vickery, T. J., & Johnson, M. R. (2019). Not-so-working memory: Drift in functional magnetic resonance imaging pattern representations during maintenance predicts errors in a visual working memory task. Journal of Cognitive Neuroscience, 31(10), 1520–1534."
+    },
+    {
+      "doi": "",
+      "title": "Yoo, A. H., Klyszejko, Z., Curtis, C. E. & Ma, W. J. Strategic allocation of working memory resource. Sci. Rep. 8, 16162 (2018)."
+    },
+    {
+      "doi": "",
+      "title": "Van den Berg, R., Shin, H., Chou, W.-C., George, R., & Ma, W. J. (2012). Variability in encoding precision accounts for visual short-term memory limitations. Proceedings of the National Academy of Sciences, 109(22), 8780–8785."
+    },
+    {
+      "doi": "",
+      "title": "Heeseung Lee, Hyang-Jung Lee, Kyoung Whan Choe, and Sang-Hun Lee. Disambiguating categorization and classification with distinct serial dependences in human choice behavior"
+    },
+    {
+      "doi": "",
+      "title": "Neural implementations of Bayesian inferenc"
+    },
+    {
+      "doi": "",
+      "title": "Sanborn, A. N., & Chater, N. (2017). The sampling brain. Trends in Cognitive Sciences, 21(7), 492-493."
+    },
+    {
+      "doi": "",
+      "title": "Aagten-Murphy, D., & Bays, P. M. (2019). Independent working memory resources for egocentric and allocentric spatial information. PLOS Computational Biology, 15(2), e1006563."
+    },
+    {
+      "doi": "",
+      "title": "Kuuramo, C., Saarinen, J., & Kurki, I. (2022). Forgetting in visual working memory: Internal noise explains decay of feature representations. Journal of Vision, 22(8), 8."
+    },
+    {
+      "doi": "",
+      "title": "Qian, K., Zhang, Y., Chang, S., Hasegawa-Johnson, M., & Cox, D. (2020, November). Unsupervised speech decomposition via triple information bottleneck. In International Conference on Machine Learning (pp. 7836-7846). PMLR."
+    },
+    {
+      "doi": "",
+      "title": "Choi, H. S., Yang, J., Lee, J., & Kim, H. (2022). NANSY++: Unified voice synthesis with neural analysis and synthesis. arXiv preprint arXiv:2211.09407."
+    },
+    {
+      "doi": "",
+      "title": "Choi, H. S., Yang, J., Lee, J., & Kim, H. (2022). NANSY++: Unified voice synthesis with neural analysis and synthesis. arXiv preprint arXiv:2211.09407."
+    },
+    {
+      "doi": "",
+      "title": "Choi, H. S., Yang, J., Lee, J., & Kim, H. (2022). NANSY++: Unified voice synthesis with neural analysis and synthesis. arXiv preprint arXiv:2211.09407."
+    },
+    {
+      "doi": "",
+      "title": "Hart, E., & Huk, A. C. (2020). Recurrent circuit dynamics underlie persistent activity in the macaque frontoparietal network. eLife, 9, e52460."
+    },
+    {
+      "doi": "",
+      "title": "Bayne, T. (2004). Closing the gap? Some questions for neurophenomenology. Phenomenology and the cognitive sciences, 3, 349-364."
+    },
+    {
+      "doi": "",
+      "title": "Carandini, M., & Heeger, D. J. (2012). Normalization as a canonical neural computation. Nature Reviews Neuroscience, 13(1), 51–62."
+    },
+    {
+      "doi": "",
+      "title": "Bayne, T. (2004). Closing the gap? Some questions for neurophenomenology. Phenomenology and the cognitive sciences, 3, 349-364."
+    },
+    {
+      "doi": "",
+      "title": "Tomić, I., & Bays, P. M. (2023). A dynamic neural resource model bridges sensory and working memory. eLife, 12, e91034."
+    },
+    {
+      "doi": "",
+      "title": "Hashimoto, T., & Makioka, S. (2025). Serial dependence in numerosity perception generalizes across different sensory modalities: evidence from sequential numerosity comparison."
+    },
+    {
+      "doi": "",
+      "title": "Heeseung Lee, Hyang-Jung Lee, Kyoung Whan Choe, and Sang-Hun Lee. Disambiguating categorization and classification with distinct serial dependences in human choice behavior"
+    },
+    {
+      "doi": "",
+      "title": "van Bergen, R. S., Ma, W. J., Pratte, M. S., & Jehee, J. F. M. (2015). Sensory uncertainty decoded from visual cortex predicts behavior. Nature Neuroscience, 18(12), 1728–1730."
+    },
+    {
+      "doi": "",
+      "title": "Willacker, L., Roccato, M., Can, B. N., Dieterich, M., & Taylor, P. C. (2020). Reducing variability of perceptual decision making with offline theta-burst TMS of dorsal medial frontal cortex. Brain Stimulation, 13(6), 1689-1696."
+    },
+    {
+      "doi": "",
+      "title": "Dormal, V., Andres, M., & Pesenti, M. (2012). Contribution of the right intraparietal sulcus to numerosity and length processing: An fMRI-guided TMS study. cortex, 48(5), 623-629."
+    },
+    {
+      "doi": "",
+      "title": "Benton, C. P., & Redfern, A. S. (2016). Perceived duration increases with contrast, but only a little. Frontiers in Psychology, 7, 1950."
+    },
+    {
+      "doi": "",
+      "title": "Dormal, V., Andres, M., & Pesenti, M. (2012). Contribution of the right intraparietal sulcus to numerosity and length processing: An fMRI-guided TMS study. cortex, 48(5), 623-629."
+    },
+    {
+      "doi": "",
+      "title": "Wiese, M., & Wenderoth, P. (2008). What is the reference in reference repulsion?. Perception, 37(9), 1380-1385."
+    },
+    {
+      "doi": "",
+      "title": "Glaze, C. M., Filipowicz, A. L., Kable, J. W., Balasubramanian, V., & Gold, J. I. (2018). A bias–variance trade-off governs individual differences in on-line learning in an unpredictable environment. Nature Human Behaviour, 2(3), 213-224."
+    },
+    {
+      "doi": "",
+      "title": "Dorst, K. (2024). Bayesians Commit the Gambler’s Fallacy. Available at SSRN 4683064."
+    },
+    {
+      "doi": "",
+      "title": "Sims, C. R. (2016). Rate–distortion theory and human perception. Cognition, 152, 181–198."
+    },
+    {
+      "doi": "",
+      "title": "Dorst, K. (2024). Bayesians Commit the Gambler’s Fallacy. Available at SSRN 4683064."
+    },
+    {
+      "doi": "",
+      "title": "Dorst, K. (2024). Bayesians Commit the Gambler’s Fallacy. Available at SSRN 4683064."
+    },
+    {
+      "doi": "",
+      "title": "Long LuuAlan A Stocker (2018) Post-decision biases reveal a self-consistency principle in perceptual inference eLife 7:e33334."
+    },
+    {
+      "doi": "",
+      "title": "Lange RD, Chattoraj A, Beck JM, Yates JL, Haefner RM. A confirmation bias in perceptual decision-making due to hierarchical approximate inference. PLoS Comput Biol. 2021 Nov 29;17(11):e1009517."
+    },
+    {
+      "doi": "",
+      "title": "Rao, K., & Hastie, R. (2023). Predicting Outcomes in a Sequence of Binary Events: Belief Updating and Gambler’s Fallacy Reasoning. Cognitive Science, 47(1), e13211."
+    },
+    {
+      "doi": "",
+      "title": "Lange RD, Chattoraj A, Beck JM, Yates JL, Haefner RM. A confirmation bias in perceptual decision-making due to hierarchical approximate inference. PLoS Comput Biol. 2021 Nov 29;17(11):e1009517."
+    },
+    {
+      "doi": "",
+      "title": "Rabin, M. (2002). Inference by believers in the law of small numbers. The Quarterly Journal of Economics, 117(3), 775-816."
+    },
+    {
+      "doi": "",
+      "title": "Schaffner, J., Bao, S. D., Tobler, P. N., Hare, T. A., & Polanía, R. (2023). Sensory perception relies on fitness-maximizing codes. Nature Human Behaviour, 7, 1135–1151."
+    },
+    {
+      "doi": "",
+      "title": "Sims, C. R. (2015). The cost of misremembering: Inferring the loss function in visual working memory. Journal of Vision, 15(3), 2, 1–27."
+    },
+    {
+      "doi": "",
+      "title": "Rabin, M., & Vayanos, D. (2010). The gambler’s and hot-hand fallacies: Theory and applications. The Review of Economic Studies, 77(2), 730-778."
+    },
+    {
+      "doi": "",
+      "title": "Fang, Z., & Sims, C. R. (2025). Humans learn generalizable representations through efficient coding. Nature Communications, 16, 3989."
+    },
+    {
+      "doi": "",
+      "title": "Sims, D. R., Jacobs, R. A., & Knill, D. C. (2012). Ideal observer analysis of visual working memory. Psychological Review, 119(4), 807–830."
+    },
+    {
+      "doi": "",
+      "title": "Tsuchiya, N., Saigo, H., & Phillips, S. (2023). An adjunction hypothesis between qualia and reports. Frontiers in Psychology, 13, 1053977."
+    },
+    {
+      "doi": "",
+      "title": "Anobile, G., Bartoli, M., Pfanner, C., Masi, G., Cioni, G., & Tinelli, F. (2022). Auditory time thresholds in the range of milliseconds but not seconds are impaired in ADHD. Scientific Reports, 12(1), 1352."
+    },
+    {
+      "doi": "",
+      "title": "Bays, P. M., & Husain, M. (2008). Dynamic shifts of limited working memory resources in human vision. Science, 321(5890), 851–854."
+    },
+    {
+      "doi": "",
+      "title": "Su, Z., Li, Y., Wang, S., Zhang, Y., Li, Y., Ji, H., & Ding, X. (2025). Serial dependence in biological motion perception: Unique patterns compared to nonbiological motion. Journal of Experimental Psychology: Human Perception and Performance."
+    },
+    {
+      "doi": "",
+      "title": "Su, Z., Li, Y., Wang, S., Zhang, Y., Li, Y., Ji, H., & Ding, X. (2025). Serial dependence in biological motion perception: Unique patterns compared to nonbiological motion. Journal of Experimental Psychology: Human Perception and Performance."
+    },
+    {
+      "doi": "",
+      "title": "오늘부터 시작합니다"
+    },
+    {
+      "doi": "",
+      "title": "앞으로 위 스프레드 시트 사용하면 되겠습니다"
+    },
+    {
+      "doi": "",
+      "title": "<https:\\/\\/docs.google.com\\/spreadsheets\\/d\\/13rkgJo4JsH-SYT3lciF2QpqBzGfEAjGIDlwduQydlk\\/edit?usp=sharing>"
+    },
+    {
+      "doi": "",
+      "title": "KSBNS lecture - Matteo Carandini (2508023)"
+    },
+    {
+      "doi": "",
+      "title": "Mark A. Segraves, Emory Kuo, Sara Caddigan, Emily A. Berthiaume, Konrad P. Kording; Predicting rhesus monkey eye movements during natural-image search. Journal of Vision 2017;17(3):12."
+    },
+    {
+      "doi": "",
+      "title": "Cong S, Wang H, Zhou Y, Wang Z, Yao X, Yang C. Comprehensive review of Transformer-based models in neuroscience, neurology, and psychiatry. Brain-X. 2024; 2:e57."
+    },
+    {
+      "doi": "",
+      "title": "Carandini, M., & Heeger, D. J. (2012). Normalization as a canonical neural computation. Nature reviews neuroscience, 13(1), 51-62."
+    },
+    {
+      "doi": "",
+      "title": "Perrinet, L. U., & Bednar, J. A. (2015). Edge co-occurrences can account for rapid categorization of natural versus animal images. Scientific Reports, 5(1)."
+    },
+    {
+      "doi": "",
+      "title": "Lee, S.-H., Kravitz, D. J., & Baker, C. I. (2013). Goal-dependent dissociation of visual and prefrontal cortices during working memory. Nature Neuroscience, 16(8), 997–999."
+    },
+    {
+      "doi": "",
+      "title": "Li, J. A., Zhou, C., Benna, M., & Mattar, M. G. (2024). Linking in-context learning in transformers to human episodic memory. Advances in neural information processing systems, 37, 6180-6212."
+    },
+    {
+      "doi": "",
+      "title": "Wei, X. X., & Stocker, A. A. (2016). Mutual information, Fisher information, and efficient coding. Neural computation, 28(2), 305-326."
+    },
+    {
+      "doi": "",
+      "title": "Chen, Y., Yang, Z., Ahn, S. et al. COCO-Search18 fixation dataset for predicting goal-directed attention control. Sci Rep 11, 8776 (2021)."
+    },
+    {
+      "doi": "",
+      "title": "Press, C., Kok, P., & Yon, D. (2020). The perceptual prediction paradox. Trends in cognitive sciences, 24(1), 13-24."
+    },
+    {
+      "doi": "",
+      "title": "Hahn, M., Wang, E., & Wei, X.-X. (2025). Identifiability of Bayesian models of cognition. bioRxiv."
+    },
+    {
+      "doi": "",
+      "title": "Li, J. A., Zhou, C., Benna, M., & Mattar, M. G. (2024). Linking in-context learning in transformers to human episodic memory. Advances in neural information processing systems, 37, 6180-6212."
+    },
+    {
+      "doi": "",
+      "title": "Carandini, M. (2024). Sensory choices as logistic classification. Neuron, 112(17), 2854-2868."
+    },
+    {
+      "doi": "",
+      "title": "Malloy, T., & Sims, C. R. (2021). Modelling visual decision making using a variational autoencoder. In 19th International Conference on Cognitive Modelling, ICCM (pp. 1-12)."
+    },
+    {
+      "doi": "",
+      "title": "Carandini, M., & Heeger, D. J. (2012). Normalization as a canonical neural computation. Nature reviews neuroscience, 13(1), 51-62."
+    },
+    {
+      "doi": "",
+      "title": "Luce, R. D. (2003). Whatever happened to information theory in psychology? Review of General Psychology, 7(2), 183–188."
+    },
+    {
+      "doi": "",
+      "title": "Chen, Y., Yang, Z., Chakraborty, S., Mondal, S., Ahn, S., Samaras, D., Hoai, M., & Zelinsky, G. (n.d.). Characterizing Target-absent Human Attention."
+    },
+    {
+      "doi": "",
+      "title": "Feldman, J. (2021). Information-theoretic signal detection theory. Psychological Review, 128(5), 976–987."
+    },
+    {
+      "doi": "",
+      "title": "Carandini, M. (2024). Sensory choices as logistic classification. Neuron, 112(17), 2854-2868."
+    },
+    {
+      "doi": "",
+      "title": "Carandini, M. (2024). Sensory choices as logistic classification. Neuron, 112(17), 2854-2868."
+    },
+    {
+      "doi": "",
+      "title": "Wang, Y., Li, C., Li, W., & Wu, A. (2024). Exploring behavior-relevant and disentangled neural dynamics with generative diffusion models. Advances in Neural Information Processing Systems, 37, 34712-34736."
+    },
+    {
+      "doi": "",
+      "title": "Perrinet, L. U., & Bednar, J. A. (2015). Edge co-occurrences can account for rapid categorization of natural versus animal images. Scientific Reports, 5(1).‌"
+    },
+    {
+      "doi": "",
+      "title": "Nassi, J. J., & Callaway, E. M. (2009). Parallel processing strategies of the primate visual system. Nature Reviews Neuroscience, 10(5), 360–372."
+    },
+    {
+      "doi": "",
+      "title": "Baker, J., Barton, R. A., & Venditti, C. (2025). Human dexterity and brains evolved hand in hand. Communications Biology, 8(1)."
+    },
+    {
+      "doi": "",
+      "title": "Yoo, K., Ahn, J., & Lee, S.-H. (2021). The confounding effects of eye blinking on pupillometry, and their remedy. PLOS ONE, 16(12), e0261463."
+    },
+    {
+      "doi": "",
+      "title": "Klimovich-Gray, A., Tyler, L. K., Randall, B., Kocagoncu, E., Devereux, B., & Marslen-Wilson, W. D. (2019). Balancing prediction and sensory input in speech comprehension: the spatiotemporal dynamics of word recognition in context. Journal of Neuroscience, 39(3), 519-527."
+    },
+    {
+      "doi": "",
+      "title": "Torralba, Oliva, Contextual Guidance of Eye Movements and Attention in Real-World Scenes: The Role of Global Features in Object Search."
+    },
+    {
+      "doi": "",
+      "title": "Rust, N. C., & Movshon, J. A. (2005). In praise of artifice. Nature neuroscience, 8(12), 1647-1650."
+    },
+    {
+      "doi": "",
+      "title": "Ni, L., & Stocker, A. A. (2023). Efficient sensory encoding predicts robust averaging. Cognition, 232, 105334."
+    },
+    {
+      "doi": "",
+      "title": "Ji-An, L., Benna, M.K. & Mattar, M.G. Discovering cognitive strategies with tiny recurrent neural networks. Nature 644, 993–1001 (2025)."
+    },
+    {
+      "doi": "",
+      "title": "Tononi, G. (2007). The Information Integration Theory of Consciousness. The Blackwell companion to consciousness."
+    },
+    {
+      "doi": "",
+      "title": "Li, B., Wang, B., & Zaidel, A. (2026). Reversed effects of prior choices in cross-modal temporal decisions. Cognition, 266, 106294."
+    },
+    {
+      "doi": "",
+      "title": "DiCarlo, J. J., Zoccolan, D., & Rust, N. C. (2012). How does the brain solve visual object recognition? Neuron, 73(3), 415–434."
+    },
+    {
+      "doi": "",
+      "title": "Tononi, G., Boly, M., & Cirelli, C. (2024). Consciousness and sleep. Neuron, 112(10), 1568-1594"
+    },
+    {
+      "doi": "",
+      "title": "Cicchini, G. M., Mikellidou, K., & Burr, D. C. (2018). The functional role of serial dependence. Proceedings of the Royal Society B, 285(1890), 20181722."
+    },
+    {
+      "doi": "",
+      "title": "Ji-An, L., Benna, M.K. & Mattar, M.G. Discovering cognitive strategies with tiny recurrent neural networks. Nature 644, 993–1001 (2025)."
+    },
+    {
+      "doi": "",
+      "title": "Baker, N., & Kellman, P. J. (2018). Abstract shape representation in human visual perception. Journal of Experimental Psychology General, 147(9), 1295–1308."
+    },
+    {
+      "doi": "",
+      "title": "Kang, B., Kim, J., Yun, T. R., Bae, H., & Kim, C. E. (2025). Identifying Features that Shape Perceived Consciousness in Large Language Model-based AI: A Quantitative Study of Human Responses. arXiv preprint arXiv:2502.15365."
+    },
+    {
+      "doi": "",
+      "title": "Barlow, H. B. (1961). Possible principles underlying the transformations of sensory messages. In W. A. Rosenblith (Ed.), Sensory communication (pp. 217–234). MIT Press."
+    },
+    {
+      "doi": "",
+      "title": "Carandini, M. (2024). Sensory choices as logistic classification. Neuron, 112(17), 2854-2868."
+    },
+    {
+      "doi": "",
+      "title": "Sohn, H., & Narain, D. (2021). Neural implementations of Bayesian inference. Current Opinion in Neurobiology, 70, 121-129."
+    },
+    {
+      "doi": "",
+      "title": "Kravitz, D. J., Saleem, K. S., Baker, C. I., Ungerleider, L. G., & Mishkin, M. (2011). A new neural framework for visuospatial processing. Nature Reviews Neuroscience, 12(4), 217–230."
+    },
+    {
+      "doi": "",
+      "title": "Sohn, H., & Narain, D. (2021). Neural implementations of Bayesian inference. Current Opinion in Neurobiology, 70, 121-129."
+    },
+    {
+      "doi": "",
+      "title": "Attneave, F. (1954). Some informational aspects of visual perception. Psychological Review, 61(3), 183–193."
+    },
+    {
+      "doi": "",
+      "title": "Bashivan, P., Kar, K., & DiCarlo, J. J. (2019). Neural population control via deep image synthesis. Science, 364(6439)."
+    },
+    {
+      "doi": "",
+      "title": "Dayan, P., Hinton, G. E., Neal, R. M., & Zemel, R. S. (1995). The helmholtz machine. Neural computation, 7(5), 889-904."
+    },
+    {
+      "doi": "",
+      "title": "Chopin, A., & Mamassian, P. (2012). Predictive properties of visual adaptation. Current biology, 22(7), 622-626."
+    },
+    {
+      "doi": "",
+      "title": "Zhang, Z., Hall, T. S., Livingstone, M. S., Buffalo, E. A., Born, R. T., & Ponce, C. R. (2025). Hierarchical focus on animal features in the primate ventral visual pathway. Science Advances, 11, eadq7342."
+    },
+    {
+      "doi": "",
+      "title": "Arcaro, M. J., Ponce, C., & Livingstone, M. (2020). The neurons that mistook a hat for a face. ELife, 9."
+    },
+    {
+      "doi": "",
+      "title": "Xie S, Singer J, Yilmaz B, Kaiser D, Cichy RM (2025) Recurrence affects the geometry of visual representations across the ventral visual stream in the human brain. PLoS Biol 23(8): e3003354."
+    },
+    {
+      "doi": "",
+      "title": "Chopin, A., & Mamassian, P. (2012). Predictive properties of visual adaptation. Current biology, 22(7), 622-626."
+    },
+    {
+      "doi": "",
+      "title": "Hinton, G. E., & Zemel, R. (1993). Autoencoders, minimum description length and Helmholtz free energy. Advances in neural information processing systems, 6."
+    },
+    {
+      "doi": "",
+      "title": "Lange, R. D., Shivkumar, S., Chattoraj, A., & Haefner, R. M. (2023). Bayesian encoding and decoding as distinct perspectives on neural coding. Nature neuroscience, 26(12), 2063-2072."
+    },
+    {
+      "doi": "",
+      "title": "Ayzenberg, V., & Behrmann, M. (2022). Does the brain’s ventral visual pathway compute object shape? Trends in Cognitive Sciences, 26(12), 1119–1132."
+    },
+    {
+      "doi": "",
+      "title": "Tolmachev, P., Engel, T.A. Single-unit activations confer inductive biases for emergent circuit solutions to cognitive tasks. Nat Mach Intell 7, 1742–1754 (2025)."
+    },
+    {
+      "doi": "",
+      "title": "SNUBIC Inauguration Symposium - John O’Doherty (251031)"
+    },
+    {
+      "doi": "",
+      "title": "Sims, C. R. (2018). Efficient coding explains the universal law of generalization in human perception. Science, 360(6389), 652-656."
+    },
+    {
+      "doi": "",
+      "title": "Lian, Y., Williams, S., Alexander, A. S., Hasselmo, M. E., & Burkitt, A. N. (2023). Learning the vector coding of egocentric boundary cells from visual data. Journal of Neuroscience, 43(28), 5180–5190."
+    },
+    {
+      "doi": "",
+      "title": "Hahn, M., Wang, E., & Wei, X.-X. (2025). Identifiability of Bayesian models of cognition. bioRxiv."
+    },
+    {
+      "doi": "",
+      "title": "Sims, C. R. (2018). Efficient coding explains the universal law of generalization in human perception. Science, 360(6389), 652-656. 의 Supplementary"
+    },
+    {
+      "doi": "",
+      "title": "Wei, X. X., & Stocker, A. A. (2012). Efficient coding provides a direct link between prior and likelihood in perceptual Bayesian inference. Advances in neural information processing systems, 25."
+    },
+    {
+      "doi": "",
+      "title": "Keller, A. J., Roth, M. M., & Scanziani, M. (2020). Feedback generates a second receptive field in neurons of the visual cortex. Nature, 582(7812), 545–549."
+    },
+    {
+      "doi": "",
+      "title": "Park, I. M., & Pillow, J. W. (2017). Bayesian efficient coding. BioRxiv, 178418."
+    },
+    {
+      "doi": "",
+      "title": "Schönsberg, Francesca, Davide Giana, Yukti Chopra, Mathew E. Diamond, and Sebastian Goldt. “Diverse Perceptual Biases Emerge from Hebbian Plasticity in a Recurrent Neural Network Model.” Neuron 113, no. 21 (2025): 3673-3684.e6."
+    },
+    {
+      "doi": "",
+      "title": "Arcaro, M. J., & Livingstone, M. S. (2017). A hierarchical, retinotopic proto-organization of the primate visual system at birth. ELife, 6."
+    },
+    {
+      "doi": "",
+      "title": "Bergmann, J., Petro, L. S., Abbatecola, C., Li, M. S., Morgan, A. T., & Muckli, L. (2024). Cortical depth profiles in primary visual cortex for illusory and imaginary experiences. Nature Communications, 15, 1002."
+    },
+    {
+      "doi": "",
+      "title": "Stocker, A. A., & Simoncelli, E. P. (2006). Noise characteristics and prior expectations in human visual speed perception. Nature Neuroscience, 9(4), 578–584."
+    },
+    {
+      "doi": "",
+      "title": "Kubota, E., Grill-Spector, K., & Nordt, M. (2024). Rethinking cortical recycling in ventral temporal cortex. Trends in Cognitive Sciences, 28(1), 8–17."
+    },
+    {
+      "doi": "",
+      "title": "Harrison, W. J., Bays, P. M., & Rideaux, R. (2023). Neural tuning instantiates prior expectations in the human visual system. Nature Communications, 14(1), 5320."
+    },
+    {
+      "doi": "",
+      "title": "Mao, J., & Stocker, A. A. (2024). Sensory perception is a holistic inference process. Psychological Review, 131(4), 858–890."
+    },
+    {
+      "doi": "",
+      "title": "Summerfield, C., Luyckx, F., & Sheahan, H. (2020). Structure learning and the posterior parietal cortex. Progress in Neurobiology, 184, 101717."
+    },
+    {
+      "doi": "",
+      "title": "Dordek, Y., Soudry, D., Meir, R., & Derdikman, D. (2016). Extracting grid cell characteristics from place cell inputs using non-negative principal component analysis. Elife, 5, e10094."
+    },
+    {
+      "doi": "",
+      "title": "Stone, J. V. (2019). Information Theory: A Tutorial Introduction (No. arXiv:1802.05968). arXiv."
+    },
+    {
+      "doi": "",
+      "title": "Kovács, I., & Bela Julesz. (1994). Perceptual sensitivity maps within globally defined visual shapes. Nature, 370(6491), 644–646."
+    },
+    {
+      "doi": "",
+      "title": "Kriegeskorte, N., & Douglas, P. K. (2018). Cognitive computational neuroscience. Nature neuroscience, 21(9), 1148-1160."
+    },
+    {
+      "doi": "",
+      "title": "Poort, J., Raudies, F., Wannig, A., Lamme, Victor A. F., Neumann, H., & Roelfsema, Pieter R. (2012). The Role of Attention in Figure-Ground Segregation in Areas V1 and V4 of the Visual Cortex. Neuron, 75(1), 143–156."
+    },
+    {
+      "doi": "",
+      "title": "Tsuchiya, N., Phillips, S., & Saigo, H. (2022). Enriched category as a model of qualia structure based on similarity judgements. Consciousness and Cognition, 101, 103319."
+    },
+    {
+      "doi": "",
+      "title": "Bates, C. J., Lerch, R. A., Sims, C. R., & Jacobs, R. A. (2019). Adaptive allocation of human visual working memory capacity during statistical and categorical learning. Journal of Vision, 19(2), 11."
+    },
+    {
+      "doi": "",
+      "title": "Wilson, H. R., Krupa, B., & Wilkinson, F. (2000). Dynamics of perceptual oscillations in form vision. Nature Neuroscience, 3(2), 170–176."
+    },
+    {
+      "doi": "",
+      "title": "Barak, O. (2017). Recurrent neural networks as versatile tools of neuroscience research. Current opinion in neurobiology, 46, 1-6."
+    },
+    {
+      "doi": "",
+      "title": "Suzuki, S., Cross, L., & O’Doherty, J. P. (2017). Elucidating the underlying components of food valuation in the human orbitofrontal cortex. Nature neuroscience, 20(12), 1780-1786."
+    },
+    {
+      "doi": "",
+      "title": "Polanía, R., Woodford, M., & Ruff, C. C. (2019). Efficient coding of subjective value. Nature Neuroscience, 22(1), 134–142."
+    },
+    {
+      "doi": "",
+      "title": "Ayzenberg, V., & Behrmann, M. (2022). Does the brain’s ventral visual pathway compute object shape?. Trends in Cognitive Sciences, 26(12), 1119-1132."
+    },
+    {
+      "doi": "",
+      "title": "Demeyer, M., De Graef, P., Verfaillie, K., & Wagemans, J. (2011). Perceptual Grouping of Object Contours Survives Saccades. PLoS ONE, 6(6), e21257."
+    },
+    {
+      "doi": "",
+      "title": "Ayzenberg, V., & Behrmann, M. (2022). Does the brain’s ventral visual pathway compute object shape?. Trends in Cognitive Sciences, 26(12), 1119-1132."
+    },
+    {
+      "doi": "",
+      "title": "Lieder, F., Griffiths, T. L., M. Huys, Q. J., & Goodman, N. D. (2018). The anchoring bias reflects rational use of cognitive resources. Psychonomic Bulletin & Review, 25(1), 322–349."
+    },
+    {
+      "doi": "",
+      "title": "Lange, R. D., Shivkumar, S., Chattoraj, A., & Haefner, R. M. (2023). Bayesian encoding and decoding as distinct perspectives on neural coding. Nature Neuroscience, 26(12), 2063–2072."
+    },
+    {
+      "doi": "",
+      "title": "Demeyer, M., Graef, P. de, Verfaillie, K., & Wagemans, J. (2011). Perceptual Grouping of Object Contours Survives Saccades. PLoS ONE."
+    },
+    {
+      "doi": "",
+      "title": "Wei, X.-X., & Stocker, A. A. (2015). A Bayesian observer model constrained by efficient coding can explain “anti-Bayesian” percepts. Nature Neuroscience, 18(10), 1509–1517."
+    },
+    {
+      "doi": "",
+      "title": "Rabin, M. (2002). Inference by believers in the law of small numbers. The Quarterly Journal of Economics, 117(3), 775-816."
+    },
+    {
+      "doi": "",
+      "title": "Maloney, L. T., & Mamassian, P. (2009). Bayesian decision theory as a model of human visual perception: Testing Bayesian transfer. Visual Neuroscience, 26(1), 147–155."
+    },
+    {
+      "doi": "",
+      "title": "Fritsche, M., & de Lange, F. P. (2019). The role of feature-based attention in visual serial dependence. Journal of vision, 19(13), 21-21."
+    },
+    {
+      "doi": "",
+      "title": "Durstewitz, D., Koppe, G., &amp; Thurm, M. I. (2023). Reconstructing computational system dynamics from neural"
+    },
+    {
+      "doi": "",
+      "title": "Loffler, G. (2015). Probing intermediate stages of shape processing. Journal of Vision, 15(7), 1."
+    },
+    {
+      "doi": "",
+      "title": "Rustichini, A., Conen, K. E., Cai, X., & Padoa-Schioppa, C. (2017). Optimal coding and neuronal adaptation in economic decisions. Nature communications, 8(1), 1208."
+    },
+    {
+      "doi": "",
+      "title": "Louie, K., Khaw, M. W., & Glimcher, P. W. (2013). Normalization is a general neural mechanism for context-dependent decision making. Proceedings of the National Academy of Sciences, 110(15), 6139-6144."
+    },
+    {
+      "doi": "",
+      "title": "Boger, T., & Ullman, T. (2023). What is “Where”: Physical Reasoning Informs Object Location. Open Mind, 7, 130–140."
+    },
+    {
+      "doi": "",
+      "title": "Louie, K., Khaw, M. W., & Glimcher, P. W. (2013). Normalization is a general neural mechanism for context-dependent decision making. Proceedings of the National Academy of Sciences, 110(15), 6139-6144."
+    },
+    {
+      "doi": "",
+      "title": "Louie, K., LoFaro, T., Webb, R., & Glimcher, P. W. (2014). Dynamic divisive normalization predicts time-varying value coding in decision-related circuits. Journal of Neuroscience, 34(48), 16046-16057."
+    },
+    {
+      "doi": "",
+      "title": "Petzschner, F. H., Glasauer, S., & Stephan, K. E. (2015). A Bayesian perspective on magnitude estimation. Trends in Cognitive Sciences, 19(5), 285-293."
+    },
+    {
+      "doi": "",
+      "title": "Webster, M. A., Kaping, D., Mizokami, Y., & Duhamel, P. (2004). Adaptation to natural facial categories. Nature, 428(6982), 557-561."
+    },
+    {
+      "doi": "",
+      "title": "Jiang, F., Blanz, V., & O’Toole, A. J. (2006). Probing the visual representation of faces with adaptation: A view from the other side of the mean. Psychological Science, 17(6), 493-500."
+    },
+    {
+      "doi": "",
+      "title": "Arthur Prat-Carrabin, Samuel J Gershman, Bayesian estimation yields anti-Weber variability, PNAS Nexus, Volume 4, Issue 9, September 2025, pgaf275"
+    },
+    {
+      "doi": "",
+      "title": "Prat-Carrabin, A., Harl, M. V., & Gershman, S. J. (2026). Fast efficient coding and sensory adaptation in gain-adaptive recurrent networks (p. 2025.07.11.664261). bioRxiv."
+    },
+    {
+      "doi": "",
+      "title": "Jiang, F., Blanz, V., & O’Toole, A. J. (2006). Probing the visual representation of faces with adaptation: A view from the other side of the mean. Psychological Science, 17(6), 493-500."
+    },
+    {
+      "doi": "",
+      "title": "Poirier, F. J. A. M., & Wilson, H. R. (2011). A biologically plausible model of human shape symmetry perception. Journal of Vision, 10(1), 9–9."
+    },
+    {
+      "doi": "",
+      "title": "Yang, J., Zhang, H., & Lim, S. (2024). Sensory-memory interactions via modular structure explain errors in visual working memory. eLife, 13, RP95160."
+    },
+    {
+      "doi": "",
+      "title": "Webster, M. A., Kaping, D., Mizokami, Y., & Duhamel, P. (2004). Adaptation to natural facial categories. Nature, 428(6982), 557-561."
+    },
+    {
+      "doi": "",
+      "title": "Zhang, L.-Q., Mao, J., Aguirre, G. K., & Stocker, A. A. (2025). The tilt illusion arises from an efficient reallocation of neural coding resources at the contextual boundary. Proceedings of the National Academy of Sciences, 122(17), e2421565122."
+    },
+    {
+      "doi": "",
+      "title": "Hahn, U. (2014). Experiential limitation in judgment and decision. Topics in cognitive science, 6(2), 229-244."
+    },
+    {
+      "doi": "",
+      "title": "Kriegeskorte, N., & Wei, X.-X. (2021). Neural tuning and representational geometry. Nature Reviews Neuroscience, 22(11), 703–718."
+    },
+    {
+      "doi": "",
+      "title": "Houborg, C., Kristjánsson, Á., Tanrıkulu, Ö. D., & Pascucci, D. (2023). The role of secondary features in serial dependence. Journal of Vision, 23(5), 21-21."
+    },
+    {
+      "doi": "",
+      "title": "이제부터 사용할 정산시트입니다!"
+    },
+    {
+      "doi": "",
+      "title": "Bimler, D., Izmailov, C., & Paramei, G. (2013). Processing bimodal stimuli: Integrality\\/separability of color and orientation. Frontiers in Psychology, 4."
+    },
+    {
+      "doi": "",
+      "title": "Fischer, C., Czoschke, S., Peters, B., Rahm, B., Kaiser, J., & Bledowski, C. (2020). Context information supports serial dependence of multiple visual objects across memory episodes. Nature communications, 11(1), 1932."
+    },
+    {
+      "doi": "",
+      "title": "Kümmerer, M., Bethge, M., & Wallis, T. S. A. (2022). DeepGaze III: Modeling free-viewing human scanpaths with deep learning. Journal of Vision, 22(5), 7."
+    },
+    {
+      "doi": "",
+      "title": "Kim. & Lee. (2026). Geometry-Preserving Subspace Rotation Multiplexes Sensation and Memory in Visual Cortex"
+    },
+    {
+      "doi": "",
+      "title": "Jazayeri, M., & Movshon, J. A. (2007). A new perceptual illusion reveals mechanisms of sensory decoding. Nature, 446(7138), 912-915."
+    },
+    {
+      "doi": "",
+      "title": "Yoo, K., Ahn, J., & Lee, S.-H. (2021). The confounding effects of eye blinking on pupillometry, and their remedy. PLOS ONE, 16(12), e0261463."
+    },
+    {
+      "doi": "",
+      "title": "Chunharas, C., Wolff, M. J., Hettwer, M. D., & Rademaker, R. L. (2025). A gradual transition toward categorical representations along the visual hierarchy during working memory, but not perception. eLife, 14."
+    },
+    {
+      "doi": "",
+      "title": "Yoo, K., Ahn, J., & Lee, S.-H. (2021). The confounding effects of eye blinking on pupillometry, and their remedy. PLOS ONE, 16(12), e0261463."
+    },
+    {
+      "doi": "",
+      "title": "Neri, P., & Heeger, D. J. (2002). Spatiotemporal mechanisms for detecting and identifying image features in human vision. Nature Neuroscience, 5(8), 812–816."
+    },
+    {
+      "doi": "",
+      "title": "Li, H. H., Sprague, T. C., Yoo, A. H., Ma, W. J., & Curtis, C. E. (2021). Joint representation of working memory and uncertainty in human cortex. Neuron, 109(22), 3699-3712."
+    },
+    {
+      "doi": "",
+      "title": "Yang, J., Zhang, H., & Lim, S. (2024). Sensory-memory interactions via modular structure explain errors in visual working memory. eLife, 13, RP95160."
+    },
+    {
+      "doi": "",
+      "title": "Yoo, K., Ahn, J., & Lee, S.-H. (2021). The confounding effects of eye blinking on pupillometry, and their remedy. PLOS ONE, 16(12), e0261463."
+    },
+    {
+      "doi": "",
+      "title": "van den Berg R, Yoo AH, Ma WJ. Fechner's law in metacognition: A quantitative model of visual working memory confidence. Psychol Rev. 2017 Mar;124(2):197-214."
+    }
+  ]
+}

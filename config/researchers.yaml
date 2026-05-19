@@ -1,0 +1,46 @@
+---
+# csnl-paper-rec researcher registry — delivery single source of truth.
+# Channel IDs = INIT_claude per-researcher channels (2026-05-13 routing
+# directive: researcher-facing messages go to these channels, NOT DM;
+# a short DM ping additionally points to the channel post).
+#
+# SYJ + BHL are ONE recommendation unit: two juniors co-working JSL's
+# follow-up research. Topic extraction merges their projects; the
+# resulting recommendation is delivered to BOTH members' channels + DM
+# pings. (Operator may override at dry-run.)
+
+units:
+  - unit_id: JOP
+    members: [JOP]
+  - unit_id: BYL
+    members: [BYL]
+  - unit_id: MSY
+    members: [MSY]
+  - unit_id: SMJ
+    members: [SMJ]
+  - unit_id: JYK
+    members: [JYK]
+  - unit_id: "SYJ+BHL"
+    members: [SYJ, BHL]
+    note: "JSL 후속 공동연구 — 한 추천 단위, 두 채널/DM 전달"
+
+researchers:
+  JOP: { name: 박준오, init_claude_channel: C0B3FTHAVR8, dm_channel: D0AMRACTLBH }
+  BYL: { name: 이보연, init_claude_channel: C0B3DRPBP9C, dm_channel: D0AN6PMLWCS }
+  MSY: { name: 여민수, init_claude_channel: C0B4A6WAGNL, dm_channel: D0AP128V9DE }
+  SMJ: { name: 정새미, init_claude_channel: C0B39GQK067, dm_channel: D0AN0CHTJP5 }
+  JYK: { name: 김정예, init_claude_channel: C0B3FTKE4HY, dm_channel: D0AN3B8K0CD }
+  BHL: { name: 이보현, init_claude_channel: C0B39GVLKCK, dm_channel: D0AN6PXAESE }
+  SYJ: { name: 조수영, init_claude_channel: C0B3FTNR00J, dm_channel: D0AN4N0278E }
+
+# dm_channel values ported from researcher-archiver-plugin/config/researchers.yaml
+# (slack_dm_channel). Re-verify before first real send (drift guard).
+
+# Senior anchors — NOT recommendation targets; referenced only for
+# mentor-linked context (SYJ/BHL ← JSL, juniors ← SK where relevant).
+seniors:
+  SK:  { name: 김성제 }
+  JSL: { name: 임재섭 }
+
+# Verify channel IDs against config/researchers.yaml of the
+# researcher-archiver-plugin before first real send (drift guard).
