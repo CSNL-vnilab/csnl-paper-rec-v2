@@ -4,6 +4,9 @@
 *.key
 credentials.json
 
+# personal/local Claude Code permissions (never commit; per-machine)
+.claude/settings.local.json
+
 # state / runtime (ledger is in Postgres now; runs are local artifacts)
 state/runs/
 state/.APPROVED_*
