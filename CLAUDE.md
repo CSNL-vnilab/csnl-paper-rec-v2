@@ -27,3 +27,6 @@
 | 날짜 | 변경 내용 | 대상 | 사유 |
 |------|----------|------|------|
 | 2026-05-19 | 초기 구성 (v2) | agents/×5, skills/×4, orchestrator | 하네스 엔지니어링 마이그레이션; 전문 정독 스카우트 + Postgres 데이터 평면 |
+| 2026-05-19 | DM 모드 추가 | scripts/deliver.py(--mode dm), scripts/build_dm_drafts.py | 운영자 override: 전체 추천+후보 목록+선택 질의를 개별 연구자 DM 로 전달 (run 20260519-1539) |
+| 2026-05-19 | DM 일괄 발송 | csnl_paper_rec ledger | 7/7 발송 완료; JOP 시점 변경(time2dist 집중, 직전 추천 read 표시, 후보 #4 교체); SYJ/BHL 개별 추천 |
+| 2026-05-20 | Phase 7 진화 하네스 | agents/feedback-analyst, skills/paper-rec-evolve, scripts/{fetch_replies,classify_feedback,propose_followups,apply_feedback}.py | 응답 캐치 → 분류 → 중립 follow-up(NO PB) → 게이트된 적용 + 키워드 진화 diff 제안 (manual-only 유지) |
