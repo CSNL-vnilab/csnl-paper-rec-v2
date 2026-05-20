@@ -277,11 +277,11 @@ DM_REQ = ("unit_id", "member_init", "dm_channel", "dm_text",
           "paper_doi", "paper_title", "paper_date", "tier")
 
 
-def _load_dm(rid: str) -> list[dict]:
-    f = run_dir(rid) / "08_dm_drafts.json"
+def _load_dm(rid: str, override: str | None = None) -> list[dict]:
+    f = Path(override) if override else run_dir(rid) / "08_dm_drafts.json"
     if not f.exists():
-        print(f"ERROR: {f.relative_to(REPO_ROOT)} not found "
-              "(run scripts/build_dm_drafts.py first).")
+        print(f"ERROR: {f} not found "
+              "(run scripts/build_dm_drafts.py or scripts/propose_followups.py first).")
         sys.exit(1)
     ds = json.loads(f.read_text()).get("drafts", [])
     for d in ds:
@@ -388,6 +388,9 @@ def main() -> int:
     ap.add_argument("--mode", choices=["channel", "dm"], default="channel",
                     help="channel: 07_drafts (channel post + DM ping). "
                          "dm: 08_dm_drafts (full DM to each researcher).")
+    ap.add_argument("--drafts", default=None,
+                    help="Override drafts file (dm mode). e.g. "
+                         "state/runs/<RID>/09_followups.json for follow-ups.")
     ap.add_argument("--send", action="store_true", default=False)
     ap.add_argument("--operator-approved", action="store_true", default=False)
     args = ap.parse_args()
@@ -413,7 +416,7 @@ def main() -> int:
         banned = []
 
     if args.mode == "dm":
-        ds = _load_dm(rid)
+        ds = _load_dm(rid, args.drafts)
         if dry:
             dry_run_dm(ds, rid, banned)
             return 0
