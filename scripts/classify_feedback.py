@@ -23,8 +23,14 @@ _ROOT = Path(__file__).resolve().parent.parent
 
 # Korean/English cue lexicon — conservative; ambiguous cases stay "thread_reply"
 CUES = {
-    "thumbs_up":   ["좋습니다", "좋아요", "감사", "읽어볼게요", "읽겠습니다",
-                    "thanks", "great", "perfect", "will read"],
+    # 1st-person commitment to engage with the recommended paper. Korean
+    # promissory endings (`할게`, `쓸게`, `읽을게`) + "will use/read/work".
+    # Deliberately NOT triggering on Paper-Blitz tokens — PB is rules/00
+    # out-of-scope (SMJ's domain); we recognize engagement, not the venue.
+    "thumbs_up":   ["좋습니다", "좋아요", "읽어볼게요", "읽겠습니다",
+                    "읽을게요", "읽을게", "할게요", "할게", "쓸게요", "쓸게",
+                    "사용하겠", "활용하겠", "발표하겠", "발표할게",
+                    "thanks", "great", "perfect", "will read", "will use"],
     "thumbs_down": ["관심 없", "관심없", "별로", "부적합", "맞지 않", "아닌",
                     "not relevant", "not interested", "not a fit", "no thanks"],
     "already_read":["이미 읽었", "이미 봤", "본 적 있", "읽은 적 있",

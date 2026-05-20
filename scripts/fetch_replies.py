@@ -40,6 +40,24 @@ def slack_history(token: str, channel: str, oldest: str, limit: int = 50) -> lis
     return d.get("messages", [])
 
 
+def slack_thread(token: str, channel: str, parent_ts: str, limit: int = 50) -> list[dict]:
+    """Thread replies under a parent message (the bot's recommendation)."""
+    url = "https://slack.com/api/conversations.replies"
+    headers = {"Authorization": f"Bearer {token}"}
+    params = {"channel": channel, "ts": parent_ts, "limit": limit}
+    r = requests.get(url, headers=headers, params=params, timeout=20)
+    r.raise_for_status()
+    d = r.json()
+    if not d.get("ok"):
+        # Some workspaces return 'thread_not_found' if no replies — treat as empty
+        if d.get("error") in ("thread_not_found",):
+            return []
+        raise RuntimeError(f"Slack thread error on {channel}: {d.get('error')}")
+    msgs = d.get("messages", []) or []
+    # First msg is the parent itself; drop it
+    return [m for m in msgs if m.get("ts") != parent_ts]
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--run-id", required=True)
@@ -72,23 +90,36 @@ def main() -> int:
         if not dm:
             print(f"  WARN: no DM channel for {member}; skipping")
             continue
+        msgs = []
         try:
-            msgs = slack_history(token, dm, ts, limit=a.limit)
+            # top-level DM messages newer than the recommendation send
+            msgs.extend(slack_history(token, dm, ts, limit=a.limit))
         except RuntimeError as e:
-            print(f"  WARN [{member} {dm}]: {e}")
-            continue
+            print(f"  WARN [{member} {dm} history]: {e}")
+        try:
+            # thread replies under the recommendation message itself
+            msgs.extend(slack_thread(token, dm, ts, limit=a.limit))
+        except RuntimeError as e:
+            print(f"  WARN [{member} {dm} thread]: {e}")
+        seen_ts = set()
         for m in msgs:
             # researcher reply = not the bot's own send
             if m.get("bot_id") or m.get("subtype") == "bot_message":
                 continue
             if not m.get("text"):
                 continue
+            mts = m.get("ts")
+            if mts in seen_ts:
+                continue
+            seen_ts.add(mts)
             replies.append({
                 "member_init": member, "dm_channel": dm,
-                "since_send_ts": ts, "ts": m.get("ts"),
+                "since_send_ts": ts, "ts": mts,
                 "user": m.get("user"), "text": m["text"],
+                "thread_ts": m.get("thread_ts"),
             })
-        print(f"  {member} {dm}: {sum(1 for x in replies if x['member_init']==member)} reply(ies)")
+        print(f"  {member} {dm}: "
+              f"{sum(1 for x in replies if x['member_init']==member)} reply(ies)")
 
     from datetime import datetime, timezone, timedelta
     out = {"run_id": rid,
