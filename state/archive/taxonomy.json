@@ -1,0 +1,349 @@
+{
+  "version": "v1.2026-05-22",
+  "source": "Domain-expert + pipeline-architect Opus design round, P14 (2026-05-22).",
+  "note": "Substring-matched against (title || ' ' || abstract || ' ' || venue), case-insensitive. Multi-label per dimension. Korean labels are researcher-facing and obey rules/01_tone BANNED_TERMS. Combos reference top-level LAB_SCOPE_TAGS (BDM/NN/fVC/VWM/SD/CG/METH) AND/OR dim category codes; the matcher resolves codes across both layers.",
+  "dimensions": {
+    "focus": {
+      "F-BEH": {
+        "label_en": "Behavioural modeling",
+        "label_ko": "행동 데이터 기반 정량 모델링",
+        "kw": ["psychophysics","psychometric","behavioural model","behavioral model","response bias","choice probability","reaction time","RT distribution","response curve","perceptual report","two-alternative forced choice","2AFC","two-interval forced choice","2IFC"],
+        "kw_ko": ["심리물리학","심리측정함수","반응시간","행동모델"]
+      },
+      "F-NIM": {
+        "label_en": "Neuroimaging (human)",
+        "label_ko": "인간 뇌영상",
+        "kw": ["fMRI","BOLD","voxelwise","voxel-wise","MEG","EEG","scalp recording","source localization","MVPA decoding","retinotopic mapping","retinotopy","neuroimaging","7T fMRI","ultra-high-field","layer fMRI","laminar fMRI"],
+        "kw_ko": ["fMRI 인코딩","뇌영상","자기공명영상"]
+      },
+      "F-ELE": {
+        "label_en": "Electrophysiology (invasive)",
+        "label_ko": "침습 전기생리",
+        "kw": ["single-unit","multi-unit","spike sorting","Neuropixels","Utah array","electrophysiological recording","microelectrode","intracranial","iEEG","ECoG","LFP","local field potential","awake recording"],
+        "kw_ko": ["단일세포 기록","전기생리"]
+      },
+      "F-NMD": {
+        "label_en": "Neural modeling / circuit theory",
+        "label_ko": "신경회로 모델링",
+        "kw": ["recurrent neural network","RNN","attractor","attractor dynamics","line attractor","ring attractor","balanced network","spiking network","biologically plausible","neural manifold","population dynamics","mean-field","normative model","Hopfield","divisive normalization"],
+        "kw_ko": ["신경망 동역학","어트랙터","스파이킹 신경망"]
+      },
+      "F-BAY": {
+        "label_en": "Bayesian observer / ideal observer",
+        "label_ko": "베이지안 관찰자 모델",
+        "kw": ["Bayesian observer","ideal observer","Bayesian inference","posterior estimation","prior over","likelihood function","MAP estimate","generative model of perception","predictive coding","hierarchical Bayesian observer"],
+        "kw_ko": ["베이지안 관찰자","이상관찰자"]
+      },
+      "F-EFC": {
+        "label_en": "Efficient coding / information theory",
+        "label_ko": "효율부호화·정보이론",
+        "kw": ["efficient coding","rate-distortion","rate distortion","information bottleneck","mutual information","Fisher information","neural code efficiency","capacity-limited","resource-rational","normative information-theoretic"],
+        "kw_ko": ["효율부호화","정보병목","자원합리성"]
+      },
+      "F-VIS": {
+        "label_en": "Visual perception (psychophysical)",
+        "label_ko": "시지각 (지각 그 자체)",
+        "kw": ["visual perception","perceptual organization","apparent motion","visual illusion","contrast sensitivity","spatial vision","motion perception","depth perception","contour integration","surface perception"],
+        "kw_ko": ["지각","시각현상"]
+      },
+      "F-MEM": {
+        "label_en": "Memory dynamics",
+        "label_ko": "기억 동역학",
+        "kw": ["memory encoding","memory maintenance","mnemonic","delay period","delay activity","recall","retrieval","forgetting","persistent activity","memory representation"],
+        "kw_ko": ["기억유지","지연활동","기억회상"]
+      },
+      "F-CTX": {
+        "label_en": "Cognitive control / attention",
+        "label_ko": "인지통제·주의",
+        "kw": ["top-down attention","attentional selection","cognitive control","prefrontal control","feature-based attention","spatial attention","goal-directed","executive function","distractor suppression"],
+        "kw_ko": ["주의","인지통제"]
+      },
+      "F-LRN": {
+        "label_en": "Learning / plasticity",
+        "label_ko": "학습·가소성",
+        "kw": ["reinforcement learning","perceptual learning","synaptic plasticity","learning rule","reward learning","model-based learning","model-free learning","value learning","prediction error"],
+        "kw_ko": ["강화학습","지각학습"]
+      },
+      "F-CLN": {
+        "label_en": "Clinical / disorders",
+        "label_ko": "임상·환자",
+        "kw": ["schizophrenia","depression","anxiety","autism","ADHD","Parkinson","Alzheimer","MCI","psychiatric","clinical population","patient group","psychosis"],
+        "kw_ko": ["조현병","우울","자폐","환자군"]
+      },
+      "F-DEV": {
+        "label_en": "Development / aging",
+        "label_ko": "발달·노화",
+        "kw": ["infant","child development","developmental trajectory","lifespan","aging","older adult","age-related"],
+        "kw_ko": ["발달","노화","영유아"]
+      },
+      "F-THE": {
+        "label_en": "Theory / review (no new data)",
+        "label_ko": "이론·종설",
+        "kw": ["review","perspective","opinion","theoretical framework","mini-review","annual review","current opinion","trends in"],
+        "kw_ko": ["종설","이론논문"]
+      }
+    },
+    "method": {
+      "M-PSY": {
+        "label_en": "Classical psychophysics",
+        "label_ko": "정통 심리물리학",
+        "kw": ["adaptive staircase","QUEST","method of constant stimuli","MOCS","signal detection theory","SDT","d-prime","criterion shift","2AFC","2IFC","psychometric fitting"],
+        "kw_ko": ["심리물리학","적응형 계단법","신호탐지이론"]
+      },
+      "M-DDM": {
+        "label_en": "Sequential-sampling / drift-diffusion",
+        "label_ko": "순차표본·확산모델",
+        "kw": ["drift diffusion","DDM","leaky competing accumulator","LCA","sequential sampling","race model","evidence accumulation model","urgency signal","hierarchical DDM","HDDM"],
+        "kw_ko": ["확산모델","누적증거"]
+      },
+      "M-BAY": {
+        "label_en": "Bayesian model fitting / inference",
+        "label_ko": "베이지안 모델적합",
+        "kw": ["hierarchical bayesian","posterior sampling","MCMC","NUTS","Stan model","variational inference","ELBO","model comparison BIC","model comparison AIC","leave-one-out cross-validation","LOO","WAIC"],
+        "kw_ko": ["위계적 베이지안","변분추론","모델비교"]
+      },
+      "M-EFC": {
+        "label_en": "Efficient/rate-distortion modeling",
+        "label_ko": "효율부호화 분석",
+        "kw": ["rate-distortion analysis","capacity constraint","information-theoretic bound","channel capacity","normative resource allocation","optimal prior","optimal coding under constraint"],
+        "kw_ko": ["정보이론 분석"]
+      },
+      "M-FMR": {
+        "label_en": "fMRI analysis (general)",
+        "label_ko": "fMRI 분석",
+        "kw": ["GLM analysis","BOLD response","functional connectivity","ROI analysis","voxelwise GLM","beta-series"],
+        "kw_ko": ["결합도분석","BOLD 신호분석"]
+      },
+      "M-PRF": {
+        "label_en": "Population receptive field / retinotopy",
+        "label_ko": "pRF·망막순응도",
+        "kw": ["pRF","population receptive field","retinotopic mapping","retinotopy","visual field mapping","eccentricity mapping","polar angle mapping","cortical magnification"],
+        "kw_ko": ["망막순응도","시야지도"]
+      },
+      "M-RSA": {
+        "label_en": "Representational similarity / decoding",
+        "label_ko": "표상유사도 분석",
+        "kw": ["representational similarity","RSA","representational dissimilarity matrix","RDM","MVPA","multivariate pattern analysis","decoding accuracy","searchlight","inverted encoding model","IEM","channel-encoding model"],
+        "kw_ko": ["표상유사도","다변량 패턴분석"]
+      },
+      "M-ENC": {
+        "label_en": "Voxel encoding models",
+        "label_ko": "인코딩 모델",
+        "kw": ["voxel encoding","encoding model","Gabor wavelet encoding","feature space mapping","banded ridge","banded regression"],
+        "kw_ko": ["인코딩 모델","복셀 인코딩"]
+      },
+      "M-EEG": {
+        "label_en": "M/EEG signal analysis",
+        "label_ko": "M/EEG 신호분석",
+        "kw": ["event-related potential","ERP","time-frequency","oscillation power","alpha-band","gamma-band","phase coherence","P300","N170","source reconstruction MEG"],
+        "kw_ko": ["사건관련전위","시간-주파수 분석"]
+      },
+      "M-PUP": {
+        "label_en": "Pupillometry / arousal",
+        "label_ko": "동공·각성 측정",
+        "kw": ["pupillometry","pupil diameter","pupil dilation","arousal index","locus coeruleus","LC-NE","tonic pupil","phasic pupil"],
+        "kw_ko": ["동공측정"]
+      },
+      "M-EYE": {
+        "label_en": "Eye tracking / oculomotor",
+        "label_ko": "시선추적·안구운동",
+        "kw": ["eye tracking","gaze position","saccade","microsaccade","fixation duration","smooth pursuit","scanpath"],
+        "kw_ko": ["시선추적","도약운동"]
+      },
+      "M-STM": {
+        "label_en": "Brain stimulation",
+        "label_ko": "뇌자극",
+        "kw": ["TMS","transcranial magnetic stimulation","tDCS","tACS","transcranial direct current","optogenetic stimulation","focused ultrasound","intracortical microstimulation"],
+        "kw_ko": ["경두개자기자극","경두개직류자극"]
+      },
+      "M-DLM": {
+        "label_en": "Deep learning models of brain",
+        "label_ko": "심층신경망 기반 뇌 모델링",
+        "kw": ["convolutional neural network","CNN-as-model","deep network as brain model","AlexNet","ResNet","vision transformer as model","task-trained RNN","brain-score"],
+        "kw_ko": ["심층신경망 모델"]
+      },
+      "M-NPX": {
+        "label_en": "Large-scale electrophysiology",
+        "label_ko": "대규모 전기생리",
+        "kw": ["Neuropixels","high-density electrode array","multi-area recording","cellular resolution recording"],
+        "kw_ko": ["대규모 신경기록"]
+      },
+      "M-CAL": {
+        "label_en": "Calcium / optical imaging",
+        "label_ko": "칼슘 영상·광학영상",
+        "kw": ["calcium imaging","two-photon imaging","GCaMP","widefield imaging","voltage imaging"],
+        "kw_ko": ["칼슘영상","이광자영상"]
+      },
+      "M-VR": {
+        "label_en": "VR / immersive paradigm",
+        "label_ko": "VR·몰입 환경",
+        "kw": ["virtual reality","VR","head-mounted display","HMD","immersive","360-degree video"],
+        "kw_ko": ["가상현실"]
+      }
+    },
+    "stim": {
+      "S-ORI": {
+        "label_en": "Orientation",
+        "label_ko": "방위 (오리엔테이션)",
+        "kw": ["orientation discrimination","orientation perception","oriented grating","Gabor patch","oriented bar","tilt aftereffect","oblique effect","orientation tuning"],
+        "kw_ko": ["방위지각","방위변별"]
+      },
+      "S-MOT": {
+        "label_en": "Motion (direction/speed)",
+        "label_ko": "운동 (방향·속도)",
+        "kw": ["motion direction","motion discrimination","random-dot kinematogram","RDK","dot motion","coherence threshold","motion coherence","optic flow","speed discrimination"],
+        "kw_ko": ["운동방향","운동지각"]
+      },
+      "S-BIOM": {
+        "label_en": "Biological motion",
+        "label_ko": "생체운동",
+        "kw": ["biological motion","point-light walker","point-light display","action perception","walker perception"],
+        "kw_ko": ["생체운동"]
+      },
+      "S-CON": {
+        "label_en": "Contrast / luminance",
+        "label_ko": "대비·휘도",
+        "kw": ["contrast detection","contrast threshold","luminance","brightness perception","Michelson contrast"],
+        "kw_ko": ["대비","휘도지각"]
+      },
+      "S-SF": {
+        "label_en": "Spatial frequency / texture",
+        "label_ko": "공간주파수·텍스처",
+        "kw": ["spatial frequency","texture perception","natural texture statistics","1/f noise","naturalistic texture"],
+        "kw_ko": ["공간주파수","텍스처"]
+      },
+      "S-SIZE": {
+        "label_en": "Size / spatial extent",
+        "label_ko": "크기·공간크기",
+        "kw": ["size discrimination","size perception","length perception","area estimation"],
+        "kw_ko": ["크기지각"]
+      },
+      "S-NUM": {
+        "label_en": "Numerosity / magnitude",
+        "label_ko": "수량·크기추정",
+        "kw": ["numerosity","number sense","approximate number system","ANS","magnitude estimation"],
+        "kw_ko": ["수량지각","수감각","어림수체계"]
+      },
+      "S-DUR": {
+        "label_en": "Duration / interval timing",
+        "label_ko": "시간간격·지속시간",
+        "kw": ["duration estimation","interval timing","time perception","scalar variability","time2dist","time-to-distance"],
+        "kw_ko": ["시간추정","시간지각","간격타이밍"]
+      },
+      "S-DEP": {
+        "label_en": "Depth / 3D / disparity",
+        "label_ko": "깊이·양안시차",
+        "kw": ["binocular disparity","stereopsis","depth perception","3D perception","depth from motion"],
+        "kw_ko": ["깊이지각","양안시차"]
+      },
+      "S-COL": {
+        "label_en": "Color",
+        "label_ko": "색채",
+        "kw": ["color discrimination","color memory","color category","hue perception"],
+        "kw_ko": ["색채지각"]
+      },
+      "S-FAC": {
+        "label_en": "Face",
+        "label_ko": "얼굴",
+        "kw": ["face perception","face identity","face recognition","holistic face processing","FFA","fusiform face area","face-selective"],
+        "kw_ko": ["얼굴지각"]
+      },
+      "S-OBJ": {
+        "label_en": "Object / category",
+        "label_ko": "사물·범주",
+        "kw": ["object recognition","object category","category-selective","scene category","indoor/outdoor scene"],
+        "kw_ko": ["사물인식","범주지각"]
+      },
+      "S-NSCN": {
+        "label_en": "Natural scene",
+        "label_ko": "자연영상",
+        "kw": ["natural scene","natural image","scene statistics","naturalistic stimuli","NSD","Natural Scenes Dataset","BOLD5000"],
+        "kw_ko": ["자연영상","자연자극"]
+      },
+      "S-AUD": {
+        "label_en": "Pitch / sound",
+        "label_ko": "음고·청각자극",
+        "kw": ["pitch perception","frequency discrimination","auditory tone","tone discrimination","click train"],
+        "kw_ko": ["음고지각"]
+      },
+      "S-TAC": {
+        "label_en": "Tactile / vibrotactile",
+        "label_ko": "촉각·진동촉각",
+        "kw": ["tactile","vibrotactile","somatosensory","flutter discrimination","vibrotactile frequency"],
+        "kw_ko": ["촉각","체성감각"]
+      },
+      "S-VAL": {
+        "label_en": "Value / reward (non-perceptual)",
+        "label_ko": "가치·보상",
+        "kw": ["reward magnitude","value-based","lottery","gamble","monetary outcome","prospect"],
+        "kw_ko": ["가치","보상"]
+      },
+      "S-ABS": {
+        "label_en": "Abstract / cognitive (no perceptual feature)",
+        "label_ko": "추상·인지 자극",
+        "kw": ["concept","rule","symbolic","abstract category","mental rotation of abstract","decision rule"],
+        "kw_ko": ["추상자극","개념자극"]
+      },
+      "S-MULT": {
+        "label_en": "Multisensory / cross-modal",
+        "label_ko": "다감각·통합자극",
+        "kw": ["multisensory","cross-modal","audio-visual integration","visuotactile","McGurk"],
+        "kw_ko": ["다감각","다감각통합"]
+      }
+    },
+    "subj": {
+      "U-HUM": {
+        "label_en": "Healthy human",
+        "label_ko": "정상 인간 피험자",
+        "kw": ["human participant","healthy adult","undergraduate participant","university subject","human observer"],
+        "kw_ko": ["정상성인","인간피험자","대학생 피험자"]
+      },
+      "U-CLN": {
+        "label_en": "Clinical human",
+        "label_ko": "임상 인간 피험자",
+        "kw": ["patient","schizophrenia patient","depression patient","autism spectrum","ADHD group","neurological patient","lesion patient","stroke patient"],
+        "kw_ko": ["환자군","임상참여자"]
+      },
+      "U-NHP": {
+        "label_en": "Non-human primate",
+        "label_ko": "비인간 영장류",
+        "kw": ["macaque","rhesus monkey","marmoset","non-human primate","NHP"],
+        "kw_ko": ["원숭이","마카크"]
+      },
+      "U-ROD": {
+        "label_en": "Rodent",
+        "label_ko": "설치류",
+        "kw": ["mouse","mice","rat","rats","rodent","head-fixed mouse","freely moving mouse"],
+        "kw_ko": ["마우스","쥐","설치류"]
+      },
+      "U-DEV": {
+        "label_en": "Infant / child (developmental)",
+        "label_ko": "발달·영유아",
+        "kw": ["infant","neonate","child participant","toddler","school-age child","adolescent"],
+        "kw_ko": ["영유아","아동"]
+      },
+      "U-MOD": {
+        "label_en": "Model only (no biological subject)",
+        "label_ko": "모델만 (생물피험자 없음)",
+        "kw": ["simulated agent","artificial neural network only","in-silico","synthetic agent","model-only study"],
+        "kw_ko": ["시뮬레이션 only","모델기반 분석 only"]
+      },
+      "U-OTH": {
+        "label_en": "Other species",
+        "label_ko": "기타 종",
+        "kw": ["zebrafish","drosophila","c. elegans","octopus","cephalopod","songbird"],
+        "kw_ko": ["어류","초파리"]
+      }
+    }
+  },
+  "combos": [
+    {"id": "JOP_HOUSE",      "role": "relevance", "codes": ["SD","S-ORI","M-PSY"],            "label_ko": "방위 자극의 시계열 의존성 (행동)"},
+    {"id": "EFFICIENT_BAYES","role": "relevance", "codes": ["F-BAY","F-EFC","M-EFC"],         "label_ko": "효율부호화 기반 베이지안 관찰자"},
+    {"id": "NUM_PRF",        "role": "relevance", "codes": ["M-PRF","fVC","S-NUM"],           "label_ko": "수량 표상의 망막순응도"},
+    {"id": "FACE_RSA",       "role": "relevance", "codes": ["M-RSA","F-NIM","S-FAC"],         "label_ko": "얼굴 자극 표상유사도"},
+    {"id": "VWM_RR",         "role": "relevance", "codes": ["VWM","S-ORI","M-PSY","F-EFC"],   "label_ko": "자원합리적 시각작업기억"},
+    {"id": "NHP_POPDYN",     "role": "relevance", "codes": ["F-NMD","M-NPX","U-NHP"],         "label_ko": "영장류 집단동역학"},
+    {"id": "DOT_DDM",        "role": "relevance", "codes": ["M-DDM","BDM","S-MOT"],           "label_ko": "운동자극 확산모델"},
+    {"id": "CLN_GUARD",      "role": "guard",     "codes": ["F-CLN","U-CLN"],                 "label_ko": "임상 일관성"}
+  ]
+}

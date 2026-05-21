@@ -167,6 +167,56 @@ CREATE INDEX IF NOT EXISTS ix_archive_responses_session
 CREATE INDEX IF NOT EXISTS ix_archive_responses_choice
   ON __SCHEMA__.archive_responses(researcher_id, choice);
 
+-- =========================================================================
+-- P14 — dimension tagging + composite ranking
+-- (Additive; existing rows keep working. All migrations idempotent.)
+-- =========================================================================
+
+-- One row per (paper × dimension × category). Normalized for SQL-side
+-- queries like "papers matching method=RSA and stim=FACE". The denorm
+-- mirror lives on archive_filter_decisions.dim_tags JSONB (added below).
+CREATE TABLE IF NOT EXISTS __SCHEMA__.archive_paper_dim_tags(
+  canonical_id    TEXT NOT NULL,
+  dimension       TEXT NOT NULL CHECK (dimension IN ('focus','method','stim','subj')),
+  category_code   TEXT NOT NULL,             -- ≤ 6 chars; from taxonomy.json
+  strength        REAL NOT NULL DEFAULT 1.0, -- 0..1; sqrt-normalized hit count
+  match_evidence  JSONB,                     -- {"hits":[...], "src":"title|abstract|venue"}
+  tagged_at       TEXT NOT NULL,
+  tagger_version  TEXT NOT NULL,             -- e.g. "v1.2026-05-22"
+  PRIMARY KEY (canonical_id, dimension, category_code)
+);
+CREATE INDEX IF NOT EXISTS ix_archive_dim_tags_dim_cat
+  ON __SCHEMA__.archive_paper_dim_tags(dimension, category_code, strength DESC);
+CREATE INDEX IF NOT EXISTS ix_archive_dim_tags_cid
+  ON __SCHEMA__.archive_paper_dim_tags(canonical_id);
+
+-- Denormalized mirror on filter_decisions (plugin's hot-path table).
+ALTER TABLE __SCHEMA__.archive_filter_decisions
+  ADD COLUMN IF NOT EXISTS dim_tags JSONB;
+  -- Shape: {"focus":["F-BEH","F-BAY"],"method":["M-PSY"],"stim":["S-ORI"],"subj":["U-HUM"]}
+
+-- Per-researcher dim preferences + chunk mix (Stage-1 confirmed).
+ALTER TABLE __SCHEMA__.archive_profile_verifications
+  ADD COLUMN IF NOT EXISTS dim_preferences JSONB;
+  -- Shape: {"focus":{"F-BEH":0.8,"F-NIM":0.3},
+  --         "method":{"M-RSA":1.0}, "stim":{"S-FAC":0.7},
+  --         "subj":{"U-HUM":1.0}, "combo_bonus":[["M-RSA","S-FAC"]],
+  --         "source":"auto-then-confirmed","version":1}
+ALTER TABLE __SCHEMA__.archive_profile_verifications
+  ADD COLUMN IF NOT EXISTS chunk_mix JSONB;
+  -- Shape: {"recent":120,"mid":60,"classic":20}; null → default mix in builder.
+
+-- Queue rows carry the composite + tier + match record so pick_next.py
+-- needs no extra joins to colour the introduction Korean sentence.
+ALTER TABLE __SCHEMA__.archive_researcher_queues
+  ADD COLUMN IF NOT EXISTS tier      TEXT;     -- 'S' | 'A' | 'B' | 'C'
+ALTER TABLE __SCHEMA__.archive_researcher_queues
+  ADD COLUMN IF NOT EXISTS composite REAL;     -- final score
+ALTER TABLE __SCHEMA__.archive_researcher_queues
+  ADD COLUMN IF NOT EXISTS dim_match JSONB;    -- {"matched":{...},"combos":[...],"tier":"S"}
+CREATE INDEX IF NOT EXISTS ix_archive_queues_rid_tier
+  ON __SCHEMA__.archive_researcher_queues(researcher_id, tier, rank_in_chunk);
+
 -- ----------------------------------- meta_reviews (every 10 answers, stage 6)
 -- The (session_id, at_response_count) uniqueness is enforced by a UNIQUE
 -- INDEX added *outside* the CREATE TABLE so that re-applying schema_archive

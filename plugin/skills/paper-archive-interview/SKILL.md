@@ -42,8 +42,23 @@ description: >
 
 ## Tag rendering (English-internal → Korean researcher-facing)
 
-When you have `lab_scope_tags` like `["BDM","NN"]` from `pick_next.py`,
-render the keywords for the researcher in Korean. Pick 2–4 short phrases:
+The researcher sees Korean phrases only. Internal codes (`BDM`, `F-BAY`,
+`M-RSA`, `S-FAC`, `U-HUM`, `S/A/B/C`, `recent`/`mid`/`classic`) never
+appear in messages. Load the live rendering table from the operator's
+taxonomy file every time:
+
+```
+cat <plugin-root>/../state/archive/taxonomy.json | jq -r \
+  '.dimensions | to_entries[] | .key as $d | .value | to_entries[] | "\($d) \(.key) \(.value.label_ko)"'
+```
+
+(The path resolves to the parent harness repo when the plugin is
+installed in-tree. When installed standalone, read
+`$CSNL_PIPELINE_DIR/../state/archive/taxonomy.json` if `CSNL_PIPELINE_DIR`
+is set, otherwise fall back to the lab-bucket table below for the
+7-bucket top layer only.)
+
+**Top-layer lab buckets** (always available, no taxonomy needed):
 
 | Tag | Render as (Korean) |
 | --- | --- |
@@ -54,6 +69,28 @@ render the keywords for the researcher in Korean. Pick 2–4 short phrases:
 | SD   | 시계열 의존성(serial dependence) |
 | CG   | 범주학습 / 일반화 |
 | METH | 방법론 (모델 비교 등) |
+
+**52-cat sub-tags** (4 dimensions × focus/method/stim/subj) — for each
+code returned by `pick_next.py` in `dim_match.matched` or in `dim_tags`,
+read `taxonomy.json` and use the `label_ko` field as the Korean phrase.
+Examples (full table in taxonomy.json):
+
+| Code | label_ko | dim |
+| --- | --- | --- |
+| `F-EFC`  | 효율부호화·정보이론 | focus |
+| `F-BAY`  | 베이지안 관찰자 모델 | focus |
+| `M-RSA`  | 표상유사도 분석 | method |
+| `M-EFC`  | 효율부호화 분석 | method |
+| `S-ORI`  | 방위 (오리엔테이션) | stim |
+| `S-FAC`  | 얼굴 | stim |
+| `U-HUM`  | 정상 인간 피험자 | subject |
+| `U-NHP`  | 비인간 영장류 | subject |
+
+**Chunk codes** (`recent`/`mid`/`classic`) — never spoken as codes; use
+plain Korean date phrases:
+- `recent` → "최근 5년 (가장 최신)"
+- `mid`    → "5-10년 전"
+- `classic`→ "10년 이상 전 (고전·기초)"
 
 Beyond these, lift 1–2 concrete noun phrases directly from the paper's
 title (in Korean if the title is Korean, else in plain Korean translation).
@@ -93,7 +130,9 @@ plugin does not ship this directory).
 
 ## Stage 1 — profile verification (run once per session)
 
-1. Call `profile_show.py <init>`. Parse the JSON.
+1. Call `profile_show.py <init>`. Parse the JSON. The JSON may also carry
+   `dim_preferences` (auto-derived or previously confirmed) and `chunk_mix`
+   — surface those at step 4 (P14 dimension confirmation).
 2. If `error == "no_active_projects"`: tell the researcher in Korean
    that the lab DB has no active project rows above the confidence
    threshold, ask them to update their project metadata via the CSNL
@@ -110,10 +149,59 @@ plugin does not ship this directory).
    - If they say "맞아요" / "좋아요" / "정확해요" / etc. — `corrections = {}`.
    - If they correct something — store as
      `{topics_remove:[...], topics_add:[...], methods_remove:[...], ...}`.
-5. Call `profile_confirm.py --session <sid> --init <init>
-   --snapshot-json @snap.json --corrections-json @corr.json`. Use a temp
-   file under `<plugin-root>/state/_tmp/` (mkdir -p first) for the JSON
-   payloads to avoid quoting issues. Confirm the script printed `ok:true`.
+
+5. **(P14) Dimension preference confirmation.** Read `dim_preferences`
+   from the profile_show output. Two cases:
+
+   **5a. Empty / auto-derive yielded nothing** (`dim_preferences` is
+   null OR all 4 sub-dicts empty): say in Korean —
+   > "어떤 측면을 우선해 추천드릴지 알려주시면 정확도가 올라가요.
+   > 다음 4가지에서 관심 있는 항목을 골라주세요 (여러 개 가능, 없으면
+   > '없음'):
+   >   • 연구 초점: 행동 모델 / 인간 뇌영상 / 침습 전기생리 / 신경회로
+   >     모델링 / 베이지안 관찰자 / 효율부호화 / 시지각 / 기억 / 주의 /
+   >     학습 / 임상 / 발달 / 이론
+   >   • 방법론: 심리물리학 / 확산모델 / 베이지안 모델적합 / 효율부호화
+   >     분석 / fMRI 분석 / pRF·망막순응도 / 표상유사도 분석 / 인코딩
+   >     모델 / M/EEG / 동공측정 / 시선추적 / 뇌자극 / 심층신경망 모델
+   >     / 대규모 전기생리 / 칼슘영상 / VR
+   >   • 자극: 방위 / 운동 / 생체운동 / 대비·휘도 / 공간주파수 / 크기 /
+   >     수량 / 시간간격 / 깊이 / 색채 / 얼굴 / 사물·범주 / 자연영상 /
+   >     음고 / 촉각 / 가치·보상 / 추상자극 / 다감각
+   >   • 실험 대상: 정상 인간 / 임상 인간 / 비인간 영장류 / 설치류 /
+   >     발달·영유아 / 모델만 / 기타 종"
+   Researcher picks Korean phrases. Map each phrase back to the code via
+   `taxonomy.json` `label_ko` → `code`. Assign weight 1.0 to each picked
+   code in its dimension; 0.0 for the rest.
+
+   **5b. Auto-derived prefs exist** (at least one dim populated): render
+   them in Korean (use `label_ko` from taxonomy.json) and present a 3-option
+   chip set:
+   > "박사님 프로젝트를 보니 주로 [효율부호화·정보이론 + 베이지안 관찰자]
+   > 쪽으로 추천드리면 잘 맞을 것 같아요. 어떻게 할까요?
+   >   (a) 좋아요, 이대로 진행
+   >   (b) 거의 맞는데 한두 가지 빼고 / 더하고 싶어요
+   >   (c) 다시 정해주세요 — 전체 메뉴 보여드릴게요"
+   - `a` → use the auto-derived prefs as-is, `source = "auto-then-confirmed"`.
+   - `b` → ask in Korean what to remove/add; edit weights and set
+     `source = "auto-then-confirmed"`.
+   - `c` → fall through to 5a flow.
+
+   **(P14) Chunk mix.** Ask in plain Korean:
+   > "추천 묶음 비율을 정해주세요 (기본: 최근 5년 120편 / 5-10년 전 60편
+   > / 10년 이상 전 20편). 그대로 좋다면 '기본', 아니면 원하는 비율을
+   > 알려주세요 (예: '최신 위주 / 고전 위주 / 50:30:20')."
+   - "기본" → use `{"recent":120,"mid":60,"classic":20}`.
+   - "최신 위주" → `{"recent":160,"mid":30,"classic":10}`.
+   - "고전 위주" → `{"recent":40,"mid":60,"classic":120}`.
+   - Custom triple → parse into integers; ensure each ≥ 5.
+
+6. Call `profile_confirm.py --session <sid> --init <init>
+   --snapshot-json @snap.json --corrections-json @corr.json
+   --dim-preferences-json @dim.json --chunk-mix-json @mix.json`. Use temp
+   files under `<plugin-root>/state/_tmp/` (mkdir -p first). Confirm
+   `ok:true`. Tell the researcher (Korean): "확인됐어요. 추천 순서는 다음
+   사이클부터 반영돼요. 일단 지금 큐로 시작할게요."
 
 ## Stage 2 — queue walk (the main loop)
 
@@ -132,11 +220,20 @@ Loop until `pick_next.py` returns `done:true`:
    in order:
    - 저널 + 연도 (preprint이면 "프리프린트")
    - 1–3 명의 대표 저자 + 그 외 인원수 (`외 N인`)
-   - 키워드 2–4개 — render `lab_scope_tags` via the Tag rendering table
-     above (never use the raw codes `BDM`, `NN`, etc.) and add salient
-     nouns from the title.
-   - 한 문장으로 연관성 설명: 어느 프로젝트의 어떤 요소(가설/방법/변수)와
-     맞닿는지. 데이터 안에 명시된 부분만 인용 — 추측 금지.
+   - 키워드 2–4개 — render `lab_scope_tags` + `dim_tags` via the Tag
+     rendering table above (never use the raw codes `BDM`, `F-EFC`,
+     `M-RSA`, `S-FAC`, etc.). Pull the Korean labels from the taxonomy.
+   - 한 문장으로 연관성 설명. **Use the paper's `tier` field to colour
+     the sentence** (never mention "tier" or `S/A/B/C` aloud):
+     - `tier == "S"`: full match — "박사님의 [방법론 한글라벨] × [자극
+       한글라벨] 조합과 정확히 맞물려요" (use the matched Korean labels
+       from `dim_match.matched` via taxonomy.json).
+     - `tier == "A"`: strong partial — "박사님이 자주 다루시는
+       [matched-dim 한글라벨] 와 겹쳐요."
+     - `tier == "B"`: topical-only — describe the topical connection via
+       project hypothesis/variables, no specific dim claim.
+     - `tier == "C"`: humble framing — "주제는 인접하지만 방법론은 다른
+       결입니다. 한번 훑어보실 만한지 봐주세요."
    Then immediately present the MCQ block, verbatim:
 
    ```
@@ -209,6 +306,11 @@ interview thread stays small. When it returns:
      produced the most `not_relevant` papers.
    - else if `already_read >= 6 of last 10` → proposal_type =
      `advance_chunk` (move to the next age band earlier).
+   - **(P14) else if `dim_freq` shows ≥ 7 of last 10 in one focus value
+     while the researcher's confirmed `dim_preferences.focus` ranks a
+     different value highest** → proposal_type = `shift_focus`,
+     `target_dim_shift = {"focus":{"add":[underrepresented_code],
+     "downweight":[overrepresented_code]}}`.
    - else if `save_later + tell_me_more >= 7` → proposal_type = `keep`,
      `topn_delta` = +2.
    - else → proposal_type = `keep`, `topn_delta` = 0.
@@ -224,10 +326,24 @@ interview thread stays small. When it returns:
                   더 엄격하게 적용해도 될까요?"
    - advance:     "최근 본 논문 다수를 이미 읽으셨네요. 다음 시기로
                   바로 넘어갈까요?"
+   - **shift_focus** (P14): "최근 본 10편 중 [N편]이 [overrepresented
+                  한글라벨] 중심이었는데, 박사님 프로젝트를 보면
+                  [underrepresented 한글라벨] 비중도 큰 것 같아요. 다음
+                  묶음에선 [underrepresented 한글라벨] 쪽을 더 보여드릴
+                  까요?" (한글라벨 = taxonomy.json `label_ko`.)
 4. Wait for the researcher's confirmation.
    - "네/좋아요/그렇게 해주세요" → re-call `meta_review.py …
      --proposal-json @p.json --apply` with the proposal stamped; the
      script flips `applied=TRUE` on the same row.
+     **For `shift_focus`** (P14): additionally call `profile_confirm.py
+     --session <sid> --init <init> --snapshot-json @snap.json
+     --dim-preferences-json @updated.json` where `updated.json` is the
+     current dim_preferences with the proposal's `add` codes set to
+     weight 1.0 and the `downweight` codes set to 0.3 (not 0 — the
+     researcher may still want occasional ones). The queue rebuild
+     itself is operator-only — tell the researcher in Korean: "확인됐
+     어요. 다음 추천 사이클부터 반영돼요." (Do NOT claim the queue is
+     rebuilding now.)
    - "아니요/괜찮아요/그대로 두세요" → re-call `meta_review.py …
      --proposal-json '{"proposal_type":"keep","topn_delta":0}' --apply`.
 5. Continue the queue walk.

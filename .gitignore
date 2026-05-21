@@ -19,6 +19,9 @@ state/archive/*.json
 state/archive/_tmp/
 state/archive/queues/
 
+# P14 taxonomy IS source data — commit it (exception to the *.json line above).
+!state/archive/taxonomy.json
+
 # caches
 __pycache__/
 *.pyc

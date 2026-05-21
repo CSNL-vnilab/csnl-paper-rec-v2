@@ -61,13 +61,13 @@ def main() -> int:
     load_env()
     sch = schema()
 
-    # Window of latest responses + their queue chunk + lab_scope_tags.
+    # Window of latest responses + their queue chunk + lab/dim tags + tier.
     rows = query(
         f"""
         SELECT r.canonical_id, r.choice, r.responded_at,
-               q.chunk, q.rank_in_chunk,
+               q.chunk, q.rank_in_chunk, q.tier,
                p.title, p.year,
-               f.lab_scope_tags
+               f.lab_scope_tags, f.dim_tags
           FROM {sch}.archive_responses r
           LEFT JOIN {sch}.archive_researcher_queues q
             ON q.researcher_id = r.researcher_id AND q.canonical_id = r.canonical_id
@@ -84,7 +84,9 @@ def main() -> int:
 
     breakdown: dict[str, int] = {}
     chunk_breakdown: dict[str, dict[str, int]] = {}
+    tier_breakdown: dict[str, dict[str, int]] = {}
     topic_freq: dict[str, int] = {}
+    dim_freq: dict[str, dict[str, int]] = {"focus": {}, "method": {}, "stim": {}, "subj": {}}
     recent = []
     for r in rows:
         c = r["choice"]
@@ -92,18 +94,29 @@ def main() -> int:
         ch = r.get("chunk") or "unknown"
         chunk_breakdown.setdefault(ch, {})
         chunk_breakdown[ch][c] = chunk_breakdown[ch].get(c, 0) + 1
+        tier = r.get("tier") or "unknown"
+        tier_breakdown.setdefault(tier, {})
+        tier_breakdown[tier][c] = tier_breakdown[tier].get(c, 0) + 1
         tags = r.get("lab_scope_tags")
         if isinstance(tags, str):
-            try:
-                tags = json.loads(tags)
-            except Exception:
-                tags = []
+            try: tags = json.loads(tags)
+            except Exception: tags = []
         for t in (tags or []):
             topic_freq[t] = topic_freq.get(t, 0) + 1
+        dtags = r.get("dim_tags")
+        if isinstance(dtags, str):
+            try: dtags = json.loads(dtags)
+            except Exception: dtags = {}
+        if isinstance(dtags, dict):
+            for dim, cats in dtags.items():
+                if dim in dim_freq:
+                    for cat in (cats or []):
+                        dim_freq[dim][cat] = dim_freq[dim].get(cat, 0) + 1
         recent.append({
             "canonical_id": r["canonical_id"],
             "choice":       c,
             "chunk":        ch,
+            "tier":         tier,
             "title":        r.get("title"),
             "year":         r.get("year"),
         })
@@ -136,7 +149,9 @@ def main() -> int:
         (mid, args.session, args.init, at_n,
          json.dumps({"breakdown": breakdown,
                      "chunk_breakdown": chunk_breakdown,
+                     "tier_breakdown": tier_breakdown,
                      "topic_freq": topic_freq,
+                     "dim_freq": dim_freq,
                      "note": args.note},
                     ensure_ascii=False),
          json.dumps(proposal, ensure_ascii=False),
@@ -148,7 +163,9 @@ def main() -> int:
         "window":           args.window,
         "breakdown":        breakdown,
         "chunk_breakdown":  chunk_breakdown,
+        "tier_breakdown":   tier_breakdown,
         "topic_freq":       topic_freq,
+        "dim_freq":         dim_freq,
         "recent":           recent,
         "proposal":         proposal,
         "applied":          bool(args.apply),

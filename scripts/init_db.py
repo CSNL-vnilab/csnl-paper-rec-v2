@@ -42,6 +42,8 @@ _TABLES = (
     "archive_profile_verifications",
     "archive_responses",
     "archive_meta_reviews",
+    # P14 dimension tagging (composite ranking + chunk mix)
+    "archive_paper_dim_tags",
 )
 
 

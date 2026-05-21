@@ -47,9 +47,10 @@ def main() -> int:
     for ch in chunks:
         sql = f"""
             SELECT q.canonical_id, q.chunk, q.rank_in_chunk, q.similarity,
+                   q.tier, q.composite, q.dim_match,
                    p.doi, p.title, p.authors_json, p.venue, p.year,
                    p.pub_date, p.is_preprint, p.abstract,
-                   f.lab_scope_tags
+                   f.lab_scope_tags, f.dim_tags
               FROM {sch}.archive_researcher_queues q
               JOIN {sch}.archive_papers p
                 ON p.canonical_id = q.canonical_id
@@ -76,8 +77,10 @@ def main() -> int:
                     except Exception:
                         return v
                 return v
-            r["authors_json"]  = _j(r.get("authors_json"))
+            r["authors_json"]   = _j(r.get("authors_json"))
             r["lab_scope_tags"] = _j(r.get("lab_scope_tags"))
+            r["dim_tags"]       = _j(r.get("dim_tags"))
+            r["dim_match"]      = _j(r.get("dim_match"))
 
             # Stage this canonical_id on the session so record_choice.py can
             # verify the choice came from a recent pick_next call. If

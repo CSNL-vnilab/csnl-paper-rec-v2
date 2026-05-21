@@ -144,6 +144,26 @@ def main() -> int:
             for r in rows
         ],
     }
+
+    # P14: also return the most-recent verified dim_preferences/chunk_mix
+    # if any; the skill's Stage-1 confirmation can present them as the
+    # draft the researcher tweaks.
+    verified = query(
+        f"SELECT dim_preferences, chunk_mix "
+        f"FROM {sch}.archive_profile_verifications "
+        f"WHERE researcher_id = %s AND dim_preferences IS NOT NULL "
+        f"ORDER BY confirmed_at DESC LIMIT 1",
+        (init,),
+    )
+    if verified:
+        v = verified[0]
+        def _j(x):
+            if isinstance(x, str):
+                try: return json.loads(x)
+                except Exception: return None
+            return x
+        profile["dim_preferences"] = _j(v.get("dim_preferences"))
+        profile["chunk_mix"]       = _j(v.get("chunk_mix"))
     # Reuse the most recent open session for this researcher if there is one;
     # otherwise open a new one.
     open_rows = query(
