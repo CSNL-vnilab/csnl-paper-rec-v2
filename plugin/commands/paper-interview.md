@@ -6,9 +6,9 @@ description: >
   pre-computed top-N queue in three age chunks (recent ≤5y → mid 5–10y
   → classic >10y), records one MCQ choice per paper, and runs a
   meta-review every 10 answers. Stores everything in
-  csnl_paper_rec.archive_*. Usage: `/paper-interview <init>` (e.g.
-  `/paper-interview BHL`). Idempotent — re-running resumes the open
-  session.
+  csnl_paper_rec.archive_*. Usage: `/csnl-paper-archive-interview:paper-interview
+  <init>` (e.g. `/csnl-paper-archive-interview:paper-interview BHL`).
+  Idempotent — re-running resumes the open session.
 argument-hint: <researcher-init>
 ---
 

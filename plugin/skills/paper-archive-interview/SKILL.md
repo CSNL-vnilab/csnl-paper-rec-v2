@@ -6,7 +6,8 @@ description: >
   (recent ≤5y / mid 5–10y / classic >10y), with a profile verification
   stage at the start, a deterministic 4-option MCQ per paper, an isolated
   explainer sub-agent for option (4), and a deterministic meta-review every
-  10 answers. Use whenever `/paper-interview <init>` is invoked, or the
+  10 answers. Use whenever `/csnl-paper-archive-interview:paper-interview
+  <init>` is invoked, or the
   researcher asks to "resume the paper interview", "더 보여줘", "이어서
   진행해줘".
 ---
@@ -362,7 +363,8 @@ When `pick_next.py` reports `done:true`:
 
 ## Resume semantics
 
-If the researcher comes back later and runs `/paper-interview <init>`
+If the researcher comes back later and runs
+`/csnl-paper-archive-interview:paper-interview <init>`
 again:
 - `profile_show.py` reuses the most recent open session (no second row).
 - `pick_next.py` automatically skips canonical_ids that already have a

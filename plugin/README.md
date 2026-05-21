@@ -7,7 +7,7 @@ Code; everything is local except the DB calls back to the lab's Supabase
 
 ## What it does
 
-When you run `/paper-interview <YOUR_INIT>`:
+When you run `/csnl-paper-archive-interview:paper-interview <YOUR_INIT>`:
 
 1. **Profile check.** Shows the current topics, methods, and authors the
    lab DB thinks you focus on. You confirm or correct.
@@ -76,10 +76,12 @@ modified.
 ## Run
 
 ```
-/paper-interview BHL
+/csnl-paper-archive-interview:paper-interview BHL
 ```
 
-(Replace `BHL` with your two- or three-letter init.)
+(Replace `BHL` with your two- or three-letter init. The slash command is
+namespaced under the plugin name — Claude Code does this automatically
+for installed plugins. `/plugin list` shows what's available.)
 
 You can stop at any time by typing `/exit` or just leaving the conversation.
 The next session resumes from where you left off.
