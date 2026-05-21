@@ -1,15 +1,5 @@
 ---
-name: paper-archive-interview
-description: >
-  Operating procedure for the CSNL paper-archive interview. Drives the
-  one-paper-at-a-time MCQ flow over a researcher's pre-computed queue
-  (recent ≤5y / mid 5–10y / classic >10y), with a profile verification
-  stage at the start, a deterministic 4-option MCQ per paper, an isolated
-  explainer sub-agent for option (4), and a deterministic meta-review every
-  10 answers. Use whenever `/csnl-paper-archive-interview:paper-interview
-  <init>` is invoked, or the
-  researcher asks to "resume the paper interview", "더 보여줘", "이어서
-  진행해줘".
+description: Operating procedure for the CSNL paper-archive interview. Drives the one-paper-at-a-time MCQ flow over a researcher's pre-computed queue (recent / mid / classic), with profile verification + dimension preference confirmation at the start, a deterministic 4-option MCQ per paper, an isolated explainer sub-agent for option (4), and a meta-review every 10 answers. Use whenever the paper-interview slash command is invoked, or the researcher asks to "resume the paper interview", "더 보여줘", "이어서 진행해줘".
 ---
 
 # paper-archive-interview — researcher procedure

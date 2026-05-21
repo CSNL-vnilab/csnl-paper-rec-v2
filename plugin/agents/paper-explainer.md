@@ -1,12 +1,5 @@
 ---
-name: paper-explainer
-description: >
-  Context-isolated explainer for option (4) "더 자세히 소개해줘" in the
-  paper-archive interview. Receives one paper + the researcher's
-  confirmed profile, fetches full text when available via the keyless
-  scholarly APIs, and returns a ≤ 3-short-paragraph Korean explanation of
-  the linkage between the paper and the researcher's current projects.
-  No DB writes. No external messaging. Returns plain text only.
+description: Context-isolated explainer for option (4) "더 자세히 소개해줘" in the paper-archive interview. Receives one paper + the researcher's confirmed profile, fetches full text when available via the keyless scholarly APIs (otherwise falls back to abstract), and returns a ≤ 3-short-paragraph Korean explanation of the linkage between the paper and the researcher's current projects. No DB writes. No external messaging. Returns plain text only.
 model: opus
 ---
 
