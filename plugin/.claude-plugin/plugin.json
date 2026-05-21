@@ -1,0 +1,24 @@
+{
+  "name": "csnl-paper-archive-interview",
+  "version": "0.1.0",
+  "description": "Per-researcher interactive interview over the CSNL paper archive. Verifies the researcher's profile, walks a pre-computed top-N queue (recent / mid / classic age chunks), records save-for-later / not-relevant / already-read / explain-more choices, runs a meta-review every 10 answers, and pushes everything to Postgres (csnl_paper_rec.archive_*).",
+  "author": "CSNL (Center for Computational Social Neuroscience, Korea University)",
+  "license": "ISC",
+  "homepage": "https://github.com/CSNL-vnilab/csnl-paper-rec-v2",
+  "keywords": [
+    "neuroscience", "csnl", "literature-review", "paper-recommendation",
+    "research-onboarding", "korean-academia"
+  ],
+  "commands": [
+    "commands/paper-interview.md"
+  ],
+  "skills": [
+    "skills/paper-archive-interview"
+  ],
+  "agents": [
+    "agents/paper-explainer.md"
+  ],
+  "engines": {
+    "claude-code": ">=2.0"
+  }
+}

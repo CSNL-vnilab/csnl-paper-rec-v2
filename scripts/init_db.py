@@ -19,8 +19,9 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "pipeline"))
 from _db import load_env, exec_sql, query_json, ledger_schema  # noqa: E402
 
 _REPO_ROOT = Path(__file__).resolve().parent.parent
-_SCHEMA_SQL    = _REPO_ROOT / "state" / "schema.sql"
-_SCHEMA_V3_SQL = _REPO_ROOT / "state" / "schema_v3.sql"   # cron/state machine
+_SCHEMA_SQL         = _REPO_ROOT / "state" / "schema.sql"
+_SCHEMA_V3_SQL      = _REPO_ROOT / "state" / "schema_v3.sql"        # cron/state machine
+_SCHEMA_ARCHIVE_SQL = _REPO_ROOT / "state" / "schema_archive.sql"  # P13 archive layer
 
 _TABLES = (
     "paper_recommendations",
@@ -31,6 +32,16 @@ _TABLES = (
     # v3 additions (cron state machine + evolution audit)
     "cycle_state",
     "evolution_log",
+    # P13 archive layer (interview/marketplace plugin reference data)
+    "archive_papers",
+    "archive_paper_sources",
+    "archive_filter_decisions",
+    "archive_paper_embeddings",
+    "archive_researcher_queues",
+    "archive_interview_sessions",
+    "archive_profile_verifications",
+    "archive_responses",
+    "archive_meta_reviews",
 )
 
 
@@ -48,6 +59,10 @@ def main() -> int:
         ddl_v3 = _SCHEMA_V3_SQL.read_text(encoding="utf-8").replace("__SCHEMA__", schema)
         print(f"[init_db] applying v3 cron schema extensions…")
         exec_sql(ddl_v3)
+    if _SCHEMA_ARCHIVE_SQL.exists():
+        ddl_arc = _SCHEMA_ARCHIVE_SQL.read_text(encoding="utf-8").replace("__SCHEMA__", schema)
+        print(f"[init_db] applying P13 archive schema (papers + queues + responses)…")
+        exec_sql(ddl_arc)
 
     present = query_json(
         "SELECT table_name FROM information_schema.tables "

@@ -11,4 +11,12 @@ pyyaml>=6.0
 requests>=2.31
 # psycopg2-binary>=2.9   # optional; uncomment to use the psycopg2 fast path
 
+# P13 archive ingest. pypdf is OPTIONAL — ingest_classics.py skips PDF probes
+# (page_count, DOI extract) when absent. rapidfuzz is OPTIONAL — merge uses
+# difflib fallback. sentence-transformers (huggingface) is needed only for
+# compute_embeddings.py; install in a venv if your system Python is too new.
+pypdf>=4.0
+rapidfuzz>=3.5
+# sentence-transformers>=3.0   # only on the operator workstation that runs embeddings
+
 # Node deps (full-text crawler) are in package.json: playwright + pdfjs-dist.

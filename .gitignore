@@ -10,7 +10,14 @@ credentials.json
 # state / runtime (ledger is in Postgres now; runs are local artifacts)
 state/runs/
 state/.APPROVED_*
+state/.ARCHIVE_EMBED_APPROVED
 *.log
+
+# P13 archive dry-run artifacts (regenerable from --apply pipeline)
+state/archive/*.jsonl
+state/archive/*.json
+state/archive/_tmp/
+state/archive/queues/
 
 # caches
 __pycache__/
