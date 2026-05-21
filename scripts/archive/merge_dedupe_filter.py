@@ -191,9 +191,23 @@ def _fuzz_ratio(a: str, b: str) -> float:
 # ---------------------------------------------------------- merge logic
 
 def _read_jsonl(path: Path) -> list[dict]:
+    """Iterate by file lines (splits on \\n/\\r\\n only).
+
+    NOT str.splitlines() — Python's splitlines() ALSO breaks on U+2028
+    (LINE SEPARATOR) and U+2029 (PARAGRAPH SEPARATOR), which OpenAlex
+    abstracts occasionally embed. With ensure_ascii=False those code
+    points are written raw and would mid-line-split the JSONL otherwise.
+    """
     if not path.exists():
         return []
-    return [json.loads(line) for line in path.read_text("utf-8").splitlines() if line.strip()]
+    out: list[dict] = []
+    with path.open("r", encoding="utf-8", newline="") as f:
+        for raw in f:
+            line = raw.rstrip("\r\n")
+            if not line.strip():
+                continue
+            out.append(json.loads(line))
+    return out
 
 
 def _merge_one(into: dict, new: dict) -> dict:

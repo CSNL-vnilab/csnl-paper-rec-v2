@@ -43,7 +43,12 @@ CREATE TABLE IF NOT EXISTS __SCHEMA__.archive_papers(
 );
 CREATE INDEX IF NOT EXISTS ix_archive_papers_doi   ON __SCHEMA__.archive_papers(doi);
 CREATE INDEX IF NOT EXISTS ix_archive_papers_year  ON __SCHEMA__.archive_papers(year);
-CREATE INDEX IF NOT EXISTS ix_archive_papers_titln ON __SCHEMA__.archive_papers(title_norm);
+-- Note: title_norm has no direct btree index. The norm preserves Hangul/Han
+-- characters which are 3 bytes/UTF-8; a multilingual title easily exceeds
+-- the Postgres btree v4 limit of 2704 bytes per index row. The merge step
+-- does its fuzz-match in Python after loading JSONL, so no SQL-side index
+-- is needed. If lookups by exact title_norm become hot later, use an
+-- expression index like md5(title_norm) or a partial substring index.
 
 -- ----------------------------------------------------------- paper_sources
 -- Provenance — which source contributed each paper, with raw payload.

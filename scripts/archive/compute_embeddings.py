@@ -49,22 +49,44 @@ DEFAULT_MODEL_LOCAL = os.environ.get("CSNL_EMBED_MODEL", "BAAI/bge-m3")
 
 
 # -------------------------------------------------------------- compose text
+# Cap input characters per paper. bge-m3 supports 8192 tokens but the
+# attention buffer is O(N²) per layer and MPS will OOM on a single
+# 8K-token paper in a batch alongside short ones. Capping at ~1500 chars
+# (~ 380 tokens for English, ~750 for Korean/CJK) keeps batch padding sane.
+_MAX_CHARS = 1500
+
 
 def compose_text(p: dict) -> str:
     parts = [p.get("title") or "", p.get("abstract") or "", p.get("venue") or ""]
     if p.get("authors_json"):
         parts.append("; ".join(p["authors_json"][:6]))
-    return "\n".join(s for s in parts if s).strip()
+    s = "\n".join(s for s in parts if s).strip()
+    if len(s) > _MAX_CHARS:
+        s = s[:_MAX_CHARS]
+    return s
 
 
 # ------------------------------------------------------------- backends
 
 class _LocalBackend:
-    """sentence-transformers BAAI/bge-m3 (1024-dim, multilingual)."""
+    """sentence-transformers BAAI/bge-m3 (1024-dim, multilingual).
+
+    Pinned to CPU device + tokenizer max_length=512 so MPS/CUDA do not
+    OOM on a long-text outlier in the batch (attention is O(N²)).
+    """
     def __init__(self, model_name: str):
         from sentence_transformers import SentenceTransformer  # lazy import
         self.model_name = model_name
-        self.model = SentenceTransformer(model_name)
+        # Force CPU — MPS attention on Apple Silicon allocates a 40+ GiB
+        # buffer when a batch has a single long-text outlier. CPU is the
+        # safe default and is fast enough (~50 papers/sec on M-series).
+        self.model = SentenceTransformer(model_name, device="cpu")
+        try:
+            # Hard cap input tokens so a single long paper can't blow up
+            # the whole batch's padding.
+            self.model.max_seq_length = 512
+        except Exception:
+            pass
 
     def encode(self, texts: list[str]) -> list[list[float]]:
         import numpy as np
@@ -202,23 +224,27 @@ def _make_backend(name: str):
 
 # ----------------------------------------------------------------- IO
 
+def _iter_jsonl(path: Path):
+    """Line-iterator that splits on \\n only — does NOT use str.splitlines()
+    because OpenAlex abstracts occasionally embed U+2028/U+2029 which
+    splitlines() treats as newlines and which would mid-line-split a JSON
+    record (ensure_ascii=False writes those code points raw).
+    """
+    if not path.exists():
+        return
+    with path.open("r", encoding="utf-8", newline="") as f:
+        for raw in f:
+            line = raw.rstrip("\r\n")
+            if line.strip():
+                yield json.loads(line)
+
+
 def _read_papers() -> list[dict]:
-    rows = []
-    for line in _IN_PAPERS.read_text("utf-8").splitlines():
-        if line.strip():
-            rows.append(json.loads(line))
-    return rows
+    return list(_iter_jsonl(_IN_PAPERS))
 
 
 def _read_filters() -> dict:
-    out = {}
-    if not _IN_FILTERS.exists():
-        return out
-    for line in _IN_FILTERS.read_text("utf-8").splitlines():
-        if line.strip():
-            f = json.loads(line)
-            out[f["canonical_id"]] = f
-    return out
+    return {f["canonical_id"]: f for f in _iter_jsonl(_IN_FILTERS)}
 
 
 def _existing_cids_in_db(schema: str, model_name: str) -> set[str]:
@@ -325,8 +351,14 @@ def main() -> int:
     print(f"[embed] wrote {_OUT.relative_to(_REPO_ROOT)}  rows={len(out_rows)}")
 
     if args.apply:
+        # Chunked UPSERT in its own short transactions so we never hold a
+        # giant 165 MB write open across the Supabase pooler — the lab
+        # has seen idle-tx terminations on big payloads. Each chunk of N
+        # rows commits, lets pick_next.py see partial progress, and
+        # recovers cleanly from a Ctrl-C.
         sys.path.insert(0, str(_REPO_ROOT / "pipeline"))
-        from _db import load_env, ledger_schema, exec_many  # noqa: E402
+        from _db import load_env, ledger_schema, _conn  # noqa: E402
+        import psycopg2.extras
         load_env()
         sch = ledger_schema()
         sql = f"""
@@ -338,12 +370,31 @@ def main() -> int:
               embedding_json = EXCLUDED.embedding_json,
               generated_at   = EXCLUDED.generated_at;
         """
-        n = exec_many(sql, [
-            (r["canonical_id"], r["model_name"], r["dim"],
-             json.dumps(r["embedding_json"]), r["generated_at"])
-            for r in out_rows
-        ])
-        print(f"[embed] DB UPSERTed: {n}")
+        CHUNK = 100      # ~2.2 MB per chunk × short tx
+        total = len(out_rows)
+        n_done = 0
+        t1 = time.time()
+        for i in range(0, total, CHUNK):
+            batch = out_rows[i : i + CHUNK]
+            params = [(r["canonical_id"], r["model_name"], r["dim"],
+                       json.dumps(r["embedding_json"]),
+                       r["generated_at"]) for r in batch]
+            conn = _conn()
+            try:
+                conn.autocommit = False
+                with conn.cursor() as cur:
+                    psycopg2.extras.execute_batch(cur, sql, params, page_size=50)
+                conn.commit()
+            except Exception:
+                conn.rollback()
+                raise
+            finally:
+                conn.close()
+            n_done += len(batch)
+            if (i // CHUNK) % 5 == 0:
+                rate = n_done / max(time.time() - t1, 0.01)
+                print(f"[embed:apply] {n_done}/{total}  rate={rate:.1f}/s")
+        print(f"[embed] DB UPSERTed: {n_done}")
     else:
         print("[embed] dry-run only. Re-run with --apply to UPSERT.")
     return 0

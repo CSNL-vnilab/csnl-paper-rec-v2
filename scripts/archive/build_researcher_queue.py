@@ -140,16 +140,26 @@ def _list_researchers() -> list[str]:
 
 # --------------------------------------------------------- embeddings
 
+def _iter_jsonl(path: Path):
+    """Line-iterator that splits on \\n only — see merge_dedupe_filter for
+    the same defensive read pattern (U+2028 in OpenAlex abstracts breaks
+    str.splitlines)."""
+    if not path.exists():
+        return
+    with path.open("r", encoding="utf-8", newline="") as f:
+        for raw in f:
+            line = raw.rstrip("\r\n")
+            if line.strip():
+                yield json.loads(line)
+
+
 def _load_archive_embeddings(model_name: str) -> dict[str, list[float]]:
     """Load embeddings for is_lab_relevant=true papers from JSONL (preferred
     for portability) or from DB if JSONL is missing."""
     jl = _REPO_ROOT / "state" / "archive" / "embeddings.jsonl"
     out: dict[str, list[float]] = {}
     if jl.exists():
-        for line in jl.read_text("utf-8").splitlines():
-            if not line.strip():
-                continue
-            r = json.loads(line)
+        for r in _iter_jsonl(jl):
             if r.get("model_name") != model_name:
                 continue
             out[r["canonical_id"]] = r["embedding_json"]
@@ -169,18 +179,12 @@ def _load_archive_embeddings(model_name: str) -> dict[str, list[float]]:
 
 def _load_filter_decisions() -> dict[str, dict]:
     jl = _REPO_ROOT / "state" / "archive" / "filter_decisions.jsonl"
-    if not jl.exists():
-        return {}
-    return {(d := json.loads(line))["canonical_id"]: d
-            for line in jl.read_text("utf-8").splitlines() if line.strip()}
+    return {d["canonical_id"]: d for d in _iter_jsonl(jl)}
 
 
 def _load_papers() -> dict[str, dict]:
     jl = _REPO_ROOT / "state" / "archive" / "merged_papers.jsonl"
-    if not jl.exists():
-        return {}
-    return {(p := json.loads(line))["canonical_id"]: p
-            for line in jl.read_text("utf-8").splitlines() if line.strip()}
+    return {p["canonical_id"]: p for p in _iter_jsonl(jl)}
 
 
 def _cosine(a: list[float], b: list[float]) -> float:

@@ -179,10 +179,15 @@ def _row_from_work(w: dict, pi_id: str) -> ArchivePaperRow:
         (a.get("author") or {}).get("display_name") or ""
         for a in (w.get("authorships") or [])
     ]
-    # find PI's position among authors
+    # find PI's position among authors.
+    # OpenAlex sometimes returns {"author": {"id": null, ...}} for ghost
+    # authors; guard against that with `or ""` (the bare default in .get()
+    # only triggers on missing keys, not on null values).
+    def _author_id(a: dict) -> str:
+        return ((a.get("author") or {}).get("id") or "")
     pi_pos = None
     for i, a in enumerate(w.get("authorships") or []):
-        if (a.get("author") or {}).get("id", "").endswith(pi_id):
+        if _author_id(a).endswith(pi_id):
             pi_pos = i + 1
             break
     cid = canonical_id(doi, title, year)
@@ -206,8 +211,7 @@ def _row_from_work(w: dict, pi_id: str) -> ArchivePaperRow:
             "type":          w.get("type"),
             "pi_position":   pi_pos,
             "is_corresp":    any(
-                ((a.get("author") or {}).get("id", "")).endswith(pi_id)
-                and a.get("is_corresponding")
+                _author_id(a).endswith(pi_id) and a.get("is_corresponding")
                 for a in (w.get("authorships") or [])
             ),
         },

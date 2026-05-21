@@ -64,9 +64,10 @@ title (in Korean if the title is Korean, else in plain Korean translation).
   + trim whitespace before passing to any script** (csnl_research keys
   are uppercase).
 - Plugin scripts (call via Bash from the plugin's `scripts/` directory):
+  - `preflight.py <init>`            → env + DB + queue readiness (Stage 0)
   - `profile_show.py <init>`         → snapshot + session_id
   - `profile_confirm.py …`           → record verification
-  - `pick_next.py --init … [--chunk]` → next paper or `{done:true}`
+  - `pick_next.py --init … --session … [--chunk]` → next paper or `{done:true}`
   - `record_choice.py …`             → save MCQ answer
   - `meta_review.py …`               → emit + persist meta-review
   - `session_close.py --session …`   → mark session complete
@@ -79,6 +80,16 @@ from this SKILL.md.
 **Tempfile dir.** When the skill needs to pass JSON via `@file`, write
 the temp file under `<plugin-root>/state/_tmp/` (mkdir -p first; the
 plugin does not ship this directory).
+
+## Stage 0 — preflight (run first; fail fast)
+
+1. Call `preflight.py <init>`. Parse the JSON.
+2. If `ok: false`: print the script's `message_ko` to the researcher
+   verbatim (no extra prose, no signature), then stop. Do not call any
+   other script.
+3. If `ok: true`: show a one-line Korean greeting (no signature)
+   mentioning the queue size — e.g. "안녕하세요. 추천 큐 N편 준비됐어요.
+   인터뷰를 시작할게요." — then proceed to Stage 1.
 
 ## Stage 1 — profile verification (run once per session)
 
