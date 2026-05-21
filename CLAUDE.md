@@ -30,3 +30,4 @@
 | 2026-05-19 | DM 모드 추가 | scripts/deliver.py(--mode dm), scripts/build_dm_drafts.py | 운영자 override: 전체 추천+후보 목록+선택 질의를 개별 연구자 DM 로 전달 (run 20260519-1539) |
 | 2026-05-19 | DM 일괄 발송 | csnl_paper_rec ledger | 7/7 발송 완료; JOP 시점 변경(time2dist 집중, 직전 추천 read 표시, 후보 #4 교체); SYJ/BHL 개별 추천 |
 | 2026-05-20 | Phase 7 진화 하네스 | agents/feedback-analyst, skills/paper-rec-evolve, scripts/{fetch_replies,classify_feedback,propose_followups,apply_feedback}.py | 응답 캐치 → 분류 → 중립 follow-up(NO PB) → 게이트된 적용 + 키워드 진화 diff 제안 (manual-only 유지) |
+| 2026-05-21 | v3: 주간 cron + 다중턴 대화 | scripts/{cron_tick,apply_evolution}.py + scripts/run_*_cron.sh + cron/*.plist + state/schema_v3.sql + docs/DECISIONS-v3.md | DECISIONS #4(manual-only) override; 매주 금 14:00 KST 자동 사이클 + 4h tick state machine (awaiting_initial_reply → reminded → awaiting_decision → decided/passed/timeout) + 목 23:00 rule-based evolution. NO LLM in unattended path; Opus drafts off-ramp(operator pre-run). PB 영역 불가침. |

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.csnl.paper-rec.tick</string>
+
+  <!-- Every 4 h (00/04/08/12/16/20 KST). State-machine tick. Idempotent. -->
+  <key>StartCalendarInterval</key>
+  <array>
+    <dict><key>Hour</key><integer>0</integer><key>Minute</key><integer>5</integer></dict>
+    <dict><key>Hour</key><integer>4</integer><key>Minute</key><integer>5</integer></dict>
+    <dict><key>Hour</key><integer>8</integer><key>Minute</key><integer>5</integer></dict>
+    <dict><key>Hour</key><integer>12</integer><key>Minute</key><integer>5</integer></dict>
+    <dict><key>Hour</key><integer>16</integer><key>Minute</key><integer>5</integer></dict>
+    <dict><key>Hour</key><integer>20</integer><key>Minute</key><integer>5</integer></dict>
+  </array>
+
+  <key>WorkingDirectory</key>
+  <string>/Users/csnl/Documents/claude/csnl-paper-rec</string>
+
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/bash</string>
+    <string>/Users/csnl/Documents/claude/csnl-paper-rec/scripts/run_tick_cron.sh</string>
+  </array>
+
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>TZ</key>
+    <string>Asia/Seoul</string>
+    <key>PATH</key>
+    <string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin</string>
+  </dict>
+
+  <key>StandardOutPath</key>
+  <string>/Users/csnl/Documents/claude/csnl-paper-rec/state/cron.log</string>
+  <key>StandardErrorPath</key>
+  <string>/Users/csnl/Documents/claude/csnl-paper-rec/state/cron.log</string>
+
+  <key>RunAtLoad</key>
+  <false/>
+</dict>
+</plist>

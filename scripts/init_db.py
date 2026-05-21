@@ -19,7 +19,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "pipeline"))
 from _db import load_env, exec_sql, query_json, ledger_schema  # noqa: E402
 
 _REPO_ROOT = Path(__file__).resolve().parent.parent
-_SCHEMA_SQL = _REPO_ROOT / "state" / "schema.sql"
+_SCHEMA_SQL    = _REPO_ROOT / "state" / "schema.sql"
+_SCHEMA_V3_SQL = _REPO_ROOT / "state" / "schema_v3.sql"   # cron/state machine
 
 _TABLES = (
     "paper_recommendations",
@@ -27,6 +28,9 @@ _TABLES = (
     "paper_recommendations_read",
     "feedback_events",
     "exclusion_rules",
+    # v3 additions (cron state machine + evolution audit)
+    "cycle_state",
+    "evolution_log",
 )
 
 
@@ -40,6 +44,10 @@ def main() -> int:
     ddl = _SCHEMA_SQL.read_text(encoding="utf-8").replace("__SCHEMA__", schema)
     print(f"[init_db] applying ledger schema '{schema}' (idempotent)…")
     exec_sql(ddl)
+    if _SCHEMA_V3_SQL.exists():
+        ddl_v3 = _SCHEMA_V3_SQL.read_text(encoding="utf-8").replace("__SCHEMA__", schema)
+        print(f"[init_db] applying v3 cron schema extensions…")
+        exec_sql(ddl_v3)
 
     present = query_json(
         "SELECT table_name FROM information_schema.tables "
