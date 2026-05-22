@@ -55,8 +55,16 @@ In a fresh Claude Code session:
 
 (If the repo is private, Claude Code prompts for a GitHub token.)
 
-Then in a terminal, paste the .env (substitute the 3 values you got
-from the operator):
+Then set up the `.env`. The interactive setup is the easiest:
+
+```
+python ~/.claude/plugins/cache/csnl-marketplace/csnl-paper-archive-interview/*/scripts/setup.py
+```
+
+It prompts for the 5 values, writes `~/.csnl-paper-archive/.env` with
+`chmod 600`, and verifies the DB connection if you give it your init.
+
+If you'd rather paste a heredoc:
 
 ```
 mkdir -p ~/.csnl-paper-archive && cat > ~/.csnl-paper-archive/.env <<EOF
@@ -70,7 +78,7 @@ EOF
 chmod 600 ~/.csnl-paper-archive/.env
 ```
 
-Verify (optional but recommended):
+Either way, verify (optional but recommended):
 
 ```
 python ~/.claude/plugins/cache/csnl-marketplace/csnl-paper-archive-interview/*/scripts/preflight.py <YOUR_INIT>
@@ -79,7 +87,8 @@ python ~/.claude/plugins/cache/csnl-marketplace/csnl-paper-archive-interview/*/s
 (The `*` glob picks up whichever plugin version is currently installed.)
 
 → `ok: true` with chunk counts. If you see a Korean error, fix what it
-names and retry.
+names and retry — the error message includes the exact path and the
+exact setup command.
 
 ## Researcher — run
 
@@ -125,7 +134,8 @@ resumes from where you left off.
 | --- | --- | --- |
 | `/plugin list` empty | Install didn't complete | Retry: `/plugin uninstall …@csnl-marketplace` then `/plugin install …@csnl-marketplace` |
 | `Unknown command: /paper-interview` | Forgot the namespace | Use `/csnl-paper-archive-interview:paper-interview <INIT>` |
-| `preflight` says "Supabase 연결 실패" | `.env` not picked up OR creds wrong | `chmod 600 ~/.csnl-paper-archive/.env` exists with all 5 values |
+| `preflight` says "Supabase 연결 정보 .env 파일이 없어요" | First-time setup not done | Run `setup.py` (the message names it) or paste the heredoc into a terminal |
+| `preflight` says "Supabase 연결 실패" | `.env` exists but creds wrong | Re-run `setup.py --force` to overwrite, or edit `~/.csnl-paper-archive/.env` directly |
 | `preflight` says "활성 프로젝트가 csnl_research 에 없습니다" | Your `csnl_research.projects` rows aren't above the confidence threshold | Update them via the CSNL self-archive tool first |
 | `preflight` says "추천 큐가 아직 생성되지 않았습니다" | Operator hasn't run `build_researcher_queue.py <YOUR_INIT> --apply` yet | Ask the operator |
 | Korean text shows raw codes (`F-EFC`, `M-RSA`, …) | The skill couldn't load the taxonomy | Restart the session; the skill loads taxonomy on Stage 0 |

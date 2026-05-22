@@ -33,14 +33,30 @@ When you run `/csnl-paper-archive-interview:paper-interview <YOUR_INIT>`:
    `archive_interview_sessions`. You can stop and resume; the next session
    picks up where you left off.
 
-## Install (3 lines)
+## Install
+
+In a fresh Claude Code session:
 
 ```
 /plugin marketplace add CSNL-vnilab/csnl-paper-rec-v2
 /plugin install csnl-paper-archive-interview@csnl-marketplace
 ```
 
-Then in a terminal — paste the 5 values the operator sent you:
+Then set up your `.env`. Two options — pick whichever feels easier:
+
+### Option A — interactive (recommended)
+
+In a terminal:
+
+```
+python ~/.claude/plugins/cache/csnl-marketplace/csnl-paper-archive-interview/*/scripts/setup.py
+```
+
+It walks you through 5 prompts (host / port / name / user / password /
+schema), writes `~/.csnl-paper-archive/.env` with `chmod 600`, and
+offers to verify the connection if you give your init.
+
+### Option B — paste a heredoc
 
 ```
 mkdir -p ~/.csnl-paper-archive && cat > ~/.csnl-paper-archive/.env <<EOF
@@ -55,6 +71,9 @@ chmod 600 ~/.csnl-paper-archive/.env
 ```
 
 That's it. Run with `/csnl-paper-archive-interview:paper-interview <YOUR_INIT>`.
+
+If you ever forget where the `.env` lives or what was in it, just re-run
+`setup.py` — it'll show the path and let you overwrite.
 
 The plugin's `_pdb.py` enforces a strict table allowlist regardless of
 DB role — so the shared admin credentials can't accidentally corrupt

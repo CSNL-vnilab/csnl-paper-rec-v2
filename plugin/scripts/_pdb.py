@@ -27,8 +27,21 @@ import json
 import os
 import re
 import subprocess
+import sys
 from pathlib import Path
 from typing import Any
+
+# Python version guard — friendly Korean error if too old, then bail.
+# (Mac system Python 3.9 was Big Sur's default; 3.8 was Catalina's.)
+if sys.version_info < (3, 8):
+    print(
+        f"이 플러그인은 Python 3.8 이상이 필요합니다 "
+        f"(현재: {sys.version_info[0]}.{sys.version_info[1]}). "
+        f"`brew install python@3.11` 또는 pyenv 로 새 버전을 설치한 뒤 "
+        f"다시 시도해주세요.",
+        file=sys.stderr,
+    )
+    sys.exit(2)
 
 PLUGIN_DIR = Path(__file__).resolve().parent.parent
 
@@ -167,9 +180,27 @@ def _assert_archive_write(sql: str) -> None:
 def _req(key: str) -> str:
     v = os.environ.get(key)
     if not v:
+        searched = "\n".join(f"    • {p}" for p in _ENV_PATHS)
+        setup_py = PLUGIN_DIR / "scripts" / "setup.py"
         raise RuntimeError(
-            f"Missing required env var: {key}. Copy plugin/.env.example to "
-            f".env in {PLUGIN_DIR} (or ~/.csnl-paper-archive/.env) and fill it.")
+            "\n\n"
+            f"환경 변수 {key} 가 설정되지 않았어요.\n\n"
+            f"플러그인이 찾아본 .env 위치:\n{searched}\n\n"
+            "두 가지 방법 중 하나로 해결할 수 있어요:\n\n"
+            "  (A) 대화형 설정 도우미 실행 (권장)\n"
+            f"      python {setup_py}\n\n"
+            "  (B) 직접 .env 생성 — 터미널에서 아래를 그대로 복사해서 실행\n"
+            "      mkdir -p ~/.csnl-paper-archive && cat > ~/.csnl-paper-archive/.env <<'EOF'\n"
+            "      SUPABASE_DB_HOST=<운영자가 알려준 호스트>\n"
+            "      SUPABASE_DB_PORT=5432\n"
+            "      SUPABASE_DB_NAME=postgres\n"
+            "      SUPABASE_DB_USER=<운영자가 알려준 사용자>\n"
+            "      SUPABASE_DB_PASSWORD=<운영자가 알려준 비밀번호>\n"
+            "      CPR_LEDGER_SCHEMA=csnl_paper_rec\n"
+            "      EOF\n"
+            "      chmod 600 ~/.csnl-paper-archive/.env\n\n"
+            "운영자(jy061100@gmail.com)에게 호스트/사용자/비밀번호 4가지를 요청해주세요."
+        )
     return v
 
 

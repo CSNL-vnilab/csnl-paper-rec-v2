@@ -53,8 +53,22 @@ def main() -> int:
     try:
         query("SELECT 1 AS ok")
     except Exception as e:
+        # Distinguish "env not loaded" from "creds wrong" — both surface as
+        # connection errors, but the message + setup hint should differ.
+        from _pdb import _ENV_PATHS, PLUGIN_DIR  # noqa: E402
+        env_missing = not any(p.exists() for p in _ENV_PATHS)
+        setup_py = PLUGIN_DIR / "scripts" / "setup.py"
+        if env_missing:
+            paths = "\n".join(f"    • {p}" for p in _ENV_PATHS)
+            return _fail(5,
+                f"Supabase 연결 정보 .env 파일이 없어요. 대화형 설정 "
+                f"도우미를 실행해보세요:\n\n"
+                f"  python {setup_py}\n\n"
+                f"또는 직접 만들 위치 ↓\n{paths}")
         return _fail(5, f"Supabase 연결 실패. .env 의 SUPABASE_DB_* 값을 "
-                        f"확인해주세요. (원본: {e})")
+                        f"확인해주세요. 다시 셋업하려면:\n"
+                        f"  python {setup_py} --force\n"
+                        f"(원본 오류: {e})")
 
     # 2. Tables exist.
     expect = (
