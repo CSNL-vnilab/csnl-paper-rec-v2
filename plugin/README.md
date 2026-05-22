@@ -5,6 +5,58 @@ archive. Designed to be installed by an individual researcher in Claude
 Code; everything is local except the DB calls back to the lab's Supabase
 (`csnl_paper_rec.archive_*`).
 
+## How the lab DB is structured
+
+Two schemas. You should know which is which:
+
+| Schema | What lives there | This plugin's access |
+| --- | --- | --- |
+| `csnl_research` | Each researcher's project metadata (purpose, hypotheses, manipulation variables, modalities). Maintained via the CSNL self-archive tool. | **read-only** — used to render your profile at Stage 1 |
+| `csnl_paper_rec` | All paper-recommendation tables: the weekly Slack-delivered recommendation ledger, the cron state machine, AND the new `archive_*` layer this plugin uses. | **read on the archive tables**, **write only on the 4 plugin-writeable tables** (see boundary below) |
+
+Within `csnl_paper_rec`, the archive layer (built by the operator before
+you install this plugin) holds:
+
+- `archive_papers`        — ~8,680 canonical papers merged from three
+                             sources (lab classics archive, 7 years of
+                             CWLL recommendation logs, PI-network publications)
+- `archive_filter_decisions` — textbook / draft / poster / review-doc
+                             filter outcomes + per-paper dimension tags
+                             (focus / method / stim / subj)
+- `archive_paper_embeddings` — BAAI/bge-m3 1024-dim vectors
+- `archive_paper_dim_tags`  — normalized table of dimension tag hits
+- `archive_researcher_queues` — per-researcher top-200 ranked queue
+                             (recent ≤5y / mid 5–10y / classic >10y),
+                             with composite score + S/A/B/C tier +
+                             matched-dimension breakdown
+- `archive_interview_sessions` ← *you write here* — your session row
+- `archive_profile_verifications` ← *you write here* — your confirmed
+                             dim_preferences + project_weights
+- `archive_responses` ← *you write here* — one row per paper × choice
+- `archive_meta_reviews` ← *you write here* — every-10 belief snapshot
+
+## What this interview updates
+
+The archive + your initial queue are already built. The interview
+captures three things and feeds them back into the next queue rebuild:
+
+1. **Profile confirmation** — verify the topic / methodology summary
+   the system extracted from your `csnl_research.projects` rows. Edit
+   what's wrong, add what's missing.
+2. **Dimension preferences + project weights** — pick which
+   methodology / stimulus / focus / subject categories matter to you
+   right now, and (if you have multiple active projects) the percentage
+   weighting between them.
+3. **Per-paper choice signal** — for each paper in your queue, one of:
+   `1` save for later, `2` not relevant, `3` already read, `4` tell me
+   more (spawns an isolated explainer). Every 10 answers, the system
+   actively updates its belief about your preferences (Stage 4) and
+   writes the new weights back to the DB. The next operator-side queue
+   rebuild picks those up.
+
+You can stop and resume any time. The next `/paper-interview` resumes
+your open session from where you left off.
+
 ## What it does
 
 When you run `/csnl-paper-archive-interview:paper-interview <YOUR_INIT>`:
@@ -94,7 +146,7 @@ SUPABASE_DB_NAME=postgres
 CPR_LEDGER_SCHEMA=csnl_paper_rec
 ```
 
-Talk to the lab operator (`jy061100@gmail.com`) for credentials. Plugin
+Talk to the lab operator (`vnilab@gmail.com`) for credentials. Plugin
 reads only the archive tables (`archive_papers`, `archive_filter_decisions`,
 `archive_researcher_queues`) and writes only to `archive_responses`,
 `archive_interview_sessions`, `archive_meta_reviews`, and

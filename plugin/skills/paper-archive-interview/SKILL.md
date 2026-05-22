@@ -129,14 +129,43 @@ from this SKILL.md.
 the temp file under `<plugin-root>/state/_tmp/` (mkdir -p first; the
 plugin does not ship this directory).
 
-## Stage 0 — preflight (run first; fail fast)
+## Stage 0 — preflight + orientation (run first; fail fast)
 
 1. Call `preflight.py <init>`. Parse the JSON.
 2. If `ok: false`: print the script's `message_ko` to the researcher
    verbatim (no extra prose, no signature), then stop.
-3. If `ok: true`: show a one-line Korean greeting (no signature)
-   mentioning queue size — e.g. "안녕하세요. 추천 큐 N편 준비됐어요.
-   짧은 확인 몇 가지 진행하고 시작할게요." — then proceed to Stage 1.
+3. If `ok: true`: print a structured Korean orientation (every session
+   — researchers shouldn't have to remember what the plugin is for).
+   Use the queue counts from `preflight.queue_by_chunk` to fill `<N>`,
+   `<R>`, `<M>`, `<C>` below:
+
+   ```
+   안녕하세요, <init> 박사님. CSNL paper-archive 인터뷰입니다.
+
+   [이미 준비된 것]
+   • csnl_research (read-only): 박사님 프로젝트 메타데이터
+   • csnl_paper_rec.archive_* (이 인터뷰의 작업 영역):
+     - archive_papers ~8,680편 (classics + 7년 CWLL 추천로그 + PI-network 출간물,
+       dedup·filter·BAAI/bge-m3 임베딩 완료)
+     - 박사님 추천 큐 <N>편 (recent <R> / mid <M> / classic <C>)
+     - 4-차원 sub-tag (focus / method / stim / subj) + S/A/B/C tier
+
+   [오늘 인터뷰에서 업데이트할 것]
+   1. 박사님 주제 + 방법론 요약 확인 (잘못된 / 빠진 것 알려주세요)
+   2. (활성 프로젝트 여러 개면) 프로젝트 비중 (예: 70/20/5/5)
+   3. 차원 선호 — 어떤 focus/method/stim/subj 가 우선인지
+   4. 각 추천 논문 4-지선다 (저장 / 관련없음 / 이미읽음 / 더자세히)
+   5. 10편마다 박사님 응답 패턴을 보고 차원 선호 자동 업데이트 (다음 큐에 반영)
+
+   [경계]
+   인터뷰 응답은 csnl_paper_rec.archive_{interview_sessions, profile_verifications,
+   responses, meta_reviews} 4개 테이블에만 저장됩니다. 다른 어떤 데이터도
+   수정되지 않고, 슬랙·이메일 전송 경로도 없어요.
+
+   3가지 짧은 확인부터 시작할게요.
+   ```
+
+   Then proceed to Stage 1.
 
 ## Stage 1 — profile verification (smaller turns — one question at a time)
 

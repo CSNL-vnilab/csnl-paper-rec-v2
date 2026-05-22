@@ -3,7 +3,7 @@
 **Date:** 2026-05-21 (KST)
 **Status:** v0 — scaffold complete, awaiting Opus×2 review + codex
 adversarial review before any real-environment run.
-**Owners:** harness operator (jy061100@gmail.com) — DB apply, ingestion;
+**Owners:** harness operator (vnilab@gmail.com) — DB apply, ingestion;
 researcher — `/paper-interview <init>` on a plugin install.
 
 This layer is *additive* to the existing csnl-paper-rec-v2 harness. It

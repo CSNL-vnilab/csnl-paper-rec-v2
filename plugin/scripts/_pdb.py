@@ -199,7 +199,7 @@ def _req(key: str) -> str:
             "      CPR_LEDGER_SCHEMA=csnl_paper_rec\n"
             "      EOF\n"
             "      chmod 600 ~/.csnl-paper-archive/.env\n\n"
-            "운영자(jy061100@gmail.com)에게 호스트/사용자/비밀번호 4가지를 요청해주세요."
+            "운영자(vnilab@gmail.com)에게 호스트/사용자/비밀번호 4가지를 요청해주세요."
         )
     return v
 
