@@ -335,8 +335,10 @@ Loop until `pick_next.py` returns `done:true`:
 
 ## Stage 3 — option (4) "tell me more"
 
-You must spawn the **`paper-explainer`** agent (subagent_type ==
-"paper-explainer"). Pass it:
+You must spawn the **`paper-explainer`** agent. Try
+`subagent_type: "paper-explainer"` first; if Claude Code refuses with
+"unknown subagent", fall back to the plugin-namespaced form
+`subagent_type: "csnl-paper-archive-interview:paper-explainer"`. Pass it:
   - the paper JSON object you got from `pick_next.py`
   - the researcher's confirmed profile (snapshot + corrections)
   - one sentence asking it to explain the link in ≤ 3 short Korean

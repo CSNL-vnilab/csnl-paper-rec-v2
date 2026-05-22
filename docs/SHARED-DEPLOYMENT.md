@@ -49,7 +49,7 @@ not via DB-level GRANTs.
 In a fresh Claude Code session:
 
 ```
-/plugin marketplace add github:CSNL-vnilab/csnl-paper-rec-v2
+/plugin marketplace add CSNL-vnilab/csnl-paper-rec-v2
 /plugin install csnl-paper-archive-interview@csnl-marketplace
 ```
 
@@ -73,8 +73,10 @@ chmod 600 ~/.csnl-paper-archive/.env
 Verify (optional but recommended):
 
 ```
-python ~/.claude/plugins/cache/csnl-marketplace/csnl-paper-archive-interview/0.1.0/scripts/preflight.py <YOUR_INIT>
+python ~/.claude/plugins/cache/csnl-marketplace/csnl-paper-archive-interview/*/scripts/preflight.py <YOUR_INIT>
 ```
+
+(The `*` glob picks up whichever plugin version is currently installed.)
 
 → `ok: true` with chunk counts. If you see a Korean error, fix what it
 names and retry.

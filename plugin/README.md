@@ -36,7 +36,7 @@ When you run `/csnl-paper-archive-interview:paper-interview <YOUR_INIT>`:
 ## Install (3 lines)
 
 ```
-/plugin marketplace add github:CSNL-vnilab/csnl-paper-rec-v2
+/plugin marketplace add CSNL-vnilab/csnl-paper-rec-v2
 /plugin install csnl-paper-archive-interview@csnl-marketplace
 ```
 
