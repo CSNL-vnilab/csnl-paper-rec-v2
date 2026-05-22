@@ -70,6 +70,55 @@ _POSTER_FN_RE  = re.compile(r"(?:^|_)(poster|sfn\d|vss\d|hbm\d|cosyne\d)", re.IG
 _TEXTBOOK_TITLE_RE = re.compile(
     r"\b(textbook|handbook|encyclopedia|companion to|primer)\b", re.IGNORECASE,
 )
+
+# Preprint DOI prefixes — used by the preprint→published collapse pass
+# (a paper with a published sibling in the archive gets removed in favor
+# of the published version).
+_PREPRINT_DOI_PREFIXES = (
+    "10.1101",      # bioRxiv / medRxiv
+    "10.31234",     # PsyArXiv (OSF)
+    "10.48550",     # arXiv
+    "10.21203",     # Research Square
+    "10.20944",     # Preprints.org
+    "10.31219",     # OSF Preprints (umbrella)
+    "10.31222",     # SocArXiv etc.
+    "10.31223",     # EarthArXiv
+    "10.46715",     # Authorea
+    "10.36227",     # TechRxiv
+)
+
+# Conference abstract patterns — these are NOT primary papers and must
+# be removed. Most CSNL-relevant cases:
+#   - Journal of Vision VSS abstracts: DOI 10.1167/<vol>.<num>.<id> with
+#     very short page numbers AND title length < 80
+#   - Cognitive Neuroscience Society annual meeting abstracts
+#   - Society for Neuroscience abstracts (10.1523/jneurosci...) — these
+#     are real papers; SfN ABSTRACTS live elsewhere, usually with
+#     "Online Program No." in title.
+_CONF_ABSTRACT_TITLE_RE = re.compile(
+    r"(online program no\.|"
+    r"^\s*p\d{3,}[:\s]|"          # poster numbering ("P234: Title…")
+    r"^\s*\d{1,3}\.\d{1,3}\s|"    # session.talk numbering
+    r"\babstract supplement\b|"
+    r"\bsfn\s*20\d\d\b|"
+    r"\bvss\s*20\d\d\b|"
+    r"\bcosyne\s*20\d\d\b|"
+    r"\bocnc\s*20\d\d\b|"
+    r"\bsalt lake city\s+meeting\b|"
+    r"\bannual meeting\b)",
+    re.IGNORECASE,
+)
+_CONF_VENUE_PATTERNS = (
+    "society for neuroscience",
+    "cognitive neuroscience society",
+    "vision sciences society",
+    "cosyne",
+    "organization for human brain mapping",
+    "conference abstracts",
+    "abstract supplement",
+    "meeting abstracts",
+    "annual meeting",
+)
 # Peer-review / author-response / decision-letter side documents that
 # OpenAlex indexes under regular DOIs (e.g. eLife sa1/sa2 sub-DOIs).
 # These are NOT primary papers; drop them outright at filter time.
@@ -124,6 +173,48 @@ def is_poster(filename: str | None, venue: str | None, title: str | None = None,
     if source_type and source_type.lower() in ("poster", "supplementary-materials"):
         return True
     return False
+
+
+def is_conf_abstract(title: str | None, venue: str | None,
+                     source_type: str | None, doi: str | None) -> bool:
+    """Detect conference / society-meeting abstracts that OpenAlex types as
+    'article' but are not primary research papers.
+
+    Heuristics:
+      - title matches a conference-numbering pattern (P234:, 12.5, Online Program No.)
+      - venue contains a society-meeting keyword
+      - OpenAlex type == 'paratext' (front matter / errata / abstracts)
+      - JoV VSS abstracts: DOI 10.1167/<vol>.<num>.<id> with very short
+        page numbers in the DOI suffix (heuristic — JoV regular articles
+        have longer suffixes).
+    """
+    t = (title or "").strip()
+    v = (venue or "").lower()
+    if t and _CONF_ABSTRACT_TITLE_RE.search(t):
+        return True
+    if v and any(p in v for p in _CONF_VENUE_PATTERNS):
+        return True
+    if source_type and source_type.lower() in ("paratext", "abstract"):
+        return True
+    # Tight: JoV abstract pattern — 10.1167/X.YY where YY ≤ 3 digits and
+    # title appears to be a short submission (< 60 chars).
+    if doi and doi.lower().startswith("10.1167/") and t and len(t) < 60:
+        # Many VSS/SfN/CSNL abstracts get JoV abstract-supplement DOIs.
+        # The conservative check: a JoV DOI WITH a short title is very
+        # likely an abstract; full JoV articles have longer titles.
+        if "/" in doi[8:]:
+            suffix = doi.split("/", 2)[-1]
+            # Abstract DOIs typically include a period like 12.9.123
+            if "." in suffix and len(suffix) <= 12:
+                return True
+    return False
+
+
+def is_preprint_doi(doi: str | None) -> bool:
+    if not doi:
+        return False
+    d = doi.lower()
+    return any(d.startswith(p) for p in _PREPRINT_DOI_PREFIXES)
 
 
 def is_review_doc(title: str | None, source_type: str | None = None) -> bool:
@@ -201,6 +292,8 @@ def filter_decision(row: dict) -> dict:
     poster      = is_poster(filename, row.get("venue"), row.get("title"), source_type)
     textbook    = is_textbook(row.get("page_count"), row.get("title"), row.get("doi"))
     review_doc  = is_review_doc(row.get("title"), source_type)
+    conf_abs    = is_conf_abstract(row.get("title"), row.get("venue"),
+                                   source_type, row.get("doi"))
     relevant, tags = lab_relevance(row)
     reasons = {}
     if draft:    reasons["draft"]    = "filename/title heuristic"
@@ -214,6 +307,8 @@ def filter_decision(row: dict) -> dict:
             reasons["textbook"] = "title keyword"
     if review_doc:
         reasons["review_doc"] = f"peer-review/author-response/decision-letter ({source_type or 'title-pattern'})"
+    if conf_abs:
+        reasons["conf_abstract"] = f"conference/society-meeting abstract ({source_type or 'title/venue/DOI pattern'})"
     if not relevant:
         reasons["lab_irrelevant"] = "no scope-tag hit, not classics/pi source"
     return {
@@ -222,7 +317,8 @@ def filter_decision(row: dict) -> dict:
         "is_draft":        draft,
         "is_poster":       poster,
         "is_review_doc":   review_doc,
-        "is_lab_relevant": relevant and not (draft or poster or textbook or review_doc),
+        "is_conf_abstract": conf_abs,
+        "is_lab_relevant": relevant and not (draft or poster or textbook or review_doc or conf_abs),
         "lab_scope_tags":  tags,
         "filter_reason":   reasons,
         "decided_at":      kst_iso(),
@@ -311,6 +407,12 @@ def merge_all() -> tuple[dict[str, dict], list[dict], dict, dict[str, str]]:
     sources: list[dict] = []
     for r in raw:
         cid = r["canonical_id"]
+        # P18: correct is_preprint by DOI prefix BEFORE collapsing.
+        # OpenAlex sometimes types bioRxiv/arXiv DOIs as `article`, which
+        # leaves is_preprint=False and lets the preprint sibling outrank
+        # the published version. The DOI prefix is authoritative.
+        if r.get("doi") and is_preprint_doi(r.get("doi")):
+            r["is_preprint"] = True
         if cid in by_id:
             by_id[cid] = _merge_one(by_id[cid], r)
         else:
@@ -374,10 +476,11 @@ def merge_all() -> tuple[dict[str, dict], list[dict], dict, dict[str, str]]:
 
     # Third pass — CROSS-YEAR title-fuzz collapse.
     # Catches preprint v1 (year 2023) ↔ preprint v2 (year 2025) ↔ eLife
-    # published version (year 2024) for the same paper. Uses a slightly
-    # tighter threshold (0.95) because we are abandoning the year guard,
-    # and uses a "best representative" rule: prefer non-preprint over
-    # preprint, then newer year over older, then longer abstract.
+    # published version (year 2024) for the same paper. P18: threshold
+    # lowered 0.95 → 0.88 because preprint↔published often diverge
+    # slightly (added "in press", changed subtitle). Keeper rule prefers
+    # non-preprint over preprint, then newer year over older, then
+    # richer abstract.
     title_groups: dict[str, list[str]] = {}
     for cid, p in by_id.items():
         tn = p.get("title_norm") or ""
@@ -398,8 +501,6 @@ def merge_all() -> tuple[dict[str, dict], list[dict], dict, dict[str, str]]:
     for tn, cids in title_groups.items():
         if len(cids) < 2:
             continue
-        # Confirm with fuzz to avoid grouping by exact-match alone (already
-        # handled by the per-cid bucketing above).
         keeper = _best_of(cids)
         for c in cids:
             if c == keeper:
@@ -421,6 +522,44 @@ def merge_all() -> tuple[dict[str, dict], list[dict], dict, dict[str, str]]:
         for s in sources:
             if s["canonical_id"] == alias:
                 s["canonical_id"] = target
+
+    # P18 pass 3.5 — FUZZ-TITLE preprint→published collapse, with no
+    # year-gap restriction. Catches the case where bioRxiv 2020 and the
+    # journal 2022 version have ~0.88 title overlap (small subtitle
+    # changes during peer review). Threshold 0.88. Only collapses
+    # preprint→non-preprint (does NOT collapse two non-preprints or two
+    # preprints — those are handled by the year-bucketed pass above).
+    pp_collapses = 0
+    non_preprint_cids = [c for c, p in by_id.items() if not p.get("is_preprint")]
+    preprint_cids    = [c for c, p in by_id.items() if p.get("is_preprint")]
+    for pp_cid in preprint_cids:
+        if pp_cid in collapse_map:
+            continue
+        pp_tn = by_id[pp_cid].get("title_norm") or ""
+        if len(pp_tn) < 25:
+            continue
+        for np_cid in non_preprint_cids:
+            if np_cid in collapse_map:
+                continue
+            np_tn = by_id[np_cid].get("title_norm") or ""
+            if not np_tn:
+                continue
+            if _fuzz_ratio(pp_tn, np_tn) >= 0.88:
+                # collapse preprint into published
+                collapse_map[pp_cid] = np_cid
+                by_id[np_cid] = _merge_one(by_id[np_cid], by_id[pp_cid])
+                pp_collapses += 1
+                break
+
+    # Apply preprint→published collapses to by_id + sources.
+    if pp_collapses:
+        for alias in [c for c in collapse_map.keys() if c in by_id and by_id.get(alias, {}).get("is_preprint")]:
+            target = collapse_map[alias]
+            if alias in by_id:
+                del by_id[alias]
+            for s in sources:
+                if s["canonical_id"] == alias:
+                    s["canonical_id"] = target
 
     # Fourth pass — DOI version siblings (e.g. _v2 suffix on OSF preprints).
     # Group by version-stripped DOI; collapse all but the latest year.
@@ -455,6 +594,7 @@ def merge_all() -> tuple[dict[str, dict], list[dict], dict, dict[str, str]]:
         "after_fuzz_collapse": len(by_id),
         "fuzz_collapses":     len(collapse_map),
         "cross_year_fuzz":    cross_year_collapses,
+        "preprint_to_published": pp_collapses,
         "doi_version_dedup":  doi_collapses,
     }
     return (by_id, sources, report, collapse_map)
