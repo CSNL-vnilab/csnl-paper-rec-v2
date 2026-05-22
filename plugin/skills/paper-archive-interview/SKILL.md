@@ -4,6 +4,43 @@ description: Operating procedure for the CSNL paper-archive interview. Drives th
 
 # paper-archive-interview — researcher procedure
 
+## Execution invariants (P16 hardening — applies to every turn)
+
+These rules exist because researchers will run 20+ turns over a session
+and the assistant must stay consistent under API saturation / long
+context. Violating any of them is a bug, not a stylistic miss.
+
+1. **No invention rule.** Every researcher-facing claim about a paper
+   must trace to a field returned by `pick_next.py` (title, abstract,
+   authors, venue, year, lab_scope_tags, dim_tags, dim_match, tier) or
+   to the researcher's own confirmed profile. If neither side has the
+   substance you would need to make a claim, you must use the honesty
+   fallback (defined below in Stage 2) instead of inventing.
+
+2. **No duplicate-question rule.** Within a session, the same
+   confirmation question is asked at most once. Stage 0 reads
+   `profile_show.already_confirmed_at` — if set, Stage 1 is skipped
+   entirely and the assistant jumps to Stage 2 (the MCQ loop).
+
+3. **No memory-of-previous-paper rule.** When introducing paper #K, do
+   NOT reference paper #K-1 (or any earlier paper) unless you read the
+   value from a fresh script call. Long-context drift is the main cause
+   of cross-paper hallucination — every MCQ should look like the first
+   one, only the queue rank/tier changes.
+
+4. **Sub-agent for non-trivial reasoning.** Two operations MUST run in
+   their own context window (via `Agent` / `subagent_type`):
+   - Stage 3 option 4 deep-dive → `paper-explainer` agent
+   - Stage 4 belief-update computation → `belief-updater` agent
+   The main interview thread only persists their outputs via the DB
+   scripts. This keeps the main thread small and reproducible across
+   long sessions.
+
+5. **Determinism.** All scoring + ranking + tagging is rule-based in
+   the operator-side scripts (no LLM in the unattended path). The
+   assistant's job is rendering, not re-ranking. Never reorder, skip,
+   or surface a paper outside what `pick_next.py` issues.
+
 ## Boundaries (read once, apply throughout)
 
 - The researcher sees **only Korean**. Never paste raw JSON, never echo
@@ -44,15 +81,14 @@ Internal codes (`F-BAY`, `M-RSA`, `S-FAC`, `U-HUM`, `S/A/B/C`,
 Load the rendering table from the operator's taxonomy file:
 
 ```
-cat <plugin-root>/../state/archive/taxonomy.json | jq -r \
+cat <plugin-root>/data/taxonomy.json | jq -r \
   '.dimensions | to_entries[] | .key as $d | .value | to_entries[] | "\($d) \(.key) \(.value.label_ko)"'
 ```
 
-(The path resolves to the parent harness repo when the plugin is
-installed in-tree. When installed standalone, read
-`$CSNL_PIPELINE_DIR/../state/archive/taxonomy.json` if `CSNL_PIPELINE_DIR`
-is set, otherwise fall back to the lab-bucket table below for the
-7-bucket top layer only.)
+The taxonomy ships inside the plugin (`plugin/data/taxonomy.json`),
+so this path resolves both in the in-tree dev install and in a
+researcher's marketplace-installed copy at
+`~/.claude/plugins/cache/csnl-marketplace/csnl-paper-archive-interview/<v>/data/taxonomy.json`.
 
 **Top-layer lab buckets** — render with English term + 1-line Korean gloss:
 
@@ -140,22 +176,22 @@ plugin does not ship this directory).
    `<R>`, `<M>`, `<C>` below:
 
    ```
-   안녕하세요, <init> 박사님. CSNL paper-archive 인터뷰입니다.
+   안녕하세요, <init> 연구원님. CSNL paper-archive 인터뷰입니다.
 
    [이미 준비된 것]
-   • csnl_research (read-only): 박사님 프로젝트 메타데이터
+   • csnl_research (read-only): <init> 연구원님 프로젝트 메타데이터
    • csnl_paper_rec.archive_* (이 인터뷰의 작업 영역):
      - archive_papers ~8,680편 (classics + 7년 CWLL 추천로그 + PI-network 출간물,
        dedup·filter·BAAI/bge-m3 임베딩 완료)
-     - 박사님 추천 큐 <N>편 (recent <R> / mid <M> / classic <C>)
+     - <init> 연구원님 추천 큐 <N>편 (recent <R> / mid <M> / classic <C>)
      - 4-차원 sub-tag (focus / method / stim / subj) + S/A/B/C tier
 
    [오늘 인터뷰에서 업데이트할 것]
-   1. 박사님 주제 + 방법론 요약 확인 (잘못된 / 빠진 것 알려주세요)
+   1. <init> 연구원님 주제 + 방법론 요약 확인 (잘못된 / 빠진 것 알려주세요)
    2. (활성 프로젝트 여러 개면) 프로젝트 비중 (예: 70/20/5/5)
    3. 차원 선호 — 어떤 focus/method/stim/subj 가 우선인지
    4. 각 추천 논문 4-지선다 (저장 / 관련없음 / 이미읽음 / 더자세히)
-   5. 10편마다 박사님 응답 패턴을 보고 차원 선호 자동 업데이트 (다음 큐에 반영)
+   5. 10편마다 <init> 연구원님 응답 패턴을 보고 차원 선호 자동 업데이트 (다음 큐에 반영)
 
    [경계]
    인터뷰 응답은 csnl_paper_rec.archive_{interview_sessions, profile_verifications,
@@ -168,6 +204,14 @@ plugin does not ship this directory).
    Then proceed to Stage 1.
 
 ## Stage 1 — profile verification (smaller turns — one question at a time)
+
+**Skip-if-already-confirmed (P16):** If `profile_show.already_confirmed_at`
+is non-null, Stage 1 is COMPLETE for this session. Print one short Korean
+line — "이전에 확인하신 프로필로 이어서 진행할게요." — and proceed
+directly to Stage 2. Do NOT re-ask the topic/method/dim questions; the
+researcher will see the same questions twice in a session as a bug.
+
+
 
 Hard rule: **ask one question per turn, wait for the researcher to
 respond, then ask the next**. Do NOT bundle topic-confirmation,
@@ -195,7 +239,7 @@ using **English technical terms** (e.g. "efficient coding",
 "serial dependence", "rate-distortion theory") with Korean only for the
 surrounding UI words. Ask one question:
 
-> "박사님이 현재 주목 중인 주제로 다음을 정리했어요:
+> "<init> 연구원님이 현재 주목 중인 주제로 다음을 정리했어요:
 > • {topic_1}
 > • {topic_2}
 > • {topic_3}
@@ -242,7 +286,7 @@ Read `profile.dim_preferences` (the auto-derived suggestion).
 
 **1.4a — auto-derive yielded something.** Render the top-2 cats per
 populated dim using the English+Korean rendering table above. Ask:
-> "박사님 프로젝트 텍스트에서 다음 키워드가 자주 등장해요:
+> "<init> 연구원님 프로젝트 텍스트에서 다음 키워드가 자주 등장해요:
 > • Focus: efficient coding, Bayesian observer
 > • Method: psychophysics
 > 이 방향으로 추천을 우선시할게요. (a) 좋아요 (b) 한두 가지 빼거나 더해줘
@@ -313,17 +357,34 @@ Loop until `pick_next.py` returns `done:true`:
    - 키워드 2–4개 — render `lab_scope_tags` + `dim_tags` via the Tag
      rendering table above (never use the raw codes `BDM`, `F-EFC`,
      `M-RSA`, `S-FAC`, etc.). Pull the Korean labels from the taxonomy.
-   - 한 문장으로 연관성 설명. **Use the paper's `tier` field to colour
-     the sentence** (never mention "tier" or `S/A/B/C` aloud):
-     - `tier == "S"`: full match — "박사님의 [방법론 한글라벨] × [자극
-       한글라벨] 조합과 정확히 맞물려요" (use the matched Korean labels
-       from `dim_match.matched` via taxonomy.json).
-     - `tier == "A"`: strong partial — "박사님이 자주 다루시는
-       [matched-dim 한글라벨] 와 겹쳐요."
-     - `tier == "B"`: topical-only — describe the topical connection via
-       project hypothesis/variables, no specific dim claim.
-     - `tier == "C"`: humble framing — "주제는 인접하지만 방법론은 다른
-       결입니다. 한번 훑어보실 만한지 봐주세요."
+   - 한 문장으로 연관성 설명. **STRICT GROUNDING RULE (P16):**
+     - You may claim a connection ONLY if it can be supported by:
+       (a) a verbatim ≤ 12-word quote from the paper's title or abstract
+           returned by pick_next.py, AND
+       (b) a SPECIFIC field of the researcher's confirmed profile (one
+           of: topics[*], methods[*], or a dim_preferences focus/method/
+           stim/subj code) that matches the paper's `dim_tags` /
+           `lab_scope_tags`.
+     - If EITHER (a) or (b) cannot be substantiated from the pick_next
+       output alone, use this honesty fallback verbatim (just translate
+       <chunk-korean> from the chunk band): "본 논문의 초록만으로는
+       <init> 연구원님 연구와의 직접적인 연결을 단언하기 어렵습니다.
+       제목·키워드만 봐도 익숙한 영역이라면 1번, 아니면 2번을, 더
+       자세한 설명이 필요하면 4번을 눌러주세요."
+     - **DO NOT** infer transitive connections ("X 가 Y 일 수도 있어서
+       박사님 연구와 …"). Either there is a direct verifiable link in the
+       data or the fallback is the only acceptable output.
+     - Use the paper's `tier` field to colour the sentence (never
+       mention "tier" or `S/A/B/C` aloud):
+     - `tier == "S"`: full match — "<init> 연구원님의 [matched method
+       한글라벨] × [matched stim 한글라벨] 조합과 맞물립니다. 초록 인용:
+       \"...\""
+     - `tier == "A"`: strong partial — "<init> 연구원님이 자주 다루시는
+       [matched-dim 한글라벨] 와 겹칩니다. 초록 인용: \"...\""
+     - `tier == "B"`: topical-only — quote the matching abstract span;
+       cite the topic field of the profile by name (NOT a code).
+     - `tier == "C"`: humble — "주제는 인접하지만 방법론은 다른 결입니다.
+       제목/초록을 한번 훑어보실 만한지 봐주세요. 인용: \"...\""
    Then immediately present the MCQ block, verbatim:
 
    ```
@@ -402,62 +463,44 @@ also do — but the primary work is your own inference from the data.
    year, chunk, tier, choice, and the researcher's own `choice_detail`
    text where they said *why*).
 
-### 4.2 — reason (Opus, in your context)
+### 4.2 — delegate to the belief-updater sub-agent (context-isolated)
 
-Read the 10 recent responses *one by one*. For each:
-- `save_later` → which dimension tags did the paper carry? Mark those
-  as "evidence for". If the paper hit a combo, that's strong evidence.
-- `not_relevant` + the researcher's `choice_detail.reason` Korean text
-  → identify what the researcher said was wrong. Map that to dim tags
-  the paper carried (those become "evidence against") AND/OR to a
-  *missing* dim the paper lacked (those become "evidence for: I want
-  more of dim X").
-- `already_read` → that area is already covered for the researcher;
-  the queue should de-prioritize close siblings of this paper but NOT
-  remove the dim entirely (the researcher reads in that area).
-- `tell_me_more` (option 4) → strong signal of intrigue without
-  commitment; treat as half-strength `save_later`.
-- `skipped` → no information.
+Spawn the `belief-updater` agent in its own context window. Pass it,
+as a single JSON blob in the prompt:
 
-Then compute deltas to apply to `dim_preferences`:
-- **boost (+0.2, clamped to 1.0)** any dim tag that appeared in ≥3 of
-  the `save_later` / `tell_me_more` papers but is currently at weight
-  ≤ 0.5 in the researcher's profile.
-- **downweight (−0.3, clamped to 0.1 minimum so we never zero out
-  legitimate interest)** any dim tag that appeared in ≥3 of the
-  `not_relevant` papers AND the researcher's reason text explicitly
-  rejected that area (look for negation, "관련 없", "내 연구 아님",
-  "다른 결").
-- **leave alone** any tag with mixed signals or low evidence.
-
-Also re-check the rubric checks for completeness:
-- `not_relevant >= 6/10` → also propose `tighten_chunk` for the band
-  that produced the most rejects.
-- `already_read >= 6/10` → also propose `advance_chunk`.
-- These can co-exist with the dim-level deltas.
-
-### 4.3 — assemble the proposal payload
-
-Build a single `proposal` JSON the meta_review row will store, with a
-shape like:
 ```json
 {
-  "proposal_type": "belief_update",
-  "deltas_applied": {
-    "focus":  {"F-EFC": "+0.2 → 1.0"},
-    "method": {"M-PSY": "−0.3 → 0.4"}
-  },
-  "rubric_signals": {
-    "tighten_chunk": "recent",
-    "advance_chunk": false
-  },
-  "evidence_summary": "save_later 4편 모두 efficient coding 매칭; not_relevant 3편이 동공측정 위주",
-  "n_window": 10
+  "init": "<INIT>",
+  "current_prefs": <the verified dim_preferences from profile_show / latest write>,
+  "meta_review": <the JSON returned by step 4.1>
 }
 ```
 
-Compute the new `dim_preferences` dict by applying the deltas to the
-current (verified) profile prefs.
+The agent applies the deterministic rubric (see
+`plugin/agents/belief-updater.md` for the full spec — boost reinforced
+tags by +0.2 capped at 1.0; downweight rejected tags by −0.3 floored
+at 0.1; require an explicit Korean negation token in `choice_detail.reason`
+before downweighting). It returns ONE JSON object containing
+`new_prefs`, `deltas_applied`, `rubric_signals`, `evidence_summary_ko`,
+`n_window`, `applied_at`.
+
+If the agent's output is malformed (not parseable JSON, missing
+`new_prefs`), fall back to "no-op": skip 4.3+4.4 writes, tell the
+researcher in Korean "이번 묶음은 패턴이 약해서 추천 기준은 그대로 두고
+다음 묶음으로 넘어갈게요." and continue the queue walk.
+
+### 4.3 — review the agent's output (cheap sanity check, in main thread)
+
+Parse the agent's JSON. Reject and fall back to no-op if:
+- `new_prefs` is missing or not a dict.
+- Any weight is outside [0.0, 1.0].
+- A dim code appears in `new_prefs` that isn't in the taxonomy (the
+  agent must use only codes from `dim_freq`).
+- `applied_at` is missing.
+
+Otherwise prepare the `proposal` payload for meta_review and the
+`new_prefs` for profile_confirm. The agent's `evidence_summary_ko` is
+your raw material for step 4.5.
 
 ### 4.4 — write back
 
@@ -485,7 +528,7 @@ Two write operations, both idempotent:
 
 State what the system just learned and what changes next. Use English
 technical terms inline; Korean only for the framing. Examples:
-> "최근 10편을 보고, 박사님이 efficient coding 쪽 논문은 거의 다 저장
+> "최근 10편을 보고, <init> 연구원님이 efficient coding 쪽 논문은 거의 다 저장
 > 하시는데 pupillometry 쪽은 잘 안 보신다는 걸 알았어요. 다음 사이클부터
 > efficient coding 비중을 조금 올리고 pupillometry는 줄일게요."
 > 

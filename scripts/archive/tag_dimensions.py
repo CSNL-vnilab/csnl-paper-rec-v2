@@ -43,7 +43,7 @@ from _common import kst_iso  # noqa: E402
 
 _REPO_ROOT = Path(__file__).resolve().parent.parent.parent
 _ARCHIVE   = _REPO_ROOT / "state" / "archive"
-_TAXONOMY_PATH = _ARCHIVE / "taxonomy.json"
+_TAXONOMY_PATH = _REPO_ROOT / "plugin" / "data" / "taxonomy.json"
 _IN_PAPERS    = _ARCHIVE / "merged_papers.jsonl"
 _IN_FILTERS   = _ARCHIVE / "filter_decisions.jsonl"
 _OUT_TAGS     = _ARCHIVE / "dim_tags.jsonl"

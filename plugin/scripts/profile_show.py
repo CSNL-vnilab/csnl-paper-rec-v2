@@ -182,10 +182,23 @@ def main() -> int:
             (sid, init),
         )
 
+    # P16: detect whether THIS open session already has a confirmed
+    # profile_verifications row. The skill uses this to skip Stage 1
+    # entirely on resume — researchers should never be re-asked the same
+    # confirmation questions within a session.
+    already_confirmed = query(
+        f"SELECT confirmed_at FROM {sch}.archive_profile_verifications "
+        f"WHERE session_id = %s AND confirmed_at IS NOT NULL "
+        f"LIMIT 1",
+        (sid,),
+    )
+
     print(json.dumps({
-        "researcher_id": init,
-        "session_id":    sid,
-        "profile":       profile,
+        "researcher_id":   init,
+        "session_id":      sid,
+        "profile":         profile,
+        "already_confirmed_at": (already_confirmed[0]["confirmed_at"]
+                                  if already_confirmed else None),
     }, ensure_ascii=False))
     return 0
 

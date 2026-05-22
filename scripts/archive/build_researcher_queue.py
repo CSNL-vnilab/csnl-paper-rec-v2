@@ -38,7 +38,7 @@ from _common import kst_iso  # noqa: E402
 
 _REPO_ROOT = Path(__file__).resolve().parent.parent.parent
 _OUT_DIR   = _REPO_ROOT / "state" / "archive" / "queues"
-_TAXONOMY_PATH = _REPO_ROOT / "state" / "archive" / "taxonomy.json"
+_TAXONOMY_PATH = _REPO_ROOT / "plugin" / "data" / "taxonomy.json"
 
 CHUNK_BOUNDS = {"recent": (0, 5), "mid": (5, 10), "classic": (10, 999)}
 _DEFAULT_CHUNK_MIX = {"recent": 120, "mid": 60, "classic": 20}

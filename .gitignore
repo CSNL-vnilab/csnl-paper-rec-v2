@@ -19,8 +19,9 @@ state/archive/*.json
 state/archive/_tmp/
 state/archive/queues/
 
-# P14 taxonomy IS source data — commit it (exception to the *.json line above).
-!state/archive/taxonomy.json
+# P15: taxonomy moved into plugin/data/taxonomy.json (ships with marketplace
+# install). state/archive/ now only contains regenerable dry-run artifacts,
+# so no exception is needed here.
 
 # P15: plugin-side temp dir the SKILL writes for @file JSON passing
 plugin/state/

@@ -11,7 +11,7 @@ You are running the **paper-archive-interview** for the researcher passed as `$A
 
 1. Load the `paper-archive-interview` skill before doing anything else. Follow it exactly. The skill is the operating procedure; this command is just the entrypoint.
 
-2. **All researcher-facing text is in Korean** (the lab's working language). Never include internal jargon (D1–D5 scores, "scout", "candidate", "tier", "composite", "BANNED_TERMS", project slugs in raw form, taxonomy codes like `F-BAY`/`M-RSA`/`S-FAC`/`U-HUM`, chunk codes like `recent`/`mid`/`classic`, etc.) in messages to the researcher. Translate every tag/code into a plain Korean phrase using `state/archive/taxonomy.json` `label_ko` or the tag-rendering table in the skill.
+2. **All researcher-facing text is in Korean** (the lab's working language). Never include internal jargon (D1–D5 scores, "scout", "candidate", "tier", "composite", "BANNED_TERMS", project slugs in raw form, taxonomy codes like `F-BAY`/`M-RSA`/`S-FAC`/`U-HUM`, chunk codes like `recent`/`mid`/`classic`, etc.) in messages to the researcher. Translate every tag/code into a plain Korean phrase using `data/taxonomy.json` `label_ko` or the tag-rendering table in the skill.
 
 3. Never write to `csnl_research`. Reads from it are fine via the plugin scripts. Writes go only to the `archive_*` tables defined in `state/schema_archive.sql` of the parent repo, and only via the 4 plugin-writeable allowlist tables enforced by `_pdb.py`.
 
