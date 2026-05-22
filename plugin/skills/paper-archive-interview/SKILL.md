@@ -536,10 +536,17 @@ Two write operations, both idempotent:
 ### 4.5 — explain to the researcher (Korean, ≤ 2 short sentences)
 
 State what the system just learned and what changes next. Use English
-technical terms inline; Korean only for the framing. Examples:
+technical terms inline; Korean only for the framing. **The belief
+takes effect on the VERY NEXT paper this session** — `pick_next.py`
+re-orders the unanswered queue against the freshly-written prefs
+(P17 in-session re-rank); no operator rebuild is required for the
+within-session effect. The operator's next full queue rebuild then
+also persists the new ranking into archive_researcher_queues.
+
+Examples:
 > "최근 10편을 보고, <init> 연구원님이 efficient coding 쪽 논문은 거의 다 저장
-> 하시는데 pupillometry 쪽은 잘 안 보신다는 걸 알았어요. 다음 사이클부터
-> efficient coding 비중을 조금 올리고 pupillometry는 줄일게요."
+> 하시는데 pupillometry 쪽은 잘 안 보신다는 걸 알았어요. 바로 다음 추천부터
+> efficient coding 비중을 올리고 pupillometry는 줄여서 보여드릴게요."
 > 
 > "최근 10편 중 7편이 이미 읽으셨던 거라, 다음 묶음부터는 더 최근(또는
 > 더 오래된) 시기로 넘어갈게요."
