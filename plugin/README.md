@@ -35,28 +35,27 @@ When you run `/csnl-paper-archive-interview:paper-interview <YOUR_INIT>`:
 
 ## Install
 
-The lab marketplace listing is **not yet published**; for now, install
-from a local checkout. Ask the operator (`jy061100@gmail.com`) to push
-the marketplace manifest first if you need a one-line install.
-
-Local install (current path):
-
-```
-/plugin install /Users/csnl/Documents/claude/csnl-paper-rec/plugin
-```
-
-Once published, the path will be:
+The plugin is published as a Claude Code marketplace from the lab repo.
+In a fresh Claude Code session:
 
 ```
 /plugin marketplace add github:CSNL-vnilab/csnl-paper-rec-v2
-/plugin install csnl-paper-archive-interview
+/plugin install csnl-paper-archive-interview@csnl-marketplace
 ```
+
+(If the repo is private, Claude Code will prompt for a GitHub token.
+For local development, you can use a directory path instead of the
+GitHub URL.)
+
+Full end-to-end setup (operator + researcher steps) is documented in
+[`docs/SHARED-DEPLOYMENT.md`](../docs/SHARED-DEPLOYMENT.md).
 
 ## Configure
 
-Copy `.env.example` to either `<plugin-dir>/.env` (recommended;
-**wins over** the home-dir file when both exist) or
-`~/.csnl-paper-archive/.env` (fallback). Fill in:
+Copy `.env.example` to either `~/.csnl-paper-archive/.env` (recommended;
+survives reinstalls) or `<plugin-install-dir>/.env`. Use the *scoped*
+role + password the operator gave you. Do NOT use the lab's `postgres`
+pooler role. Fill in:
 
 ```
 SUPABASE_DB_HOST=...

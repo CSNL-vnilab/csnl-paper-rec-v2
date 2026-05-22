@@ -22,6 +22,9 @@ state/archive/queues/
 # P14 taxonomy IS source data — commit it (exception to the *.json line above).
 !state/archive/taxonomy.json
 
+# P15: plugin-side temp dir the SKILL writes for @file JSON passing
+plugin/state/
+
 # caches
 __pycache__/
 *.pyc
