@@ -67,6 +67,18 @@ def main() -> int:
                     help="Overwrite an existing .env without asking.")
     args = ap.parse_args()
 
+    # P16 audit fix: getpass.getpass() echoes the password when no TTY is
+    # attached. Refuse if stdin isn't a terminal (i.e. Claude-Code-spawned
+    # subprocess) — direct researchers to run this from a real shell.
+    if not sys.stdin.isatty():
+        print(
+            "이 스크립트는 비밀번호를 안전하게 받기 위해 실제 터미널에서 "
+            "직접 실행해주세요. Claude Code 채팅에 붙여넣지 말고, 별도의 "
+            "터미널 창을 열어서 같은 명령을 입력해주세요.",
+            file=sys.stderr,
+        )
+        return 2
+
     print()
     print("CSNL paper-archive-interview — 환경 설정")
     print("=" * 50)

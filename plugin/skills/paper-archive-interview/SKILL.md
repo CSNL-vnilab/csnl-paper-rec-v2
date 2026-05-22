@@ -158,12 +158,14 @@ title (in Korean if the title is Korean, else in plain Korean translation).
 
 Run scripts with `python <plugin-root>/scripts/<name>.py …`. The plugin
 root is the directory containing `.claude-plugin/plugin.json`. If
-`$CSNL_PLUGIN_DIR` is set, prefer that; otherwise look up two levels
-from this SKILL.md.
+`$CSNL_PLUGIN_DIR` is set, prefer that; otherwise resolve **three
+levels up from this SKILL.md** — SKILL.md → `paper-archive-interview/`
+→ `skills/` → plugin root.
 
 **Tempfile dir.** When the skill needs to pass JSON via `@file`, write
-the temp file under `<plugin-root>/state/_tmp/` (mkdir -p first; the
-plugin does not ship this directory).
+the temp file under `<plugin-root>/state/_tmp/`. **`mkdir -p` first —
+this is required**, the plugin does not ship this directory and a
+missing parent yields `FileNotFoundError`.
 
 ## Stage 0 — preflight + orientation (run first; fail fast)
 
@@ -359,32 +361,36 @@ Loop until `pick_next.py` returns `done:true`:
      `M-RSA`, `S-FAC`, etc.). Pull the Korean labels from the taxonomy.
    - 한 문장으로 연관성 설명. **STRICT GROUNDING RULE (P16):**
      - You may claim a connection ONLY if it can be supported by:
-       (a) a verbatim ≤ 12-word quote from the paper's title or abstract
-           returned by pick_next.py, AND
+       (a) a verbatim ≤ 12-word quote — **prefer the abstract; if the
+           abstract is null/empty, fall back to the title** (the
+           classics archive often has only a filename-derived title),
+           AND
        (b) a SPECIFIC field of the researcher's confirmed profile (one
            of: topics[*], methods[*], or a dim_preferences focus/method/
            stim/subj code) that matches the paper's `dim_tags` /
            `lab_scope_tags`.
      - If EITHER (a) or (b) cannot be substantiated from the pick_next
-       output alone, use this honesty fallback verbatim (just translate
-       <chunk-korean> from the chunk band): "본 논문의 초록만으로는
-       <init> 연구원님 연구와의 직접적인 연결을 단언하기 어렵습니다.
-       제목·키워드만 봐도 익숙한 영역이라면 1번, 아니면 2번을, 더
-       자세한 설명이 필요하면 4번을 눌러주세요."
+       output alone, use this honesty fallback verbatim: "본 논문의
+       초록/제목만으로는 <init> 연구원님 연구와의 직접적인 연결을
+       단언하기 어렵습니다. 제목·키워드만 봐도 익숙한 영역이라면 1번,
+       아니면 2번을, 더 자세한 설명이 필요하면 4번을 눌러주세요."
      - **DO NOT** infer transitive connections ("X 가 Y 일 수도 있어서
        박사님 연구와 …"). Either there is a direct verifiable link in the
        data or the fallback is the only acceptable output.
      - Use the paper's `tier` field to colour the sentence (never
-       mention "tier" or `S/A/B/C` aloud):
+       mention "tier" or `S/A/B/C` aloud). All tier templates use
+       "제목/초록 인용:" — pick whichever field actually contains the
+       quoted span:
      - `tier == "S"`: full match — "<init> 연구원님의 [matched method
-       한글라벨] × [matched stim 한글라벨] 조합과 맞물립니다. 초록 인용:
-       \"...\""
+       한글라벨] × [matched stim 한글라벨] 조합과 맞물립니다.
+       제목/초록 인용: \"...\""
      - `tier == "A"`: strong partial — "<init> 연구원님이 자주 다루시는
-       [matched-dim 한글라벨] 와 겹칩니다. 초록 인용: \"...\""
-     - `tier == "B"`: topical-only — quote the matching abstract span;
-       cite the topic field of the profile by name (NOT a code).
+       [matched-dim 한글라벨] 와 겹칩니다. 제목/초록 인용: \"...\""
+     - `tier == "B"`: topical-only — quote the matching span from
+       title or abstract; cite the topic field of the profile by name
+       (NOT a code). "제목/초록 인용: \"...\""
      - `tier == "C"`: humble — "주제는 인접하지만 방법론은 다른 결입니다.
-       제목/초록을 한번 훑어보실 만한지 봐주세요. 인용: \"...\""
+       제목/초록을 한번 훑어보실 만한지 봐주세요. 제목/초록 인용: \"...\""
    Then immediately present the MCQ block, verbatim:
 
    ```
@@ -465,8 +471,11 @@ also do — but the primary work is your own inference from the data.
 
 ### 4.2 — delegate to the belief-updater sub-agent (context-isolated)
 
-Spawn the `belief-updater` agent in its own context window. Pass it,
-as a single JSON blob in the prompt:
+Spawn the `belief-updater` agent in its own context window. Try
+`subagent_type: "belief-updater"` first; if Claude Code refuses with
+"unknown subagent", fall back to the plugin-namespaced form
+`subagent_type: "csnl-paper-archive-interview:belief-updater"`. Pass
+it, as a single JSON blob in the prompt:
 
 ```json
 {

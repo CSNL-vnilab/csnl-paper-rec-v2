@@ -91,14 +91,18 @@ In a fresh Claude Code session:
 
 ```
 /plugin marketplace add CSNL-vnilab/csnl-paper-rec-v2
-/plugin install csnl-paper-archive-interview@csnl-marketplace
+# If you previously installed an older version, uninstall + refresh first:
+/plugin uninstall csnl-paper-archive-interview@csnl-marketplace
+/plugin marketplace update csnl-marketplace
+/plugin install   csnl-paper-archive-interview@csnl-marketplace
 ```
 
 Then set up your `.env`. Two options — pick whichever feels easier:
 
 ### Option A — interactive (recommended)
 
-In a terminal:
+In a **real terminal** (not the Claude Code chat — `getpass` needs a
+TTY to mask the password):
 
 ```
 python ~/.claude/plugins/cache/csnl-marketplace/csnl-paper-archive-interview/*/scripts/setup.py

@@ -30,13 +30,17 @@ git push origin main
 ## Operator — share credentials
 
 The lab already shares one Supabase admin password among researchers.
-Send each researcher these 4 values via 1Password / Bitwarden / sealed
-Slack DM (NOT a regular channel):
+Send each researcher these **3 secret values + their init** via
+1Password / Bitwarden / sealed Slack DM (NOT a regular channel):
 
 - `SUPABASE_DB_HOST` (e.g. `aws-1-ap-southeast-1.pooler.supabase.com`)
 - `SUPABASE_DB_USER` (the shared pooler role, e.g. `postgres.<projectid>`)
 - `SUPABASE_DB_PASSWORD` (the shared admin password)
 - their researcher init (e.g. `JOP`, `BHL`)
+
+The other 3 values (PORT=5432, NAME=postgres, SCHEMA=csnl_paper_rec)
+are inline defaults in the heredoc / `setup.py` — researchers don't
+need to ask about them.
 
 The plugin's `_pdb.py` enforces a strict table allowlist + rejects
 multi-statement SQL + rejects TRUNCATE/DROP/ALTER. So even though the
@@ -44,25 +48,33 @@ shared role has admin rights at the DB level, the plugin layer cannot
 write outside the 4 plugin-writeable tables. Defense in depth via code,
 not via DB-level GRANTs.
 
-## Researcher — install + setup (3 commands)
+## Researcher — install + setup
 
 In a fresh Claude Code session:
 
 ```
 /plugin marketplace add CSNL-vnilab/csnl-paper-rec-v2
-/plugin install csnl-paper-archive-interview@csnl-marketplace
+# If you previously installed an older version, uninstall first to
+# force a clean refresh (version pinning may otherwise keep stale files):
+/plugin uninstall csnl-paper-archive-interview@csnl-marketplace
+/plugin marketplace update csnl-marketplace
+/plugin install   csnl-paper-archive-interview@csnl-marketplace
 ```
 
 (If the repo is private, Claude Code prompts for a GitHub token.)
 
-Then set up the `.env`. The interactive setup is the easiest:
+Then set up the `.env`. The interactive setup is the easiest —
+**run this in a real terminal window, NOT in the Claude Code chat**
+(the password prompt needs a real TTY; pasting into Claude Code chat
+will refuse or, worse, echo the password):
 
 ```
 python ~/.claude/plugins/cache/csnl-marketplace/csnl-paper-archive-interview/*/scripts/setup.py
 ```
 
-It prompts for the 5 values, writes `~/.csnl-paper-archive/.env` with
-`chmod 600`, and verifies the DB connection if you give it your init.
+It prompts for the 3 secret values, writes `~/.csnl-paper-archive/.env`
+with `chmod 600`, and verifies the DB connection if you give it your
+init.
 
 If you'd rather paste a heredoc:
 
