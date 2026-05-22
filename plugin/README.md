@@ -33,29 +33,39 @@ When you run `/csnl-paper-archive-interview:paper-interview <YOUR_INIT>`:
    `archive_interview_sessions`. You can stop and resume; the next session
    picks up where you left off.
 
-## Install
-
-The plugin is published as a Claude Code marketplace from the lab repo.
-In a fresh Claude Code session:
+## Install (3 lines)
 
 ```
 /plugin marketplace add github:CSNL-vnilab/csnl-paper-rec-v2
 /plugin install csnl-paper-archive-interview@csnl-marketplace
 ```
 
-(If the repo is private, Claude Code will prompt for a GitHub token.
-For local development, you can use a directory path instead of the
-GitHub URL.)
+Then in a terminal — paste the 5 values the operator sent you:
 
-Full end-to-end setup (operator + researcher steps) is documented in
-[`docs/SHARED-DEPLOYMENT.md`](../docs/SHARED-DEPLOYMENT.md).
+```
+mkdir -p ~/.csnl-paper-archive && cat > ~/.csnl-paper-archive/.env <<EOF
+SUPABASE_DB_HOST=<HOST_FROM_OPERATOR>
+SUPABASE_DB_PORT=5432
+SUPABASE_DB_NAME=postgres
+SUPABASE_DB_USER=<USER_FROM_OPERATOR>
+SUPABASE_DB_PASSWORD=<PASSWORD_FROM_OPERATOR>
+CPR_LEDGER_SCHEMA=csnl_paper_rec
+EOF
+chmod 600 ~/.csnl-paper-archive/.env
+```
 
-## Configure
+That's it. Run with `/csnl-paper-archive-interview:paper-interview <YOUR_INIT>`.
 
-Copy `.env.example` to either `~/.csnl-paper-archive/.env` (recommended;
-survives reinstalls) or `<plugin-install-dir>/.env`. Use the *scoped*
-role + password the operator gave you. Do NOT use the lab's `postgres`
-pooler role. Fill in:
+The plugin's `_pdb.py` enforces a strict table allowlist regardless of
+DB role — so the shared admin credentials can't accidentally corrupt
+the lab DB through this plugin. Full operator + researcher walkthrough
+in [`docs/SHARED-DEPLOYMENT.md`](../docs/SHARED-DEPLOYMENT.md).
+
+## Configure (alternative — interactive)
+
+If you'd rather edit the .env in a text editor, copy
+[`.env.example`](.env.example) to `~/.csnl-paper-archive/.env` and fill
+in:
 
 ```
 SUPABASE_DB_HOST=...
