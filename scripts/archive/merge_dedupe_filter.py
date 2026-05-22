@@ -70,6 +70,30 @@ _POSTER_FN_RE  = re.compile(r"(?:^|_)(poster|sfn\d|vss\d|hbm\d|cosyne\d)", re.IG
 _TEXTBOOK_TITLE_RE = re.compile(
     r"\b(textbook|handbook|encyclopedia|companion to|primer)\b", re.IGNORECASE,
 )
+# Peer-review / author-response / decision-letter side documents that
+# OpenAlex indexes under regular DOIs (e.g. eLife sa1/sa2 sub-DOIs).
+# These are NOT primary papers; drop them outright at filter time.
+_REVIEW_DOC_TITLE_RE = re.compile(
+    r"^\s*("
+    r"author response[:\s]|"
+    r"reviewer\s*#\d|"
+    r"reviewer\s+\d|"
+    r"decision letter|"
+    r"editor['’]s? (evaluation|assessment)|"
+    r"public review|"
+    r"editorial assessment"
+    r")",
+    re.IGNORECASE,
+)
+# Poster abstracts at journal supplements (e.g. NeuroImage S1 issues
+# at SfN/VSS/HBM time): titles often empty or non-substantive, and the
+# OpenAlex type is "article" so we can't rely on type alone. Detect by
+# title prefix or by `_source_payload.type` when available.
+_POSTER_TITLE_RE = re.compile(
+    r"^\s*(poster\s+(abstract|presentation|p\d)|abstract\s+\d+|"
+    r"sfn\s*\d{4}|cosyne\s*\d{4}|vss\s*\d{4})",
+    re.IGNORECASE,
+)
 _BOOK_DOI_PREFIXES = (
     "10.1017/cbo", "10.4324", "10.1201", "10.5040", "10.1142", "10.36019",
     "10.12987",                 # Yale Univ Press chapters
@@ -89,10 +113,36 @@ def is_draft(filename: str | None, title: str | None) -> bool:
     return False
 
 
-def is_poster(filename: str | None, venue: str | None) -> bool:
+def is_poster(filename: str | None, venue: str | None, title: str | None = None,
+              source_type: str | None = None) -> bool:
     if filename and _POSTER_FN_RE.search(filename):
         return True
     if venue and any(t in venue.lower() for t in ("poster",)):
+        return True
+    if title and _POSTER_TITLE_RE.search(title):
+        return True
+    if source_type and source_type.lower() in ("poster", "supplementary-materials"):
+        return True
+    return False
+
+
+def is_review_doc(title: str | None, source_type: str | None = None) -> bool:
+    """eLife/Wellcome public-review documents, author responses, decision
+    letters. OpenAlex indexes these as type='peer-review' or with DOIs
+    like 10.7554/eLife.NNNNN.X.sa1; their title alone usually identifies
+    them. These are NOT primary papers and must be dropped from the queue.
+    """
+    if source_type and source_type.lower() in ("peer-review", "review"):
+        # Note: "review" in OpenAlex includes both review-articles (legit)
+        # and peer-review documents (drop). The title regex disambiguates —
+        # if the title starts with "Reviewer #" etc. it is a peer-review doc,
+        # otherwise treat as legitimate review article.
+        if title and _REVIEW_DOC_TITLE_RE.search(title):
+            return True
+        if (source_type or "").lower() == "peer-review":
+            return True
+        return False
+    if title and _REVIEW_DOC_TITLE_RE.search(title):
         return True
     return False
 
@@ -146,20 +196,24 @@ def lab_relevance(row: dict) -> tuple[bool, list[str]]:
 def filter_decision(row: dict) -> dict:
     src_payload = row.get("_source_payload") or {}
     filename    = src_payload.get("source_ref") or row.get("_source_ref")
+    source_type = (src_payload.get("type") if isinstance(src_payload, dict) else None)
     draft       = is_draft(filename, row.get("title"))
-    poster      = is_poster(filename, row.get("venue"))
+    poster      = is_poster(filename, row.get("venue"), row.get("title"), source_type)
     textbook    = is_textbook(row.get("page_count"), row.get("title"), row.get("doi"))
+    review_doc  = is_review_doc(row.get("title"), source_type)
     relevant, tags = lab_relevance(row)
     reasons = {}
     if draft:    reasons["draft"]    = "filename/title heuristic"
-    if poster:   reasons["poster"]   = "filename/venue heuristic"
+    if poster:   reasons["poster"]   = "filename/title/venue/type heuristic"
     if textbook:
         if row.get("page_count") and row["page_count"] >= 300:
             reasons["textbook"] = f"page_count={row['page_count']}"
         elif row.get("doi"):
-            reasons["textbook"] = f"book DOI prefix"
+            reasons["textbook"] = "book DOI prefix"
         else:
             reasons["textbook"] = "title keyword"
+    if review_doc:
+        reasons["review_doc"] = f"peer-review/author-response/decision-letter ({source_type or 'title-pattern'})"
     if not relevant:
         reasons["lab_irrelevant"] = "no scope-tag hit, not classics/pi source"
     return {
@@ -167,7 +221,8 @@ def filter_decision(row: dict) -> dict:
         "is_textbook":     textbook,
         "is_draft":        draft,
         "is_poster":       poster,
-        "is_lab_relevant": relevant and not (draft or poster or textbook),
+        "is_review_doc":   review_doc,
+        "is_lab_relevant": relevant and not (draft or poster or textbook or review_doc),
         "lab_scope_tags":  tags,
         "filter_reason":   reasons,
         "decided_at":      kst_iso(),
@@ -309,8 +364,85 @@ def merge_all() -> tuple[dict[str, dict], list[dict], dict, dict[str, str]]:
             if not collapsed:
                 kept.append(c)
 
-    # Apply collapse map.
+    # Apply within-year collapse map.
     for alias, target in collapse_map.items():
+        if alias in by_id:
+            del by_id[alias]
+        for s in sources:
+            if s["canonical_id"] == alias:
+                s["canonical_id"] = target
+
+    # Third pass — CROSS-YEAR title-fuzz collapse.
+    # Catches preprint v1 (year 2023) ↔ preprint v2 (year 2025) ↔ eLife
+    # published version (year 2024) for the same paper. Uses a slightly
+    # tighter threshold (0.95) because we are abandoning the year guard,
+    # and uses a "best representative" rule: prefer non-preprint over
+    # preprint, then newer year over older, then longer abstract.
+    title_groups: dict[str, list[str]] = {}
+    for cid, p in by_id.items():
+        tn = p.get("title_norm") or ""
+        if len(tn) >= 25:                     # short titles too noisy
+            title_groups.setdefault(tn, []).append(cid)
+
+    def _best_of(cids: list[str]) -> str:
+        def _key(c: str) -> tuple:
+            p = by_id[c]
+            return (
+                0 if p.get("is_preprint") else -1,        # non-preprint first
+                -(p.get("year") or 0),                    # newer first
+                -len(p.get("abstract") or ""),            # richer first
+            )
+        return sorted(cids, key=_key)[0]
+
+    cross_year_collapses = 0
+    for tn, cids in title_groups.items():
+        if len(cids) < 2:
+            continue
+        # Confirm with fuzz to avoid grouping by exact-match alone (already
+        # handled by the per-cid bucketing above).
+        keeper = _best_of(cids)
+        for c in cids:
+            if c == keeper:
+                continue
+            # second sanity check: don't merge if year gap > 6 (might be a
+            # genuinely re-titled paper).
+            yk = by_id[keeper].get("year") or 0
+            yc = by_id[c].get("year") or 0
+            if yk and yc and abs(yk - yc) > 6:
+                continue
+            collapse_map[c] = keeper
+            by_id[keeper] = _merge_one(by_id[keeper], by_id[c])
+            cross_year_collapses += 1
+
+    # Apply the cross-year collapses to by_id + sources.
+    for alias, target in list(collapse_map.items())[-cross_year_collapses:]:
+        if alias in by_id:
+            del by_id[alias]
+        for s in sources:
+            if s["canonical_id"] == alias:
+                s["canonical_id"] = target
+
+    # Fourth pass — DOI version siblings (e.g. _v2 suffix on OSF preprints).
+    # Group by version-stripped DOI; collapse all but the latest year.
+    doi_groups: dict[str, list[str]] = {}
+    for cid, p in by_id.items():
+        d = (p.get("doi") or "").lower()
+        if not d:
+            continue
+        d_root = re.sub(r"_v\d+$", "", d)
+        doi_groups.setdefault(d_root, []).append(cid)
+    doi_collapses = 0
+    for d_root, cids in doi_groups.items():
+        if len(cids) < 2:
+            continue
+        keeper = _best_of(cids)
+        for c in cids:
+            if c == keeper or c in collapse_map:
+                continue
+            collapse_map[c] = keeper
+            by_id[keeper] = _merge_one(by_id[keeper], by_id[c])
+            doi_collapses += 1
+    for alias, target in list(collapse_map.items())[-doi_collapses:] if doi_collapses else []:
         if alias in by_id:
             del by_id[alias]
         for s in sources:
@@ -322,6 +454,8 @@ def merge_all() -> tuple[dict[str, dict], list[dict], dict, dict[str, str]]:
         "after_cid_dedup": len({s["canonical_id"] for s in sources}),
         "after_fuzz_collapse": len(by_id),
         "fuzz_collapses":     len(collapse_map),
+        "cross_year_fuzz":    cross_year_collapses,
+        "doi_version_dedup":  doi_collapses,
     }
     return (by_id, sources, report, collapse_map)
 

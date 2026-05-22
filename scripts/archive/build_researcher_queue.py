@@ -533,15 +533,52 @@ def main() -> int:
             dim_prefs = {"focus": {}, "method": {}, "stim": {}, "subj": {},
                          "combo_bonus": [], "source": "none", "version": 0}
         chunk_mix = profile.get("chunk_mix") or _DEFAULT_CHUNK_MIX
-        # CLI --top overrides chunk_mix when explicitly bumped above the
-        # max of the mix (operator's foot-gun escape hatch).
         if args.top and args.top > max(chunk_mix.values()):
             chunk_mix = {k: args.top for k in chunk_mix}
+        # P15: build the query embedding as a weighted average of
+        # per-project embeddings when the researcher specified
+        # project_weights at Stage 1; otherwise fall back to one shared
+        # text concat (legacy behavior).
+        project_weights = (dim_prefs.get("project_weights") or {}) if isinstance(dim_prefs, dict) else {}
+        # Report top-weight focus codes, not insertion-order keys.
+        focus_by_weight = sorted(
+            ((c, float(w)) for c, w in (dim_prefs.get("focus") or {}).items()
+             if (w or 0) > 0),
+            key=lambda kv: -kv[1])
         print(f"[queue] {init}: prefs_source={prefs_source}  "
               f"chunk_mix={chunk_mix}  "
-              f"focus_top={list(dim_prefs.get('focus', {}).keys())[:3]}")
+              f"focus_top={[c for c, _ in focus_by_weight[:3]]}  "
+              f"project_weights={project_weights or 'uniform'}")
 
-        qv = backend.encode([text])[0]
+        if project_weights and len(rows) >= 2:
+            # Encode each project's interest text separately, average with
+            # supplied weights. Skips zero-weight projects.
+            try:
+                import numpy as np
+            except ImportError:
+                np = None
+            per_proj_text = {r.get("project_slug") or r.get("title"):
+                             _interest_text_from_row(r) for r in rows}
+            slugs = [s for s in per_proj_text if per_proj_text[s].strip()
+                     and project_weights.get(s, 0) > 0]
+            if slugs:
+                vecs = backend.encode([per_proj_text[s] for s in slugs])
+                wsum = sum(project_weights[s] for s in slugs) or 1.0
+                if np is not None:
+                    arr = np.asarray(vecs, dtype="float32")
+                    w = np.asarray([project_weights[s] for s in slugs],
+                                   dtype="float32").reshape(-1, 1)
+                    qv = (arr * w / wsum).sum(axis=0).tolist()
+                else:
+                    qv = [0.0] * len(vecs[0])
+                    for v, s in zip(vecs, slugs):
+                        ww = project_weights[s] / wsum
+                        for i, val in enumerate(v):
+                            qv[i] += ww * float(val)
+            else:
+                qv = backend.encode([text])[0]
+        else:
+            qv = backend.encode([text])[0]
 
         # Candidate set: in-scope, embedded, present in archive.
         cids = [c for c, f in filters.items() if f.get("is_lab_relevant", True)]

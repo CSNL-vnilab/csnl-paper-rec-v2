@@ -31,12 +31,17 @@ description: Operating procedure for the CSNL paper-archive interview. Drives th
   `not_relevant` with a `reason` field — never as a queue edit.
 - No paper is *sent* anywhere. This is read + record only.
 
-## Tag rendering (English-internal → Korean researcher-facing)
+## Tag rendering — Korean UI, English technical terms
 
-The researcher sees Korean phrases only. Internal codes (`BDM`, `F-BAY`,
-`M-RSA`, `S-FAC`, `U-HUM`, `S/A/B/C`, `recent`/`mid`/`classic`) never
-appear in messages. Load the live rendering table from the operator's
-taxonomy file every time:
+The researcher sees **Korean prose for UI text** (questions, framing,
+status updates) but **English originals for scientific/technical terms**
+(RSA, MVPA, fMRI, BOLD, pRF, efficient coding, rate-distortion theory,
+Bayesian observer, drift diffusion, attractor dynamics, …). Translate
+only the UI scaffolding, never the discipline's working vocabulary.
+
+Internal codes (`F-BAY`, `M-RSA`, `S-FAC`, `U-HUM`, `S/A/B/C`,
+`recent`/`mid`/`classic`, `tier`, `composite`) never appear in messages.
+Load the rendering table from the operator's taxonomy file:
 
 ```
 cat <plugin-root>/../state/archive/taxonomy.json | jq -r \
@@ -49,33 +54,48 @@ installed in-tree. When installed standalone, read
 is set, otherwise fall back to the lab-bucket table below for the
 7-bucket top layer only.)
 
-**Top-layer lab buckets** (always available, no taxonomy needed):
+**Top-layer lab buckets** — render with English term + 1-line Korean gloss:
 
-| Tag | Render as (Korean) |
+| Tag  | Render as |
+| ---  | --- |
+| BDM  | "Bayesian decision-making (의사결정)" |
+| NN   | "neural dynamics / biologically plausible networks" |
+| fVC  | "fMRI visual cortex" |
+| VWM  | "visual working memory (VWM)" |
+| SD   | "serial dependence (SD)" |
+| CG   | "categorization & generalization" |
+| METH | "methodology" |
+
+**52-cat sub-tags** — read `taxonomy.json`, but display with English
+term first, Korean gloss in parens (only if Korean adds something).
+Examples (the taxonomy file `label_ko` field is a *gloss helper*, not
+the primary display):
+
+| Code | Display string |
 | --- | --- |
-| BDM  | 의사결정 / 베이지안 추론 |
-| NN   | 신경망 동역학 / 생물학적 신경망 |
-| fVC  | fMRI 시각피질 |
-| VWM  | 시각작업기억 |
-| SD   | 시계열 의존성(serial dependence) |
-| CG   | 범주학습 / 일반화 |
-| METH | 방법론 (모델 비교 등) |
-
-**52-cat sub-tags** (4 dimensions × focus/method/stim/subj) — for each
-code returned by `pick_next.py` in `dim_match.matched` or in `dim_tags`,
-read `taxonomy.json` and use the `label_ko` field as the Korean phrase.
-Examples (full table in taxonomy.json):
-
-| Code | label_ko | dim |
-| --- | --- | --- |
-| `F-EFC`  | 효율부호화·정보이론 | focus |
-| `F-BAY`  | 베이지안 관찰자 모델 | focus |
-| `M-RSA`  | 표상유사도 분석 | method |
-| `M-EFC`  | 효율부호화 분석 | method |
-| `S-ORI`  | 방위 (오리엔테이션) | stim |
-| `S-FAC`  | 얼굴 | stim |
-| `U-HUM`  | 정상 인간 피험자 | subject |
-| `U-NHP`  | 비인간 영장류 | subject |
+| `F-EFC`  | "efficient coding / information theory" |
+| `F-BAY`  | "Bayesian observer / ideal observer" |
+| `F-BEH`  | "behavioural modeling" |
+| `F-NIM`  | "human neuroimaging (fMRI/MEG/EEG)" |
+| `F-NMD`  | "neural circuit / RNN modeling" |
+| `M-RSA`  | "RSA (representational similarity analysis)" |
+| `M-EFC`  | "efficient coding / rate-distortion modeling" |
+| `M-BAY`  | "hierarchical Bayesian model fitting" |
+| `M-DDM`  | "drift-diffusion / sequential-sampling models" |
+| `M-PRF`  | "pRF (population receptive field)" |
+| `M-PSY`  | "psychophysics" |
+| `M-PUP`  | "pupillometry" |
+| `M-EEG`  | "M/EEG signal analysis" |
+| `S-ORI`  | "orientation (Gabor) stimuli" |
+| `S-FAC`  | "face stimuli" |
+| `S-NUM`  | "numerosity stimuli" |
+| `S-DUR`  | "duration / interval timing" |
+| `S-NSCN` | "natural-scene stimuli" |
+| `S-MOT`  | "motion (RDK / dot-motion)" |
+| `U-HUM`  | "human (healthy)" |
+| `U-CLN`  | "clinical (patients)" |
+| `U-NHP`  | "non-human primates" |
+| `U-ROD`  | "rodent" |
 
 **Chunk codes** (`recent`/`mid`/`classic`) — never spoken as codes; use
 plain Korean date phrases:
@@ -113,86 +133,136 @@ plugin does not ship this directory).
 
 1. Call `preflight.py <init>`. Parse the JSON.
 2. If `ok: false`: print the script's `message_ko` to the researcher
-   verbatim (no extra prose, no signature), then stop. Do not call any
-   other script.
+   verbatim (no extra prose, no signature), then stop.
 3. If `ok: true`: show a one-line Korean greeting (no signature)
-   mentioning the queue size — e.g. "안녕하세요. 추천 큐 N편 준비됐어요.
-   인터뷰를 시작할게요." — then proceed to Stage 1.
+   mentioning queue size — e.g. "안녕하세요. 추천 큐 N편 준비됐어요.
+   짧은 확인 몇 가지 진행하고 시작할게요." — then proceed to Stage 1.
 
-## Stage 1 — profile verification (run once per session)
+## Stage 1 — profile verification (smaller turns — one question at a time)
 
-1. Call `profile_show.py <init>`. Parse the JSON. The JSON may also carry
-   `dim_preferences` (auto-derived or previously confirmed) and `chunk_mix`
-   — surface those at step 4 (P14 dimension confirmation).
-2. If `error == "no_active_projects"`: tell the researcher in Korean
-   that the lab DB has no active project rows above the confidence
-   threshold, ask them to update their project metadata via the CSNL
-   self-archive tool first, and stop.
-3. Otherwise: present a compact summary in Korean. One short paragraph
-   for each of:
-   - 현재 주목 중인 주제 (`topics`)
-   - 다루는 방법론 (`methods`)
-   - 자주 참조한 저자 (`authors`)
-   - 진행 중인 프로젝트들 (`projects[].title` + phase)
-   Then ask: "위 정리가 정확한가요? 잘못된 항목이나 빠진 항목을 알려주세요.
-   (없다면 '맞아요'라고 답해주세요.)"
-4. Capture the researcher's reply.
-   - If they say "맞아요" / "좋아요" / "정확해요" / etc. — `corrections = {}`.
-   - If they correct something — store as
-     `{topics_remove:[...], topics_add:[...], methods_remove:[...], ...}`.
+Hard rule: **ask one question per turn, wait for the researcher to
+respond, then ask the next**. Do NOT bundle topic-confirmation,
+method-confirmation, project-weighting, and dim-preferences into one
+mega-message — answer accuracy drops sharply.
 
-5. **(P14) Dimension preference confirmation.** Read `dim_preferences`
-   from the profile_show output. Two cases:
+Internal state to build across the turns:
+```
+corrections      = {}      # what the researcher said is wrong/missing
+project_weights  = {}      # {project_slug: 0.0..1.0, sum ≈ 1.0}
+dim_prefs        = {...}   # the working dim_preferences dict
+```
 
-   **5a. Empty / auto-derive yielded nothing** (`dim_preferences` is
-   null OR all 4 sub-dicts empty): say in Korean —
-   > "어떤 측면을 우선해 추천드릴지 알려주시면 정확도가 올라가요.
-   > 다음 4가지에서 관심 있는 항목을 골라주세요 (여러 개 가능, 없으면
-   > '없음'):
-   >   • 연구 초점: 행동 모델 / 인간 뇌영상 / 침습 전기생리 / 신경회로
-   >     모델링 / 베이지안 관찰자 / 효율부호화 / 시지각 / 기억 / 주의 /
-   >     학습 / 임상 / 발달 / 이론
-   >   • 방법론: 심리물리학 / 확산모델 / 베이지안 모델적합 / 효율부호화
-   >     분석 / fMRI 분석 / pRF·망막순응도 / 표상유사도 분석 / 인코딩
-   >     모델 / M/EEG / 동공측정 / 시선추적 / 뇌자극 / 심층신경망 모델
-   >     / 대규모 전기생리 / 칼슘영상 / VR
-   >   • 자극: 방위 / 운동 / 생체운동 / 대비·휘도 / 공간주파수 / 크기 /
-   >     수량 / 시간간격 / 깊이 / 색채 / 얼굴 / 사물·범주 / 자연영상 /
-   >     음고 / 촉각 / 가치·보상 / 추상자극 / 다감각
-   >   • 실험 대상: 정상 인간 / 임상 인간 / 비인간 영장류 / 설치류 /
-   >     발달·영유아 / 모델만 / 기타 종"
-   Researcher picks Korean phrases. Map each phrase back to the code via
-   `taxonomy.json` `label_ko` → `code`. Assign weight 1.0 to each picked
-   code in its dimension; 0.0 for the rest.
+### Step 1.0 — load
 
-   **5b. Auto-derived prefs exist** (at least one dim populated): render
-   them in Korean (use `label_ko` from taxonomy.json) and present a 3-option
-   chip set:
-   > "박사님 프로젝트를 보니 주로 [효율부호화·정보이론 + 베이지안 관찰자]
-   > 쪽으로 추천드리면 잘 맞을 것 같아요. 어떻게 할까요?
-   >   (a) 좋아요, 이대로 진행
-   >   (b) 거의 맞는데 한두 가지 빼고 / 더하고 싶어요
-   >   (c) 다시 정해주세요 — 전체 메뉴 보여드릴게요"
-   - `a` → use the auto-derived prefs as-is, `source = "auto-then-confirmed"`.
-   - `b` → ask in Korean what to remove/add; edit weights and set
-     `source = "auto-then-confirmed"`.
-   - `c` → fall through to 5a flow.
+Call `profile_show.py <init>`. Parse JSON. If `error ==
+"no_active_projects"`: print Korean "활성 프로젝트가 csnl_research 에
+없습니다. CSNL 자가-아카이브로 먼저 프로젝트 메타데이터를 업데이트해주세요."
+and stop.
 
-   **(P14) Chunk mix.** Ask in plain Korean:
-   > "추천 묶음 비율을 정해주세요 (기본: 최근 5년 120편 / 5-10년 전 60편
-   > / 10년 이상 전 20편). 그대로 좋다면 '기본', 아니면 원하는 비율을
-   > 알려주세요 (예: '최신 위주 / 고전 위주 / 50:30:20')."
-   - "기본" → use `{"recent":120,"mid":60,"classic":20}`.
-   - "최신 위주" → `{"recent":160,"mid":30,"classic":10}`.
-   - "고전 위주" → `{"recent":40,"mid":60,"classic":120}`.
-   - Custom triple → parse into integers; ensure each ≥ 5.
+### Step 1.1 — topic confirmation (ONE question)
 
-6. Call `profile_confirm.py --session <sid> --init <init>
-   --snapshot-json @snap.json --corrections-json @corr.json
-   --dim-preferences-json @dim.json --chunk-mix-json @mix.json`. Use temp
-   files under `<plugin-root>/state/_tmp/` (mkdir -p first). Confirm
-   `ok:true`. Tell the researcher (Korean): "확인됐어요. 추천 순서는 다음
-   사이클부터 반영돼요. 일단 지금 큐로 시작할게요."
+Render the auto-extracted topics as a short Korean list (≤ 5 bullets),
+using **English technical terms** (e.g. "efficient coding",
+"serial dependence", "rate-distortion theory") with Korean only for the
+surrounding UI words. Ask one question:
+
+> "박사님이 현재 주목 중인 주제로 다음을 정리했어요:
+> • {topic_1}
+> • {topic_2}
+> • {topic_3}
+> 위 정리가 맞나요? 빠지거나 잘못된 항목 있으면 알려주세요."
+
+Wait. Capture `corrections.topics_remove` / `topics_add`.
+
+### Step 1.2 — methodology confirmation (ONE question)
+
+Same shape, methods only:
+
+> "다루시는 방법론은 이렇게 정리했어요:
+> • {method_1}
+> • {method_2}
+> 맞나요? (잘못된 / 빠진 것 있으면 알려주세요)"
+
+Wait. Capture `corrections.methods_*`.
+
+### Step 1.3 — multi-project weighting (ONE question — ONLY if N projects > 1)
+
+If `len(profile.projects) == 1`: skip. Set
+`project_weights = {projects[0].slug: 1.0}` automatically.
+
+If > 1:
+> "현재 진행 중인 프로젝트가 {N}개네요:
+> 1) {projects[0].title}
+> 2) {projects[1].title}
+> 3) {projects[2].title}
+> 4) {projects[3].title}
+> 추천 우선순위에 반영할 비중을 정해주세요. 합이 100이 되도록 N개
+> 숫자를 알려주세요. (예: 70/20/5/5 또는 60 30 10)"
+
+Wait. Parse the researcher's reply into a list of integers, normalize to
+sum=1.0. Validate: number of values == N projects; each ≥ 0; non-zero
+sum. Re-ask once if malformed; on second failure default to uniform
+weights and tell the researcher in Korean "비중 파싱이 어려워서 균등하게
+잡았어요."
+
+Store as `project_weights = {slug: w/sum, ...}` (key by `projects[i].slug`).
+
+### Step 1.4 — dimension-preference confirmation (ONE question)
+
+Read `profile.dim_preferences` (the auto-derived suggestion).
+
+**1.4a — auto-derive yielded something.** Render the top-2 cats per
+populated dim using the English+Korean rendering table above. Ask:
+> "박사님 프로젝트 텍스트에서 다음 키워드가 자주 등장해요:
+> • Focus: efficient coding, Bayesian observer
+> • Method: psychophysics
+> 이 방향으로 추천을 우선시할게요. (a) 좋아요 (b) 한두 가지 빼거나 더해줘
+> (c) 다시 정해줘"
+- `a` → keep auto prefs as-is, `source = "auto-then-confirmed"`.
+- `b` → ask what to add/remove; apply edits with weight 1.0 / 0.0.
+- `c` → present the full Korean+English menu (focus / method / stim /
+  subj) and let them pick.
+
+**1.4b — auto-derive empty.** Skip directly to the full Korean+English
+menu (one turn — ask them to pick at least one item per dim they care
+about; "없음" is OK for a dim).
+
+### Step 1.5 — chunk_mix
+
+**Skip the chunk_mix question.** Use the default
+`{"recent": 120, "mid": 60, "classic": 20}` automatically. (Operator may
+override per-researcher later; the plugin does not ask.)
+
+### Step 1.6 — persist
+
+Build the final `dim_preferences` payload (include `project_weights`
+nested under it) and write everything in one `profile_confirm.py` call:
+
+```
+python plugin/scripts/profile_confirm.py \
+  --session <sid> --init <init> \
+  --snapshot-json @snap.json \
+  --corrections-json @corr.json \
+  --dim-preferences-json @dim.json
+```
+
+Where `dim.json` includes `project_weights`:
+```json
+{
+  "focus":  {"F-EFC": 1.0, "F-BAY": 0.7},
+  "method": {"M-PSY": 1.0},
+  "stim":   {},
+  "subj":   {"U-HUM": 1.0},
+  "combo_bonus": [],
+  "project_weights": {"slug_a": 0.7, "slug_b": 0.2, "slug_c": 0.05, "slug_d": 0.05},
+  "source": "auto-then-confirmed",
+  "version": 2
+}
+```
+
+Use temp files under `<plugin-root>/state/_tmp/` (mkdir -p first). Confirm
+`ok:true`. Say in Korean: "확인됐어요. 다음 사이클부터 더 정확한 큐가
+만들어지고, 일단 지금 큐로 시작할게요."
 
 ## Stage 2 — queue walk (the main loop)
 
@@ -284,60 +354,120 @@ interview thread stays small. When it returns:
 - Then re-present the same MCQ. Do **not** auto-pick a choice on the
   researcher's behalf.
 
-## Stage 4 — meta-review (every 10 answers)
+## Stage 4 — meta-review (every 10 answers; **active belief update**)
 
-1. Call `meta_review.py --init … --session …` *without* `--proposal-json`.
-   The script writes a `keep`-shaped placeholder row keyed on
-   `(session_id, at_response_count)` — a second call with a confirmed
-   proposal at the same N updates the same row (no duplicates).
-2. Parse the JSON. Build a deterministic proposal payload from the
-   breakdown — these are *internal* labels, never spoken aloud:
-   - if `not_relevant >= 6 of last 10` → proposal_type = `tighten_chunk`,
-     `target_chunk` = the age band ("recent" / "mid" / "classic") that
-     produced the most `not_relevant` papers.
-   - else if `already_read >= 6 of last 10` → proposal_type =
-     `advance_chunk` (move to the next age band earlier).
-   - **(P14) else if `dim_freq` shows ≥ 7 of last 10 in one focus value
-     while the researcher's confirmed `dim_preferences.focus` ranks a
-     different value highest** → proposal_type = `shift_focus`,
-     `target_dim_shift = {"focus":{"add":[underrepresented_code],
-     "downweight":[overrepresented_code]}}`.
-   - else if `save_later + tell_me_more >= 7` → proposal_type = `keep`,
-     `topn_delta` = +2.
-   - else → proposal_type = `keep`, `topn_delta` = 0.
-3. Present a short Korean update to the researcher — translate the
-   internal proposal_type into a plain Korean sentence. Do NOT mention
-   the label, the band code, or any internal field name. Examples:
-   - keep+delta:  "지금까지 N개의 논문을 봤어요. 저장 X, 이미 읽음 Y,
-                  관련 없음 Z. 추천이 잘 맞는 것 같네요 — 다음 묶음에서
-                  몇 편 더 보여드릴게요."
-   - tighten:     "최근 본 논문 10편 중 절반 이상이 관련이 없다고
-                  하셨어요. 이 시기 (최근 5년 / 5-10년 전 / 10년 이상 전
-                  — 해당하는 시기로 풀어서 말하세요) 의 추천 기준을 조금
-                  더 엄격하게 적용해도 될까요?"
-   - advance:     "최근 본 논문 다수를 이미 읽으셨네요. 다음 시기로
-                  바로 넘어갈까요?"
-   - **shift_focus** (P14): "최근 본 10편 중 [N편]이 [overrepresented
-                  한글라벨] 중심이었는데, 박사님 프로젝트를 보면
-                  [underrepresented 한글라벨] 비중도 큰 것 같아요. 다음
-                  묶음에선 [underrepresented 한글라벨] 쪽을 더 보여드릴
-                  까요?" (한글라벨 = taxonomy.json `label_ko`.)
-4. Wait for the researcher's confirmation.
-   - "네/좋아요/그렇게 해주세요" → re-call `meta_review.py …
-     --proposal-json @p.json --apply` with the proposal stamped; the
-     script flips `applied=TRUE` on the same row.
-     **For `shift_focus`** (P14): additionally call `profile_confirm.py
-     --session <sid> --init <init> --snapshot-json @snap.json
-     --dim-preferences-json @updated.json` where `updated.json` is the
-     current dim_preferences with the proposal's `add` codes set to
-     weight 1.0 and the `downweight` codes set to 0.3 (not 0 — the
-     researcher may still want occasional ones). The queue rebuild
-     itself is operator-only — tell the researcher in Korean: "확인됐
-     어요. 다음 추천 사이클부터 반영돼요." (Do NOT claim the queue is
-     rebuilding now.)
-   - "아니요/괜찮아요/그대로 두세요" → re-call `meta_review.py …
-     --proposal-json '{"proposal_type":"keep","topn_delta":0}' --apply`.
-5. Continue the queue walk.
+This is NOT a rubric pass. Every 10 MCQs you (Opus) actively **reason
+about what the researcher just signalled**, update an explicit model of
+their preferences, write it back to the DB, and tell the researcher in
+plain Korean what changed. The rubric branches below are *checks* you
+also do — but the primary work is your own inference from the data.
+
+### 4.1 — gather
+
+1. Call `meta_review.py --init <init> --session <sid>` (no proposal yet).
+   The script writes a placeholder row at this N and returns a JSON
+   snapshot with: `breakdown`, `chunk_breakdown`, `tier_breakdown`,
+   `topic_freq`, `dim_freq`, `recent` (latest 10 responses with title,
+   year, chunk, tier, choice, and the researcher's own `choice_detail`
+   text where they said *why*).
+
+### 4.2 — reason (Opus, in your context)
+
+Read the 10 recent responses *one by one*. For each:
+- `save_later` → which dimension tags did the paper carry? Mark those
+  as "evidence for". If the paper hit a combo, that's strong evidence.
+- `not_relevant` + the researcher's `choice_detail.reason` Korean text
+  → identify what the researcher said was wrong. Map that to dim tags
+  the paper carried (those become "evidence against") AND/OR to a
+  *missing* dim the paper lacked (those become "evidence for: I want
+  more of dim X").
+- `already_read` → that area is already covered for the researcher;
+  the queue should de-prioritize close siblings of this paper but NOT
+  remove the dim entirely (the researcher reads in that area).
+- `tell_me_more` (option 4) → strong signal of intrigue without
+  commitment; treat as half-strength `save_later`.
+- `skipped` → no information.
+
+Then compute deltas to apply to `dim_preferences`:
+- **boost (+0.2, clamped to 1.0)** any dim tag that appeared in ≥3 of
+  the `save_later` / `tell_me_more` papers but is currently at weight
+  ≤ 0.5 in the researcher's profile.
+- **downweight (−0.3, clamped to 0.1 minimum so we never zero out
+  legitimate interest)** any dim tag that appeared in ≥3 of the
+  `not_relevant` papers AND the researcher's reason text explicitly
+  rejected that area (look for negation, "관련 없", "내 연구 아님",
+  "다른 결").
+- **leave alone** any tag with mixed signals or low evidence.
+
+Also re-check the rubric checks for completeness:
+- `not_relevant >= 6/10` → also propose `tighten_chunk` for the band
+  that produced the most rejects.
+- `already_read >= 6/10` → also propose `advance_chunk`.
+- These can co-exist with the dim-level deltas.
+
+### 4.3 — assemble the proposal payload
+
+Build a single `proposal` JSON the meta_review row will store, with a
+shape like:
+```json
+{
+  "proposal_type": "belief_update",
+  "deltas_applied": {
+    "focus":  {"F-EFC": "+0.2 → 1.0"},
+    "method": {"M-PSY": "−0.3 → 0.4"}
+  },
+  "rubric_signals": {
+    "tighten_chunk": "recent",
+    "advance_chunk": false
+  },
+  "evidence_summary": "save_later 4편 모두 efficient coding 매칭; not_relevant 3편이 동공측정 위주",
+  "n_window": 10
+}
+```
+
+Compute the new `dim_preferences` dict by applying the deltas to the
+current (verified) profile prefs.
+
+### 4.4 — write back
+
+Two write operations, both idempotent:
+
+1. **Stamp the meta_review row with the proposal:**
+   ```
+   python plugin/scripts/meta_review.py --init <init> --session <sid> \
+     --proposal-json @proposal.json --apply
+   ```
+   (UPSERT on the same `(session, at_response_count)` row from 4.1.)
+
+2. **Update the researcher's dim_preferences** (only if any delta is
+   non-zero):
+   ```
+   python plugin/scripts/profile_confirm.py --session <sid> --init <init> \
+     --snapshot-json @snap.json --dim-preferences-json @updated.json
+   ```
+   `updated.json` carries the post-delta `dim_preferences` (with the same
+   `project_weights` carried over). The next operator-run queue rebuild
+   will pick this up; the current session continues with the existing
+   queue.
+
+### 4.5 — explain to the researcher (Korean, ≤ 2 short sentences)
+
+State what the system just learned and what changes next. Use English
+technical terms inline; Korean only for the framing. Examples:
+> "최근 10편을 보고, 박사님이 efficient coding 쪽 논문은 거의 다 저장
+> 하시는데 pupillometry 쪽은 잘 안 보신다는 걸 알았어요. 다음 사이클부터
+> efficient coding 비중을 조금 올리고 pupillometry는 줄일게요."
+> 
+> "최근 10편 중 7편이 이미 읽으셨던 거라, 다음 묶음부터는 더 최근(또는
+> 더 오래된) 시기로 넘어갈게요."
+
+Do NOT enumerate every category code. Two sentences max.
+
+### 4.6 — continue
+
+Call `pick_next.py --init <init> --session <sid>` and resume the queue
+walk. The N counter keeps incrementing; the next meta-review fires at
+the next multiple of 10.
 
 ## Stage 5 — wrap-up
 
