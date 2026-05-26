@@ -4,6 +4,36 @@ description: Operating procedure for the CSNL paper-archive interview. Drives th
 
 # paper-archive-interview — researcher procedure
 
+## Architecture invariants (P19e — applies always)
+
+The interview is a **live, session-driven loop** — NOT a static list the
+operator periodically refreshes:
+
+1. PostgreSQL is the persistent truth source. Every MCQ writes a row to
+   `archive_responses`. The `archive_paper_status` view exposes
+   per-researcher per-paper status (read / to_read / not_interested /
+   maybe_interested / skipped) in plain Korean labels for operator
+   inspection via `scripts/archive/list_status.py`.
+
+2. The researcher's `archive_researcher_queues` is the candidate POOL.
+   It is NOT a fixed ordered list of "next 200 to show"; `pick_next.py`
+   re-ranks the unanswered subset against the latest
+   `archive_profile_verifications.dim_preferences` on EVERY call
+   (P17 in-session re-rank).
+
+3. Already-answered papers are auto-excluded via `NOT EXISTS` against
+   `archive_responses`. The researcher never sees the same paper twice.
+
+4. After 10 MCQs, Stage 4 spawns `belief-updater` → updates dim_preferences
+   in `archive_profile_verifications`. The next `pick_next.py` call uses
+   the new prefs — no operator intervention, no queue rebuild needed.
+
+5. The operator-side `build_researcher_queue.py --apply` is a ONE-TIME
+   setup step that fills the candidate pool. Re-runs are needed only when
+   (a) new papers are ingested into the archive or (b) the researcher's
+   `csnl_research.projects` text changes substantially. It is NOT a
+   per-session or per-batch operation.
+
 ## Execution invariants (P16 hardening — applies to every turn)
 
 These rules exist because researchers will run 20+ turns over a session

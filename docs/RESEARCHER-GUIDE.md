@@ -122,6 +122,32 @@ python3 ~/.claude/plugins/cache/csnl-marketplace/csnl-paper-archive-interview/*/
 
 ---
 
+## 4-bis. DB 가 무엇을 누적하나
+
+매 MCQ 답변이 `csnl_paper_rec.archive_responses` 에 영구 저장됩니다. 운영자
+측 `archive_paper_status` view + `list_status.py` CLI 를 통해 본인의 paper
+별 상태를 plain-Korean 으로 조회할 수 있습니다:
+
+```
+$ python3 scripts/archive/list_status.py <본인 init>
+
+JOP — 총 20편 응답
+  이미 읽음   (read)               n=2
+  읽을 예정   (to_read)            n=12
+  관심 없음   (not_interested)     n=6
+```
+
+MCQ 답변 → 상태 매핑:
+- `1` (저장) → **읽을 예정** (to_read)
+- `2` (관련 없음) → **관심 없음** (not_interested) — 추후 추천에서 비슷한 paper 자동 배제
+- `3` (이미 읽음) → **이미 읽음** (read)
+- `4` (더 자세히) → **더 알아볼 만함** (maybe_interested)
+
+데이터는 영구 보존됩니다 — 같은 paper 가 다시 나오지 않고, "관심 없음"
+영역과 비슷한 paper 도 추천 우선순위에서 자동으로 내려갑니다.
+
+---
+
 ## 5. 자주 발생하는 문제
 
 | 증상 | 원인 | 해결 |

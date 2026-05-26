@@ -218,6 +218,34 @@ CREATE INDEX IF NOT EXISTS ix_archive_queues_rid_tier
   ON __SCHEMA__.archive_researcher_queues(researcher_id, tier, rank_in_chunk);
 
 -- =========================================================================
+-- P19e — paper_status view (read / will_read / not_interested).
+-- archive_responses already carries the per-paper choice; this view makes
+-- the persistent "what does the lab know about each (researcher, paper)
+-- pair" queryable in plain terms. Operator + future analytics scripts
+-- read this view; researchers never see it.
+-- =========================================================================
+CREATE OR REPLACE VIEW __SCHEMA__.archive_paper_status AS
+SELECT
+  r.researcher_id,
+  r.canonical_id,
+  CASE r.choice
+    WHEN 'save_later'    THEN 'to_read'
+    WHEN 'already_read'  THEN 'read'
+    WHEN 'not_relevant'  THEN 'not_interested'
+    WHEN 'tell_me_more'  THEN 'maybe_interested'
+    WHEN 'skipped'       THEN 'skipped'
+    ELSE r.choice
+  END AS paper_status,
+  r.session_id,
+  r.responded_at,
+  r.choice_detail
+FROM __SCHEMA__.archive_responses r;
+
+COMMENT ON VIEW __SCHEMA__.archive_paper_status IS
+  'P19e: per-(researcher, paper) status derived from archive_responses. '
+  'Plain-Korean terms: read / to_read / not_interested / maybe_interested / skipped.';
+
+-- =========================================================================
 -- P19b — evolution-workflow foundation (3 new tables, schema only).
 -- See docs/HARNESS-ALGORITHM-DESIGN.md "evolution workflow" + Opus reviewer's
 -- Part 2 design. These tables HOLD the signals that the future
