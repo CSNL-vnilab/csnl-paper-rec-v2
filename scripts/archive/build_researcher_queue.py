@@ -42,7 +42,15 @@ _TAXONOMY_PATH = _REPO_ROOT / "plugin" / "data" / "taxonomy.json"
 _FINGERPRINT_DIR = _REPO_ROOT / "state" / "archive" / "fingerprints"
 
 CHUNK_BOUNDS = {"recent": (0, 5), "mid": (5, 10), "classic": (10, 999)}
-_DEFAULT_CHUNK_MIX = {"recent": 120, "mid": 60, "classic": 20}
+# P19d — default changed from {120, 60, 20}=200 to {30, 15, 5}=50.
+# After every batch of 10 MCQs, the plugin's in-session re-rank already
+# re-orders the remaining unanswered rows against fresh prefs (P17),
+# so 50 is enough for ~5 belief-update cycles. The operator's monthly
+# evolution run + on-demand `build_researcher_queue.py --apply` regenerate
+# new batches as researchers exhaust their queues.
+# To keep the FULL archive as the candidate pool instead, pass
+# `--all-in-scope` which caps each chunk at the full in-scope set.
+_DEFAULT_CHUNK_MIX = {"recent": 30, "mid": 15, "classic": 5}
 
 # P19b — composite mode. When n_phrases is sparse (≤3), the BM25 signal
 # is high-variance and a fixed 0.30 weight on it hurts cold-start
@@ -595,8 +603,11 @@ def main() -> int:
                     help="Researcher init (e.g. BHL). Required unless --all.")
     ap.add_argument("--all", action="store_true",
                     help="Build queues for every active researcher.")
-    ap.add_argument("--top", type=int, default=120,
-                    help="Top-N per chunk (default 120 → 360 papers/researcher).")
+    ap.add_argument("--top", type=int, default=None,
+                    help="P19d: Top-N per chunk OVERRIDE. Default None → "
+                         "use chunk_mix from researcher's verified profile "
+                         "or _DEFAULT_CHUNK_MIX={30,15,5}=50. Pass an "
+                         "integer to bump every chunk to that size.")
     ap.add_argument("--apply", action="store_true")
     ap.add_argument("--backend", default=os.environ.get("CSNL_EMBED_BACKEND", "local"),
                     choices=("local", "voyage", "jina", "openai"))
@@ -611,6 +622,12 @@ def main() -> int:
                     help="P19b: 'auto' (default) picks RRF when fingerprint "
                          "has ≤3 phrases (cold-start), linear otherwise. "
                          "Override for testing.")
+    ap.add_argument("--all-in-scope", action="store_true",
+                    help="P19d: bypass chunk_mix limits and keep ALL "
+                         "in-scope papers in the queue (~7,500 per "
+                         "researcher). Heaviest mode; rarely needed since "
+                         "the default 50-paper queue + per-batch refresh "
+                         "covers ~5 Stage-4 cycles.")
     args = ap.parse_args()
     # Normalize researcher init.
     if args.researcher:
@@ -688,8 +705,13 @@ def main() -> int:
                          "combo_bonus": [], "source": "none", "version": 0}
         fp_phrases = (fp.get("phrases") or []) if fp else []
         chunk_mix = profile.get("chunk_mix") or _DEFAULT_CHUNK_MIX
-        if args.top and args.top > max(chunk_mix.values()):
+        if args.top is not None:
             chunk_mix = {k: args.top for k in chunk_mix}
+        if args.all_in_scope:
+            # ALL in-scope papers per chunk — for one-shot rebuilds when
+            # operator wants the researcher to have the full archive as
+            # their pool and never re-trigger a rebuild.
+            chunk_mix = {k: 99999 for k in chunk_mix}
         # P15: build the query embedding as a weighted average of
         # per-project embeddings when the researcher specified
         # project_weights at Stage 1; otherwise fall back to one shared

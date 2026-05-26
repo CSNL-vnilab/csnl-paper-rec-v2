@@ -156,8 +156,10 @@ title (in Korean if the title is Korean, else in plain Korean translation).
   - `meta_review.py …`               → emit + persist meta-review
   - `session_close.py --session …`   → mark session complete
 
-Run scripts with `python <plugin-root>/scripts/<name>.py …`. The plugin
-root is the directory containing `.claude-plugin/plugin.json`. If
+Run scripts with `python3 <plugin-root>/scripts/<name>.py …`. **ALWAYS
+use `python3`, not `python`** — many systems (including the user's
+Mac) do not have a bare `python` on PATH. The plugin root is the
+directory containing `.claude-plugin/plugin.json`. If
 `$CSNL_PLUGIN_DIR` is set, prefer that; otherwise resolve **three
 levels up from this SKILL.md** — SKILL.md → `paper-archive-interview/`
 → `skills/` → plugin root.
@@ -208,10 +210,13 @@ missing parent yields `FileNotFoundError`.
 ## Stage 1 — profile verification (smaller turns — one question at a time)
 
 **Skip-if-already-confirmed (P16):** If `profile_show.already_confirmed_at`
-is non-null, Stage 1 is COMPLETE for this session. Print one short Korean
-line — "이전에 확인하신 프로필로 이어서 진행할게요." — and proceed
-directly to Stage 2. Do NOT re-ask the topic/method/dim questions; the
-researcher will see the same questions twice in a session as a bug.
+is non-null, Stage 1 is MOSTLY complete for this session. **EXCEPTION
+(P19d)**: if `profile_show.profile.dim_preferences.project_weights` is
+empty/missing AND `len(profile.projects) > 1`, the prior session never
+asked for project-percentage weights — ask just Step 1.3 (multi-project
+weighting) below, then proceed to Stage 2. Do NOT re-ask topics/methods/
+dims. If project_weights IS present (or single project): print "이전에
+확인하신 프로필로 이어서 진행할게요." and proceed directly to Stage 2.
 
 
 
@@ -314,7 +319,7 @@ Build the final `dim_preferences` payload (include `project_weights`
 nested under it) and write everything in one `profile_confirm.py` call:
 
 ```
-python plugin/scripts/profile_confirm.py \
+python3 plugin/scripts/profile_confirm.py \
   --session <sid> --init <init> \
   --snapshot-json @snap.json \
   --corrections-json @corr.json \
@@ -381,7 +386,7 @@ Loop until `pick_next.py` returns `done:true`:
        단언하기 어렵습니다. 제목·키워드만 봐도 익숙한 영역이라면 1번,
        아니면 2번을, 더 자세한 설명이 필요하면 4번을 눌러주세요."
      - **DO NOT** infer transitive connections ("X 가 Y 일 수도 있어서
-       박사님 연구와 …"). Either there is a direct verifiable link in the
+       <init> 연구원님 연구와 …"). Either there is a direct verifiable link in the
        data or the fallback is the only acceptable output.
      - Use the paper's `tier` field to colour the sentence (never
        mention "tier" or `S/A/B/C` aloud). All tier templates use
@@ -523,7 +528,7 @@ Two write operations, both idempotent:
 
 1. **Stamp the meta_review row with the proposal:**
    ```
-   python plugin/scripts/meta_review.py --init <init> --session <sid> \
+   python3 plugin/scripts/meta_review.py --init <init> --session <sid> \
      --proposal-json @proposal.json --apply
    ```
    (UPSERT on the same `(session, at_response_count)` row from 4.1.)
@@ -531,7 +536,7 @@ Two write operations, both idempotent:
 2. **Update the researcher's dim_preferences** (only if any delta is
    non-zero):
    ```
-   python plugin/scripts/profile_confirm.py --session <sid> --init <init> \
+   python3 plugin/scripts/profile_confirm.py --session <sid> --init <init> \
      --snapshot-json @snap.json --dim-preferences-json @updated.json
    ```
    `updated.json` carries the post-delta `dim_preferences` (with the same

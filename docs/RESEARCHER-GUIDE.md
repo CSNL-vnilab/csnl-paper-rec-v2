@@ -22,17 +22,23 @@
 
 (이전 버전 설치 이력 있으면 먼저 `/plugin uninstall csnl-paper-archive-interview@csnl-marketplace`)
 
-### Step 2. 실제 터미널 (Claude Code 채팅 아님) 에서 셋업 스크립트 실행
+### Step 2. 실제 터미널 (Claude Code 채팅 아님) 에서 의존성 + 셋업
 
 비밀번호 입력은 보안상 실제 터미널이 필요합니다.
 
+**한 번에 의존성 설치 (충돌 방지):**
+```
+python3 -m pip install --user --upgrade -r ~/.claude/plugins/cache/csnl-marketplace/csnl-paper-archive-interview/*/requirements.txt
+```
+
+**그다음 셋업 스크립트 실행:**
 ```
 python3 ~/.claude/plugins/cache/csnl-marketplace/csnl-paper-archive-interview/*/scripts/setup.py
 ```
 
 스크립트가:
 - Python 버전 확인 (3.8+ 필요; 더 낮으면 brew install 안내)
-- psycopg2 (Postgres 드라이버) 자동 설치 — 없으면 `pip install --user` 묻고 진행
+- psycopg2 (Postgres 드라이버) 검증 — 위 의존성 설치로 이미 설치됨
 - 5 가지 값 묻기 (HOST/USER 는 기본값 자동 채움, PASSWORD 만 입력)
 - `~/.csnl-paper-archive/.env` 에 chmod 600 으로 저장
 - 본인 init 알려주면 즉시 연결 테스트 진행
