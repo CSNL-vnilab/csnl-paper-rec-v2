@@ -44,6 +44,17 @@ _FINGERPRINT_DIR = _REPO_ROOT / "state" / "archive" / "fingerprints"
 CHUNK_BOUNDS = {"recent": (0, 5), "mid": (5, 10), "classic": (10, 999)}
 _DEFAULT_CHUNK_MIX = {"recent": 120, "mid": 60, "classic": 20}
 
+# P19b — composite mode. When n_phrases is sparse (≤3), the BM25 signal
+# is high-variance and a fixed 0.30 weight on it hurts cold-start
+# researchers. RRF (Reciprocal Rank Fusion) over (cos, dim_score, kw_bm25)
+# ranked lists degrades gracefully — a noisy signal saturates its
+# 1/(k+rank) contribution instead of dominating. `auto` picks RRF for
+# cold-start and linear for everyone else; explicit modes force one or
+# the other.
+COMPOSITE_MODE         = "auto"   # "linear" | "rrf" | "auto"
+RRF_K                  = 60       # textbook IR setting
+RRF_COLD_START_TRIGGER = 3        # ≤ N fingerprint phrases → RRF auto-fires
+
 # Composite ranking weights — P19a adds s_kw_bm25 when a researcher
 # fingerprint is present. See docs/HARNESS-ALGORITHM-DESIGN.md for the
 # ship-with-cuts rationale (Voice B's full proposal was cut down to
@@ -519,6 +530,52 @@ def _composite(cos: float, dim_score: float, n_combos: int,
     return s_floor * base
 
 
+def _rrf_score(rank_cos: int, rank_dim: int, rank_kw: int, k: int = RRF_K) -> float:
+    """Reciprocal Rank Fusion over the three signal-ranked lists. Each
+    paper's score = sum_i 1/(k + rank_i) where rank_i is its position
+    in the i-th ranked list (1-indexed). Unit-scale-invariant — a noisy
+    signal's contribution saturates instead of dominating."""
+    score = 0.0
+    if rank_cos:  score += 1.0 / (k + rank_cos)
+    if rank_dim:  score += 1.0 / (k + rank_dim)
+    if rank_kw:   score += 1.0 / (k + rank_kw)
+    return score
+
+
+def _percentile_tier(composite: float, sorted_composites: list[float],
+                     min_cos: float) -> str:
+    """P19b — per-researcher percentile-based tier with an absolute
+    cosine floor. The absolute thresholds were demonstrably mis-
+    calibrated post-P19a (BM25 weight 0.30 lets some papers hit S-tier
+    composites without crossing the original cos≥0.40 threshold).
+
+    Rule:
+      top 5%   → S  (requires cos ≥ 0.30 absolute floor)
+      next 15% → A
+      next 30% → B
+      rest     → C
+    """
+    if not sorted_composites:
+        return "C"
+    n = len(sorted_composites)
+    # Find rank in sorted descending list — sorted_composites is already
+    # sorted desc by caller.
+    # Binary-search-style lookup is overkill; linear scan over <500 rows.
+    rank = 1
+    for c in sorted_composites:
+        if composite >= c:
+            break
+        rank += 1
+    pct = rank / n
+    if pct <= 0.05 and min_cos >= 0.30:
+        return "S"
+    if pct <= 0.20:
+        return "A"
+    if pct <= 0.50:
+        return "B"
+    return "C"
+
+
 def _tier(cos: float, dim_score: float, n_combos: int) -> str:
     if cos >= TIER_S_COS and dim_score >= TIER_S_DIM and n_combos >= 1:
         return "S"
@@ -549,6 +606,11 @@ def main() -> int:
                          "Embedding the researcher's interest text via a "
                          "third-party API needs the same operator gate as "
                          "the archive embedding pass.")
+    ap.add_argument("--composite-mode", default=COMPOSITE_MODE,
+                    choices=("linear", "rrf", "auto"),
+                    help="P19b: 'auto' (default) picks RRF when fingerprint "
+                         "has ≤3 phrases (cold-start), linear otherwise. "
+                         "Override for testing.")
     args = ap.parse_args()
     # Normalize researcher init.
     if args.researcher:
@@ -687,9 +749,22 @@ def main() -> int:
         # Score every candidate.
         pref_codes = _pref_code_set(dim_prefs) if taxonomy else set()
         per_chunk: dict[str, list[dict]] = {"recent": [], "mid": [], "classic": []}
-        # P19a: when fingerprint present, the hard cos≥0.18 gate becomes a
-        # soft floor — a paper with strong keyword match but weak cosine
-        # can still survive. When fingerprint absent: keep the hard gate.
+
+        # P19b — composite mode selection. Sparse fingerprints get RRF;
+        # rich fingerprints get the linear blend with BM25 weighted in.
+        n_phrases = len(fp_phrases)
+        if args.composite_mode == "linear":
+            mode = "linear"
+        elif args.composite_mode == "rrf":
+            mode = "rrf"
+        else:  # auto
+            mode = "rrf" if 0 < n_phrases <= RRF_COLD_START_TRIGGER else "linear"
+        if not fp_phrases:
+            mode = "linear"   # no kw signal at all — linear with cos+dim only
+
+        # First pass — compute raw signals for every candidate so we can
+        # build the three signal-ranked lists for RRF (when in RRF mode).
+        cand_rows: list[dict] = []
         for c, s in zip(cids, sims):
             cos = max(0.0, float(s))
             kw_score = 0.0
@@ -700,25 +775,60 @@ def main() -> int:
             # Floor: hard 0.18 when no fingerprint; soft otherwise.
             if not fp_phrases and cos < COS_FLOOR:
                 continue
-            if fp_phrases and cos < COS_FLOOR and kw_norm < 0.20:
-                # neither signal carries this paper — skip.
+            if fp_phrases and cos < COS_FLOOR and kw_norm < 0.20 and mode == "linear":
+                # in linear mode, neither signal carries this paper — skip.
+                # in RRF mode keep it; RRF reorders by rank fusion.
                 continue
-            chunk = _chunk_for(papers[c] or {}, today)
             pdims = paper_dims.get(c, {})
             plab  = paper_lab.get(c, [])
             ds = _dim_score(pdims, dim_prefs) if taxonomy else 0.0
             chits = _combo_hits(pdims, plab, combos, pref_codes) if taxonomy else []
-            comp = _composite(cos, ds, len(chits),
-                              kw_bm25=kw_score if fp_phrases else None)
-            tier = _tier(cos, ds, len(chits)) if taxonomy else "B"
-            # P19a: explain_why — top signals contributing to this score.
+            cand_rows.append({
+                "canonical_id":  c,
+                "similarity":    cos,
+                "dim_score":     ds,
+                "kw_score":      kw_score,
+                "kw_norm":       kw_norm,
+                "kw_matched":    kw_matched,
+                "combos":        chits,
+                "pdims":         pdims,
+                "plab":          plab,
+            })
+
+        # RRF mode — assign rank in each signal list, then sum 1/(k+rank).
+        if mode == "rrf":
+            rank_cos = {r["canonical_id"]: i+1 for i, r in enumerate(
+                sorted(cand_rows, key=lambda r: -r["similarity"]))}
+            rank_dim = {r["canonical_id"]: i+1 for i, r in enumerate(
+                sorted(cand_rows, key=lambda r: -r["dim_score"]))}
+            rank_kw  = {r["canonical_id"]: i+1 for i, r in enumerate(
+                sorted(cand_rows, key=lambda r: -r["kw_score"]))} if fp_phrases else {}
+
+        # Second pass — produce final composite + tier per candidate.
+        for row in cand_rows:
+            c = row["canonical_id"]
+            cos = row["similarity"]
+            ds  = row["dim_score"]
+            chits = row["combos"]
+            if mode == "rrf":
+                comp = _rrf_score(rank_cos.get(c, 0), rank_dim.get(c, 0),
+                                  rank_kw.get(c, 0) if fp_phrases else 0)
+                # RRF is on a different scale; scale it into [0, ~1] by
+                # multiplying by RRF_K (typical max RRF for top-of-3-lists ≈
+                # 3/(k+1) ≈ 0.05; ×60 brings it to ~3.0 max, /3 to [0,1]).
+                comp = round(comp * RRF_K / 3.0, 4)
+            else:
+                comp = _composite(cos, ds, len(chits),
+                                  kw_bm25=row["kw_score"] if fp_phrases else None)
+            tier_abs = _tier(cos, ds, len(chits)) if taxonomy else "B"
+            chunk = _chunk_for(papers[c] or {}, today)
             top_signals: list[dict] = []
-            if kw_matched:
+            if row["kw_matched"]:
                 top_signals.append({
                     "key":       "s_kw_bm25",
-                    "value":     round(kw_norm, 3),
-                    "matched":   kw_matched[:2],
-                    "render_ko": f"키워드 매치: {', '.join(kw_matched[:2])}",
+                    "value":     round(row["kw_norm"], 3),
+                    "matched":   row["kw_matched"][:2],
+                    "render_ko": f"키워드 매치: {', '.join(row['kw_matched'][:2])}",
                 })
             if chits:
                 top_signals.append({
@@ -740,13 +850,22 @@ def main() -> int:
                 "dim_score":     ds,
                 "combos":        chits,
                 "composite":     comp,
-                "tier":          tier,
-                "kw_score":      kw_score,
-                "kw_matched":    kw_matched,
-                "dim_match":     {dim: pdims.get(dim) or [] for dim in
+                "tier":          tier_abs,           # absolute tier (operator)
+                "kw_score":      row["kw_score"],
+                "kw_matched":    row["kw_matched"],
+                "dim_match":     {dim: row["pdims"].get(dim) or [] for dim in
                                   ("focus", "method", "stim", "subj")},
                 "top_signals":   top_signals,
             })
+
+        # P19b — copy absolute tier to a sidecar field so we can overlay
+        # the percentile tier after the top-N cut. (Percentile must be
+        # computed over the FINAL queue rows, not the pre-cut pool —
+        # otherwise the top-N papers ALL fall in the top X% of the pre-
+        # cut pool and almost all land in S-tier.)
+        for chunk_name, cands in per_chunk.items():
+            for cand in cands:
+                cand["tier_absolute"] = cand["tier"]
 
         rows_out: list[dict] = []
         token = str(uuid.uuid4())
@@ -755,7 +874,17 @@ def main() -> int:
         for chunk, scored in per_chunk.items():
             scored.sort(key=lambda x: (-x["composite"], -x["similarity"]))
             n = int(chunk_mix.get(chunk, _DEFAULT_CHUNK_MIX[chunk]))
-            for rank, cand in enumerate(scored[:n], start=1):
+            cut = scored[:n]
+            # P19b — percentile tier computed on the CUT queue (top-N
+            # within chunk), not the pre-cut pool. Top 5% S / 5-20% A /
+            # 20-50% B / rest C, with absolute cosine ≥ 0.30 required for S.
+            sorted_comps = sorted([c["composite"] for c in cut], reverse=True)
+            for cand in cut:
+                pct_tier = _percentile_tier(cand["composite"], sorted_comps,
+                                             min_cos=cand["similarity"])
+                cand["tier_percentile"] = pct_tier
+                cand["tier"] = pct_tier
+            for rank, cand in enumerate(cut, start=1):
                 rows_out.append({
                     "researcher_id": init,
                     "canonical_id":  cand["canonical_id"],
@@ -763,15 +892,19 @@ def main() -> int:
                     "rank_in_chunk": rank,
                     "similarity":    cand["similarity"],
                     "composite":     cand["composite"],
-                    "tier":          cand["tier"],
+                    "tier":          cand["tier"],     # percentile (researcher-facing)
                     "dim_match":     {
-                        "matched":     cand["dim_match"],
-                        "combos":      cand["combos"],
-                        "tier":        cand["tier"],
-                        # P19a: surface signal contributors for SKILL Stage 2
-                        # explain-WHY Korean rendering.
-                        "top_signals": cand.get("top_signals") or [],
-                        "kw_matched":  cand.get("kw_matched") or [],
+                        "matched":         cand["dim_match"],
+                        "combos":          cand["combos"],
+                        "tier":            cand["tier"],
+                        # P19b: keep the absolute-threshold tier for
+                        # operator diagnostics. The researcher-facing
+                        # tier above is now percentile-based.
+                        "tier_absolute":   cand.get("tier_absolute", cand["tier"]),
+                        "tier_percentile": cand.get("tier_percentile", cand["tier"]),
+                        # P19a: signal contributors for SKILL Stage 2.
+                        "top_signals":     cand.get("top_signals") or [],
+                        "kw_matched":      cand.get("kw_matched") or [],
                     },
                     "built_at":      built_at,
                     "build_token":   token,

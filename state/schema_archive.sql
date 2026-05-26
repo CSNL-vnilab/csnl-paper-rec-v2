@@ -217,6 +217,75 @@ ALTER TABLE __SCHEMA__.archive_researcher_queues
 CREATE INDEX IF NOT EXISTS ix_archive_queues_rid_tier
   ON __SCHEMA__.archive_researcher_queues(researcher_id, tier, rank_in_chunk);
 
+-- =========================================================================
+-- P19b — evolution-workflow foundation (3 new tables, schema only).
+-- See docs/HARNESS-ALGORITHM-DESIGN.md "evolution workflow" + Opus reviewer's
+-- Part 2 design. These tables HOLD the signals that the future
+-- `archive-feedback-analyst` agent (P20) will read. They are NOT yet
+-- written by any plugin script — the schema lands first so the operator
+-- can manually populate during cold-start while the agent gets built.
+-- =========================================================================
+
+-- (1) Free-text feedback channel — researcher writes prose about the queue
+-- itself (not about a specific paper). Captured at Stage 4 meta-review OR at
+-- session-close via an optional prompt. Plugin will write here once the
+-- corresponding scripts ship in P20; the table is allowlist-compatible.
+CREATE TABLE IF NOT EXISTS __SCHEMA__.archive_queue_feedback(
+  id              TEXT PRIMARY KEY,       -- uuid
+  researcher_id   TEXT NOT NULL,
+  session_id      TEXT,
+  feedback_kind   TEXT NOT NULL CHECK (feedback_kind IN
+    ('too_classic','too_recent','wrong_topic','wrong_method',
+     'queue_thin','too_familiar','other')),
+  free_text       TEXT,
+  collected_at    TEXT NOT NULL,           -- ISO KST
+  source          TEXT CHECK (source IN
+    ('meta_review','session_close','retrospective','operator'))
+);
+CREATE INDEX IF NOT EXISTS ix_arch_queue_fb_rid
+  ON __SCHEMA__.archive_queue_feedback(researcher_id, collected_at DESC);
+
+-- (2) Retrospective outcome signals — non-circular ground truth (codex #9).
+-- Quarterly survey: "of papers recommended in the last 3 months, did you
+-- read / cite / use it?" Collected via a new slash command at P20.
+CREATE TABLE IF NOT EXISTS __SCHEMA__.archive_outcome_signals(
+  id              TEXT PRIMARY KEY,
+  researcher_id   TEXT NOT NULL,
+  canonical_id    TEXT NOT NULL,
+  survey_period   TEXT NOT NULL,           -- e.g. '2026-Q3'
+  outcome         TEXT NOT NULL CHECK (outcome IN
+    ('not_read','read_skim','read_full','cited','will_cite','discussed','dropped')),
+  collected_at    TEXT NOT NULL,
+  notes           TEXT,
+  UNIQUE (researcher_id, canonical_id, survey_period)
+);
+CREATE INDEX IF NOT EXISTS ix_arch_outcome_rid
+  ON __SCHEMA__.archive_outcome_signals(researcher_id, survey_period);
+
+-- (3) Evolution proposal ledger — every operator-gated change to the
+-- archive layer (lexicon adds, taxonomy edits, composite-weight re-calibration,
+-- queue-growth requests) lands here. Operator-only writes via the future
+-- apply_evolution.py script. Mirrors the existing `evolution_log` table from
+-- v3 but scoped to the archive layer with richer fields.
+CREATE TABLE IF NOT EXISTS __SCHEMA__.archive_evolution_proposals(
+  id                  TEXT PRIMARY KEY,
+  proposed_at         TEXT NOT NULL,
+  proposal_kind       TEXT NOT NULL CHECK (proposal_kind IN
+    ('lexicon_add','lexicon_drop','taxonomy_add','taxonomy_drop',
+     'taxonomy_kw_add','weight_calibration','queue_growth',
+     'fingerprint_rebuild')),
+  payload             JSONB NOT NULL,      -- the diff
+  evidence            JSONB NOT NULL,      -- which signals motivated it
+  confidence          TEXT CHECK (confidence IN ('low','medium','high')),
+  operator_decision   TEXT CHECK (operator_decision IN
+    ('pending','accepted','rejected','modified','rolled_back')),
+  decided_at          TEXT,
+  decided_by          TEXT,
+  rollback_of         TEXT                 -- proposal id this one rolls back
+);
+CREATE INDEX IF NOT EXISTS ix_arch_evol_kind_decision
+  ON __SCHEMA__.archive_evolution_proposals(proposal_kind, operator_decision);
+
 -- ----------------------------------- meta_reviews (every 10 answers, stage 6)
 -- The (session_id, at_response_count) uniqueness is enforced by a UNIQUE
 -- INDEX added *outside* the CREATE TABLE so that re-applying schema_archive

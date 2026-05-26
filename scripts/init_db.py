@@ -44,6 +44,10 @@ _TABLES = (
     "archive_meta_reviews",
     # P14 dimension tagging (composite ranking + chunk mix)
     "archive_paper_dim_tags",
+    # P19b evolution-workflow foundation
+    "archive_queue_feedback",
+    "archive_outcome_signals",
+    "archive_evolution_proposals",
 )
 
 

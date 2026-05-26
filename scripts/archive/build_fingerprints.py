@@ -48,9 +48,50 @@ _W_ANCHOR   = 1.0
 _W_PARADIGM = 0.8
 _W_CONTEXT  = 0.4
 
-# Pass-A only: lexicon-anchored multi-word phrases.
-# Pass B (capitalised noun phrases) and Pass C (bilingual unigrams/bigrams)
-# DEFERRED per docs/HARNESS-ALGORITHM-DESIGN.md.
+# Pass-A: lexicon-anchored multi-word phrases (primary path).
+# Pass-B (P19b): TF-IDF salvage. Fires ONLY when Pass-A yields ≤ 3 phrases.
+# Mitigates the cold-start asymmetry codex finding #2 (BHL/SMJ/SYJ got 0-1
+# Pass-A phrases). Uses the same corpus IDF + a stoplist of generic
+# scientific filler ("research", "analysis", etc.) that would otherwise
+# top the TF-IDF ranking on sparse project text.
+
+_PASSB_TRIGGER_THRESHOLD = 3   # if Pass-A yields ≤ N, fire Pass-B salvage
+_PASSB_TOP_K            = 15  # take top-K TF-IDF terms from researcher text
+_PASSB_MIN_IDF          = 4.0 # only rare terms; bge-m3 corpus had idf≈4.26 for "fmri"
+_PASSB_MIN_LEN          = 4   # skip short tokens
+_STOPLIST_EN = {
+    "research", "researcher", "study", "studies", "analysis", "results",
+    "approach", "method", "methods", "data", "model", "models", "experiment",
+    "experiments", "experimental", "task", "tasks", "stimulus", "stimuli",
+    "subject", "subjects", "participant", "participants", "condition",
+    "conditions", "trial", "trials", "session", "sessions", "effect", "effects",
+    "across", "between", "during", "while", "after", "before", "within",
+    "different", "various", "several", "many", "more", "less", "however",
+    "therefore", "thus", "also", "based", "shown", "showed", "show", "find",
+    "found", "using", "used", "use", "uses", "via", "yet", "even", "well",
+    "able", "see", "given", "such", "make", "made", "makes",
+    "first", "second", "third", "one", "two", "three",
+    "year", "years", "previous", "current",
+    "value", "values", "level", "levels", "type", "types", "form", "forms",
+    "way", "ways", "case", "cases", "set", "sets", "part", "parts",
+    "could", "would", "might", "may", "must", "can",
+    # P19b — observed false positives in actual fingerprint output:
+    "name", "names", "utilize", "utilizes", "utilized", "utilization",
+    "value", "values", "include", "includes", "included", "across",
+    "specific", "specifically", "general", "generally", "particular",
+    "respect", "regarding", "indicate", "indicates", "indicated",
+    "represent", "represents", "represented", "representation",
+    "function", "functions", "functional",
+    # JSON-key noise from manipulation_variables_jsonb stringification
+    "categorical", "continuous", "unit",
+}
+_STOPLIST_KO = {
+    # Korean filler particles and common research-text fragments that
+    # are not scientific content.
+    "기반", "기준", "관련", "통해", "위해", "과정", "결과", "조사", "분석",
+    "이용", "사용", "실험", "연구", "참여자", "피험자",
+}
+_STOPLIST = _STOPLIST_EN | _STOPLIST_KO
 
 
 def _load_lexicon() -> list[str]:
@@ -176,6 +217,51 @@ def _channel_text(row: dict) -> dict[str, str]:
 
 
 # ----------------------------------------------------------- phrase extract
+
+_PASSB_TOKEN_RE = re.compile(
+    r"[A-Za-z0-9]{2,}(?:[-_][A-Za-z0-9]{2,})*"   # English-style tokens
+    r"|"
+    r"[가-힣]{2,}",                       # Hangul runs ≥ 2 syllables
+)
+
+
+def _passB_tfidf_salvage(channel_texts: dict[str, str], idf: dict) -> list[dict]:
+    """TF-IDF top-K over researcher's combined project text. Used ONLY
+    when Pass-A is sparse. Returns rows in the same shape Pass-A produces
+    so the rest of the pipeline doesn't need to distinguish them.
+    """
+    unigram_idf = idf.get("idf") or {}
+    # Pool text across channels with the same channel weights Pass-A uses.
+    weighted_tokens: dict[str, float] = {}
+    for ch, text in channel_texts.items():
+        if not text:
+            continue
+        w = {"anchor": _W_ANCHOR, "paradigm": _W_PARADIGM,
+             "context": _W_CONTEXT}[ch]
+        low = text.lower()
+        for tok in _PASSB_TOKEN_RE.findall(low):
+            if len(tok) < _PASSB_MIN_LEN:
+                continue
+            if tok in _STOPLIST:
+                continue
+            if tok.isdigit():
+                continue
+            weighted_tokens[tok] = weighted_tokens.get(tok, 0.0) + w
+    # Score = TF × IDF, only keep tokens whose corpus IDF is high enough.
+    scored = []
+    for tok, tf in weighted_tokens.items():
+        tok_idf = unigram_idf.get(tok)
+        if tok_idf is None or tok_idf < _PASSB_MIN_IDF:
+            continue
+        scored.append({
+            "phrase":   tok,
+            "score":    round(tf * tok_idf, 3),
+            "channels": ["passB.tfidf"],
+            "n_hits":   int(round(tf)),
+        })
+    scored.sort(key=lambda r: -r["score"])
+    return scored[:_PASSB_TOP_K]
+
 
 def _extract_phrases_one_channel(text: str, lexicon: list[str],
                                  idf: dict, channel_weight: float
@@ -358,6 +444,27 @@ def _build_fingerprint(init: str, lexicon: list[str], idf: dict,
     # Cap at top 50 phrases per researcher.
     phrases = phrases[:50]
 
+    # P19b — Pass-B salvage for cold-start researchers. Fingerprints with
+    # ≤ 3 Pass-A phrases get a TF-IDF top-15 boost so they have ANY
+    # keyword signal at queue-build time. Marks the phrases distinctly so
+    # downstream code can apply lower confidence if needed.
+    passB_phrases: list[dict] = []
+    if len(phrases) <= _PASSB_TRIGGER_THRESHOLD:
+        # Re-collect text by channel for Pass-B (cheaper than passing it
+        # down explicitly through the per-channel loop above).
+        pooled_channels: dict[str, str] = {"anchor": "", "paradigm": "", "context": ""}
+        for proj in projects:
+            text_by_ch = _channel_text(proj)
+            for ch, text in text_by_ch.items():
+                if text:
+                    pooled_channels[ch] = (pooled_channels[ch] + " " + text).strip()
+        passB_phrases = _passB_tfidf_salvage(pooled_channels, idf)
+        # De-dup against Pass-A (same phrase shouldn't double-count).
+        existing = {p["phrase"].lower() for p in phrases}
+        passB_phrases = [p for p in passB_phrases
+                         if p["phrase"].lower() not in existing]
+        phrases.extend(passB_phrases)
+
     # novel_terms = phrases NOT in the existing 52-tag taxonomy.
     tax_kws = set()
     for dim, cats in taxonomy.get("dimensions", {}).items():
@@ -396,10 +503,13 @@ def _build_fingerprint(init: str, lexicon: list[str], idf: dict,
         "method_signature": method_signature,
         "seed_dois":      seed_dois,
         "provenance": {
-            "extractor_version": "fp.v1.passA-only",
+            "extractor_version": "fp.v2.passA-plus-passB-salvage",
             "lexicon_n_entries": len(lexicon),
             "idf_version":       idf.get("version"),
             "taxonomy_version":  taxonomy.get("version"),
+            "passA_n_phrases":   len(phrases) - len(passB_phrases),
+            "passB_n_phrases":   len(passB_phrases),
+            "passB_triggered":   len(passB_phrases) > 0,
         },
         # Backward-compat: a `dim_preferences` projection so legacy
         # readers (build_researcher_queue.py) get the shape they expect.
