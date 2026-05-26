@@ -20,11 +20,36 @@ Two audiences:
 ! python scripts/archive/tag_dimensions.py --apply
 ! python scripts/archive/compute_embeddings.py --apply
 
-# 4. Per-researcher queues (re-run whenever projects/preferences move).
-! python scripts/archive/build_researcher_queue.py --all --apply
+# 4. Per-researcher queues — ONE-TIME --all-in-scope build.
+#    After this, the session is self-driving: pick_next.py re-ranks against
+#    latest dim_preferences on every call (P17 in-session re-rank), so the
+#    operator does NOT need to re-run --apply per cycle. Only re-run when:
+#      (a) new papers are ingested into the archive, OR
+#      (b) a researcher's csnl_research.projects text changes substantially.
+! python scripts/archive/build_researcher_queue.py --all --apply --all-in-scope
 
-# 5. Publish.
+# 5. Install the Tuesday-18:00-KST cron (generates weekly recs + Wed Blitz).
+#    Pure deterministic SQL upserts, NO LLM, NO send paths.
+! cp cron/com.csnl.paper-archive.weekly.plist ~/Library/LaunchAgents/
+! launchctl load ~/Library/LaunchAgents/com.csnl.paper-archive.weekly.plist
+! touch state/.CRON_ENABLED                       # gate is opt-in
+
+# 6. Publish.
 git push origin main
+```
+
+### Operator — verify the weekly cycle is wired
+
+```
+# Dry-run both downstream scripts (read-only against current state).
+! python scripts/archive/weekly_recommend.py    --dry-run --top 3
+! python scripts/archive/paper_blitz_feed.py    --dry-run
+
+# Inspect any researcher's accumulated paper-status DB.
+! python scripts/archive/list_status.py JOP
+
+# Print any researcher's full research-context priming payload.
+! python scripts/archive/get_researcher_context.py JOP --human
 ```
 
 ## Operator — share credentials
@@ -104,13 +129,19 @@ exact setup command.
 
 ## Researcher — run
 
+**Four researcher-facing slash commands** (all Korean UI; scientific terms
+stay in English):
+
 ```
-/csnl-paper-archive-interview:paper-interview <YOUR_INIT>
+/csnl-paper-archive-interview:paper-interview <YOUR_INIT>   # main MCQ walk
+/csnl-paper-archive-interview:paper-weekly    <YOUR_INIT>   # this week's top-5 unread
+/csnl-paper-archive-interview:paper-blitz     <YOUR_INIT>   # next Wed Paper Blitz assignment
+/csnl-paper-archive-interview:paper-context   <YOUR_INIT>   # prime any session with your research context
 ```
 
-Korean UI throughout; scientific terms (RSA, MVPA, fMRI, BOLD, efficient
-coding, pRF, Bayesian observer, …) stay in English. The skill walks you
-through (one question per turn):
+### paper-interview (the main loop)
+
+One question per turn:
 
 1. Topic confirmation
 2. Methodology confirmation
@@ -122,8 +153,29 @@ through (one question per turn):
 6. Active belief update every 10 answers (the skill explains in 2 short
    Korean sentences what it learned and what changes next cycle)
 
-You can stop anytime. The next `/csnl-paper-archive-interview:paper-interview`
-resumes from where you left off.
+You can stop anytime. The next `paper-interview` resumes from where you
+left off.
+
+### paper-weekly + paper-blitz (downstream payoff)
+
+These read from the Tuesday-18:00-KST operator cron output. If the cron has
+not yet generated this week's batch, both commands report that and suggest
+you run `paper-interview` directly.
+
+- `paper-weekly` — your top-5 unread papers this week, persisted in
+  `archive_weekly_picks`. Stable across operator re-runs.
+- `paper-blitz` — your Wednesday 5-min journal-club assignment, picked
+  automatically from papers you marked `already_read` in the prior 7 days.
+  Claude can generate a 5-min outline (claim / method / result / how it
+  connects to your projects).
+
+### paper-context (research-context priming)
+
+Run this at the start of ANY Claude Code session where you want help with
+your research. It pulls your `csnl_research.projects` rows + your fingerprint
+vocabulary + your latest `dim_preferences` + your last 60 days of
+already-read / save-later / not-relevant responses — usually in <1 second.
+After this, the session knows your work without you having to re-explain.
 
 ## Boundaries (verify these stay true)
 

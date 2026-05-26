@@ -4,6 +4,37 @@ description: Operating procedure for the CSNL paper-archive interview. Drives th
 
 # paper-archive-interview — researcher procedure
 
+## Architecture invariants (P19e — applies always)
+
+The recommendation is a **live, session-driven loop** — NOT a static
+list the operator periodically refreshes:
+
+1. PostgreSQL is the persistent truth source. Every MCQ → row in
+   `archive_responses`. The `archive_paper_status` view exposes
+   per-researcher per-paper status (read / to_read / not_interested /
+   maybe_interested / skipped) in plain Korean labels.
+
+2. The researcher's `archive_researcher_queues` is the candidate POOL
+   (typically ~7,500 in-scope papers per researcher when built with
+   `--all-in-scope`). It is NOT a fixed ordered list of "next 200 to
+   show"; `pick_next.py` re-ranks the unanswered subset against the
+   latest `archive_profile_verifications.dim_preferences` on EVERY
+   call (P17 in-session re-rank).
+
+3. Already-answered papers are auto-excluded via `NOT EXISTS` against
+   `archive_responses`. The researcher never sees the same paper twice.
+
+4. After 10 MCQs, Stage 4 spawns `belief-updater` → updates dim_preferences
+   in `archive_profile_verifications`. The very next `pick_next.py`
+   call uses the new prefs — no operator intervention. No queue rebuild
+   needed.
+
+5. The operator-side `build_researcher_queue.py --apply` is a ONE-TIME
+   setup step that fills the candidate pool. Re-runs are needed only
+   when (a) new papers are ingested into the archive or (b) the
+   researcher's `csnl_research.projects` text changes substantially.
+   It is NOT a per-session or per-batch operation.
+
 ## Execution invariants (P16 hardening — applies to every turn)
 
 These rules exist because researchers will run 20+ turns over a session
@@ -196,6 +227,18 @@ missing parent yields `FileNotFoundError`.
    3. 차원 선호 — 어떤 focus/method/stim/subj 가 우선인지
    4. 각 추천 논문 4-지선다 (저장 / 관련없음 / 이미읽음 / 더자세히)
    5. 10편마다 <init> 연구원님 응답 패턴을 보고 차원 선호 자동 업데이트 (다음 큐에 반영)
+
+   [이 인터뷰가 어디에 쓰이는지 — 시간이 헛되지 않도록]
+   • 매주 화요일 18:00 KST 운영자측 자동 작업이 <init> 연구원님의 응답을
+     기반으로 다음 주 읽을 만한 paper top-5 를 생성합니다
+     (→ `/csnl-paper-archive-interview:paper-weekly <init>`).
+   • 인터뷰 중 "이미 읽음" 으로 표시하신 paper 는 자동으로 다음 수요일
+     Paper Blitz (연구실 5분 저널클럽) 발표 후보로 잡힙니다
+     (→ `/csnl-paper-archive-interview:paper-blitz <init>`).
+   • <init> 연구원님의 어휘 / 차원 선호 / 최근 읽은 paper 는 영구 보존되어
+     다음 어떤 Claude 세션에서도 `/csnl-paper-archive-interview:paper-context
+     <init>` 로 1초 안에 priming 됩니다 — 매번 "무슨 연구 하세요?" 다시 묻지
+     않아도 됩니다.
 
    [경계]
    인터뷰 응답은 csnl_paper_rec.archive_{interview_sessions, profile_verifications,

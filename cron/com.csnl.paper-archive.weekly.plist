@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.csnl.paper-archive.weekly</string>
+
+  <!-- Tuesday 18:00 KST. Generates the current week's archive
+       recommendations + upcoming Wednesday Paper Blitz schedule into
+       csnl_paper_rec.archive_weekly_picks / archive_paper_blitz.
+       Researchers pull via the plugin commands the next day. -->
+  <key>StartCalendarInterval</key>
+  <dict>
+    <key>Weekday</key><integer>2</integer>
+    <key>Hour</key><integer>18</integer>
+    <key>Minute</key><integer>0</integer>
+  </dict>
+
+  <key>WorkingDirectory</key>
+  <string>/Users/csnl/Documents/claude/csnl-paper-rec</string>
+
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/bash</string>
+    <string>/Users/csnl/Documents/claude/csnl-paper-rec/scripts/run_archive_weekly.sh</string>
+  </array>
+
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>TZ</key>
+    <string>Asia/Seoul</string>
+    <key>PATH</key>
+    <string>/usr/local/bin:/usr/bin:/bin:/opt/homebrew/bin</string>
+  </dict>
+
+  <key>StandardOutPath</key>
+  <string>/Users/csnl/Documents/claude/csnl-paper-rec/state/launchd_archive_weekly.out</string>
+  <key>StandardErrorPath</key>
+  <string>/Users/csnl/Documents/claude/csnl-paper-rec/state/launchd_archive_weekly.err</string>
+  <key>RunAtLoad</key><false/>
+</dict>
+</plist>

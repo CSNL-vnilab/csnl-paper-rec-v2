@@ -7,7 +7,16 @@
 
 ## 0. 한 줄 요약
 
-설치 + 비밀번호 셋업 (한번) → 시간 날 때 `/csnl-paper-archive-interview:paper-interview <본인 init>` 실행 → 객관식 답변 → 시스템이 본인 응답을 학습해 다음 추천 갱신.
+설치 + 비밀번호 셋업 (한번) → 시간 날 때 `/csnl-paper-archive-interview:paper-interview <본인 init>` 실행 → 객관식 답변 → 시스템이 본인 응답을 학습해 (a) 매주 화요일 자동 추천 batch 생성, (b) 수요일 Paper Blitz 발표 후보 자동 배정, (c) 다른 Claude 세션도 본인 연구 맥락을 1초 안에 priming.
+
+### 4개 슬래시 명령
+
+| 명령 | 언제 |
+| --- | --- |
+| `/csnl-paper-archive-interview:paper-interview <init>` | **메인** — 시간 날 때마다 객관식 인터뷰 |
+| `/csnl-paper-archive-interview:paper-weekly <init>`    | **매주** — 이번 주 추천 top-5 확인 (운영자측 화요일 18:00 KST 자동 생성) |
+| `/csnl-paper-archive-interview:paper-blitz <init>`     | **수요일 아침** — 본인이 발표할 Paper Blitz paper 확인 + 5분 발표 준비 도움 |
+| `/csnl-paper-archive-interview:paper-context <init>`   | **다른 세션 시작 시** — 본인 연구 맥락 priming (현재 프로젝트 / 어휘 / 선호 / 최근 읽은 paper). 매번 "무슨 연구 하세요?" 다시 묻지 않아도 됨. |
 
 ---
 
@@ -105,20 +114,85 @@ python3 ~/.claude/plugins/cache/csnl-marketplace/csnl-paper-archive-interview/*/
 
 ---
 
-## 4. 업데이트 주기
+## 4. 업데이트 주기 — 세션이 능동적으로 진화
 
-| 주기 | 누가 | 무엇 |
+기본 원칙: **운영자가 주기적으로 `--apply` 를 누르는 게 아니라, 세션
+자체가 응답을 기반으로 추천 방법을 진화시키며 다음 추천 list 를 만든다.**
+
+| 주기 | 무엇이 / 누가 트리거 | DB 상태 변화 |
 | --- | --- | --- |
-| **실시간** | 자동 | 응답 즉시 `archive_responses` 기록. 다음 paper 가 새 prefs 반영 (P17 in-session re-rank). |
-| **매 10 응답** | 자동 | Stage 4 belief 업데이트: dim weights 조정, `archive_meta_reviews` 기록, 다음 paper 부터 즉시 반영. |
-| **월 1회** | 운영자 | `archive-feedback-analyst` (P20 예정) 가 응답 + queue feedback 분석 → 제안 (새 키워드 / 가중치 / 큐 확장). 모든 변경은 운영자 검토 후 `apply_evolution.py` 로 적용. 자동 적용 없음. |
-| **분기 1회** | 연구원 + 운영자 | retrospective 설문 5분: 지난 3개월 추천을 (a) 저장만 / (b) 일부 읽음 / (c) 완독 / (d) 인용 / (e) 논문 작성 활용 했는지. **비순환적 ground truth** — 알고리즘 정성 평가 기준. |
-| **수시** | 운영자 | csnl_research.projects 업데이트 (본인이 자가-아카이브로 새 프로젝트 추가 등) → 다음 큐 빌드에서 fingerprint 자동 재추출. |
+| **응답 즉시** | 본인이 1/2/3/4 누름 | `archive_responses` 에 (researcher, paper, choice) 기록 — 읽음/읽을 예정/관심 없음의 진본 |
+| **다음 paper 픽** | `pick_next.py` 자동 | 응답 즉시 반영. 이미 응답한 paper 는 자동 제외. **현재 dim_preferences 로 unanswered 풀 전체 즉석 재랭킹** (P17). 운영자 개입 없음. |
+| **매 10 응답** | Stage 4 자동 | belief-updater 가 dim_preferences 갱신 → `archive_profile_verifications` 새 row. 다음 paper 부터 즉시 새 prefs 로 ranking. 운영자 개입 없음. |
+| **세션 종료** | 자동 | `archive_interview_sessions.completed_at` 기록. 다음 세션은 같은 row 에서 이어지거나 새 session 시작. |
+| **월 1회** | 운영자 (검토 후 적용) | (P20 예정) `archive-feedback-analyst` 가 lab-wide 신호 분석 → lexicon/taxonomy/가중치 진화 제안. **연구원별 큐는 운영자 개입 없이 항상 dynamic** — 이건 lab-wide 알고리즘 진화 차원. |
+| **분기 1회** | 연구원 + 운영자 | retrospective 설문 5분 (비순환적 ground truth) |
+| **수시** | 본인 | CSNL 자가-아카이브 툴로 `csnl_research.projects` 업데이트 → 다음 fingerprint 추출 시 자동 반영 |
 
-운영자 수동 작업이 필요한 경우:
-- 새 프로젝트 시작 → CSNL 자가-아카이브 툴로 `csnl_research.projects` 업데이트
-- 큐 고갈 (200 편 모두 응답) → 운영자가 OpenAlex 재인제스트 + 큐 재빌드
-- `mcq_precision_30d` < 45% → 운영자가 알림 받고 fingerprint 재구성 검토
+운영자 수동 개입이 필요한 경우 (**드물게만**):
+- 초기 설정 시 **한 번**: `build_researcher_queue.py --all-in-scope` 로 본인 큐에 in-scope 전체 paper 사전 점수 채우기 (~7,500 후보)
+- 새 paper 가 archive 에 추가됐을 때 (월 1회 운영자 ingest 후): 본인 큐 갱신
+- 본인이 새 프로젝트 시작 시: fingerprint 재추출
+
+평소 매일/매주는 세션이 알아서 진화 — 운영자 개입 0.
+
+## 4-bis. PostgresDB 가 무엇을 누적하나
+
+`csnl_paper_rec.archive_paper_status` view 가 본인의 paper 별 상태를
+보여줍니다 (운영자 조회용):
+
+```
+$ python3 scripts/archive/list_status.py <YOUR_INIT>
+
+JOP — 총 20편 응답
+  읽을 예정              (to_read)            n=12
+  관심 없음              (not_interested)     n=6
+  이미 읽음              (read)               n=2
+  ...
+```
+
+매핑:
+- `read` (이미 읽음) = MCQ 답변 3번 → 다음 수요일 Paper Blitz 발표 후보 자동 배정
+- `to_read` (읽을 예정) = MCQ 답변 1번 (저장)
+- `not_interested` (관심 없음) = MCQ 답변 2번 → 추후 추천에서 비슷한 paper 자동 배제
+- `maybe_interested` (더 알아볼 만함) = MCQ 답변 4번
+
+이 데이터는 영구 보존되며 다음 추천 시 자동 활용 — 같은 paper 가 다시
+나오지 않고, 본인이 "이미 읽음" 표시한 영역의 *다른* paper 가 우선됩니다.
+
+## 4-tris. Wednesday Paper Blitz (5분 저널클럽) 연동
+
+매주 수요일 오전 연구실 Paper Blitz 에서 각자 지난 1주간 본인이 "이미 읽음"
+으로 표시한 paper 중 하나를 5분간 발표 + discuss 합니다.
+
+운영자측 cron 이 매주 화요일 18:00 KST 에 자동으로:
+1. 각 연구원의 지난 7일 `already_read` 응답을 조회
+2. 그 중 가장 composite score 가 높은 paper 를 본인 발표 슬롯으로 배정
+3. `archive_paper_blitz` 에 영구 기록
+
+수요일 아침에 `/csnl-paper-archive-interview:paper-blitz <init>` 실행하면:
+- 본인의 발표 paper 가 출력됨
+- 원하시면 Claude 가 5분 발표 outline (핵심 주장 / 방법 / 결과 / 본인 연구와의 연결) 자동 생성
+
+지난 1주간 새로 읽은 paper 가 없으면 그 주는 발표 없음으로 자동 처리됩니다 —
+인터뷰만 꾸준히 하시면 발표 후보는 자연스럽게 누적됩니다.
+
+## 4-quater. 미래 Claude 세션을 위한 retrieval priming
+
+archive 인터뷰의 가장 큰 payoff: 본인이 한 모든 응답이 누적되어, 미래에
+연구를 도와줄 어떤 Claude 세션이든 본인 맥락을 1초 안에 불러옵니다.
+
+```
+# 어떤 새 Claude Code 세션에서든
+/csnl-paper-archive-interview:paper-context JOP
+
+→ JOP 연구원님의 진행 중인 4개 프로젝트, 최근 읽은 paper 12편,
+  차원 선호 (F-NIM 강함, M-RSA 강함) 모두 로드했습니다.
+  어떤 부분을 도와드릴까요?
+```
+
+이게 작동하려면 인터뷰를 **꾸준히** 하셔야 합니다 (시간 날 때 5-10편 단위).
+누적 응답 수가 많을수록 priming context 가 정확해집니다.
 
 ---
 

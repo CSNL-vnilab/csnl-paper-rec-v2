@@ -1,7 +1,7 @@
 {
   "name": "csnl-paper-archive-interview",
-  "version": "0.3.0",
-  "description": "Per-researcher interactive interview over the CSNL paper archive. Verifies the researcher's profile, walks a pre-computed top-N queue (recent ≤5y / mid 5–10y / classic >10y), records one MCQ choice per paper, runs a meta-review every 10 answers, and pushes everything to Postgres (csnl_paper_rec.archive_*).",
+  "version": "0.4.0",
+  "description": "CSNL paper-archive interview + downstream priming. Three researcher-facing commands: (1) paper-interview — interactive MCQ walk of the per-researcher top-N queue, persists choices to Postgres archive_*; (2) paper-weekly — pulls this week's auto-generated top-5 unread-paper batch; (3) paper-blitz — pulls the upcoming Wednesday Paper Blitz (lab 5-min journal club) assignment; (4) paper-context — primes any Claude session with the researcher's accumulated research context (projects, fingerprint vocabulary, dim_preferences, recent reads / will-reads / exclusions) so subsequent retrieval is fast and accurate.",
   "author": {
     "name": "CSNL Lab",
     "email": "vnilab@gmail.com",

@@ -218,6 +218,87 @@ CREATE INDEX IF NOT EXISTS ix_archive_queues_rid_tier
   ON __SCHEMA__.archive_researcher_queues(researcher_id, tier, rank_in_chunk);
 
 -- =========================================================================
+-- P19e — paper_status view (read / will_read / not_interested).
+-- archive_responses already carries the per-paper choice; this view makes
+-- the persistent "what does the lab know about each (researcher, paper)
+-- pair" queryable in plain terms. Operator + future analytics scripts
+-- read this view; researchers never see it.
+-- =========================================================================
+CREATE OR REPLACE VIEW __SCHEMA__.archive_paper_status AS
+SELECT
+  r.researcher_id,
+  r.canonical_id,
+  CASE r.choice
+    WHEN 'save_later'    THEN 'to_read'
+    WHEN 'already_read'  THEN 'read'
+    WHEN 'not_relevant'  THEN 'not_interested'
+    WHEN 'tell_me_more'  THEN 'maybe_interested'
+    WHEN 'skipped'       THEN 'skipped'
+    ELSE r.choice
+  END AS paper_status,
+  r.session_id,
+  r.responded_at,
+  r.choice_detail
+FROM __SCHEMA__.archive_responses r;
+
+COMMENT ON VIEW __SCHEMA__.archive_paper_status IS
+  'P19e: per-(researcher, paper) status derived from archive_responses. '
+  'Plain-Korean terms: read / to_read / not_interested / maybe_interested / skipped.';
+
+-- =========================================================================
+-- P20 — weekly picks + Paper Blitz schedule.
+-- Two persistence tables so weekly cron output (a) does not drift each time
+-- the operator re-runs the script and (b) is queryable as historical record.
+-- Both are write-once-per-week-per-researcher; UPSERT on (researcher_id,
+-- week_iso) overrides if the operator regenerates.
+-- =========================================================================
+
+-- (a) Weekly unread-paper recommendations. The operator-side cron
+-- weekly_recommend.py picks top-N unread papers from the researcher's
+-- archive_researcher_queues (in-scope pool), filtering out anything already
+-- in archive_responses. The set is persisted so the same week's batch is
+-- stable across operator re-runs.
+CREATE TABLE IF NOT EXISTS __SCHEMA__.archive_weekly_picks(
+  researcher_id    TEXT NOT NULL,
+  week_iso         TEXT NOT NULL,            -- "2026-W22" (ISO week)
+  canonical_id     TEXT NOT NULL,
+  rank             INTEGER NOT NULL,         -- 1..N within the week
+  composite        REAL,                     -- snapshot at generation time
+  why_ko           TEXT,                     -- short Korean reason (top dim_match signal)
+  generated_at     TEXT NOT NULL,            -- ISO KST
+  delivered_at     TEXT,                     -- null = not yet sent
+  PRIMARY KEY (researcher_id, week_iso, canonical_id)
+);
+CREATE INDEX IF NOT EXISTS ix_arch_weekly_rid_week
+  ON __SCHEMA__.archive_weekly_picks(researcher_id, week_iso, rank);
+
+-- (b) Paper Blitz Wednesday-morning schedule. For each upcoming Wed, the
+-- operator picks (researcher, paper) pairs from papers the researcher marked
+-- 'already_read' in the prior 7 days. The presenter discusses the paper for
+-- ~5 min during the lab journal club.
+CREATE TABLE IF NOT EXISTS __SCHEMA__.archive_paper_blitz(
+  blitz_date       TEXT NOT NULL,            -- ISO date of the Wednesday
+  presenter        TEXT NOT NULL,            -- researcher_id
+  canonical_id     TEXT NOT NULL,
+  slot_order       INTEGER NOT NULL,         -- 1..K
+  picked_from      TEXT,                     -- 'auto_last_week_read' | 'operator_override'
+  scheduled_at     TEXT NOT NULL,
+  status           TEXT NOT NULL DEFAULT 'scheduled'
+    CHECK (status IN ('scheduled','presented','skipped','cancelled')),
+  PRIMARY KEY (blitz_date, presenter, canonical_id)
+);
+CREATE INDEX IF NOT EXISTS ix_arch_blitz_date
+  ON __SCHEMA__.archive_paper_blitz(blitz_date, slot_order);
+
+COMMENT ON TABLE __SCHEMA__.archive_weekly_picks IS
+  'P20: weekly N-paper unread-recommendation batch. One row per (researcher, '
+  'week, paper). Stable per week; UPSERT on regenerate.';
+COMMENT ON TABLE __SCHEMA__.archive_paper_blitz IS
+  'P20: Wednesday Paper Blitz (lab 5-min journal club) schedule. One row per '
+  '(blitz_date, presenter, paper). Default pick: papers marked already_read '
+  'in the prior 7 days.';
+
+-- =========================================================================
 -- P19b — evolution-workflow foundation (3 new tables, schema only).
 -- See docs/HARNESS-ALGORITHM-DESIGN.md "evolution workflow" + Opus reviewer's
 -- Part 2 design. These tables HOLD the signals that the future
