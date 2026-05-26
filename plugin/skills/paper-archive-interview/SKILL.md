@@ -73,12 +73,26 @@ context. Violating any of them is a bug, not a stylistic miss.
 
 ## Boundaries (read once, apply throughout)
 
-- The researcher sees **only Korean**. Never paste raw JSON, never echo
-  a script's stdout into the chat. After every Bash call: `json.loads`
-  it, extract the fields you need, and rewrite them in Korean prose.
+- The researcher sees **mostly Korean**, with TWO carved-out exceptions:
+  (1) the APA citation block at Stage 2 Block 1 — rendered verbatim in
+  English (or whatever language the source venue uses) with NO Korean
+  glosses or particles wrapped around the citation tokens; (2) scientific
+  / technical terms inside Korean prose stay in their original English
+  form (RSA, MVPA, fMRI, BOLD, pRF, efficient coding, rate-distortion,
+  Bayesian observer, drift-diffusion, attractor, …). Outside these two
+  cases, write Korean.
+- **APA citation invariants** (Stage 2 Block 1): never wrap the citation
+  in Korean ("…가 Journal of Vision 에 발표한…"). Never translate the
+  title or venue. Never paraphrase the year. Never substitute the DOI
+  with a non-canonical link. Never reorder authors. The block must be
+  copy-pasteable into a manuscript reference list as-is.
+- Never paste raw JSON, never echo a script's stdout into the chat.
+  After every Bash call: `json.loads` it, extract the fields you need,
+  and rewrite them in the appropriate form (APA in Block 1, Korean
+  prose elsewhere).
 - **Internal vocabulary forbidden** in researcher-visible text. The
   following must NEVER appear in a message to the researcher (in any
-  language): `canonical_id`, `DOI`, `doi`, `similarity`, `rank_in_chunk`,
+  language): `canonical_id`, `similarity`, `rank_in_chunk`,
   `chunk`, `recent` / `mid` / `classic` (as chunk labels — say `최근 5년`
   / `5-10년 전` / `10년 이상 전` instead), `lab_scope_tags`, raw tag
   codes (`BDM`, `NN`, `fVC`, `VWM`, `SD`, `CG`, `METH`), `proposal_type`
@@ -86,7 +100,22 @@ context. Violating any of them is a bug, not a stylistic miss.
   `paper-explainer`, `paper-archive-interview`, "agent", "scout",
   "tier", "D1"–"D5", "composite", "BANNED_TERMS", project slugs in
   raw form, JSON field names. Translate every tag into a plain-Korean
-  topic phrase using the table at §"Tag rendering" below.
+  topic phrase using the table at §"Tag rendering" below. (`DOI` /
+  `doi` is permitted inside the APA citation block in its standard
+  `https://doi.org/…` form; never elsewhere.)
+- **Abstractness ban** (Stage 2 Block 2). The following recommendation
+  patterns are forbidden because they convey no actionable information:
+  - Pure dim-tag connections without naming a specific project AND a
+    specific model (`"… 자주 다루시는 behavioural modeling 와 겹칩니다"`,
+    `"Bayesian observer 영역"`, `"psychophysics 영역"`).
+  - Standalone abstract phrase quotes (e.g. `초록 인용: "drift diffusion
+    modeling (DDM) framework"`). An abstract quote is allowed ONLY when
+    embedded INSIDE a complete sentence that paraphrases the paper's
+    actual claim and ties it to a specific project of the researcher.
+  - "주제는 인접하지만 …" / "관련 영역입니다" tier-template hand-wavy
+    sentences when a specific project × model anchor IS available — they
+    are a fallback for the genuine no-grounding case (see Block 3), not
+    a default.
 - No signatures, no farewells. End each message with the question or the
   MCQ block, nothing else.
 - Length per message: ≤ 4 short paragraphs OR the MCQ; whichever is
@@ -386,53 +415,142 @@ Loop until `pick_next.py` returns `done:true`:
    `session_close.py --session <sid>`, and stop.
 3. Otherwise, you have a `paper` object with these fields you can use:
    `doi, title, authors_json, venue, year, pub_date, is_preprint,
-    abstract, lab_scope_tags, chunk, rank_in_chunk, similarity`.
-4. Compose a **one-paragraph Korean summary** with exactly these elements
-   in order:
-   - 저널 + 연도 (preprint이면 "프리프린트")
-   - 1–3 명의 대표 저자 + 그 외 인원수 (`외 N인`)
-   - 키워드 2–4개 — render `lab_scope_tags` + `dim_tags` via the Tag
-     rendering table above (never use the raw codes `BDM`, `F-EFC`,
-     `M-RSA`, `S-FAC`, etc.). Pull the Korean labels from the taxonomy.
-   - 한 문장으로 연관성 설명. **PREFER `dim_match.top_signals[0].render_ko`
-     WHEN PRESENT** (P19a) — that field carries a pre-computed Korean
-     explanation grounded in the strongest scoring signal (e.g. "키워드
-     매치: granularity effect, history effect"). When present, use it
-     as the connection clause verbatim. When absent (older queue rows
-     or fingerprint-less researchers), fall back to the tier templates
-     below + the STRICT GROUNDING RULE (P16):
-     - You may claim a connection ONLY if it can be supported by:
-       (a) a verbatim ≤ 12-word quote — **prefer the abstract; if the
-           abstract is null/empty, fall back to the title** (the
-           classics archive often has only a filename-derived title),
-           AND
-       (b) a SPECIFIC field of the researcher's confirmed profile (one
-           of: topics[*], methods[*], or a dim_preferences focus/method/
-           stim/subj code) that matches the paper's `dim_tags` /
-           `lab_scope_tags`.
-     - If EITHER (a) or (b) cannot be substantiated from the pick_next
-       output alone, use this honesty fallback verbatim: "본 논문의
-       초록/제목만으로는 <init> 연구원님 연구와의 직접적인 연결을
-       단언하기 어렵습니다. 제목·키워드만 봐도 익숙한 영역이라면 1번,
-       아니면 2번을, 더 자세한 설명이 필요하면 4번을 눌러주세요."
-     - **DO NOT** infer transitive connections ("X 가 Y 일 수도 있어서
-       <init> 연구원님 연구와 …"). Either there is a direct verifiable link in the
-       data or the fallback is the only acceptable output.
-     - Use the paper's `tier` field to colour the sentence (never
-       mention "tier" or `S/A/B/C` aloud). All tier templates use
-       "제목/초록 인용:" — pick whichever field actually contains the
-       quoted span:
-     - `tier == "S"`: full match — "<init> 연구원님의 [matched method
-       한글라벨] × [matched stim 한글라벨] 조합과 맞물립니다.
-       제목/초록 인용: \"...\""
-     - `tier == "A"`: strong partial — "<init> 연구원님이 자주 다루시는
-       [matched-dim 한글라벨] 와 겹칩니다. 제목/초록 인용: \"...\""
-     - `tier == "B"`: topical-only — quote the matching span from
-       title or abstract; cite the topic field of the profile by name
-       (NOT a code). "제목/초록 인용: \"...\""
-     - `tier == "C"`: humble — "주제는 인접하지만 방법론은 다른 결입니다.
-       제목/초록을 한번 훑어보실 만한지 봐주세요. 제목/초록 인용: \"...\""
-   Then immediately present the MCQ block, verbatim:
+    abstract, lab_scope_tags, chunk, rank_in_chunk, similarity,
+    dim_tags, dim_match, composite, tier`.
+
+4. Compose the paper introduction as **three SEPARATE blocks**, in this
+   exact order. Each block has rules; do not merge them.
+
+   ### Block 1 — APA citation (verbatim, NO Korean tokens inside)
+
+   Render the bibliographic record in **plain APA 7 format**, exactly as
+   it would appear in a manuscript reference list. **Do NOT add Korean
+   particles, glosses, or translations inside this block.** Do not
+   rewrite the title. Do not translate the venue.
+
+   Required shape:
+
+   ```
+   <Family>, <Initials>., <Family>, <Initials>., & <Family>, <Initials>.
+   (<Year>). <Title>. *<Venue>*, *<Volume>*(<Issue>), <pages>.
+   https://doi.org/<doi>
+   ```
+
+   Sources of each token:
+   - Authors: `authors_json`. Render up to 6 names in `Last, F. M.` form
+     joined by ", " with `, &` before the last. If > 6, list the first
+     6 then `, …, Last, F. M.` (per APA 7).
+   - Year: `year`. If `is_preprint == true`, append " [Preprint]" after
+     the year, e.g. `(2025 [Preprint])`.
+   - Title: `title` verbatim. No quotes, no italics. Sentence case is
+     fine if the source uses sentence case; otherwise leave it.
+   - Venue: `venue` in *italics*.
+   - Volume / issue / pages: only include the parts you can extract from
+     the paper record. If absent, drop the field — do NOT invent.
+   - DOI: full URL `https://doi.org/<doi>`. If `doi` is null, omit the
+     URL line entirely (do NOT substitute a Google-Scholar link).
+
+   This is the **only** place in the introduction where English-language
+   bibliographic text appears unwrapped. It exists so the researcher can
+   copy-paste the citation into a manuscript directly — keeping a clean
+   APA record is more valuable than localizing it.
+
+   ### Block 2 — Personalized recommendation rationale (Korean prose)
+
+   One short paragraph (2–4 sentences) explaining **why this specific
+   paper is being recommended to this specific researcher right now.**
+
+   You MUST ground the paragraph in:
+     (i)  ONE specific project of the researcher (by `projects[*].title`
+          — NOT the slug code), and the specific model / method / question
+          that project uses (read from `topics[*]` — each topic line is a
+          one-sentence claim from the researcher's own self-archive that
+          names a model or question);
+     (ii) ONE specific contribution of the paper, expressed as a
+          **complete grammatical sentence** that paraphrases what the
+          paper does. The sentence must name the paper's model / method
+          / claim. You may quote ≤ 8 words from the abstract verbatim,
+          but only embedded INSIDE a complete sentence — never as a
+          standalone snippet;
+    (iii) the **connection clause** — one explicit sentence saying how
+          (ii) extends, contradicts, complements, or shares tooling with
+          (i). Examples of valid connection forms: "같은 prior-shape →
+          posterior-variability 매핑 문제를 다른 자극 도메인에서 검증",
+          "<연구원님 model> 의 cost-function 형태 비교에 직접 활용 가능한
+          rate-distortion 결과", "본인이 분리하려는 sensory adaptation 과
+          history effect 의 transfer 를 동일 framework 에서 dissociate".
+
+   **BANNED patterns** (these add no value and waste the researcher's
+   time — reject them in your own output before sending):
+   - Pure dim-tag matching: "<init> 연구원님이 자주 다루시는 *behavioural
+     modeling* 와 겹칩니다" — abstract; says nothing about WHICH
+     behavioural model in WHICH project.
+   - Pure phrase quote: '초록 인용: "drift diffusion modeling (DDM)
+     framework"' — fragment; conveys no claim, no method choice, no
+     connection.
+   - Tier-template prose without the project × model anchor: "주제는
+     인접하지만 방법론은 다른 결입니다." — vague.
+   - Generic taxonomy labels as the connection ("Bayesian observer 영역",
+     "psychophysics 영역") without naming the researcher's project AND
+     the paper's specific contribution.
+
+   **Required shape (template — fill the bracketed slots, never leave them
+   abstract):**
+
+   > `<init>` 연구원님의 **<project title in full — copied from profile.projects[*].title>**
+   > 프로젝트에서 `<one specific question / model / variable from that project's topics[*] line>` 를
+   > 다루시는데, 본 논문은 `<one complete sentence paraphrasing what THIS paper actually does;
+   > may embed ≤ 8 verbatim words from abstract inside the sentence>`.
+   > `<one explicit connection sentence — extension / contradiction /
+   > shared tool / dissociation>`.
+
+   If the queue row has `dim_match.top_signals[0].phrase` present (P19a),
+   the phrase tells you which fingerprint term scored this paper highly —
+   use it as the seed for matching to a project, then build the
+   project × model rationale on top. The pre-computed `render_ko` field is
+   a **hint, not a final clause** — always rewrite it into the
+   project × model shape above.
+
+   ### Block 3 — Uncertainty branch (only when grounding is impossible)
+
+   You may reach this block ONLY if you genuinely cannot fill Block 2's
+   project × model slots from the available data — i.e. one of:
+     - The researcher has < 1 confirmed project of clearly matching scope
+       (after consulting `profile.projects[*].title` and `topics[*]`).
+     - The paper's `abstract` is null/empty AND the title alone does not
+       name a method.
+     - `dim_match.top_signals` is empty (or only contains generic dim
+       labels like "behavioural modeling") AND the project list does not
+       provide enough specificity to bridge the gap.
+
+   In that case, do NOT emit a generic Block 2. Instead:
+     (a) Emit Block 1 (APA citation) as usual.
+     (b) Skip Block 2 entirely.
+     (c) Emit ONE targeted Korean follow-up question that, once answered,
+         will let the next paper introduction (and the in-session re-rank)
+         be more specific. The question must name a concrete project of
+         the researcher's by title and ask ONE clarifying detail about
+         what model / variable / cost-function / paradigm they actually
+         use in that project. Examples (use these as patterns, not
+         verbatim):
+         - "**GranRDT** 프로젝트에서 rate-distortion fit 시 1차 후보 cost
+           function 은 Power / ExpSat / Weibull 중 어떤 것이신가요?
+           paper × 본인 model 매칭 정확도를 한 줄로 끌어올릴 수 있어요."
+         - "**Time2Dist** 의 absolute → relative transfer 를 보실 때
+           Bayesian observer parameter 중 어떤 것을 free 로 두시나요?
+           (likelihood width / prior shape / lapse rate / 그 외)."
+     (d) After the researcher replies (free-text, ≤ 1 sentence), persist
+         their answer to context memory by calling
+         `record_choice.py --init … --session … --canonical-id <cid> \
+          --choice skipped \
+          --detail-json @<file containing {"clarification_q":"…","clarification_a":"…","project":"<slug>"}>`
+         The `skipped` choice records that THIS paper was a learning
+         signal rather than an interview answer, while the clarification
+         persists so the next paper's Block 2 can reference it. Then move
+         to the next `pick_next.py`.
+
+5. After Block 1 + Block 2 (or Block 1 + Block 3), present the MCQ block,
+   verbatim:
 
    ```
    1) 나중에 읽을 리스트에 추가
@@ -440,6 +558,9 @@ Loop until `pick_next.py` returns `done:true`:
    3) 이미 읽었음
    4) 더 자세히 소개해줘
    ```
+
+   (If Block 3 was emitted instead of Block 2, the MCQ is replaced by
+   the targeted clarification question — no MCQ for that paper.)
 
 5. Wait for the researcher's reply. Accept all of these as equivalent
    choice signals (normalize to `1`/`2`/`3`/`4`):
@@ -636,13 +757,28 @@ again:
 - Do not silently move on after a `not_relevant` — always capture the
   one-sentence reason.
 - Do not collapse the MCQ to fewer than 4 options.
-- Do not show internal labels to the researcher: `canonical_id`, `DOI`,
+- Do not show internal labels to the researcher: `canonical_id`,
   similarity score, `chunk` (`recent` / `mid` / `classic`),
   `rank_in_chunk`, `lab_scope_tags` codes, `session_id`,
   `proposal_type`, `tighten_chunk` / `advance_chunk` / `keep` labels,
   `applied`, JSON field names. Use the Tag rendering table and natural
-  Korean dates instead.
+  Korean dates instead. (Inside the APA citation block, `DOI` appears in
+  its standard `https://doi.org/…` form — that's the one carved-out
+  exception, see §Boundaries.)
 - Do not paste raw script stdout into the chat. Always `json.loads` and
-  rewrite in Korean prose.
+  rewrite into the right form (APA in Block 1, Korean elsewhere).
+- **Do not wrap the APA citation in Korean.** The Stage 2 Block 1
+  citation is rendered verbatim. "Lee, H., …, & Lim, J. (2025). Title.
+  *Journal of Vision*, *25*(3), 1–15. https://doi.org/…" — no Korean
+  particles, no glosses, no translated venue, no reformatted title.
+- **Do not emit Stage 2 Block 2 in the banned abstract forms.** No pure
+  dim-tag matches ("behavioural modeling 와 겹칩니다"). No standalone
+  abstract phrase quotes ("초록 인용: \"drift diffusion modeling (DDM)
+  framework\""). Block 2 MUST name a specific project of the researcher
+  by title AND a specific model/method used in that project, AND
+  paraphrase what the paper does in a complete sentence, AND state an
+  explicit connection. If you cannot do all three, you are in the
+  uncertainty case — emit Block 3 (a targeted clarification question +
+  record_choice as `skipped`) instead.
 - Do not call any pipeline script outside `<plugin-root>/scripts/`. The
   parent harness scripts (`scripts/`, `pipeline/`) are operator-only.
