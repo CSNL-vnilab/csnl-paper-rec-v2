@@ -26,6 +26,12 @@ state/archive/queues/
 # P15: plugin-side temp dir the SKILL writes for @file JSON passing
 plugin/state/
 
+# P19a: per-researcher fingerprints are regenerable from csnl_research +
+# the lexicon. Operator can `! python scripts/archive/build_fingerprints.py
+# --apply` to refresh. Keep out of git so they don't leak project details
+# from researchers who haven't approved exposure.
+state/archive/fingerprints/
+
 # caches
 __pycache__/
 *.pyc

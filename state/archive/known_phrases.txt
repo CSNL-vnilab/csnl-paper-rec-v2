@@ -1,0 +1,178 @@
+# Operator-curated multi-word scientific phrases for CSNL.
+# One phrase per line, case-insensitive matching at extraction time.
+# Used by scripts/archive/build_fingerprints.py Pass-A.
+#
+# Seeded from JOP/BHL/BYL/MSY/SMJ/JYK project text + LAB_SCOPE_TAGS keyword
+# bag (scripts/archive/_common.py). The operator grows this file from the
+# `novel_terms` field of each researcher's fingerprint over time — see
+# docs/HARNESS-ALGORITHM-DESIGN.md.
+
+# --- Decision-making / Bayesian observer ---
+Bayesian observer
+ideal observer
+Bayesian inference
+posterior mapping
+posterior distribution
+prior distribution
+likelihood function
+generative model
+predictive coding
+hierarchical Bayesian
+model comparison
+Bayes factor
+MAP estimate
+MCMC
+variational inference
+Blahut-Arimoto
+rate-distortion theory
+rate distortion
+channel capacity
+information bottleneck
+mutual information
+Fisher information
+efficient coding
+resource-rational
+
+# --- Sequential / drift-diffusion / evidence accumulation ---
+drift diffusion
+drift-diffusion model
+sequential sampling
+evidence accumulation
+race model
+urgency signal
+leaky competing accumulator
+signal detection theory
+psychometric function
+psychophysical
+two-alternative forced choice
+8AFC
+confusion matrix
+
+# --- Serial dependence / history effects ---
+serial dependence
+history bias
+history effect
+sequential bias
+attractive bias
+repulsive bias
+trial-by-trial
+attractive serial dependence
+
+# --- Working memory ---
+visual working memory
+working memory
+delay activity
+memory precision
+recall error
+mnemonic
+set size
+delay period
+persistent activity
+memory representation
+
+# --- Categorization / generalization ---
+category learning
+Shepard generalization gradient
+generalization gradient
+granularity effect
+prototype theory
+similarity space
+non-metric MDS
+multidimensional scaling
+Shepardian
+
+# --- Neuroimaging / vision ---
+fMRI
+BOLD response
+voxelwise
+voxel-wise
+population receptive field
+retinotopic mapping
+retinotopy
+representational similarity analysis
+representational dissimilarity matrix
+MVPA
+multivariate pattern analysis
+ocular dominance
+encoding model
+inverted encoding model
+
+# --- Stimuli / paradigm anchors ---
+oriented Gabor
+Gabor patch
+random-dot kinematogram
+RDK
+biological motion
+spatial frequency
+face perception
+face identity
+holistic face processing
+natural scene
+Bayesian causal inference
+duration estimation
+interval timing
+time perception
+distribution learning
+distribution skew
+absolute estimation
+relative estimation
+point estimate
+point estimation
+
+# --- Methodology / model-fitting ---
+hierarchical model
+parameter recovery
+model selection
+LOO
+WAIC
+BIC
+AIC
+cross-validation
+leave-one-out
+log-likelihood
+free parameters
+fitted parameters
+encoding model
+decoding model
+ridge regression
+banded ridge
+
+# --- Adaptation / sensory ---
+sensory adaptation
+neural adaptation
+tilt aftereffect
+repulsive adaptation
+attractive adaptation
+adaptation aftereffect
+
+# --- Decision-related / value ---
+expected value
+risk preference
+ambiguity aversion
+reward magnitude
+value-based
+prospect theory
+model-based learning
+model-free learning
+reinforcement learning
+prediction error
+reward prediction error
+
+# --- Population / circuit ---
+attractor dynamics
+line attractor
+ring attractor
+population coding
+neural manifold
+divisive normalization
+balanced network
+recurrent neural network
+spiking neural network
+
+# --- Confidence / metacognition ---
+metacognition
+metacognitive sensitivity
+meta-d prime
+type-2 ROC
+confidence judgment
+post-decisional confidence

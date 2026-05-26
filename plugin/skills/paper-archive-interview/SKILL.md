@@ -359,7 +359,13 @@ Loop until `pick_next.py` returns `done:true`:
    - 키워드 2–4개 — render `lab_scope_tags` + `dim_tags` via the Tag
      rendering table above (never use the raw codes `BDM`, `F-EFC`,
      `M-RSA`, `S-FAC`, etc.). Pull the Korean labels from the taxonomy.
-   - 한 문장으로 연관성 설명. **STRICT GROUNDING RULE (P16):**
+   - 한 문장으로 연관성 설명. **PREFER `dim_match.top_signals[0].render_ko`
+     WHEN PRESENT** (P19a) — that field carries a pre-computed Korean
+     explanation grounded in the strongest scoring signal (e.g. "키워드
+     매치: granularity effect, history effect"). When present, use it
+     as the connection clause verbatim. When absent (older queue rows
+     or fingerprint-less researchers), fall back to the tier templates
+     below + the STRICT GROUNDING RULE (P16):
      - You may claim a connection ONLY if it can be supported by:
        (a) a verbatim ≤ 12-word quote — **prefer the abstract; if the
            abstract is null/empty, fall back to the title** (the

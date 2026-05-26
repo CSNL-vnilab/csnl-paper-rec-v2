@@ -39,21 +39,35 @@ from _common import kst_iso  # noqa: E402
 _REPO_ROOT = Path(__file__).resolve().parent.parent.parent
 _OUT_DIR   = _REPO_ROOT / "state" / "archive" / "queues"
 _TAXONOMY_PATH = _REPO_ROOT / "plugin" / "data" / "taxonomy.json"
+_FINGERPRINT_DIR = _REPO_ROOT / "state" / "archive" / "fingerprints"
 
 CHUNK_BOUNDS = {"recent": (0, 5), "mid": (5, 10), "classic": (10, 999)}
 _DEFAULT_CHUNK_MIX = {"recent": 120, "mid": 60, "classic": 20}
 
-# Composite ranking weights — see HARNESS-ARCHIVE-DESIGN.md §P14 §4.
-# composite(p,r) = W_COS·cos + W_DIM·dim_score + min(MAX_COMBO_BONUS,
-#                                                    COMBO_STEP·n_combos)
+# Composite ranking weights — P19a adds s_kw_bm25 when a researcher
+# fingerprint is present. See docs/HARNESS-ALGORITHM-DESIGN.md for the
+# ship-with-cuts rationale (Voice B's full proposal was cut down to
+# add only this one signal until codex's CRITICAL findings #1/#5/#9
+# are addressed with non-circular ground truth).
+#
+# When fingerprint absent: composite = 0.55·cos + 0.30·dim_score + combo_bonus
+# When fingerprint present: composite = 0.45·cos + 0.20·dim_score
+#                                       + 0.30·s_kw_bm25 + combo_bonus
+#                          AND a soft floor s_floor = 1 - exp(-3·max(cos,s_kw))
+#                          replaces the hard cos≥0.18 gate.
 W_COS, W_DIM       = 0.55, 0.30
+W_COS_FP, W_DIM_FP, W_KW_FP = 0.45, 0.20, 0.30   # used when fingerprint present
 COMBO_STEP         = 0.05
 MAX_COMBO_BONUS    = 0.15
 COS_FLOOR          = 0.18   # under-threshold cosine cannot be rescued by dim score
+S_FLOOR_GAMMA      = 3.0    # soft-floor sharpness; used when fingerprint present
 TIER_S_COS, TIER_S_DIM = 0.40, 0.50
 TIER_A_COS_HIGH, TIER_A_DIM_HIGH = 0.40, 0.30
 TIER_A_COS_MID,  TIER_A_DIM_MID  = 0.30, 0.60
 TIER_B_COS                       = 0.30
+
+# BM25 hyperparameters (textbook defaults).
+BM25_K1, BM25_B = 1.2, 0.75
 
 
 # -------------------------------------------------------- researcher interest
@@ -255,6 +269,65 @@ def _load_taxonomy() -> dict | None:
     return json.loads(_TAXONOMY_PATH.read_text("utf-8"))
 
 
+def _load_fingerprint(init: str) -> dict | None:
+    """Load per-researcher fingerprint (P19a). Returns None if absent
+    or empty — caller falls back to legacy `_derive_dim_prefs()`."""
+    fp_path = _FINGERPRINT_DIR / f"{init}.json"
+    if not fp_path.exists():
+        return None
+    try:
+        fp = json.loads(fp_path.read_text("utf-8"))
+    except Exception:
+        return None
+    if fp.get("error"):
+        return None
+    # Treat fingerprint with zero phrases as "empty" — cold-start
+    # researchers fall back to legacy path. The legacy path still gives
+    # them a queue; we just skip the BM25 signal that would be all-zeros.
+    if not fp.get("phrases"):
+        return None
+    return fp
+
+
+def _bm25_score(paper: dict, phrases: list[dict], avg_doclen: float = 200.0
+                ) -> tuple[float, list[str]]:
+    """BM25-flavoured score of the researcher's fingerprint phrases
+    against paper.title + paper.abstract. Returns (raw_score, top_matched).
+
+    `phrases` is the list from fingerprint.phrases: each item has
+    `phrase`, `score` (researcher-fingerprint weight, includes IDF),
+    `channels`. We use the fingerprint weight in lieu of an explicit
+    idf(phrase) — voice A already idf-weighted at extraction time.
+
+    Multi-word phrase matching is ordered-substring on lowercased text.
+    No tokenization gymnastics needed — the lexicon is the controlled
+    vocabulary and the matcher's job is exact substring presence.
+    """
+    title = (paper.get("title") or "").lower()
+    abstract = (paper.get("abstract") or "").lower()
+    if not title and not abstract:
+        return (0.0, [])
+    text = title + "\n" + abstract
+    doclen = len(text.split()) or 1
+    norm = 1.0 - BM25_B + BM25_B * (doclen / max(avg_doclen, 1.0))
+
+    score = 0.0
+    matched: list[tuple[str, float]] = []
+    for ph in phrases:
+        p_low = ph["phrase"].lower()
+        tf = text.count(p_low)
+        if tf == 0:
+            continue
+        # idf-equivalent: the researcher's fingerprint score already
+        # encodes idf, so we feed it directly as a per-phrase weight.
+        w = float(ph.get("score") or 0.0)
+        contrib = w * (tf * (BM25_K1 + 1) / (tf + BM25_K1 * norm))
+        score += contrib
+        matched.append((ph["phrase"], contrib))
+    matched.sort(key=lambda x: -x[1])
+    return (score, [m[0] for m in matched[:3]])
+
+
 def _load_paper_dim_tags() -> dict[str, dict[str, list[str]]]:
     """Return {canonical_id: {dim: [cat_code, ...]}}.
 
@@ -427,9 +500,23 @@ def _pref_code_set(prefs: dict) -> set[str]:
     return out
 
 
-def _composite(cos: float, dim_score: float, n_combos: int) -> float:
+def _composite(cos: float, dim_score: float, n_combos: int,
+               kw_bm25: float | None = None) -> float:
+    """Composite score. When `kw_bm25` is None (no fingerprint), use the
+    legacy formula. When present, blend it in via the fingerprint
+    weights + soft floor."""
     bonus = min(MAX_COMBO_BONUS, COMBO_STEP * n_combos)
-    return W_COS * max(0.0, cos) + W_DIM * dim_score + bonus
+    cos_c = max(0.0, cos)
+    if kw_bm25 is None:
+        return W_COS * cos_c + W_DIM * dim_score + bonus
+    # Normalize BM25 raw score with a soft tanh-ish squash so big BM25
+    # values don't dominate. The fingerprint scores are typically ~5-40
+    # per matched phrase, so a paper with two strong matches sits around
+    # 10-30; we want that to land in ~[0, 1].
+    kw_norm = math.tanh(kw_bm25 / 25.0)
+    base = W_COS_FP * cos_c + W_DIM_FP * dim_score + W_KW_FP * kw_norm + bonus
+    s_floor = 1.0 - math.exp(-S_FLOOR_GAMMA * max(cos_c, kw_norm))
+    return s_floor * base
 
 
 def _tier(cos: float, dim_score: float, n_combos: int) -> str:
@@ -522,16 +609,22 @@ def main() -> int:
             continue
 
         # P14: load latest verified profile (dim_preferences + chunk_mix).
-        # Auto-derive from interest text if not yet confirmed.
+        # P19a: prefer the researcher's fingerprint when present.
+        # Auto-derive from interest text if neither is available.
         profile = _load_latest_profile(init)
+        fp = _load_fingerprint(init)
         dim_prefs = profile.get("dim_preferences")
         prefs_source = "verified"
+        if not dim_prefs and fp:
+            dim_prefs = fp.get("dim_preferences")
+            prefs_source = "fingerprint.v1"
         if not dim_prefs and taxonomy:
             dim_prefs = _derive_dim_prefs(text, taxonomy)
             prefs_source = dim_prefs.get("source", "auto")
         if not dim_prefs:
             dim_prefs = {"focus": {}, "method": {}, "stim": {}, "subj": {},
                          "combo_bonus": [], "source": "none", "version": 0}
+        fp_phrases = (fp.get("phrases") or []) if fp else []
         chunk_mix = profile.get("chunk_mix") or _DEFAULT_CHUNK_MIX
         if args.top and args.top > max(chunk_mix.values()):
             chunk_mix = {k: args.top for k in chunk_mix}
@@ -594,17 +687,53 @@ def main() -> int:
         # Score every candidate.
         pref_codes = _pref_code_set(dim_prefs) if taxonomy else set()
         per_chunk: dict[str, list[dict]] = {"recent": [], "mid": [], "classic": []}
+        # P19a: when fingerprint present, the hard cos≥0.18 gate becomes a
+        # soft floor — a paper with strong keyword match but weak cosine
+        # can still survive. When fingerprint absent: keep the hard gate.
         for c, s in zip(cids, sims):
             cos = max(0.0, float(s))
-            if cos < COS_FLOOR:
-                continue   # cannot be rescued by dim score
+            kw_score = 0.0
+            kw_matched: list[str] = []
+            if fp_phrases:
+                kw_score, kw_matched = _bm25_score(papers[c] or {}, fp_phrases)
+            kw_norm = math.tanh(kw_score / 25.0) if fp_phrases else 0.0
+            # Floor: hard 0.18 when no fingerprint; soft otherwise.
+            if not fp_phrases and cos < COS_FLOOR:
+                continue
+            if fp_phrases and cos < COS_FLOOR and kw_norm < 0.20:
+                # neither signal carries this paper — skip.
+                continue
             chunk = _chunk_for(papers[c] or {}, today)
             pdims = paper_dims.get(c, {})
             plab  = paper_lab.get(c, [])
             ds = _dim_score(pdims, dim_prefs) if taxonomy else 0.0
             chits = _combo_hits(pdims, plab, combos, pref_codes) if taxonomy else []
-            comp = _composite(cos, ds, len(chits))
+            comp = _composite(cos, ds, len(chits),
+                              kw_bm25=kw_score if fp_phrases else None)
             tier = _tier(cos, ds, len(chits)) if taxonomy else "B"
+            # P19a: explain_why — top signals contributing to this score.
+            top_signals: list[dict] = []
+            if kw_matched:
+                top_signals.append({
+                    "key":       "s_kw_bm25",
+                    "value":     round(kw_norm, 3),
+                    "matched":   kw_matched[:2],
+                    "render_ko": f"키워드 매치: {', '.join(kw_matched[:2])}",
+                })
+            if chits:
+                top_signals.append({
+                    "key":       "s_combo",
+                    "value":     len(chits),
+                    "matched":   chits[:1],
+                    "render_ko": "차원 조합 매치",
+                })
+            if not top_signals and cos >= 0.40:
+                top_signals.append({
+                    "key":       "s_cos",
+                    "value":     round(cos, 3),
+                    "matched":   [],
+                    "render_ko": "전반적 주제 임베딩 매치",
+                })
             per_chunk[chunk].append({
                 "canonical_id":  c,
                 "similarity":    cos,
@@ -612,8 +741,11 @@ def main() -> int:
                 "combos":        chits,
                 "composite":     comp,
                 "tier":          tier,
+                "kw_score":      kw_score,
+                "kw_matched":    kw_matched,
                 "dim_match":     {dim: pdims.get(dim) or [] for dim in
                                   ("focus", "method", "stim", "subj")},
+                "top_signals":   top_signals,
             })
 
         rows_out: list[dict] = []
@@ -633,9 +765,13 @@ def main() -> int:
                     "composite":     cand["composite"],
                     "tier":          cand["tier"],
                     "dim_match":     {
-                        "matched": cand["dim_match"],
-                        "combos":  cand["combos"],
-                        "tier":    cand["tier"],
+                        "matched":     cand["dim_match"],
+                        "combos":      cand["combos"],
+                        "tier":        cand["tier"],
+                        # P19a: surface signal contributors for SKILL Stage 2
+                        # explain-WHY Korean rendering.
+                        "top_signals": cand.get("top_signals") or [],
+                        "kw_matched":  cand.get("kw_matched") or [],
                     },
                     "built_at":      built_at,
                     "build_token":   token,
