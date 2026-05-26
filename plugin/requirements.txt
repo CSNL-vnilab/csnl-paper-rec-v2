@@ -1,0 +1,15 @@
+# csnl-paper-archive-interview — runtime dependencies
+#
+# Only ONE required dependency. The plugin is intentionally minimal
+# — it doesn't ingest, embed, or rebuild queues. Those are operator
+# (lab admin) tasks. Researchers only need to read the queue +
+# write MCQ answers, which requires a Postgres client.
+#
+# Install: `python3 -m pip install --user -r requirements.txt`
+# (setup.py auto-installs this if missing — see scripts/setup.py)
+
+psycopg2-binary>=2.9
+
+# That's it. Everything else (json, getpass, pathlib, subprocess,
+# uuid, re, argparse) is Python stdlib. No HTTP libraries, no LLM
+# SDKs, no embedding packages, no Slack — by design.

@@ -58,6 +58,45 @@ def _confirm(label: str, default: bool = False) -> bool:
     return ans in ("y", "yes", "ㅇ", "예", "네")
 
 
+def _ensure_psycopg2() -> bool:
+    """If psycopg2 import fails, offer to install psycopg2-binary via pip.
+    Returns True if importable after the attempt."""
+    try:
+        import psycopg2  # noqa: F401
+        return True
+    except ImportError:
+        pass
+    print("\npsycopg2 (DB driver)가 설치되어 있지 않아요.")
+    print("자동으로 `pip install --user psycopg2-binary` 를 실행할까요?")
+    print("(아니면 psql CLI 가 PATH 에 있으면 그것도 fallback 으로 작동합니다.)")
+    ans = input("  자동 설치? [Y/n]: ").strip().lower()
+    if ans in ("", "y", "yes", "ㅇ", "예"):
+        import subprocess
+        print("  설치 중...")
+        try:
+            subprocess.run(
+                [sys.executable, "-m", "pip", "install", "--user",
+                 "--quiet", "psycopg2-binary>=2.9"],
+                check=True, capture_output=True, text=True, timeout=120,
+            )
+        except subprocess.CalledProcessError as e:
+            print(f"  설치 실패: {e.stderr.decode() if isinstance(e.stderr, bytes) else e.stderr}",
+                  file=sys.stderr)
+            print(f"  수동으로 시도해주세요: "
+                  f"`{sys.executable} -m pip install --user psycopg2-binary`",
+                  file=sys.stderr)
+            return False
+        try:
+            import psycopg2  # noqa: F401
+            print("  설치 성공 — psycopg2 import 가능합니다.")
+            return True
+        except ImportError:
+            print("  설치는 됐지만 import 가 안 됩니다. 셸을 새로 열고 다시 시도해주세요.",
+                  file=sys.stderr)
+            return False
+    return False
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--init", default=None,
@@ -65,6 +104,8 @@ def main() -> int:
                          "automatically at the end.")
     ap.add_argument("--force", action="store_true",
                     help="Overwrite an existing .env without asking.")
+    ap.add_argument("--skip-deps", action="store_true",
+                    help="Skip the psycopg2 auto-install prompt.")
     args = ap.parse_args()
 
     # P16 audit fix: getpass.getpass() echoes the password when no TTY is
@@ -78,6 +119,19 @@ def main() -> int:
             file=sys.stderr,
         )
         return 2
+
+    # P19c: ensure psycopg2 is available before we ask for a password —
+    # otherwise the preflight at the end fails confusingly.
+    if not args.skip_deps:
+        if not _ensure_psycopg2():
+            print(
+                "\npsycopg2 없이도 psql CLI 가 있으면 작동합니다. "
+                "계속 진행할까요? (없으면 .env 만 만들고 preflight 는 건너뜁니다)",
+                file=sys.stderr,
+            )
+            ans = input("  계속? [y/N]: ").strip().lower()
+            if ans not in ("y", "yes", "ㅇ", "예"):
+                return 3
 
     print()
     print("CSNL paper-archive-interview — 환경 설정")
