@@ -1,0 +1,54 @@
+{
+  "frameworks": [
+    {
+      "name": "spatial computing",
+      "role": "primary_lens",
+      "one_line": "item-specific activity flows spatially across the network during a WM task"
+    },
+    {
+      "name": "beta-gamma oscillation interactions",
+      "role": "extended",
+      "one_line": "burst interactions are proposed to drive the spatial flow of WM content"
+    },
+    {
+      "name": "low-dimensional population coding",
+      "role": "context",
+      "one_line": "spatial flow appears as low-dimensional shared activity across many neurons"
+    }
+  ],
+  "core_question": "How can coarse beta and gamma oscillations selectively control individual items held in working memory?",
+  "key_assumptions": [
+    "WM control reflects interactions between beta and gamma bursts",
+    "item-specific activity is supported by recurrent connectivity",
+    "control information can be carried by spatial layout independent of recurrence"
+  ],
+  "manipulations": [
+    "task structure that requires holding and ordering multiple WM items"
+  ],
+  "key_findings": [
+    "item-specific activity flows spatially across the network across the trial",
+    "spatial flow is reflected in low-dimensional population activity",
+    "local field potentials and spiking are consistent with the spatial-flow prediction"
+  ],
+  "interpretations": [
+    "control-related information (e.g. item order) is stored in spatial activity, not in recurrent weights",
+    "spatial computing may support generalization and zero-shot learning by adding a spatial encoding dimension"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "working memory",
+    "beta-gamma oscillations",
+    "spatial computing",
+    "item order",
+    "local field potentials",
+    "low-dimensional population activity",
+    "zero-shot generalization"
+  ],
+  "out_of_scope_note": null,
+  "canonical_id": "28df6344795fa1e1d07930b9c683eb5d",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:17:31+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0
+}

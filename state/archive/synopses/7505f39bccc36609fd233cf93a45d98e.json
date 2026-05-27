@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "recurrent neural network (supervised RNN)",
+      "role": "primary_lens",
+      "one_line": "trained RNN as model of LPFC population dynamics during retro-cued working memory"
+    },
+    {
+      "name": "neural population geometry (subspace coding)",
+      "role": "primary_lens",
+      "one_line": "items live in orthogonal vs parallel population subspaces across delays"
+    },
+    {
+      "name": "error-minimisation / supervised learning",
+      "role": "context",
+      "one_line": "subspace transitions emerge from gradient training on the cued-recall task"
+    }
+  ],
+  "core_question": "How can the orthogonal-to-parallel subspace transformation seen in macaque LPFC during retro-cueing be learnt through error minimisation?",
+  "key_assumptions": [
+    "LPFC neural geometry during retro-cueing can be modelled by a supervised RNN",
+    "an equivalent cued-recall task with conjunctive colour-location stimuli captures the relevant computation",
+    "representational geometry (orthogonal vs parallel subspaces) is the right level of description"
+  ],
+  "manipulations": [
+    "pre-cue vs post-cue delay period",
+    "duration of post-cue maintenance before readout",
+    "task structure with location retro-cue selecting one of two conjunctive items"
+  ],
+  "key_findings": [
+    "RNNs trained on the cued-recall task spontaneously developed the orthogonal-to-parallel geometry observed in macaque LPFC",
+    "in pre-cue delay items occupied independent subspaces; in post-cue delay prioritised items rotated into a common subspace",
+    "parallel geometry only emerged when the cued information had to be maintained for several cycles before readout"
+  ],
+  "interpretations": [
+    "the orthogonal-to-parallel transformation can be learnt purely through error minimisation on the task",
+    "parallel geometry may confer robustness to maintained working-memory representations"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "retro-cue working memory",
+    "lateral prefrontal cortex",
+    "neural population subspaces",
+    "orthogonal to parallel geometry",
+    "conjunctive colour-location stimuli",
+    "recurrent neural network model",
+    "delay-period maintenance",
+    "common readout subspace"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "7505f39bccc36609fd233cf93a45d98e",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:17:31+09:00",
+  "review_status": "auto_unreviewed"
+}

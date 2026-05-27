@@ -1,0 +1,52 @@
+{
+  "frameworks": [
+    {
+      "name": "efficient coding",
+      "role": "primary_lens",
+      "one_line": "Neural encoding adapts to past experience to allocate limited capacity"
+    },
+    {
+      "name": "Bayesian inference",
+      "role": "primary_lens",
+      "one_line": "Decisions combine learned priors with current evidence under a common rule"
+    },
+    {
+      "name": "adaptive rationality",
+      "role": "extended",
+      "one_line": "Unified account spanning perception, cognition, and economic choice"
+    }
+  ],
+  "core_question": "Can a single normative framework based on efficient coding and Bayesian inference explain decision biases across perception, cognition, and economic choice?",
+  "key_assumptions": [
+    "Lifelong learning shapes how information is encoded and retrieved",
+    "Local context modulates decisions made about diverse signal types",
+    "Common normative principles operate across sensory, propositional, and value domains"
+  ],
+  "manipulations": [],
+  "key_findings": [
+    "Diverse decision biases share structure across perception, cognition, and economic choice",
+    "Sensory illusions, aftereffects, and history biases parallel anchoring, framing, and reference-dependent valuation"
+  ],
+  "interpretations": [
+    "A unified efficient-coding plus Bayesian framework can account for myriad human decision biases",
+    "Adaptive rationality offers common principles bridging perception, cognition, and economic choice"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "efficient coding",
+    "Bayesian inference",
+    "adaptive rationality",
+    "decision biases",
+    "choice history bias",
+    "central tendency effect",
+    "reference-dependent valuation",
+    "framing effects"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "7a70c49861d0a5e3cf18c578c9ca94e5",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:17:31+09:00",
+  "review_status": "auto_unreviewed"
+}

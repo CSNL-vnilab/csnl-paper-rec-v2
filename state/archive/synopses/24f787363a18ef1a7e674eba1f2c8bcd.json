@@ -1,0 +1,53 @@
+{
+  "frameworks": [
+    {
+      "name": "evidence accumulation",
+      "role": "primary_lens",
+      "one_line": "Sequential integration of decision-relevant evidence toward a final judgment"
+    },
+    {
+      "name": "confirmation bias",
+      "role": "extended",
+      "one_line": "Selective down-weighting of post-choice evidence inconsistent with initial choice"
+    }
+  ],
+  "core_question": "How do intermittent binary choices alter the accumulation and temporal weighting of subsequent decision evidence?",
+  "key_assumptions": [
+    "Evidence is integrated over a protracted stream toward a final estimation",
+    "Intermittent choices can be dissociated from choice-independent motor responses",
+    "Perceptual and numerical evidence engage comparable accumulation mechanisms"
+  ],
+  "manipulations": [
+    "Intermittent response type: binary choice vs choice-independent motor control",
+    "Evidence modality: perceptual vs numerical",
+    "Timing of intermittent response within evidence stream"
+  ],
+  "key_findings": [
+    "Intermittent choice reduced sensitivity to subsequent evidence",
+    "Choice flipped the relative temporal weighting of early vs late evidence in final estimation",
+    "Choice-induced non-selective sensitivity reduction predicted selective down-weighting of choice-inconsistent evidence",
+    "Effects held across both perceptual and numerical tasks"
+  ],
+  "interpretations": [
+    "Active decisions modulate ongoing evidence accumulation dynamics",
+    "A choice-triggered active mechanism produces confirmation-bias-like selective re-weighting"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "temporal weighting of evidence",
+    "evidence accumulation",
+    "intermittent choice",
+    "confirmation bias",
+    "perceptual decision-making",
+    "numerical decision-making",
+    "post-decision evidence integration",
+    "choice-induced sensitivity reduction"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "24f787363a18ef1a7e674eba1f2c8bcd",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:17:31+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "accumulation-to-bound model with history-dependent initial state",
+      "role": "primary_lens",
+      "one_line": "evidence accumulator whose start point is updated trial-by-trial under nonstationarity beliefs"
+    },
+    {
+      "name": "normative inference under nonstationary world beliefs",
+      "role": "extended",
+      "one_line": "optimal computation if the agent (mistakenly) treats the world as changing across trials"
+    },
+    {
+      "name": "lapse-rate models",
+      "role": "compared_against",
+      "one_line": "separate stochastic lapse parameter treated as distinct from history bias"
+    }
+  ],
+  "core_question": "Can trial-history biases and apparent lapses in perceptual decisions arise from a single cognitive process rather than two distinct ones?",
+  "key_assumptions": [
+    "agent holds a mistaken belief that the world is nonstationary",
+    "history updates act on the initial state of the evidence accumulator",
+    "behaviour in fixed-stimulus tasks is well described by accumulation-to-bound"
+  ],
+  "manipulations": [
+    "task type: fixed-duration vs novel reaction-time perceptual decision task",
+    "two distinct rat decision-making datasets compared"
+  ],
+  "key_findings": [
+    "history biases and apparent lapses covary in prevalence across rats",
+    "a single model with history-dependent accumulator initial state captures both",
+    "model predictions hold across two independent rat datasets including a new RT task",
+    "improved within- and across-trial prediction of decision dynamics"
+  ],
+  "interpretations": [
+    "lapses and history biases are not distinct suboptimalities but reflect optimal inference under nonstationarity beliefs",
+    "history-dependent initial-state updates provide a mechanism for quasi-stochastic choice"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "trial-history bias",
+    "apparent lapses",
+    "accumulation-to-bound",
+    "drift-diffusion initial-state bias",
+    "nonstationary world belief",
+    "rat perceptual decision-making",
+    "reaction time task",
+    "quasi-stochastic choice"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "5982c533450e38dec1d600aae96363bb",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:17:31+09:00",
+  "review_status": "auto_unreviewed"
+}

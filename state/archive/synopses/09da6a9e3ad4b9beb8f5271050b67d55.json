@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "decision variable",
+      "role": "primary_lens",
+      "one_line": "Neural signal lawfully covarying with choice, evidence, and reaction time"
+    },
+    {
+      "name": "neural population dynamics",
+      "role": "primary_lens",
+      "one_line": "Single-trial DV dynamics analyzed at the population level"
+    },
+    {
+      "name": "progressive recruitment model",
+      "role": "extended",
+      "one_line": "Computational model recruiting units with stable choice-related modulation"
+    },
+    {
+      "name": "sequential activation in non-overlapping ensembles",
+      "role": "compared_against",
+      "one_line": "Rodent finding of short activity sequences in distinct neuronal groups"
+    }
+  ],
+  "core_question": "How are single-trial decision variables represented in PMd and M1 populations during perceptual choice?",
+  "key_assumptions": [
+    "Decision variables can be read out from simultaneously recorded neural populations",
+    "Arm movement reports faithfully index the underlying decision",
+    "Stimulus difficulty maps onto evidence strength in the DV"
+  ],
+  "manipulations": [
+    "Stimulus difficulty in random dots direction discrimination",
+    "Fixed vs variable stimulus duration (temporal uncertainty)",
+    "Compared PMd vs M1 simultaneously recorded populations"
+  ],
+  "key_findings": [
+    "Single-trial DVs covary with stimulus difficulty in both PMd and M1",
+    "DVs are stronger and earlier in PMd than M1 under fixed stimulus duration",
+    "Temporal uncertainty accelerates DV dynamics and abolishes PMd vs M1 distinction",
+    "DV is distributed across many neurons with stable modulation, not short sequences"
+  ],
+  "interpretations": [
+    "Progressive recruitment of stably-modulated units accounts for population DV dynamics",
+    "Primate motor cortical decision signals differ qualitatively from rodent sequential ensembles"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "decision variable",
+    "dorsal premotor cortex",
+    "primary motor cortex",
+    "single-trial dynamics",
+    "random dots direction discrimination",
+    "perceptual decision making",
+    "neural population recording",
+    "temporal uncertainty"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "09da6a9e3ad4b9beb8f5271050b67d55",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

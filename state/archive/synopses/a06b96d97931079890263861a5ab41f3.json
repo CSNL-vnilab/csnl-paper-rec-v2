@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "serial vs parallel attention",
+      "role": "primary_lens",
+      "one_line": "Tests whether top-down attention cycles serially or distributes in parallel"
+    },
+    {
+      "name": "time-resolved fMRI",
+      "role": "primary_lens",
+      "one_line": "Uses fast TR (~90ms) BOLD to track relative timing across extrastriate sites"
+    },
+    {
+      "name": "rhythmic sampling of attention",
+      "role": "context",
+      "one_line": "Cited prior evidence that covert attention may be rapidly cycled"
+    }
+  ],
+  "core_question": "Does top-down attention modulate multiple extrastriate representations in parallel or in serial?",
+  "key_assumptions": [
+    "BOLD onset/peak timing reflects underlying neural modulation timing",
+    "Simultaneous and sequential luminance increases serve as parallel and serial attention models",
+    "Extrastriate quadrant representations are spatially separable in fMRI"
+  ],
+  "manipulations": [
+    "Simultaneous 400ms 25% luminance increase at all four quadrants",
+    "Sequential 100ms 100% luminance increase per item",
+    "Reversed order of sequential stimulation",
+    "Compared stimulation conditions with an attended condition"
+  ],
+  "key_findings": [
+    "BOLD onset and peak did not shift across regions for simultaneous stimulation",
+    "Peak-minus-onset differences were larger for sequential and attended than simultaneous conditions",
+    "Reversing sequential stimulation order reversed BOLD onset/peak order in visual cortex"
+  ],
+  "interpretations": [
+    "Top-down attention acts across multiple extrastriate representations in serial",
+    "Highly time-resolved fMRI can resolve relative timing of signal across brain regions"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "top-down attention",
+    "serial attention",
+    "extrastriate cortex",
+    "time-resolved fMRI",
+    "rhythmic attention sampling",
+    "covert attention cycling",
+    "BOLD onset latency",
+    "multi-item monitoring"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "a06b96d97931079890263861a5ab41f3",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}
