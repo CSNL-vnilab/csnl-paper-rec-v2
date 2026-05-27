@@ -1,0 +1,67 @@
+{
+  "frameworks": [
+    {
+      "name": "decision variables / computational model of choice",
+      "role": "primary_lens",
+      "one_line": "Single neurons encode model-derived variables such as decision confidence and integrated value"
+    },
+    {
+      "name": "mixed selectivity / random mixed coding",
+      "role": "compared_against",
+      "one_line": "Authors argue frontal responses are structured, not randomly mixed at the population level"
+    },
+    {
+      "name": "sparse overcomplete representation",
+      "role": "extended",
+      "one_line": "Frontal cortex forms a sparse overcomplete code of task-relevant features"
+    },
+    {
+      "name": "projection-defined cell-type coding",
+      "role": "extended",
+      "one_line": "OFC-to-striatum neurons selectively carry integrated value over sustained timescales"
+    }
+  ],
+  "core_question": "Do single neurons in rat orbitofrontal cortex encode identifiable decision variables, or only a randomly mixed population code?",
+  "key_assumptions": [
+    "Computational models of choice behavior expose interpretable decision variables",
+    "Model-free clustering can reveal categorical response profiles in OFC",
+    "A combined perceptual + value-guided task spans a large behavioral space",
+    "Striatum-projecting OFC neurons form a meaningful connectivity-defined type"
+  ],
+  "manipulations": [
+    "Combined perceptual and value-guided decisions in a single rat task",
+    "Model-free unbiased clustering of OFC single-neuron response profiles",
+    "Mapping clusters onto decision variables derived from a choice model",
+    "Identification of OFC neurons by striatal projection target"
+  ],
+  "key_findings": [
+    "Distinct OFC neuron clusters each match a specific decision variable such as decision confidence",
+    "Single-neuron activity co-varies with individual model variables, not random mixtures",
+    "OFC neurons projecting to striatum selectively encode integrated value",
+    "Striatal-projecting representation of integrated value is temporally sustained"
+  ],
+  "interpretations": [
+    "Frontal cortex uses a sparse, overcomplete code of variables relevant to its function",
+    "Projection-defined subpopulations route specific decision variables to downstream regions"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "orbitofrontal cortex",
+    "decision variables",
+    "decision confidence",
+    "integrated value",
+    "mixed selectivity",
+    "perceptual and value-guided decisions",
+    "projection-defined cell type",
+    "OFC to striatum projection",
+    "sparse overcomplete representation",
+    "model-free clustering of neurons"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "ad08af346098c194493abf6d8cb403f7",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

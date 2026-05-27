@@ -1,0 +1,46 @@
+{
+  "frameworks": [
+    {
+      "name": "Prospect Theory",
+      "role": "primary_lens",
+      "one_line": "Behavioral economic account of decision-making under risk applied to rats."
+    }
+  ],
+  "core_question": "Do rats show the same risk-sensitive choice signatures that Prospect Theory describes in humans?",
+  "key_assumptions": [
+    "Choice value is shaped by probability weighting and outcome valuation",
+    "An internal reference point defines gains versus losses",
+    "Reward history can serve as that reference point"
+  ],
+  "manipulations": [
+    "Choice between guaranteed and probabilistic rewards",
+    "Reward probability and magnitude across trials"
+  ],
+  "key_findings": [
+    "Rats distorted probabilities like humans",
+    "Rats showed diminishing marginal sensitivity to larger rewards",
+    "Rats exhibited reference-dependent valuation tied to reward history"
+  ],
+  "interpretations": [
+    "Risk-sensitive choice signatures are conserved between rats and humans",
+    "Suggests shared neural substrates accessible to molecular/circuit tools in rodents"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "Prospect Theory in rodents",
+    "probability distortion",
+    "diminishing marginal sensitivity",
+    "reference dependence",
+    "reward history",
+    "risky choice",
+    "behavioral economics",
+    "gain-loss valuation"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "0710cdd1cd6195259a8ced5de4f632b3",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:32:02+09:00",
+  "review_status": "auto_unreviewed"
+}

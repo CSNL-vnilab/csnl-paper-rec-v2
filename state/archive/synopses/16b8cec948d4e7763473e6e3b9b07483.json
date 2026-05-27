@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "continual learning",
+      "role": "primary_lens",
+      "one_line": "sequential acquisition of multiple tasks without mutual interference."
+    },
+    {
+      "name": "factorised task representations",
+      "role": "extended",
+      "one_line": "task structure encoded as separable factors that resist interference."
+    },
+    {
+      "name": "neural networks / machine learning",
+      "role": "compared_against",
+      "one_line": "current ML systems fail at continual learning, unlike humans."
+    }
+  ],
+  "core_question": "What cognitive mechanisms allow humans to learn multiple tasks in succession without catastrophic interference?",
+  "key_assumptions": [
+    "temporal autocorrelation of training objectives can shape representational structure",
+    "individuals vary in prior tendency to factorise task space",
+    "error patterns index underlying task representation"
+  ],
+  "manipulations": [
+    "training schedule: temporally autocorrelated (focussed) vs randomly interleaved",
+    "individual differences in baseline factorisation tendency"
+  ],
+  "key_findings": [
+    "focussed training improved learning of new tasks compared to interleaved",
+    "focussed-trained participants performed better on later randomly interleaved test",
+    "error patterns implied focussed training fostered factorised task representations",
+    "participants with stronger prior factorisation tendency gained more from focussed training"
+  ],
+  "interpretations": [
+    "focussed learning enables factorised representations protected from mutual interference",
+    "building artificial agents that factorise tasks could solve continual learning in ML"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "continual learning",
+    "catastrophic interference",
+    "factorised task representations",
+    "focussed vs interleaved training",
+    "temporal autocorrelation",
+    "task structure learning",
+    "individual differences in representation",
+    "human-AI comparison"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "16b8cec948d4e7763473e6e3b9b07483",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:32:02+09:00",
+  "review_status": "auto_unreviewed"
+}

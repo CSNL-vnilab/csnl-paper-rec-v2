@@ -1,0 +1,64 @@
+{
+  "frameworks": [
+    {
+      "name": "accumulation-to-bound process model",
+      "role": "primary_lens",
+      "one_line": "Decision to stop waiting modeled as noisy evidence accumulation to a stopping bound"
+    },
+    {
+      "name": "optimal foraging / normative waiting",
+      "role": "compared_against",
+      "one_line": "Derives optimal wait times given environmental statistics including travel time"
+    },
+    {
+      "name": "confidence-guided waiting",
+      "role": "primary_lens",
+      "one_line": "Willingness to wait as behavioral proxy for decision confidence"
+    },
+    {
+      "name": "scalar invariant timing",
+      "role": "compared_against",
+      "one_line": "Predicts variability scales with mean wait time"
+    }
+  ],
+  "core_question": "How do environmental statistics and internal variability shape confidence-guided waiting in rats?",
+  "key_assumptions": [
+    "Willingness to wait reflects decision confidence",
+    "Stopping decisions arise from accumulation to a bound",
+    "Travel time is a relevant environmental statistic for optimal waiting"
+  ],
+  "manipulations": [
+    "Varied confidence levels in a waiting task",
+    "Compared subjects against optimal agents with and without travel-time constraint",
+    "Decomposed multiple sources of internal variability in the process model"
+  ],
+  "key_findings": [
+    "Rats waited longer than fully optimal agents",
+    "Behavior closely matched optimal agents constrained to subjects' own travel times",
+    "Mean wait times grew with confidence but wait-time variability did not",
+    "Pattern inconsistent with scalar invariant timing"
+  ],
+  "interpretations": [
+    "Variability is best explained by noise in the stopping bound rather than the accumulation rate",
+    "Travel time is a key environmental statistic shaping near-optimal waiting"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "confidence-guided waiting",
+    "accumulation to bound",
+    "decision confidence",
+    "optimal waiting",
+    "travel time",
+    "stopping bound variability",
+    "scalar invariant timing",
+    "rat decision making",
+    "process model"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "6d9812fdff400944bf976d18ddf9c508",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

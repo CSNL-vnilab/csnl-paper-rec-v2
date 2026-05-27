@@ -1,0 +1,64 @@
+{
+  "frameworks": [
+    {
+      "name": "normative Bayesian inference",
+      "role": "primary_lens",
+      "one_line": "Unified Bayesian model adopts the appropriate generative model per environment"
+    },
+    {
+      "name": "change-point dynamics",
+      "role": "compared_against",
+      "one_line": "Abrupt nonstationarity producing discrete jumps in the latent mean"
+    },
+    {
+      "name": "random-walk dynamics",
+      "role": "compared_against",
+      "one_line": "Gradual drift nonstationarity producing slow continuous change"
+    },
+    {
+      "name": "adaptive learning rate",
+      "role": "extended",
+      "one_line": "Prediction-error sensitivity is modulated by inferred environmental structure"
+    }
+  ],
+  "core_question": "Do humans adapt their learning to reflect the generative structure (change-point vs random-walk) of their environment?",
+  "key_assumptions": [
+    "Prediction errors are interpreted in light of an inferred generative model",
+    "Mean and variance are jointly inferred latent variables",
+    "A unified Bayesian framework can capture both environments"
+  ],
+  "manipulations": [
+    "Environment type: change-point versus random-walk dynamics",
+    "Magnitude of prediction errors (small vs large)",
+    "Sources of variability: changes in mean versus changes in variance",
+    "Two behavioral predictive-inference experiments"
+  ],
+  "key_findings": [
+    "Humans adapted learning normatively between change-point and random-walk environments",
+    "Identical prediction errors were interpreted differently across the two environments",
+    "Large prediction errors sharply increased learning rate under change-points but not random walks",
+    "Explicit uncertainty reports tracked variance and showed sustained shifts only after variance change points"
+  ],
+  "interpretations": [
+    "Humans dissociate mean and variance (stochasticity) as separately inferred latent variables",
+    "Adaptive learning reflects the generative structure of environmental dynamics"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "change-point detection",
+    "random-walk dynamics",
+    "predictive inference task",
+    "adaptive learning rate",
+    "normative Bayesian model",
+    "prediction error",
+    "uncertainty reports",
+    "mean versus variance inference"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "38a39b6a362f48b0cd72a3a83aaab684",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

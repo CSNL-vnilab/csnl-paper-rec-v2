@@ -1,0 +1,59 @@
+{
+  "frameworks": [
+    {
+      "name": "normative probabilistic inference",
+      "role": "primary_lens",
+      "one_line": "optimal inference strategy derived as reference for human learning behavior"
+    },
+    {
+      "name": "Bayesian learning of transition probabilities",
+      "role": "extended",
+      "one_line": "tracks both estimates and confidence as joint inference outputs"
+    },
+    {
+      "name": "classical parameter-updating learning",
+      "role": "compared_against",
+      "one_line": "models that update estimates but ignore subjective confidence"
+    }
+  ],
+  "core_question": "Do humans derive an accurate sense of confidence from their inferences during probabilistic learning in changing environments?",
+  "key_assumptions": [
+    "learning is inherently uncertain given limited noisy data",
+    "subjective confidence reflects an inference about correctness of one's estimate",
+    "estimates and confidence share a single underlying inference process"
+  ],
+  "manipulations": [
+    "environmental uncertainty at first level (stimulus variability)",
+    "second-level uncertainty via unexpected change points",
+    "number of observations within stable periods",
+    "sensory modality (visual vs auditory stimuli)"
+  ],
+  "key_findings": [
+    "subjects accurately track the likelihood that their inferences are correct",
+    "subjective confidence is modulated by first-level environmental uncertainty",
+    "confidence is also impacted by second-level uncertainty from unexpected changes",
+    "confidence increases appropriately with observation count in stable periods"
+  ],
+  "interpretations": [
+    "learning and confidence estimation arise from a single inference process",
+    "human performance matches several properties of optimal probabilistic inference"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "sense of confidence",
+    "probabilistic learning",
+    "transition probabilities",
+    "changing environment",
+    "normative inference",
+    "feeling of knowing",
+    "second-level uncertainty",
+    "subjective confidence accuracy"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "203ee9f1abfb1685c093f8a7ecc2652e",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:32:02+09:00",
+  "review_status": "auto_unreviewed"
+}
