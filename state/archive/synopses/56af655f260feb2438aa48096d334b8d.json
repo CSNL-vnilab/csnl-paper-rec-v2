@@ -1,0 +1,59 @@
+{
+  "frameworks": [
+    {
+      "name": "inverted encoding modeling (IEM)",
+      "role": "context",
+      "one_line": "prior method used to recover stimulus-specific neural codes for memory items"
+    },
+    {
+      "name": "recurrent neural network with LSTM",
+      "role": "primary_lens",
+      "one_line": "trained RNN as a mechanistic model of working memory prioritization"
+    },
+    {
+      "name": "demixed PCA",
+      "role": "primary_lens",
+      "one_line": "dimensionality reduction separating priority and stimulus subspaces in hidden activity"
+    }
+  ],
+  "core_question": "How does the brain represent prioritized versus unprioritized items held in working memory?",
+  "key_assumptions": [
+    "unprioritized items remain actively encoded rather than passively stored",
+    "RNN hidden-layer activity can model neural WM representations",
+    "PCA-style subspace decomposition reveals priority-specific coding axes"
+  ],
+  "manipulations": [
+    "functional status of memory items (prioritized vs unprioritized)",
+    "2-back working memory task structure",
+    "comparison across LSTM model activity and human EEG"
+  ],
+  "key_findings": [
+    "LSTM hidden states show a representational flip between UMI and PMI states",
+    "dPCA reveals separate UMI and PMI subspaces with reversed stimulus coding axes",
+    "EEG dPCA shows analogous priority-based representational transformations"
+  ],
+  "interpretations": [
+    "priority-based code reversal protects unprioritized memories from interference",
+    "flip-style transformation supports retention while gating behavioral readout"
+  ],
+  "limitations_noted": [
+    "EEG evidence shows some differences from the model result"
+  ],
+  "connecting_signals": [
+    "working memory prioritization",
+    "unprioritized memory items",
+    "representational transformation",
+    "recurrent neural network model",
+    "LSTM hidden state geometry",
+    "demixed PCA subspaces",
+    "EEG decoding of memory items",
+    "2-back task"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "56af655f260feb2438aa48096d334b8d",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:21:50+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "brain signal variability (BOLD variability)",
+      "role": "primary_lens",
+      "one_line": "trial-to-trial fluctuations in BOLD as a neural index of inhibitory function"
+    },
+    {
+      "name": "response inhibition / stop-signal",
+      "role": "primary_lens",
+      "one_line": "stop-signal task indexes inhibitory control via stop-signal latency"
+    },
+    {
+      "name": "developmental neuroscience",
+      "role": "context",
+      "one_line": "compares children and adults to chart maturation of inhibition circuitry"
+    }
+  ],
+  "core_question": "How do intra-individual variability in stopping performance and underlying BOLD variability change from childhood to adulthood?",
+  "key_assumptions": [
+    "intra-individual variability is informative beyond mean performance",
+    "BOLD variability indexes functional state of an inhibition network",
+    "stop-signal latency reflects an inhibitory process"
+  ],
+  "manipulations": [
+    "age group (children 10-12 vs adults 18-26)",
+    "trial outcome (successful vs unsuccessful stopping)"
+  ],
+  "key_findings": [
+    "mean stopping performance did not differ between children and adults",
+    "stop-signal latencies were more variable in children",
+    "BOLD variability during successful stopping was higher in adults, notably in bilateral thalamus and the inhibition network",
+    "BOLD variability was associated with behavioral stopping variability in adults"
+  ],
+  "interpretations": [
+    "behavioral variability in inhibition decreases while neural variability increases across development",
+    "increasing neural variability may support more stable inhibitory control"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "BOLD signal variability",
+    "response inhibition",
+    "stop-signal task",
+    "intra-individual variability",
+    "thalamus",
+    "inhibition network",
+    "developmental fMRI",
+    "children vs adults"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "ae62e369185efcb32c02df0e1ba2ba9d",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:21:50+09:00",
+  "review_status": "auto_unreviewed"
+}

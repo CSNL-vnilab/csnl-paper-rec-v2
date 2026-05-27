@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "load vs context-binding dissociation in visual working memory",
+      "role": "primary_lens",
+      "one_line": "separating general attentional demand from feature-context binding at fixed load"
+    },
+    {
+      "name": "multivariate pattern analysis of delay-period fMRI",
+      "role": "primary_lens",
+      "one_line": "decoding maintained feature representations from BOLD activity patterns"
+    },
+    {
+      "name": "parietal control vs occipital representation account",
+      "role": "extended",
+      "one_line": "IPS indexes binding demand while occipital cortex carries item content"
+    }
+  ],
+  "core_question": "Do parietal and occipital cortices contribute differently to control versus representational demands of nonspatial visual working memory?",
+  "key_assumptions": [
+    "load can be held constant while varying cross-feature binding demand",
+    "MVPA decoding of occipital activity indexes mnemonic representational fidelity",
+    "delay-period BOLD reflects active maintenance processes"
+  ],
+  "manipulations": [
+    "binding context: 1 motion vs 3 motion vs 1 motion + 2 color (1M / 3M / 1M2C)",
+    "load held constant across high- and low-binding comparisons",
+    "ROI: occipital cortex vs intraparietal sulcus (with PFC extension)"
+  ],
+  "key_findings": [
+    "behavioral precision highest for 1M; comparable for 3M and 1M2C",
+    "occipital MVPA decoding mirrored behavior (1M > 3M ≈ 1M2C) despite equal delay-period activity",
+    "IPS delay activity tracked binding demand more than load, with caudal-to-rostral gradient",
+    "1M-to-3M rise in IPS predicted 1M-to-3M drop in behavioral and neural precision"
+  ],
+  "interpretations": [
+    "IPS implements context-binding control that modulates occipital representational quality",
+    "pure load sensitivity separable from binding emerges only when lateralized and extended to PFC"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "visual working memory",
+    "context binding",
+    "intraparietal sulcus",
+    "delay-period fMRI",
+    "multivariate pattern analysis",
+    "motion direction memory",
+    "load manipulation",
+    "caudal-to-rostral gradient"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "56a0ffdbe9f85797ae3bd78f26883993",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:21:50+09:00",
+  "review_status": "auto_unreviewed"
+}

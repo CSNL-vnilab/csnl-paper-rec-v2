@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "prediction-for-perception",
+      "role": "primary_lens",
+      "one_line": "Brain predicts incoming stimuli to facilitate categorization"
+    },
+    {
+      "name": "feature-specific predictive coding",
+      "role": "extended",
+      "one_line": "Predictions encode specific category features rather than category contrasts"
+    },
+    {
+      "name": "category-contrast prediction",
+      "role": "compared_against",
+      "one_line": "Typical underconstrained two-category contrast formulation of predictions"
+    },
+    {
+      "name": "MEG multivariate decoding",
+      "role": "primary_lens",
+      "one_line": "Classifier decodes feature-tied perceptions from dynamic MEG responses"
+    }
+  ],
+  "core_question": "What are the information contents of perceptual predictions, and how do they bias subsequent decisions?",
+  "key_assumptions": [
+    "Same stimuli can support two distinct categorical perceptions tied to different features",
+    "Multivariate classifiers can read out feature-specific neural representations from MEG",
+    "Auditory cues can elicit pre-stimulus visual category predictions"
+  ],
+  "manipulations": [
+    "Auditory cueing of visual category before stimulus",
+    "Compared feature-specific vs typical category-contrast predictions",
+    "Examined pre-stimulus reactivation timing and localization"
+  ],
+  "key_findings": [
+    "Brain reactivates visual category features before stimulus onset following auditory cues",
+    "Feature-specific predictions are more lateralized than category-contrast predictions",
+    "Feature predictions are more specifically driven by the auditory cues",
+    "Pre-stimulus reactivation strength of feature predictions biases later categorization"
+  ],
+  "interpretations": [
+    "Predictions carry specific feature content rather than just category contrasts",
+    "Strength of predicted feature information directly biases perceptual decisions"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "prediction-for-perception",
+    "feature-specific predictions",
+    "auditory cueing of visual category",
+    "MEG multivariate decoding",
+    "pre-stimulus reactivation",
+    "categorization bias",
+    "information content of predictions",
+    "lateralized predictive representations"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "4642be370662b4444155f7d211b7597b",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

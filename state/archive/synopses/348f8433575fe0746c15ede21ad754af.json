@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "evidence accumulation / drift-diffusion",
+      "role": "primary_lens",
+      "one_line": "decisions modelled as noisy accumulation of evidence with a bias term"
+    },
+    {
+      "name": "phasic arousal / pupil-linked neuromodulation",
+      "role": "extended",
+      "one_line": "arousal transients gate the accumulation bias during choice"
+    },
+    {
+      "name": "signal-detection theory",
+      "role": "context",
+      "one_line": "choice bias separated from sensitivity in detection tasks"
+    }
+  ],
+  "core_question": "Does phasic arousal suppress decision biases generally across species, modalities, and decision domains?",
+  "key_assumptions": [
+    "pupil dilation indexes phasic arousal-system activity",
+    "choice biases can be decomposed into accumulation biases via DDM-like fits",
+    "biases generalize across perceptual and memory-based decisions"
+  ],
+  "manipulations": [
+    "spontaneous vs experimentally induced choice biases",
+    "species: humans vs mice",
+    "sensory modality: visual vs auditory",
+    "decision domain: perceptual vs memory-based"
+  ],
+  "key_findings": [
+    "high arousal reduces impact of both conservative and liberal biases",
+    "bias suppression occurs in sound-detection across humans and mice",
+    "similar suppression seen when evidence is retrieved from memory",
+    "effects captured by reduced evidence-accumulation biases"
+  ],
+  "interpretations": [
+    "phasic arousal implements a general principle suppressing accumulation bias during decisions"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "phasic arousal",
+    "pupil dilation",
+    "decision bias",
+    "evidence accumulation",
+    "drift-diffusion model",
+    "perceptual decision-making",
+    "memory-based decision",
+    "cross-species mouse human"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "348f8433575fe0746c15ede21ad754af",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:21:50+09:00",
+  "review_status": "auto_unreviewed"
+}

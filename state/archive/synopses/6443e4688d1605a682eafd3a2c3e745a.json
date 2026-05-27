@@ -1,0 +1,62 @@
+{
+  "frameworks": [
+    {
+      "name": "leaky competing accumulator",
+      "role": "primary_lens",
+      "one_line": "Neural accumulator network model of perceptual decision-making"
+    },
+    {
+      "name": "tuned normalization",
+      "role": "extended",
+      "one_line": "Heterogeneous normalization strengths across decision-circuit neurons"
+    },
+    {
+      "name": "Bayesian confidence as probability correct",
+      "role": "compared_against",
+      "one_line": "View that confidence reflects probability the decision is correct"
+    },
+    {
+      "name": "positive-evidence heuristic",
+      "role": "alternative_lens",
+      "one_line": "Confidence tracks magnitude of evidence for the chosen option"
+    }
+  ],
+  "core_question": "Can tuned normalization in decision circuits explain dissociations between confidence and decision accuracy?",
+  "key_assumptions": [
+    "Confidence and choice can be supported by partly distinct neural populations",
+    "Normalization tuning varies systematically across decision-circuit neurons",
+    "A simple LCA architecture is sufficient to capture confidence behavior"
+  ],
+  "manipulations": [
+    "Varied each accumulator unit's normalization tuning",
+    "Compared model predictions against published confidence-accuracy dissociations",
+    "Tested heterogeneous normalization in macaque superior colliculus neurons"
+  ],
+  "key_findings": [
+    "LCA with tuned normalization reproduces counterintuitive confidence-accuracy dissociations",
+    "Each unit's normalization tuning dictates its weight for decisions versus confidence",
+    "Systematic variability in normalization tuning is observed in macaque superior colliculus"
+  ],
+  "interpretations": [
+    "Confidence reflects evidence magnitude for the decision rather than probability correct",
+    "Tuned normalization in decision circuitry is a biologically plausible substrate for this dissociation"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "perceptual confidence",
+    "tuned normalization",
+    "leaky competing accumulator",
+    "confidence-accuracy dissociation",
+    "positive evidence",
+    "superior colliculus",
+    "decision-making circuit",
+    "divisive normalization"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "6443e4688d1605a682eafd3a2c3e745a",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "biophysical working memory models",
+      "role": "primary_lens",
+      "one_line": "Circuit-level WM models used to interpret tDCS effects on PFC."
+    },
+    {
+      "name": "excitation-inhibition (E/I) balance",
+      "role": "extended",
+      "one_line": "Intermediate level linking currents to WM via cortical balance."
+    },
+    {
+      "name": "persistent activity coding",
+      "role": "context",
+      "one_line": "Attractor-like sustained firing as WM substrate, with dynamical limits."
+    },
+    {
+      "name": "gamma oscillatory activity",
+      "role": "alternative_lens",
+      "one_line": "Oscillatory index tied to E/I balance and WM performance."
+    }
+  ],
+  "core_question": "Can biophysical WM models inform and reconcile mixed results of prefrontal tDCS effects on working memory?",
+  "key_assumptions": [
+    "Scalp tDCS modulates prefrontal cortical excitability",
+    "Multilevel mapping from currents to behavior is necessary",
+    "E/I balance is a tractable intermediate level"
+  ],
+  "manipulations": [
+    "Reviewed prefrontal tDCS protocols and WM outcomes",
+    "Articulated levels of analysis from currents to circuit to behavior"
+  ],
+  "key_findings": [
+    "Empirical tDCS-WM literature shows mixed and inconsistent results",
+    "Effects appear non-linear and trait-dependent",
+    "Possible preferential effect on WM control functions"
+  ],
+  "interpretations": [
+    "Oversimplified excitability assumptions need revision via circuit models",
+    "Persistent-activity coding dynamics limit how E/I shifts translate to WM"
+  ],
+  "limitations_noted": [
+    "Dynamical aspects of persistent-activity coding constrain inferences"
+  ],
+  "connecting_signals": [
+    "transcranial direct current stimulation",
+    "working memory",
+    "prefrontal cortex",
+    "excitation-inhibition balance",
+    "gamma oscillations",
+    "persistent activity",
+    "biophysical circuit models",
+    "cognitive control"
+  ],
+  "abstract_coverage": 1.0,
+  "out_of_scope_note": null,
+  "canonical_id": "3f0be2430d2c0183991b5ea2986b6c40",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:21:50+09:00",
+  "review_status": "auto_unreviewed"
+}
