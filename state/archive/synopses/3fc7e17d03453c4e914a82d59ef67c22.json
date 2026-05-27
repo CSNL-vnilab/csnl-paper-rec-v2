@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "border-ownership tuning",
+      "role": "primary_lens",
+      "one_line": "V4 cells encoding figure-side identity as the organizing principle of feedback to V1"
+    },
+    {
+      "name": "figure-background modulation",
+      "role": "extended",
+      "one_line": "FBM in V1 explained as the output of BO-aligned positive/negative feedback"
+    },
+    {
+      "name": "cortical feedback connectivity",
+      "role": "context",
+      "one_line": "higher-to-lower visual area feedback whose logic this paper aims to specify"
+    }
+  ],
+  "core_question": "What is the connectivity logic by which border-ownership tuned V4 cells provide feedback to V1?",
+  "key_assumptions": [
+    "noise correlations and micro-stimulation indicate functional connectivity strength",
+    "BO-selective V4 cells are a likely source of feedback driving FBM in V1",
+    "figure-background modulation in V1 reflects feedback from higher visual areas"
+  ],
+  "manipulations": [
+    "BO preference direction of V4 cells relative to V1 receptive field location",
+    "micro-stimulation of V4 sites while recording V1",
+    "noise-correlation measurements between V4 and V1 cells"
+  ],
+  "key_findings": [
+    "V4-V1 connectivity is consistent with positive feedback toward the V4 cell's preferred figure side",
+    "connectivity shows negative feedback in the direction opposite the preferred figure",
+    "this BO-aligned feedback scheme can recreate previously observed FBM patterns"
+  ],
+  "interpretations": [
+    "border-ownership tuning determines the connectivity logic between V4 and V1",
+    "figure-background perception is linked mechanistically to BO-tuning via cortical feedback"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "border-ownership",
+    "figure-background modulation",
+    "V4 to V1 feedback",
+    "noise correlations",
+    "micro-stimulation",
+    "cortical feedback connectivity",
+    "macaque visual cortex",
+    "figure-ground segregation"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "3fc7e17d03453c4e914a82d59ef67c22",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

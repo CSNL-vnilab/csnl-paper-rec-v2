@@ -1,0 +1,17 @@
+{
+  "canonical_id": "3100a1904e25275b325fd97d4c99e9f0",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "Operative-neurosurgery case report (posterior fossa craniotomy for fourth-ventricle neurocysticercosis cyst) — surgical clinical scope, not cognitive/perceptual/computational neuroscience.",
+  "generator": "opus-4-7@2026-05-28",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "abstract_coverage": 0.0
+}

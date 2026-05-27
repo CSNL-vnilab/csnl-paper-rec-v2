@@ -1,0 +1,56 @@
+{
+  "frameworks": [
+    {
+      "name": "Structured Event Memory (SEM)",
+      "role": "primary_lens",
+      "one_line": "neuro-symbolic generative model of event dynamics over symbolic scenes embedded in vector space"
+    },
+    {
+      "name": "probabilistic generative model",
+      "role": "extended",
+      "one_line": "probabilistic reasoning over event dynamics supports segmentation, schema learning, and reconstruction"
+    },
+    {
+      "name": "neuro-symbolic hybrid",
+      "role": "primary_lens",
+      "one_line": "combines structured symbolic scene representations with neural network continuous dynamics"
+    }
+  ],
+  "core_question": "How do humans segment continuous experience into discrete events and use learned event structure to generalize and reconstruct memory?",
+  "key_assumptions": [
+    "experience can be carved into discrete events with latent schemata",
+    "scenes admit a structured symbolic representation embeddable in a vector space",
+    "event boundaries and schemata are inferable via probabilistic reasoning"
+  ],
+  "manipulations": [
+    "input modality scaled from low-dimensional symbolic scenes to naturalistic high-dimensional video",
+    "event schema reuse versus instantiation of new schemata"
+  ],
+  "key_findings": [
+    "SEM produces human-like event segmentation on naturalistic video data",
+    "model accounts for a wide array of human event-memory phenomena",
+    "model scales up to high-dimensional input spaces"
+  ],
+  "interpretations": [
+    "combining symbolic structure with neural embeddings captures human event cognition better than either alone",
+    "event segmentation, schema learning, and memory reconstruction emerge from a single generative inference process"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "event segmentation",
+    "event schemata",
+    "memory reconstruction",
+    "neuro-symbolic model",
+    "generative model of event dynamics",
+    "structured scene representation",
+    "naturalistic video segmentation",
+    "generalization across events"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "1a0b82d133b0878a134139d5ed4b9005",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,56 @@
+{
+  "frameworks": [
+    {
+      "name": "successor representation",
+      "role": "primary_lens",
+      "one_line": "stores predictions about future states to support semi-flexible choice"
+    },
+    {
+      "name": "model-based reinforcement learning",
+      "role": "compared_against",
+      "one_line": "computes action values from scratch using a full task model"
+    },
+    {
+      "name": "model-free reinforcement learning",
+      "role": "compared_against",
+      "one_line": "caches pre-computed action values for efficient but inflexible choice"
+    }
+  ],
+  "core_question": "Do humans use a successor-representation algorithm intermediate between model-based and model-free reward learning?",
+  "key_assumptions": [
+    "action values can be decomposed into stored predictions of future states",
+    "deliberative and habitual choice reflect distinct algorithmic families",
+    "sensitivity to task changes diagnoses the underlying learning algorithm"
+  ],
+  "manipulations": [
+    "changes to the task's sequence of events (transition structure)",
+    "changes to reward outcomes"
+  ],
+  "key_findings": [
+    "human choice flexibly adjusted to reward changes",
+    "human choice was relatively insensitive to changes in event sequence",
+    "behavioral signature matched successor-representation predictions in two studies"
+  ],
+  "interpretations": [
+    "successor representation is a computational substrate for semi-flexible human choice",
+    "introduces a subtler, more cognitive notion of habit than pure model-free caching"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "successor representation",
+    "reinforcement learning",
+    "model-based vs model-free",
+    "habit",
+    "reward learning",
+    "transition revaluation",
+    "predictive representations",
+    "semi-flexible choice"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "5a4aef0d819f2b8b898e78fdc0ee3eb1",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}

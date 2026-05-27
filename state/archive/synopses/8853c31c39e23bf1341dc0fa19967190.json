@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "transformer networks",
+      "role": "primary_lens",
+      "one_line": "Attention-based sequence models compared head-to-head with humans on rule-learning."
+    },
+    {
+      "name": "in-context vs in-weights learning",
+      "role": "primary_lens",
+      "one_line": "Dichotomy between generalizing a rule and recalling stored exemplars."
+    },
+    {
+      "name": "curriculum learning",
+      "role": "compared_against",
+      "one_line": "Dynamic schedules emphasizing diverse examples early — helps humans, not transformers."
+    }
+  ],
+  "core_question": "Do humans and transformer networks show the same sensitivity to training-data distribution when learning rules?",
+  "key_assumptions": [
+    "rule-learning can be probed via sequence query responses",
+    "in-context and in-weights strategies are dissociable measurable modes",
+    "training-distribution diversity and redundancy are independently manipulable"
+  ],
+  "manipulations": [
+    "diversity of training examples",
+    "redundancy of training examples",
+    "static vs dynamic (curriculum) training schedule"
+  ],
+  "key_findings": [
+    "humans and transformers respond very similarly to distributional manipulations",
+    "redundancy drives in-weights learning while diversity drives in-context learning",
+    "balanced composite distributions enable both strategies in tandem",
+    "humans benefit from diverse-early curricula but transformers do not"
+  ],
+  "interpretations": [
+    "same data-distributional properties promote learning in humans and transformers",
+    "curriculum sensitivity is a human-specific divergence from transformer learning"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "in-context learning",
+    "in-weights learning",
+    "rule learning",
+    "transformer networks",
+    "training data distribution",
+    "diversity and redundancy",
+    "curriculum learning",
+    "human-model comparison"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "8853c31c39e23bf1341dc0fa19967190",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}

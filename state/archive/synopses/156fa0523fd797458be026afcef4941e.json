@@ -1,0 +1,50 @@
+{
+  "frameworks": [
+    {
+      "name": "predictive Adaptive Resonance Theory (pART)",
+      "role": "primary_lens",
+      "one_line": "unified prefrontal-cortex model integrating cognition, emotion, and goal-directed action"
+    },
+    {
+      "name": "Adaptive Resonance Theory",
+      "role": "extended",
+      "one_line": "earlier ART foundation extended with predictive prefrontal mechanisms"
+    },
+    {
+      "name": "executive-function theory",
+      "role": "context",
+      "one_line": "frames prefrontal role in flexible behavior and inhibitory control"
+    }
+  ],
+  "core_question": "How does prefrontal cortex coordinate with multiple brain regions to produce executive control over cognition, emotion, and action?",
+  "key_assumptions": [
+    "prefrontal cortex acts via distributed interactions across orbitofrontal, ventrolateral, and dorsolateral subregions",
+    "executive functions require coupling with inferotemporal, perirhinal, parahippocampal, hippocampus, amygdala, basal ganglia, hypothalamus, and visual cortex",
+    "working memory supports contextually appropriate behavior",
+    "reflexive sensory-driven responses must be suppressed for adaptive behavior"
+  ],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [
+    "pART unifies prefrontal computations including desirability, availability, credit assignment, category learning, and feature-based attention",
+    "value of visual objects/events and prediction of consequences emerge from prefrontal-temporal-limbic interactions"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "predictive Adaptive Resonance Theory",
+    "prefrontal executive function",
+    "credit assignment",
+    "feature-based attention",
+    "category learning",
+    "working memory",
+    "orbitofrontal value coding",
+    "basal ganglia-prefrontal interaction"
+  ],
+  "out_of_scope_note": "Textbook chapter (theory synthesis, not empirical paper); abstract describes a unified model without manipulations or empirical findings.",
+  "abstract_coverage": 1.0,
+  "canonical_id": "156fa0523fd797458be026afcef4941e",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "factorised representations",
+      "role": "primary_lens",
+      "one_line": "EC encodes separable task dimensions enabling reuse across environments"
+    },
+    {
+      "name": "graph-structured task representation",
+      "role": "extended",
+      "one_line": "behavioural sequences derived from an underlying transition graph"
+    },
+    {
+      "name": "neural pattern similarity (fMRI RSA)",
+      "role": "primary_lens",
+      "one_line": "representational similarity used to test factorised generalisable codes"
+    },
+    {
+      "name": "generalisation across environments",
+      "role": "context",
+      "one_line": "transfer of learned structure into a novel but partially-overlapping environment"
+    }
+  ],
+  "core_question": "Does the entorhinal cortex form factorised representations that selectively support generalisation of shared structure across environments?",
+  "key_assumptions": [
+    "task structure is captured by an underlying graph of transitions",
+    "some transitions transfer across environments while others do not",
+    "factorisation increases neural similarity for shared, generalisable features"
+  ],
+  "manipulations": [
+    "novel vs familiar environment with partial transition overlap",
+    "blocks where transitions were generalisable vs non-generalisable",
+    "early vs later exposure to the novel environment"
+  ],
+  "key_findings": [
+    "accuracy higher in blocks with generalisable shared transitions",
+    "generalisation benefit strongest during early exposure to the novel environment",
+    "EC patterns differentiated generalisable from non-generalisable aspects",
+    "EC starting-location patterns more similar across environments on generalisable trials"
+  ],
+  "interpretations": [
+    "EC supports generalisation by factorising transferable from non-transferable task dimensions",
+    "shared graph structure is represented as increased EC pattern similarity"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "entorhinal cortex",
+    "factorised representations",
+    "generalisation across environments",
+    "graph-structured task",
+    "sequence transitions",
+    "representational similarity analysis",
+    "novel environment transfer",
+    "structural knowledge reuse"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "7d9cf0596e8bfbfe45259d7079b321d6",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}
