@@ -1,0 +1,52 @@
+{
+  "frameworks": [
+    {
+      "name": "Bayesian observer model",
+      "role": "primary_lens",
+      "one_line": "subjective interval emerges from prior combined with likelihood for timing"
+    },
+    {
+      "name": "perceptual learning",
+      "role": "context",
+      "one_line": "training-induced changes in timing accuracy and precision over days"
+    }
+  ],
+  "core_question": "How are mean accuracy and precision of interval timing recalibrated by experience, and do they follow the same learning dynamics?",
+  "key_assumptions": [
+    "subjective time interval is set jointly by a prior and a likelihood",
+    "accuracy and precision are separable timing measures",
+    "implicit task with drifting invisible bar isolates interval representation"
+  ],
+  "manipulations": [
+    "multiple days of training on an implicit interval-timing task",
+    "range of physical time intervals tested",
+    "feedback applied at a specific trained interval"
+  ],
+  "key_findings": [
+    "accuracy showed feedback-driven instantaneous calibration with partial transfer near the trained interval",
+    "precision improved slowly over long term with no clear interval specificity",
+    "time course and specificity of accuracy and precision were decoupled"
+  ],
+  "interpretations": [
+    "a Bayesian observer model captures the dissociation between accuracy and precision dynamics",
+    "the prior width gradually shrinks over sessions while likelihoods remain stable"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "interval timing",
+    "perceptual learning",
+    "Bayesian observer model",
+    "prior width shrinkage",
+    "timing accuracy and precision",
+    "implicit timing task",
+    "feedback-driven calibration",
+    "specificity of learning"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "8a835a24b645ab57307a65e36cca3ad8",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:03:12+09:00",
+  "review_status": "auto_unreviewed"
+}

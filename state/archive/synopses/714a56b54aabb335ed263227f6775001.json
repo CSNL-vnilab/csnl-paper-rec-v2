@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "predictive feedback / hierarchical visual processing",
+      "role": "primary_lens",
+      "one_line": "Higher visual areas send object-specific feedback to early visual cortex during integration."
+    },
+    {
+      "name": "dynamic causal modeling",
+      "role": "primary_lens",
+      "one_line": "Effective connectivity framework used to infer directed inter-areal modulations from fMRI."
+    },
+    {
+      "name": "perceptual grouping / illusory figure completion",
+      "role": "context",
+      "one_line": "Phenomenon framing: parts integrated into a coherent whole object."
+    }
+  ],
+  "core_question": "Do feedback connections from lateral occipital cortex to V1/V2 underlie illusory figure completion?",
+  "key_assumptions": [
+    "Illusory figures probe object integration mechanisms",
+    "DCM on fMRI can reveal directed inter-areal causal influence",
+    "LOC indexes mid-level object representation; V1/V2 indexes early visual processing"
+  ],
+  "manipulations": [
+    "Integrated diamond vs ungrouped configuration",
+    "Task: target-dot localization vs luminance discrimination",
+    "Task relevance of the configuration (relevant vs not)"
+  ],
+  "key_findings": [
+    "Behavioural benefit from integrated object only when configuration was task-relevant (localization)",
+    "Object-specific feedback connections from LOC to V1/V2 identified via DCM",
+    "Modulatory feedback persisted across both task demands and hemispheres"
+  ],
+  "interpretations": [
+    "Mid-level (LOC) to early-visual (V1/V2) interactions drive illusory figure perception",
+    "Object completion involves causal top-down modulation independent of immediate task set"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "illusory figure completion",
+    "lateral occipital cortex (LOC)",
+    "V1/V2 feedback",
+    "dynamic causal modeling",
+    "object integration",
+    "top-down modulation",
+    "perceptual grouping",
+    "task relevance"
+  ],
+  "out_of_scope_note": null,
+  "canonical_id": "714a56b54aabb335ed263227f6775001",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:03:12+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0
+}

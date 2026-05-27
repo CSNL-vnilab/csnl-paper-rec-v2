@@ -1,0 +1,17 @@
+{
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "Embedded-systems engineering work-in-progress on ML-based approximate computing for data flow graphs — software optimization, not neuroscience.",
+  "abstract_coverage": 0.0,
+  "canonical_id": "6ad16c729462a36fc6ed32e45ea7063d",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}

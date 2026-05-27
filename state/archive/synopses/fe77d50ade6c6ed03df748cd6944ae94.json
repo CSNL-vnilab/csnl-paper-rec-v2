@@ -1,0 +1,59 @@
+{
+  "frameworks": [
+    {
+      "name": "spatial working memory (delayed match / memory-guided saccade)",
+      "role": "primary_lens",
+      "one_line": "retention-interval activity bridges target encoding and overt response"
+    },
+    {
+      "name": "primate single-unit comparative framework",
+      "role": "context",
+      "one_line": "human MEG mapped against monkey parietal-prefrontal delay-cell findings"
+    },
+    {
+      "name": "oscillatory-activity modulation",
+      "role": "primary_lens",
+      "one_line": "stimulus-driven and sustained oscillations index attention and memory"
+    }
+  ],
+  "core_question": "Which human cortical signals during a spatial working memory delay reflect attention, memory, and motor preparation rather than the movement itself?",
+  "key_assumptions": [
+    "MEG source estimates approximate underlying cortical currents",
+    "delay-period activity in primates indexes attention/memory independent of movement type",
+    "same-different judgement vs memory-guided saccade dissociates movement-related from mnemonic activity"
+  ],
+  "manipulations": [
+    "response modality: finger-lift same-different judgement vs memory-guided saccade",
+    "retention interval (~3 s) between target and probe",
+    "target spatial position to be remembered"
+  ],
+  "key_findings": [
+    "strong stimulus-driven transient and sustained MEG responses observed",
+    "modulations of oscillatory activity during the retention period",
+    "current sources spread widely over Rolandic, parietal, occipital, and frontal cortex"
+  ],
+  "interpretations": [
+    "some delay-period activity reflects attention/memory processes, others reflect motor preparation",
+    "human MEG signatures are consistent with primate single-unit delay-activity findings"
+  ],
+  "limitations_noted": [
+    "current source estimates from MEG are coarse"
+  ],
+  "connecting_signals": [
+    "spatial working memory",
+    "retention interval activity",
+    "memory-guided saccade",
+    "magnetoencephalography (MEG)",
+    "delay-period oscillations",
+    "parietal and prefrontal cortex",
+    "attention vs memory vs motor preparation",
+    "human-primate comparative paradigm"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "fe77d50ade6c6ed03df748cd6944ae94",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:03:12+09:00",
+  "review_status": "auto_unreviewed"
+}

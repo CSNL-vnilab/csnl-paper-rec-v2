@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "LTP-like / LTD-like plasticity",
+      "role": "primary_lens",
+      "one_line": "anodal tDCS over M1 induces synaptic-like plasticity reversible by intensity."
+    },
+    {
+      "name": "counter-regulatory homeostatic mechanisms",
+      "role": "extended",
+      "one_line": "higher stimulation intensities trigger compensatory reversal of excitability changes."
+    },
+    {
+      "name": "corticospinal excitability via TMS-MEP",
+      "role": "context",
+      "one_line": "single- and paired-pulse TMS index intracortical excitation and inhibition."
+    }
+  ],
+  "core_question": "What anodal tDCS intensity threshold reverses the direction of M1 plasticity?",
+  "key_assumptions": [
+    "a-tDCS over M1 normally induces LTP-like plasticity",
+    "CSE measured by TMS-MEP reflects motor cortex plasticity",
+    "ICF, SICI, LICI index distinct intracortical circuits"
+  ],
+  "manipulations": [
+    "a-tDCS intensity (0.3, 0.7, 1, 1.5 mA) over 26 min",
+    "timepoint of CSE assessment (pre, immediately post, 30-min post)",
+    "single- vs paired-pulse TMS protocols"
+  ],
+  "key_findings": [
+    "CSE increased significantly at 0.7 mA a-tDCS",
+    "Expected facilitation decreased and reversed at 1 and 1.5 mA",
+    "ICF increased and SICI/LICI decreased at 0.7 mA",
+    "ICF decreased and SICI/LICI increased at 1 and 1.5 mA"
+  ],
+  "interpretations": [
+    "Intensity threshold of >=1 mA for 26 min reverses LTP- into LTD-like plasticity.",
+    "Counter-regulatory intracortical inhibition mechanisms underlie the reversal."
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "anodal tDCS intensity threshold",
+    "LTP-like to LTD-like plasticity reversal",
+    "corticospinal excitability",
+    "primary motor cortex M1",
+    "paired-pulse TMS (SICI, ICF, LICI)",
+    "counter-regulatory mechanisms",
+    "non-invasive brain stimulation dose-response"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "d399b62979dc397e7350317256f3898a",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:03:12+09:00",
+  "review_status": "auto_unreviewed"
+}

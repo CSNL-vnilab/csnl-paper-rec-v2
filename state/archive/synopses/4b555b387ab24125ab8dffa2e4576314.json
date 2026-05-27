@@ -1,0 +1,56 @@
+{
+  "frameworks": [
+    {
+      "name": "internally-referenced neural population analysis",
+      "role": "primary_lens",
+      "one_line": "reference neural activity to other neurons rather than external events to expose internal signals"
+    },
+    {
+      "name": "decision state decoding",
+      "role": "primary_lens",
+      "one_line": "continuously decode an evolving decision variable from each region's population activity"
+    },
+    {
+      "name": "brain-state transition",
+      "role": "extended",
+      "one_line": "decision formation versus post-commitment as distinct coordinated brain states"
+    }
+  ],
+  "core_question": "How are internal decision-related signals coordinated across brain regions during perceptual decision-making?",
+  "key_assumptions": [
+    "simultaneous multi-region recordings can expose signals not locked to external events",
+    "a continuously evolving decision variable can be decoded region by region",
+    "commit-time is a definable internal moment"
+  ],
+  "manipulations": [
+    "comparison of externally-referenced versus internally-referenced analyses",
+    "region-by-region decoding then cross-region comparison"
+  ],
+  "key_findings": [
+    "decision-state decoders trained per region show large-magnitude co-fluctuations across regions",
+    "the moment of commitment is accompanied by a coordinated brain-wide state change",
+    "thousands of neurons across up to 20 regions were recorded simultaneously in rats performing a perceptual decision task"
+  ],
+  "interpretations": [
+    "internal signals, not just stimulus- or action-locked activity, profoundly shape decision-related dynamics",
+    "decision formation and post-commitment are distinguishable coordinated brain states"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "perceptual decision-making",
+    "multi-region simultaneous recording",
+    "internal signals",
+    "decision variable decoding",
+    "commitment time",
+    "brain-wide coordination",
+    "post-commitment state",
+    "co-fluctuations across regions"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "4b555b387ab24125ab8dffa2e4576314",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:03:12+09:00",
+  "review_status": "auto_unreviewed"
+}

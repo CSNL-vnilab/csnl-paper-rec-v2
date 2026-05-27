@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "rate-distortion theory",
+      "role": "primary_lens",
+      "one_line": "optimal information compression under capacity limits shapes latent representations"
+    },
+    {
+      "name": "Beta Variational Autoencoder (β-VAE)",
+      "role": "extended",
+      "one_line": "generative model used to instantiate and probe rate-distortion trade-offs"
+    },
+    {
+      "name": "internal models of the world",
+      "role": "context",
+      "one_line": "cognitive framing motivating why organisms must compress representations"
+    }
+  ],
+  "core_question": "Which specific distortions of latent representations emerge when generative models face rate-distortion trade-offs?",
+  "key_assumptions": [
+    "organisms rely on resource-limited internal models that must compress information",
+    "compression manifests as distortion of latent representations",
+    "rate-distortion theory specifies optimal compression given capacity, frequency, and utility"
+  ],
+  "manipulations": [
+    "model capacity constraints in β-VAEs",
+    "data distributions (frequency / imbalance of stimuli)",
+    "task objectives / utility structure"
+  ],
+  "key_findings": [
+    "three primary distortions emerge: prototypization, specialization, and orthogonalization",
+    "distortions arise as signatures of adaptation to capacity, data imbalance, and task demands",
+    "multiple distortions can coexist within a single latent space"
+  ],
+  "interpretations": [
+    "distortion signatures index how generative models adapt to resource and task constraints",
+    "latent-space geometry varies systematically across models with different rate-distortion constraints"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "rate-distortion theory",
+    "latent representation geometry",
+    "beta variational autoencoder",
+    "information compression",
+    "prototypization",
+    "specialization",
+    "orthogonalization",
+    "capacity-limited internal models"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "b308b32bc03496e45b13d62384812c6a",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}
