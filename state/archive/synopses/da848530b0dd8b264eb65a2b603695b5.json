@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "bounded diffusion / drift-diffusion model",
+      "role": "primary_lens",
+      "one_line": "Sequential sampling to a bound accounts for accuracy and decision report timing"
+    },
+    {
+      "name": "decision-action coupling",
+      "role": "compared_against",
+      "one_line": "Challenges view that categorical perceptual decisions precede motor actions"
+    },
+    {
+      "name": "working memory utility-based retention",
+      "role": "extended",
+      "one_line": "Sensory information held in memory for future categorization use"
+    }
+  ],
+  "core_question": "When perceptual decisions are uncoupled from the actions they bear upon, do humans postpone deliberation until response options are revealed and sample stored sensory evidence from memory?",
+  "key_assumptions": [
+    "Random-dot motion evidence can be integrated over time toward a decision bound",
+    "Decision categorization can be dissociated from motor action specification",
+    "Stored sensory information can be re-accessed during a target-selection phase"
+  ],
+  "manipulations": [
+    "Delay period between motion stimulus and choice-target onset",
+    "Motion evidence strength (RDM coherence)",
+    "Uncoupling of perceptual decision from response action via post-stimulus target reveal"
+  ],
+  "key_findings": [
+    "Decision accuracy varied across subjects, reflecting individual evidence-integration ability",
+    "Higher-accuracy subjects showed prolonged deliberation after target presentation",
+    "Decision report time depended on motion evidence strength",
+    "A bounded diffusion model with post-target sampling from memory fit the joint accuracy and timing pattern"
+  ],
+  "interpretations": [
+    "Subjects sequentially sample stored sensory information from memory during target selection rather than committing before targets appear",
+    "Working memory strategically retains information based on its future utility for categorization"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "sequential sampling from memory",
+    "bounded diffusion model",
+    "perceptual decision-making",
+    "random-dot motion",
+    "decision-action uncoupling",
+    "working memory utility",
+    "deliberation time",
+    "evidence integration"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "da848530b0dd8b264eb65a2b603695b5",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

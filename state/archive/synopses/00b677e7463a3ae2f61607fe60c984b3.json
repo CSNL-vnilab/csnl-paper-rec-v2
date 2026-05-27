@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "Granger causality",
+      "role": "primary_lens",
+      "one_line": "statistical inference of directed influence between recorded brain signals"
+    },
+    {
+      "name": "transfer entropy",
+      "role": "alternative_lens",
+      "one_line": "information-theoretic measure linked to Granger causality"
+    },
+    {
+      "name": "dynamical causal modelling",
+      "role": "context",
+      "one_line": "alternative causal framework mentioned for comparison"
+    }
+  ],
+  "core_question": "How do existing time, frequency, and time-varying Granger-causality estimators compare in neuroscience signal analysis?",
+  "key_assumptions": [
+    "neural signals admit linear autoregressive representations",
+    "causality can be operationalised via predictive improvement",
+    "stationarity holds within analysis windows for spectral variants"
+  ],
+  "manipulations": [
+    "domain of analysis (time vs frequency vs time-varying)",
+    "estimator family (classical, partial, conditional, DTF, PDC)"
+  ],
+  "key_findings": [
+    "unified framework relates time-domain Granger causality to transfer entropy",
+    "spectral and time-varying extensions differ in estimation and distributional properties",
+    "many estimator variants exist with distinct assumptions and pitfalls"
+  ],
+  "interpretations": [
+    "methodological choice strongly conditions causal claims about brain signals",
+    "systematic comparison is needed given the proliferation of estimators"
+  ],
+  "limitations_noted": [
+    "partial/conditional Granger causality and DCM/DTF/PDC are mentioned but not the focus"
+  ],
+  "connecting_signals": [
+    "Granger causality",
+    "transfer entropy",
+    "directed transfer function",
+    "partial directed coherence",
+    "time-varying causality",
+    "spectral causality",
+    "dynamical causal modelling",
+    "brain connectivity"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 0.8,
+  "canonical_id": "00b677e7463a3ae2f61607fe60c984b3",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:58:51+09:00",
+  "review_status": "auto_unreviewed"
+}

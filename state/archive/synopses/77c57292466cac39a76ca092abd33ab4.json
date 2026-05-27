@@ -1,0 +1,59 @@
+{
+  "frameworks": [
+    {
+      "name": "dynamic gating",
+      "role": "primary_lens",
+      "one_line": "Broadcast signal becomes effective only in neurons receiving a gating input"
+    },
+    {
+      "name": "evidence accumulation / evolving decision representation",
+      "role": "extended",
+      "one_line": "Analog graded evidence is preserved while the encoding population changes"
+    },
+    {
+      "name": "reference-frame remapping",
+      "role": "context",
+      "one_line": "Intervening eye movements shift which neurons encode task-relevant signals"
+    }
+  ],
+  "core_question": "How can analog decision evidence be transferred between neural populations without rewiring synaptic connectivity?",
+  "key_assumptions": [
+    "Decision evidence is represented as a graded analog variable",
+    "Synaptic connectivity is fixed across the transfer event",
+    "A gating signal selectively grants receptivity to a broadcast input",
+    "Intervening actions can trigger a switch in the encoding population"
+  ],
+  "manipulations": [
+    "Modelled smooth pursuit and saccadic eye movements as intervening actions",
+    "Compared transfer between different parietal cortex populations",
+    "Varied which subpopulation received the gating signal"
+  ],
+  "key_findings": [
+    "Graded information can be transferred between populations via gated receptivity to a broadcast signal",
+    "The model reproduces transfer of decision-related activity between parietal populations across eye movements",
+    "Continuous decision processes are maintained despite changes in frame of reference"
+  ],
+  "interpretations": [
+    "Dynamic gating provides a mechanism for flexible population reassignment without synaptic change",
+    "Widely broadcast signals plus selective receptivity explain experimentally observed cross-population transfer"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "dynamic gating",
+    "broadcast signal",
+    "evidence accumulation",
+    "parietal cortex",
+    "smooth pursuit and saccades",
+    "population transfer",
+    "reference-frame remapping",
+    "graded analog information",
+    "decision-making circuits"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "77c57292466cac39a76ca092abd33ab4",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

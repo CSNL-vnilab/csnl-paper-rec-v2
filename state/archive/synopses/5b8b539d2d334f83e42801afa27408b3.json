@@ -1,0 +1,56 @@
+{
+  "frameworks": [
+    {
+      "name": "Reward Prediction Error hypothesis",
+      "role": "extended",
+      "one_line": "Phasic midbrain dopamine signals prediction errors driving reinforcement learning."
+    },
+    {
+      "name": "reinforcement learning",
+      "role": "primary_lens",
+      "one_line": "Learning state values from prediction errors over experienced outcomes."
+    },
+    {
+      "name": "state representation learning",
+      "role": "extended",
+      "one_line": "Dopamine prediction errors also shape acquisition of adaptive task-state representations."
+    }
+  ],
+  "core_question": "Can the Reward Prediction Error hypothesis be extended so dopamine signals also support learning of adaptive state representations beyond reward?",
+  "key_assumptions": [
+    "Phasic dopamine activity carries reward prediction error signals",
+    "A single signal can serve associative learning and representation learning",
+    "Dopaminergic innervation of hippocampus and prefrontal cortex is functionally relevant"
+  ],
+  "manipulations": [
+    "Simulated tasks spanning temporal, spatial, motor, and abstract categorization domains",
+    "Dopamine signal used to update state representations rather than only values"
+  ],
+  "key_findings": [
+    "Extended model accounts for dopamine role in temporal and spatial representation",
+    "Extended model accounts for dopamine influence on motor response generation",
+    "Extended model accounts for dopamine role in abstract categorization"
+  ],
+  "interpretations": [
+    "Representation is the common theme linking dopamine functions beyond reward",
+    "Extending RPE to representation learning resolves a critical challenge to the hypothesis"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "reward prediction error",
+    "dopamine",
+    "state representation learning",
+    "midbrain dopaminergic system",
+    "temporal representation",
+    "spatial representation",
+    "abstract categorization",
+    "reinforcement learning"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "5b8b539d2d334f83e42801afa27408b3",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:58:51+09:00",
+  "review_status": "auto_unreviewed"
+}
