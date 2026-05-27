@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "executive attention / top-down control",
+      "role": "primary_lens",
+      "one_line": "working memory capacity reflects executive attention biasing percept dominance"
+    },
+    {
+      "name": "bistable perception",
+      "role": "extended",
+      "one_line": "Necker cube alternations modulated by individual attentional control"
+    },
+    {
+      "name": "individual-differences psychometrics",
+      "role": "context",
+      "one_line": "WMC variation predicting lower-level perceptual performance"
+    }
+  ],
+  "core_question": "Do individual differences in working memory capacity predict perception of a bistable Necker cube?",
+  "key_assumptions": [
+    "WMC indexes executive attention capacity",
+    "top-down attention can bias bistable percept dominance",
+    "dominance durations reflect controllable perceptual states"
+  ],
+  "manipulations": [
+    "four viewing conditions (passive, hold-unspecific, hold-specific, reverse)",
+    "individual WMC as continuous predictor",
+    "3-min Necker cube viewing trials"
+  ],
+  "key_findings": [
+    "WMC positively correlated with dominance duration in passive and hold-unspecific conditions",
+    "WMC negatively correlated with dominance duration in reverse condition",
+    "WMC negatively correlated with non-specified percept duration in hold-specific condition"
+  ],
+  "interpretations": [
+    "WMC differences relate to ability to exert top-down attentional control over bistable dominance",
+    "executive attention extends from cognitive into perceptual domains"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "working memory capacity",
+    "bistable perception",
+    "Necker cube",
+    "dominance duration",
+    "top-down attentional control",
+    "executive attention",
+    "individual differences",
+    "perceptual rivalry"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "322a021f210962d98556dadc6c6d3906",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}

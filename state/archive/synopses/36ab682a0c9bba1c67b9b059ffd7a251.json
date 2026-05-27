@@ -1,0 +1,60 @@
+{
+  "frameworks": [
+    {
+      "name": "anodal tDCS over left DLPFC",
+      "role": "primary_lens",
+      "one_line": "noninvasive prefrontal stimulation modulating working memory performance and oscillations"
+    },
+    {
+      "name": "multichannel-optimized vs bipolar montage",
+      "role": "compared_against",
+      "one_line": "focality-optimized montage tested against classical bipolar electrode arrangement"
+    },
+    {
+      "name": "baseline-dependent response model",
+      "role": "alternative_lens",
+      "one_line": "stimulation effects depend on individual initial task performance"
+    }
+  ],
+  "core_question": "Do montage focality and individual baseline performance shape anodal tDCS effects on working memory and prefrontal oscillations?",
+  "key_assumptions": [
+    "lDLPFC anodal tDCS can modulate WM and associated neural oscillations",
+    "increased focality should yield stronger behavioral effects",
+    "individual baseline performance moderates stimulation response"
+  ],
+  "manipulations": [
+    "stimulation type (bipolar vs multichannel vs sham) in crossover",
+    "montage focality (classical bipolar vs multichannel-optimized)",
+    "WM load via 2-back task during stimulation"
+  ],
+  "key_findings": [
+    "no main effect of either montage on WM behavior or oscillations vs sham",
+    "stimulation interacted with initial task performance",
+    "low baseline performers improved and high performers worsened under multichannel stimulation",
+    "induced task-related theta power scaled with baseline WM ability"
+  ],
+  "interpretations": [
+    "tDCS effects on WM are baseline-dependent rather than uniformly facilitatory",
+    "focality alone does not guarantee stronger behavioral or oscillatory effects"
+  ],
+  "limitations_noted": [
+    "no group-level main effect detected with classical comparison",
+    "results inconsistent with several prior lDLPFC tDCS studies"
+  ],
+  "connecting_signals": [
+    "anodal tDCS",
+    "left dorsolateral prefrontal cortex",
+    "working memory 2-back task",
+    "multichannel optimized montage",
+    "individual baseline performance",
+    "theta oscillatory power",
+    "sham-controlled crossover stimulation"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "36ab682a0c9bba1c67b9b059ffd7a251",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:07:50+09:00",
+  "review_status": "auto_unreviewed"
+}

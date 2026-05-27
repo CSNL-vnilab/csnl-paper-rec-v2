@@ -1,0 +1,49 @@
+{
+  "frameworks": [
+    {
+      "name": "temporal discounting",
+      "role": "extended",
+      "one_line": "modified discounting model incorporating individual-specific risk sensitivity"
+    },
+    {
+      "name": "computational psychiatry",
+      "role": "context",
+      "one_line": "computational markers as clinically validated indicators of addiction outcomes"
+    }
+  ],
+  "core_question": "Can a risk-sensitivity-adjusted temporal discounting measure reliably signal clinically relevant outcomes in opioid addiction treatment?",
+  "key_assumptions": [
+    "impulsivity in addiction can be captured by intertemporal choice models",
+    "individual differences in risk sensitivity bias standard discount-rate estimates",
+    "discount rates can change longitudinally with treatment status"
+  ],
+  "manipulations": [
+    "model specification: standard discounting vs risk-sensitivity-augmented discounting",
+    "longitudinal assessment across treatment course in opioid-addicted patients"
+  ],
+  "key_findings": [
+    "risk-sensitivity-augmented model yields more precise, unbiased, and reliable impulsivity estimates than the standard model",
+    "within-patient changes in discount rate track increases in drug use"
+  ],
+  "interpretations": [
+    "risk-adjusted discount rate is a candidate computational marker of vulnerability to relapse and treatment failure in opioid addiction"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "temporal discounting",
+    "impulsivity",
+    "risk sensitivity",
+    "opioid addiction",
+    "computational psychiatry",
+    "relapse prediction",
+    "treatment dropout",
+    "longitudinal computational marker"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "8bcb0719df11055967ef3ee854801a3a",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:07:50+09:00",
+  "review_status": "auto_unreviewed"
+}

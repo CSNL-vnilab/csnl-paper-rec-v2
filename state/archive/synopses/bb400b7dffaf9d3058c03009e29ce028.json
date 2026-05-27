@@ -1,0 +1,60 @@
+{
+  "frameworks": [
+    {
+      "name": "domain-specificity of metacognition",
+      "role": "primary_lens",
+      "one_line": "tests whether memory and perceptual metacognition rely on dissociable cortical substrates"
+    },
+    {
+      "name": "metacognitive efficiency",
+      "role": "extended",
+      "one_line": "behavioural index of introspective monitoring quantified across decision domains"
+    },
+    {
+      "name": "repetitive transcranial magnetic stimulation perturbation",
+      "role": "primary_lens",
+      "one_line": "causal disruption of precuneus to test functional necessity for mnemonic metacognition"
+    },
+    {
+      "name": "anterior prefrontal lesion evidence",
+      "role": "compared_against",
+      "one_line": "prior lesion work implicating aPFC in perceptual but not mnemonic metacognition"
+    }
+  ],
+  "core_question": "Is the precuneus causally necessary for mnemonic but not perceptual metacognition?",
+  "key_assumptions": [
+    "metacognitive efficiency can be measured separately for memory and perceptual decisions",
+    "focal rTMS over precuneus selectively perturbs that region's processing",
+    "domain-general vs domain-specific metacognition is dissociable across cortical sites"
+  ],
+  "manipulations": [
+    "rTMS targeting precuneus vs control",
+    "task domain: temporal-order memory judgment vs perceptual discrimination"
+  ],
+  "key_findings": [
+    "precuneal perturbation impaired metacognitive efficiency for memory but not perception",
+    "cross-domain correlation in individuals' metacognitive efficiency disappeared after precuneus rTMS"
+  ],
+  "interpretations": [
+    "precuneus is functionally necessary for mnemonic metacognition specifically",
+    "memory and perceptual metacognition are double-dissociated across precuneus and anterior prefrontal cortex"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "metacognition",
+    "precuneus",
+    "mnemonic metacognition",
+    "perceptual metacognition",
+    "metacognitive efficiency",
+    "repetitive transcranial magnetic stimulation",
+    "temporal-order memory",
+    "domain specificity"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "bb400b7dffaf9d3058c03009e29ce028",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "evidence accumulation",
+      "role": "primary_lens",
+      "one_line": "LIP Tin neurons accumulate motion evidence toward a contralateral choice"
+    },
+    {
+      "name": "population coding of decision confidence",
+      "role": "extended",
+      "one_line": "across-neuron variability around mean firing carries choice-accuracy information"
+    },
+    {
+      "name": "logistic decoder",
+      "role": "primary_lens",
+      "one_line": "linear readout predicts choice accuracy from Tin population activity"
+    },
+    {
+      "name": "signal-detection / confidence as belief in being correct",
+      "role": "context",
+      "one_line": "confidence defined as pre-feedback belief that one's choice is correct"
+    }
+  ],
+  "core_question": "Do the LIP neurons that accumulate evidence for a choice also carry information about whether that choice is correct?",
+  "key_assumptions": [
+    "Tin neurons represent evidence accumulation toward contralateral target selection",
+    "confidence is the pre-feedback belief that one's choice is correct",
+    "choice accuracy is a usable proxy for decision confidence"
+  ],
+  "manipulations": [
+    "random dot motion strength in a reaction-time discrimination task",
+    "reaction time across trials",
+    "contralateral versus other choices relative to recording site"
+  ],
+  "key_findings": [
+    "shortly before a contralateral report, the Tin population contains information about choice accuracy",
+    "on average, Tin firing before the report is independent of reaction time and motion strength",
+    "individual Tin neurons consistently depart from the population mean in a structured way",
+    "a simple logistic decoder predicts choice accuracy from Tin population responses"
+  ],
+  "interpretations": [
+    "across-neuron variability around a stereotyped mean carries the confidence signal in LIP",
+    "the same Tin neurons that accumulate evidence also encode the accuracy of the resulting choice"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "lateral intraparietal area",
+    "Tin neurons",
+    "Neuropixels recording",
+    "random dot motion task",
+    "evidence accumulation",
+    "decision confidence",
+    "population code for accuracy",
+    "logistic decoder"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "aa565dcd2beb558391fae3e65bc12067",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:05:00+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "neuromodulatory gain control of network dynamics",
+      "role": "primary_lens",
+      "one_line": "catecholamines reshape forebrain network state via receptor-targeted modulation"
+    },
+    {
+      "name": "spatially homogeneous catecholaminergic modulation",
+      "role": "compared_against",
+      "one_line": "view that catecholamine effects on cortical dynamics are uniform across the brain"
+    },
+    {
+      "name": "receptor-expression-guided functional mapping",
+      "role": "extended",
+      "one_line": "linking fMRI fluctuation patterns to spatial maps of receptor gene expression"
+    },
+    {
+      "name": "linear decomposition of resting-state fMRI",
+      "role": "context",
+      "one_line": "data-driven separation of drug-modulated correlated signal fluctuations"
+    }
+  ],
+  "core_question": "Are catecholaminergic effects on brain-wide network dynamics spatially homogeneous or structured by receptor distributions?",
+  "key_assumptions": [
+    "catecholamine receptors with distinct functional effects have heterogeneous cortical density",
+    "atomoxetine elevates central catecholamine levels",
+    "fMRI signal covariation reflects network-level dynamics",
+    "receptor gene expression maps index regional receptor density"
+  ],
+  "manipulations": [
+    "atomoxetine versus placebo in humans at rest",
+    "linear decomposition contrasting drug-increased and drug-decreased fluctuation patterns"
+  ],
+  "key_findings": [
+    "two distinct spatial fluctuation patterns showed reliable opposite drug effects",
+    "one pattern decreased and one increased under atomoxetine",
+    "pattern structure matched α1 adrenergic, D2-like dopamine, and β adrenergic receptor expression maps",
+    "β receptor maps correlated with both patterns but with opposite signs"
+  ],
+  "interpretations": [
+    "catecholaminergic forebrain effects are spatially more structured than homogeneous models assume",
+    "receptor-specific architecture shapes drug-induced network-state changes"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "catecholaminergic modulation",
+    "atomoxetine pharmacological fMRI",
+    "resting-state network dynamics",
+    "norepinephrine and dopamine receptors",
+    "α1 and β adrenergic receptor maps",
+    "D2-like dopamine receptors",
+    "linear decomposition of fMRI fluctuations",
+    "receptor gene expression mapping"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "d4a15a4c08c6835a0d0b8a04c8b54f63",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}
