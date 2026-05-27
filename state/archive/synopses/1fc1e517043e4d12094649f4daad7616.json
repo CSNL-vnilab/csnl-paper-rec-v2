@@ -1,0 +1,50 @@
+{
+  "frameworks": [
+    {
+      "name": "generative sequence sampling",
+      "role": "primary_lens",
+      "one_line": "Internally generated state sequences support exploration, consolidation, planning"
+    },
+    {
+      "name": "entorhinal-hippocampal circuit model",
+      "role": "extended",
+      "one_line": "MEC dorsoventral grid input modulates hippocampal reactivation regimes"
+    }
+  ],
+  "core_question": "How can the entorhinal-hippocampal system flexibly adapt internally generated sequences to support different cognitive functions?",
+  "key_assumptions": [
+    "Different cognitive functions require qualitatively distinct sampling dynamics",
+    "Grid population input scales systematically along MEC dorsoventral axis",
+    "Hippocampal reactivations reflect generative sampling processes"
+  ],
+  "manipulations": [
+    "Modulation of grid input scale along MEC dorsoventral axis",
+    "Interpolation between distinct sequence-generation regimes"
+  ],
+  "key_findings": [
+    "Modulating MEC grid input interpolates between distinct hippocampal reactivation regimes",
+    "Model reproduces generative cycling, diffusive reactivations, and jumping trajectory events"
+  ],
+  "interpretations": [
+    "Dorsoventral grid modulation provides a single mechanism flexibly tuning sequence statistics",
+    "Apparently unrelated reactivation phenomena reflect one common generative process"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "hippocampal replay",
+    "entorhinal grid cells",
+    "sequence generation",
+    "generative cycling",
+    "diffusive reactivations",
+    "jumping trajectory events",
+    "MEC dorsoventral axis",
+    "planning and consolidation"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "1fc1e517043e4d12094649f4daad7616",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:10:09+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,51 @@
+{
+  "frameworks": [
+    {
+      "name": "transcranial direct current stimulation (tDCS) priming",
+      "role": "primary_lens",
+      "one_line": "cathodal priming before anodal stimulation to modulate motor cortex plasticity"
+    },
+    {
+      "name": "motor skill learning and retention",
+      "role": "context",
+      "one_line": "behavioural framework assessing speed-accuracy trade-off across training and retention"
+    }
+  ],
+  "core_question": "Do multiple consecutive sessions of cathodal-then-anodal tDCS over sensorimotor cortex further enhance plateau-stage visuomotor learning and retention beyond anodal or sham stimulation?",
+  "key_assumptions": [
+    "cathodal priming homeostatically biases subsequent anodal effects on M1 plasticity",
+    "plateau-stage visuomotor learning can still be modulated by stimulation",
+    "speed-accuracy trade-off (index of performance) indexes motor learning"
+  ],
+  "manipulations": [
+    "stimulation condition (c-a-tDCS vs a-tDCS vs sham) between groups",
+    "multiple consecutive training days with online and offline tDCS",
+    "circular-tracing task across baseline, training, and retention blocks"
+  ],
+  "key_findings": [
+    "c-a-tDCS significantly increased index of performance above baseline across 3 training days",
+    "performance gains were maintained across 2 retention days",
+    "improvements under c-a-tDCS did not significantly differ from sham"
+  ],
+  "interpretations": [
+    "multiple-session cathodal priming yields within-group learning gains but no reliable advantage over sham for already-learned plateau task"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "cathodal priming",
+    "anodal HD-tDCS",
+    "sensorimotor cortex",
+    "visuomotor learning plateau",
+    "motor skill retention",
+    "speed-accuracy trade-off",
+    "index of performance",
+    "homeostatic plasticity"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "0daa20c1469980bbaa1838c8a5258083",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:10:09+09:00",
+  "review_status": "auto_unreviewed"
+}

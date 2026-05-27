@@ -1,0 +1,50 @@
+{
+  "frameworks": [
+    {
+      "name": "parallel processing",
+      "role": "primary_lens",
+      "one_line": "Form features processed simultaneously across early visual areas rather than only hierarchically."
+    },
+    {
+      "name": "hierarchical visual processing",
+      "role": "alternative_lens",
+      "one_line": "Traditional view that complexity builds across successive cortical stages."
+    }
+  ],
+  "core_question": "Are simple geometric forms of increasing perceptual complexity processed hierarchically or in parallel across early visual areas?",
+  "key_assumptions": [
+    "Lines, angles, and rhombuses share the same elemental constituents (lines)",
+    "Perceptual complexity increases from lines to angles to rhombuses",
+    "BOLD activity in V1-V3 indexes form-related processing"
+  ],
+  "manipulations": [
+    "Form category (lines vs angles vs rhombuses)",
+    "Perceptual complexity of geometric stimuli built from identical line elements"
+  ],
+  "key_findings": [
+    "All three form categories activated V1, V2, and V3",
+    "Angles produced the strongest activity; rhombuses the weakest, across V1-V3",
+    "Difference between angles and rhombuses was significant; lines vs rhombuses trend-significant; lines vs angles non-significant"
+  ],
+  "interpretations": [
+    "Form processing uses a parallel strategy across early visual areas in addition to the hierarchical one",
+    "Complementing earlier MEG evidence, fMRI localizes parallel form-related activity to V1-V3"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "early visual cortex V1-V3",
+    "form processing",
+    "parallel vs hierarchical processing",
+    "geometric stimuli",
+    "fMRI BOLD",
+    "perceptual complexity",
+    "MEG-fMRI complementarity"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "d509235ce2542315fed77d073a996993",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:10:09+09:00",
+  "review_status": "auto_unreviewed"
+}

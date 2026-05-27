@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "factorised representations",
+      "role": "primary_lens",
+      "one_line": "EC factorises experience into transferable dimensions for cross-context generalisation"
+    },
+    {
+      "name": "graph-structured task representation",
+      "role": "extended",
+      "one_line": "behavioural sequences governed by underlying transition graph between locations"
+    },
+    {
+      "name": "representational similarity analysis (fMRI)",
+      "role": "context",
+      "one_line": "neural pattern similarity used to index shared generalisable structure"
+    }
+  ],
+  "core_question": "Does the entorhinal cortex represent which dimensions of past experience can be generalised to a novel environment?",
+  "key_assumptions": [
+    "experience can be decomposed into separable, transferable dimensions",
+    "shared graph transitions support generalisation across environments",
+    "neural similarity in EC indexes which features are treated as common"
+  ],
+  "manipulations": [
+    "environment novelty (familiar vs novel)",
+    "whether sequence transitions are shared or differ across environments",
+    "early vs later exposure to the novel environment"
+  ],
+  "key_findings": [
+    "accuracy higher on blocks with shared transitions across environments",
+    "generalisation advantage strongest during early novel-environment exposure",
+    "EC patterns showed greater similarity for generalisable starting locations across environments"
+  ],
+  "interpretations": [
+    "EC supports generalisation by forming factorised representations isolating transferable features",
+    "neural differentiation of generalisable aspects underlies the behavioural transfer benefit"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "entorhinal cortex",
+    "factorised representations",
+    "generalisation across environments",
+    "graph structure transitions",
+    "representational similarity",
+    "novel environment learning",
+    "transfer of sequential knowledge",
+    "fMRI starting-location patterns"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "ff4682de561df3b9253e1ea49919ba44",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:10:09+09:00",
+  "review_status": "auto_unreviewed"
+}

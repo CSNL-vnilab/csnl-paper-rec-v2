@@ -1,0 +1,55 @@
+{
+  "frameworks": [
+    {
+      "name": "reinforcement learning",
+      "role": "primary_lens",
+      "one_line": "trial-by-trial value updating from reward feedback indexed in EEG"
+    },
+    {
+      "name": "working memory",
+      "role": "primary_lens",
+      "one_line": "short-term storage of recent stimulus-action-outcome contingencies guiding choice"
+    },
+    {
+      "name": "dual-system decision-making",
+      "role": "extended",
+      "one_line": "RL and WM jointly contribute to learning with cooperative and competitive interactions"
+    }
+  ],
+  "core_question": "How do reinforcement learning and working memory systems interact within and across trials during human reward-based learning?",
+  "key_assumptions": [
+    "trial-by-trial EEG signals can index latent RL and WM computations",
+    "RL expectation predicts feedback surprise",
+    "behavior alone underdetermines system interactions"
+  ],
+  "manipulations": [
+    "reward versus punishment feedback across trials",
+    "task structure permitting separable RL and WM contributions"
+  ],
+  "key_findings": [
+    "increases in neural expectation predicted reduced neural surprise at subsequent feedback",
+    "within- and cross-trial EEG dynamics show WM contributing expectations that guide RL",
+    "RL and WM compete during choice but cooperate during learning"
+  ],
+  "interpretations": [
+    "RL and WM cooperatively interplay for learning while competing at choice",
+    "single-trial neural indices reveal computations beyond what behavior alone can show"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "reinforcement learning",
+    "working memory",
+    "EEG single-trial dynamics",
+    "neural expectation",
+    "feedback surprise",
+    "reward-based learning",
+    "decision-making systems interaction"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "9d185994e9bdb6f599b115fbb306ff3f",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:10:09+09:00",
+  "review_status": "auto_unreviewed"
+}
