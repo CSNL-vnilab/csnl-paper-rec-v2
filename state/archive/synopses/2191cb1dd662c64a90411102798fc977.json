@@ -1,0 +1,52 @@
+{
+  "canonical_id": "2191cb1dd662c64a90411102798fc977",
+  "frameworks": [
+    {
+      "name": "pedagogical sampling / Bayesian teaching",
+      "role": "primary_lens",
+      "one_line": "teachers select examples that maximize a learner's posterior belief in the correct answer"
+    },
+    {
+      "name": "mentalizing / theory of mind",
+      "role": "context",
+      "one_line": "social-cognition network used to represent another agent's mental state"
+    }
+  ],
+  "core_question": "What neural computations support teachers' decisions about which examples to communicate to learners?",
+  "key_assumptions": [
+    "teachers represent a learner's belief distribution over hypotheses",
+    "example selection can be modelled as belief-maximizing inference",
+    "learners' posterior beliefs are tractable from chosen examples"
+  ],
+  "manipulations": [
+    "role assignment as teacher selecting examples for abstract multiple-choice questions",
+    "comparison of candidate example-selection models",
+    "independent learner sample tested on the teachers' chosen examples"
+  ],
+  "key_findings": [
+    "teachers' example choices best fit a model maximizing learner belief in the correct answer",
+    "teachers' predictions of learner accuracy tracked actual learner performance",
+    "anterior cingulate gyrus and mentalizing-network regions tracked learners' posterior belief in the correct answer"
+  ],
+  "interpretations": [
+    "social-cognition regions implement representations of another agent's evolving belief during teaching",
+    "human teaching can be characterized as belief-directed evidence selection"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "Bayesian teaching",
+    "pedagogical sampling",
+    "learner posterior belief",
+    "mentalizing network",
+    "anterior cingulate cortex",
+    "theory of mind fMRI",
+    "example selection",
+    "social learning"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:54:36+09:00",
+  "review_status": "auto_unreviewed"
+}

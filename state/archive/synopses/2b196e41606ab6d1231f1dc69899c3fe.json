@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "population receptive field (pRF)",
+      "role": "primary_lens",
+      "one_line": "neuroimaging estimate of cortical receptive-field properties from visual stimulation"
+    },
+    {
+      "name": "plasticity vs stability",
+      "role": "alternative_lens",
+      "one_line": "debate over whether adult visual cortex circuits can remap or remain fixed"
+    },
+    {
+      "name": "computational / mechanistic model",
+      "role": "extended",
+      "one_line": "proposed quantitative model linking pRF dynamics to underlying circuit mechanisms"
+    }
+  ],
+  "core_question": "How should we interpret pRF changes seen in clinical disorders given that pRFs also shift in healthy adults?",
+  "key_assumptions": [
+    "pRFs reflect underlying cortical neural circuitry",
+    "healthy-baseline pRF dynamics constrain interpretation of patient data",
+    "a mechanistic model is required to adjudicate plasticity-vs-stability"
+  ],
+  "manipulations": [
+    "comparison across ophthalmologic and neurologic patient groups vs healthy adults",
+    "review of pRF measurement contexts that elicit dynamic changes"
+  ],
+  "key_findings": [
+    "pRF estimates change in healthy adults as well as in patients",
+    "the field disagrees on whether these changes reflect true plasticity or measurement dynamics"
+  ],
+  "interpretations": [
+    "clinical pRF changes can only be interpreted once healthy pRF dynamics are mechanistically defined",
+    "mechanistic models with quantitative predictions are needed to resolve the plasticity-vs-stability debate"
+  ],
+  "limitations_noted": [
+    "controversy over how underlying neural circuitry operates remains unresolved"
+  ],
+  "connecting_signals": [
+    "population receptive field",
+    "visual cortex",
+    "cortical plasticity",
+    "ophthalmologic disorders",
+    "neurologic disorders",
+    "neuroimaging",
+    "receptive field dynamics",
+    "mechanistic model of pRF"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "2b196e41606ab6d1231f1dc69899c3fe",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:54:36+09:00",
+  "review_status": "auto_unreviewed"
+}

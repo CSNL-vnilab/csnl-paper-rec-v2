@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "latent linear dynamical systems",
+      "role": "extended",
+      "one_line": "extended to contain distinct latent variables per cell class"
+    },
+    {
+      "name": "cell-type dynamical systems (CTDS)",
+      "role": "primary_lens",
+      "one_line": "latent dynamical system with cell-class-specific latents and constrained emissions"
+    },
+    {
+      "name": "standard linear dynamical system (LDS)",
+      "role": "compared_against",
+      "one_line": "baseline ignoring cell-type identity"
+    }
+  ],
+  "core_question": "Can latent dynamical models capture the functional roles of distinct cell classes in neural population recordings?",
+  "key_assumptions": [
+    "neural populations contain multiple cell classes with distinct functional roles",
+    "biologically inspired constraints can be imposed on dynamics and emissions",
+    "cell-class identity is partially known from electrophysiology"
+  ],
+  "manipulations": [
+    "cell-type-specific latent structure vs unstructured latents",
+    "in-silico optogenetic perturbations of E and I populations"
+  ],
+  "key_findings": [
+    "CTDS achieves higher accuracy than a standard LDS",
+    "choice can be decoded from both E and I latents in FOF and ADS",
+    "in-silico perturbations replicate experimentally observed behavioral effects",
+    "CTDS can infer cell-type identity for neurons with unknown class labels"
+  ],
+  "interpretations": [
+    "incorporating cell-class structure improves latent dynamics models and predicts cell-specific perturbation effects",
+    "distinct cell classes carry decodable choice information during decision-making"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "cell-type dynamical systems",
+    "latent linear dynamical systems",
+    "excitatory and inhibitory populations",
+    "frontal orienting fields",
+    "anterior dorsal striatum",
+    "auditory decision-making",
+    "in-silico optogenetic perturbation",
+    "cell-type classification from electrophysiology"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "b44e7ef5fa347e7e260dfa25e969af53",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:54:36+09:00",
+  "review_status": "auto_unreviewed"
+}

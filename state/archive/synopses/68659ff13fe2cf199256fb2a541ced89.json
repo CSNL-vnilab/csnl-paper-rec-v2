@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "evidence accumulation",
+      "role": "primary_lens",
+      "one_line": "neural integration of sensory evidence toward a decision distributed across brain regions"
+    },
+    {
+      "name": "population subspace dynamics",
+      "role": "primary_lens",
+      "one_line": "shared low-dimensional patterns encode evidence and movement preparation distinct from execution"
+    },
+    {
+      "name": "movement-preparatory activity",
+      "role": "extended",
+      "one_line": "preparatory subspace driven by integrator neurons that collapse at movement onset"
+    },
+    {
+      "name": "intrinsic regional timescales",
+      "role": "compared_against",
+      "one_line": "integration timescales found independent of intrinsic dynamics, depending instead on task experience"
+    }
+  ],
+  "core_question": "How are sensation, evidence integration, motor planning and execution orchestrated across brain regions and neural dimensions during learned perceptual decisions?",
+  "key_assumptions": [
+    "decision-making engages many brain regions, not a single locus",
+    "neural population activity can be decomposed into task-relevant subspaces",
+    "learning reshapes how regions participate in evidence accumulation"
+  ],
+  "manipulations": [
+    "ambiguous visual input reported by mice via change detection",
+    "before vs after learning comparisons",
+    "brain-wide recording across cortical, thalamic, basal ganglia, midbrain and cerebellar areas"
+  ],
+  "key_findings": [
+    "evidence integration emerges in sparse populations across most brain areas after learning",
+    "visual responses shift from transient sensory activations to sustained frontal-motor, thalamic, basal ganglia, midbrain and cerebellar representations",
+    "shared population patterns encode evidence and movement preparation, distinct from execution dynamics",
+    "premotor evidence-integration timescales are independent of intrinsic regional dynamics"
+  ],
+  "interpretations": [
+    "learning aligns evidence accumulation with action preparation across dozens of brain regions",
+    "preparatory subspace collapse at movement onset resets the integration process"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "evidence accumulation",
+    "brain-wide neural recording",
+    "perceptual decision-making",
+    "movement preparation subspace",
+    "sensorimotor transformation",
+    "frontal-motor cortex dynamics",
+    "task experience and learning",
+    "population activity decomposition"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "68659ff13fe2cf199256fb2a541ced89",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

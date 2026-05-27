@@ -1,0 +1,59 @@
+{
+  "frameworks": [
+    {
+      "name": "multisensory cortical integration",
+      "role": "compared_against",
+      "one_line": "view that V1 directly encodes non-visual modalities such as sound"
+    },
+    {
+      "name": "behavior-driven cortical activity",
+      "role": "primary_lens",
+      "one_line": "cortex-wide activity arises from movement and internal state, not pure sensory drive"
+    },
+    {
+      "name": "low-dimensional population coding",
+      "role": "context",
+      "one_line": "stereotyped low-dimensional patterns shared across neurons and animals"
+    }
+  ],
+  "core_question": "Does sound-evoked activity in mouse V1 reflect genuine multisensory integration or movement-related signals elicited by the sounds?",
+  "key_assumptions": [
+    "Neuropixels recordings sample V1 population activity faithfully",
+    "small body movements can be tracked and used as predictors",
+    "auditory cortex provides the candidate direct projection to V1"
+  ],
+  "manipulations": [
+    "presenting sounds while recording V1 with Neuropixels",
+    "comparing V1 with hippocampal formation responses",
+    "silencing or removing auditory cortical projections",
+    "regressing neural activity on stimulus-elicited body movements"
+  ],
+  "key_findings": [
+    "sound-evoked V1 activity is stereotyped across neurons and across mice",
+    "this activity does not depend on auditory cortical projections",
+    "it resembles activity in hippocampal formation, which lacks direct auditory input",
+    "small sound-elicited body movements precisely predict the V1 sound response"
+  ],
+  "interpretations": [
+    "apparent multisensory responses in V1 reflect movement and internal-state signals, not direct auditory input",
+    "low-dimensional behavior-linked signals can masquerade as cross-modal sensory coding"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "mouse primary visual cortex",
+    "sound-evoked activity",
+    "multisensory integration",
+    "Neuropixels population recording",
+    "behavior-related cortical activity",
+    "body movement regressors",
+    "low-dimensional neural code",
+    "hippocampal formation"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "08e6e46e1e2c2230beb0d342a4349c44",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

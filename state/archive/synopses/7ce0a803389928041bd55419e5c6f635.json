@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "edge co-occurrence statistics / association field",
+      "role": "primary_lens",
+      "one_line": "scene category recovered from second-order edge geometry alone"
+    },
+    {
+      "name": "sparse coding",
+      "role": "extended",
+      "one_line": "scale-space sparse coding used to extract edge tokens"
+    },
+    {
+      "name": "hierarchical object recognition",
+      "role": "compared_against",
+      "one_line": "challenges progressive abstraction from edges to objects to categories"
+    }
+  ],
+  "core_question": "Are edge co-occurrence statistics alone sufficient to support rapid natural-vs-animal scene categorization?",
+  "key_assumptions": [
+    "edges are tokens extracted by V1-like scale-space sparse coding",
+    "categorization can be invariant to translation, scale, and rotation",
+    "second-order edge geometry is available as early as primary visual cortex"
+  ],
+  "manipulations": [
+    "image category (natural, man-made, animal-containing)",
+    "geometric configuration of edge pairs (association field)"
+  ],
+  "key_findings": [
+    "association fields differ strongly across categories",
+    "animal images carry more curved edge configurations",
+    "edge-geometry classifier supports rough but robust invariant categorization",
+    "human error pattern is consistent with the edge-geometry procedure"
+  ],
+  "interpretations": [
+    "rapid scene categorization need not require high-level associative areas",
+    "V1-level co-occurrence statistics challenge the strict hierarchical view of visual computation"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "edge co-occurrence statistics",
+    "association field",
+    "rapid scene categorization",
+    "animal vs natural images",
+    "sparse coding of edges",
+    "scale-space analysis",
+    "translation scale rotation invariance",
+    "primary visual cortex computation"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "7ce0a803389928041bd55419e5c6f635",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:54:36+09:00",
+  "review_status": "auto_unreviewed"
+}
