@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "perceptual prediction",
+      "role": "primary_lens",
+      "one_line": "ongoing activity is parsed via prediction over learned sequential structure"
+    },
+    {
+      "name": "self-organizing event segmentation",
+      "role": "extended",
+      "one_line": "transient prediction-error spikes drive boundary detection and representation update"
+    },
+    {
+      "name": "connectionist sequence learning",
+      "role": "context",
+      "one_line": "recurrent statistical learning of within-event regularities"
+    }
+  ],
+  "core_question": "Can a system that predicts upcoming stimuli use prediction-error spikes to segment continuous activity into discrete events?",
+  "key_assumptions": [
+    "continuous activity contains recurring dynamic patterns",
+    "experience yields reliable sequential dependencies within events",
+    "stable internal representations support within-event prediction",
+    "boundaries can be identified online without supervision"
+  ],
+  "manipulations": [
+    "experience with recurring sequential patterns",
+    "timing of representation updates triggered by prediction error"
+  ],
+  "key_findings": [
+    "learned representations accurately predict upcoming stimuli within an event",
+    "transient increases in prediction error mark event boundaries",
+    "boundary-triggered updates improve prediction of subsequent activities"
+  ],
+  "interpretations": [
+    "event segmentation can emerge from perceptual prediction and its failures",
+    "self-organized boundary detection refines internal event representations"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "event segmentation",
+    "prediction error",
+    "perceptual prediction",
+    "sequential dependencies",
+    "event boundaries",
+    "self-organizing representations",
+    "statistical structure of events",
+    "online segmentation"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "8334a749be94626af2d27256db32dc09",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:04:47+09:00",
+  "review_status": "auto_unreviewed"
+}

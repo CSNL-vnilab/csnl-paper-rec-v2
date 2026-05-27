@@ -1,0 +1,61 @@
+{
+  "frameworks": [
+    {
+      "name": "task-relevant autoencoder via classifier enhancement (TRACE)",
+      "role": "primary_lens",
+      "one_line": "autoencoder jointly trained with a classifier to extract behaviorally-relevant latent representations"
+    },
+    {
+      "name": "standard autoencoder",
+      "role": "compared_against",
+      "one_line": "unsupervised reconstruction-only baseline for dimensionality reduction"
+    },
+    {
+      "name": "variational autoencoder",
+      "role": "compared_against",
+      "one_line": "probabilistic latent-variable baseline for dimensionality reduction"
+    },
+    {
+      "name": "principal component analysis",
+      "role": "compared_against",
+      "one_line": "linear variance-maximising baseline for dimensionality reduction"
+    }
+  ],
+  "core_question": "Can a task-relevant autoencoder recover behaviorally-meaningful low-dimensional neural representations from small, high-dimensional human neuroimaging datasets?",
+  "key_assumptions": [
+    "behaviorally-relevant features are the targets of interest in human neuroscience",
+    "joint reconstruction-plus-classification supervision constrains latent space toward task structure",
+    "small-sample neuroimaging data is prone to overfitting in standard deep models"
+  ],
+  "manipulations": [
+    "model class (TRACE vs autoencoder vs VAE vs PCA)",
+    "two severely truncated benchmark ML datasets",
+    "fMRI dataset of 59 subjects viewing animals vs objects"
+  ],
+  "key_findings": [
+    "TRACE outperformed all compared models nearly unilaterally",
+    "up to 12% increase in classification accuracy",
+    "up to 56% improvement in recovering cleaner task-relevant representations"
+  ],
+  "interpretations": [
+    "tying representation learning to behavioral targets yields cleaner, separable neural representations under small-sample regimes"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "task-relevant autoencoder",
+    "behaviorally-relevant representation",
+    "fMRI dimensionality reduction",
+    "classifier-enhanced autoencoder",
+    "small-sample neuroimaging",
+    "variational autoencoder baseline",
+    "human neuroscience machine learning",
+    "low-dimensional neural representation"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "b2be0394283822d6d3acf492ac5d520a",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,51 @@
+{
+  "frameworks": [
+    {
+      "name": "reinforcement learning (RPE hypothesis)",
+      "role": "primary_lens",
+      "one_line": "phasic dopamine encodes reward prediction errors in basal ganglia models"
+    },
+    {
+      "name": "state uncertainty / belief-state RL",
+      "role": "extended",
+      "one_line": "sensory feedback shapes state inference and thereby RPE dynamics"
+    }
+  ],
+  "core_question": "Why does dopamine ramp up before reward in some learned tasks, contrary to standard RPE convergence predictions?",
+  "key_assumptions": [
+    "phasic dopamine maps onto RPE signals",
+    "the learner is unbiased",
+    "sensory feedback informs the agent's current state estimate"
+  ],
+  "manipulations": [
+    "presence vs. gradual decrease of sensory feedback during a trial",
+    "brightness of virtual-navigation environment across conditions"
+  ],
+  "key_findings": [
+    "an unbiased learner with sensory feedback produces RPE ramps",
+    "with gradually decreasing feedback, dopamine forms a 'bump' rather than a flat ramp",
+    "ramp-up phase is larger under decreasing feedback than under sustained-high feedback",
+    "mice on a brightness-varying virtual navigation task showed both predicted patterns"
+  ],
+  "interpretations": [
+    "ramps and bumps are consistent with, not violations of, the RPE hypothesis once state uncertainty is included",
+    "sensory feedback reconciles previously conflicting dopamine ramp observations"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "dopamine ramps",
+    "reward prediction error",
+    "state uncertainty",
+    "belief-state reinforcement learning",
+    "sensory feedback",
+    "virtual navigation",
+    "basal ganglia dopamine"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "6d9893485975e425cd6beec5990f4b6c",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:04:47+09:00",
+  "review_status": "auto_unreviewed"
+}

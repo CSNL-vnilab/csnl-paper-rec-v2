@@ -1,0 +1,62 @@
+{
+  "frameworks": [
+    {
+      "name": "population coding",
+      "role": "primary_lens",
+      "one_line": "covariance structure of neural populations shapes encoded stimulus information"
+    },
+    {
+      "name": "noisy nonlinear circuit propagation",
+      "role": "extended",
+      "one_line": "information transmission across spike-generating nonlinearity and downstream noise"
+    },
+    {
+      "name": "differential correlations",
+      "role": "compared_against",
+      "one_line": "correlations known to reduce encoded information yet can aid propagation"
+    },
+    {
+      "name": "redundancy vs synergy in codes",
+      "role": "alternative_lens",
+      "one_line": "redundant and synergistic codes evaluated for robustness against noise corruption"
+    }
+  ],
+  "core_question": "What upstream covariance structures optimize information propagation through noisy nonlinear downstream circuits?",
+  "key_assumptions": [
+    "downstream stage adds spike-generating nonlinearity and noise corruption",
+    "informativeness and propagation are distinct features of population codes",
+    "covariance structure of upstream cells governs both encoding and propagation"
+  ],
+  "manipulations": [
+    "covariance structures of upstream population responses",
+    "presence vs absence of differential correlations",
+    "redundant vs synergistic population code configurations"
+  ],
+  "key_findings": [
+    "identified a family of covariances that optimize information propagation",
+    "this optimal family includes differential correlations that reduce encoded information",
+    "redundant codes can be fragile and synergistic codes can optimize robustness"
+  ],
+  "interpretations": [
+    "codes maximizing encoded information differ from codes maximizing propagation",
+    "redundancy is neither necessary nor sufficient for robust population codes"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "population coding",
+    "noise correlations",
+    "differential correlations",
+    "information propagation",
+    "spike-generating nonlinearity",
+    "redundancy and synergy",
+    "retina to LGN",
+    "noisy neural circuits"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "2d090560b2dcbfdfc458d11924a17595",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

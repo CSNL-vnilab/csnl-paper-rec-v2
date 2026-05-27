@@ -1,0 +1,55 @@
+{
+  "frameworks": [
+    {
+      "name": "games as experimental paradigm",
+      "role": "primary_lens",
+      "one_line": "Games used as ecologically rich platforms to probe cognition."
+    },
+    {
+      "name": "inductive bias",
+      "role": "context",
+      "one_line": "Intuitiveness of games reveals biases supporting behavior in complex settings."
+    },
+    {
+      "name": "intrinsic motivation",
+      "role": "context",
+      "one_line": "Fun and play motivate study of new cognitive questions."
+    }
+  ],
+  "core_question": "How can games serve as an experimental platform to study the mind beyond traditional lab paradigms?",
+  "key_assumptions": [
+    "Games are intuitive and tap natural inductive biases",
+    "Fun broadens participation and data scale",
+    "Games approximate ecological complexity better than lab tasks"
+  ],
+  "manipulations": [],
+  "key_findings": [
+    "Games offer a vantage point on inductive biases supporting ecological behavior",
+    "Games enable study of play and intrinsic motivation",
+    "Games attract larger and more diverse participant pools"
+  ],
+  "interpretations": [
+    "Games can elevate ecological validity, scale, and robustness of cognition research",
+    "Wider adoption of games as paradigms is recommended"
+  ],
+  "limitations_noted": [
+    "Drawbacks of games relative to standard lab experiments are acknowledged"
+  ],
+  "connecting_signals": [
+    "games as experimental paradigm",
+    "ecological validity",
+    "inductive biases",
+    "intrinsic motivation",
+    "play",
+    "large-scale data collection",
+    "naturalistic cognition",
+    "video games"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "e369c1b4480e1e490d8ca228908135a6",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:04:47+09:00",
+  "review_status": "auto_unreviewed"
+}

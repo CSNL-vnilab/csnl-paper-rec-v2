@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "disentangled representation learning",
+      "role": "primary_lens",
+      "one_line": "neural network separates shared vs private latent variables across paired views"
+    },
+    {
+      "name": "multi-view latent variable models",
+      "role": "extended",
+      "one_line": "extends shared-variance methods to nonlinear, geometry-preserving private/shared decomposition"
+    },
+    {
+      "name": "manifold geometry preservation",
+      "role": "primary_lens",
+      "one_line": "latent representations retain geometric structure of underlying view manifolds"
+    }
+  ],
+  "core_question": "How can we infer disentangled, interpretable shared and private latent variables from paired high-dimensional multi-view data while preserving geometry?",
+  "key_assumptions": [
+    "paired samples across views share some latent sources and have private ones",
+    "geometric structure of latents carries interpretive value",
+    "nonlinear mappings are needed to capture cross-view relationships"
+  ],
+  "manipulations": [
+    "compared SPLICE against existing multi-view methods",
+    "varied a priori estimates of latent dimensionality",
+    "tested on data with mixed shared and private structure"
+  ],
+  "key_findings": [
+    "SPLICE disentangles shared and private representations more effectively than baselines",
+    "yields more interpretable representations by preserving geometry",
+    "more robust to incorrect a priori latent dimensionality estimates"
+  ],
+  "interpretations": [
+    "SPLICE is a general-purpose tool for succinct, interpretable descriptions of paired datasets",
+    "characterizing shared vs private structure in multi-view recordings reveals system-level insights"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "multi-view data",
+    "shared and private latent variables",
+    "disentangled representations",
+    "multi-region neural recordings",
+    "manifold geometry",
+    "paired high-dimensional views",
+    "unsupervised representation learning",
+    "nonlinear latent variable models"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "740a61624a29481f4a8438df535cface",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:04:47+09:00",
+  "review_status": "auto_unreviewed"
+}

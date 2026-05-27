@@ -1,0 +1,52 @@
+{
+  "frameworks": [
+    {
+      "name": "predictive coding",
+      "role": "primary_lens",
+      "one_line": "hierarchical inhibition of predictable input via prediction and error units"
+    },
+    {
+      "name": "energy-efficient recurrent neural networks",
+      "role": "extended",
+      "one_line": "RNN trained to minimise energy in predictive environments"
+    }
+  ],
+  "core_question": "Does predictive coding architecture need to be hard-wired, or can it emerge from an energy-efficiency objective?",
+  "key_assumptions": [
+    "neural energy consumption is a meaningful training objective",
+    "sensory environment is predictable on multiple timescales",
+    "recurrent connectivity is sufficient to support prediction and error signalling"
+  ],
+  "manipulations": [
+    "training objective: minimise energy consumption in predictive environments",
+    "virtual lesioning of network components",
+    "varied prediction timescale (fast lateral vs slower integrative)"
+  ],
+  "key_findings": [
+    "networks self-organise into prediction and error units with appropriate excitatory/inhibitory connectivity",
+    "trained networks inhibit predictable sensory input",
+    "predictions operate on two timescales: fast lateral and slower integrative"
+  ],
+  "interpretations": [
+    "predictive coding can emerge as a consequence of energy efficiency rather than architectural hard-wiring",
+    "top-down signals are not the sole source of prediction; lateral sensory prediction also contributes"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "predictive coding",
+    "energy efficiency",
+    "recurrent neural network",
+    "prediction units",
+    "error units",
+    "excitatory-inhibitory balance",
+    "virtual lesioning",
+    "self-organisation"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "5aa45ba6ba8b2827f0733f555b4e03d6",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:04:47+09:00",
+  "review_status": "auto_unreviewed"
+}

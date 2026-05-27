@@ -1,0 +1,59 @@
+{
+  "frameworks": [
+    {
+      "name": "non-invasive brain stimulation",
+      "role": "primary_lens",
+      "one_line": "comparing excitatory NIBS protocols for modulating motor cortex excitability"
+    },
+    {
+      "name": "cortical excitability modulation",
+      "role": "context",
+      "one_line": "framework that NIBS protocols up-regulate corticospinal and intracortical excitability"
+    },
+    {
+      "name": "responder analysis",
+      "role": "alternative_lens",
+      "one_line": "individual-difference framing of stimulation efficacy as response classification"
+    }
+  ],
+  "core_question": "Do PAS, anodal tDCS, and 20-Hz tACS differ in their excitatory aftereffects on human primary motor cortex compared with Sham?",
+  "key_assumptions": [
+    "TMS-evoked responses index corticospinal and intracortical excitability",
+    "each protocol nominally increases excitability",
+    "Sham provides a valid baseline for response classification"
+  ],
+  "manipulations": [
+    "stimulation protocol (PAS, anodal tDCS, 20-Hz tACS, Sham)",
+    "within-subject repeated measures across protocols",
+    "20-minute stimulation duration"
+  ],
+  "key_findings": [
+    "none of the three protocols significantly modulated corticospinal or intracortical excitability versus Sham",
+    "Sham-corrected responder rates were 41% (PAS), 39% (tDCS), 39% (tACS)",
+    "aftereffects were highly heterogeneous and variable across individuals"
+  ],
+  "interpretations": [
+    "high inter-individual variability may explain weak group-level effects of excitatory NIBS",
+    "responder/non-responder heterogeneity challenges uniform efficacy of these protocols"
+  ],
+  "limitations_noted": [
+    "highly heterogeneous and variable individual aftereffects"
+  ],
+  "connecting_signals": [
+    "paired associative stimulation",
+    "transcranial direct current stimulation",
+    "transcranial alternating current stimulation",
+    "transcranial magnetic stimulation",
+    "corticospinal excitability",
+    "intracortical excitability",
+    "responder analysis",
+    "primary motor cortex"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "0ea8f2bf27da554f008c09f028c13773",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}
