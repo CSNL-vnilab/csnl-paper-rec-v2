@@ -1,0 +1,64 @@
+{
+  "frameworks": [
+    {
+      "name": "linear gated network",
+      "role": "primary_lens",
+      "one_line": "jointly optimized weights and gates with neuron-like fast bounded nonnegative gates"
+    },
+    {
+      "name": "gradient descent learning dynamics",
+      "role": "primary_lens",
+      "one_line": "analytic reduction of joint weight-gate optimization to an effective eigenspace"
+    },
+    {
+      "name": "modular task abstraction",
+      "role": "extended",
+      "one_line": "weights self-organize into task/sub-task modules switched by gating representations"
+    },
+    {
+      "name": "cognitive flexibility / task switching",
+      "role": "context",
+      "one_line": "neuroscience phenomenon of selecting appropriate task abstractions modeled mechanistically"
+    }
+  ],
+  "core_question": "How can flexible task abstractions emerge in neural systems via joint optimization of weights and biologically constrained gates?",
+  "key_assumptions": [
+    "gates operate on a faster timescale than weights",
+    "gate activity is nonnegative and bounded",
+    "weights and gates are jointly optimized by gradient descent",
+    "learning dynamics admit an effective low-dimensional eigenspace"
+  ],
+  "manipulations": [
+    "imposing fast, nonnegative, bounded constraints on gates",
+    "varying curriculum block size and amount of task training",
+    "extending from linear to nonlinear network across two tasks"
+  ],
+  "key_findings": [
+    "weights self-organize into modules specialized for tasks or sub-tasks",
+    "gates form unique representations that switch the appropriate weight modules",
+    "task switching in the gating layer accelerates with curriculum block size and training",
+    "discovered abstractions support generalization via task and subtask composition"
+  ],
+  "interpretations": [
+    "a virtuous cycle: fast gates protect prior knowledge driving weight specialization, which in turn speeds gate updates",
+    "emergence of modular task abstractions mirrors key cognitive-neuroscience findings on task switching"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "task abstraction",
+    "cognitive flexibility",
+    "gated linear network",
+    "modular weight specialization",
+    "task switching dynamics",
+    "curriculum block size",
+    "compositional generalization",
+    "fast bounded gates"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "771d26f5d57c99cad46520705f685e38",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

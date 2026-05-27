@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "complex networks (visibility graph)",
+      "role": "primary_lens",
+      "one_line": "EEG time series mapped to graphs whose topology indexes emotional state"
+    },
+    {
+      "name": "network entropy measures",
+      "role": "extended",
+      "one_line": "nodal degree entropy and clustering coefficient entropy as discriminative features"
+    },
+    {
+      "name": "support vector machine classification",
+      "role": "compared_against",
+      "one_line": "supervised classifier consuming the network-entropy features"
+    }
+  ],
+  "core_question": "Can visibility-graph-derived network entropy of EEG support subject-independent emotion recognition?",
+  "key_assumptions": [
+    "EEG signals carry spatial-topological and temporal structure that maps to emotion",
+    "visibility graphs preserve emotion-relevant dynamics of the EEG time series",
+    "channel relevance can be ranked by AUC for feature selection"
+  ],
+  "manipulations": [
+    "two- vs three-class emotion labelling (positive/negative vs positive/negative/neutral)",
+    "channel subset selection (62 channels reduced to AUC-significant 18)",
+    "type of network-entropy feature (nodal degree entropy vs clustering coefficient entropy)"
+  ],
+  "key_findings": [
+    "AUC selected 18 of 62 channels as significant for emotion discrimination",
+    "average across-subject accuracy of 87.26% for positive vs negative",
+    "average across-subject accuracy of 68.44% for positive vs negative vs neutral",
+    "mean accuracy improved by about 2.28% over prior methods"
+  ],
+  "interpretations": [
+    "fused network entropy on visibility graphs captures emotion-relevant EEG structure usable across subjects",
+    "complex-network features can mitigate individual differences in physiological responses"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "EEG emotion recognition",
+    "visibility graph",
+    "complex networks",
+    "nodal degree entropy",
+    "clustering coefficient entropy",
+    "cross-subject classification",
+    "AUC feature selection",
+    "SVM classifier"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "38f4eb438d349a5746f48c13db75a50a",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:08:01+09:00",
+  "review_status": "auto_unreviewed"
+}

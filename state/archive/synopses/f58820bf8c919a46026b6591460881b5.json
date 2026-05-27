@@ -1,0 +1,55 @@
+{
+  "frameworks": [
+    {
+      "name": "social group structure learning",
+      "role": "primary_lens",
+      "one_line": "Observers infer group structure and update stereotypes from agent observations."
+    },
+    {
+      "name": "stereotype precision / confidence",
+      "role": "extended",
+      "one_line": "New measure indexes group belief precision via perceived agent similarity."
+    }
+  ],
+  "core_question": "How do observers discover social group structure and update group stereotypes when encountering deviating agents?",
+  "key_assumptions": [
+    "stereotypes can be characterized by group-level precision and confidence",
+    "deviating agents within a group are informative about stereotype precision",
+    "perceived similarity among nondeviating agents indexes group-stereotype precision"
+  ],
+  "manipulations": [
+    "presence of deviating agents within a group",
+    "confidence vs similarity measure of group stereotype",
+    "experiment variants testing the two predictions"
+  ],
+  "key_findings": [
+    "deviating agents reduced stereotype confidence in two confidence-measure experiments",
+    "perceived similarity among nondeviating agents yielded support in a majority of experiments",
+    "the first prediction about confidence was not generally supported"
+  ],
+  "interpretations": [
+    "perceived inter-agent similarity is a better index of group-stereotype precision than confidence",
+    "deviating agents systematically reduce inferred group-stereotype precision"
+  ],
+  "limitations_noted": [
+    "support for the confidence prediction limited to two experiments",
+    "similarity-based precision index emerged from exploratory analysis"
+  ],
+  "connecting_signals": [
+    "social group discovery",
+    "stereotype updating",
+    "deviating agents",
+    "group-level beliefs",
+    "stereotype precision",
+    "perceived similarity",
+    "confidence in beliefs",
+    "social category learning"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "f58820bf8c919a46026b6591460881b5",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:08:01+09:00",
+  "review_status": "auto_unreviewed"
+}

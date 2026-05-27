@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "machine-learning classification pipeline",
+      "role": "primary_lens",
+      "one_line": "feature extraction plus selection plus classifier applied to EEG for emotion labels"
+    },
+    {
+      "name": "empirical mode decomposition / intrinsic mode functions",
+      "role": "extended",
+      "one_line": "EMD/IMF used as the signal-decomposition stage for EEG feature extraction"
+    },
+    {
+      "name": "variational mode decomposition",
+      "role": "extended",
+      "one_line": "VMD used alongside EMD/IMF to decompose non-stationary EEG into modes"
+    },
+    {
+      "name": "EEG-based affective computing",
+      "role": "context",
+      "one_line": "brain-signal-driven recognition of discrete emotional states"
+    }
+  ],
+  "core_question": "Can an automated EEG-based pipeline using EMD/IMF and VMD effectively recognize human emotional states?",
+  "key_assumptions": [
+    "brain signals carry separable information about emotional states",
+    "non-stationary EEG benefits from mode-decomposition before feature extraction",
+    "classifier performance depends on feature-extraction and feature-selection stages"
+  ],
+  "manipulations": [
+    "choice of signal-decomposition method (EMD/IMF vs VMD)",
+    "combination of feature extraction with feature selection and classification stages"
+  ],
+  "key_findings": [
+    "brain signals can be used to classify multiple emotional states",
+    "EEG signal instability makes emotion recognition difficult",
+    "pipeline combining EMD/IMF and VMD is proposed for EEG handling and feature extraction"
+  ],
+  "interpretations": [
+    "emotion recognition performance hinges on the efficiency of feature extraction, selection, and classification",
+    "combining EMD/IMF with VMD offers an effective EEG processing approach distinct from prior work"
+  ],
+  "limitations_noted": [
+    "brain signals are not stable, complicating recognition"
+  ],
+  "connecting_signals": [
+    "EEG emotion recognition",
+    "empirical mode decomposition",
+    "intrinsic mode functions",
+    "variational mode decomposition",
+    "feature extraction EEG",
+    "feature selection",
+    "affective computing",
+    "machine learning classification"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "2f91bc674feda49f085565631e3785e6",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

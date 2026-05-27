@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "decoded fMRI neurofeedback",
+      "role": "primary_lens",
+      "one_line": "real-time multivoxel decoding used to drive self-regulation of pain-related brain patterns"
+    },
+    {
+      "name": "multivariate brain decoders (SIIPS, NPS)",
+      "role": "extended",
+      "one_line": "pre-trained pain signatures repurposed as targets in closed-loop neurofeedback"
+    },
+    {
+      "name": "causal brain-behavior mapping",
+      "role": "context",
+      "one_line": "testing whether modulating decoded patterns causally alters subjective pain"
+    }
+  ],
+  "core_question": "Can decoded fMRI neurofeedback targeting pain-related multivoxel patterns causally modulate subjective pain perception?",
+  "key_assumptions": [
+    "SIIPS and NPS capture dissociable components of pain processing",
+    "decoded pattern expression can be modulated via voluntary self-regulation",
+    "real-time MNI-space decoding is accurate enough for closed-loop training"
+  ],
+  "manipulations": [
+    "direction of neurofeedback regulation (up- vs down-regulation of SIIPS)",
+    "double-blinded neurofeedback training across participants",
+    "decoded signature targeted (SIIPS independent of NPS)"
+  ],
+  "key_findings": [
+    "subjective pain ratings predicted accurately in real time using SIIPS and NPS",
+    "participants learned to down-regulate SIIPS expression independently of NPS",
+    "neurofeedback success was associated with reduced perceived pain intensity post-intervention"
+  ],
+  "interpretations": [
+    "SIIPS modulation has a causal contribution to subjective pain experience",
+    "decoded fMRI neurofeedback is a viable causal probe and potential pain intervention"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "decoded fMRI neurofeedback",
+    "real-time fMRI decoding",
+    "multivoxel pattern analysis",
+    "stimulus intensity independent pain signature",
+    "neurologic pain signature",
+    "subjective pain perception",
+    "closed-loop brain-computer interface",
+    "causal brain-behavior link"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "e56efd0d43868912417867bfb156fd13",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:08:01+09:00",
+  "review_status": "auto_unreviewed"
+}
