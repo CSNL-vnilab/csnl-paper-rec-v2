@@ -1,0 +1,45 @@
+{
+  "canonical_id": "21f85fb57c09c9552a4e96d2134b1bd2",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [
+    {"name": "holistic Bayesian matching", "role": "primary_lens", "one_line": "multi-level objectives across a representational hierarchy explain choice-induced estimation biases"},
+    {"name": "self-consistent / confirmation bias", "role": "context", "one_line": "prior categorical choice biases subsequent perceptual estimate"},
+    {"name": "category-level stimulus representation", "role": "extended", "one_line": "reference induces implicit category representation even without an explicit choice"}
+  ],
+  "core_question": "Do retrospective versus prospective categorical choices induce different biases on subsequent perceptual estimates of the same stimulus?",
+  "key_assumptions": [
+    "categorical choices can bias subsequent continuous estimates",
+    "identical stimulus replay isolates choice-induced bias from sampling noise",
+    "the reference itself can induce a category-level representation"
+  ],
+  "manipulations": [
+    "timing of the categorical decision: after 4 samples (prospective) vs after 8 samples (retrospective)",
+    "repeated presentation of identical 8-sample sequences",
+    "generative mean angular position relative to reference"
+  ],
+  "key_findings": [
+    "robust estimation biases away from the reference in both conditions",
+    "nearly identical estimate distributions across prospective and retrospective conditions",
+    "correlation between categorical choice and subsequent estimate was strongly reduced in the prospective condition"
+  ],
+  "interpretations": [
+    "the mere presence of a reference induces an implicit category-level representation that biases estimates even without an explicit prior choice",
+    "a holistic Bayesian model with multi-level objectives across the representational hierarchy accounts for the observed pattern"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "choice-induced bias",
+    "confirmation bias",
+    "category-level representation",
+    "perceptual decision-making",
+    "reference repulsion",
+    "prospective vs retrospective judgment",
+    "holistic Bayesian model",
+    "angular position estimation"
+  ],
+  "out_of_scope_note": null,
+  "generator": "opus-4-7@2026-05-27",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-27T00:00:00Z",
+  "abstract_coverage": 1.0
+}

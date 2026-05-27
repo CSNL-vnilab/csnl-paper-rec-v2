@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "evidence accumulation across trials",
+      "role": "primary_lens",
+      "one_line": "internal decision signals carry over between trials to bias subsequent choices"
+    },
+    {
+      "name": "confidence-weighted choice history bias",
+      "role": "extended",
+      "one_line": "past-choice influence is scaled by trial-wise confidence proxies"
+    },
+    {
+      "name": "signal-detection / perceptual decision-making",
+      "role": "context",
+      "one_line": "near-threshold motion discrimination as the behavioural substrate"
+    }
+  ],
+  "core_question": "Do choice history biases arise from confidence-weighted accumulation of internal decision signals, and are they tuned to the environment?",
+  "key_assumptions": [
+    "internal decision signals can persist across trials in action-independent form",
+    "reaction time and accuracy index trial-wise decision confidence",
+    "observers can adapt history biases without explicit feedback"
+  ],
+  "manipulations": [
+    "decoupling perceptual choice from motor response trial-by-trial",
+    "stimulus-environment autocorrelation level (repeat vs alternate structure)",
+    "removal of external feedback about correctness"
+  ],
+  "key_findings": [
+    "history bias is explained by previous perceptual choice, not previous motor response",
+    "observers adjusted both strength and sign of history bias to environment autocorrelation",
+    "history-bias adjustment scaled with confidence proxies (accuracy and reaction time)"
+  ],
+  "interpretations": [
+    "choice history biases reflect adaptive, confidence-weighted accumulation of internal decision signals",
+    "the mechanism operates on action-independent decision representations rather than motor traces"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "choice history bias",
+    "confidence-weighted accumulation",
+    "serial dependence in perceptual decisions",
+    "action-independent decision signals",
+    "environment autocorrelation adaptation",
+    "motion discrimination near threshold",
+    "reaction time as confidence proxy",
+    "feedback-free perceptual learning"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "83b4248818a0537bad23726f07a29bd2",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:06:31+09:00",
+  "review_status": "auto_unreviewed"
+}

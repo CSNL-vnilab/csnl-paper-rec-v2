@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "interaction model (similarity-dependent distracter modulation)",
+      "role": "primary_lens",
+      "one_line": "distracter influence on choice depends on target-distracter similarity"
+    },
+    {
+      "name": "independent influence model",
+      "role": "compared_against",
+      "one_line": "target and distracter contribute independently to the decision"
+    },
+    {
+      "name": "divisive normalization",
+      "role": "extended",
+      "one_line": "target features normalized by expectation and variability of local context"
+    },
+    {
+      "name": "psychophysical reverse correlation",
+      "role": "context",
+      "one_line": "method-level lens used to characterize how features drive choice"
+    }
+  ],
+  "core_question": "How do irrelevant distracters modulate fine perceptual decisions about a target?",
+  "key_assumptions": [
+    "decisions reflect a weighted combination of target and distracter features",
+    "distracter effects can operate at sensory or decision stages",
+    "fine orientation judgment indexes sensitivity to target tilt"
+  ],
+  "manipulations": [
+    "consistency between target and distracter orientation",
+    "frame of reference (sensory signal vs decision value)",
+    "spatial attention allocation"
+  ],
+  "key_findings": [
+    "decisions were more sensitive when target and distracter were consistent than inconsistent",
+    "the consistency bias acted on decision values, not on sensory signals",
+    "the effect was independent of spatial attention",
+    "a normalization model using local-context expectation and variability fit the data"
+  ],
+  "interpretations": [
+    "distracters modulate choice in a similarity-dependent (interaction) manner rather than independently",
+    "context-based normalization at the decision stage explains distracter effects"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "distracter interference",
+    "fine orientation judgment",
+    "psychophysical reverse correlation",
+    "consistency bias",
+    "decision values vs sensory signals",
+    "divisive normalization",
+    "local context normalization",
+    "spatial attention independence"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "30bc7faab3e5cf7ad8ba54c6d799f4fc",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:06:31+09:00",
+  "review_status": "auto_unreviewed"
+}

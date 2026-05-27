@@ -1,0 +1,51 @@
+{
+  "canonical_id": "4506ba08cb780627d87a393fdbd8c62e",
+  "frameworks": [
+    {
+      "name": "Bayesian belief updating",
+      "role": "primary_lens",
+      "one_line": "unified probabilistic account of how past decisions reshape beliefs about decision variables"
+    },
+    {
+      "name": "decisional history effects",
+      "role": "extended",
+      "one_line": "classical attractive serial dependence extended by a granularity-dependent pull"
+    }
+  ],
+  "core_question": "How does committing to a decision update an observer's belief about the underlying decision variable, and does choice granularity modulate this update?",
+  "key_assumptions": [
+    "humans form latent decision variables during perceptual decisions",
+    "commitment to a choice restricts the range of admissible beliefs about that variable",
+    "belief updating follows probabilistic (Bayesian) inference"
+  ],
+  "manipulations": [
+    "granularity of the choice set (coarser vs finer response categories)",
+    "psychophysical task structure across seven experiments"
+  ],
+  "key_findings": [
+    "past decisions attract subsequent decisions",
+    "the attractive pull is stronger when prior choices were made with finer granularity (granularity effect)",
+    "a single Bayesian model jointly captures granularity effect and known history effects"
+  ],
+  "interpretations": [
+    "decision commitment acts as an inference step that constrains the belief on the decision variable",
+    "humans exploit probabilistic inference on decision variables to adapt to the task environment"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "granularity effect",
+    "decision variable",
+    "belief updating",
+    "serial dependence",
+    "choice-induced attraction",
+    "decisional history effects",
+    "Bayesian inference in perceptual decisions",
+    "commitment to a decision"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:04:21+09:00",
+  "review_status": "auto_unreviewed"
+}

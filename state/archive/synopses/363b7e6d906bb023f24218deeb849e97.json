@@ -1,0 +1,56 @@
+{
+  "frameworks": [
+    {
+      "name": "individualized electric field modeling",
+      "role": "primary_lens",
+      "one_line": "anatomically realistic head models simulate per-subject tDCS field distribution and focality"
+    },
+    {
+      "name": "multiple linear regression prediction",
+      "role": "primary_lens",
+      "one_line": "combines pre-tDCS behavior and field focality to predict post-tDCS outcome"
+    },
+    {
+      "name": "visual crowding",
+      "role": "context",
+      "one_line": "peripheral orientation discrimination is impaired by flanking distractors"
+    }
+  ],
+  "core_question": "Can individualized electric field modeling combined with pre-tDCS behavioral performance predict variability in tDCS effects on visual crowding?",
+  "key_assumptions": [
+    "tDCS-induced electric field over visual cortex modulates orientation discrimination",
+    "individual anatomy meaningfully shapes delivered field focality",
+    "pre-tDCS performance carries information about post-tDCS response"
+  ],
+  "manipulations": [
+    "stimulation montage (bipolar tDCS vs 4×1 HD-tDCS vs sham)",
+    "target context (isolated vs crowded peripheral target)",
+    "pre- vs post-stimulation orientation discrimination threshold"
+  ],
+  "key_findings": [
+    "HD-tDCS, but not bipolar tDCS, significantly alleviated visual crowding",
+    "tDCS effect variability was reliably predicted by pre-tDCS performance and field focality"
+  ],
+  "interpretations": [
+    "integrating individualized field modeling with baseline behavior accounts for inter-subject tDCS variability",
+    "focal HD-tDCS over visual cortex is more effective than bipolar montage for crowding alleviation"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "transcranial direct current stimulation",
+    "HD-tDCS",
+    "visual crowding",
+    "orientation discrimination",
+    "peripheral vision",
+    "individualized head modeling",
+    "electric field focality",
+    "inter-subject variability prediction"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "363b7e6d906bb023f24218deeb849e97",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:04:21+09:00",
+  "review_status": "auto_unreviewed"
+}

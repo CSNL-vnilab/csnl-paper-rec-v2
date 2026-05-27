@@ -1,0 +1,46 @@
+{
+  "canonical_id": "fb6796d72e47ff3a46162350468a28d0",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [
+    {"name": "evidence accumulation", "role": "primary_lens", "one_line": "perceptual choice as accumulation of sensory evidence over time"},
+    {"name": "history-dependent decision bias", "role": "primary_lens", "one_line": "prior choices/stimuli shape current decision formation"},
+    {"name": "adaptive prior expectations", "role": "extended", "one_line": "biases flexibly tuned to environmental correlation structure"}
+  ],
+  "core_question": "How does the correlation structure of the sensory environment shape history biases acting on neural decision formation?",
+  "key_assumptions": [
+    "perceptual choices accumulate noisy evidence over time",
+    "history biases can be inferred via trial-by-trial behavioral modeling",
+    "action-selective motor cortical activity indexes decision formation",
+    "biases reflect prior expectations rather than baseline activity shifts"
+  ],
+  "manipulations": [
+    "correlation structure of the stimulus sequence across blocks",
+    "trial-by-trial variation in preceding stimuli, choices, and outcomes"
+  ],
+  "key_findings": [
+    "history bias was flexibly adapted to environmental correlation structure",
+    "bias acted selectively on the build-up of action-selective motor cortical activity",
+    "bias did not modulate baseline level of motor cortical activity",
+    "history-bias effect added to the impact of the current stimulus"
+  ],
+  "interpretations": [
+    "motor-cortical action plans are shaped by dynamic, environment-tuned prior expectations",
+    "adaptive interaction with the environment biases evidence accumulation rather than starting point"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "history bias",
+    "perceptual decision-making",
+    "evidence accumulation",
+    "action-selective motor cortex",
+    "MEG decision signal",
+    "adaptive prior",
+    "serial dependence",
+    "build-up activity"
+  ],
+  "out_of_scope_note": null,
+  "generator": "opus-4-7@2026-05-27",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-27T00:00:00Z",
+  "abstract_coverage": 1.0
+}

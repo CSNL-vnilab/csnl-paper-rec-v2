@@ -1,0 +1,45 @@
+{
+  "canonical_id": "96edb7e638962a359f430a56811dc5d6",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [
+    {"name": "neural population coding", "role": "primary_lens", "one_line": "memory precision modeled as decoded readout of tuned neural populations"},
+    {"name": "shared-resource model of VWM", "role": "primary_lens", "one_line": "memory precision declines continuously as encoded items share limited capacity"},
+    {"name": "population coding for bounded non-circular variables", "role": "extended", "one_line": "circular population code adapted to facial-expression parameter space"}
+  ],
+  "core_question": "Do shared resource limits and population-coding accounts of visual working memory extend from primary features to high-level objects such as facial expressions?",
+  "key_assumptions": [
+    "facial expression can be reproduced on a continuous bounded scale",
+    "population-coding principles generalize across visual hierarchy levels",
+    "precision declines smoothly with set size when items share resources"
+  ],
+  "manipulations": [
+    "memory set size from one to five items",
+    "stimulus type: oriented gratings vs facial expressions vs mixed arrays"
+  ],
+  "key_findings": [
+    "expression-recall precision declined steadily with increasing face load",
+    "an adapted population-coding model fit the non-circular expression error distributions well",
+    "increasing the number of faces reduced precision of orientation recall",
+    "increasing the number of gratings did not impair recall of expressions"
+  ],
+  "interpretations": [
+    "population-coding principles apply to memory representations at multiple levels of the visual hierarchy",
+    "encoding faces automatically engages low-level features, producing an asymmetric cross-feature interference"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "visual working memory",
+    "population coding",
+    "facial expression memory",
+    "set-size effect",
+    "shared resource model",
+    "orientation recall",
+    "cross-feature interference",
+    "bounded parameter space"
+  ],
+  "out_of_scope_note": null,
+  "generator": "opus-4-7@2026-05-27",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-27T00:00:00Z",
+  "abstract_coverage": 1.0
+}

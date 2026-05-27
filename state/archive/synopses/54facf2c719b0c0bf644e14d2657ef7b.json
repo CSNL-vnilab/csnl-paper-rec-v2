@@ -1,0 +1,44 @@
+{
+  "canonical_id": "54facf2c719b0c0bf644e14d2657ef7b",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [
+    {"name": "serial dependence", "role": "primary_lens", "one_line": "recent stimuli bias subsequent perceptual decisions in feature space"},
+    {"name": "feature-based attention", "role": "primary_lens", "one_line": "attentional role of targets vs distractors shapes direction of perceptual bias"}
+  ],
+  "core_question": "Do visual search targets and distractors induce opposing serial dependencies on the perceived orientation of a neutral subsequent test line?",
+  "key_assumptions": [
+    "perception at any moment is shaped by recent temporal context",
+    "to-be-ignored items can bias subsequent perceptual decisions in parallel with attended items",
+    "biases depend on proximity in feature space between prior and current stimuli"
+  ],
+  "manipulations": [
+    "attentional role of prior item (target vs distractor in visual search)",
+    "feature-space distance between prior items and the neutral test line orientation"
+  ],
+  "key_findings": [
+    "targets induced a positive (attractive) bias on a neutral test line when orientations were similar",
+    "distractors produced an attractive bias on similar test lines",
+    "distractors produced a repulsive bias when test orientation was far from the average distractor orientation in feature space",
+    "biases on a task-irrelevant neutral probe generalize beyond search-target judgments"
+  ],
+  "interpretations": [
+    "both attentional role and feature-space proximity jointly determine the direction of serial biases",
+    "search targets and distractors leave opposing perceptual traces that act in parallel"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "serial dependence",
+    "visual search",
+    "targets and distractors",
+    "attractive bias",
+    "repulsive bias",
+    "orientation perception",
+    "feature-space distance",
+    "perceptual decisions"
+  ],
+  "out_of_scope_note": null,
+  "generator": "opus-4-7@2026-05-27",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-27T00:00:00Z",
+  "abstract_coverage": 1.0
+}

@@ -1,0 +1,55 @@
+{
+  "canonical_id": "36121e6b496bf42a26a6fed2f8d3f377",
+  "frameworks": [
+    {
+      "name": "feature-specific vs feature-general interference in visual working memory",
+      "role": "primary_lens",
+      "one_line": "Tests whether inter-item competition in WM depends on shared feature type."
+    },
+    {
+      "name": "higher-order convergent WM storage models",
+      "role": "extended",
+      "one_line": "Supports models where capacity limits arise post-sensorily from convergent inputs."
+    },
+    {
+      "name": "sensory vs post-sensory locus of WM capacity",
+      "role": "compared_against",
+      "one_line": "Contrasts feature-specific sensory interference with feature-general storage interference."
+    }
+  ],
+  "core_question": "Does inter-item competition in visual working memory depend on the similarity of remembered features, and does this differ between encoding and maintenance?",
+  "key_assumptions": [
+    "WM capacity is limited by inter-item competition",
+    "Retro-cueing isolates maintenance from encoding",
+    "Precision indexes the strength of competition"
+  ],
+  "manipulations": [
+    "Homogeneous vs heterogeneous feature displays (e.g., colorful circles vs circles + oriented bars)",
+    "Retro-cue timing to dissociate encoding from online maintenance"
+  ],
+  "key_findings": [
+    "Heterogeneous displays yielded better WM precision than homogeneous ones",
+    "Retro-cueing revealed inter-item competition during storage was not feature-specific"
+  ],
+  "interpretations": [
+    "A feature-specific interference component operates during encoding",
+    "During maintenance, interference is feature-general, consistent with convergent higher-order storage"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "visual working memory",
+    "inter-item competition",
+    "feature-specific interference",
+    "feature-general interference",
+    "retro-cueing",
+    "encoding vs maintenance",
+    "WM capacity limits",
+    "convergent higher-order representations"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:06:31+09:00",
+  "review_status": "auto_unreviewed"
+}

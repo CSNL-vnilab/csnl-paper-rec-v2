@@ -1,0 +1,50 @@
+{
+  "frameworks": [
+    {
+      "name": "Bayesian perceptual inference",
+      "role": "primary_lens",
+      "one_line": "Biases arise when noisy sensory measurements combine with a prior over stimuli."
+    },
+    {
+      "name": "central tendency bias",
+      "role": "extended",
+      "one_line": "Delayed estimates pull toward the set mean; extended from magnitude to color."
+    }
+  ],
+  "core_question": "How do stimulus range and internal/external noise shape the central tendency bias in delayed color estimation?",
+  "key_assumptions": [
+    "Observers combine a learned prior over the stimulus set with a noisy sensory likelihood",
+    "Increasing delay raises internal memory noise; adding chromatic noise raises external sensory noise"
+  ],
+  "manipulations": [
+    "Hue range of the stimulus set (different prior distributions)",
+    "Delay between reference and test (0.4 s vs 4 s)",
+    "Chromatic noise added to the reference stimulus"
+  ],
+  "key_findings": [
+    "Hue estimates were biased toward the mean of the current stimulus set",
+    "Bias magnitude grew with longer delay (more internal noise)",
+    "Bias magnitude grew with added chromatic noise (more external noise)"
+  ],
+  "interpretations": [
+    "Color estimation behaves like Bayesian inference combining a set-mean prior with a noise-scaled likelihood"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "central tendency bias",
+    "delayed color estimation",
+    "hue bias",
+    "Bayesian perceptual inference",
+    "internal vs external noise",
+    "prior over stimulus range",
+    "memory delay",
+    "chromatic noise"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "c4b1f40857b8085c01b1a9ef6bd28951",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:10:44+09:00",
+  "review_status": "auto_unreviewed"
+}

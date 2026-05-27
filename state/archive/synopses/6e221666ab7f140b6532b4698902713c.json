@@ -1,0 +1,55 @@
+{
+  "frameworks": [
+    {
+      "name": "resource-rational sequential evidence accumulation",
+      "role": "primary_lens",
+      "one_line": "normative trade-off between estimation accuracy and encoding/memory cost"
+    },
+    {
+      "name": "bump attractor network",
+      "role": "compared_against",
+      "one_line": "neural integration account that fails to capture break dynamics"
+    },
+    {
+      "name": "temporal integration of sensory evidence",
+      "role": "context",
+      "one_line": "perceptual decisions integrate samples over time"
+    }
+  ],
+  "core_question": "How does a temporal break in a sample sequence reshape the weighting of post-break evidence in perceptual estimation?",
+  "key_assumptions": [
+    "samples are drawn from a Gaussian generative mean with fixed variance",
+    "observer actively manages a trade-off between accuracy and encoding/memory effort"
+  ],
+  "manipulations": [
+    "presence and duration of a mid-sequence break",
+    "position of the break (after 2nd, 4th, or 6th sample)"
+  ],
+  "key_findings": [
+    "weight on first post-break sample increases monotonically with break duration",
+    "effect varies continuously with break duration rather than thresholded",
+    "normative resource-rational model fits data across break and no-break conditions"
+  ],
+  "interpretations": [
+    "post-break upweighting reflects continuous resource-rational reallocation, not a threshold reset",
+    "bump-attractor accounts cannot capture the observed integration dynamics"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "sequential evidence accumulation",
+    "temporal integration",
+    "perceptual estimation",
+    "sample weighting",
+    "memory maintenance cost",
+    "resource-rational model",
+    "bump attractor comparison",
+    "stimulus encoding effort"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "6e221666ab7f140b6532b4698902713c",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:04:21+09:00",
+  "review_status": "auto_unreviewed"
+}

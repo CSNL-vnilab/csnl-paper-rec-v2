@@ -1,0 +1,47 @@
+{
+  "canonical_id": "8b0422262f71fce970d00aff2ef98f0a",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [
+    {"name": "ring attractor network", "role": "extended", "one_line": "head-direction attractor retuned so activity amplitude tracks posterior certainty"},
+    {"name": "circular Kalman filter", "role": "primary_lens", "one_line": "normative benchmark for angular inference under uncertainty"},
+    {"name": "Bayesian inference", "role": "primary_lens", "one_line": "memory should weigh evidence by uncertainty when combining with priors"}
+  ],
+  "core_question": "How can a ring attractor network represent and update uncertainty during angular working memory?",
+  "key_assumptions": [
+    "working memory is held in attractor networks",
+    "uncertainty must be tracked to weigh memory against new evidence",
+    "head direction is encoded by a ring attractor",
+    "recurrent connectivity can be retuned without exact precision"
+  ],
+  "manipulations": [
+    "recurrent connectivity tuning of the ring attractor",
+    "quality and consistency of incoming evidence",
+    "imposition of biological connectome constraints"
+  ],
+  "key_findings": [
+    "retuned ring attractor matches circular Kalman filter benchmark",
+    "network activity amplitude grows with confirmatory evidence and shrinks with poor or conflicting evidence",
+    "Bayesian ring attractor is consistently more accurate than a conventional ring attractor",
+    "near-optimal performance is preserved under connectome-derived biological constraints"
+  ],
+  "interpretations": [
+    "amplitude of attractor activity can serve as a neural code for posterior certainty",
+    "biologically plausible recurrent circuits can implement near-optimal Bayesian inference"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "ring attractor",
+    "head direction",
+    "circular Kalman filter",
+    "Bayesian working memory",
+    "uncertainty representation",
+    "angular path integration",
+    "evidence accumulation",
+    "connectome-constrained network"
+  ],
+  "out_of_scope_note": null,
+  "generator": "opus-4-7@2026-05-27",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-27T00:00:00Z",
+  "abstract_coverage": 1.0
+}

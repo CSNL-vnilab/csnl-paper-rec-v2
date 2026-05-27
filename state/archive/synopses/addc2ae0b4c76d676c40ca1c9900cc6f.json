@@ -1,0 +1,50 @@
+{
+  "frameworks": [
+    {
+      "name": "radial bias in early visual cortex",
+      "role": "primary_lens",
+      "one_line": "preferential cortical response to orientations aligned with gaze-centered radial axis"
+    },
+    {
+      "name": "perceptual illusion as readout of early-vision representation",
+      "role": "extended",
+      "one_line": "low-level orientation preference biases perceived object orientation"
+    }
+  ],
+  "core_question": "Does the cortical preference for radial orientations distort the perceived orientation of peripheral objects?",
+  "key_assumptions": [
+    "radially oriented stimuli elicit stronger cortical activity and higher perceptual sensitivity",
+    "perceived gap position in a Landolt C reflects the underlying orientation representation"
+  ],
+  "manipulations": [
+    "C orientation across eight angles",
+    "stimulus location along four meridians (vertical, horizontal, 45°, 135°)",
+    "peripheral placement requiring continuous response of gap position"
+  ],
+  "key_findings": [
+    "perceived gap was systematically attracted toward the radial axis",
+    "a regular C at oblique meridian was often misperceived as tilted toward that meridian",
+    "errors followed the radial axis across meridians"
+  ],
+  "interpretations": [
+    "early-vision radial preference exerts an unsuspected influence on perceived object orientation"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "radial bias",
+    "orientation perception",
+    "Landolt C",
+    "peripheral vision",
+    "meridian effects",
+    "perceptual illusion",
+    "early visual cortex",
+    "perceived orientation"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "addc2ae0b4c76d676c40ca1c9900cc6f",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:04:21+09:00",
+  "review_status": "auto_unreviewed"
+}

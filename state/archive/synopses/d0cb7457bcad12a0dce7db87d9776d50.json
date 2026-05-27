@@ -1,0 +1,45 @@
+{
+  "canonical_id": "d0cb7457bcad12a0dce7db87d9776d50",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [
+    {"name": "attention reorientation network", "role": "primary_lens", "one_line": "posterior parietal hub and early visual cortices serving spatial reattending"},
+    {"name": "multispectral neural oscillations", "role": "primary_lens", "one_line": "theta, alpha, and gamma rhythms index validity effects during reorientation"},
+    {"name": "HD-tDCS polarity model", "role": "extended", "one_line": "anodal versus cathodal stimulation produces opposing modulations of the same circuit"}
+  ],
+  "core_question": "Does high-definition tDCS over occipital cortex modulate attentional reorientation differently by polarity in the brain regions that serve reorientation?",
+  "key_assumptions": [
+    "occipital cortex is an upstream node of the attention reorientation pathway",
+    "validity effects in a Posner task index attentional reallocation",
+    "HD-tDCS polarity can up- or down-regulate cortical excitability focally"
+  ],
+  "manipulations": [
+    "HD-tDCS polarity (anodal vs cathodal vs sham) over occipital cortex",
+    "cue validity in a modified Posner task during MEG"
+  ],
+  "key_findings": [
+    "behavioral validity effect present in all three stimulation conditions",
+    "cathodal HD-tDCS reduced theta validity effects in occipital cortex",
+    "cathodal HD-tDCS reduced alpha validity effects in left occipital and parietal cortex versus anodal",
+    "anodal occipital stimulation increased gamma amplitude in right occipital cortex versus cathodal and sham"
+  ],
+  "interpretations": [
+    "occipital HD-tDCS exerts a polarity-dependent influence on multispectral oscillations serving attentional reorientation"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "HD-tDCS",
+    "attentional reorientation",
+    "Posner task",
+    "magnetoencephalography",
+    "occipital cortex stimulation",
+    "theta oscillations",
+    "alpha oscillations",
+    "gamma amplitude",
+    "validity effect"
+  ],
+  "out_of_scope_note": null,
+  "generator": "opus-4-7@2026-05-27",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "abstract_coverage": 1.0
+}

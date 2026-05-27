@@ -1,0 +1,45 @@
+{
+  "canonical_id": "efa835d7757890165374d951d06f3db2",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [
+    {"name": "holistic Bayesian inference", "role": "primary_lens", "one_line": "unified Bayesian observer combining efficient encoding with categorical novelty inference"},
+    {"name": "efficient coding", "role": "extended", "one_line": "sensory encoding adapts to predicted future stimulus distribution"},
+    {"name": "novelty detection", "role": "extended", "one_line": "categorical inference about whether stimulus matches adaptor distribution"}
+  ],
+  "core_question": "What is the functional purpose of perceptual adaptation, and can efficient coding and novelty detection be unified within a single Bayesian model?",
+  "key_assumptions": [
+    "sensory encoding adapts to maximize efficiency under fixed resource limits",
+    "observer performs categorical inference about novelty relative to adaptor distribution",
+    "future stimulus distribution is predicted from previous input statistics"
+  ],
+  "manipulations": [
+    "presence of single adaptor distribution prior to test stimulus",
+    "varying adaptor configurations (single and arbitrary adaptors)"
+  ],
+  "key_findings": [
+    "model accounts for previously reported perceptual aftereffects in estimation tasks",
+    "model explains characteristic repulsive biases after adaptation to a single adaptor",
+    "model explains changes in estimation variance following adaptation",
+    "model predicts aftereffects for arbitrary adaptors"
+  ],
+  "interpretations": [
+    "efficient coding and novelty detection jointly account for adaptation effects",
+    "perceptual adaptation can be understood as holistic Bayesian inference"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "perceptual adaptation",
+    "aftereffects",
+    "efficient coding",
+    "novelty detection",
+    "holistic Bayesian inference",
+    "repulsive bias",
+    "estimation variance",
+    "adaptor distribution"
+  ],
+  "out_of_scope_note": null,
+  "generator": "opus-4-7@2026-05-27",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-27T00:00:00Z",
+  "abstract_coverage": 1.0
+}

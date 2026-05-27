@@ -1,0 +1,44 @@
+{
+  "canonical_id": "5f77800c42986e55c1e0bb9ef5e244b1",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [
+    {"name": "discrete attractor dynamics", "role": "compared_against", "one_line": "stable neuronal activity configurations as candidate substrate for working memory"},
+    {"name": "attractor dynamics with activity-dependent plasticity", "role": "extended", "one_line": "discrete attractors augmented with short-term plasticity to span multiple delays"}
+  ],
+  "core_question": "Can discrete attractor dynamics account for human working memory across multiple delay timescales?",
+  "key_assumptions": [
+    "working memories can be stored in a discrete set of stable activity configurations",
+    "single delay-period responses reflect attractor occupancy",
+    "longer delays carry more stimulus information than discrete states allow"
+  ],
+  "manipulations": [
+    "delay interval length across multiple timescales",
+    "model class: discrete attractor vs attractor + activity-dependent plasticity"
+  ],
+  "key_findings": [
+    "discrete attractor dynamics approximate working memory at a single timescale",
+    "discrete attractor models fail to generalize across multiple delay timescales",
+    "responses at longer delays contain more stimulus information than a discrete attractor can store",
+    "combined attractor + activity-dependent plasticity model generalizes across timescales and predicts intertrial interactions"
+  ],
+  "interpretations": [
+    "discrete attractor dynamics alone are insufficient to model human working memory",
+    "activity-dependent plasticity improves durability of information storage in attractor systems"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "working memory",
+    "discrete attractor dynamics",
+    "activity-dependent plasticity",
+    "delay-period maintenance",
+    "multiple timescales",
+    "intertrial interactions",
+    "stable activity configurations",
+    "information storage durability"
+  ],
+  "out_of_scope_note": null,
+  "generator": "opus-4-7@2026-05-27",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-27T00:00:00Z",
+  "abstract_coverage": 1.0
+}

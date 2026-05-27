@@ -1,0 +1,56 @@
+{
+  "frameworks": [
+    {
+      "name": "efficient coding",
+      "role": "extended",
+      "one_line": "novel objective balancing accuracy against spiking cost in recurrent circuits"
+    },
+    {
+      "name": "gain-adaptive recurrent network model",
+      "role": "primary_lens",
+      "one_line": "gain modulation propagates through recurrent network to yield fast tuning adaptation"
+    },
+    {
+      "name": "prior-attraction vs adapter-repulsion accounts",
+      "role": "compared_against",
+      "one_line": "reconciles tuning-curve repulsion with predicted prior attraction"
+    }
+  ],
+  "core_question": "Can efficient-coding tuning curves adapt rapidly to changing sensory statistics, and how do gain-modulated recurrent dynamics produce observed adapter repulsion versus prior attraction?",
+  "key_assumptions": [
+    "neural gains optimize an accuracy-vs-spiking-cost objective",
+    "tuning curves are shaped by gains propagating through recurrent connections",
+    "sensory environments change and require ongoing adaptation"
+  ],
+  "manipulations": [
+    "prior distribution shape (peaked vs broader)",
+    "repeated adapter stimulus presentation"
+  ],
+  "key_findings": [
+    "model reproduces subtle adapter-repulsion under peaked priors",
+    "model predicts fast prior attraction under broader distributions",
+    "behavioral evidence supports the predicted prior attraction"
+  ],
+  "interpretations": [
+    "gain modulation in recurrent circuits unifies adapter-repulsion and prior-attraction phenomena",
+    "rapid efficient coding is mechanistically realizable via gain propagation"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "efficient coding",
+    "sensory adaptation",
+    "tuning curves",
+    "adapter repulsion",
+    "prior attraction",
+    "gain modulation",
+    "recurrent network",
+    "spiking cost"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "a0387e74dfd6709f64b1bfa6b42d6be4",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:08:43+09:00",
+  "review_status": "auto_unreviewed"
+}

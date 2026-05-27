@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "ensemble perception",
+      "role": "primary_lens",
+      "one_line": "group-level statistics bias representation of individual items"
+    },
+    {
+      "name": "visual working memory",
+      "role": "compared_against",
+      "one_line": "memory retention as candidate locus of ensemble bias"
+    },
+    {
+      "name": "perceptual encoding",
+      "role": "primary_lens",
+      "one_line": "encoding stage as locus where group statistics bias individuals"
+    }
+  ],
+  "core_question": "Does ensemble average bias individual size representations during perception or during working memory retention?",
+  "key_assumptions": [
+    "individual item representations can be influenced by group statistics",
+    "reversing stimulus order isolates perceptual vs memory loci",
+    "size comparison task indexes the biased representation"
+  ],
+  "manipulations": [
+    "presentation order of array vs single probe (memory-bias vs perceptual-bias condition)",
+    "target size relative to ensemble average size",
+    "2-second delay between array and probe"
+  ],
+  "key_findings": [
+    "bias toward ensemble average size in memory-bias condition",
+    "comparable bias in perceptual-bias condition",
+    "bias magnitude does not differentiate perceptual vs memory loci"
+  ],
+  "interpretations": [
+    "ensemble statistics interact with individual representations during perceptual encoding",
+    "ensemble bias is not solely a memory-retention phenomenon"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "ensemble perception",
+    "ensemble bias",
+    "average size representation",
+    "individual item representation",
+    "size comparison task",
+    "visual working memory",
+    "perceptual encoding stage",
+    "group-level statistics"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "db9d48be0b22f8971cf6347d10a9cc71",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:06:31+09:00",
+  "review_status": "auto_unreviewed"
+}

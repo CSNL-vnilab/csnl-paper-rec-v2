@@ -1,0 +1,44 @@
+{
+  "canonical_id": "1b2bc029f418dbe56bc1764786031135",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [
+    {"name": "action-oriented working memory", "role": "primary_lens", "one_line": "memory representations coded by task-specific temporal and behavioral demands"},
+    {"name": "common-workspace working memory", "role": "compared_against", "one_line": "items stored in shared task-agnostic format allowing inter-item interference"}
+  ],
+  "core_question": "Are visual items held in working memory for distinct tasks stored separately or in a common store?",
+  "key_assumptions": [
+    "concurrent maintenance of two items can be probed via inter-item interference",
+    "perceptual and iconic memory stages can be dissociated from WM consolidation"
+  ],
+  "manipulations": [
+    "framing continuous-report task combined with embedded binary-discrimination task",
+    "similarity between framing and embedded motion directions",
+    "stage of processing: perceptual / iconic / working memory"
+  ],
+  "key_findings": [
+    "embedded motion direction was repulsed away from the framing item's direction",
+    "embedded item's precision was degraded by the framing item",
+    "repulsion and precision degradation scaled with inter-item similarity during concurrent WM maintenance",
+    "perceptual and iconic control conditions showed weaker repulsion and no precision interference"
+  ],
+  "interpretations": [
+    "inter-item interference arises uniquely within working memory, supporting a shared store",
+    "task-specific temporal and action demands do not isolate items from cross-item influence"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "visual working memory",
+    "inter-item interference",
+    "motion direction repulsion",
+    "precision degradation",
+    "continuous report",
+    "binary discrimination",
+    "iconic memory",
+    "concurrent maintenance"
+  ],
+  "out_of_scope_note": null,
+  "generator": "opus-4-7@2026-05-27",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "abstract_coverage": 1.0
+}

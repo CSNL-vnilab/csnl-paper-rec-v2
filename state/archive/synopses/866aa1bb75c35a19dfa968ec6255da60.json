@@ -1,0 +1,43 @@
+{
+  "canonical_id": "866aa1bb75c35a19dfa968ec6255da60",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [
+    {"name": "cortical inhibition-excitation balance", "role": "primary_lens", "one_line": "tDCS presumed to shift occipital E/I balance probed via orientation discrimination"},
+    {"name": "placebo effect", "role": "alternative_lens", "one_line": "performance gains attributed to expectation rather than active cortical modulation"}
+  ],
+  "core_question": "Does occipital tDCS modulate visual orientation discrimination performance, or are observed gains attributable to placebo?",
+  "key_assumptions": [
+    "orientation discrimination performance reflects occipital inhibition-excitation balance",
+    "prior work showed no practice effects across two consecutive ODT runs",
+    "sham tDCS isolates expectation effects from active stimulation"
+  ],
+  "manipulations": [
+    "tDCS polarity: sham vs anodal vs cathodal occipital stimulation",
+    "delay between ODT runs: 2 min vs 10 min with no stimulation",
+    "sham-tDCS vs no-stimulation delay control"
+  ],
+  "key_findings": [
+    "performance improved on the second ODT run irrespective of tDCS polarity",
+    "only sham-tDCS, not extended delay alone, produced improved second-run performance"
+  ],
+  "interpretations": [
+    "the observed gains reflect a tDCS placebo effect rather than active neuromodulation",
+    "tDCS can elicit performance changes even without active cortical modulation"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "transcranial direct current stimulation",
+    "orientation discrimination",
+    "occipital cortex",
+    "sham stimulation",
+    "placebo effect",
+    "inhibition-excitation balance",
+    "anodal cathodal tDCS",
+    "visual psychophysics"
+  ],
+  "out_of_scope_note": null,
+  "generator": "opus-4-7@2026-05-27",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-27T00:00:00Z",
+  "abstract_coverage": 1.0
+}

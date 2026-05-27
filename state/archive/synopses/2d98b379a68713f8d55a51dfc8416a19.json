@@ -1,0 +1,45 @@
+{
+  "canonical_id": "2d98b379a68713f8d55a51dfc8416a19",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [
+    {"name": "Bayesian heading estimation model", "role": "primary_lens", "one_line": "perceptual estimate computed by combining likelihood with a prior inferred from discrimination data"},
+    {"name": "efficient sensory encoding", "role": "primary_lens", "one_line": "heading direction encoded according to a prior derived from human discrimination performance"},
+    {"name": "linear perception-action mapping", "role": "extended", "one_line": "perceptual estimate linearly scaled to response by a range-dependent factor"}
+  ],
+  "core_question": "Why do reported biases in heading estimation from optic flow vary in direction across studies?",
+  "key_assumptions": [
+    "the sensory encoding of heading is efficient given a prior inferred from discrimination data",
+    "perceptual estimate is linearly scaled into a response by a scaling factor",
+    "the scaling factor depends monotonically on the size of the response range"
+  ],
+  "manipulations": [
+    "size of the response range allowed to participants",
+    "three psychophysical experiments comparing reporting conditions"
+  ],
+  "key_findings": [
+    "heading estimates monotonically scale with the size of the response range",
+    "small response ranges yield underestimation (central bias)",
+    "large response ranges yield overestimation (peripheral bias)",
+    "the proposed Bayesian model quantitatively accounts for participants' reports"
+  ],
+  "interpretations": [
+    "conflicting bias reports reflect response-range effects, not differences in underlying heading perception",
+    "a linear perception-action mapping reconciles central vs peripheral bias findings"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "heading estimation",
+    "optic flow",
+    "response range bias",
+    "central vs peripheral bias",
+    "Bayesian observer",
+    "efficient coding prior",
+    "perception-action mapping",
+    "psychophysical bias"
+  ],
+  "out_of_scope_note": null,
+  "generator": "opus-4-7@2026-05-27",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-27T00:00:00Z",
+  "abstract_coverage": 1.0
+}

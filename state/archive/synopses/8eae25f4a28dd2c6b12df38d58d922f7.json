@@ -1,0 +1,45 @@
+{
+  "canonical_id": "8eae25f4a28dd2c6b12df38d58d922f7",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [
+    {"name": "phasic arousal / brainstem neuromodulation", "role": "primary_lens", "one_line": "phasic brainstem arousal responses suppress trial-by-trial decision bias"},
+    {"name": "signal-detection / decision bias", "role": "context", "one_line": "choice variability decomposed into bias modulated by arousal state"},
+    {"name": "noise in decision-making machinery", "role": "compared_against", "one_line": "alternative account attributing choice variability to internal noise"}
+  ],
+  "core_question": "Do phasic responses of brainstem arousal systems account for trial-by-trial variability in perceptual choice bias?",
+  "key_assumptions": [
+    "pupil response is a valid proxy of phasic arousal",
+    "decision bias can be isolated from sensory evidence on a trial-by-trial basis",
+    "brainstem neuromodulatory centers (e.g., locus coeruleus) drive cortical arousal state"
+  ],
+  "manipulations": [
+    "sensory modality varied across experiments",
+    "task protocol varied across experiments",
+    "trials sorted by magnitude of pupil response"
+  ],
+  "key_findings": [
+    "large pupil responses predict reduced decision bias",
+    "pupil-linked bias reduction co-varies with choice-encoding patterns in parietal and prefrontal cortex",
+    "phasic brainstem responses (including noradrenergic locus coeruleus) predict the pupil-linked bias reduction"
+  ],
+  "interpretations": [
+    "phasic arousal suppresses decision bias on a trial-by-trial basis",
+    "brainstem arousal systems are a significant source of choice variability beyond pure decision noise"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "phasic arousal",
+    "pupil response",
+    "decision bias",
+    "locus coeruleus",
+    "brainstem neuromodulation",
+    "choice variability",
+    "parietal and prefrontal choice encoding",
+    "sensory-motor decision"
+  ],
+  "out_of_scope_note": null,
+  "generator": "opus-4-7@2026-05-27",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-27T21:02:34+09:00",
+  "abstract_coverage": 1.0
+}

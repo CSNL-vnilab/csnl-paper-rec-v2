@@ -1,0 +1,43 @@
+{
+  "canonical_id": "95cd3ad42d703dc686b069876e4cc4b4",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [
+    {"name": "attractor dynamics", "role": "primary_lens", "one_line": "discrete spatiotemporal patterns function as attractors in cortical network bursts"},
+    {"name": "Hebbian plasticity", "role": "extended", "one_line": "pathway-specific strengthening explains reshaping of attractor accessibility"}
+  ],
+  "core_question": "How do attractors in cortical networks emerge, persist, or disappear in response to targeted stimulation?",
+  "key_assumptions": [
+    "spontaneous network bursts can be classified into a discrete vocabulary of spatiotemporal patterns",
+    "these recurring patterns behave as discrete attractors of the network",
+    "Hebbian-like plasticity governs pathway weights into attractors"
+  ],
+  "manipulations": [
+    "electrical stimulation targeted at specific attractor patterns",
+    "comparison of spontaneous vs evoked activity"
+  ],
+  "key_findings": [
+    "spontaneous bursts in cultured cortical networks form a vocabulary of discrete attractor patterns",
+    "stimulating a specific attractor eliminates it from spontaneous activity",
+    "the same attractor remains robustly evoked by direct electrical stimulation"
+  ],
+  "interpretations": [
+    "stimulation strengthens specific input pathways into attractors while weakening non-evoked pathways",
+    "this Hebbian-like rewiring mechanistically explains the dissociation between spontaneous and evoked accessibility"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "attractor dynamics",
+    "cortical network bursts",
+    "spatiotemporal patterns",
+    "cultured neuronal networks",
+    "Hebbian plasticity",
+    "electrical stimulation",
+    "spontaneous vs evoked activity",
+    "pathway reshaping"
+  ],
+  "out_of_scope_note": null,
+  "generator": "opus-4-7@2026-05-27",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-27T21:07:02+09:00",
+  "abstract_coverage": 1.0
+}

@@ -1,0 +1,45 @@
+{
+  "canonical_id": "857fa3fbeb43a4152a0b006f94b05734",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [
+    {"name": "drift-diffusion / evidence accumulation", "role": "primary_lens", "one_line": "behavioral modeling decomposes history bias into accumulation-bias vs starting-point components"},
+    {"name": "noradrenergic prior-reduction account", "role": "primary_lens", "one_line": "catecholamines reduce the impact of priors on inference and decision"},
+    {"name": "choice history bias / dynamic priors", "role": "context", "one_line": "tendency to repeat or alternate previous choices acts as an implicit prior"}
+  ],
+  "core_question": "Do elevated catecholamine levels causally reduce choice history biases in perceptual decision-making?",
+  "key_assumptions": [
+    "noradrenaline modulates the weighting of priors on perceptual inference",
+    "choice history bias reflects a dynamic prior carried across trials",
+    "drift-diffusion components (drift bias vs starting-point bias) can be separated behaviorally"
+  ],
+  "manipulations": [
+    "pharmacological elevation of catecholamines via atomoxetine vs placebo",
+    "within-subject perceptual decision task under uncertainty"
+  ],
+  "key_findings": [
+    "choice history biases were highly idiosyncratic, repetition for some and alternation for others",
+    "atomoxetine reduced history biases regardless of their direction",
+    "the bias reduction was captured by reduced drift bias in evidence accumulation",
+    "starting-point bias was not the locus of the catecholaminergic effect"
+  ],
+  "interpretations": [
+    "catecholamines causally diminish the impact of dynamic priors on perceptual decisions",
+    "noradrenergic effects on bias operate through evidence accumulation rather than baseline preference"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "choice history bias",
+    "perceptual decision-making",
+    "drift-diffusion model",
+    "drift bias vs starting-point bias",
+    "noradrenaline",
+    "atomoxetine",
+    "dynamic priors",
+    "sequential dependence"
+  ],
+  "out_of_scope_note": null,
+  "generator": "opus-4-7@2026-05-27",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-27T00:00:00Z",
+  "abstract_coverage": 1.0
+}

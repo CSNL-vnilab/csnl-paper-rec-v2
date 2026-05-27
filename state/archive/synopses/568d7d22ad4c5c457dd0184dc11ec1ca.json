@@ -1,0 +1,60 @@
+{
+  "frameworks": [
+    {
+      "name": "continuous target-tracking psychophysics",
+      "role": "primary_lens",
+      "one_line": "Continuous tracking of a Brownian target to recover visuomotor response time-course."
+    },
+    {
+      "name": "temporal impulse response function",
+      "role": "extended",
+      "one_line": "Interocular differences in temporal impulse responses predict motion-in-depth misperception."
+    },
+    {
+      "name": "forced-choice psychophysics",
+      "role": "compared_against",
+      "one_line": "Traditional method benchmarked against continuous tracking for interocular delay estimates."
+    }
+  ],
+  "core_question": "Can continuous target-tracking psychophysics quantify millisecond-scale interocular visual processing delays as faithfully as forced-choice methods?",
+  "key_assumptions": [
+    "Hand movement dynamics preserve visual processing timing",
+    "Luminance level systematically modulates visual processing speed",
+    "Interocular luminance differences induce processing-speed discrepancies"
+  ],
+  "manipulations": [
+    "Monocular vs binocular tracking conditions",
+    "Luminance level in each eye",
+    "Lateral target motion (Brownian)"
+  ],
+  "key_findings": [
+    "Continuous tracking and forced-choice estimates of interocular delay agree to within a fraction of a millisecond",
+    "Visual processing speed depends systematically on luminance level",
+    "Temporal evolution of interocular processing differences is recoverable from tracking",
+    "Lateral motion partially confirms predicted motion-in-depth misperceptions"
+  ],
+  "interpretations": [
+    "Visual processing delays are faithfully preserved in hand movement dynamics",
+    "Differences between the two eyes' temporal impulse responses predict 3D motion misperception"
+  ],
+  "limitations_noted": [
+    "Predicted motion-in-depth misperception only partially confirmed experimentally"
+  ],
+  "connecting_signals": [
+    "continuous target tracking",
+    "interocular delay",
+    "Brownian motion target",
+    "temporal impulse response",
+    "motion-in-depth misperception",
+    "binocular visual processing",
+    "luminance and processing speed",
+    "visuomotor response"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "568d7d22ad4c5c457dd0184dc11ec1ca",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:08:43+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,44 @@
+{
+  "canonical_id": "dc66339ee7e6df8fe69050b6e114981f",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [
+    {"name": "categorical bias in visual working memory", "role": "primary_lens", "one_line": "WM representations are repulsed by category boundaries of the stimulus space"},
+    {"name": "inter-item bias", "role": "primary_lens", "one_line": "concurrently held WM items repel each other in feature space"},
+    {"name": "serial dependence", "role": "primary_lens", "one_line": "current report is biased by the previous-trial stimulus or response"}
+  ],
+  "core_question": "How do categorical bias, inter-item bias, and serial dependence interact within visual working memory?",
+  "key_assumptions": [
+    "orientation delayed estimation indexes WM contents",
+    "the three biases can be measured by congruent vs incongruent trial sorting",
+    "biases combine on a common feature dimension"
+  ],
+  "manipulations": [
+    "set size two vs set size one orientation delayed estimation",
+    "congruent vs incongruent direction of paired biases on a target item"
+  ],
+  "key_findings": [
+    "categorical bias was completely canceled out by inter-item bias on incongruent trials in Experiment 1",
+    "serial dependence was exaggerated on congruent trials in Experiment 2",
+    "serial dependence was reduced or canceled on incongruent trials in Experiment 2"
+  ],
+  "interpretations": [
+    "the three WM biases interact rather than summing independently",
+    "the net bias on a remembered item depends on directional alignment of co-acting bias sources"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "visual working memory",
+    "categorical bias",
+    "inter-item interaction",
+    "serial dependence",
+    "orientation delayed estimation",
+    "congruent vs incongruent trials",
+    "set size manipulation",
+    "feature-space repulsion"
+  ],
+  "out_of_scope_note": null,
+  "generator": "opus-4-7@2026-05-27",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-27T00:00:00Z",
+  "abstract_coverage": 1.0
+}

@@ -1,0 +1,47 @@
+{
+  "frameworks": [
+    {
+      "name": "serial dependence",
+      "role": "primary_lens",
+      "one_line": "current feature perception is biased by features seen in recent past"
+    },
+    {
+      "name": "feature integration",
+      "role": "alternative_lens",
+      "one_line": "whether secondary features bind into the integration window for orientation"
+    }
+  ],
+  "core_question": "Does the color of a stimulus modulate serial dependence in orientation judgments?",
+  "key_assumptions": [
+    "orientation reproduction reveals biases from prior trials",
+    "color can serve as a secondary feature label for inducer-target similarity"
+  ],
+  "manipulations": [
+    "stimulus color (red vs green) varied randomly across trials",
+    "secondary task: color detection (Exp 1) vs color discrimination (Exp 2)"
+  ],
+  "key_findings": [
+    "orientation is biased by previous trial regardless of color repetition or change",
+    "explicit color discrimination does not gate the orientation bias"
+  ],
+  "interpretations": [
+    "for single-feature tasks, serial dependence operates independently of other stimulus features"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "serial dependence",
+    "orientation adjustment",
+    "secondary features",
+    "color discrimination",
+    "feature-specific integration",
+    "trial-history bias",
+    "perceptual continuity"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "ef6cd011048adbdc666599ebe5f5982f",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:08:43+09:00",
+  "review_status": "auto_unreviewed"
+}

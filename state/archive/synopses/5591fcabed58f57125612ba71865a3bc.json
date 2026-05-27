@@ -1,0 +1,56 @@
+{
+  "frameworks": [
+    {
+      "name": "discrete attractor model",
+      "role": "primary_lens",
+      "one_line": "memory states drift toward a small set of stable attractors"
+    },
+    {
+      "name": "diffusion (random-walk) noise",
+      "role": "primary_lens",
+      "one_line": "delay-period activity also injects random diffusive error into memory"
+    },
+    {
+      "name": "load-dependent precision of working memory",
+      "role": "context",
+      "one_line": "frontoparietal activity is known to track precision loss with load"
+    }
+  ],
+  "core_question": "How does delay-period activity in frontoparietal and occipital cortex relate to diffusion versus drift components of visual working-memory error?",
+  "key_assumptions": [
+    "behavioral error decomposes into diffusion + attractor-driven drift",
+    "whole-trial fMRI activity can be linked to trial-wise error components",
+    "frontoparietal delay activity reflects memory maintenance"
+  ],
+  "manipulations": [
+    "memory load (number of remembered orientations)",
+    "delayed recall of line orientation across trials"
+  ],
+  "key_findings": [
+    "frontal and parietal delay activity increases with both diffusion and drift",
+    "diffusion explains more variance than drift in frontoparietal delay activity",
+    "in lateral occipital cortex, drift rather than diffusion dominates delay-period variance"
+  ],
+  "interpretations": [
+    "frontoparietal cortex preferentially indexes diffusive noise during maintenance",
+    "occipital cortex preferentially indexes systematic attractor drift"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "visual working memory",
+    "delay-period fMRI",
+    "discrete attractor dynamics",
+    "diffusion noise",
+    "systematic bias",
+    "memory load",
+    "orientation recall",
+    "frontoparietal cortex"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "5591fcabed58f57125612ba71865a3bc",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:08:43+09:00",
+  "review_status": "auto_unreviewed"
+}
