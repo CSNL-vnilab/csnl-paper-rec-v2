@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "linear evidence integration",
+      "role": "primary_lens",
+      "one_line": "Sensory evidence linearly added over space then integrated over time"
+    },
+    {
+      "name": "perceptual decision-making",
+      "role": "extended",
+      "one_line": "Extends simple decision integration framework to complex object recognition"
+    },
+    {
+      "name": "object recognition",
+      "role": "context",
+      "one_line": "Decision read-out of object representations over prolonged timescales"
+    }
+  ],
+  "core_question": "How do decision-making processes integrate sensory evidence across space and time for face categorization?",
+  "key_assumptions": [
+    "Face categorization can be decomposed into separable spatial and temporal integration stages",
+    "Decision read-out operates over prolonged time scales on object representations",
+    "Task-relevant features carry quantifiable momentary evidence"
+  ],
+  "manipulations": [
+    "Stochastic multifeature face stimuli with controlled spatiotemporal information",
+    "Different category boundaries (identity vs expression)",
+    "Quantitative model comparison against human behavior"
+  ],
+  "key_findings": [
+    "Evidence from task-relevant features is linearly added over space into aggregated momentary evidence",
+    "Momentary evidence is linearly integrated over time with minimum information loss",
+    "Discrimination along different category boundaries is implemented by adjusting spatial feature weights"
+  ],
+  "interpretations": [
+    "A flexible linear integration process over space and time bridges simple perceptual decisions to complex object recognition",
+    "Object recognition combines elaborate sensory transformation with decision-making read-out"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "linear evidence integration",
+    "face categorization",
+    "spatial integration of features",
+    "temporal integration of evidence",
+    "perceptual decision-making",
+    "object recognition",
+    "category boundary",
+    "momentary evidence",
+    "feature weights"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "7827d58b280cb9e772b86194ff43cacd",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

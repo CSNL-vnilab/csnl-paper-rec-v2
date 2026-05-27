@@ -1,0 +1,59 @@
+{
+  "frameworks": [
+    {
+      "name": "utility maximization (Generalized Axiom of Revealed Preference)",
+      "role": "primary_lens",
+      "one_line": "Tests whether food choices satisfy necessary and sufficient consistency conditions for an underlying utility"
+    },
+    {
+      "name": "value-based decision making",
+      "role": "primary_lens",
+      "one_line": "Options selected by subjective values the animal assigns to goods"
+    },
+    {
+      "name": "dopamine-dependent reinforcement learning",
+      "role": "extended",
+      "one_line": "Subjective values are learned via intact dopamine signaling"
+    }
+  ],
+  "core_question": "Does C. elegans choose between bacterial foods as if maximizing an underlying subjective utility?",
+  "key_assumptions": [
+    "GARP consistency is necessary and sufficient for utility maximization",
+    "Human-consumer utility functional forms can describe nematode preferences",
+    "Chemosensory neuron responses can index assigned subjective value"
+  ],
+  "manipulations": [
+    "Offered choices between bacterial foods with distinct growth potentials",
+    "Manipulated prior consumption experience to test value learning",
+    "Perturbed dopamine signaling",
+    "Combined microfluidic choice assays with electrophysiology of identified neurons"
+  ],
+  "key_findings": [
+    "Food choices satisfy necessary and sufficient conditions of GARP for utility maximization",
+    "Choices are well-fit by a utility function widely used for human consumers",
+    "Learning of subjective values requires intact dopamine signaling",
+    "Identified chemosensory neurons respond differentially to foods, amplified by prior consumption"
+  ],
+  "interpretations": [
+    "C. elegans behaves as if maintaining and maximizing an internal representation of subjective value",
+    "Chemosensory neurons may be part of a value-assignment system shaped by experience"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "Generalized Axiom of Revealed Preference",
+    "subjective value",
+    "utility maximization",
+    "value-based decision making",
+    "C. elegans food choice",
+    "dopamine-dependent value learning",
+    "chemosensory neurons",
+    "microfluidic behavioral assay"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "c9bd8a0df1b71b075dca086b82aaba55",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

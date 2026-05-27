@@ -1,0 +1,62 @@
+{
+  "frameworks": [
+    {
+      "name": "individual electric field modeling",
+      "role": "primary_lens",
+      "one_line": "Person-specific head models predict intracranial E-field from tES"
+    },
+    {
+      "name": "transcranial alternating current stimulation",
+      "role": "primary_lens",
+      "one_line": "α-tACS entrains and induces aftereffects on α-band oscillations"
+    },
+    {
+      "name": "MEG source localization",
+      "role": "extended",
+      "one_line": "Source-localized α-power links E-field to neural outcome"
+    },
+    {
+      "name": "dose-response framework",
+      "role": "context",
+      "one_line": "Treats E-field intensity as the stimulation dose driving response"
+    }
+  ],
+  "core_question": "Can individual electric field modeling explain inter-individual variability of tACS aftereffects on α-oscillations?",
+  "key_assumptions": [
+    "Individual neuroanatomy drives variability of intracranial E-fields",
+    "E-field at source locations is the causally relevant tES dose",
+    "MEG-derived α-power indexes the tACS aftereffect of interest"
+  ],
+  "manipulations": [
+    "α-tACS (1 mA, 20 min) vs sham stimulation",
+    "Individual E-field simulations across participants",
+    "Pre- vs post-stimulation MEG recordings"
+  ],
+  "key_findings": [
+    "α-tACS produced larger α-band power increase than sham",
+    "Inter-individual variability of the aftereffect was significantly predicted by individual E-field measures",
+    "E-field variability tracked variability in tACS outcomes across participants"
+  ],
+  "interpretations": [
+    "Variability of tACS effects is directly linked to variability in intracranial electric fields",
+    "Stimulation protocols should be individualized and analyzed as dose-response relationships"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "transcranial alternating current stimulation",
+    "individual electric field modeling",
+    "alpha oscillation aftereffects",
+    "MEG source localization",
+    "inter-individual variability",
+    "dose-response in tES",
+    "individualized stimulation protocols",
+    "neuroimaging-informed brain stimulation"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "c4b324650dac10f5c791dba98e2f198c",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,59 @@
+{
+  "frameworks": [
+    {
+      "name": "subjective inflation",
+      "role": "primary_lens",
+      "one_line": "Peripheral percepts feel more vivid than the underlying representation supports"
+    },
+    {
+      "name": "flashed face distortion effect",
+      "role": "extended",
+      "one_line": "Extends the face-distortion illusion paradigm into the color domain"
+    },
+    {
+      "name": "liberal detection bias in unattended periphery",
+      "role": "context",
+      "one_line": "Cited to relate inflation to known peripheral signal-detection biases"
+    }
+  ],
+  "core_question": "Does temporal overload in the periphery inflate perceived color saturation?",
+  "key_assumptions": [
+    "Subjective vividness can dissociate from objective peripheral representation",
+    "Rapid temporal flashing imposes processing overload analogous to face-distortion paradigm",
+    "Perceived saturation can be measured behaviorally as the dependent variable"
+  ],
+  "manipulations": [
+    "Preceding peripheral color patches with rapid flashes of other color patches",
+    "Spatially peripheral vs more central presentation",
+    "Replication across a second experiment"
+  ],
+  "key_findings": [
+    "Peripheral color patches were perceived as more saturated under temporal overload",
+    "Effect was modest in magnitude but statistically significant",
+    "Effect replicated in a second experiment"
+  ],
+  "interpretations": [
+    "Subjective inflation of color saturation occurs in the periphery under temporal-spatial overload",
+    "Inflation relates to previously reported liberal detection biases in the unattended periphery"
+  ],
+  "limitations_noted": [
+    "Effect was of modest magnitude"
+  ],
+  "connecting_signals": [
+    "subjective inflation",
+    "peripheral color perception",
+    "color saturation",
+    "flashed face distortion effect",
+    "temporal overload",
+    "unattended periphery",
+    "liberal detection bias",
+    "peripheral vividness"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "483d0f85d5b1dea4f5a5c3da33ee7cca",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

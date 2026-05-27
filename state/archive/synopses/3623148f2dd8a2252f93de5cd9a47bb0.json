@@ -1,0 +1,64 @@
+{
+  "frameworks": [
+    {
+      "name": "sustained delay activity",
+      "role": "compared_against",
+      "one_line": "Traditional view that maintained elevated activity supports working memory"
+    },
+    {
+      "name": "transient delay activity",
+      "role": "primary_lens",
+      "one_line": "Time-limited early delay-period activity as the substrate for WM maintenance"
+    },
+    {
+      "name": "temporal-spectral evolution",
+      "role": "primary_lens",
+      "one_line": "Time-frequency decomposition of delay-period EEG across the maintenance interval"
+    },
+    {
+      "name": "Sternberg working memory paradigm",
+      "role": "context",
+      "one_line": "Probe-recognition task structuring the delay-period analysis"
+    }
+  ],
+  "core_question": "Is visual working memory delay-period EEG activity sustained or transient, and does it predict subsequent memory performance?",
+  "key_assumptions": [
+    "Delay-period activity indexes working memory maintenance",
+    "High-density EEG sensor and source signals can dissociate transient from sustained components",
+    "Novel scene stimuli engage visual working memory"
+  ],
+  "manipulations": [
+    "Six-second delay period in a Sternberg task",
+    "Novel scenes as memoranda",
+    "Time-frequency segmentation across early vs later delay windows",
+    "Sensor-level versus source-level signal estimation"
+  ],
+  "key_findings": [
+    "Delay-period activity was transient rather than sustained",
+    "High-amplitude theta-range activity appeared in the first three seconds of the delay",
+    "Early delay activity correlated positively with subsequent new-versus-old probe discrimination",
+    "A right parietal source of transient early activity tracked working memory performance"
+  ],
+  "interpretations": [
+    "Transient early delay activity, not sustained activity, supports visual working memory",
+    "Right parietal theta contributes to scene working memory maintenance"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "EEG delay-period activity",
+    "visual working memory",
+    "Sternberg paradigm",
+    "theta band activity",
+    "transient versus sustained activity",
+    "scene memory",
+    "right parietal cortex",
+    "temporal-spectral evolution"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "3623148f2dd8a2252f93de5cd9a47bb0",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

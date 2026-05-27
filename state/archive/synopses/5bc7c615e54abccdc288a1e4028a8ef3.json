@@ -1,0 +1,67 @@
+{
+  "frameworks": [
+    {
+      "name": "biologically plausible deep learning",
+      "role": "primary_lens",
+      "one_line": "Local learning rules as biologically plausible alternative to backpropagation"
+    },
+    {
+      "name": "shallow networks with local learning",
+      "role": "extended",
+      "one_line": "Single hidden layer trained by unsupervised or fixed projections"
+    },
+    {
+      "name": "unsupervised feature learning (PCA/ICA/sparse coding)",
+      "role": "compared_against",
+      "one_line": "Local unsupervised rules benchmarked against random and Gabor features"
+    },
+    {
+      "name": "spiking neural networks with STDP",
+      "role": "alternative_lens",
+      "one_line": "Leaky integrate-and-fire neurons with spike-timing-dependent plasticity readout"
+    }
+  ],
+  "core_question": "How far can shallow networks with biologically plausible local learning rules go on standard image classification benchmarks?",
+  "key_assumptions": [
+    "Error backpropagation is biologically implausible",
+    "Local learning rules can implement PCA/ICA/sparse coding",
+    "Single hidden layer plus readout is a meaningful biologically plausible architecture"
+  ],
+  "manipulations": [
+    "Hidden layer weights: fixed random vs Gabor vs PCA vs ICA vs sparse coding",
+    "All-to-all vs localized receptive field connectivity",
+    "Rate-based vs spiking (LIF + STDP) implementations",
+    "Tested on MNIST and CIFAR10"
+  ],
+  "key_findings": [
+    "Unsupervised feature learning does not outperform fixed random or Gabor projections at large hidden-layer sizes",
+    "Localized receptive fields significantly outperform all-to-all connectivity",
+    "Local-rule networks reach backpropagation-level MNIST performance",
+    "Spiking LIF+STDP implementations achieve >98.2% MNIST test accuracy"
+  ],
+  "interpretations": [
+    "Strong shallow baselines challenge claims of biologically plausible deep learning models on MNIST",
+    "MNIST is insufficient to evaluate biologically plausible learning; harder benchmarks are needed"
+  ],
+  "limitations_noted": [
+    "Shallow architecture limits performance on more complex datasets like CIFAR10",
+    "MNIST as the de facto benchmark may be too easy to discriminate models"
+  ],
+  "connecting_signals": [
+    "biologically plausible deep learning",
+    "local learning rules",
+    "spike timing dependent plasticity",
+    "leaky integrate-and-fire neurons",
+    "sparse coding",
+    "random projections",
+    "Gabor filters",
+    "localized receptive fields"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "5bc7c615e54abccdc288a1e4028a8ef3",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

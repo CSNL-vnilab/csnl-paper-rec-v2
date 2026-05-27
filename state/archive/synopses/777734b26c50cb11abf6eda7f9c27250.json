@@ -1,0 +1,66 @@
+{
+  "canonical_id": "777734b26c50cb11abf6eda7f9c27250",
+  "title": "Natural statistics support a rational account of confidence biases",
+  "year": 2023,
+  "venue": "Nature Communications",
+  "doi": "10.1038/s41467-023-39737-2",
+  "is_preprint": true,
+  "frameworks": [
+    {
+      "name": "deep neural network model of confidence",
+      "role": "primary_lens",
+      "one_line": "DNN computes decision confidence directly from high-dimensional naturalistic stimuli."
+    },
+    {
+      "name": "confidence as probability-of-correct prediction",
+      "role": "extended",
+      "one_line": "Confidence framed as predicted probability that the decision is correct."
+    },
+    {
+      "name": "rational/optimal observer account",
+      "role": "primary_lens",
+      "one_line": "Biases arise from optimization to natural sensory input statistics."
+    },
+    {
+      "name": "common decision variable hypothesis",
+      "role": "alternative_lens",
+      "one_line": "Decisions and confidence share a single underlying decision variable."
+    }
+  ],
+  "core_question": "Can a model that operates directly on naturalistic stimuli explain puzzling dissociations between decisions and confidence as rational consequences of natural input statistics?",
+  "key_assumptions": [
+    "confidence is a prediction of decision correctness",
+    "perceptual systems are optimized for the statistics of natural sensory inputs",
+    "high-dimensional naturalistic stimuli are the appropriate domain over which to define confidence"
+  ],
+  "manipulations": [
+    "stimulus conditions known to produce decision-confidence dissociations",
+    "training/operating regime over naturalistic vs idealized inputs"
+  ],
+  "key_findings": [
+    "DNN-based confidence model reproduces several known decision-confidence dissociations",
+    "dissociations emerge naturally from optimization to natural-stimulus statistics",
+    "decisions and confidence in the model depend on a common decision variable despite dissociating"
+  ],
+  "interpretations": [
+    "apparent confidence biases can be rational given natural input statistics",
+    "shared decision variable is compatible with observed dissociations between decisions and confidence"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "decision confidence",
+    "metacognition",
+    "decision-confidence dissociation",
+    "common decision variable",
+    "natural image statistics",
+    "deep neural network perception model",
+    "rational/optimal observer",
+    "probability of being correct"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:39:59+09:00",
+  "review_status": "auto_unreviewed"
+}
