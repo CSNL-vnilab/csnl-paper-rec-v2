@@ -1,0 +1,44 @@
+{
+  "canonical_id": "588a3828da22a5aca077a8362eda8ae3",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "global movement suppression by STN", "role": "compared_against", "one_line": "STN broadly inhibits movement via downstream basal ganglia connections."},
+    {"name": "beta oscillation movement inhibition", "role": "compared_against", "one_line": "STN beta-band LFP power gates motor suppression and firing."},
+    {"name": "inhomogeneous population code", "role": "primary_lens", "one_line": "Distinct STN sub-populations encode kinematics versus action switches."}
+  ],
+  "core_question": "How does human STN activity respond when an ongoing reaching action must be replaced with an alternative trajectory?",
+  "key_assumptions": [
+    "STN single-unit and LFP activity can be recorded in humans during reaching",
+    "switching mid-action is a stronger test than withholding an uninitiated plan"
+  ],
+  "manipulations": [
+    "mid-action instructions to switch reaching trajectory",
+    "comparison of ongoing-movement versus action-switch epochs"
+  ],
+  "key_findings": [
+    "STN activity decreases during action switches rather than increasing",
+    "STN beta LFP power does not rise and does not entrain firing during switches",
+    "one STN sub-population encodes movement kinematics and direction",
+    "another STN sub-population encodes unexpected action switches"
+  ],
+  "interpretations": [
+    "STN does not act as a global movement suppressor in this switch context",
+    "STN supports an elaborate code for planning actions and changing plans"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "subthalamic nucleus",
+    "basal ganglia",
+    "action switching",
+    "reaching kinematics",
+    "beta oscillations",
+    "local field potential",
+    "population neural code",
+    "movement inhibition"
+  ],
+  "out_of_scope_note": null
+}

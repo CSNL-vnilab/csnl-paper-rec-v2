@@ -1,0 +1,40 @@
+{
+  "canonical_id": "834dd91f22da9d3a648f311bf7089196",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "probabilistic inference in the brain", "role": "primary_lens", "one_line": "Brain implements probabilistic inference at sensory and cognitive levels."},
+    {"name": "cognitively plausible approximate inference algorithms", "role": "extended", "one_line": "Psychology-derived approximation algorithms for intractable inference problems."},
+    {"name": "neural circuit mechanisms for sensory inference", "role": "extended", "one_line": "Low-level inference circuits scaled up to handle complex problems."}
+  ],
+  "core_question": "How can neural mechanisms that solve low-level sensory probabilistic inference be extended to support complex high-level cognitive inference?",
+  "key_assumptions": [
+    "The brain performs probabilistic inference",
+    "High-level cognitive inference problems are intractable in exact form",
+    "Approximation is necessary for cognition-scale inference",
+    "Sensory and cognitive inference share underlying mechanisms"
+  ],
+  "manipulations": [],
+  "key_findings": [
+    "A gap exists between simple sensory inference and intractable cognitive inference",
+    "Psychologists have proposed cognitively plausible approximate inference algorithms",
+    "These algorithmic accounts are increasingly being linked to neural circuit mechanisms"
+  ],
+  "interpretations": [
+    "Neural mechanisms for low-level sensory inference can be extended to tackle complex cognitive inference"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "probabilistic inference",
+    "approximate inference",
+    "neural circuit mechanisms",
+    "sensory inference",
+    "cognitive inference",
+    "cognitively plausible algorithms",
+    "intractable inference"
+  ],
+  "out_of_scope_note": null
+}

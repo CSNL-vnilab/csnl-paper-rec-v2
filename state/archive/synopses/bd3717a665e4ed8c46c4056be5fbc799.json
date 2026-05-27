@@ -1,0 +1,45 @@
+{
+  "canonical_id": "bd3717a665e4ed8c46c4056be5fbc799",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "linear dynamical systems", "role": "primary_lens", "one_line": "Linear input-driven dynamics fit to PFC population responses within each context."},
+    {"name": "context-dependent recurrent network dynamics", "role": "alternative_lens", "one_line": "Selection via context-modulated recurrent dynamics with transient input amplification."},
+    {"name": "input-modulation / attentional gating", "role": "alternative_lens", "one_line": "Selection via subtle contextual modulation of sensory inputs upstream of PFC."}
+  ],
+  "core_question": "How does prefrontal cortex implement context-dependent selection and integration of sensory inputs from its population dynamics?",
+  "key_assumptions": [
+    "PFC population responses can be approximated by linear dynamics driven by external inputs within a context",
+    "Mechanism can be inferred by fitting dynamical models to recorded population activity"
+  ],
+  "manipulations": [
+    "Behavioral context (which sensory feature is relevant for the decision)",
+    "Model class: linear-constrained vs unconstrained dynamics; recurrent-modulation vs input-modulation accounts"
+  ],
+  "key_findings": [
+    "Linear input-driven models capture PFC within-context responses comparably to unconstrained models",
+    "Two mechanisms — context-dependent recurrent dynamics with transient amplification, and contextual input modulation — fit the data equally well",
+    "Both accounts reveal input and recurrent properties missed by simpler descriptions of PFC responses"
+  ],
+  "interpretations": [
+    "Selection/integration may be implemented either by PFC recurrent context-switching or by upstream attentional input modulation",
+    "Linear-approximation modeling provides a principled framework linking rich population dynamics to neural computation"
+  ],
+  "limitations_noted": [
+    "Two distinct mechanisms remain equally consistent with the data — the approach does not adjudicate between them"
+  ],
+  "connecting_signals": [
+    "prefrontal cortex population dynamics",
+    "context-dependent decision-making",
+    "linear dynamical system fits",
+    "input selection and integration",
+    "transient input amplification",
+    "attentional modulation of sensory inputs",
+    "data-driven mechanistic models",
+    "behaving monkey electrophysiology"
+  ],
+  "out_of_scope_note": null
+}

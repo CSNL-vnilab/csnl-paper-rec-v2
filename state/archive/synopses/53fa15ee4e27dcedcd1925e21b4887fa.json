@@ -1,0 +1,35 @@
+{
+  "canonical_id": "53fa15ee4e27dcedcd1925e21b4887fa",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T10:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.5,
+  "frameworks": [
+    {"name": "visual metacognition", "role": "primary_lens", "one_line": "Field-level focus on metacognitive processes in visual perception."},
+    {"name": "consensus science", "role": "context", "one_line": "Community goal-setting process borrowed from mature sciences."}
+  ],
+  "core_question": "What long-term and medium-term goals should the field of visual metacognition collectively pursue?",
+  "key_assumptions": [
+    "Field-wide consensus accelerates scientific progress.",
+    "Psychological sciences lag mature sciences in identifying key questions.",
+    "Coordinated agendas reduce isolated, niche research efforts."
+  ],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [
+    "26 researchers reached consensus on four long-term and two medium-term goals for visual metacognition.",
+    "Consensus building around common goals could be adopted more widely in psychological science if successful."
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "visual metacognition",
+    "consensus goals",
+    "field-level coordination",
+    "psychological science progress",
+    "research agenda setting",
+    "long-term scientific goals",
+    "metacognitive research community"
+  ],
+  "out_of_scope_note": null
+}

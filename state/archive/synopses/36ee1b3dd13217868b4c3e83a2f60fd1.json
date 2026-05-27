@@ -1,0 +1,34 @@
+{
+  "canonical_id": "36ee1b3dd13217868b4c3e83a2f60fd1",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.2,
+  "frameworks": [
+    {"name": "interdisciplinary cognitive science", "role": "primary_lens", "one_line": "Cognition as a complex phenomenon requiring synthesis of diverse disciplines."},
+    {"name": "complexity science", "role": "context", "one_line": "Complex phenomena beckon convergent input across many disciplines."},
+    {"name": "cybernetics (Macy Conferences legacy)", "role": "context", "one_line": "1940s–50s cybernetics framed as groundwork for cognitive science."}
+  ],
+  "core_question": "How should cognitive science navigate the enduring tension between the challenges and benefits of interdisciplinary integration?",
+  "key_assumptions": [
+    "Cognition is intrinsically complex and resists single-discipline accounts.",
+    "Interdisciplinary integration is constitutive of cognitive science's identity."
+  ],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [
+    "The challenge–benefit tension of interdisciplinary work traces back to the field's cybernetic roots."
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "interdisciplinary cognitive science",
+    "complexity science",
+    "cybernetics",
+    "Macy Conferences",
+    "history of cognitive science",
+    "adaptive intelligence",
+    "disciplinary integration"
+  ],
+  "out_of_scope_note": "Editorial introduction to a special issue; reflective/historical commentary on cognitive science as an interdisciplinary field, not an empirical research paper."
+}

@@ -1,0 +1,34 @@
+{
+  "canonical_id": "0e68aaa9ef840483ed20e04b67e5a301",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "theory-driven experimentation", "role": "context", "one_line": "Recent paradigm credited with propelling neuroscience forward."},
+    {"name": "big neural data", "role": "context", "one_line": "Large-scale recordings shaping the next era of the field."},
+    {"name": "artificial intelligence models", "role": "context", "one_line": "Powerful AI systems considered as tools and lenses for neuroscience."}
+  ],
+  "core_question": "What is the future outlook for computational and systems neuroscience over the next 20 years?",
+  "key_assumptions": [
+    "Theory-driven experimentation has driven progress in recent decades",
+    "Big neural data and powerful AI models will shape the coming era"
+  ],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [
+    "The field's next 20 years will be shaped by the interplay of big neural data and powerful AI models"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "computational neuroscience",
+    "systems neuroscience",
+    "theory-driven experimentation",
+    "big neural data",
+    "artificial intelligence models",
+    "field outlook",
+    "future of neuroscience"
+  ],
+  "out_of_scope_note": null
+}
