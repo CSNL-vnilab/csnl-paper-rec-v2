@@ -1,0 +1,62 @@
+{
+  "frameworks": [
+    {
+      "name": "neural manifold representation",
+      "role": "primary_lens",
+      "one_line": "transitive relations encoded as geometry on a low-dimensional neural manifold"
+    },
+    {
+      "name": "few-shot knowledge assembly",
+      "role": "primary_lens",
+      "one_line": "rapid reorganisation of relational codes triggered by minimal linking information"
+    },
+    {
+      "name": "stochastic online gradient descent",
+      "role": "extended",
+      "one_line": "SGD adapted to enable rapid relational reorganisation in a connectionist network"
+    },
+    {
+      "name": "deep neural network model of cognition",
+      "role": "alternative_lens",
+      "one_line": "network simulation matched to human flexible relational learning"
+    }
+  ],
+  "core_question": "How can neural codes for transitive relations be rapidly reorganised when new linking information reveals previously hidden structure?",
+  "key_assumptions": [
+    "transitive orderings can be learned within distinct contexts before being linked",
+    "relational structure is encoded geometrically across dorsal frontoparietal cortex",
+    "few-shot reorganisation is feasible for both brains and gradient-based networks"
+  ],
+  "manipulations": [
+    "two distinct learning contexts each containing a transitive ordering of novel objects",
+    "exposure to linking information that bridges the two contexts",
+    "comparison of human BOLD responses with a neural network model"
+  ],
+  "key_findings": [
+    "BOLD signals in dorsal frontoparietal cortex showed rapid rearrangement of object representations after linking exposure",
+    "neural manifold reorganisation occurred after minimal linking information",
+    "an adapted SGD network model exhibits analogous rapid knowledge assembly"
+  ],
+  "interpretations": [
+    "flexible human cognition relies on few-shot reorganisation of relational neural codes",
+    "standard gradient-based learning can be modified to capture rapid knowledge assembly"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "knowledge assembly",
+    "transitive inference",
+    "neural manifold",
+    "dorsal frontoparietal cortex",
+    "few-shot learning",
+    "relational representation",
+    "stochastic gradient descent",
+    "deep neural network model"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "6b9c69d14fb118a8b8aaaeca6c78eaa5",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

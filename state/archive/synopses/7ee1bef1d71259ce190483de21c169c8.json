@@ -1,0 +1,61 @@
+{
+  "frameworks": [
+    {
+      "name": "neural gain modulation",
+      "role": "primary_lens",
+      "one_line": "ascending neuromodulators alter cortical gain to drive perceptual updating"
+    },
+    {
+      "name": "recurrent neural network dynamics",
+      "role": "primary_lens",
+      "one_line": "trained RNN performs ambiguous categorisation; gain is manipulated in silico"
+    },
+    {
+      "name": "low-dimensional brain state / energy landscape",
+      "role": "extended",
+      "one_line": "perceptual switches predicted by velocity peaks and flattened landscapes"
+    },
+    {
+      "name": "thalamocortical recurrent network hypothesis",
+      "role": "context",
+      "one_line": "distributed recurrent circuits whose interconnections are neuromodulated"
+    }
+  ],
+  "core_question": "Does phasic neuromodulatory gain modulation causally mediate perceptual switches during ambiguous-figure viewing?",
+  "key_assumptions": [
+    "pupil diameter indexes phasic neuromodulatory bursts",
+    "noradrenergic tone scales effective neural gain",
+    "whole-brain fMRI dynamics admit a meaningful low-dimensional readout"
+  ],
+  "manipulations": [
+    "ambiguous-figure viewing eliciting perceptual switches in humans",
+    "gain parameter in a trained RNN performing analogous categorisation"
+  ],
+  "key_findings": [
+    "perceptual reinterpretations coincide with peaks in pupil diameter",
+    "heightened RNN gain produces earlier perceptual shifts",
+    "fMRI perceptual switches co-occur with peaks in low-dimensional state velocity",
+    "fMRI perceptual switches co-occur with flattened energy-landscape dynamics"
+  ],
+  "interpretations": [
+    "phasic neuromodulatory gain causally mediates perceptual switches via recurrent network reconfiguration"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "perceptual switches",
+    "ambiguous figures",
+    "pupillometry",
+    "neural gain modulation",
+    "noradrenaline",
+    "recurrent neural network model",
+    "low-dimensional brain state",
+    "energy landscape dynamics"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "7ee1bef1d71259ce190483de21c169c8",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:43:16+09:00",
+  "review_status": "auto_unreviewed"
+}

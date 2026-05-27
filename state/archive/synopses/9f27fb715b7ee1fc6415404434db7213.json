@@ -1,0 +1,56 @@
+{
+  "frameworks": [
+    {
+      "name": "rhythmic / oscillatory attentional sampling",
+      "role": "primary_lens",
+      "one_line": "covert attention sweeps decision alternatives via an intrinsic ~11 Hz oscillation"
+    },
+    {
+      "name": "perceptual decision-making over multiple alternatives",
+      "role": "context",
+      "one_line": "three-alternative choice as a testbed for sequential evidence sampling"
+    },
+    {
+      "name": "neural decoding of covert attention",
+      "role": "extended",
+      "one_line": "MEG decoding tracks the locus and strength of attention over time"
+    }
+  ],
+  "core_question": "What internal dynamics govern the covert sampling of information across multiple decision alternatives?",
+  "key_assumptions": [
+    "decision-relevant information is acquired by sequentially attending to subsets",
+    "covert attentional state is readable from MEG via neural decoding",
+    "attention has a measurable locus and strength that vary across alternatives"
+  ],
+  "manipulations": [
+    "three-alternative perceptual choice task",
+    "tracking attentional locus and strength across time within trials"
+  ],
+  "key_findings": [
+    "covert attentional strength fluctuates rhythmically around 11 Hz",
+    "shifts of attention between alternatives tend to occur at the trough of the oscillation",
+    "attentional shifts reset the ongoing oscillation",
+    "at the peak, attention sharpens focus on the currently sampled alternative"
+  ],
+  "interpretations": [
+    "intrinsic attentional oscillations form a core mechanism for flexible sampling of decision alternatives",
+    "oscillation phase organizes alternation (comparison) versus deepening (focus) of processing"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "rhythmic attention",
+    "covert attentional sampling",
+    "alpha-band oscillation",
+    "multi-alternative perceptual decision",
+    "MEG neural decoding",
+    "attentional shifts and phase reset",
+    "sequential evidence sampling"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "9f27fb715b7ee1fc6415404434db7213",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

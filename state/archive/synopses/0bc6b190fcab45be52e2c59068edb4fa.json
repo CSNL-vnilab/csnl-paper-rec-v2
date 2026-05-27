@@ -1,0 +1,60 @@
+{
+  "frameworks": [
+    {
+      "name": "vascular space occupancy (VASO) fMRI",
+      "role": "primary_lens",
+      "one_line": "inversion-recovery sequence yielding vein-signal-free cerebral blood volume contrast"
+    },
+    {
+      "name": "layer-fMRI / sub-millimeter cortical depth imaging",
+      "role": "extended",
+      "one_line": "sub-millimeter functional imaging resolving cortical layer-specific activity"
+    },
+    {
+      "name": "cerebral blood volume (CBV) contrast",
+      "role": "primary_lens",
+      "one_line": "CBV-sensitive contrast as alternative to BOLD draining-vein bias"
+    }
+  ],
+  "core_question": "Can vein-signal-free VASO layer-fMRI be feasibly implemented and characterized at widely accessible 3T scanners?",
+  "key_assumptions": [
+    "longer T2* and stronger relative T1 contrast at 3T can offset reduced z-magnetization in inversion-recovery VASO",
+    "vein-free CBV contrast is preferable to BOLD for layer-specific signal",
+    "conventional scan durations are acceptable for layer-fMRI feasibility"
+  ],
+  "manipulations": [
+    "field strength comparison (3T vs 7T vs 9.4T)",
+    "task domain (motor, visual stimulation, whole-brain movie-watching, cognitive tasks)",
+    "sequence implementation parameters for VASO at 3T"
+  ],
+  "key_findings": [
+    "longer T2* and stronger T1 contrast at 3T partly compensate for lower z-magnetization in IR-VASO",
+    "3T layer-fMRI VASO is feasible within conventional scan durations for motor tasks despite thermal noise limits",
+    "protocol generalizes across visual, movie-watching, and weaker-effect cognitive paradigms"
+  ],
+  "interpretations": [
+    "vein-free CBV layer-fMRI can be brought to widely accessible 3T scanners beyond privileged UHF centers",
+    "thermal noise is the primary limiting factor for 3T layer-VASO applications"
+  ],
+  "limitations_noted": [
+    "thermal noise limits sensitivity at 3T",
+    "weaker effect sizes in cognitive tasks remain challenging"
+  ],
+  "connecting_signals": [
+    "layer-fMRI",
+    "VASO sequence",
+    "cerebral blood volume contrast",
+    "3T neuroimaging",
+    "cortical layer-specific imaging",
+    "inversion-recovery fMRI",
+    "draining-vein-free contrast",
+    "sub-millimeter functional imaging"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "0bc6b190fcab45be52e2c59068edb4fa",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

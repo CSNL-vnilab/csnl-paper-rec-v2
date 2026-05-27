@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "drift-diffusion",
+      "role": "primary_lens",
+      "one_line": "LIP accumulates evidence with drift-diffusion dynamics until a bound is reached"
+    },
+    {
+      "name": "threshold/bound termination",
+      "role": "extended",
+      "one_line": "SC bursts implement a threshold sensor that terminates accumulated evidence"
+    },
+    {
+      "name": "bursting dynamics",
+      "role": "primary_lens",
+      "one_line": "single-trial SC activity shows bursts distinct from gradual LIP buildup"
+    }
+  ],
+  "core_question": "Where and how is an accumulated decision variable read out to terminate a perceptual choice?",
+  "key_assumptions": [
+    "perceptual decisions arise from evidence accumulation to a bound",
+    "LIP carries the accumulated decision variable",
+    "termination requires a separable threshold-sensing mechanism"
+  ],
+  "manipulations": [
+    "simultaneous LIP and SC recordings during perceptual choice",
+    "causal SC inactivation during decisions",
+    "single-trial dynamics analysis versus trial-averaged activity"
+  ],
+  "key_findings": [
+    "LIP exhibits drift-diffusion single-trial dynamics while SC exhibits bursting",
+    "trial-averaged activity in LIP and SC looks similar despite distinct single-trial dynamics",
+    "SC inactivation prolongs LIP buildup and impairs threshold-diagnostic behavior"
+  ],
+  "interpretations": [
+    "SC bursts implement the threshold readout that commits a decision",
+    "deliberation in LIP is transformed into commitment by an SC threshold mechanism"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "drift-diffusion",
+    "decision termination",
+    "superior colliculus",
+    "lateral intraparietal area",
+    "bounded evidence accumulation",
+    "bursting dynamics",
+    "single-trial neural dynamics",
+    "perceptual decision-making"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "23d0bfe8470afb5ece56fa5dd1e7a3a8",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

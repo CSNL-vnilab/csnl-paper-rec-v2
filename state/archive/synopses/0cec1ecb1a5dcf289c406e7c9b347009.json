@@ -1,0 +1,56 @@
+{
+  "frameworks": [
+    {
+      "name": "traveling waves of cortical activity",
+      "role": "primary_lens",
+      "one_line": "stimulus-evoked and spontaneous activity propagates as waves across V1"
+    },
+    {
+      "name": "long-range horizontal connections",
+      "role": "extended",
+      "one_line": "intracortical horizontal circuitry proposed as substrate for wave propagation"
+    },
+    {
+      "name": "spatial integration in early visual cortex",
+      "role": "context",
+      "one_line": "wave dynamics tied to integrating signals across large cortical regions"
+    }
+  ],
+  "core_question": "Do localized visual stimuli and spontaneous activity in primary visual cortex propagate as traveling waves, and what is their substrate and function?",
+  "key_assumptions": [
+    "electrode and imaging signals reflect coherent population activity in V1",
+    "wave-like spread can be distinguished from globally synchronized activity",
+    "horizontal cortical connections can support lateral signal propagation"
+  ],
+  "manipulations": [
+    "localized vs widespread visual stimulation",
+    "comparison of evoked versus spontaneous activity regimes"
+  ],
+  "key_findings": [
+    "localized stimuli elicit activity waves traveling across primary visual cortex",
+    "traveling waves are also present during spontaneous activity",
+    "widespread and intensive visual stimulation greatly reduces these waves"
+  ],
+  "interpretations": [
+    "long-range horizontal connections likely provide the substrate for traveling waves",
+    "traveling waves may function to integrate visual information across large spatial regions"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "traveling waves",
+    "primary visual cortex",
+    "spontaneous activity",
+    "long-range horizontal connections",
+    "cortical wave propagation",
+    "spatial integration",
+    "evoked cortical activity",
+    "V1 population dynamics"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "0cec1ecb1a5dcf289c406e7c9b347009",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

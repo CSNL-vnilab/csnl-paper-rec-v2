@@ -1,0 +1,62 @@
+{
+  "frameworks": [
+    {
+      "name": "Bayesian function learning",
+      "role": "primary_lens",
+      "one_line": "Infer invariant structural parameters governing asset performance trajectories"
+    },
+    {
+      "name": "Probabilistic forecasting",
+      "role": "primary_lens",
+      "one_line": "Decisions driven by predicted final performance at task horizon"
+    },
+    {
+      "name": "Optimal foraging",
+      "role": "compared_against",
+      "one_line": "Myopic baseline assuming direct continuation of recent observations"
+    },
+    {
+      "name": "Study time allocation",
+      "role": "compared_against",
+      "one_line": "Myopic baseline relying solely on recent reward signals"
+    }
+  ],
+  "core_question": "How do people decide which dynamically-changing asset to invest in or switch away from?",
+  "key_assumptions": [
+    "Assets change endogenously with continued investment",
+    "Agents infer invariant structural parameters underlying performance changes",
+    "Choices are made by forecasting performance to a task-specific time horizon"
+  ],
+  "manipulations": [
+    "Selection versus switching task setup",
+    "Task-specific time horizons",
+    "Statistical properties of asset performance trajectories"
+  ],
+  "key_findings": [
+    "Bayesian forecasting model consistently outperforms myopic alternatives across four experiments",
+    "Behavior is sensitive to time horizon and trajectory statistics",
+    "Choices reflect anticipated future performance, not just recent observations"
+  ],
+  "interpretations": [
+    "Humans use future-looking cognition that anticipates how actions shape future asset performance",
+    "Representations of underlying structural dynamics inform present choices"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "Bayesian function learning",
+    "probabilistic forecasting",
+    "dynamic decision making",
+    "asset selection and switching",
+    "time horizon",
+    "structural dynamics",
+    "foraging models",
+    "study time allocation"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "3e7dc6e6a819fb5bd5fa8fa959401651",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:43:16+09:00",
+  "review_status": "auto_unreviewed"
+}
