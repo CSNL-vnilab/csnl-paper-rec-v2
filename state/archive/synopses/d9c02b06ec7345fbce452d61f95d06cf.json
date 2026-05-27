@@ -1,0 +1,56 @@
+{
+  "frameworks": [
+    {
+      "name": "distributed competitive decision-making",
+      "role": "primary_lens",
+      "one_line": "competition between choice-selective neural populations across cortical areas shapes choice and confidence"
+    },
+    {
+      "name": "intra-cortical winner-take-all competition",
+      "role": "extended",
+      "one_line": "premotor competing signals each contribute uniquely to confidence rather than only the winner"
+    },
+    {
+      "name": "consensus / evidence accumulation across modules",
+      "role": "primary_lens",
+      "one_line": "confidence reflects agreement among many local decision modules across cortex"
+    }
+  ],
+  "core_question": "Does subjective confidence reflect the consensus among choice-selective signals distributed across many cortical areas?",
+  "key_assumptions": [
+    "choice-selective neural populations exist across many cortical regions",
+    "MEG choice-selective signals index distributed decision dynamics",
+    "confidence is a graded, reportable signal tied to decision computations"
+  ],
+  "manipulations": [
+    "difficult perceptual decisions in human participants",
+    "tracking signals favoring chosen vs alternative option per trial",
+    "varying which cortical area supports the selected option"
+  ],
+  "key_findings": [
+    "premotor cortex showed competing choice-selective signals for chosen and alternative options",
+    "both competing premotor signals made opposing and unique contributions to confidence",
+    "number and strength of choice-selective signals in associative cortex supporting the choice added to confidence"
+  ],
+  "interpretations": [
+    "confidence emerges from cortex-wide competitive dynamics monitoring consensus across local decision modules"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "perceptual decision-making",
+    "subjective confidence",
+    "choice-selective populations",
+    "premotor cortex competition",
+    "magnetoencephalography (MEG)",
+    "distributed cortical decision dynamics",
+    "associative cortex consensus",
+    "metacognition"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "d9c02b06ec7345fbce452d61f95d06cf",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:51:52+09:00",
+  "review_status": "auto_unreviewed"
+}

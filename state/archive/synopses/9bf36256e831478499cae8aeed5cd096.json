@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "population decoding",
+      "role": "primary_lens",
+      "one_line": "single-trial population activity decoded to read out elapsed and remaining time"
+    },
+    {
+      "name": "neural population dynamics",
+      "role": "primary_lens",
+      "one_line": "decision computations as low-dimensional dynamical motifs in corticostriatal circuits"
+    },
+    {
+      "name": "ramp-vs-bump temporal coding",
+      "role": "extended",
+      "one_line": "time encoding decomposed into monotonic ramps and transient bumps"
+    },
+    {
+      "name": "state-transition view of commitment",
+      "role": "alternative_lens",
+      "one_line": "decision commitment as a transition between low-dimensional neural subspaces"
+    }
+  ],
+  "core_question": "How are evidence evaluation, time tracking, and decision commitment distributed across rat frontal cortex and dorsal striatum populations?",
+  "key_assumptions": [
+    "FOF and ADS jointly support perceptual decision making",
+    "population activity carries decodable temporal signals on single trials",
+    "low-dimensional subspaces capture task-relevant dynamics"
+  ],
+  "manipulations": [
+    "recording region (FOF vs ADS)",
+    "task epoch (evidence evaluation vs decision report)",
+    "temporal reference frame (retrospective from stimulus vs prospective to report)"
+  ],
+  "key_findings": [
+    "both FOF and ADS robustly decoded retrospective and prospective time on single trials",
+    "time encoding decomposed into ramp-like and bump-like dynamical motifs",
+    "FOF showed more pronounced decision-aligned changes near report than ADS",
+    "stable evidence-evaluation subspaces transitioned at commitment, more so in FOF"
+  ],
+  "interpretations": [
+    "frontostriatal populations share temporal coding but diverge at decision commitment",
+    "FOF subspace transitions may reflect a state change marking commitment"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "Neuropixels recording",
+    "frontal orienting field",
+    "anterior dorsal striatum",
+    "population decoding",
+    "auditory change detection",
+    "ramp and bump dynamics",
+    "neural subspace transitions",
+    "decision commitment"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "9bf36256e831478499cae8aeed5cd096",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

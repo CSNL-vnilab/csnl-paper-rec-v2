@@ -1,0 +1,56 @@
+{
+  "frameworks": [
+    {
+      "name": "Affective Computing",
+      "role": "primary_lens",
+      "one_line": "automatic recognition of emotional states from physiological signals"
+    },
+    {
+      "name": "Circumplex Model of Affect",
+      "role": "context",
+      "one_line": "two-dimensional arousal-valence representation of emotional states"
+    },
+    {
+      "name": "Support Vector Machine classification",
+      "role": "primary_lens",
+      "one_line": "supervised classifier mapping physiological features to affective quadrants"
+    }
+  ],
+  "core_question": "Can immersive virtual environments elicit distinct emotional states that are decodable from EEG and ECG dynamics?",
+  "key_assumptions": [
+    "arousal and valence span emotion space",
+    "linear and nonlinear cardiac/neural dynamics carry affective information",
+    "immersive VR elicits stronger affect than non-immersive stimuli"
+  ],
+  "manipulations": [
+    "four virtual rooms tiling arousal-valence quadrants",
+    "EEG vs ECG feature families"
+  ],
+  "key_findings": [
+    "arousal classified at 75% accuracy",
+    "valence classified at 71% accuracy",
+    "linear and nonlinear features from EEG and ECG support quadrant prediction"
+  ],
+  "interpretations": [
+    "immersive VR is a valid elicitor for affect recognition systems",
+    "combined neural and cardiac dynamics suffice to decode arousal-valence"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "affective computing",
+    "emotion recognition",
+    "immersive virtual reality",
+    "EEG",
+    "ECG",
+    "arousal-valence",
+    "wearable sensors",
+    "support vector machine"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "ea184b057c8a4b2cfc3819aae464ea90",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:51:52+09:00",
+  "review_status": "auto_unreviewed"
+}

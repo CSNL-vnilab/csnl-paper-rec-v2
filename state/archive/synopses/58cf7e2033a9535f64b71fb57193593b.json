@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "cortical hierarchy / principal gradient of macroscale organization",
+      "role": "primary_lens",
+      "one_line": "unimodal-to-transmodal axis organizing local versus distributed processing"
+    },
+    {
+      "name": "task-evoked activity vs functional connectivity dissociation",
+      "role": "extended",
+      "one_line": "contrasts localized BOLD activation with distributed task-state FC change"
+    },
+    {
+      "name": "intrinsic timescale framework",
+      "role": "alternative_lens",
+      "one_line": "resting-state timescale aligned with hierarchical position"
+    }
+  ],
+  "core_question": "How do localized task activations and distributed connectivity changes differ across the cortical hierarchy?",
+  "key_assumptions": [
+    "task activity and FC reflect dissociable processes",
+    "principal gradient indexes cortical hierarchical organization",
+    "intrinsic timescale and myelin index hierarchical position"
+  ],
+  "manipulations": [
+    "compared regional task-evoked activity vs task-state FC change",
+    "multiple cognitive tasks aggregated",
+    "related cortical maps to principal gradient, timescale, and myelin"
+  ],
+  "key_findings": [
+    "task-evoked activity high in unimodal, low in transmodal areas",
+    "task-state FC reduced in unimodal relative to transmodal areas",
+    "negative relationship between localized activity and distributed FC across cortex",
+    "dissociation aligned with principal gradient, intrinsic timescale, and myelin content"
+  ],
+  "interpretations": [
+    "cortical hierarchy supports a trade-off between localized and distributed processing",
+    "task activity vs FC dissociation indexes macroscale hierarchical organization"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "cortical hierarchy",
+    "principal gradient",
+    "task-evoked activity",
+    "functional connectivity",
+    "intrinsic timescale",
+    "unimodal transmodal axis",
+    "myelin content",
+    "resting-state fMRI"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "58cf7e2033a9535f64b71fb57193593b",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:51:52+09:00",
+  "review_status": "auto_unreviewed"
+}

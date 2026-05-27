@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "Structured Event Memory (SEM)",
+      "role": "primary_lens",
+      "one_line": "neuro-symbolic generative model of event segmentation, schemata, and memory reconstruction"
+    },
+    {
+      "name": "probabilistic generative model of event dynamics",
+      "role": "extended",
+      "one_line": "scene dynamics formulated probabilistically over structured symbolic representations"
+    },
+    {
+      "name": "symbolic structured representation",
+      "role": "alternative_lens",
+      "one_line": "discrete relational scene descriptions combined with continuous embeddings"
+    },
+    {
+      "name": "neural network embeddings",
+      "role": "alternative_lens",
+      "one_line": "vector-space parametrization of scene dynamics for high-dimensional inputs"
+    }
+  ],
+  "core_question": "How do humans segment continuous experience into discrete events and use learned event structure to organize memory and generalize?",
+  "key_assumptions": [
+    "experience can be modeled as discrete event units with learnable structure",
+    "scenes can be represented symbolically and embedded in a vector space",
+    "event boundaries and schemata arise from probabilistic inference",
+    "memory reconstruction uses event knowledge as prior"
+  ],
+  "manipulations": [
+    "structured symbolic vs. continuous neural representations of scenes",
+    "scaling input dimensionality up to naturalistic video"
+  ],
+  "key_findings": [
+    "SEM infers event boundaries from probabilistic reasoning over the generative model",
+    "model learns event schemata and reconstructs past experience using them",
+    "produces human-like event segmentation on naturalistic video data",
+    "accounts for a wide array of memory phenomena"
+  ],
+  "interpretations": [
+    "combining structured symbolic and neural network approaches captures high-level event cognition",
+    "event segmentation, schema learning, and memory reconstruction emerge from a single generative model"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "event segmentation",
+    "event cognition",
+    "event schemata",
+    "memory reconstruction",
+    "neuro-symbolic model",
+    "generative model of scenes",
+    "naturalistic video segmentation",
+    "structured representations"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "1498deefa98e96836f812a34e1fe42f2",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

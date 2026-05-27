@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "uncertainty-guided exploration",
+      "role": "primary_lens",
+      "one_line": "explore-exploit decisions driven by distinct uncertainty signals"
+    },
+    {
+      "name": "directed exploration (uncertainty bonus)",
+      "role": "extended",
+      "one_line": "relative uncertainty adds a bonus that biases choice toward less-known options"
+    },
+    {
+      "name": "random exploration (stochastic choice)",
+      "role": "extended",
+      "one_line": "total uncertainty scales decision noise to encourage exploration"
+    },
+    {
+      "name": "model-based fMRI of two-armed bandit",
+      "role": "primary_lens",
+      "one_line": "computational model fits to bandit choices regressed against BOLD"
+    }
+  ],
+  "core_question": "Are directed and random exploration supported by dissociable neural representations of different uncertainty signals?",
+  "key_assumptions": [
+    "two uncertainty quantities (relative and total) can be independently manipulated",
+    "exploration strategies combine additively in a hybrid decision policy",
+    "model-derived uncertainty estimates index neural computation"
+  ],
+  "manipulations": [
+    "relative uncertainty between two bandit options",
+    "total uncertainty across the two options",
+    "two-armed bandit task structure"
+  ],
+  "key_findings": [
+    "relative uncertainty correlates with BOLD in right rostrolateral prefrontal cortex",
+    "total uncertainty correlates with BOLD in left dorsolateral prefrontal cortex",
+    "right RLPFC signal drives directed exploration via uncertainty bonus",
+    "subjective uncertainty estimates from both regions predict subsequent choices"
+  ],
+  "interpretations": [
+    "different uncertainty computations are performed in dissociable prefrontal regions",
+    "a hybrid architecture combines these signals downstream to guide exploration"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "explore-exploit dilemma",
+    "directed exploration",
+    "random exploration",
+    "relative uncertainty",
+    "total uncertainty",
+    "rostrolateral prefrontal cortex",
+    "dorsolateral prefrontal cortex",
+    "two-armed bandit"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "aebe66b3d9725a7b4eb1bdc75dca3a5f",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

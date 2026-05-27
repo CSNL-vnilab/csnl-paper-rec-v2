@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "GABAergic inhibition and perceptual learning",
+      "role": "primary_lens",
+      "one_line": "task-dependent cortical inhibition mediates learning-related plasticity in sensory cortex"
+    },
+    {
+      "name": "noise suppression vs feature template retuning",
+      "role": "extended",
+      "one_line": "dissociable inhibitory mechanisms support distinct learning subprocesses"
+    },
+    {
+      "name": "BOLD fMRI signal",
+      "role": "compared_against",
+      "one_line": "BOLD alone cannot disentangle inhibitory from excitatory contributions to plasticity"
+    },
+    {
+      "name": "tDCS cortical excitability modulation",
+      "role": "context",
+      "one_line": "perturbing excitability during training causally tests inhibition's role in learning"
+    }
+  ],
+  "core_question": "Does GABAergic inhibition in sensory cortex causally support distinct mechanisms of perceptual learning?",
+  "key_assumptions": [
+    "MR spectroscopy GABA reflects task-relevant inhibitory tone",
+    "BOLD signal alone cannot dissociate inhibition from excitation",
+    "perceptual learning involves separable noise-filtering and template-tuning processes"
+  ],
+  "manipulations": [
+    "training task type (noise filtering vs feature template retuning)",
+    "tDCS perturbation of cortical excitability during training",
+    "combined fMRI and MR spectroscopy measurement"
+  ],
+  "key_findings": [
+    "GABAergic inhibition in occipito-temporal cortex relates to functional plasticity and behavioral improvement",
+    "decreased GABA accompanies noise-filtering learning",
+    "increased GABA accompanies feature template retuning",
+    "tDCS perturbation alters performance in a task-specific manner"
+  ],
+  "interpretations": [
+    "task-dependent GABAergic inhibition implements dissociable learning mechanisms",
+    "cortical suppression is directly linked to behavioral improvement in perceptual learning"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "perceptual learning",
+    "GABAergic inhibition",
+    "MR spectroscopy",
+    "noise filtering",
+    "feature template retuning",
+    "occipito-temporal cortex",
+    "tDCS",
+    "cortical plasticity"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "09e773e864ea1115c3e370e0c534fd3f",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

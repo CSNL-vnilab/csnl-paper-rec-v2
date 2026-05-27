@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "cross-codal integration in narrative comprehension",
+      "role": "primary_lens",
+      "one_line": "comprehenders integrate event information across pictorial and textual codalities"
+    },
+    {
+      "name": "visual narrative event processing",
+      "role": "context",
+      "one_line": "narratives convey event sequences via different code systems"
+    },
+    {
+      "name": "bridging-event inference",
+      "role": "extended",
+      "one_line": "missing intermediate events are inferred to link panels into coherent sequences"
+    }
+  ],
+  "core_question": "How does the codality (picture vs text vs blank) of bridging-event information affect comprehension of visual narrative events?",
+  "key_assumptions": [
+    "narrative comprehension requires integrating across panels",
+    "viewing time on end-state panels indexes integration cost",
+    "pictures and text differ as event-information codalities"
+  ],
+  "manipulations": [
+    "codality of the bridging panel: picture, text, or absent",
+    "absent vs blank-panel replacement of the bridging event",
+    "direct comparison of text, picture, and blank conditions"
+  ],
+  "key_findings": [
+    "end-state viewing times comparable between absent and text bridging conditions",
+    "end-state viewing times longer in text than pictorial bridging condition",
+    "end-state viewing times longest when bridging panel was a blank",
+    "blank-panel distortion exceeds the cost of cross-codal integration"
+  ],
+  "interpretations": [
+    "cross-codal integration during narrative comprehension is possible but incurs additional mental effort"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "visual narrative comprehension",
+    "cross-codal integration",
+    "bridging-event inference",
+    "picture-text integration",
+    "viewing time",
+    "end-state panel",
+    "event sequence understanding",
+    "blank panel cost"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "f80735609b2c88656ddba46a2e36cdc0",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}
