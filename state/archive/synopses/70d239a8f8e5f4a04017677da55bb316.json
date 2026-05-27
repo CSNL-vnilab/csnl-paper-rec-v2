@@ -1,0 +1,55 @@
+{
+  "frameworks": [
+    {
+      "name": "reinforcement learning",
+      "role": "primary_lens",
+      "one_line": "dopamine as a reward prediction error signal driving learning"
+    },
+    {
+      "name": "reward prediction error account of interval timing",
+      "role": "extended",
+      "one_line": "RPE framework extended to control speed of subjective time"
+    },
+    {
+      "name": "unified theory of RL and interval timing",
+      "role": "primary_lens",
+      "one_line": "single computational account linking dopamine, RPE, and time perception"
+    }
+  ],
+  "core_question": "Does the timing of dopamine signals relative to reward bidirectionally update the speed of subjective time on subsequent trials?",
+  "key_assumptions": [
+    "dopamine encodes a reward prediction error signal",
+    "ramping dopamine slope reads out subjective time speed",
+    "early DA signals speed up and late DA signals slow down subjective time"
+  ],
+  "manipulations": [
+    "reanalysis of dopamine timing across trials in a self-timed movement task",
+    "trial-by-trial variation in previous-trial DA signal timing"
+  ],
+  "key_findings": [
+    "trial-by-trial changes in ramping dopamine slope are predicted by previous-trial DA timing",
+    "ramping slope changes are bidirectional, consistent with the RPE-timing prediction"
+  ],
+  "interpretations": [
+    "dopamine mediates a bidirectional update of interval timing",
+    "result supports a unified computational theory linking RL and interval timing"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "dopamine",
+    "reward prediction error",
+    "interval timing",
+    "subjective time",
+    "ramping dopamine activity",
+    "substantia nigra pars compacta",
+    "self-timed movement",
+    "trial-by-trial update"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "70d239a8f8e5f4a04017677da55bb316",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}

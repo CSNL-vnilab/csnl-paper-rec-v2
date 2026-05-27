@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "grokking",
+      "role": "primary_lens",
+      "one_line": "delayed generalization where representations keep improving after behavior plateaus"
+    },
+    {
+      "name": "margin maximization",
+      "role": "extended",
+      "one_line": "class representations continue to separate during overtraining"
+    },
+    {
+      "name": "neural population decoding",
+      "role": "primary_lens",
+      "one_line": "linear readout from sensory cortex tracks hidden representational change"
+    }
+  ],
+  "core_question": "Does task-relevant representation learning continue in sensory cortex after behavior saturates?",
+  "key_assumptions": [
+    "behavioral plateau need not imply representational plateau",
+    "linear decodability indexes task-relevant population structure",
+    "held-out generalization tests reveal latent learning"
+  ],
+  "manipulations": [
+    "amount of training extended past behavioral ceiling (overtraining)",
+    "reanalysis of held-out generalization probes"
+  ],
+  "key_findings": [
+    "decoding accuracy from posterior piriform populations increases during overtraining",
+    "generalization performance on held-out tests improves after behavioral saturation",
+    "previously misclassified examples become correctly classified later in training",
+    "class representations continue to separate in cortex over overtraining"
+  ],
+  "interpretations": [
+    "hidden learning during overtraining takes the form of approximate margin maximization",
+    "sensory cortex exhibits grokking-like delayed representational progress"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "overtraining",
+    "grokking",
+    "posterior piriform cortex",
+    "population decoding",
+    "margin maximization",
+    "delayed generalization",
+    "olfactory cortex learning",
+    "class separation"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "fecaaea5769996a7a89e2c1ce13faff1",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:59:16+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,55 @@
+{
+  "frameworks": [
+    {
+      "name": "signal detection theory",
+      "role": "extended",
+      "one_line": "classical SDT extended with information-theoretic approximations to proportion correct"
+    },
+    {
+      "name": "information theory",
+      "role": "primary_lens",
+      "one_line": "entropy-based decomposition bounds classification performance in stimulus discrimination"
+    }
+  ],
+  "core_question": "Can information-theoretic quantities provide a tractable lower bound on the probability of correct classification in signal detection?",
+  "key_assumptions": [
+    "stimuli are drawn from generating distributions to be classified",
+    "classification performance can be characterized via probability of correct response",
+    "observers have an internal model of class distributions that may differ from truth"
+  ],
+  "manipulations": [
+    "number of stimulus categories beyond binary",
+    "dimensionality of the stimulus representation",
+    "discrepancy between observer model and true generating distributions"
+  ],
+  "key_findings": [
+    "a lower bound on proportion correct can be expressed via three information-theoretic factors",
+    "the bound decomposes into prior uncertainty, class separability, and observer-model discrepancy",
+    "the bound generalizes to multiple dimensions and many stimulus categories where integration is hard",
+    "the bound does not require Gaussian distributional assumptions"
+  ],
+  "interpretations": [
+    "information theory provides a tractable substitute for direct integration in high-dimensional SDT",
+    "classification accuracy can be understood as jointly limited by prior, separability, and model mismatch"
+  ],
+  "limitations_noted": [
+    "the bound is loose compared to direct integration of proportion correct"
+  ],
+  "connecting_signals": [
+    "signal detection theory",
+    "information theory",
+    "proportion correct bound",
+    "classification under uncertainty",
+    "prior uncertainty",
+    "class separability",
+    "model mismatch",
+    "non-Gaussian distributions"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "ce13a91b50efcbd825058e939e3b3240",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}

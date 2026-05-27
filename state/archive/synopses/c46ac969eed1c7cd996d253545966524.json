@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "recurrent vs feedforward processing",
+      "role": "primary_lens",
+      "one_line": "dissociates recurrent from feedforward contributions along the ventral visual stream"
+    },
+    {
+      "name": "backward masking paradigm",
+      "role": "extended",
+      "one_line": "masking used to isolate recurrent processing in EEG and fMRI"
+    },
+    {
+      "name": "convolutional neural network models",
+      "role": "compared_against",
+      "one_line": "CNN feature hierarchy benchmarks how recurrence shifts feature format"
+    },
+    {
+      "name": "spectro-temporal neural dynamics",
+      "role": "alternative_lens",
+      "one_line": "characterizes recurrence through theta-to-beta frequency components"
+    }
+  ],
+  "core_question": "Where, when, and how does recurrent processing shape object representations across the ventral visual stream?",
+  "key_assumptions": [
+    "backward masking selectively disrupts recurrent processing",
+    "multivariate analysis can tease apart feedforward and recurrent components",
+    "CNN feature hierarchy provides a comparable representational benchmark"
+  ],
+  "manipulations": [
+    "presence vs absence of backward masking",
+    "imaging modality combination (EEG and fMRI)",
+    "comparison of brain representations against CNN layers"
+  ],
+  "key_findings": [
+    "recurrence shapes EVC representations early around 100 ms",
+    "two later recurrence phases emerge in LOC around 175 and 300 ms",
+    "recurrence adds persistent rather than transient neural dynamics",
+    "recurrence shifts LOC features from mid-level toward high-level"
+  ],
+  "interpretations": [
+    "recurrent processing substantially shapes ventral-stream visual representations",
+    "recurrence is mediated by four distinct spectro-temporal components spanning theta to beta"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "recurrent processing",
+    "ventral visual stream",
+    "backward masking",
+    "EEG fMRI multivariate analysis",
+    "lateral occipital cortex",
+    "early visual cortex",
+    "CNN representational comparison",
+    "spectro-temporal components"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "c46ac969eed1c7cd996d253545966524",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}

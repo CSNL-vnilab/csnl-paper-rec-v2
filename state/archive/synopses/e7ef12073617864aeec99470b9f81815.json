@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "evidence accumulation model",
+      "role": "extended",
+      "one_line": "accumulated evidence framework extended from choice to prospective difficulty judgment"
+    },
+    {
+      "name": "perceptual decision making",
+      "role": "primary_lens",
+      "one_line": "two-alternative color dominance judgment over dynamic random-dot patches"
+    },
+    {
+      "name": "metacognition of prospective judgment",
+      "role": "context",
+      "one_line": "judging task difficulty before committing to the task itself"
+    }
+  ],
+  "core_question": "How do observers judge which of two perceptual tasks will be easier without performing them?",
+  "key_assumptions": [
+    "difficulty is operationalized as |p_blue − 0.5| of stimulus coherence",
+    "observers can accumulate evidence in parallel from both patches",
+    "a useful difficulty judgment must not require completing the task"
+  ],
+  "manipulations": [
+    "stimulus coherence p_blue varied across trials and across the two patches",
+    "absolute difference in stimulus difficulty between the two patches",
+    "pairings where both patches share the same difficulty level"
+  ],
+  "key_findings": [
+    "difficulty-judgment accuracy improved with the difference in stimulus difficulties",
+    "reaction times were not determined solely by the difficulty difference",
+    "with matched difficulty, reaction times were shorter for easier stimuli",
+    "data favored a model comparing absolute accumulated evidence with a fixed termination gap"
+  ],
+  "interpretations": [
+    "evidence accumulation generalizes from choice, RT and confidence to prospective difficulty judgments",
+    "a fixed-difference termination rule on absolute accumulated evidence underlies difficulty comparisons"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "perceptual decision making",
+    "evidence accumulation",
+    "difficulty judgment",
+    "prospective metacognition",
+    "random dot motion-like color coherence",
+    "reaction time modeling",
+    "stimulus coherence",
+    "model comparison of decision rules"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "e7ef12073617864aeec99470b9f81815",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}

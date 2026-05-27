@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "skeletal shape representation",
+      "role": "primary_lens",
+      "one_line": "object shape encoded via an internal skeletal (medial-axis) structure"
+    },
+    {
+      "name": "representational similarity analysis",
+      "role": "primary_lens",
+      "one_line": "compare neural response geometry to candidate similarity models"
+    },
+    {
+      "name": "Gabor-jet / GIST / HMAX / AlexNet visual features",
+      "role": "compared_against",
+      "one_line": "low- to high-level image-feature models tested as alternative explanations"
+    }
+  ],
+  "core_question": "Does the human visual cortex represent object shape via a skeletal structure?",
+  "key_assumptions": [
+    "neural similarity in a region reflects its representational content",
+    "skeletal structure can be operationalized as a similarity model over objects",
+    "controlling for image-feature models isolates shape-specific variance"
+  ],
+  "manipulations": [
+    "object identity varied across stimuli with defined skeletons",
+    "surface form altered while preserving the underlying skeleton",
+    "comparison across competing similarity models (Gabor-jet, GIST, HMAX, AlexNet)"
+  ],
+  "key_findings": [
+    "skeletal similarity explained unique variance in V3 and LO response profiles",
+    "skeletal model remained predictive after controlling for image-feature models",
+    "skeletal coding held across different surface forms with preserved skeletons"
+  ],
+  "interpretations": [
+    "V3 and LO carry a shape representation organized around skeletal structure",
+    "skeletal structure is a computational primitive of human shape processing"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "object shape representation",
+    "medial-axis / skeletal structure",
+    "representational similarity analysis",
+    "area V3",
+    "lateral occipital cortex (LO)",
+    "shape invariance across surface form",
+    "image-computable feature models",
+    "fMRI of object recognition"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "87be49aa85020389d1ea7e80ccd206b2",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:59:16+09:00",
+  "review_status": "auto_unreviewed"
+}

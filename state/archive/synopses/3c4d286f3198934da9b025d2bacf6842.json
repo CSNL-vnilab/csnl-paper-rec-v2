@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "Bayesian cue combination",
+      "role": "primary_lens",
+      "one_line": "memory uncertainty is integrated with priors and rewards to guide decisions"
+    },
+    {
+      "name": "working memory with trial-to-trial uncertainty",
+      "role": "extended",
+      "one_line": "WM representations carry graded reliability accessible for downstream choice"
+    },
+    {
+      "name": "rewarded decision-making",
+      "role": "primary_lens",
+      "one_line": "subjects use elicited uncertainty to maximize reward in choice tasks"
+    }
+  ],
+  "core_question": "Do people incorporate trial-to-trial working memory uncertainty into rewarded decisions and combine it with prior beliefs?",
+  "key_assumptions": [
+    "working memory carries graded, trial-varying uncertainty",
+    "subjects can report memory uncertainty via rewarded choices",
+    "uncertainty can be combined with priors via Bayesian-like integration"
+  ],
+  "manipulations": [
+    "color stimuli held in working memory",
+    "induced prior expectations over stimulus colors",
+    "reward structure eliciting uncertainty reports"
+  ],
+  "key_findings": [
+    "reported memory uncertainty correlates with memory error",
+    "estimates shift toward expected (prior) colors",
+    "prior-induced shift increases with reported uncertainty"
+  ],
+  "interpretations": [
+    "people access and use trial-to-trial WM uncertainty in decisions",
+    "memory uncertainty is combined with rewards and prior beliefs"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "working memory uncertainty",
+    "trial-to-trial uncertainty",
+    "rewarded decision",
+    "prior beliefs",
+    "color working memory",
+    "Bayesian cue combination",
+    "memory error",
+    "uncertainty-weighted prior shift"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "3c4d286f3198934da9b025d2bacf6842",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}

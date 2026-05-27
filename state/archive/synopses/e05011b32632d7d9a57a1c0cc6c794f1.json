@@ -1,0 +1,62 @@
+{
+  "frameworks": [
+    {
+      "name": "dual-process signal detection",
+      "role": "primary_lens",
+      "one_line": "separate mechanisms support perceptual decisions and metacognitive monitoring"
+    },
+    {
+      "name": "single-process signal detection",
+      "role": "compared_against",
+      "one_line": "one mechanism predicts perceptual and metacognitive fatigue should correlate positively"
+    },
+    {
+      "name": "limited cognitive resources / vigilance decrement",
+      "role": "extended",
+      "one_line": "shared finite resources allocated between perception and metacognition over time"
+    },
+    {
+      "name": "frontal polar metacognition",
+      "role": "context",
+      "one_line": "prefrontal gray matter volume linked to visual metacognitive ability"
+    }
+  ],
+  "core_question": "Do perceptual performance and metacognitive sensitivity decline together over time, or do they trade off?",
+  "key_assumptions": [
+    "metacognitive sensitivity is how well confidence tracks accuracy",
+    "vigilance decrement reflects depletion of a limited resource",
+    "frontal polar cortex contributes to metacognition"
+  ],
+  "manipulations": [
+    "time on task within long behavioral blocks",
+    "metacognitive demand (with vs without confidence reporting)",
+    "individual gray matter volume of frontal polar area"
+  ],
+  "key_findings": [
+    "perceptual and metacognitive fatigue showed negative or near-zero correlations",
+    "frontal polar gray matter volume correlated with individual behavioral differences",
+    "reducing metacognitive demand improved perceptual vigilance"
+  ],
+  "interpretations": [
+    "perceptual and metacognitive decisions rely on distinct mechanisms drawing on common resources",
+    "frontal polar cortex may supply shared resources arbitrated between the two processes"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "metacognitive sensitivity",
+    "perceptual vigilance",
+    "vigilance decrement",
+    "dual-process signal detection",
+    "confidence ratings",
+    "frontal polar cortex",
+    "limited cognitive resources",
+    "perception-metacognition trade-off"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "e05011b32632d7d9a57a1c0cc6c794f1",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}
