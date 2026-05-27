@@ -1,0 +1,50 @@
+{
+  "frameworks": [
+    {
+      "name": "computational neuroscience modeling",
+      "role": "context",
+      "one_line": "Modeling practice viewed as a heterogeneous set of goal-driven activities."
+    },
+    {
+      "name": "goal-pluralism in model evaluation",
+      "role": "primary_lens",
+      "one_line": "Models judged relative to their authors' stated goals rather than a single criterion."
+    }
+  ],
+  "core_question": "Do computational neuroscientists pursue a common goal, or do their modeling goals genuinely diverge in ways that affect how research should be evaluated?",
+  "key_assumptions": [
+    "Modeling efforts are motivated by goals that are not always made explicit",
+    "Multiple distinct goals can each be legitimately of highest importance",
+    "Evaluation criteria for a model depend on the goal it serves"
+  ],
+  "manipulations": [
+    "Informal online survey of modelers' stated goals"
+  ],
+  "key_findings": [
+    "Survey responses confirm wide divergence of goals across the community",
+    "Disagreements about model merit often track goal differences rather than methodological flaws"
+  ],
+  "interpretations": [
+    "Authors should explicitly state goals when proposing models so evaluation matches intent",
+    "Apparent disputes over model quality dissolve once goal heterogeneity is acknowledged"
+  ],
+  "limitations_noted": [
+    "Survey was informal and Internet-based"
+  ],
+  "connecting_signals": [
+    "diversity of modeling goals",
+    "evaluation of computational models",
+    "goals in computational neuroscience",
+    "model purpose and merit",
+    "meta-science of brain modeling",
+    "explicit goal statement in modeling",
+    "modeler survey"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "d9d6d31ca2fd73f0bb4a4f1404a8b083",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:12:14+09:00",
+  "review_status": "auto_unreviewed"
+}

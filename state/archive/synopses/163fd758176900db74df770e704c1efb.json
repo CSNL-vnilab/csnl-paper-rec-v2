@@ -1,0 +1,52 @@
+{
+  "frameworks": [
+    {
+      "name": "model-based vs model-free reinforcement learning",
+      "role": "primary_lens",
+      "one_line": "Habitual vs planning RL as endpoints of an accuracy-effort tradeoff."
+    },
+    {
+      "name": "metacontrol / cost-benefit arbitration",
+      "role": "primary_lens",
+      "one_line": "Agent allocates between cheap and costly decision processes by weighing benefits against compute."
+    },
+    {
+      "name": "bounded rationality / resource-rational decision making",
+      "role": "context",
+      "one_line": "Computational demands enter as a registered cost on deliberation."
+    }
+  ],
+  "core_question": "Do people rely more on habit when planning is computationally demanding but offers only marginal accuracy gains?",
+  "key_assumptions": [
+    "Humans have access to both habitual and planning decision processes.",
+    "Decision processes embody distinct accuracy-effort tradeoffs.",
+    "Planning complexity is registered as a subjective cost during arbitration."
+  ],
+  "manipulations": [
+    "Task difficulty / planning complexity across sequential RL conditions with matched rewards."
+  ],
+  "key_findings": [
+    "Reliance on habitual (model-free) control increases when planning demands are higher despite equal reward for accuracy."
+  ],
+  "interpretations": [
+    "People arbitrate between decision processes in a task-specific, cost-sensitive manner — hard thinking is deployed only when 'worth it.'"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "model-based reinforcement learning",
+    "model-free habit",
+    "metacontrol arbitration",
+    "accuracy-effort tradeoff",
+    "planning cost",
+    "sequential decision task",
+    "cognitive control allocation",
+    "resource-rational decision making"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "163fd758176900db74df770e704c1efb",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:12:14+09:00",
+  "review_status": "auto_unreviewed"
+}

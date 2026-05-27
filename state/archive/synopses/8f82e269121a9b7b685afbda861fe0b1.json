@@ -1,0 +1,54 @@
+{
+  "frameworks": [
+    {
+      "name": "free energy principle",
+      "role": "primary_lens",
+      "one_line": "proposed unifying account of brain function via free energy minimization"
+    },
+    {
+      "name": "Bayesian inference",
+      "role": "alternative_lens",
+      "one_line": "related unifying account closely linked to and partly subsumed by FEP"
+    },
+    {
+      "name": "predictive coding",
+      "role": "alternative_lens",
+      "one_line": "earlier unifying idea connected to and partly subsumed by FEP"
+    },
+    {
+      "name": "active learning",
+      "role": "alternative_lens",
+      "one_line": "earlier unifying idea connected to and partly subsumed by FEP"
+    }
+  ],
+  "core_question": "What does the free energy principle actually predict about the brain that overlapping frameworks do not?",
+  "key_assumptions": [
+    "the brain can be characterized by a single unifying principle",
+    "Bayesian inference, predictive coding, and active learning share formal structure with FEP"
+  ],
+  "manipulations": [],
+  "key_findings": [
+    "FEP overlaps with and in some cases subsumes Bayesian inference, predictive coding, and active learning",
+    "the frameworks share some predictions but also have distinctive predictions"
+  ],
+  "interpretations": [
+    "clarifying the relationships separates FEP-specific commitments from those shared with related accounts"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "free energy principle",
+    "active inference",
+    "predictive coding",
+    "Bayesian brain",
+    "active learning",
+    "unifying theory of brain function",
+    "theoretical neuroscience"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "8f82e269121a9b7b685afbda861fe0b1",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

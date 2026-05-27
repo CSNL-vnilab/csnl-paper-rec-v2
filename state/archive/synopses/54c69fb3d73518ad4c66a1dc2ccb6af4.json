@@ -1,0 +1,53 @@
+{
+  "frameworks": [
+    {
+      "name": "Bayesian prior-likelihood integration",
+      "role": "primary_lens",
+      "one_line": "Density priors from material identity are integrated with sensory weight signals."
+    },
+    {
+      "name": "material-weight illusion",
+      "role": "extended",
+      "one_line": "Classic single-material MWI extended to bipartite two-material objects."
+    }
+  ],
+  "core_question": "Does the material-weight illusion persist, disappear, or invert when objects appear to be made of two different materials?",
+  "key_assumptions": [
+    "Observers hold well-learned priors about densities of common materials.",
+    "Visually inferred material identity drives expected weight distribution.",
+    "Sensory weight cues from lifting are integrated with material priors."
+  ],
+  "manipulations": [
+    "Single-material vs bipartite two-material visual appearance.",
+    "Uniform vs nonuniform actual weight distribution.",
+    "Judgement target: per-side vs whole-object weight."
+  ],
+  "key_findings": [
+    "Bipartite uniform-mass objects produced an inverted MWI (heavier-looking side felt heavier).",
+    "Classic MWI replicated for objects appearing uniformly one material.",
+    "Whole-object weight judgements on bipartite objects yielded no illusion.",
+    "Illusions were independent of the lifting forces used."
+  ],
+  "interpretations": [
+    "Perceived weight reflects integration of incoming sensory information with density priors.",
+    "Expected weight distribution from material identity shapes per-side weight percepts."
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "material-weight illusion",
+    "density priors",
+    "bipartite objects",
+    "weight perception",
+    "prior-sensory integration",
+    "expected weight distribution",
+    "lifting forces",
+    "haptic perception"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "54c69fb3d73518ad4c66a1dc2ccb6af4",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:12:14+09:00",
+  "review_status": "auto_unreviewed"
+}

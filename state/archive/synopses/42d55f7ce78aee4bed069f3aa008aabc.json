@@ -1,0 +1,54 @@
+{
+  "frameworks": [
+    {
+      "name": "Bayesian function learning",
+      "role": "extended",
+      "one_line": "Bayesian function-learning framework adapted to discrete graph-structured input spaces."
+    },
+    {
+      "name": "graph diffusion",
+      "role": "primary_lens",
+      "one_line": "Generalization modeled as diffusion of observed function values across graph nodes."
+    },
+    {
+      "name": "heuristic models",
+      "role": "compared_against",
+      "one_line": "Simpler heuristic accounts of generalization on graphs used as baselines."
+    }
+  ],
+  "core_question": "How do humans learn and generalize functions defined on graph-structured spaces?",
+  "key_assumptions": [
+    "Relationships between items are defined by graph connectivity",
+    "Generalization can be cast as a Bayesian inference problem over functions",
+    "Function values propagate along graph edges via a diffusion process"
+  ],
+  "manipulations": [
+    "Graph structure of a virtual subway network used for predictions",
+    "Observed function (passenger volume) values at sampled nodes"
+  ],
+  "key_findings": [
+    "Diffusion-based Bayesian model captures human generalization on the graph",
+    "The model also accounts for participants' confidence judgments",
+    "Diffusion model quantitatively outperforms several heuristic alternatives"
+  ],
+  "interpretations": [
+    "People exploit graph connectivity structure when generalizing functions in complex discrete spaces"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "function learning",
+    "graph structure",
+    "Bayesian generalization",
+    "diffusion on graphs",
+    "confidence judgments",
+    "discrete structured spaces",
+    "subway network task"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "42d55f7ce78aee4bed069f3aa008aabc",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:12:14+09:00",
+  "review_status": "auto_unreviewed"
+}

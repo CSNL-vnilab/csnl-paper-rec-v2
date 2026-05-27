@@ -1,0 +1,50 @@
+{
+  "frameworks": [
+    {
+      "name": "recurrent network dynamics",
+      "role": "primary_lens",
+      "one_line": "Cortical circuits as recurrent networks whose integrating modes shape information flow."
+    },
+    {
+      "name": "excitatory-inhibitory connectivity",
+      "role": "extended",
+      "one_line": "E-I synaptic changes among feature-tuned neurons reshape circuit dynamics with learning."
+    }
+  ],
+  "core_question": "How does learning reshape recurrent cortical dynamics to better integrate task-relevant sensory input?",
+  "key_assumptions": [
+    "sensory information is read out from recurrent network output",
+    "integrating modes of circuit dynamics gate information transmission",
+    "feedforward input alignment with these modes determines coding fidelity"
+  ],
+  "manipulations": [
+    "alignment between feedforward input and integrating circuit modes (theory)",
+    "visual discrimination learning over training in mice"
+  ],
+  "key_findings": [
+    "analytical link between mode alignment and information available in network output",
+    "slow network dynamics in visual cortex realigned with learning to better integrate task-relevant input",
+    "realignment explained by changes in E-I connectivity among neurons tuned to relevant features"
+  ],
+  "interpretations": [
+    "learning tunes temporal dynamics of cortical circuits to optimally integrate relevant sensory input"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "recurrent cortical dynamics",
+    "integrating modes",
+    "feedforward-recurrent alignment",
+    "visual discrimination learning",
+    "excitatory-inhibitory connectivity",
+    "neural population coding",
+    "slow network dynamics",
+    "task-relevant sensory integration"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "6d704a733754b148e07d9e4643ba6204",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:12:14+09:00",
+  "review_status": "auto_unreviewed"
+}

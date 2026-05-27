@@ -1,0 +1,52 @@
+{
+  "frameworks": [
+    {
+      "name": "auditory steady-state response (ASSR) biomarker",
+      "role": "primary_lens",
+      "one_line": "40 Hz ASSR as oscillatory readout of cortical synaptic interactions"
+    },
+    {
+      "name": "E/I balance pharmacology",
+      "role": "primary_lens",
+      "one_line": "dissociating NMDA excitation vs GABA-A inhibition contributions to gamma response"
+    }
+  ],
+  "core_question": "Does the 40 Hz auditory steady-state response in human auditory cortex depend on NMDA excitation or GABA-A inhibition?",
+  "key_assumptions": [
+    "40 Hz ASSR reflects synaptic interactions in cortical circuits",
+    "low-dose lorazepam selectively probes GABA-A inhibition",
+    "low-dose memantine selectively probes NMDA receptor function",
+    "MEG recovers auditory cortical gamma in healthy participants"
+  ],
+  "manipulations": [
+    "pharmacological agent (placebo vs lorazepam vs memantine)",
+    "within-subject crossover design"
+  ],
+  "key_findings": [
+    "robust 40 Hz ASSR present under placebo, especially right hemisphere",
+    "lorazepam (GABA-A agonist) increased 40 Hz ASSR amplitude",
+    "memantine (NMDA blocker) had no detectable effect on the response"
+  ],
+  "interpretations": [
+    "40 Hz ASSR in auditory cortex is shaped by GABA-A-mediated intracortical inhibition",
+    "ASSR biomarker tracks inhibitory, not NMDA-glutamatergic, synaptic function"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "40 Hz auditory steady-state response",
+    "gamma oscillations",
+    "GABA-A receptor",
+    "NMDA receptor",
+    "lorazepam",
+    "memantine",
+    "MEG auditory cortex",
+    "schizophrenia biomarker"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "fbfc92ccb12313aa515d68f45a62d598",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:12:14+09:00",
+  "review_status": "auto_unreviewed"
+}

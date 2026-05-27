@@ -1,0 +1,51 @@
+{
+  "frameworks": [
+    {
+      "name": "multivariate pattern analysis (MVPA)",
+      "role": "primary_lens",
+      "one_line": "decode TMS parameters from spatial BOLD patterns at stimulation site"
+    },
+    {
+      "name": "concurrent TMS-fMRI",
+      "role": "context",
+      "one_line": "simultaneous stimulation and BOLD readout to assay local neural effects"
+    }
+  ],
+  "core_question": "Does TMS alter neural activity at the stimulation site even when overall BOLD signal is unchanged?",
+  "key_assumptions": [
+    "multivoxel BOLD patterns index population-level neural state",
+    "motor threshold provides a meaningful intensity reference for DLPFC stimulation"
+  ],
+  "manipulations": [
+    "TMS intensity (100% vs 50% of motor threshold)",
+    "TMS frequency (5, 8.33, 12.5, 25 Hz) at fixed high intensity",
+    "stimulation site fixed at dorsolateral prefrontal cortex"
+  ],
+  "key_findings": [
+    "TMS intensity reliably decoded from multivoxel patterns at the stimulation site",
+    "TMS frequency reliably decoded from multivoxel patterns at the stimulation site",
+    "overall BOLD activity at the site of stimulation was unaffected by TMS in both experiments"
+  ],
+  "interpretations": [
+    "TMS produces detectable local neural effects that are invisible to univariate BOLD analyses",
+    "multivariate techniques can clarify TMS's precise effects on neural activity"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "transcranial magnetic stimulation",
+    "concurrent TMS-fMRI",
+    "multivoxel pattern analysis",
+    "dorsolateral prefrontal cortex",
+    "BOLD signal",
+    "decoding stimulation parameters",
+    "causal brain stimulation",
+    "univariate vs multivariate fMRI"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "713222abf4f7545de4eeb3e31c55c6ba",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:12:14+09:00",
+  "review_status": "auto_unreviewed"
+}
