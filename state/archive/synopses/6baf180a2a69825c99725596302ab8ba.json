@@ -1,0 +1,41 @@
+{
+  "canonical_id": "6baf180a2a69825c99725596302ab8ba",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "interoceptive / visceral-afferent shaping of brain dynamics", "role": "primary_lens", "one_line": "Heart and gut intrinsic signals continuously modulate ongoing brain activity."},
+    {"name": "resting-state networks", "role": "compared_against", "one_line": "Canonical RSNs are complemented by visceral-input-driven dynamics."},
+    {"name": "embodied cognition / mind-body integration", "role": "context", "one_line": "Frames visceral inputs as blurring cognition, emotion, and consciousness."}
+  ],
+  "core_question": "How do intrinsic electrical signals from the heart and gastrointestinal tract shape ongoing brain dynamics and cognition?",
+  "key_assumptions": [
+    "Heart and GI tract generate intrinsic electrical activity independently of brain command",
+    "Ascending visceral signals reach the brain continuously",
+    "Brain dynamics at rest are not fully captured by canonical RSNs alone"
+  ],
+  "manipulations": [],
+  "key_findings": [
+    "Ascending cardiac and GI signals actively shape resting brain dynamics",
+    "Cardiac signals modulate processing of external sensory information",
+    "Cardiac signals influence spontaneous, internal cognition"
+  ],
+  "interpretations": [
+    "Visceral inputs complement canonical resting-state networks rather than replacing them",
+    "Findings blur boundaries between cognition, emotion, consciousness, and mind-body"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "visceral signals",
+    "heartbeat-evoked responses",
+    "gastric rhythm",
+    "interoception",
+    "resting-state networks",
+    "spontaneous cognition",
+    "ascending visceral input",
+    "brain-body interaction"
+  ],
+  "out_of_scope_note": null
+}

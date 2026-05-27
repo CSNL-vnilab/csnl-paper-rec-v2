@@ -1,0 +1,38 @@
+{
+  "canonical_id": "4109e2f6a925673c4bdaf0772f8cb860",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.2,
+  "frameworks": [
+    {"name": "nativist framework for AI", "role": "compared_against", "one_line": "innate structure as the route to general intelligence"},
+    {"name": "empiricist framework for AI", "role": "compared_against", "one_line": "intelligence emerging from experience and learning"},
+    {"name": "rich mental models view", "role": "alternative_lens", "one_line": "humans reason via structured internal world models"},
+    {"name": "mind-is-flat view", "role": "alternative_lens", "one_line": "cognition as shallow improvisation rather than deep models"}
+  ],
+  "core_question": "What makes a generally intelligent agent, and how should nativist and empiricist views of AI be reconciled?",
+  "key_assumptions": [
+    "general intelligence is a meaningful, unitary target",
+    "safe AI requires shared worldview with humans"
+  ],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [
+    "nativist and empiricist frameworks agree more than they disagree",
+    "general intelligence requires generalization of both concepts and programs",
+    "artificial intelligibility is needed for safe and useful general AI"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "general artificial intelligence",
+    "nativist vs empiricist debate",
+    "rich mental models",
+    "mind is flat",
+    "concept generalization",
+    "program generalization",
+    "artificial intelligibility",
+    "AI safety"
+  ],
+  "out_of_scope_note": "Synthesis book chapter, not an empirical paper; no findings to extract."
+}

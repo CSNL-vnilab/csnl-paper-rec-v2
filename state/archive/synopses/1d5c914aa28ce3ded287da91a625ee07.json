@@ -1,0 +1,46 @@
+{
+  "canonical_id": "1d5c914aa28ce3ded287da91a625ee07",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "multi-task reinforcement learning", "role": "primary_lens", "one_line": "learning transferable policies across tasks with changing reward functions"},
+    {"name": "successor features", "role": "compared_against", "one_line": "maps prior policies and encountered features to new reward functions"},
+    {"name": "universal value function approximators", "role": "compared_against", "one_line": "approximates value functions across multiple tasks"},
+    {"name": "model-based and model-free reinforcement learning", "role": "compared_against", "one_line": "standard single-task RL baselines"}
+  ],
+  "core_question": "How do humans transfer knowledge across reinforcement-learning tasks with changing reward functions?",
+  "key_assumptions": [
+    "tasks share features but differ in reward function",
+    "human learning can be characterized by candidate multi-task RL algorithms",
+    "two-step decision making captures policy reuse"
+  ],
+  "manipulations": [
+    "task features composing each scenario",
+    "reward functions across tasks",
+    "exploratory vs preregistered experimental design"
+  ],
+  "key_findings": [
+    "human behavior best matches strategy mapping prior policies to novel scenarios",
+    "this account outperforms value-function approximation across tasks",
+    "it also outperforms standard model-based and model-free baselines",
+    "result replicates in a large preregistered experiment"
+  ],
+  "interpretations": [
+    "humans generalize across tasks by reusing learned policies under new reward demands",
+    "enriches understanding of human RL in complex, changing environments"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "multi-task reinforcement learning",
+    "policy transfer",
+    "successor features",
+    "two-step decision making",
+    "generalization across tasks",
+    "changing reward functions",
+    "human reinforcement learning"
+  ],
+  "out_of_scope_note": null
+}

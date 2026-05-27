@@ -1,0 +1,44 @@
+{
+  "canonical_id": "2730920f61c6c71df94e185f0b8a94cc",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "neuromodulation of cortical tuning", "role": "primary_lens", "one_line": "ACh and GABA(A) shape direction tuning and population coding in MT"},
+    {"name": "attentional gain modulation", "role": "compared_against", "one_line": "ACh effects compared against signatures of selective attention"},
+    {"name": "noise correlations and population coding", "role": "context", "one_line": "pairwise correlations as a determinant of coding fidelity"}
+  ],
+  "core_question": "How do cholinergic and GABAergic mechanisms differentially shape direction tuning, discriminability, reliability, and noise correlations in macaque area MT?",
+  "key_assumptions": [
+    "ACh and gabazine effects can be isolated pharmacologically in MT",
+    "direction discriminability indexes coding quality of single neurons",
+    "simultaneously recorded pairs index population noise structure"
+  ],
+  "manipulations": [
+    "local application of acetylcholine vs gabazine in MT",
+    "measurement of direction tuning, discriminability, reliability, and pairwise correlations"
+  ],
+  "key_findings": [
+    "ACh increased firing rates without changing tuning width but improved direction discriminability",
+    "gabazine increased firing rates yet widened tuning curves and reduced discriminability",
+    "gabazine reduced response reliability while ACh had little effect on reliability",
+    "ACh decreased noise correlations whereas gabazine increased them"
+  ],
+  "interpretations": [
+    "ACh selectively improves neuronal tuning and coding in a manner consistent with attentional modulation, unlike GABA(A) blockade"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "acetylcholine",
+    "GABA(A) receptor blockade",
+    "area MT",
+    "direction tuning",
+    "neuronal discriminability",
+    "response reliability",
+    "noise correlations",
+    "attentional modulation"
+  ],
+  "out_of_scope_note": null
+}

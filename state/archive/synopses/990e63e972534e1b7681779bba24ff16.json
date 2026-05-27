@@ -1,0 +1,36 @@
+{
+  "canonical_id": "990e63e972534e1b7681779bba24ff16",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "visual metacognition", "role": "primary_lens", "one_line": "field-level inquiry into how observers monitor and report visual processing"},
+    {"name": "consensus science", "role": "context", "one_line": "community process for identifying shared long-term research goals"}
+  ],
+  "core_question": "What long- and medium-term goals should the visual-metacognition field collectively prioritize?",
+  "key_assumptions": [
+    "psychology trails more mature sciences in identifying key questions",
+    "shared goals can accelerate progress and synergy across labs"
+  ],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [
+    "26 researchers reached consensus on four long-term and two medium-term common goals",
+    "consensus-building around shared goals could be adopted more widely in psychological science"
+  ],
+  "limitations_noted": [
+    "success of the effort can only be evaluated in the following few years"
+  ],
+  "connecting_signals": [
+    "visual metacognition",
+    "consensus goals",
+    "field-level priorities",
+    "psychological science meta-research",
+    "research agenda setting",
+    "community goal-setting",
+    "long-term research goals"
+  ],
+  "out_of_scope_note": null
+}
