@@ -1,0 +1,61 @@
+{
+  "frameworks": [
+    {
+      "name": "higher-order theory of consciousness",
+      "role": "primary_lens",
+      "one_line": "phenomenal experience depends on higher-order states representing first-order content"
+    },
+    {
+      "name": "ambitious higher-order theory",
+      "role": "extended",
+      "one_line": "higher-order states alone can suffice for phenomenology without first-order representations"
+    },
+    {
+      "name": "first-order theory of consciousness",
+      "role": "compared_against",
+      "one_line": "conscious experience constituted by first-order perceptual representations"
+    },
+    {
+      "name": "recurrent feedback loop to V1",
+      "role": "compared_against",
+      "one_line": "V1 recurrent processing as proposed neural correlate of first-order content"
+    }
+  ],
+  "core_question": "Can subjects have conscious experiences when the relevant first-order perceptual representations are absent or too weak to support them?",
+  "key_assumptions": [
+    "empirical cases can adjudicate between first-order and higher-order theories",
+    "first-order content is dissociable from reported phenomenology",
+    "phenomenology requires some representational substrate"
+  ],
+  "manipulations": [
+    "examination of empirical cases where first-order representations are missing or weak",
+    "contrast of theoretical predictions across first-order and higher-order accounts"
+  ],
+  "key_findings": [
+    "subjects appear to enjoy conscious experience without adequate first-order representations",
+    "V1 recurrent feedback loops are unlikely to be the neural correlate of conscious first-order content",
+    "first-order theories struggle to account for phenomenology in these cases"
+  ],
+  "interpretations": [
+    "an ambitious higher-order approach is the simplest theory accounting for all cases at face value",
+    "alternatively, phenomenology may be jointly determined by first-order and higher-order states"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "higher-order theory of consciousness",
+    "first-order theory of consciousness",
+    "phenomenal consciousness",
+    "neural correlates of consciousness",
+    "V1 recurrent feedback",
+    "perceptual representation",
+    "conscious experience without first-order content",
+    "philosophy of mind"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "cb2a3c7162b26cb5e1307651dfd7703c",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

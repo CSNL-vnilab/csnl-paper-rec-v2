@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "implicit vs explicit emotion processing",
+      "role": "primary_lens",
+      "one_line": "dissociates automatic reflexive emotion processing from deliberate cognitive evaluation"
+    },
+    {
+      "name": "functional connectivity analysis",
+      "role": "extended",
+      "one_line": "MPFC-centred network coupling indexes group differences beyond regional activation"
+    },
+    {
+      "name": "empathizing-systemizing account of ASD",
+      "role": "context",
+      "one_line": "individual empathizing ability linked to brain response in autism"
+    }
+  ],
+  "core_question": "Do adults with ASD show altered brain activation and connectivity during implicit versus explicit emotion processing?",
+  "key_assumptions": [
+    "implicit and explicit emotional processing recruit dissociable neural substrates",
+    "ASD difficulties are pronounced for subtle automatic emotional contexts",
+    "age and IQ matching isolates ASD-specific neural differences"
+  ],
+  "manipulations": [
+    "implicit versus explicit emotion processing task demands",
+    "group comparison: adults with ASD versus typically developing",
+    "behavioural empathizing ability as covariate"
+  ],
+  "key_findings": [
+    "reduced MPFC and STG activation in ASD during implicit emotion processing",
+    "weaker MPFC functional connectivity with amygdala, temporal, parietal, and fusiform regions in ASD",
+    "no group difference in accuracy or reaction time",
+    "positive empathizing-STG activity relationship in ASD only"
+  ],
+  "interpretations": [
+    "implicit but not explicit emotion processing is altered at multiple neural levels in ASD",
+    "STG engagement may scale with empathizing capacity specifically in autism"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "implicit emotion processing",
+    "autism spectrum disorder",
+    "medial prefrontal cortex",
+    "superior temporal gyrus",
+    "functional connectivity",
+    "amygdala-MPFC coupling",
+    "empathizing ability",
+    "social brain"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "8104c7b1a54480783b705470257c5e59",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

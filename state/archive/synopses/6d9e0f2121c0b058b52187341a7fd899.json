@@ -1,0 +1,59 @@
+{
+  "frameworks": [
+    {
+      "name": "key-value memory",
+      "role": "primary_lens",
+      "one_line": "distinct representations for storage (values) and retrieval (keys)"
+    },
+    {
+      "name": "similarity-based retrieval",
+      "role": "compared_against",
+      "one_line": "classical memory model where one representation serves both storage and retrieval"
+    },
+    {
+      "name": "machine learning attention/memory architectures",
+      "role": "context",
+      "one_line": "modern ML systems implementing key-value separation in memory access"
+    },
+    {
+      "name": "psychology and neuroscience memory models",
+      "role": "context",
+      "one_line": "behavioral and neural phenomena reinterpreted under key-value separation"
+    }
+  ],
+  "core_question": "Can separating memory representations for storage (values) and retrieval (keys) explain memory phenomena better than classical similarity-based models?",
+  "key_assumptions": [
+    "storage and retrieval impose distinct computational demands",
+    "storage benefits from high-fidelity representations",
+    "retrieval benefits from discriminable representations",
+    "a single representation cannot simultaneously optimize both"
+  ],
+  "manipulations": [],
+  "key_findings": [
+    "classical similarity-based models conflate storage and retrieval representations",
+    "key-value systems can jointly optimize storage fidelity and retrieval discriminability",
+    "key-value framework maps onto multiple empirical memory puzzles"
+  ],
+  "interpretations": [
+    "biological memory may implement key-value separation rather than single-representation similarity matching",
+    "key-value architectures unify ideas across ML, psychology, and neuroscience"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "key-value memory",
+    "storage versus retrieval representations",
+    "similarity-based retrieval",
+    "memory fidelity",
+    "retrieval discriminability",
+    "biological memory implementations",
+    "attention mechanisms",
+    "computational memory models"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "6d9e0f2121c0b058b52187341a7fd899",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "neural distance-to-bound",
+      "role": "primary_lens",
+      "one_line": "distance from a linear classifier boundary in neural activation space predicts reaction time"
+    },
+    {
+      "name": "signal detection theory",
+      "role": "extended",
+      "one_line": "decision-boundary framework extended from behavior to multivariate neural activity"
+    },
+    {
+      "name": "multivariate pattern analysis (neural decoding)",
+      "role": "primary_lens",
+      "one_line": "linear classifiers on high-dimensional neural patterns instantiate decision boundaries"
+    },
+    {
+      "name": "Fechner's inner psychophysics",
+      "role": "context",
+      "one_line": "historical program of mapping mental quantities onto brain states"
+    }
+  ],
+  "core_question": "Can linear-classifier distances in neural activation space serve as an 'inner psychophysics' linking brain activity to behavior?",
+  "key_assumptions": [
+    "linear classifiers and decision-boundary observers share an architecture",
+    "neural activity lies in a high-dimensional activation space amenable to linear decoding",
+    "distance from a decision boundary monotonically maps to behavioral performance"
+  ],
+  "manipulations": [],
+  "key_findings": [
+    "linear-classifier distance in activation space can predict reaction time under signal detection theory",
+    "the neural distance-to-bound approach is general and simple to implement"
+  ],
+  "interpretations": [
+    "MVPA-based linear decoding provides a starting point for an inner psychophysics linking mind, brain, and behavior",
+    "decision-boundary models give a principled bridge between neural decoding and behavioral measures"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "neural decoding",
+    "multivariate pattern analysis",
+    "linear classifier",
+    "distance-to-bound",
+    "signal detection theory",
+    "reaction time",
+    "inner psychophysics",
+    "mind-brain-behavior linking"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "854efabe38561446d44d800585358c90",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

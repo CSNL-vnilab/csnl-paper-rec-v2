@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "resting-state functional connectivity",
+      "role": "primary_lens",
+      "one_line": "whole-brain rs-fMRI correlations used to map hemispheric lateralization at the connection level"
+    },
+    {
+      "name": "task-positive vs task-negative network dichotomy",
+      "role": "primary_lens",
+      "one_line": "separates anticorrelated networks to avoid spuriously inflated lateralization indices"
+    },
+    {
+      "name": "k-means clustering",
+      "role": "extended",
+      "one_line": "data-driven grouping of connections to identify left- and right-lateralized sets"
+    }
+  ],
+  "core_question": "How is functional connectivity lateralized across the whole brain when analyzed within task-positive and task-negative networks?",
+  "key_assumptions": [
+    "negative correlations between task-positive and task-negative regions would inflate lateralization if mixed",
+    "402 equally spaced ROIs adequately cover the gray matter",
+    "lateralization is meaningfully defined at the level of individual functional connections"
+  ],
+  "manipulations": [
+    "partitioning ROIs into 358 task-positive and 44 task-negative regions",
+    "computing lateralization separately within each network",
+    "clustering connections into left- vs right-lateralized sets"
+  ],
+  "key_findings": [
+    "right-lateralized task-positive connections link occipital with inferior/middle frontal regions",
+    "left-lateralized task-positive connections involve fusiform with inferior frontal and inferior/superior parietal regions",
+    "task-negative left-lateralized connections primarily link precuneus with medial prefrontal regions",
+    "mean lateralization indices of left- and right-lateralized connections are correlated"
+  ],
+  "interpretations": [
+    "lateralization of functional connectivity may arise from complementary processes between the two lateralized networks"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "resting-state fMRI",
+    "functional connectivity lateralization",
+    "task-positive network",
+    "task-negative network",
+    "default mode network",
+    "hemispheric asymmetry",
+    "whole-brain ROI analysis",
+    "k-means clustering of connections"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "c92ef4ebccf454e98d72cca85870d3d8",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}
