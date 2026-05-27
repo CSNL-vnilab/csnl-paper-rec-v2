@@ -1,0 +1,56 @@
+{
+  "frameworks": [
+    {
+      "name": "sensory adaptation",
+      "role": "primary_lens",
+      "one_line": "prolonged exposure shifts psychometric function toward the adaptor"
+    },
+    {
+      "name": "evidence accumulation / decision-making",
+      "role": "extended",
+      "one_line": "adaptation also alters how sensory evidence is accumulated for each choice"
+    },
+    {
+      "name": "normative response to context change",
+      "role": "alternative_lens",
+      "one_line": "decision changes reflect updated implicit expectations about upcoming stimuli"
+    }
+  ],
+  "core_question": "Do changes in the decision-making process contribute to perceptual adaptation alongside sensory shifts?",
+  "key_assumptions": [
+    "adaptation can be decomposed into sensory and decision components",
+    "response times index decision-making changes beyond psychometric shifts",
+    "implicit expectations about stimuli shape choice dynamics"
+  ],
+  "manipulations": [
+    "prolonged exposure to happy versus sad facial expressions",
+    "measurement of both psychometric function and response times"
+  ],
+  "key_findings": [
+    "exposure to an emotional expression shifts the psychometric function toward the adaptor",
+    "response times decline overall after adaptation",
+    "response times show asymmetry, with faster responses opposite the adapting category"
+  ],
+  "interpretations": [
+    "adaptation changes how much sensory evidence is accumulated for each choice",
+    "adaptation modifies implicit expectations as a normative response to context change"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "perceptual adaptation",
+    "facial expression adaptation",
+    "psychometric function shift",
+    "response time asymmetry",
+    "evidence accumulation",
+    "decision-making process",
+    "implicit expectations",
+    "sensory versus decisional contributions"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "d7aa05b88283676d3ac88b81b71c8c83",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "reinforcement learning",
+      "role": "primary_lens",
+      "one_line": "Learning theory framing animal choice via reward-prediction updates."
+    },
+    {
+      "name": "action-value learning model",
+      "role": "extended",
+      "one_line": "Modified Q-learning variants capture win-stay-lose-switch and perseveration."
+    },
+    {
+      "name": "multistep Markov model",
+      "role": "compared_against",
+      "one_line": "Baseline sequence predictor benchmarked against value-learning models."
+    }
+  ],
+  "core_question": "Which learning model best predicts rat free-choice sequences, and how are action values represented across nucleus accumbens and ventral pallidum?",
+  "key_assumptions": [
+    "Choice behavior is driven by latent action values updated by reward",
+    "Action values can be estimated from behavior and read out from neural activity",
+    "Corticobasal ganglia circuit encodes decision variables"
+  ],
+  "manipulations": [
+    "Free-choice task with rats across trials",
+    "Comparison across multiple behavioral learning algorithms",
+    "Neural recordings in nucleus accumbens vs ventral pallidum"
+  ],
+  "key_findings": [
+    "Modified action-value learning models outperformed best multistep Markov baseline",
+    "Models captured win-stay-lose-switch and perseverating choice strategies",
+    "Action-value and future-action information coded in both NAc and VP",
+    "Value coding was less dominant than coding of trial type, selected action, and reward outcome"
+  ],
+  "interpretations": [
+    "Action-value learning provides a better account of rat choice than sequence statistics",
+    "Ventral striatopallidal circuit carries decision variables but is dominated by action/outcome signals"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "action value",
+    "reinforcement learning",
+    "free-choice task",
+    "nucleus accumbens",
+    "ventral pallidum",
+    "win-stay-lose-switch",
+    "perseveration",
+    "decision variables"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "bb95fa2ef8ec74e6af9fdfc201ac4761",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:08:51+09:00",
+  "review_status": "auto_unreviewed"
+}

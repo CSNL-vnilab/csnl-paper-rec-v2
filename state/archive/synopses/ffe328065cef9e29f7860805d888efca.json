@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "disinhibition-based circuit model",
+      "role": "primary_lens",
+      "one_line": "local disinhibition gates circuit state between normalization and WTA regimes"
+    },
+    {
+      "name": "divisive normalization",
+      "role": "extended",
+      "one_line": "recurrent gain control implementing relative value coding in the circuit"
+    },
+    {
+      "name": "winner-take-all attractor dynamics",
+      "role": "extended",
+      "one_line": "recurrent excitation with pooled inhibition driving categorical selection"
+    },
+    {
+      "name": "working memory persistent activity",
+      "role": "context",
+      "one_line": "sustained firing in the model interpreted as memory maintenance"
+    }
+  ],
+  "core_question": "How can a single biologically plausible circuit jointly implement normalization-based valuation and winner-take-all selection during decision making?",
+  "key_assumptions": [
+    "decision computations combine relative value coding and categorical selection",
+    "disinhibition acts as a local gating mechanism for circuit state",
+    "top-down inputs can flexibly modulate disinhibitory interneurons"
+  ],
+  "manipulations": [
+    "circuit motif architecture (normalization vs WTA vs hybrid disinhibition)",
+    "engagement of disinhibitory pathway to switch network state",
+    "top-down control inputs producing task-dependent dynamics"
+  ],
+  "key_findings": [
+    "hybrid disinhibition motif unifies normalized representation and WTA competition",
+    "model reproduces empirical psychometric and chronometric decision data",
+    "circuit generates persistent activity consistent with working memory",
+    "top-down disinhibitory control yields diverse task-dependent neural dynamics"
+  ],
+  "interpretations": [
+    "local disinhibition is a biologically plausible mechanism unifying valuation and selection",
+    "flexible state control via disinhibition explains diverse decision-related neural dynamics"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "disinhibition",
+    "decision making circuit",
+    "divisive normalization",
+    "winner-take-all dynamics",
+    "persistent activity",
+    "working memory",
+    "top-down control",
+    "psychometric and chronometric functions"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "ffe328065cef9e29f7860805d888efca",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "functional subpopulation clustering",
+      "role": "primary_lens",
+      "one_line": "lOFC neurons partitioned into clusters by trial-averaged response profiles"
+    },
+    {
+      "name": "value-based decision-making",
+      "role": "context",
+      "one_line": "rat task framing in which lOFC contributes to trial-by-trial learning"
+    },
+    {
+      "name": "corticostriatal projection mapping",
+      "role": "compared_against",
+      "one_line": "cluster responses qualitatively compared to identified projection neurons"
+    }
+  ],
+  "core_question": "Do functional subpopulations of lOFC neurons differentially encode reward history versus other task variables at the time of choice?",
+  "key_assumptions": [
+    "trial-averaged PSTHs and conditional firing rates reveal functional subpopulations",
+    "lOFC subpopulations may align with anatomically defined projection targets",
+    "reward history supports lOFC-dependent trial-by-trial learning"
+  ],
+  "manipulations": [
+    "alignment of firing rates to different task variables",
+    "two clustering feature spaces (PSTH-based and conditional rate-based)",
+    "comparison of encoding across clusters and across task epochs"
+  ],
+  "key_findings": [
+    "five distinct functional clusters of lOFC neurons were identified",
+    "weak encoding of reward attributes but stronger encoding of reward history, choice, and reward receipt across clusters",
+    "only one cluster encoded reward history shortly before the choice",
+    "that cluster qualitatively resembles previously identified corticostriatal projection neurons"
+  ],
+  "interpretations": [
+    "a specific lOFC subpopulation may integrate previous and current trial outcomes at choice time",
+    "functional subpopulations could mediate lOFC's role in trial-by-trial learning"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "lateral orbitofrontal cortex",
+    "reward history",
+    "functional subpopulations",
+    "trial-by-trial learning",
+    "value-based decision-making",
+    "corticostriatal projection neurons",
+    "PSTH clustering",
+    "choice encoding"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "1dc01c1b2f9f8f8373f13913bb72544a",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

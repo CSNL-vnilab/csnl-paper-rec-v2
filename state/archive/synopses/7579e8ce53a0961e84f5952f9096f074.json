@@ -1,0 +1,59 @@
+{
+  "frameworks": [
+    {
+      "name": "model-based vs model-free reinforcement learning",
+      "role": "primary_lens",
+      "one_line": "dual-system RL arbitration between flexible planning and computationally cheap habits"
+    },
+    {
+      "name": "lifespan developmental trajectory of cognitive control",
+      "role": "context",
+      "one_line": "model-based control emerges, peaks, and declines across the lifespan"
+    },
+    {
+      "name": "incentive-driven cognitive effort",
+      "role": "extended",
+      "one_line": "monetary incentives tested as a lever to recruit costly planning"
+    }
+  ],
+  "core_question": "Can monetary incentives boost model-based control in older adults whose planning is normatively declining?",
+  "key_assumptions": [
+    "habits and plans correspond to model-free and model-based control",
+    "model-based control declines with aging",
+    "deploying model-based control is resource-costly and incentive-sensitive"
+  ],
+  "manipulations": [
+    "presence vs absence of monetary incentives for accurate choices",
+    "task familiarity (experienced online sample vs naive sample)",
+    "two experiments with older adult populations"
+  ],
+  "key_findings": [
+    "Experiment 1: incentives increased model-based control in an online older-adult sample",
+    "Experiment 2: a naive older-adult sample did not show an incentive-driven boost",
+    "outcome depended on prior task experience"
+  ],
+  "interpretations": [
+    "incentives can recruit model-based control in older adults but only with prior task exposure",
+    "age-related decline in planning is not strictly fixed and may be intervention-tractable"
+  ],
+  "limitations_noted": [
+    "discrepancy between samples leaves the generality of the incentive effect uncertain"
+  ],
+  "connecting_signals": [
+    "model-based control",
+    "model-free control",
+    "habits vs plans",
+    "reinforcement learning two-step task",
+    "aging and decision-making",
+    "incentive effects on cognitive control",
+    "older adults",
+    "arbitration between control systems"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "7579e8ce53a0961e84f5952f9096f074",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

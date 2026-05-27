@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "functional states of working memory",
+      "role": "primary_lens",
+      "one_line": "distinct active vs latent neural states encode prioritized vs concurrently held WM items"
+    },
+    {
+      "name": "evidence integration / decision dynamics",
+      "role": "extended",
+      "one_line": "cognitive modeling of moment-to-moment evidence accumulation linked to WM state"
+    },
+    {
+      "name": "neural pattern analysis of EEG",
+      "role": "primary_lens",
+      "one_line": "multivariate decoding of WM contents from human electrophysiology"
+    },
+    {
+      "name": "priority-based attentional gating in WM",
+      "role": "context",
+      "one_line": "selection mechanism that shifts items between active and latent status"
+    }
+  ],
+  "core_question": "How do different functional states of working memory contribute to using stored items to guide ongoing decisions?",
+  "key_assumptions": [
+    "WM items can occupy distinct functional states depending on task priority",
+    "prioritized vs concurrently held items engage dissociable neural codes",
+    "spontaneous and stimulus-evoked activity index different WM states"
+  ],
+  "manipulations": [
+    "priority shifts between two concurrently maintained WM items",
+    "prolonged maintenance period with intervening decisions",
+    "comparison of selected vs unselected memory during delay"
+  ],
+  "key_findings": [
+    "selected memories appear in spontaneous delay-period activity (active state)",
+    "concurrently held memories appear only in stimulus-evoked activity (latent state)",
+    "active state tracks moment-to-moment evidence integration quality and interference",
+    "priority can shift back and forth without degrading memory precision"
+  ],
+  "interpretations": [
+    "WM items occupy a hierarchy of functional states that flexibly map to behavioral priority",
+    "only the active state engages ongoing decision dynamics; the latent state preserves precision for later use"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "working memory",
+    "functional states",
+    "priority shift",
+    "active versus latent state",
+    "evidence integration",
+    "memory precision",
+    "EEG pattern analysis",
+    "delay-period activity"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "c7de996378ee5183097ed69d3e5390bd",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

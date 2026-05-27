@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "neural population geometry",
+      "role": "primary_lens",
+      "one_line": "task representations characterized by linear subspaces and pairwise correlation structure"
+    },
+    {
+      "name": "nonlinear dimensionality reduction (manifold analysis)",
+      "role": "primary_lens",
+      "one_line": "shared low-dimensional structure across tasks revealed by manifold embedding"
+    },
+    {
+      "name": "mixed selectivity / firing-field organization",
+      "role": "extended",
+      "one_line": "single-neuron firing fields tile a shared manifold differently under memory load"
+    },
+    {
+      "name": "task-switching paradigm",
+      "role": "context",
+      "one_line": "alternating cognitive-load tasks isolate working-memory contribution"
+    }
+  ],
+  "core_question": "How does the cortical representational structure reconfigure between a working-memory task and a sensorimotor-matched simpler task?",
+  "key_assumptions": [
+    "trial-averaged single-neuron activity is comparable across matched tasks",
+    "linear subspaces and pairwise correlations index task representation",
+    "firing-field overlap on a shared manifold links to behavior"
+  ],
+  "manipulations": [
+    "task identity (working-memory vs simpler matched task)",
+    "cortical area (AM, M2, retrosplenial)",
+    "behavioral reliance on working memory across mice"
+  ],
+  "key_findings": [
+    "pairwise correlations decreased during the working-memory task, especially in association areas",
+    "the working-memory subspace explained both tasks; the simpler-task subspace did not",
+    "a shared low-dimensional structure exists across tasks via nonlinear reduction",
+    "firing fields were more disjoint under working memory and overlap predicted behavioral reliance"
+  ],
+  "interpretations": [
+    "working memory expands shared task representations by disjoint tiling of a common manifold",
+    "association-area sequence-forming neurons carry the memory dimension"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "working memory",
+    "task-switching",
+    "neural population geometry",
+    "low-dimensional manifold",
+    "pairwise correlations",
+    "association cortex sequences",
+    "firing-field overlap",
+    "premotor and retrosplenial cortex"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "dd8510d613aff598f087f25322dc8695",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

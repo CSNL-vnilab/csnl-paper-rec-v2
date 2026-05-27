@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "common drive (single-driver MU recruitment)",
+      "role": "compared_against",
+      "one_line": "cortex supplies one shared drive to each motor-unit pool"
+    },
+    {
+      "name": "Henneman size principle",
+      "role": "compared_against",
+      "one_line": "motor units recruited in fixed order by size"
+    },
+    {
+      "name": "multiple-drives / flexible MU control",
+      "role": "primary_lens",
+      "one_line": "behaviour-dependent, multi-dimensional cortical control of motor units"
+    },
+    {
+      "name": "high-dimensional motor cortex population coding",
+      "role": "extended",
+      "one_line": "M1 population activity spans many degrees of freedom enabling flexible MU control"
+    }
+  ],
+  "core_question": "Are motor units controlled by a single common drive following a rigid recruitment order, or can cortex flexibly control them in a behaviour-dependent way?",
+  "key_assumptions": [
+    "many MUs can be recorded simultaneously across varied force profiles",
+    "an isometric task can stabilize MU identity during rapid force changes",
+    "Neuropixels-scale cortical sampling reflects M1 control signals"
+  ],
+  "manipulations": [
+    "force profile (diverse and rapidly changing isometric forces)",
+    "behavioural task context driving MU activity",
+    "simultaneous recording site within motor cortex"
+  ],
+  "key_findings": [
+    "MU activity patterns were behaviour-dependent rather than fixed",
+    "MU activity could not be captured by a single common drive but required multiple drives",
+    "motor cortex population responses had many degrees of freedom",
+    "neighboring cortical sites recruited different MUs"
+  ],
+  "interpretations": [
+    "MUs are flexibly controlled to meet task demands, violating strict common-drive and rigid size-principle accounts",
+    "M1 population structure provides the dimensionality needed for flexible, near-independent MU control"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "motor units",
+    "common drive",
+    "Henneman size principle",
+    "flexible motor control",
+    "motor cortex population",
+    "Neuropixels recordings",
+    "isometric force task",
+    "degrees of freedom"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "2115b408b58651907ffd023ba0498e3e",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:08:51+09:00",
+  "review_status": "auto_unreviewed"
+}
