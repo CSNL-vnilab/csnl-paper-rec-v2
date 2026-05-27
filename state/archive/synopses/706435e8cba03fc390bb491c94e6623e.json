@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "bounded meta-learned inference",
+      "role": "primary_lens",
+      "one_line": "environment-specific strategy inference under computational resource constraints"
+    },
+    {
+      "name": "heuristic decision-making",
+      "role": "extended",
+      "one_line": "formal account of how heuristics are discovered and selected"
+    },
+    {
+      "name": "one-reason decision-making",
+      "role": "compared_against",
+      "one_line": "single-cue strategy emerging when attribute ranking is known"
+    },
+    {
+      "name": "equal weighting",
+      "role": "compared_against",
+      "one_line": "uniform-weight strategy emerging when only attribute directions are known"
+    }
+  ],
+  "core_question": "How are different decision heuristics discovered and selected across environments?",
+  "key_assumptions": [
+    "people make environment-specific inferences over strategies",
+    "cognition is bounded by computational resource costs",
+    "strategy selection adapts to available knowledge about attributes"
+  ],
+  "manipulations": [
+    "knowledge of attribute ranking",
+    "knowledge of attribute directions",
+    "paired comparison tasks with continuous features"
+  ],
+  "key_findings": [
+    "model discovers one-reason decision-making and equal weighting in specific environments",
+    "knowing attribute ranking yields one-reason decision-making",
+    "knowing attribute directions yields equal weighting",
+    "lacking both yields weighted multi-attribute strategies"
+  ],
+  "interpretations": [
+    "heuristics emerge from resource-bounded meta-learned strategy inference",
+    "BMI captures human decision characteristics unexplained by alternative theories"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "heuristic decision-making",
+    "meta-learning",
+    "bounded rationality",
+    "one-reason decision-making",
+    "equal weighting",
+    "strategy selection",
+    "paired comparison",
+    "resource-rational analysis"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "706435e8cba03fc390bb491c94e6623e",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

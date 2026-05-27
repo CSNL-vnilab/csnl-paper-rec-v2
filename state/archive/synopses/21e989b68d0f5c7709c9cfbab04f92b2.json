@@ -1,0 +1,55 @@
+{
+  "frameworks": [
+    {
+      "name": "normalization model",
+      "role": "primary_lens",
+      "one_line": "Each neuron's response divided by weighted pool sum."
+    },
+    {
+      "name": "recurrent amplification",
+      "role": "extended",
+      "one_line": "Weak inputs amplified more than strong by recurrent circuit."
+    },
+    {
+      "name": "coupled neural integrators",
+      "role": "primary_lens",
+      "one_line": "Family of recurrent circuits implementing weighted normalization."
+    }
+  ],
+  "core_question": "How does a recurrent circuit implement weighted normalization and reproduce V1 dynamics including gamma oscillations?",
+  "key_assumptions": [
+    "Normalization in V1 operates via recurrent amplification",
+    "Each pool weight specifies one neuron's contribution to another's normalization",
+    "V1 dynamics (e.g., gamma oscillations) are linked to normalization"
+  ],
+  "manipulations": [
+    "Circuit architecture / coupling among neural integrators",
+    "Normalization weight structure (arbitrary weights)"
+  ],
+  "key_findings": [
+    "Coupled neural integrator circuits implement normalization via recurrent amplification",
+    "Arbitrary weighted normalization arises from the recurrent circuit family",
+    "Some circuit instantiations recapitulate key V1 dynamic observations including gamma oscillations"
+  ],
+  "interpretations": [
+    "Recurrent amplification provides a mechanistic account of weighted normalization",
+    "Complex V1 dynamics emerge naturally from the normalization circuit"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "divisive normalization",
+    "recurrent amplification",
+    "weighted normalization pool",
+    "primary visual cortex V1",
+    "gamma oscillations",
+    "coupled neural integrators",
+    "neural circuit dynamics"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "21e989b68d0f5c7709c9cfbab04f92b2",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:52:29+09:00",
+  "review_status": "auto_unreviewed"
+}

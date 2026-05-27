@@ -1,0 +1,17 @@
+{
+  "canonical_id": "e94aaa593764e21c14830dbc9c0d27b0",
+  "synopsis_version": "v1.2026-05-28",
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "Clinical conference abstract on statin-therapy effects on retrieved thrombus composition in acute ischemic stroke patients — vascular hematology/clinical scope, not cognitive/perceptual/computational neuroscience.",
+  "generator": "opus-4-7@2026-05-28",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "abstract_coverage": 0.0
+}

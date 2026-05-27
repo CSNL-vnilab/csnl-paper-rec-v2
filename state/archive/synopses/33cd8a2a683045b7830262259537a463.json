@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "Bayesian switching dynamical systems",
+      "role": "primary_lens",
+      "one_line": "Bayesian algorithm infers hidden brain states and their transition dynamics from time-series data"
+    },
+    {
+      "name": "hidden brain state dynamics",
+      "role": "extended",
+      "one_line": "latent transient states reconfigure functional circuits during cognition"
+    },
+    {
+      "name": "task-condition driven brain activity",
+      "role": "compared_against",
+      "one_line": "framework assuming brain states track external task demands tightly"
+    }
+  ],
+  "core_question": "How do hidden, time-varying brain states regulate cognitive performance and decision-making dynamics?",
+  "key_assumptions": [
+    "brain activity reflects latent states beyond external task conditions",
+    "states are discrete and have inferable transition probabilities",
+    "functional circuits can be reconfigured by dynamic state transitions"
+  ],
+  "manipulations": [
+    "comparison of inferred hidden states against external task conditions",
+    "replication across a large independent sample"
+  ],
+  "key_findings": [
+    "hidden brain states are only weakly aligned with external task conditions",
+    "state transitions support flexible reconfiguration of functional circuits",
+    "specific transient states are optimal for cognition",
+    "failure to engage optimal states in time predicts poorer performance and weaker decision dynamics"
+  ],
+  "interpretations": [
+    "cognition depends on flexible latent brain state dynamics rather than task-locked activity",
+    "timely engagement of optimal hidden states underlies effective decision-making"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "hidden brain states",
+    "Bayesian switching dynamical systems",
+    "latent state transitions",
+    "functional circuit reconfiguration",
+    "decision-making dynamics",
+    "cognitive performance",
+    "state transition probabilities",
+    "transient brain states"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "33cd8a2a683045b7830262259537a463",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,61 @@
+{
+  "frameworks": [
+    {
+      "name": "decoded neurofeedback (DecNef)",
+      "role": "primary_lens",
+      "one_line": "real-time fMRI multivoxel pattern reinforcement to manipulate targeted neural representations"
+    },
+    {
+      "name": "metacognition",
+      "role": "extended",
+      "one_line": "subjective confidence in perception treated as dissociable from perceptual accuracy"
+    },
+    {
+      "name": "frontoparietal network of confidence",
+      "role": "primary_lens",
+      "one_line": "frontoparietal multivoxel patterns posited as substrate of perceptual confidence"
+    },
+    {
+      "name": "dissociation of confidence and performance",
+      "role": "compared_against",
+      "one_line": "challenges accounts that tie subjective confidence directly to perceptual sensitivity"
+    }
+  ],
+  "core_question": "Can manipulating frontoparietal multivoxel activity patterns modulate perceptual confidence independently of perceptual performance?",
+  "key_assumptions": [
+    "multivoxel patterns in frontoparietal cortex encode perceptual confidence",
+    "DecNef can selectively bias targeted patterns",
+    "confidence and perceptual performance are separable processes"
+  ],
+  "manipulations": [
+    "direction of induced multivoxel pattern change in frontoparietal network via DecNef",
+    "measurement of perceptual confidence reports vs. perceptual accuracy"
+  ],
+  "key_findings": [
+    "DecNef of frontoparietal patterns modulates perceptual confidence",
+    "perceptual performance is unaffected by the same manipulation",
+    "confidence and performance dissociate under targeted pattern induction"
+  ],
+  "interpretations": [
+    "frontoparietal network plays a distinct role in metacognition separate from perceptual processing",
+    "subjective confidence and perceptual sensitivity rely on dissociable neural substrates"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "decoded neurofeedback",
+    "perceptual confidence",
+    "metacognition",
+    "frontoparietal network",
+    "multivoxel pattern analysis",
+    "confidence-performance dissociation",
+    "real-time fMRI",
+    "subjective perception"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "2e8c2fe28c65276c0bc349f56fdf1de9",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

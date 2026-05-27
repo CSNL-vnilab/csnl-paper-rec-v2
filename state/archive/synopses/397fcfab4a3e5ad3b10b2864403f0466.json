@@ -1,0 +1,17 @@
+{
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "Clinical neuroradiology paper on middle-meningeal-artery embolization for chronic subdural hematoma with ML-based outcome prediction — neurointerventional clinical practice, not cognitive/perceptual/computational neuroscience.",
+  "abstract_coverage": 0.0,
+  "canonical_id": "397fcfab4a3e5ad3b10b2864403f0466",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}
