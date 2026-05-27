@@ -1,0 +1,51 @@
+{
+  "frameworks": [
+    {
+      "name": "representational similarity analysis",
+      "role": "primary_lens",
+      "one_line": "compare similarity patterns of cortical activity to similarity patterns from pose models"
+    },
+    {
+      "name": "3D pose reconstruction",
+      "role": "extended",
+      "one_line": "applied to natural-scene images to build view-independent body-pose model"
+    }
+  ],
+  "core_question": "How does the human brain represent body pose, and does the representation reflect 3D view-independent structure?",
+  "key_assumptions": [
+    "spatial relationships between body parts constitute pose information",
+    "model-derived similarity structure can be compared to fMRI similarity structure",
+    "natural complex scenes provide a valid stimulus space for pose perception"
+  ],
+  "manipulations": [
+    "depth availability of pose model (2D vs 3D)",
+    "viewpoint dependency of pose model (view-dependent vs view-independent)",
+    "pose variation across >4,000 complex natural scenes"
+  ],
+  "key_findings": [
+    "high-resolution fMRI responses correlate significantly with pose-model similarity patterns",
+    "the 3D view-independent pose model fit cortical activity best",
+    "diverse cortical representations span 2D and 3D pose"
+  ],
+  "interpretations": [
+    "cortical body-pose representations extend beyond body-part detection to relational, view-independent 3D structure"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "body pose perception",
+    "3D pose reconstruction",
+    "representational similarity analysis",
+    "high-resolution fMRI",
+    "natural scene stimuli",
+    "view-independent representation",
+    "body part relationships",
+    "extrastriate body area"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "b07bfe68a6a932fe3a86aed93d26009c",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:02:04+09:00",
+  "review_status": "auto_unreviewed"
+}

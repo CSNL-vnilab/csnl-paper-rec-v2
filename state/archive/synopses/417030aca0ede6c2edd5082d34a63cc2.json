@@ -1,0 +1,52 @@
+{
+  "frameworks": [
+    {
+      "name": "Bayesian inference",
+      "role": "primary_lens",
+      "one_line": "Bayes' rule combines observations with prior knowledge under limited data"
+    },
+    {
+      "name": "bounded rationality / resource-rational analysis",
+      "role": "primary_lens",
+      "one_line": "Brains face computational constraints that force approximation"
+    },
+    {
+      "name": "inductive bias vs approximation bias",
+      "role": "extended",
+      "one_line": "Distinguishes belief constraints from process-of-thought constraints"
+    }
+  ],
+  "core_question": "How can rational design principles explain systematic errors that arise from approximating Bayesian inference under computational constraints?",
+  "key_assumptions": [
+    "Brains face limited data and stringent computational constraints",
+    "Inductive biases constrain beliefs about the world",
+    "Approximation biases constrain the process of thought itself"
+  ],
+  "manipulations": [],
+  "key_findings": [
+    "Bayes' rule provides a solution to limited-data inference by combining priors with observations",
+    "Approximation of intractable Bayesian computation yields systematic errors"
+  ],
+  "interpretations": [
+    "Errors from approximation biases can be understood as the cost of rational design under resource limits",
+    "Inductive biases and approximation biases are distinct sources of constraint on cognition"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "Bayesian inference",
+    "prior knowledge",
+    "computational constraints",
+    "approximation biases",
+    "inductive biases",
+    "bounded rationality",
+    "rational design principles",
+    "resource-rational cognition"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "417030aca0ede6c2edd5082d34a63cc2",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

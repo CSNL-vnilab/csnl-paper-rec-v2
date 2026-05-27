@@ -1,0 +1,60 @@
+{
+  "frameworks": [
+    {
+      "name": "variable-precision continuous resource",
+      "role": "primary_lens",
+      "one_line": "memory resource is continuous and fluctuates randomly in encoding precision across items and trials"
+    },
+    {
+      "name": "slot model of visual short-term memory",
+      "role": "compared_against",
+      "one_line": "fixed number of discrete memory slots producing guessing in responses"
+    },
+    {
+      "name": "fixed continuous-resource model",
+      "role": "compared_against",
+      "one_line": "continuous resource spread evenly, refuted by apparent guessing"
+    },
+    {
+      "name": "doubly stochastic neural population coding",
+      "role": "context",
+      "one_line": "variability in population gain proposed as neural correlate of precision fluctuations"
+    }
+  ],
+  "core_question": "Is the capacity limit of visual short-term memory better explained by discrete slots or by a continuous resource whose encoding precision varies across items and trials?",
+  "key_assumptions": [
+    "memory resource is shared across all stored items",
+    "encoding precision varies randomly across items and trials",
+    "apparent guessing can emerge from low-precision tail of the distribution"
+  ],
+  "manipulations": [
+    "two VSTM paradigms",
+    "two feature dimensions"
+  ],
+  "key_findings": [
+    "variable-precision model accounts for all aspects of the behavioural data including apparent guessing",
+    "model outperforms slot models in formal model comparison"
+  ],
+  "interpretations": [
+    "VSTM resource is continuous and variable rather than discrete and fixed",
+    "precision variability may correspond to neural population gain variability"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "visual short-term memory",
+    "encoding precision variability",
+    "continuous resource model",
+    "slot model comparison",
+    "apparent guessing",
+    "doubly stochastic neural representation",
+    "population gain variability",
+    "feature memory"
+  ],
+  "abstract_coverage": 1.0,
+  "out_of_scope_note": null,
+  "canonical_id": "ab0fce19503116328bec8953e3b2b3a0",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:02:04+09:00",
+  "review_status": "auto_unreviewed"
+}

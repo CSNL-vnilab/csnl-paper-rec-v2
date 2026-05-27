@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "cortical topographic maps",
+      "role": "primary_lens",
+      "one_line": "Continuous cortical representations where preferred feature varies gradually across surface"
+    },
+    {
+      "name": "population receptive field (pRF) modeling",
+      "role": "primary_lens",
+      "one_line": "Voxel-level tuning estimation applied to non-spatial quantity dimensions"
+    },
+    {
+      "name": "numerosity tuning",
+      "role": "extended",
+      "one_line": "Prior parietal numerosity map extended to a second quantity dimension"
+    }
+  ],
+  "core_question": "Does human parietal cortex contain a topographic map of object size that overlaps with the numerosity map?",
+  "key_assumptions": [
+    "Quantity dimensions can be represented as topographic maps analogous to sensory cortices",
+    "pRF modeling generalizes from visual position to non-spatial features",
+    "Object size and numerosity can be decorrelated from visual field position experimentally"
+  ],
+  "manipulations": [
+    "Measured size-selective responses with 7T fMRI",
+    "Used stimuli minimizing correlations between object size and retinal position",
+    "Compared object-size and numerosity tuning in the same parietal region"
+  ],
+  "key_findings": [
+    "Object size preferences are organized as topographic maps in parietal cortex",
+    "Size-selective responses overlap the previously identified numerosity map",
+    "Common organizational properties carry over: more cortex and finer tuning for small magnitudes"
+  ],
+  "interpretations": [
+    "Parietal cortex hosts overlapping topographic maps for distinct quantity dimensions",
+    "Topographic organization may be a general principle for quantity processing, not only sensory inputs"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "numerosity map",
+    "object size representation",
+    "parietal cortex topography",
+    "population receptive field modeling",
+    "7T fMRI",
+    "quantity coding",
+    "overlapping topographic maps",
+    "magnitude tuning width"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "f0ce20bf7d08f6b982f7130d4fedac8c",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

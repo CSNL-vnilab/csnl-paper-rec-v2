@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "nearest-neighbor statistics",
+      "role": "primary_lens",
+      "one_line": "Quantifies behavioral change without hand-picked features or discrete classes"
+    },
+    {
+      "name": "repertoire dating",
+      "role": "extended",
+      "one_line": "Assigns each rendition a pseudo production-day from neighborhood typicality"
+    },
+    {
+      "name": "feature-based syllable analysis",
+      "role": "compared_against",
+      "one_line": "Traditional hand-picked features assuming discrete syllable classes"
+    }
+  ],
+  "core_question": "How can vocal learning and developmental change be quantified without assuming discrete syllable classes or hand-picked features?",
+  "key_assumptions": [
+    "Nearest-neighbor statistics in behavioral space capture meaningful change",
+    "Behavioral repertoire varies continuously rather than in discrete classes",
+    "Long-term learning-related variability is separable from short-term variability"
+  ],
+  "manipulations": [
+    "Tracked song renditions across days of juvenile development",
+    "Compared each rendition against the full repertoire distribution",
+    "Computed pseudo production-day per rendition"
+  ],
+  "key_findings": [
+    "Pseudo production-day isolates variability congruent with long-term vocal learning",
+    "About 10% of renditions have pseudo production-days >10 days into the future (anticipations)",
+    "Similar fraction shows renditions falling >10 days into the past (regressions)",
+    "Vocal variability is large relative to developmental trajectory"
+  ],
+  "interpretations": [
+    "Song acquisition involves complex non-monotonic dynamics with anticipations and regressions",
+    "Bias-free neighborhood statistics generalize across behaviors and species better than feature-based methods"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "zebra finch song learning",
+    "nearest-neighbor statistics",
+    "vocal development",
+    "repertoire dating",
+    "behavioral variability",
+    "anticipations and regressions",
+    "feature-free behavioral quantification",
+    "motor learning trajectory"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "2d66f3d500d5e1acab45a96fb28ac781",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

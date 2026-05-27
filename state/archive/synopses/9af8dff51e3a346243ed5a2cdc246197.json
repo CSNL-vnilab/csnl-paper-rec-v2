@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "drift-diffusion model",
+      "role": "primary_lens",
+      "one_line": "Decomposes choice into evidence accumulation bias vs response caution"
+    },
+    {
+      "name": "pupil-linked phasic arousal",
+      "role": "primary_lens",
+      "one_line": "Pupil dilation indexes transient arousal state modulating decisions"
+    },
+    {
+      "name": "prior-expectation bias in decision formation",
+      "role": "extended",
+      "one_line": "Phasic arousal reduces the impact of prior bias on choices"
+    }
+  ],
+  "core_question": "Does pupil-linked phasic arousal causally reduce choice bias, or does choosing against bias cause arousal?",
+  "key_assumptions": [
+    "Pupil size reliably indexes phasic arousal",
+    "Auditory accessory stimulus elevates phasic arousal independently of the decision",
+    "Drift-diffusion decomposition separates accumulation bias from response caution"
+  ],
+  "manipulations": [
+    "Auditory accessory stimulus vs normal trials",
+    "Computational modeling of choice behavior with drift-diffusion"
+  ],
+  "key_findings": [
+    "Accessory stimulus trials showed elevated pupil-linked phasic arousal",
+    "Choice bias was reduced on accessory stimulus trials",
+    "Bias reduction was not explained by changes in response caution",
+    "Bias reduction reflected a change in evidence-accumulation bias"
+  ],
+  "interpretations": [
+    "Pupil-linked phasic arousal causally shapes choice behavior by altering accumulation bias",
+    "Supports the causal direction from arousal to bias reduction over the reverse account"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "pupil-linked phasic arousal",
+    "auditory accessory stimulus",
+    "choice bias reduction",
+    "drift-diffusion model",
+    "evidence accumulation bias",
+    "speed-accuracy tradeoff",
+    "prior expectations in decisions",
+    "arousal-decision coupling"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "9af8dff51e3a346243ed5a2cdc246197",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

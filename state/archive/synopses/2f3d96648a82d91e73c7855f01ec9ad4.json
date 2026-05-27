@@ -1,0 +1,56 @@
+{
+  "frameworks": [
+    {
+      "name": "decision stopping rules",
+      "role": "primary_lens",
+      "one_line": "Criteria that determine when to commit to a perceptual choice."
+    },
+    {
+      "name": "sequential evidence accumulation",
+      "role": "context",
+      "one_line": "Temporal weighting of sensory information over the trial."
+    },
+    {
+      "name": "post-error adjustment",
+      "role": "extended",
+      "one_line": "Strategy updates after errors modulate subsequent stopping behavior."
+    }
+  ],
+  "core_question": "How do subjects adjust decision stopping rules to balance premature versus late commitments in an auditory change detection task?",
+  "key_assumptions": [
+    "Decision commitment is governed by a stopping rule that can be flexibly controlled",
+    "Stopping rules trade off premature against late decisions",
+    "Temporal weighting of sensory evidence is estimable from behavior"
+  ],
+  "manipulations": [
+    "Task conditions that invoke different decision stopping rules",
+    "Auditory change detection paradigm timing",
+    "Trial history (preceding error type)"
+  ],
+  "key_findings": [
+    "Different stopping rules did not produce systematic differences in temporal weighting of sensory evidence",
+    "Bidirectional post-error adjustments depend on the type of error committed",
+    "Post-error adjustments reduce the probability of consecutive same-type mistakes"
+  ],
+  "interpretations": [
+    "Stopping-rule control and sensory-evidence weighting are dissociable components of decision making",
+    "Error-type-specific strategy updates serve as an adaptive control mechanism over decision commitment"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "decision commitment",
+    "stopping rule",
+    "auditory change detection",
+    "temporal weighting of evidence",
+    "post-error adjustment",
+    "premature versus late decisions",
+    "decision strategy control"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "2f3d96648a82d91e73c7855f01ec9ad4",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:02:04+09:00",
+  "review_status": "auto_unreviewed"
+}
