@@ -1,0 +1,50 @@
+{
+  "frameworks": [
+    {
+      "name": "traveling waves of cortical oscillations",
+      "role": "primary_lens",
+      "one_line": "oscillations form spatially organized patterns whose peaks move across cortex"
+    },
+    {
+      "name": "stationary neural oscillations",
+      "role": "compared_against",
+      "one_line": "alternative view that cortical oscillations are spatially fixed rather than propagating"
+    }
+  ],
+  "core_question": "Do prefrontal cortical oscillations form traveling waves and are they modulated by working memory demands?",
+  "key_assumptions": [
+    "multi-electrode PFC recordings can resolve spatial phase structure",
+    "theta, alpha, beta bands index distinct cortical processes"
+  ],
+  "manipulations": [
+    "baseline vs working memory task performance",
+    "frequency band (theta, alpha, beta)"
+  ],
+  "key_findings": [
+    "PFC oscillations in theta, alpha, beta bands organized as traveling waves",
+    "most waves rotated; some planar",
+    "baseline waves flowed bidirectionally along a specific axis",
+    "task performance increased directional bias, especially in beta"
+  ],
+  "interpretations": [
+    "traveling waves are a structured spatiotemporal substrate of PFC activity modulated by cognitive demand",
+    "different frequency bands carry independently directed wave flows"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "traveling waves",
+    "prefrontal cortex",
+    "working memory",
+    "theta alpha beta oscillations",
+    "rotational waves",
+    "cortical phase propagation",
+    "spatiotemporal cortical dynamics"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "0a714540c5aa9365a8d519a7e4da2308",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:46:11+09:00",
+  "review_status": "auto_unreviewed"
+}

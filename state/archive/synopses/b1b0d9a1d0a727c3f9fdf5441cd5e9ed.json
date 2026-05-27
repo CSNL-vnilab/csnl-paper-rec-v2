@@ -1,0 +1,64 @@
+{
+  "frameworks": [
+    {
+      "name": "causal perturbation of sensory cortex",
+      "role": "primary_lens",
+      "one_line": "Reversible focal inactivation to link MT activity to perceptual behavior"
+    },
+    {
+      "name": "perceptual decision-making",
+      "role": "primary_lens",
+      "one_line": "Direction discrimination with concurrent confidence report"
+    },
+    {
+      "name": "downstream readout compensation",
+      "role": "extended",
+      "one_line": "Readout circuits adapt to inactivation over short and long timescales"
+    },
+    {
+      "name": "common mechanism for choice and confidence",
+      "role": "alternative_lens",
+      "one_line": "Choice and confidence reflect a shared decision computation"
+    }
+  ],
+  "core_question": "Does focal, reversible optogenetic suppression of direction-tuned MT neurons causally bias choice and confidence in a perceptual decision task?",
+  "key_assumptions": [
+    "Inactivating MT neurons with consistent direction tuning probes a behaviorally relevant population",
+    "Hyperpolarizing opsins yield interpretable, fine-scale suppression in primate cortex",
+    "Choice and confidence reports share a common decision variable"
+  ],
+  "manipulations": [
+    "Randomly-interleaved trials with vs without optogenetic suppression in MT",
+    "Targeted neurons with consistent direction tuning",
+    "Varied visual stimulus duration including trials longer than ~350 ms",
+    "Tracked effects across the session"
+  ],
+  "key_findings": [
+    "Inactivation systematically biased direction choice and confidence",
+    "Behavioral effects attenuated over the course of each session",
+    "Effects largely vanished on trials with stimuli longer than ~350 ms",
+    "Choice and confidence showed similar trends under perturbation"
+  ],
+  "interpretations": [
+    "Downstream readout of MT compensates for the perturbation on both sub-second and tens-of-minutes timescales",
+    "Parallel effects on choice and confidence support a common underlying decision mechanism"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "optogenetic inactivation in primate cortex",
+    "area MT direction tuning",
+    "perceptual decision-making",
+    "choice confidence",
+    "hyperpolarizing opsins",
+    "causal microcircuit perturbation",
+    "readout compensation",
+    "macaque psychophysics"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "b1b0d9a1d0a727c3f9fdf5441cd5e9ed",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

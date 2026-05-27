@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "stochastic sampling",
+      "role": "primary_lens",
+      "one_line": "Working memory representations drawn as random samples from neural codes"
+    },
+    {
+      "name": "discrete slot models",
+      "role": "compared_against",
+      "one_line": "Item-limit accounts positing a fixed number of memory slots"
+    },
+    {
+      "name": "continuous resource models",
+      "role": "compared_against",
+      "one_line": "Shared continuous resource flexibly allocated across items"
+    },
+    {
+      "name": "neural coding principles",
+      "role": "context",
+      "one_line": "Population-coding rationale motivating the sampling framework"
+    }
+  ],
+  "core_question": "Can a stochastic sampling framework unify discrete and continuous accounts of visual working memory limits?",
+  "key_assumptions": [
+    "Working memory representations can be characterized as samples from neural codes",
+    "Sample counts vary randomly across items and trials",
+    "Single- and whole-report tasks reflect the same underlying representation"
+  ],
+  "manipulations": [
+    "Reconceptualized existing slot and resource models within the sampling framework",
+    "Compared discrete versus continuous sample distributions",
+    "Fit models to single-report and whole-report task data"
+  ],
+  "key_findings": [
+    "Discrete versus continuous nature of sampling is not critical to model fits",
+    "Random variability in sample counts is key to reproducing human performance",
+    "A probabilistic item-retrieval limit emerges from stochastic sampling without explicit mechanism",
+    "Strong commonalities exist between previously opposing slot and resource accounts"
+  ],
+  "interpretations": [
+    "Stochastic sampling provides a unified computational framework for working memory compatible with neural principles",
+    "Apparent discrepancies between slot and resource accounts dissolve under a sampling reformulation"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "stochastic sampling",
+    "visual working memory",
+    "slot vs resource models",
+    "whole-report task",
+    "single-report task",
+    "neural population coding",
+    "sample count variability",
+    "item retrieval limit"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "2c8599019d51fed157bc76b703ce0c6c",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

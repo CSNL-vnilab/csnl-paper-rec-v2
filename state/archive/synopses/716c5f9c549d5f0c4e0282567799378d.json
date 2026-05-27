@@ -1,0 +1,65 @@
+{
+  "frameworks": [
+    {
+      "name": "bistable perception",
+      "role": "primary_lens",
+      "one_line": "Ambiguous images alternate between competing percepts with sudden switches"
+    },
+    {
+      "name": "perceptual memory trace",
+      "role": "primary_lens",
+      "one_line": "Stabilizing trace bridging blank intervals during intermittent viewing"
+    },
+    {
+      "name": "neural oscillations (alpha/beta)",
+      "role": "primary_lens",
+      "one_line": "Band-limited oscillatory power as a marker of perceptual state"
+    },
+    {
+      "name": "causal cortical stimulation (rIFG)",
+      "role": "compared_against",
+      "one_line": "Tests causal role of right inferior frontal gyrus in switches"
+    }
+  ],
+  "core_question": "Does rIFG causally drive bistable perception and how do oscillations track perceptual stability and memory?",
+  "key_assumptions": [
+    "Bistable perception indexes mechanisms of natural visual stability",
+    "rIFG is a candidate node for perceptual switching control",
+    "Oscillatory power in alpha and beta bands indexes perceptual state",
+    "Intermittent presentation isolates a perceptual memory trace"
+  ],
+  "manipulations": [
+    "tDCS over right inferior frontal gyrus (double-blind cross-over)",
+    "Continuous vs intermittent presentation of ambiguous images",
+    "Tracking trial-by-trial fluctuations of oscillatory power"
+  ],
+  "key_findings": [
+    "No significant tDCS effect on perceptual behavior",
+    "Higher alpha and beta power predicted longer percept durations",
+    "Higher alpha and beta power predicted enhanced perceptual memory during intermittent viewing"
+  ],
+  "interpretations": [
+    "Alpha and beta oscillations track perceptual stability across continuous viewing",
+    "The same bands support a perceptual memory trace bridging blank intervals"
+  ],
+  "limitations_noted": [
+    "tDCS produced no detectable behavioral effect"
+  ],
+  "connecting_signals": [
+    "bistable perception",
+    "perceptual memory",
+    "perceptual stability",
+    "ambiguous images",
+    "alpha and beta oscillations",
+    "intermittent presentation",
+    "right inferior frontal gyrus",
+    "transcranial direct-current stimulation"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "716c5f9c549d5f0c4e0282567799378d",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,59 @@
+{
+  "frameworks": [
+    {
+      "name": "deep reinforcement learning",
+      "role": "primary_lens",
+      "one_line": "deep neural networks trained with RL to design social and economic mechanisms"
+    },
+    {
+      "name": "mechanism design",
+      "role": "extended",
+      "one_line": "classical social/economic mechanism design extended with learned policies"
+    },
+    {
+      "name": "human preference modeling",
+      "role": "context",
+      "one_line": "challenge of modeling diverse human preferences for alignment"
+    }
+  ],
+  "core_question": "Can deep RL be used to design social and economic mechanisms (auctions, taxes, redistribution) that serve human benefit?",
+  "key_assumptions": [
+    "human preferences can be modeled and aggregated",
+    "learned mechanisms can be aligned to a diverse group's wishes",
+    "RL-trained policies can outperform hand-designed mechanisms"
+  ],
+  "manipulations": [
+    "application domain (auctions vs taxes vs redistribution)",
+    "alignment target (efficiency vs popular vote)"
+  ],
+  "key_findings": [
+    "ML methods have been applied to design effective auctions",
+    "RL can learn optimal tax policies",
+    "learned redistribution policies can win the popular vote among human users"
+  ],
+  "interpretations": [
+    "deep mechanism design is a viable AI-for-social-good direction",
+    "safety and ethics must be central to this research programme"
+  ],
+  "limitations_noted": [
+    "accurately modeling human preferences remains difficult",
+    "aligning mechanisms to a diverse group is unresolved"
+  ],
+  "connecting_signals": [
+    "deep mechanism design",
+    "reinforcement learning for policy",
+    "auction design",
+    "optimal taxation",
+    "redistribution policy",
+    "human preference modeling",
+    "AI alignment",
+    "social choice"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "5bcacff5a22bf183de81b39120c8ace6",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:46:11+09:00",
+  "review_status": "auto_unreviewed"
+}

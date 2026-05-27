@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "reinforcement learning",
+      "role": "primary_lens",
+      "one_line": "RL agents trained on a spatially embedded binary decision task"
+    },
+    {
+      "name": "multi-region brain model",
+      "role": "primary_lens",
+      "one_line": "grid-place-cortex circuit coupled to action-selection RNN"
+    },
+    {
+      "name": "structured memory circuits",
+      "role": "extended",
+      "one_line": "entorhinal-hippocampal architectures as inductive biases for learning"
+    }
+  ],
+  "core_question": "Which interaction architecture between grid cells, place cells, and cortex best supports efficient learning in spatially embedded decision-making?",
+  "key_assumptions": [
+    "decision-making is spatially embedded and uses evidence accumulation",
+    "grid and place cells interact through specifiable circuit architectures",
+    "an action-selection cortical recurrent network reads out memory representations"
+  ],
+  "manipulations": [
+    "interaction architecture between grid and place cells",
+    "what signals grid cells receive (self-movement velocity, decision evidence)",
+    "counterfactual comparison across alternative circuit architectures"
+  ],
+  "key_findings": [
+    "grid cells jointly encoding velocity and decision-evidence increments optimize learning efficiency",
+    "this architecture best reproduces experimental neural observations relative to alternatives",
+    "alternative architectures show reduced learning performance and weaker match to data"
+  ],
+  "interpretations": [
+    "brain-inspired structured memory architectures provide useful inductive biases for efficient RL",
+    "model yields testable predictions about entorhinal-hippocampal-neocortical information flow"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "hippocampus",
+    "entorhinal cortex",
+    "grid cells",
+    "place cells",
+    "spatially embedded decision-making",
+    "evidence accumulation",
+    "recurrent neural network",
+    "reinforcement learning agents"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "d55dca1286957f74c2b87a36a46650a6",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:46:11+09:00",
+  "review_status": "auto_unreviewed"
+}

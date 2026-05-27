@@ -1,0 +1,60 @@
+{
+  "frameworks": [
+    {
+      "name": "decoded neurofeedback (DecNef)",
+      "role": "primary_lens",
+      "one_line": "multivoxel pattern feedback used to causally manipulate a neural correlate."
+    },
+    {
+      "name": "normative models of confidence",
+      "role": "compared_against",
+      "one_line": "view that confidence directly reflects reliability of perceptual computations."
+    },
+    {
+      "name": "late-stage / dissociable confidence estimation",
+      "role": "alternative_lens",
+      "one_line": "confidence arises from a post-perceptual stage separable from sensory evidence."
+    },
+    {
+      "name": "signal-detection theory",
+      "role": "context",
+      "one_line": "framework underlying psychophysical controls for reporting strategy."
+    }
+  ],
+  "core_question": "Does subjective confidence directly reflect perceptual reliability, or can it be dissociated from perceptual performance?",
+  "key_assumptions": [
+    "multivoxel patterns in a frontoparietal network carry the neural correlate of confidence",
+    "DecNef induction acts selectively on the targeted multivoxel correlate",
+    "perceptual accuracy and confidence can be measured independently"
+  ],
+  "manipulations": [
+    "bi-directional DecNef induction of multivoxel confidence correlates (up vs down)",
+    "frontoparietal network targeting for the neurofeedback signature"
+  ],
+  "key_findings": [
+    "induced bi-directional confidence changes did not alter perceptual accuracy",
+    "psychophysical analyses rule out simple shifts in reporting strategy"
+  ],
+  "interpretations": [
+    "confidence is systematically dissociable from perceptual performance",
+    "results challenge normative accounts equating confidence with perceptual reliability"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "metacognition",
+    "subjective confidence",
+    "decoded neurofeedback",
+    "DecNef",
+    "multivoxel pattern manipulation",
+    "frontoparietal network",
+    "perceptual decision making",
+    "confidence-accuracy dissociation"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "a229a38862107e1600c89a7752c35510",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:46:11+09:00",
+  "review_status": "auto_unreviewed"
+}
