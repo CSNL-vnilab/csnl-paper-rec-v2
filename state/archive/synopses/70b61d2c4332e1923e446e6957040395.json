@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "connectomics",
+      "role": "primary_lens",
+      "one_line": "Volumetric EM reconstruction to map synaptic wiring at cell-type resolution."
+    },
+    {
+      "name": "classical neuroanatomy of inhibition",
+      "role": "extended",
+      "one_line": "Compartment-targeting taxonomy extended with single-cell connectivity data."
+    },
+    {
+      "name": "cortical circuit motifs",
+      "role": "context",
+      "one_line": "Inhibitory circuits described as coordinated motif groups across cell types."
+    }
+  ],
+  "core_question": "What are the cell-type-specific connectivity rules of inhibitory neurons across all layers of mouse visual cortex?",
+  "key_assumptions": [
+    "Dendritic compartment targeting defines meaningful inhibitory cell classes",
+    "Dense EM segmentation captures cell-type-resolved wiring",
+    "Excitatory neurons can be classified from dendritic morphology and synaptic input maps"
+  ],
+  "manipulations": [
+    "Cell-type identity of presynaptic inhibitory neurons",
+    "Dendritic compartment of postsynaptic targets (perisomatic vs dendritic)",
+    "Excitatory subpopulation identity among spatially intermingled cells"
+  ],
+  "key_findings": [
+    "Wiring diagram of >70,000 inhibitory synapses across 1,352 cells spanning all cortical layers",
+    "A disinhibitory specialist class preferentially targets basket cells",
+    "Many interneurons differentially target spatially intermingled excitatory subpopulations",
+    "Inhibitory connectivity is organized into motif groups co-targeting perisomatic and dendritic compartments"
+  ],
+  "interpretations": [
+    "Inhibitory circuitry exhibits widespread cell-type-specific targeting beyond classical compartment rules",
+    "Motif groups coordinate complementary inhibition onto shared excitatory targets"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "mouse visual cortex connectome",
+    "inhibitory interneuron taxonomy",
+    "electron microscopy wiring diagram",
+    "basket cell disinhibition",
+    "perisomatic versus dendritic targeting",
+    "cell-type-specific connectivity",
+    "cortical motif groups",
+    "excitatory neuron dendritic classification"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "70b61d2c4332e1923e446e6957040395",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:48:18+09:00",
+  "review_status": "auto_unreviewed"
+}

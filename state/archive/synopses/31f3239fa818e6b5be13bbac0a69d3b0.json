@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "topographic cortical maps",
+      "role": "primary_lens",
+      "one_line": "Retinotopically organized parietal areas as units of analysis"
+    },
+    {
+      "name": "illusory shape processing",
+      "role": "primary_lens",
+      "one_line": "Cortical responses to subjective contours absent in physical input"
+    },
+    {
+      "name": "dorsal vs ventral stream dissociation",
+      "role": "context",
+      "one_line": "Parietal dorsal-stream involvement beyond ventral LOC for illusory form"
+    },
+    {
+      "name": "attentional modulation",
+      "role": "alternative_lens",
+      "one_line": "Task difficulty as a probe of attention-dependent responses"
+    }
+  ],
+  "core_question": "Do topographically organized posterior parietal areas respond to stationary illusory shapes, and how does attention modulate these responses?",
+  "key_assumptions": [
+    "IPS subregions IPS0-IPS5 and SPL1 can be individually mapped with retinotopy",
+    "Inverted-inducer condition provides a valid non-illusory control",
+    "Fixation task difficulty parametrically manipulates available attention"
+  ],
+  "manipulations": [
+    "Illusory diamond vs lateralized triangle vs inverted (no-figure) inducers",
+    "Shape location: central diamond vs left or right hemifield triangle",
+    "Fixation task difficulty (easy vs hard) to vary attentional load"
+  ],
+  "key_findings": [
+    "All IPS areas (IPS0-IPS5) responded to illusory shapes versus non-illusory inducers",
+    "Posterior areas IPS0-IPS3 showed contralateral preference for lateralized shapes",
+    "Anterior areas IPS4 and IPS5 showed response attenuation with increased task difficulty",
+    "Functional dissociation between posterior spatial specificity and anterior attentional dependence"
+  ],
+  "interpretations": [
+    "IPS represents illusory content from stationary as well as moving stimuli",
+    "Posterior topographic maps carry spatial code while anterior maps depend on attention"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "intraparietal sulcus topographic maps",
+    "illusory shape responses",
+    "Kanizsa-type subjective contours",
+    "IPS0-IPS5 and SPL1",
+    "contralateral hemifield preference",
+    "attentional modulation fMRI",
+    "dorsal stream form processing",
+    "retinotopic parietal cortex"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "31f3239fa818e6b5be13bbac0a69d3b0",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,51 @@
+{
+  "frameworks": [
+    {
+      "name": "rate-distortion theory",
+      "role": "primary_lens",
+      "one_line": "Formalizes memory as a channel trading information rate against distortion"
+    },
+    {
+      "name": "neural population coding",
+      "role": "extended",
+      "one_line": "Population code realizes the abstract rate-distortion computation"
+    }
+  ],
+  "core_question": "How can rate-distortion theory of memory be realized by neural population coding to explain visual working memory?",
+  "key_assumptions": [
+    "Memory acts as a noisy channel with limited information rate",
+    "Distortion cost quantifies memory errors",
+    "Population coding implements the rate-distortion trade-off"
+  ],
+  "manipulations": [
+    "Linked computational-level rate-distortion model to a population coding implementation",
+    "Reanalyzed monkey prefrontal recordings during oculomotor delayed response"
+  ],
+  "key_findings": [
+    "Model reproduces key regularities of visual working memory",
+    "Model explains regularities not previously captured by population coding accounts",
+    "Reanalysis of monkey prefrontal neurons confirms a novel model prediction"
+  ],
+  "interpretations": [
+    "Rate-distortion theory bridges computational-level memory accounts and neural population coding",
+    "Working memory limits reflect a rate-distortion trade-off implemented in prefrontal populations"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "rate-distortion theory",
+    "visual working memory",
+    "neural population coding",
+    "memory channel",
+    "information rate",
+    "distortion cost",
+    "prefrontal delay activity",
+    "oculomotor delayed response"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "c00d2429efb296340ba16a4ba3dc3d41",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

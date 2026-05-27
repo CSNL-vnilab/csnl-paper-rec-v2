@@ -1,0 +1,53 @@
+{
+  "frameworks": [
+    {
+      "name": "resource-rational planning",
+      "role": "primary_lens",
+      "one_line": "non-instrumental information is valuable when planning benefits exceed cognitive and financial costs"
+    },
+    {
+      "name": "intolerance of uncertainty",
+      "role": "extended",
+      "one_line": "trait anxiety construct hypothesized to drive information-seeking, here tested empirically"
+    }
+  ],
+  "core_question": "Does trait anxiety modulate willingness to pay for non-instrumental information, and through what cognitive mechanism?",
+  "key_assumptions": [
+    "non-instrumental information is useful for planning ahead even when outcome cannot be changed",
+    "rational agents pay for information only when anticipated planning benefits exceed costs",
+    "trait anxiety dimensions are dissociable (somatic vs cognitive anxiety, negative affect, self-esteem)"
+  ],
+  "manipulations": [
+    "valence of the outcome",
+    "probability of the outcome",
+    "cost to know whether the outcome will happen",
+    "trait anxiety factor scores across individuals"
+  ],
+  "key_findings": [
+    "high trait somatic anxiety predicts stronger preference for non-instrumental information",
+    "effect is specific to somatic anxiety — not cognitive anxiety, negative affect, or low self-esteem",
+    "preference holds across outcome valence, probability, and information cost",
+    "resource-rational model fit attributes the effect to decreased subjective cost of information"
+  ],
+  "interpretations": [
+    "findings support the intolerance-of-uncertainty hypothesis of anxiety",
+    "trait somatic anxiety specifically modulates the desire for information via subjective information-cost"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "non-instrumental information",
+    "resource-rational planning",
+    "trait somatic anxiety",
+    "intolerance of uncertainty",
+    "willingness to pay for information",
+    "subjective cost of information",
+    "computational psychiatry"
+  ],
+  "abstract_coverage": 1.0,
+  "out_of_scope_note": null,
+  "canonical_id": "29421ad7dbfe90554daa1243dc9857ef",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:48:18+09:00",
+  "review_status": "auto_unreviewed"
+}

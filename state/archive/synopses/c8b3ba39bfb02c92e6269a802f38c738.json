@@ -1,0 +1,52 @@
+{
+  "frameworks": [
+    {
+      "name": "temporal receptive windows",
+      "role": "primary_lens",
+      "one_line": "cortical regions integrate sensory information over region-specific temporal extents"
+    },
+    {
+      "name": "cortical hierarchy of receptive fields",
+      "role": "extended",
+      "one_line": "extends spatial receptive-field hierarchy to the temporal domain"
+    }
+  ],
+  "core_question": "Does the human cortex contain a hierarchy of regions tuned to progressively longer temporal scales of accumulated sensory information?",
+  "key_assumptions": [
+    "response reliability across repeated viewings indexes sensitivity to a given temporal scale",
+    "scrambling order disrupts information at scales longer than the scramble segment",
+    "fMRI BOLD reliability can dissociate short- vs long-timescale integration"
+  ],
+  "manipulations": [
+    "movie presentation direction (forward vs backward)",
+    "piecewise temporal scrambling at varying segment lengths",
+    "repetition across viewings to measure response reliability"
+  ],
+  "key_findings": [
+    "early visual areas (V1, MT+) respond reliably regardless of temporal disruption",
+    "higher areas (STS, precuneus, LS, TPJ, FEF) respond reliably only to intact forward films",
+    "LS, TPJ, FEF require integration over ~36 s while STS and precuneus require ~12 s"
+  ],
+  "interpretations": [
+    "the cortex implements a hierarchy of progressively longer temporal receptive windows",
+    "this temporal hierarchy parallels the well-known hierarchy of spatial receptive fields"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "temporal receptive windows",
+    "cortical hierarchy",
+    "timescale integration",
+    "naturalistic movie fMRI",
+    "response reliability",
+    "temporal scrambling",
+    "superior temporal sulcus",
+    "frontal eye field"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "c8b3ba39bfb02c92e6269a802f38c738",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:48:18+09:00",
+  "review_status": "auto_unreviewed"
+}

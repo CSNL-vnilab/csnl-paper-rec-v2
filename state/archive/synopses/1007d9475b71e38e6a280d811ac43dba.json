@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "trial history bias analysis",
+      "role": "primary_lens",
+      "one_line": "Trial-by-trial systematic updating of decision variables in choice tasks"
+    },
+    {
+      "name": "slow-drift correction (prior method)",
+      "role": "compared_against",
+      "one_line": "A recently proposed correction for slow drifts in decision criterion"
+    },
+    {
+      "name": "latent-state model-based inference",
+      "role": "extended",
+      "one_line": "Model-based disambiguation of systematic updates from random drifts"
+    },
+    {
+      "name": "signal-detection / decision-criterion framework",
+      "role": "context",
+      "one_line": "Decision criterion treated as the key latent decision variable"
+    }
+  ],
+  "core_question": "Can the proposed slow-drift correction reliably recover systematic trial-by-trial updates of decision criterion?",
+  "key_assumptions": [
+    "Decision criterion is the key latent decision variable",
+    "Systematic updates and random drifts can both shape trial-by-trial decisions",
+    "Slow drifts can mimic signatures of systematic updating"
+  ],
+  "manipulations": [
+    "Applied the correction across a variety of synthetic updating strategies",
+    "Compared inference outcomes against ground-truth generative rules",
+    "Tested on both simulated and real datasets"
+  ],
+  "key_findings": [
+    "Correction fails for a wide range of commonly assumed systematic updating strategies",
+    "Inference is distorted away from veridical strategies toward a narrow subset",
+    "Proposed model-based approach accurately recovers latent drift trajectories from simulated data",
+    "Model-based approach also recovers generative systematic updates"
+  ],
+  "interpretations": [
+    "Existing slow-drift correction is inadequate for inferring systematic update rules",
+    "Disambiguating systematic updates from random drifts requires a model-based latent-state approach"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "trial history bias",
+    "slow drift in decision criterion",
+    "systematic updating strategies",
+    "random drift in decision variables",
+    "criterion drift correction",
+    "latent trajectory recovery",
+    "model-based inference of choice updates",
+    "decision variable dynamics"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "1007d9475b71e38e6a280d811ac43dba",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}
