@@ -1,0 +1,60 @@
+{
+  "frameworks": [
+    {
+      "name": "heart rate variability as executive function index",
+      "role": "primary_lens",
+      "one_line": "HRV taken to reflect prefrontal executive control via cortical-autonomic coupling"
+    },
+    {
+      "name": "executive dysfunction account of emotional disorders",
+      "role": "context",
+      "one_line": "Depression and anxiety framed as disorders involving impaired executive function"
+    },
+    {
+      "name": "EEG band-power task reactivity",
+      "role": "primary_lens",
+      "one_line": "Working-memory engagement read from task-vs-rest changes in spectral band power"
+    }
+  ],
+  "core_question": "Does resting HRV correlate with EEG activity during a working memory task in patients with depressive or anxiety disorder?",
+  "key_assumptions": [
+    "HRV indexes executive function and related neural activity",
+    "Working memory task engages executive circuits visible in EEG band power",
+    "Depression and anxiety share an executive-dysfunction substrate"
+  ],
+  "manipulations": [
+    "State contrast: resting state vs working memory task",
+    "Group contrast: depressive disorder vs anxiety disorder",
+    "EEG frequency bands (delta, theta, beta) and scalp region"
+  ],
+  "key_findings": [
+    "Both groups showed weaker beta relative power during the task than at rest",
+    "Resting EEG did not correlate with HRV parameters in either group",
+    "In depression, HRV correlated positively with task delta power and negatively with task beta relative power",
+    "In anxiety, HRV correlated positively with right frontal theta power during the task"
+  ],
+  "interpretations": [
+    "HRV-EEG coupling emerges during cognitive engagement and dissociates depression from anxiety in spectral signature"
+  ],
+  "limitations_noted": [
+    "Retrospective design",
+    "Preliminary sample"
+  ],
+  "connecting_signals": [
+    "heart rate variability",
+    "working memory EEG",
+    "depression",
+    "anxiety disorder",
+    "beta power",
+    "frontal theta",
+    "autonomic-cortical coupling",
+    "executive function"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "b875e6a888c0130978f53b07ee256a37",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:38:42+09:00",
+  "review_status": "auto_unreviewed"
+}

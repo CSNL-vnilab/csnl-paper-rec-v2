@@ -1,0 +1,55 @@
+{
+  "frameworks": [
+    {
+      "name": "context-dependent perceptual decision making",
+      "role": "primary_lens",
+      "one_line": "decision processes flexibly adjust to context across distributed brain networks"
+    },
+    {
+      "name": "cognitive control",
+      "role": "context",
+      "one_line": "prefrontal control framework classically invoked for flexible behavior"
+    },
+    {
+      "name": "distributed network computation",
+      "role": "extended",
+      "one_line": "flexibility implemented across parietal, sensory, motor, and subcortical regions"
+    }
+  ],
+  "core_question": "What neural mechanisms enable perceptual decisions to flexibly adjust to changing context?",
+  "key_assumptions": [
+    "natural environments demand variable decision processes",
+    "context dependency is implemented via diverse neural computations",
+    "flexibility is not localized to prefrontal cortex alone"
+  ],
+  "manipulations": [
+    "review across studies varying context, rules, and behavioral demands"
+  ],
+  "key_findings": [
+    "context-dependent neural activity arises in a distributed network",
+    "posterior parietal, sensory, motor, and subcortical regions show context modulation",
+    "prefrontal cognitive-control areas are part of this distributed flexibility"
+  ],
+  "interpretations": [
+    "flexible decision making depends on a distributed network, not a single control hub",
+    "investigating this network is key to understanding decision flexibility"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "perceptual decision making",
+    "context-dependent computation",
+    "cognitive flexibility",
+    "posterior parietal cortex",
+    "prefrontal cognitive control",
+    "subcortical decision circuits",
+    "distributed network",
+    "behavioral demands"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "89bcea3198cfe2d7a002992ca01b9500",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

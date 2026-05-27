@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "metacognitive efficiency",
+      "role": "primary_lens",
+      "one_line": "behavioural measure of confidence tracking first-order task accuracy across domains"
+    },
+    {
+      "name": "domain-general vs domain-specific metacognition",
+      "role": "compared_against",
+      "one_line": "competing accounts of whether one mechanism supports metacognition across tasks"
+    },
+    {
+      "name": "signal-detection theory",
+      "role": "context",
+      "one_line": "framework distinguishing 2AFC and yes/no judgement types underlying first-order tasks"
+    }
+  ],
+  "core_question": "Does cross-domain correlation in metacognitive efficiency between perception and memory depend on the first-order task type used?",
+  "key_assumptions": [
+    "metacognitive efficiency is comparable across perception and memory domains",
+    "2AFC and yes/no judgements probe different first-order computations",
+    "behavioural correlations index shared metacognitive mechanism"
+  ],
+  "manipulations": [
+    "first-order task type (2AFC vs yes/no) across visual and memory tasks",
+    "three experimental configurations mirroring prior conflicting studies",
+    "matched sample size across experiments for statistical power"
+  ],
+  "key_findings": [
+    "replicated positive cross-domain correlation when both tasks used 2AFC",
+    "replicated absence of correlation when tasks mixed 2AFC and yes/no",
+    "no significant cross-domain correlation when both tasks used yes/no"
+  ],
+  "interpretations": [
+    "prior cross-domain correlation was not merely an artefact of identical task format",
+    "absence of correlation in mixed-task studies may stem from yes/no judgement use"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "metacognitive efficiency",
+    "cross-domain correlation",
+    "two-alternative forced choice",
+    "yes/no judgement",
+    "visual perception metacognition",
+    "memory metacognition",
+    "domain-general mechanism",
+    "first-order task type"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "782c2783329eaa79f791171cbc82dce8",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}

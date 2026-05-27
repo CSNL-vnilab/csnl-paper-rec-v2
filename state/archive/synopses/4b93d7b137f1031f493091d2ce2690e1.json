@@ -1,0 +1,64 @@
+{
+  "frameworks": [
+    {
+      "name": "representational geometry",
+      "role": "primary_lens",
+      "one_line": "compare neural coding axes of perception and working memory across cortex"
+    },
+    {
+      "name": "high-dimensional flexible coding",
+      "role": "primary_lens",
+      "one_line": "perception and memory occupy distinct linearly separable subspaces"
+    },
+    {
+      "name": "factorized representational format",
+      "role": "alternative_lens",
+      "one_line": "abstraction across perception and memory enables cross-decoding generalization"
+    },
+    {
+      "name": "cortical hierarchy of abstraction",
+      "role": "context",
+      "one_line": "flexibility versus abstraction tradeoff varies from sensory to transmodal regions"
+    }
+  ],
+  "core_question": "Do visual perception and visual working memory share the same representational geometry across the cortical hierarchy?",
+  "key_assumptions": [
+    "stimulus coding dimensions can be recovered with linear decoders from 7T fMRI",
+    "face vs scene category provides a coding axis comparable across states",
+    "perception and working memory states are dissociable within the same trial"
+  ],
+  "manipulations": [
+    "attended content (face vs scene) on a blended sample",
+    "match vs mismatch test for the attended aspect",
+    "perceived versus memorized content within trial",
+    "cortical region from early sensory to transmodal association"
+  ],
+  "key_findings": [
+    "stimulus coding dimension rotates when perceptual content enters working memory",
+    "exclusive perception-memory combinations are linearly decodable",
+    "robust cross-decoding across perception and memory indicates factorized formats",
+    "early sensory areas emphasize flexibility while transmodal areas show greater abstraction"
+  ],
+  "interpretations": [
+    "high-dimensional flexible coding may prevent confusion between perception and memory",
+    "balance of flexibility and abstraction varies along the cortical hierarchy"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "representational geometry",
+    "working memory",
+    "visual perception",
+    "7T fMRI",
+    "cross-decoding",
+    "factorized representations",
+    "cortical hierarchy",
+    "subspace coding"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "4b93d7b137f1031f493091d2ce2690e1",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}

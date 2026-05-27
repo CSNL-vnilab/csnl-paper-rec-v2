@@ -1,0 +1,62 @@
+{
+  "canonical_id": "a13b11513bdcf3095e9ffe27979a1ac0",
+  "frameworks": [
+    {
+      "name": "five-factor model of personality",
+      "role": "primary_lens",
+      "one_line": "FFM personality traits as the target dimension to relate to brain connectivity"
+    },
+    {
+      "name": "intrinsic functional connectome",
+      "role": "primary_lens",
+      "one_line": "whole-brain resting-state functional connectivity as the neural substrate"
+    },
+    {
+      "name": "intersubject similarity analysis",
+      "role": "extended",
+      "one_line": "pairwise similarity between subjects links network and trait structure"
+    },
+    {
+      "name": "twin-based heritability",
+      "role": "context",
+      "one_line": "MZ-vs-DZ contrast used to assess heritability of connectivity"
+    }
+  ],
+  "core_question": "Is interindividual similarity in personality traits reflected in similarity of intrinsic whole-brain functional connectivity?",
+  "key_assumptions": [
+    "personality is well-captured by the five-factor model",
+    "resting-state functional connectivity indexes stable individual traits",
+    "intersubject similarity is a meaningful comparison metric for both traits and networks"
+  ],
+  "manipulations": [
+    "compared MZ vs DZ twin pairs to probe heritability",
+    "varied subject pairs along personality-similarity continuum"
+  ],
+  "key_findings": [
+    "identified a global personality network in resting-state connectivity related to FFM traits",
+    "connectivity strength of this network is more similar in MZ than DZ twins (heritable)",
+    "across subject pairs, network similarity correlates positively with personality similarity",
+    "global personality network predicts individual item-level questionnaire responses"
+  ],
+  "interpretations": [
+    "supports a 'similar brain, similar personality' hypothesis linking trait and connectome structure",
+    "personality traits have a heritable neural signature in intrinsic functional architecture"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "five-factor personality",
+    "resting-state functional connectivity",
+    "Human Connectome Project",
+    "intersubject similarity analysis",
+    "global personality network",
+    "twin heritability of connectivity",
+    "individual differences prediction",
+    "connectome-based prediction"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:38:42+09:00",
+  "review_status": "auto_unreviewed"
+}

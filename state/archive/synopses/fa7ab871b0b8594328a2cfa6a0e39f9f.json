@@ -1,0 +1,62 @@
+{
+  "frameworks": [
+    {
+      "name": "multivariate pattern analysis (MVPA)",
+      "role": "primary_lens",
+      "one_line": "decoding memorized shape identity from distributed fMRI activity patterns"
+    },
+    {
+      "name": "adaptive prefrontal working memory code",
+      "role": "compared_against",
+      "one_line": "dorsolateral prefrontal cortex stores contents in flexible abstract format"
+    },
+    {
+      "name": "sensory recruitment of posterior cortex",
+      "role": "alternative_lens",
+      "one_line": "posterior areas maintain contents in perception-like representations"
+    },
+    {
+      "name": "view-invariant object representation",
+      "role": "extended",
+      "one_line": "rotation-invariant code tested as index of representational abstraction"
+    }
+  ],
+  "core_question": "Do prefrontal and posterior working-memory representations of complex shapes differ in their level of view-invariant abstraction?",
+  "key_assumptions": [
+    "rotation-invariance indexes abstraction in neural representations",
+    "fMRI multivariate patterns reflect memorized content",
+    "dlPFC and frontal eye fields are dissociable frontal substrates"
+  ],
+  "manipulations": [
+    "shape identity held in working memory",
+    "viewpoint/rotation of memorized shape",
+    "anatomical region of interest (posterior vs frontal subregions)"
+  ],
+  "key_findings": [
+    "both posterior and frontal regions support decoding of memorized shape identity",
+    "memory representations are rotation-invariant in both regions",
+    "frontal contribution localizes to frontal eye fields rather than dlPFC"
+  ],
+  "interpretations": [
+    "view-independent working memory code is shared across posterior and frontal cortex",
+    "frontal eye fields, not dlPFC, host the abstract frontal representation"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "visual working memory",
+    "rotation-invariant representation",
+    "frontal eye fields",
+    "dorsolateral prefrontal cortex",
+    "multivariate pattern analysis",
+    "complex shape memory",
+    "view independence",
+    "sensory recruitment"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "fa7ab871b0b8594328a2cfa6a0e39f9f",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:05:00+09:00",
+  "review_status": "auto_unreviewed"
+}

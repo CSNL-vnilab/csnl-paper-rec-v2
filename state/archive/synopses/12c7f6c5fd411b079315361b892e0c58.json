@@ -1,0 +1,50 @@
+{
+  "canonical_id": "12c7f6c5fd411b079315361b892e0c58",
+  "frameworks": [
+    {
+      "name": "pupillometry methodology",
+      "role": "primary_lens",
+      "one_line": "Pupil size as a physiological readout of cognitive state."
+    },
+    {
+      "name": "probabilistic-inference de-confounding",
+      "role": "extended",
+      "one_line": "Statistical model that infers and removes blink-evoked pupil artifacts."
+    }
+  ],
+  "core_question": "Does eye blinking, through its cognitively-dependent occurrence, confound pupillary measurements, and can it be statistically removed?",
+  "key_assumptions": [
+    "Blinks are not random but co-vary with cognitive components",
+    "Blink-locked pupillary response (BPR) is a stereotyped pulse with characterizable shape",
+    "Confounds can be modelled as additive components on raw pupil signals"
+  ],
+  "manipulations": [
+    "Characterization of BPR shape and magnitude across subjects and blinks",
+    "Application of the proposed de-confounding algorithm versus raw pupillometry"
+  ],
+  "key_findings": [
+    "Eye blinks induce a pulse-like pupillary change (constriction then dilation) with substantial magnitude and duration",
+    "Blink occurrence depends on cognitive factors, producing BPR-mediated confounds in pupillary measures",
+    "The proposed algorithm selectively removes BPR and increases statistical power of pupillometry"
+  ],
+  "interpretations": [
+    "Cognitive dependence of blinking can systematically distort pupillometric inferences unless explicitly modelled",
+    "Probabilistic de-confounding is a viable remedy that preserves cognitively-driven pupil signals"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "blink-locked pupillary response",
+    "pupillometry confound",
+    "eye blink artifact removal",
+    "probabilistic inference de-confounding",
+    "cognitive modulation of blinking",
+    "pupil constriction-dilation pulse",
+    "statistical power of pupillometry"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:38:42+09:00",
+  "review_status": "auto_unreviewed"
+}

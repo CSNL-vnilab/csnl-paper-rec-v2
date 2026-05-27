@@ -1,0 +1,59 @@
+{
+  "frameworks": [
+    {
+      "name": "ComBat statistical harmonization",
+      "role": "primary_lens",
+      "one_line": "Empirical-Bayes location/scale adjustment to remove site effects from neuroimaging features."
+    },
+    {
+      "name": "Resting-state functional connectivity",
+      "role": "context",
+      "one_line": "Pairwise BOLD correlation as the measurement target for harmonization."
+    },
+    {
+      "name": "Graph-theoretic brain network analysis",
+      "role": "context",
+      "one_line": "Network-level measures derived from connectivity matrices as harmonization targets."
+    }
+  ],
+  "core_question": "Can a statistical harmonization technique remove residual multi-site scanner effects from resting-state fMRI functional connectivity and network measures?",
+  "key_assumptions": [
+    "Phantom-based protocol homogenization leaves residual non-biological site variability",
+    "Site effects are separable from biological effects via location/scale modeling",
+    "Connectivity metric and brain parcellation choice modulate site-effect magnitude"
+  ],
+  "manipulations": [
+    "Acquisition site (4 sites)",
+    "Connectivity metric used",
+    "Brain atlas / parcellation used",
+    "Pre- vs post-ComBat harmonization"
+  ],
+  "key_findings": [
+    "Site effects were detectable in connectivity and network measures despite phantom-homogenized acquisition",
+    "ComBat removed identified site effects across metrics and atlases",
+    "Post-harmonization increased statistical power to detect age associations",
+    "Optimal metric-atlas combinations yielded the largest power gains"
+  ],
+  "interpretations": [
+    "Statistical harmonization is necessary even after protocol homogenization in multi-site fMRI",
+    "ComBat generalizes from DTI/cortical thickness to functional connectivity features"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "ComBat harmonization",
+    "multi-site fMRI",
+    "resting-state functional connectivity",
+    "site effects",
+    "brain parcellation",
+    "network measures",
+    "scanner variability",
+    "age association detection"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "dc76b2415e5dae1a317a9a87a772f0c2",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:38:42+09:00",
+  "review_status": "auto_unreviewed"
+}
