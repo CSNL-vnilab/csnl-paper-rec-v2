@@ -1,0 +1,61 @@
+{
+  "frameworks": [
+    {
+      "name": "probabilistic mental simulation",
+      "role": "alternative_lens",
+      "one_line": "approximate noisy simulation of physical dynamics to predict outcomes"
+    },
+    {
+      "name": "feature/abstraction-based reasoning",
+      "role": "alternative_lens",
+      "one_line": "discrete heuristic features replace full simulation for efficiency"
+    },
+    {
+      "name": "blended simulation-abstraction model",
+      "role": "primary_lens",
+      "one_line": "linear path projection substitutes simulation under specific conditions"
+    },
+    {
+      "name": "mental physics engine",
+      "role": "extended",
+      "one_line": "flexible engine adaptively invokes cheaper abstractions when useful"
+    }
+  ],
+  "core_question": "How do people combine probabilistic physical simulation with abstract features when reasoning about everyday physical events?",
+  "key_assumptions": [
+    "physical reasoning can rely on approximate probabilistic simulation",
+    "abstractions trade fidelity for computational efficiency",
+    "linear path projection is the relevant abstraction for falling-ball judgments"
+  ],
+  "manipulations": [
+    "availability of straight-line paths between ball and target",
+    "simulation time held fixed across conditions",
+    "ball trajectory geometry in contact judgments"
+  ],
+  "key_findings": [
+    "response times are longer when straight-line paths are unavailable even with fixed simulation time",
+    "people misjudge ball trajectories consistent with linear path projection"
+  ],
+  "interpretations": [
+    "pure-simulation accounts are insufficient given RT pattern",
+    "people use a flexible mental physics engine that adaptively invokes efficient abstractions"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "intuitive physics",
+    "mental simulation",
+    "linear path projection",
+    "physical reasoning",
+    "mental physics engine",
+    "heuristic abstraction",
+    "falling ball contact judgment",
+    "systematic prediction errors"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "8990b1e408b11cd0b43fb314c3322b34",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:23:45+09:00",
+  "review_status": "auto_unreviewed"
+}

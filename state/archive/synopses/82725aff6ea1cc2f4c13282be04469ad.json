@@ -1,0 +1,56 @@
+{
+  "frameworks": [
+    {
+      "name": "reward prediction error",
+      "role": "primary_lens",
+      "one_line": "Learning signal driving updates of outcome expectations"
+    },
+    {
+      "name": "belief state",
+      "role": "extended",
+      "one_line": "Probabilities over latent states weight prediction errors under perceptual uncertainty"
+    },
+    {
+      "name": "pupil-linked arousal",
+      "role": "primary_lens",
+      "one_line": "Arousal systems indexed by pupil regulate learning rate"
+    }
+  ],
+  "core_question": "Does pupil-linked arousal encode belief-state-weighted prediction errors during reward learning under perceptual uncertainty?",
+  "key_assumptions": [
+    "Belief states modulate learning from prediction errors under ambiguity",
+    "Pupil responses index arousal systems regulating learning",
+    "Reward prediction errors drive updating of outcome expectations"
+  ],
+  "manipulations": [
+    "Perceptual uncertainty about stimulus identity",
+    "Outcome valence and prediction-error magnitude",
+    "Uncertainty-augmented reward-learning task"
+  ],
+  "key_findings": [
+    "Pupil responses to outcomes scaled with prediction errors",
+    "Pupil responses were down-weighted under higher perceptual uncertainty"
+  ],
+  "interpretations": [
+    "Arousal systems integrate perceptual and reward information to regulate learning dynamically",
+    "Prediction errors are weighted by belief state during learning under uncertainty"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "reward prediction error",
+    "belief state weighting",
+    "pupil-linked arousal",
+    "perceptual uncertainty",
+    "uncertainty-weighted learning",
+    "pupillometry",
+    "reward learning task",
+    "dynamic learning rate"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "82725aff6ea1cc2f4c13282be04469ad",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

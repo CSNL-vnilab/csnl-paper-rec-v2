@@ -1,0 +1,55 @@
+{
+  "frameworks": [
+    {
+      "name": "decision uncertainty",
+      "role": "primary_lens",
+      "one_line": "computational signature of confidence in perceptual choices guides adjustments"
+    },
+    {
+      "name": "pupil-linked arousal",
+      "role": "primary_lens",
+      "one_line": "pupil diameter as proxy for central arousal modulating brain state"
+    },
+    {
+      "name": "serial choice bias",
+      "role": "extended",
+      "one_line": "trial-to-trial correlation structure of choices shaped by arousal"
+    }
+  ],
+  "core_question": "Does decision uncertainty drive pupil-linked arousal, and does that arousal in turn alter serial choice bias on subsequent trials?",
+  "key_assumptions": [
+    "pupil diameter indexes central arousal state",
+    "decision uncertainty has identifiable computational signatures",
+    "arousal can shape ongoing choice behavior across trials"
+  ],
+  "manipulations": [
+    "task difficulty across perceptual choices",
+    "post-choice pre-feedback interval for pupil measurement"
+  ],
+  "key_findings": [
+    "post-choice pupil dilation reflects three hallmark signatures of decision uncertainty",
+    "increased pupil-linked arousal boosts tendency to alternate choice on the next trial"
+  ],
+  "interpretations": [
+    "decision uncertainty rapidly drives pupil-linked arousal",
+    "arousal state shapes serial correlation structure of ongoing choice behavior"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "decision uncertainty",
+    "pupil dilation",
+    "pupil-linked arousal",
+    "serial choice bias",
+    "choice alternation",
+    "perceptual decision-making",
+    "post-choice signals",
+    "global brain state"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "a133fbe6f298b8076178eb527b5028db",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:23:45+09:00",
+  "review_status": "auto_unreviewed"
+}

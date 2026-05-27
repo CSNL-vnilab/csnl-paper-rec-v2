@@ -1,0 +1,55 @@
+{
+  "frameworks": [
+    {
+      "name": "attentional blink (AB)",
+      "role": "primary_lens",
+      "one_line": "second-target deficit within ~500 ms indexes capacity-limited attentional selection"
+    },
+    {
+      "name": "post-perceptual bottleneck account",
+      "role": "compared_against",
+      "one_line": "claim that AB spares perception and only disrupts working-memory consolidation"
+    },
+    {
+      "name": "working memory",
+      "role": "context",
+      "one_line": "downstream store whose access differs across feature levels during the blink"
+    }
+  ],
+  "core_question": "Does the attentional blink disrupt perceptual processing, or only post-perceptual consolidation?",
+  "key_assumptions": [
+    "if perception is intact, all features of T2 should access working memory equally",
+    "report-feature manipulation isolates the level at which the blink acts",
+    "baseline performance can be equated across report conditions"
+  ],
+  "manipulations": [
+    "reporting feature of T2 (identity vs semantic category vs color)",
+    "T1-T2 lag to traverse the AB depth"
+  ],
+  "key_findings": [
+    "identity and semantic-category reports were more impaired by the blink than color reports",
+    "baseline (no-blink) performance was matched across report conditions",
+    "high-level features are more poorly represented in WM than low-level features during the blink"
+  ],
+  "interpretations": [
+    "the attentional blink disrupts perceptual processing, not only post-perceptual stages"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "attentional blink",
+    "T2 identification",
+    "feature-level report",
+    "semantic categorization",
+    "color report",
+    "working memory access",
+    "perceptual vs post-perceptual",
+    "temporal attention"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "550022badc3489ec1a664d5fc887c756",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:23:45+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,56 @@
+{
+  "frameworks": [
+    {
+      "name": "latent structure learning",
+      "role": "primary_lens",
+      "one_line": "Infers unobserved social group categories beyond dyadic similarity."
+    },
+    {
+      "name": "computational model-based fMRI",
+      "role": "primary_lens",
+      "one_line": "Trial-by-trial model estimates regressed against neural signal."
+    },
+    {
+      "name": "dyadic similarity heuristic",
+      "role": "compared_against",
+      "one_line": "Pairwise similarity treated as alternative basis for allyship."
+    }
+  ],
+  "core_question": "How does the brain learn and represent latent social group boundaries beyond explicit categories and dyadic similarity?",
+  "key_assumptions": [
+    "Allyship estimates can be modeled trial-by-trial from behavior",
+    "Latent group structure and dyadic similarity are dissociable computations",
+    "BOLD variability tracks distinct algorithmic signals"
+  ],
+  "manipulations": [
+    "Two competing allyship signals (dyadic vs latent-structure) as model regressors",
+    "Trial-by-trial agent-participant interactions during ally choice"
+  ],
+  "key_findings": [
+    "Dyadic-similarity allyship tracks mPFC/pregenual ACC activity",
+    "Latent-structure allyship tracks right anterior insula activity",
+    "rAI variability predicts ally-choice behavior; pgACC variability does not"
+  ],
+  "interpretations": [
+    "Distinct neural substrates support similarity-based vs latent-group social inference",
+    "rAI mediates the computation distinguishing 'us' from 'them'"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "latent structure learning",
+    "social group representation",
+    "anterior insula",
+    "pregenual anterior cingulate",
+    "model-based fMRI",
+    "ally choice behavior",
+    "dyadic similarity",
+    "us-versus-them inference"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "666d862944f8bfc5f8fd330b078e4618",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:23:45+09:00",
+  "review_status": "auto_unreviewed"
+}

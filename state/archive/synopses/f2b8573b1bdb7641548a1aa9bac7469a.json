@@ -1,0 +1,59 @@
+{
+  "frameworks": [
+    {
+      "name": "representational similarity analysis",
+      "role": "primary_lens",
+      "one_line": "Model-based RSA compares numerosity to other visual feature models across cortex"
+    },
+    {
+      "name": "neural representational geometry",
+      "role": "primary_lens",
+      "one_line": "Low-dimensional embedding of BOLD patterns reveals coding structure"
+    },
+    {
+      "name": "two visual streams (dorsal/ventral)",
+      "role": "context",
+      "one_line": "Numerosity coding compared across dorsal and ventral retinotopic and associative areas"
+    }
+  ],
+  "core_question": "How is visual numerosity encoded relative to other visual features across early visual and associative regions in both streams?",
+  "key_assumptions": [
+    "Numerosity can be dissociated from item size, total area, field area, and density via stimulus control",
+    "Model-based RSA can separate competing visual-feature representations",
+    "Dimensionality reduction recovers meaningful coding geometry from BOLD patterns"
+  ],
+  "manipulations": [
+    "Varied number across visual sets",
+    "Varied item size, total item area, field area, and density",
+    "Compared early visual vs retinotopic vs non-retinotopic associative regions",
+    "Compared dorsal vs ventral stream regions"
+  ],
+  "key_findings": [
+    "Numerosity is represented independently of other visual properties in early visual areas",
+    "Numerosity representation is amplified in retinotopic and non-retinotopic associative regions across both streams",
+    "Early visual and ventral retinotopic areas show a one-dimensional representation of numerical rank",
+    "Associative dorsal and ventral regions show a curved geometry encoding rank and distance-to-endpoints"
+  ],
+  "interpretations": [
+    "Distinct neural coding schemes for numerosity operate across cortical regions",
+    "Numerosity is encoded across a broader cortical network beyond parietal cortex"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "visual numerosity",
+    "representational similarity analysis",
+    "neural representational geometry",
+    "numerical rank coding",
+    "distance-to-endpoints",
+    "dorsal and ventral streams",
+    "retinotopic associative regions",
+    "whole-brain fMRI"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "f2b8573b1bdb7641548a1aa9bac7469a",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

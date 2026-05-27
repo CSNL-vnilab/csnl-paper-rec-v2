@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "Pavlovian-instrumental arbitration",
+      "role": "primary_lens",
+      "one_line": "Brain arbitrates between Pavlovian and instrumental controllers by predictive accuracy"
+    },
+    {
+      "name": "reinforcement learning",
+      "role": "extended",
+      "one_line": "Stimulus-only vs stimulus-action value learners compete for control"
+    },
+    {
+      "name": "controllability inference",
+      "role": "primary_lens",
+      "one_line": "Inferred reward controllability gates which predictor wins"
+    }
+  ],
+  "core_question": "Does the balance between Pavlovian and instrumental control depend on inferred reward controllability?",
+  "key_assumptions": [
+    "Pavlovian predictor learns values from stimuli only",
+    "Instrumental predictor learns values from stimuli and actions",
+    "Brain arbitrates by choosing the better reward predictor",
+    "Pavlovian bias is a state, not a fixed individual trait"
+  ],
+  "manipulations": [
+    "Low vs high controllability contexts over rewards",
+    "Reward-predictive vs punishment-predictive cues",
+    "Cue valence crossed with required approach/avoid action"
+  ],
+  "key_findings": [
+    "Pavlovian approach bias was stronger under low control than high control",
+    "Within-individual variation of Pavlovian bias across contexts",
+    "Bias modulation consistent with arbitration by predictor accuracy"
+  ],
+  "interpretations": [
+    "Pavlovian bias reflects adaptive arbitration, not a fixed trait",
+    "When actions matter little, the simpler Pavlovian predictor is favored"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "Pavlovian-instrumental transfer",
+    "controllability",
+    "approach-avoidance bias",
+    "reward prediction",
+    "model arbitration",
+    "go/no-go bias",
+    "action selection",
+    "learned helplessness"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "71f84c7d2151a5b09c9d59727caf832a",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}
