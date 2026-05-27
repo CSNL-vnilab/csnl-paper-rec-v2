@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "spatial Bayesian GLM",
+      "role": "primary_lens",
+      "one_line": "cortical-surface GLM leveraging spatial dependencies among neighboring vertices"
+    },
+    {
+      "name": "classical massive-univariate GLM",
+      "role": "compared_against",
+      "one_line": "vertex-wise GLM ignoring neighborhood similarity in activation patterns"
+    },
+    {
+      "name": "cortical surface-based fMRI analysis",
+      "role": "context",
+      "one_line": "analysis on subject-specific surface meshes rather than volumetric voxels"
+    },
+    {
+      "name": "multi-run hierarchical extension",
+      "role": "extended",
+      "one_line": "extends spatial Bayesian GLM to combine multiple runs per subject"
+    }
+  ],
+  "core_question": "Does a cortical surface-based spatial Bayesian GLM yield more reliable and powerful task-activation estimates than the classical GLM in individuals and groups?",
+  "key_assumptions": [
+    "neighboring cortical vertices share similar activation patterns",
+    "spatial priors improve estimates of task-evoked responses",
+    "subject-specific cortical surfaces are appropriate analysis units"
+  ],
+  "manipulations": [
+    "modeling approach (spatial Bayesian GLM vs. classical GLM)",
+    "single-run vs. multi-run analysis",
+    "individual vs. group-average activation estimates",
+    "sample size used for group inference"
+  ],
+  "key_findings": [
+    "spatial Bayesian GLM yields highly reliable activations in individual subjects",
+    "method is powerful enough to detect trait-like functional topologies",
+    "power to detect scientifically meaningful effects is nearly invariant to sample size"
+  ],
+  "interpretations": [
+    "leveraging spatial dependencies produces more accurate and powerful activation maps than massive-univariate GLM",
+    "surface-based spatial Bayesian GLM is suitable for individual-level functional mapping"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "spatial Bayesian GLM",
+    "cortical surface analysis",
+    "task fMRI activation",
+    "individual functional topology",
+    "test-retest reliability",
+    "HCP motor task",
+    "multi-run fMRI modeling",
+    "vertex-wise spatial prior"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "e85cbc6c3d6d3de35a22d68a26813d98",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:05:00+09:00",
+  "review_status": "auto_unreviewed"
+}

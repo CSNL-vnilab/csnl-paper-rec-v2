@@ -1,0 +1,56 @@
+{
+  "frameworks": [
+    {
+      "name": "information-flow analysis of cortical areas",
+      "role": "primary_lens",
+      "one_line": "characterize PF subareas by their unique input-output transformations"
+    },
+    {
+      "name": "psychological-labelling of cortical function",
+      "role": "compared_against",
+      "one_line": "assigning psychological terms to areas instead of describing operations"
+    },
+    {
+      "name": "abstract transformation / generalization",
+      "role": "extended",
+      "one_line": "mid-dorsal and ventral PF encode transformations abstracted from specific actions or objects"
+    }
+  ],
+  "core_question": "How does the prefrontal cortex operate, described in terms of input-output transformations rather than psychological labels?",
+  "key_assumptions": [
+    "function follows from anatomical input-output patterns",
+    "each PF subarea has a unique pattern of connections",
+    "abstract transformations support generalization to novel problems"
+  ],
+  "manipulations": [
+    "comparison across three PF subregions: caudal, mid-dorsal, ventral"
+  ],
+  "key_findings": [
+    "caudal PF transforms attended or short-term-memory input into eye-movement targets",
+    "mid-dorsal PF transforms object/action order into eye- and hand-movement sequences",
+    "ventral PF transforms object or sound input into prospective associated representations",
+    "mid-dorsal and ventral PF encode abstract transformations independent of specific actions or objects"
+  ],
+  "interpretations": [
+    "PF function is best described by area-specific input-output transformations",
+    "abstract encoding enables generalization to novel problems sharing underlying logic"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "prefrontal cortex",
+    "input-output transformation",
+    "caudal prefrontal cortex",
+    "mid-dorsal prefrontal cortex",
+    "ventral prefrontal cortex",
+    "abstract representation",
+    "generalization",
+    "short-term memory and attention"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "010a6ad5906488c80b9df103b2cba137",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}

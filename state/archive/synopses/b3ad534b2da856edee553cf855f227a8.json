@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "task-relevant autoencoder via classifier enhancement (TRACE)",
+      "role": "primary_lens",
+      "one_line": "autoencoder jointly trained with classifier to isolate behaviorally-relevant neural features"
+    },
+    {
+      "name": "standard autoencoder",
+      "role": "compared_against",
+      "one_line": "unsupervised reconstruction baseline that may capture noise rather than behavior"
+    },
+    {
+      "name": "machine learning for fMRI representation discovery",
+      "role": "context",
+      "one_line": "low-dimensional decoding of behaviorally relevant neural patterns under small-N constraints"
+    }
+  ],
+  "core_question": "Can a task-relevant autoencoder extract behaviorally-relevant low-dimensional neural representations from small fMRI datasets where standard models overfit?",
+  "key_assumptions": [
+    "features of interest are those tied to subject behavior, not arbitrary variance",
+    "joint reconstruction-plus-classification objective regularizes representation learning",
+    "human fMRI per-subject samples are too few for standard deep models"
+  ],
+  "manipulations": [
+    "model architecture (TRACE vs standard autoencoder vs alternatives)",
+    "training set size severely truncated to mimic per-subject fMRI",
+    "domain (benchmark ML datasets vs fMRI of animals vs objects viewing)"
+  ],
+  "key_findings": [
+    "TRACE outperformed alternative models nearly unilaterally on truncated benchmarks",
+    "up to 12% increased classification accuracy over baselines",
+    "up to 56% improvement in recovering cleaner task-relevant representations",
+    "advantage held on fMRI from 59 subjects viewing animals and objects"
+  ],
+  "interpretations": [
+    "supervising the latent space with behavior yields cleaner neural representations under small-N",
+    "task-relevant autoencoding is a viable tool for human neuroimaging with limited samples"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "task-relevant autoencoder",
+    "classifier-enhanced representation learning",
+    "fMRI decoding",
+    "low-dimensional neural representations",
+    "small-sample neuroimaging",
+    "overfitting in human neuroscience",
+    "animals vs objects viewing",
+    "behaviorally-relevant features"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "b3ad534b2da856edee553cf855f227a8",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}

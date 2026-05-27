@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "transcranial direct current stimulation (tDCS) dose-response",
+      "role": "primary_lens",
+      "one_line": "Anodal current intensity modulates regional cortical activity and motor learning."
+    },
+    {
+      "name": "regional cerebral blood flow as neural-activity surrogate",
+      "role": "primary_lens",
+      "one_line": "rCBF under electrodes indexes stimulation-induced cortical engagement."
+    },
+    {
+      "name": "electric-field / current-density modeling",
+      "role": "extended",
+      "one_line": "Simulated perirolandic current density linked to behavioural gains."
+    }
+  ],
+  "core_question": "How do tDCS dose and electrode montage jointly affect cortical rCBF and motor-sequence performance?",
+  "key_assumptions": [
+    "rCBF reflects local neural activity changes",
+    "Finger-sequence task indexes motor learning",
+    "Simulated current density approximates delivered field"
+  ],
+  "manipulations": [
+    "Dose: Sham vs 2 mA vs 4 mA",
+    "Montage: unihemispheric (C4 anode, contralateral supraorbital cathode) vs bihemispheric (C4 anode, C3 cathode)"
+  ],
+  "key_findings": [
+    "Finger-sequence performance improved linearly with dose for both hands, no montage effect",
+    "Right perirolandic rCBF increased with dose under anodal electrode",
+    "Left perirolandic rCBF showed dose trend and significant montage effect",
+    "Bihemispheric 4 mA produced additional frontomesial rCBF increases"
+  ],
+  "interpretations": [
+    "Higher tDCS dose drives stronger cortical engagement and behavioural gain",
+    "Simulated perirolandic current density predicts contralateral-hand learning"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "tDCS dose-response",
+    "regional cerebral blood flow",
+    "motor cortex stimulation",
+    "finger sequence task",
+    "current density simulation",
+    "electrode montage",
+    "perirolandic cortex",
+    "non-invasive brain stimulation"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "f72871119588b23c7f4f16a5cdc690ad",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:40:56+09:00",
+  "review_status": "auto_unreviewed"
+}

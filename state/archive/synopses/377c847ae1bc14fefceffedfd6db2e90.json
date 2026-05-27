@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "dissociation of perceptual decision and confidence",
+      "role": "primary_lens",
+      "one_line": "confidence evaluation is a process distinct from the perceptual decision itself"
+    },
+    {
+      "name": "evidence accumulation with premature commitment",
+      "role": "extended",
+      "one_line": "observers commit to a choice early while continuing to monitor sensory evidence"
+    },
+    {
+      "name": "EEG source localization",
+      "role": "context",
+      "one_line": "spectral and source-localized neural signatures index distinct cognitive processes"
+    }
+  ],
+  "core_question": "Can neural signatures separate the computation of perceptual confidence from the perceptual decision itself?",
+  "key_assumptions": [
+    "perceptual decision and confidence evaluation are separable cognitive processes",
+    "motor-cortex spectral power indexes decision commitment",
+    "continued evidence monitoring after commitment supports confidence"
+  ],
+  "manipulations": [
+    "protracted perceptual decision-making task that extends evidence presentation",
+    "comparison of neural activity before vs. after decision commitment"
+  ],
+  "key_findings": [
+    "motor-cortex spectral patterns reveal premature decision commitment",
+    "neural representation of perceptual decision evidence attenuates after commitment",
+    "distinct neural representation tracks confidence computation",
+    "confidence sources localize to superior parietal and orbitofrontal cortices"
+  ],
+  "interpretations": [
+    "confidence relies on a neural circuit distinct from perceptual decision-making",
+    "confidence-related resources are recruited even after the perceptual choice is made"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "perceptual confidence",
+    "decision commitment",
+    "evidence accumulation",
+    "motor cortex spectral power",
+    "superior parietal cortex",
+    "orbitofrontal cortex",
+    "EEG source localization",
+    "metacognition"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "377c847ae1bc14fefceffedfd6db2e90",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}

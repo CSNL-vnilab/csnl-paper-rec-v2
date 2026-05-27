@@ -1,0 +1,62 @@
+{
+  "frameworks": [
+    {
+      "name": "fMRI multivariate decoding",
+      "role": "primary_lens",
+      "one_line": "decode reach direction from EVC voxel patterns in congenitally blind"
+    },
+    {
+      "name": "cross-modal plasticity",
+      "role": "context",
+      "one_line": "EVC represents non-visual information after early blindness"
+    },
+    {
+      "name": "predictive action-visual space alignment",
+      "role": "extended",
+      "one_line": "hard-wired mechanism aligns motor reach space with retinotopic map"
+    },
+    {
+      "name": "dorsal stream visuo-motor integration",
+      "role": "context",
+      "one_line": "dorsal areas critical for visuo-spatial transformation even without sight"
+    }
+  ],
+  "core_question": "Can reach direction be decoded from early visual cortex of congenitally blind humans without visual experience or imagery?",
+  "key_assumptions": [
+    "fMRI patterns in EVC carry decodable action-related information",
+    "congenital blindness eliminates visual experience and visual imagery",
+    "foveal vs peripheral retinotopy is preserved in blind EVC"
+  ],
+  "manipulations": [
+    "reach direction across multiple targets",
+    "EVC subregions along foveal-to-peripheral retinotopic gradient",
+    "blind vs sighted comparison framework"
+  ],
+  "key_findings": [
+    "reach direction reliably decoded from EVC fMRI in congenitally blind",
+    "decoding accuracy highest in foveal-representing EVC, decreases toward peripheral",
+    "decoding also strong in dorsal stream visuo-spatial / visuo-motor areas"
+  ],
+  "interpretations": [
+    "visual experience and imagery are not necessary for EVC action representation",
+    "a predictive hard-wired mechanism may align action space with foveal visual space"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "congenital blindness",
+    "early visual cortex",
+    "reach direction decoding",
+    "fMRI MVPA",
+    "foveal-peripheral retinotopy",
+    "dorsal stream",
+    "visuo-motor integration",
+    "cross-modal plasticity"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "f76ff65559fb42f6adb004b4aca26cae",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:40:56+09:00",
+  "review_status": "auto_unreviewed"
+}

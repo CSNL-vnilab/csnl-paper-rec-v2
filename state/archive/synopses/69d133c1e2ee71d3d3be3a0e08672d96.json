@@ -1,0 +1,62 @@
+{
+  "frameworks": [
+    {
+      "name": "curriculum-based reinforcement learning",
+      "role": "primary_lens",
+      "one_line": "staged RL curriculum trains policy to acquire complex motor skill"
+    },
+    {
+      "name": "musculoskeletal simulation",
+      "role": "primary_lens",
+      "one_line": "physics-based hand model with 39 muscles as control substrate"
+    },
+    {
+      "name": "recurrent neural network policy",
+      "role": "extended",
+      "one_line": "RNN controller learns dexterous in-hand manipulation via RL"
+    },
+    {
+      "name": "muscle synergy analysis",
+      "role": "compared_against",
+      "one_line": "low-dimensional kinematic synergies as account of motor control"
+    }
+  ],
+  "core_question": "Can curriculum-based RL acquire dexterous musculoskeletal control, and do the learned policies recapitulate human-like motor synergies?",
+  "key_assumptions": [
+    "biological motor control can be probed by training agents on realistic musculoskeletal models",
+    "learning without explicit low-dimensional bias still permits synergy emergence",
+    "selective inactivation reveals true effective dimensionality of control"
+  ],
+  "manipulations": [
+    "curriculum stages during training of the RNN policy",
+    "task of rotating two Baoding balls in the palm",
+    "selective inactivation of components of the learned control signal"
+  ],
+  "key_findings": [
+    "the policy controls a 39-muscle hand to rotate two Baoding balls",
+    "a small number of kinematic synergies emerges without explicit low-dimensional bias",
+    "selective inactivation reveals more contributing dimensions than synergy analysis suggests"
+  ],
+  "interpretations": [
+    "learned synergies are consistent with human data yet underestimate task-relevant dimensionality",
+    "musculoskeletal simulation plus RL is a viable tool for studying biological motor control"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "musculoskeletal control",
+    "curriculum learning",
+    "reinforcement learning policy",
+    "recurrent neural network controller",
+    "muscle synergies",
+    "dexterous manipulation",
+    "MyoChallenge",
+    "biological motor control"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "69d133c1e2ee71d3d3be3a0e08672d96",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}

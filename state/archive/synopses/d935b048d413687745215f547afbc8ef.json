@@ -1,0 +1,54 @@
+{
+  "frameworks": [
+    {
+      "name": "agentic multi-agent LLM systems",
+      "role": "primary_lens",
+      "one_line": "Swarms of collaborating LLM agents as an influence-warfare architecture."
+    },
+    {
+      "name": "computational propaganda / information warfare",
+      "role": "context",
+      "one_line": "AI-enabled influence operations targeting democratic discourse at scale."
+    },
+    {
+      "name": "chain-of-thought prompting",
+      "role": "extended",
+      "one_line": "Reasoning-enhancement technique repurposed to fabricate more convincing falsehoods."
+    }
+  ],
+  "core_question": "How can swarms of malicious agentic AI systems threaten democratic processes, and where should governance intervene?",
+  "key_assumptions": [
+    "LLM-generated content can match or exceed human-written persuasiveness",
+    "Multi-agent coordination scales influence campaigns without losing credibility",
+    "Harms originate from design choices, commercial incentives, and weak governance"
+  ],
+  "manipulations": [],
+  "key_findings": [
+    "Generative tools expand propaganda output while preserving credibility",
+    "AI-written falsehoods are rated as more human-like than human-written ones",
+    "Chain-of-thought prompting also amplifies persuasiveness of false content",
+    "Agent swarms can autonomously infiltrate communities and fabricate consensus"
+  ],
+  "interpretations": [
+    "Fusion of LLM reasoning with multi-agent architectures opens a new frontier of information warfare",
+    "Mitigation requires interventions across design, commercial, and governance leverage points"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "malicious AI swarms",
+    "agentic AI",
+    "large language models",
+    "multi-agent systems",
+    "information warfare",
+    "computational propaganda",
+    "chain-of-thought prompting",
+    "democratic discourse"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "d935b048d413687745215f547afbc8ef",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:40:56+09:00",
+  "review_status": "auto_unreviewed"
+}
