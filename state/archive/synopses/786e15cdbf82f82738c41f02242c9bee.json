@@ -1,0 +1,64 @@
+{
+  "frameworks": [
+    {
+      "name": "auditory stimulus reconstruction",
+      "role": "primary_lens",
+      "one_line": "decoding the heard acoustic stimulus from population neural activity"
+    },
+    {
+      "name": "deep neural network regression",
+      "role": "extended",
+      "one_line": "nonlinear DNN maps cortical activity directly to synthesizer parameters"
+    },
+    {
+      "name": "linear regression decoding",
+      "role": "compared_against",
+      "one_line": "baseline linear mapping from neural activity to auditory spectrogram"
+    },
+    {
+      "name": "speech brain-computer interface",
+      "role": "context",
+      "one_line": "motivating goal of a speech neuroprosthesis for direct brain communication"
+    }
+  ],
+  "core_question": "Can combining deep learning with speech synthesis improve intelligibility of speech reconstructed from human auditory cortex?",
+  "key_assumptions": [
+    "evoked cortical activity carries sufficient information to recover the acoustic stimulus",
+    "speech synthesizer parameters are a tractable target for neural decoding",
+    "nonlinear models can capture neural-to-acoustic mappings better than linear ones"
+  ],
+  "manipulations": [
+    "regression method (linear vs deep neural network)",
+    "acoustic target representation (auditory spectrogram vs speech synthesis parameters)",
+    "subset of neural frequency bands used as input"
+  ],
+  "key_findings": [
+    "DNN estimating synthesizer parameters from all neural frequencies achieves highest scores",
+    "intelligibility improves by 65% over the linear-spectrogram baseline",
+    "both subjective and objective digit-recognition scores favor the DNN-synthesizer model"
+  ],
+  "interpretations": [
+    "deep learning plus speech synthesis advances the state-of-the-art in speech neuroprosthesis",
+    "closed-set intelligible speech reconstruction from auditory cortex is feasible"
+  ],
+  "limitations_noted": [
+    "evaluation limited to closed-set digit recognition"
+  ],
+  "connecting_signals": [
+    "speech reconstruction",
+    "auditory cortex decoding",
+    "speech neuroprosthesis",
+    "brain-computer interface",
+    "deep neural network regression",
+    "speech synthesizer parameters",
+    "auditory spectrogram",
+    "stimulus reconstruction"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "786e15cdbf82f82738c41f02242c9bee",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:27:02+09:00",
+  "review_status": "auto_unreviewed"
+}

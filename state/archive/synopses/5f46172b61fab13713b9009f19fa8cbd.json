@@ -1,0 +1,62 @@
+{
+  "frameworks": [
+    {
+      "name": "Bayesian reinforcement learning",
+      "role": "primary_lens",
+      "one_line": "value updates weighted by inferred probability that outcomes come from hidden agents"
+    },
+    {
+      "name": "causal inference",
+      "role": "primary_lens",
+      "one_line": "learners attribute outcomes to chosen option vs. external hidden cause"
+    },
+    {
+      "name": "one learning rate reinforcement learning",
+      "role": "compared_against",
+      "one_line": "value updated from outcomes alone without causal attribution"
+    },
+    {
+      "name": "developmental cognitive neuroscience",
+      "role": "context",
+      "one_line": "compares learning computations across childhood, adolescence, and adulthood"
+    }
+  ],
+  "core_question": "Do beliefs about external hidden causes shape reinforcement learning similarly across development from childhood to adulthood?",
+  "key_assumptions": [
+    "outcomes can be attributed to choice or to hidden external agent",
+    "controllability beliefs modulate the magnitude of value updates",
+    "Bayesian RL formalizes causal attribution during learning"
+  ],
+  "manipulations": [
+    "valence of hidden-agent intervention (positive, negative, random)",
+    "age group (children 7-12, adolescents 13-17, adults 18-25)",
+    "two options with fixed reward probabilities"
+  ],
+  "key_findings": [
+    "explicit beliefs about hidden-agent intervention tracked true intervention probabilities across ages",
+    "adults' and adolescents' choices best fit by Bayesian RL with hidden-agent beliefs",
+    "children's choices best fit by a one learning rate model using outcomes alone"
+  ],
+  "interpretations": [
+    "children show explicit causal knowledge but do not implicitly use it to guide value updating",
+    "rational integration of causal structure into reinforcement learning strengthens with age"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "Bayesian reinforcement learning",
+    "causal inference in learning",
+    "hidden agent intervention",
+    "controllability beliefs",
+    "value updating",
+    "developmental trajectory",
+    "explicit vs implicit causal knowledge",
+    "outcome attribution"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "5f46172b61fab13713b9009f19fa8cbd",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}

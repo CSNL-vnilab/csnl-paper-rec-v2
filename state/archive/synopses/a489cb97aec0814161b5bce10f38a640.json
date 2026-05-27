@@ -1,0 +1,56 @@
+{
+  "frameworks": [
+    {
+      "name": "abstract emotion representation",
+      "role": "primary_lens",
+      "one_line": "Emotions encoded independently of sensory modality of the eliciting stimulus."
+    },
+    {
+      "name": "multivoxel pattern analysis (searchlight MVPA)",
+      "role": "primary_lens",
+      "one_line": "Cross-modal classifier decodes emotion across stimulus and memory cues."
+    },
+    {
+      "name": "associative learning of emotion-neutral pairings",
+      "role": "extended",
+      "one_line": "Memory of an emotional event reactivates abstract emotion representation."
+    }
+  ],
+  "core_question": "Do abstract emotion representations in the brain reactivate when triggered by memory cues, not just direct sensory input?",
+  "key_assumptions": [
+    "Emotions can be represented at a sensory-independent abstract level.",
+    "Successful associative learning links neutral fractals to specific emotions.",
+    "Cross-decoding indicates shared neural code between stimulus and memory."
+  ],
+  "manipulations": [
+    "Stimulus type: emotional videos (faces vs bodies) vs fractal cues.",
+    "Train/test direction: classifier trained on emotional stimuli tested on fractals (and vice versa)."
+  ],
+  "key_findings": [
+    "Cross-modal emotion decoding succeeded in PCC, precuneus, MPFC, and angular gyrus.",
+    "Stimulus-only emotion decoding yielded clusters in PCC, precuneus, and MPFC.",
+    "Multidimensional scaling showed clustering of activation patterns by emotion across stimulus types."
+  ],
+  "interpretations": [
+    "Abstract emotion representations are activated by both direct stimuli and learned associations.",
+    "PCC, precuneus, MPFC, and angular gyrus support modality-independent emotion codes."
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "abstract emotion representation",
+    "multivoxel pattern analysis",
+    "searchlight MVPA",
+    "cross-modal decoding",
+    "associative learning",
+    "posterior cingulate cortex",
+    "precuneus",
+    "medial prefrontal cortex"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "a489cb97aec0814161b5bce10f38a640",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:27:41+09:00",
+  "review_status": "auto_unreviewed"
+}

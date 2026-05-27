@@ -1,0 +1,56 @@
+{
+  "frameworks": [
+    {
+      "name": "sentiment prediction error",
+      "role": "primary_lens",
+      "one_line": "Difference between expected and actual emotional tone drives post-conversation happiness."
+    },
+    {
+      "name": "computational modeling of dialogue affect",
+      "role": "extended",
+      "one_line": "Trial-by-trial sentiment mismatch history is modeled to predict subjective well-being."
+    },
+    {
+      "name": "expressive writing / journaling",
+      "role": "compared_against",
+      "one_line": "Journaling on matched topics serves as the control condition."
+    }
+  ],
+  "core_question": "How do conversations with an AI chatbot influence subjective momentary happiness compared to journaling?",
+  "key_assumptions": [
+    "Momentary happiness is comparable across chat and journaling conditions on matched topics",
+    "LLM-based sentiment analysis yields valid affect estimates over a dialogue",
+    "Expectations about conversational emotional tone shape subsequent affect"
+  ],
+  "manipulations": [
+    "Modality: AI chatbot conversation vs. written journal entry",
+    "Topic valence (e.g., negative topics like depression or guilt vs. other randomly assigned topics)"
+  ],
+  "key_findings": [
+    "Post-conversation happiness was higher after AI chat than after journaling",
+    "The benefit was strongest for negative topics",
+    "The chatbot mirrored user sentiment while maintaining a positivity bias",
+    "On negative topics, participants' sentiment drifted toward the AI's positivity"
+  ],
+  "interpretations": [
+    "History of sentiment prediction errors during dialogue predicts greater post-conversation happiness, implicating emotional expectations as a central mechanism"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "sentiment prediction error",
+    "AI chatbot conversation",
+    "subjective well-being",
+    "positivity bias",
+    "emotional expectation",
+    "dialogue sentiment dynamics",
+    "LLM sentiment analysis",
+    "journaling control"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "ed744d29c5aee31888321cd2cb1ffa05",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:27:41+09:00",
+  "review_status": "auto_unreviewed"
+}

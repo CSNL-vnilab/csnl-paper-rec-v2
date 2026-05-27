@@ -1,0 +1,62 @@
+{
+  "frameworks": [
+    {
+      "name": "Bayesian posterior probability of correctness",
+      "role": "primary_lens",
+      "one_line": "Optimal observer computes full posterior to decide when to stop sampling"
+    },
+    {
+      "name": "evidence accumulation with collapsing threshold",
+      "role": "extended",
+      "one_line": "Integration to a time-varying bound approximates the Bayesian stopping rule"
+    },
+    {
+      "name": "adaptive gain by inverse prediction error",
+      "role": "primary_lens",
+      "one_line": "Sensory samples are weighted by reliability inferred from prediction error"
+    },
+    {
+      "name": "optional stopping under heteroscedasticity",
+      "role": "context",
+      "one_line": "Choice timing in environments with time-varying signal reliability"
+    }
+  ],
+  "core_question": "How do humans decide when to stop accumulating perceptual evidence when sample reliability varies unpredictably over time?",
+  "key_assumptions": [
+    "evidence reliability can change within a trial (heteroscedastic input)",
+    "observer trades information harvest against deliberation cost",
+    "stopping policy can be approximated by a collapsing decision threshold"
+  ],
+  "manipulations": [
+    "categorisation from a serial stream of oriented grating samples",
+    "variable variance (heteroscedasticity) of decision-relevant samples",
+    "free choice of stopping time on each trial"
+  ],
+  "key_findings": [
+    "best-fitting model weighted samples by inverse prediction error and integrated to a collapsing bound",
+    "this model approximated the full Bayesian posterior of being correct",
+    "the same adaptive weighting predicted decision-related neural signals"
+  ],
+  "interpretations": [
+    "adaptive reliability weighting may have evolved to support optional stopping in heteroscedastic environments",
+    "human optional stopping is well-described as a tractable approximation to Bayesian-optimal stopping"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "optional stopping",
+    "heteroscedasticity",
+    "collapsing decision bound",
+    "evidence accumulation",
+    "inverse prediction error weighting",
+    "Bayesian posterior of correctness",
+    "perceptual decision-making",
+    "oriented grating samples"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "ac11596ad4cbde5f1fd3e11e04aa12e9",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:27:41+09:00",
+  "review_status": "auto_unreviewed"
+}

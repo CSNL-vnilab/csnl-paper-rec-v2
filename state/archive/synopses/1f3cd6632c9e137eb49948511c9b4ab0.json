@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "inverted encoding model",
+      "role": "compared_against",
+      "one_line": "method recovering channel response functions from population brain activity"
+    },
+    {
+      "name": "linear forward encoding model",
+      "role": "primary_lens",
+      "one_line": "linear mapping from assumed channel basis to measured population activity"
+    },
+    {
+      "name": "stimulus reconstruction",
+      "role": "extended",
+      "one_line": "reformulating IEM output to reconstruct the stimulus rather than channel responses"
+    }
+  ],
+  "core_question": "Do inverted encoding models recover a unique description of population-level stimulus representation?",
+  "key_assumptions": [
+    "population responses are linear combinations of channel basis functions",
+    "channel basis functions are chosen a priori by the experimenter",
+    "channel response functions are interpreted as population tuning"
+  ],
+  "manipulations": [
+    "choice of channel basis (unimodal vs bimodal vs random)",
+    "reformulating the readout target from channel responses to stimulus reconstruction"
+  ],
+  "key_findings": [
+    "channel response functions are determined only up to an invertible linear transform",
+    "bimodal and random channel bases fit population responses equally well",
+    "stimulus reconstruction yields a unimodal function peaked at the true stimulus regardless of channel choice"
+  ],
+  "interpretations": [
+    "IEM channel response functions are arbitrary and not a unique assay of population tuning",
+    "the approach is salvageable when reframed as stimulus reconstruction giving a measure of population selectivity"
+  ],
+  "limitations_noted": [
+    "channel response function is identifiable only up to invertible linear transform"
+  ],
+  "connecting_signals": [
+    "inverted encoding model",
+    "channel response function",
+    "population tuning",
+    "stimulus reconstruction",
+    "channel basis function",
+    "linear decoding",
+    "indeterminacy",
+    "fMRI population representation"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "1f3cd6632c9e137eb49948511c9b4ab0",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}
