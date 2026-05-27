@@ -1,0 +1,45 @@
+{
+  "canonical_id": "9a065a3e060b3dabb9b265ba904613b8",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "cortically-focused cognition", "role": "compared_against", "one_line": "view that PFC drives cognition and SC merely executes spatiomotor outputs"},
+    {"name": "dynamical systems model of SC", "role": "primary_lens", "one_line": "SC network dynamics replicate context and choice encoding in the task"}
+  ],
+  "core_question": "Does the superior colliculus participate in non-spatial cognitive processing such as task-context representation?",
+  "key_assumptions": [
+    "SC is traditionally a spatiomotor structure",
+    "PFC is the canonical substrate for cognitive processing",
+    "task context and spatial choice are dissociable epochs within a trial"
+  ],
+  "manipulations": [
+    "rapid switching between task contexts demanding different sensorimotor mappings",
+    "bilateral SC silencing across pre-choice and choice epochs",
+    "simultaneous recording in SC vs PFC"
+  ],
+  "key_findings": [
+    "SC encoded task context more strongly than PFC before spatial choice formation",
+    "bilateral SC silencing impaired behavior before choices could be formed",
+    "SC encoded the upcoming choice faster than PFC once choices began forming",
+    "SC silencing no longer impaired performance during the choice epoch"
+  ],
+  "interpretations": [
+    "SC plays a central role in non-spatiomotor cognitive processing, not merely motor output",
+    "cortically-focused views of cognition are challenged by subcortical context encoding"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "superior colliculus",
+    "task context encoding",
+    "sensorimotor routing",
+    "context-dependent decision-making",
+    "prefrontal cortex comparison",
+    "bilateral silencing",
+    "dynamical model of SC",
+    "flexible behavior"
+  ],
+  "out_of_scope_note": null
+}

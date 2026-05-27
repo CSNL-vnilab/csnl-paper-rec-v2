@@ -1,0 +1,17 @@
+{
+  "canonical_id": "67fb955ac9300b74f3819e758fca3150",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T02:16:13+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.0,
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "Optical engineering — laser frequency-noise reduction via fiber Mach-Zehnder + phase-locked loop; not computational/systems neuroscience."
+}
