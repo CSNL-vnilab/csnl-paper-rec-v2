@@ -1,0 +1,60 @@
+{
+  "frameworks": [
+    {
+      "name": "temporal difference reinforcement learning",
+      "role": "primary_lens",
+      "one_line": "Unsigned components of TD error mapped onto dendritic branch responses"
+    },
+    {
+      "name": "dendritic gain modulation",
+      "role": "extended",
+      "one_line": "Apical dendrites gate recruitment of task-relevant neurons via salience"
+    },
+    {
+      "name": "associative learning in neocortex",
+      "role": "context",
+      "one_line": "Pyramidal dendrites as sites for sensory-outcome association"
+    }
+  ],
+  "core_question": "How do L5 pyramidal apical dendrites adapt during goal-directed sensory learning?",
+  "key_assumptions": [
+    "Calcium signals index apical dendritic activity",
+    "Unsigned TD-error components are biologically separable",
+    "Branch-level responses reflect functional task variables"
+  ],
+  "manipulations": [
+    "Texture discrimination go/no-go learning across naive to expert stages",
+    "Optogenetic apical inhibition during outcome time window",
+    "Reinforcement learning model perturbations matched to experimental perturbations"
+  ],
+  "key_findings": [
+    "Diverse task-related dendritic responses, branch-localized or tuft-wide",
+    "Tuft-level go/no-go discrimination remains poor even in expert mice",
+    "Reward-outcome responses decrease as task proficiency grows",
+    "Outcome-predicting touch responses strengthen with learning"
+  ],
+  "interpretations": [
+    "Branch response types match distinct unsigned TD-error components",
+    "Apical salience signals facilitate recruitment of task-relevant neurons via dendritic gain"
+  ],
+  "limitations_noted": [
+    "Tuft-level discrimination of go/no-go stimuli remains poor"
+  ],
+  "connecting_signals": [
+    "temporal difference error",
+    "unsigned TD components",
+    "L5 pyramidal apical dendrites",
+    "barrel cortex texture discrimination",
+    "dendritic calcium imaging",
+    "reward prediction signals",
+    "salience signaling",
+    "optogenetic apical inhibition"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "8ec67c5d4d3066e638794588d858459f",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "statistical confidence (probability-correct)",
+      "role": "primary_lens",
+      "one_line": "Confidence as posterior probability of being correct given choice and evidence"
+    },
+    {
+      "name": "evidence accumulation",
+      "role": "extended",
+      "one_line": "Dynamic temporal integration of noisy evidence toward a decision"
+    },
+    {
+      "name": "signal-detection / diagnostic signatures of confidence",
+      "role": "context",
+      "one_line": "Three canonical signatures including opposite evidence-strength dependence on correct vs error trials"
+    }
+  ],
+  "core_question": "How do diagnostic signatures of decision confidence evolve over time within an evidence accumulation process?",
+  "key_assumptions": [
+    "Confidence equals the probability of being correct given choice and evidence",
+    "Evidence is integrated dynamically over time toward a choice",
+    "Static probability-correct framework can be extended to time-varying accumulated evidence"
+  ],
+  "manipulations": [
+    "Query timing of confidence judgments across different points in time",
+    "Evidence strength varied across trials",
+    "Choice correctness compared (correct vs error trials)",
+    "Random dot motion discrimination task"
+  ],
+  "key_findings": [
+    "Dynamic model predicts diagnostic confidence signatures depend on time",
+    "Predicted stronger opposite dependence of confidence on evidence strength across correct vs error trials as time progresses",
+    "Human behavior confirmed these time-dependent predictions during random dot motion discrimination"
+  ],
+  "interpretations": [
+    "Human confidence reports reflect dynamics of probability-correct given accumulated evidence and choice",
+    "Static probability-correct framework is incomplete without a temporal accumulation component"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "decision confidence",
+    "evidence accumulation",
+    "probability of being correct",
+    "diagnostic signatures of confidence",
+    "random dot motion discrimination",
+    "confidence dynamics over time",
+    "correct vs error trial dissociation",
+    "metacognition"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "70dc0edf87886050f18d2567bda941ee",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

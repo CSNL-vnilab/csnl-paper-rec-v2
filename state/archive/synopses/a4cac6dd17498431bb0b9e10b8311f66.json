@@ -1,0 +1,59 @@
+{
+  "frameworks": [
+    {
+      "name": "computational phenotyping",
+      "role": "primary_lens",
+      "one_line": "Mechanistically interpretable model parameters fit to individual behavioral data"
+    },
+    {
+      "name": "dynamic computational phenotyping",
+      "role": "extended",
+      "one_line": "Extends phenotyping to time-varying parameters separating practice and state effects"
+    },
+    {
+      "name": "psychometric reliability",
+      "role": "context",
+      "one_line": "Frames concern about temporal stability of model-derived parameters"
+    }
+  ],
+  "core_question": "What sources govern temporal variability of individual computational phenotypes across cognitive tasks?",
+  "key_assumptions": [
+    "Computational model parameters are mechanistically interpretable indices of cognition",
+    "Within-person variability decomposes into practice and state-like components",
+    "Self-reported mood, habits and activities index latent affective state",
+    "Phenotype dimensions can co-vary with internal states over weeks"
+  ],
+  "manipulations": [
+    "12-week longitudinal repeated measurement",
+    "Battery of seven tasks spanning learning, memory, perception, decision making",
+    "Weekly reports of mood, habits and daily activities",
+    "Decomposition of phenotype variance into practice vs state components"
+  ],
+  "key_findings": [
+    "Many phenotype dimensions co-varied with practice over weeks",
+    "Many phenotype dimensions co-varied with affective valence and arousal",
+    "Apparent unreliability of parameters partly reflected previously unmeasured structure"
+  ],
+  "interpretations": [
+    "Cognitive variability within an individual is fundamentally dynamic rather than noise",
+    "Phenotype reliability must be evaluated jointly with practice and affective state"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "computational phenotyping",
+    "individual differences",
+    "longitudinal cognition",
+    "practice effects",
+    "affective valence and arousal",
+    "psychometric reliability",
+    "behavioral model fitting",
+    "within-person variability"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "a4cac6dd17498431bb0b9e10b8311f66",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

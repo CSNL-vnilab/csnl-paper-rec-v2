@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "resource-rational cognition",
+      "role": "primary_lens",
+      "one_line": "intelligence as efficient inference under time, energy, and memory constraints"
+    },
+    {
+      "name": "inductive bias",
+      "role": "extended",
+      "one_line": "inference from limited data requires constraining the hypothesis space"
+    },
+    {
+      "name": "approximation bias",
+      "role": "extended",
+      "one_line": "decisions under limited resources require systematic approximations"
+    },
+    {
+      "name": "Bayesian inference",
+      "role": "context",
+      "one_line": "normative baseline that the resource-bounded brain approximates"
+    }
+  ],
+  "core_question": "How can a single computational logic explain both the successes and the systematic errors of human cognition?",
+  "key_assumptions": [
+    "the brain is optimized for inference and decision making under data and resource constraints",
+    "cognitive errors are not haphazard but inevitable consequences of bounded optimization",
+    "intelligence and stupidity share a common computational substrate"
+  ],
+  "manipulations": [],
+  "key_findings": [
+    "errors across many cognitive domains follow patterns predicted by inductive- and approximation-bias accounts",
+    "framework spans perception, memory, language, reasoning, and decision making"
+  ],
+  "interpretations": [
+    "human cognition is best understood as resource-bounded optimization rather than as flawed rationality",
+    "inductive bias and approximation bias jointly constitute a unifying logic of human intelligence"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "resource-rational analysis",
+    "inductive bias",
+    "approximation bias",
+    "bounded rationality",
+    "cognitive errors",
+    "computational logic of cognition",
+    "limited data inference",
+    "limited resource decision making"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "f67fc92e013dd127bb7af64c869911b6",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:50:15+09:00",
+  "review_status": "auto_unreviewed"
+}

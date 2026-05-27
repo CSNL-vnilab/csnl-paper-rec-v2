@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "hippocampal cognitive map",
+      "role": "primary_lens",
+      "one_line": "CA1 place cells implement a map of space supporting flexible navigation"
+    },
+    {
+      "name": "place cell coding",
+      "role": "primary_lens",
+      "one_line": "Location-specific firing of dorsal CA1 neurons indexes spatial position"
+    },
+    {
+      "name": "environmental connectivity representation",
+      "role": "compared_against",
+      "one_line": "Possibility that place cells encode available routes between subspaces"
+    }
+  ],
+  "core_question": "Do dorsal CA1 place cells encode the connectivity structure between adjoining subspaces in addition to location?",
+  "key_assumptions": [
+    "Place cells provide the neural substrate of a cognitive spatial map",
+    "Doors that lock/unlock manipulate connectivity without changing geometry",
+    "Behavior in the apparatus reflects knowledge of connectivity"
+  ],
+  "manipulations": [
+    "Four geometrically identical boxes arranged in a square",
+    "Saloon doors lockable in one or both directions to alter connectivity",
+    "Compared place-cell activity at doorways vs other locations"
+  ],
+  "key_findings": [
+    "Rats behaviorally demonstrated knowledge of environmental connectivity",
+    "Place cells did not respond to connectivity changes",
+    "Doorways were not represented differently from other locations",
+    "A distinct map appeared for each box with minimal repetitive fields despite identical geometry"
+  ],
+  "interpretations": [
+    "CA1 place cells code location in a global reference frame rather than encoding connectivity",
+    "The hippocampal spatial map does not explicitly include environmental connectivity"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "hippocampal place cells",
+    "dorsal CA1",
+    "cognitive map",
+    "spatial navigation",
+    "environmental connectivity",
+    "global reference frame",
+    "repetitive geometry",
+    "doorway coding"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "f95cab2dccb5d8a2e35beb665c785548",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

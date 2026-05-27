@@ -1,0 +1,56 @@
+{
+  "frameworks": [
+    {
+      "name": "hierarchical Bayesian model",
+      "role": "primary_lens",
+      "one_line": "individual and group moral values inferred as latent variables from judgments"
+    },
+    {
+      "name": "utility calculus",
+      "role": "primary_lens",
+      "one_line": "moral choice cast as weighted trade-off across dilemma features"
+    },
+    {
+      "name": "cognitive theory of moral learning",
+      "role": "context",
+      "one_line": "draws on how children learn moral theories from sparse noisy data"
+    }
+  ],
+  "core_question": "Can a hierarchical Bayesian utility-weighting model infer individual and group moral preferences from sparse, noisy human judgments on autonomous-vehicle dilemmas?",
+  "key_assumptions": [
+    "moral judgment decomposes into feature weights in a utility calculus",
+    "individuals and groups share hierarchical structure over weights",
+    "sparse noisy judgments suffice to identify latent moral values"
+  ],
+  "manipulations": [
+    "varied dilemma features (who is harmed, how many, group membership)",
+    "amount of data available per individual / group"
+  ],
+  "key_findings": [
+    "model infers individual moral values from limited Moral Machine judgments",
+    "shared group-level values recovered hierarchically across populations",
+    "model predicts difficulty of moral dilemmas from limited data"
+  ],
+  "interpretations": [
+    "human moral preferences can be operationalized as inferable utility weights",
+    "hierarchical Bayesian inference supports moral-decision modules for autonomous vehicles"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "moral decision making",
+    "autonomous vehicle ethics",
+    "utility calculus",
+    "hierarchical Bayesian inference",
+    "Moral Machine",
+    "moral learning from sparse data",
+    "individual differences in preferences",
+    "group-level value inference"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "2af19c9f4ef38f041a4011cd63a940fd",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:50:15+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,53 @@
+{
+  "frameworks": [
+    {
+      "name": "diffusion tensor imaging",
+      "role": "primary_lens",
+      "one_line": "Use DTI fiber-orientation metrics of corticospinal tract to predict TMS motor threshold."
+    },
+    {
+      "name": "linear regression model",
+      "role": "primary_lens",
+      "one_line": "Two structural parameters predict motor threshold variance across subjects."
+    }
+  ],
+  "core_question": "Which structural parameters of the corticospinal tract and skull-cortex geometry predict TMS motor threshold?",
+  "key_assumptions": [
+    "Corticospinal tract fiber orientation modulates TMS-induced current",
+    "Skull-to-cortex distance attenuates the induced electric field",
+    "Fractional anisotropy and demographic factors are candidate but not necessary predictors"
+  ],
+  "manipulations": [
+    "Measured fractional anisotropy in CST ROIs",
+    "Measured principal diffusion direction (anterior-posterior trajectory) in CST",
+    "Measured skull-to-cortex distance over left motor region",
+    "Included with and without schizophrenia subjects"
+  ],
+  "key_findings": [
+    "Anterior-posterior trajectory of CST principal diffusion direction correlated with motor threshold",
+    "Skull-to-cortex distance correlated with motor threshold",
+    "Fractional anisotropy, age, and schizophrenia status not correlated with motor threshold",
+    "Two-parameter linear model accounts for 82% of motor-threshold variance"
+  ],
+  "interpretations": [
+    "Fiber orientation at the internal capsule and skull-cortex distance jointly explain individual TMS excitability"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "transcranial magnetic stimulation",
+    "motor threshold",
+    "corticospinal tract",
+    "diffusion tensor imaging",
+    "fractional anisotropy",
+    "principal diffusion direction",
+    "skull-to-cortex distance",
+    "internal capsule"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "b2816ca4fc3d8e61925909ad447f1e6e",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:50:15+09:00",
+  "review_status": "auto_unreviewed"
+}
