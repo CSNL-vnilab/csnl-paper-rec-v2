@@ -1,0 +1,17 @@
+{
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "Figshare dataset deposit (source-reconstructed MEG data) accompanying a separate Nature Neuroscience paper — data archive, not a standalone research article.",
+  "abstract_coverage": 0.0,
+  "canonical_id": "81782bf59038df2f9b7a1f97baf47665",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

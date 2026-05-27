@@ -1,0 +1,46 @@
+{
+  "frameworks": [
+    {
+      "name": "information theory",
+      "role": "primary_lens",
+      "one_line": "Quantify perception by treating sensory events as an information-handling process."
+    },
+    {
+      "name": "redundancy reduction",
+      "role": "extended",
+      "one_line": "Higher organisms face highly redundant sensory input across space and time."
+    }
+  ],
+  "core_question": "How can the concepts and techniques of information theory clarify our understanding of visual perception?",
+  "key_assumptions": [
+    "Perception can be conceptualized as an information-handling process",
+    "Sensory events are interdependent in both space and time",
+    "Events ordered in time are amenable to informational analysis"
+  ],
+  "manipulations": [],
+  "key_findings": [
+    "Much of the information received by higher organisms is redundant",
+    "States of a limited set of receptors permit better-than-chance inferences about prior and subsequent states of those and other receptors"
+  ],
+  "interpretations": [
+    "Information theory provides new and more precise ways to conceptualize perceptual situations",
+    "Spatial and temporal interdependence of sensory events is a defining property to be exploited"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "information theory",
+    "visual perception",
+    "sensory redundancy",
+    "spatial and temporal interdependence",
+    "receptor states",
+    "quantification of perception",
+    "information-handling process"
+  ],
+  "abstract_coverage": 1.0,
+  "out_of_scope_note": null,
+  "canonical_id": "8180e72b015626530a0c117641d37ae2",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:27:31+09:00",
+  "review_status": "auto_unreviewed"
+}

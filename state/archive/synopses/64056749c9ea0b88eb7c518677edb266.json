@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "policy complexity",
+      "role": "primary_lens",
+      "one_line": "policies indexed by mutual information between states and actions constrain memory and decoding time"
+    },
+    {
+      "name": "rate-distortion",
+      "role": "context",
+      "one_line": "information-theoretic framing of bounded policies trading reward against information cost"
+    },
+    {
+      "name": "speed-accuracy trade-off",
+      "role": "extended",
+      "one_line": "trade-off reinterpreted as consequence of decoding cost of high-complexity policies"
+    },
+    {
+      "name": "set-size effects",
+      "role": "extended",
+      "one_line": "response-time growth with state-set size explained by complexity demands"
+    }
+  ],
+  "core_question": "Do joint time and memory costs on policy complexity jointly produce speed-accuracy trade-offs and set-size effects in human action selection?",
+  "key_assumptions": [
+    "policies are state-to-action mappings whose memory equals mutual information between states and actions",
+    "higher-complexity policies preserve more state information and yield greater reward",
+    "high-complexity policies incur longer decoding time"
+  ],
+  "manipulations": [
+    "inter-trial intervals",
+    "environmental regularities exploitable by low-complexity policies",
+    "state set sizes"
+  ],
+  "key_findings": [
+    "humans modulate policy complexity in response to time costs",
+    "humans modulate policy complexity in response to memory costs",
+    "response times grow with state-set size as predicted by complexity",
+    "trade-off between speed and accuracy tracks complexity manipulation"
+  ],
+  "interpretations": [
+    "speed-accuracy trade-offs may arise from decoding cost of complex policies",
+    "set-size effects may reflect complexity constraints rather than purely perceptual capacity limits"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "policy complexity",
+    "speed-accuracy trade-off",
+    "set-size effect",
+    "mutual information between states and actions",
+    "decoding time cost",
+    "memory-limited action selection",
+    "bounded rationality in decision making",
+    "environmental regularities"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "64056749c9ea0b88eb7c518677edb266",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

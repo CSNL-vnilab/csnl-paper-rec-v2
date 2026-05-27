@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "reinforcement learning",
+      "role": "primary_lens",
+      "one_line": "RL framework where dopamine encodes reward prediction error guiding interval timing"
+    },
+    {
+      "name": "reward prediction error (RPE)",
+      "role": "extended",
+      "one_line": "RPE account of dopamine extended to modulate the rate of timekeeping"
+    },
+    {
+      "name": "interval timing",
+      "role": "primary_lens",
+      "one_line": "behavioral timing of seconds-scale intervals modulated by dopaminergic signals"
+    },
+    {
+      "name": "biologically plausible plasticity rule",
+      "role": "extended",
+      "one_line": "DA-dependent bidirectional update rule whose sign depends on DA-signal timing"
+    }
+  ],
+  "core_question": "Can a single reward-prediction-error interpretation of dopamine reconcile its conflicting pharmacological and optogenetic effects on interval timing?",
+  "key_assumptions": [
+    "dopamine encodes a reward prediction error",
+    "interval timing can be cast as a reinforcement learning problem",
+    "striatal timekeeping is shaped by DA-dependent plasticity"
+  ],
+  "manipulations": [
+    "direction and timing of the dopamine signal",
+    "comparison of pharmacological versus optogenetic perturbations",
+    "variation of reward rate in interval-timing tasks"
+  ],
+  "key_findings": [
+    "pharmacology and optogenetics yield opposite-sign effects of DA on interval estimates",
+    "a bidirectional DA-dependent update rule can speed up or slow down timekeeping",
+    "the direction of the update depends on when the DA signal arrives",
+    "model accounts for reward-rate effects and striatal temporal selectivity"
+  ],
+  "interpretations": [
+    "the RPE role of dopamine naturally extends to modulating timekeeping rate",
+    "this unifies reinforcement learning and interval timing theories of DA"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "dopamine",
+    "interval timing",
+    "reward prediction error",
+    "reinforcement learning",
+    "striatal temporal selectivity",
+    "DA-dependent plasticity",
+    "optogenetics versus pharmacology",
+    "reward rate"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "3306751f5ffedb6a655df1bc50c07f2e",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

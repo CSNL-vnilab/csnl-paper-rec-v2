@@ -1,0 +1,56 @@
+{
+  "frameworks": [
+    {
+      "name": "cortical layer compartmentalization of feedforward and feedback",
+      "role": "primary_lens",
+      "one_line": "feedforward and feedback signals terminate in distinct V1 layers, segregating external from internal contents"
+    },
+    {
+      "name": "mental imagery and mental rotation in early visual cortex",
+      "role": "extended",
+      "one_line": "internally-generated visual contents recruit V1 alongside perceived input"
+    },
+    {
+      "name": "laminar fMRI of early visual cortex",
+      "role": "context",
+      "one_line": "high-resolution depth-resolved fMRI as a tool to dissociate laminar signals"
+    }
+  ],
+  "core_question": "How does V1 keep perceived and internally-generated (mentally rotated) visual contents from mixing?",
+  "key_assumptions": [
+    "feedforward inputs terminate in middle cortical layers of V1",
+    "feedback inputs terminate in superficial and deep layers of V1",
+    "perceived and mentally rotated contents both produce decodable V1 representations"
+  ],
+  "manipulations": [
+    "task condition: veridical perception vs mental rotation",
+    "readout across superficial, middle, and deep cortical depth bins"
+  ],
+  "key_findings": [
+    "mentally rotated contents are stronger at superficial and deep cortical depths",
+    "perceived contents are stronger at the middle cortical depth",
+    "perception and internally-generated contents are dissociable across V1 layers"
+  ],
+  "interpretations": [
+    "laminar compartmentalization in V1 functionally segregates external from internal visual contents",
+    "feedforward/feedback laminar division supports multiple cognitive functions within a single area"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "primary visual cortex V1",
+    "cortical depth fMRI",
+    "laminar fMRI",
+    "mental rotation",
+    "mental imagery",
+    "feedforward feedback segregation",
+    "internally-generated visual contents",
+    "perception versus imagery"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "1262555e402071f435f74ba8121641ba",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

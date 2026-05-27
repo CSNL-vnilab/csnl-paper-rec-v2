@@ -1,0 +1,54 @@
+{
+  "frameworks": [
+    {
+      "name": "linear-nonlinear receptive field models",
+      "role": "primary_lens",
+      "one_line": "linear filters plus context-dependent nonlinear gain and spike nonlinearity as standard model"
+    },
+    {
+      "name": "natural scene statistics",
+      "role": "context",
+      "one_line": "predictive power tested against responses to natural movies"
+    },
+    {
+      "name": "divisive normalization / contrast gain control",
+      "role": "extended",
+      "one_line": "nonlinear mechanisms controlling responsiveness based on stimulus context and history"
+    }
+  ],
+  "core_question": "Do current early-visual models predict neural responses to arbitrary, including natural, stimuli well enough to claim we know what the system does?",
+  "key_assumptions": [
+    "predictive accuracy on arbitrary stimuli is the criterion for understanding",
+    "linear receptive fields plus a few nonlinearities can suffice in principle",
+    "each pathway stage admits a single compact standard model"
+  ],
+  "manipulations": [],
+  "key_findings": [
+    "linear RF models augmented with context/history nonlinearities and spike nonlinearity show promise as standard models",
+    "predictive testing against natural movie responses is the emerging benchmark"
+  ],
+  "interpretations": [
+    "a compact predictive model per stage would be an invaluable guide to biophysical mechanism and to perception",
+    "additional fundamental response determinants beyond known nonlinearities may still remain to be identified"
+  ],
+  "limitations_noted": [
+    "open whether known linear+nonlinear mechanisms are the only essential determinants of responses"
+  ],
+  "connecting_signals": [
+    "early visual system",
+    "linear receptive field",
+    "nonlinear gain control",
+    "spike generation nonlinearity",
+    "natural scene movies",
+    "predictive neural model",
+    "standard model of visual pathway",
+    "stimulus context and history"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "a506a86512a3cf3d840be67c4f4a08f4",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:27:31+09:00",
+  "review_status": "auto_unreviewed"
+}

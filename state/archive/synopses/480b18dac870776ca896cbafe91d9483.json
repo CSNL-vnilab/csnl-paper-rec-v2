@@ -1,0 +1,65 @@
+{
+  "frameworks": [
+    {
+      "name": "policy compression",
+      "role": "primary_lens",
+      "one_line": "resource-rational framework limiting complexity of state-action mappings under cognitive constraints"
+    },
+    {
+      "name": "action subsampling",
+      "role": "extended",
+      "one_line": "agents consider only a reduced subset of available actions to ease cognitive load"
+    },
+    {
+      "name": "resource-rational decision-making",
+      "role": "primary_lens",
+      "one_line": "near-optimal behavior given fine-grained cognitive resource constraints"
+    },
+    {
+      "name": "contextual multi-armed bandit",
+      "role": "context",
+      "one_line": "experimental paradigm validating predictions about action set and policy adaptation"
+    }
+  ],
+  "core_question": "How do constraints on action consideration sets and policy complexity jointly shape decision-making in large action spaces?",
+  "key_assumptions": [
+    "cognitive resources for representing actions and policies are limited",
+    "agents can adapt both action set size and policy complexity to context",
+    "policy complexity and action subsampling interact in mitigating suboptimality"
+  ],
+  "manipulations": [
+    "size of action consideration set",
+    "policy complexity level",
+    "task context in contextual multi-armed bandit",
+    "cognitive load conditions"
+  ],
+  "key_findings": [
+    "reduced action consideration sets cause characteristic suboptimality patterns",
+    "policy complexity and action set size interact non-trivially in mitigating suboptimality",
+    "people preferentially sample generally valuable options when generating choices",
+    "responses across contexts become more correlated under cognitive load",
+    "humans flexibly adapt action sets and policy complexity to maintain near-optimality"
+  ],
+  "interpretations": [
+    "fine-grained resource constraints are essential for understanding human cognition",
+    "adaptive metacognitive strategies appear even in simple decision tasks"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "policy compression",
+    "action consideration set",
+    "resource-rational decision-making",
+    "large action spaces",
+    "cognitive load",
+    "option generation",
+    "contextual multi-armed bandit",
+    "metacognitive strategies"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "480b18dac870776ca896cbafe91d9483",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

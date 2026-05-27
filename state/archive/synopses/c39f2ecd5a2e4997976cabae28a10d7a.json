@@ -1,0 +1,60 @@
+{
+  "frameworks": [
+    {
+      "name": "population receptive field (pRF) mapping",
+      "role": "primary_lens",
+      "one_line": "Voxel-wise receptive-field model fit to retinotopic visual responses."
+    },
+    {
+      "name": "VASO-CBV fMRI",
+      "role": "extended",
+      "one_line": "CBV-weighted contrast used as a higher-specificity alternative to BOLD."
+    },
+    {
+      "name": "BOLD fMRI",
+      "role": "compared_against",
+      "one_line": "Standard oxygenation-based contrast compared head-to-head with VASO-CBV."
+    }
+  ],
+  "core_question": "Do BOLD and VASO-CBV fMRI yield different population receptive field properties in human visual cortex?",
+  "key_assumptions": [
+    "VASO-CBV response is biased toward smaller vessels and thus more spatially specific.",
+    "pRF size estimates partly reflect vascular blurring, so reduced blurring should narrow them.",
+    "Simultaneous dual-readout acquisition lets BOLD and VASO be compared within voxel."
+  ],
+  "manipulations": [
+    "Imaging contrast: BOLD vs VASO-CBV (simultaneous dual-readout 3D EPI at 7T).",
+    "Standard pRF mapping stimuli viewed during scanning.",
+    "Variance-explained matching between contrasts as a control."
+  ],
+  "key_findings": [
+    "Eccentricity and polar-angle maps are similar across BOLD and VASO-CBV.",
+    "VASO-CBV has lower tSNR and variance explained than BOLD.",
+    "pRF size vs eccentricity slopes are similar across contrasts.",
+    "pRF sizes remain comparable even after equating variance explained."
+  ],
+  "interpretations": [
+    "Vascular blurring does not dominate pRF size estimates in either contrast.",
+    "VASO-CBV does not yield narrower pRFs despite its expected higher spatial specificity."
+  ],
+  "limitations_noted": [
+    "VASO-CBV exhibits lower tSNR and variance explained than BOLD."
+  ],
+  "connecting_signals": [
+    "population receptive field mapping",
+    "VASO-CBV fMRI",
+    "BOLD fMRI",
+    "7T visual cortex",
+    "spatial specificity",
+    "vascular blurring",
+    "eccentricity and polar-angle maps",
+    "tSNR"
+  ],
+  "abstract_coverage": 1.0,
+  "out_of_scope_note": null,
+  "canonical_id": "c39f2ecd5a2e4997976cabae28a10d7a",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:27:31+09:00",
+  "review_status": "auto_unreviewed"
+}
