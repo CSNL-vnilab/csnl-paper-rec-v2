@@ -1,0 +1,47 @@
+{
+  "canonical_id": "9ffc11c945d958c3d99bde4c565d27e7",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T02:21:31+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "continual learning / catastrophic interference", "role": "primary_lens", "one_line": "sequential task acquisition where new learning can corrupt prior representations"},
+    {"name": "deep neural networks (connectionist)", "role": "primary_lens", "one_line": "artificial agents compared head-to-head against humans on the same sequential task"},
+    {"name": "rich vs lazy training regime", "role": "extended", "one_line": "regime knob that recreates human individual-difference strategies in networks"},
+    {"name": "transfer of learning", "role": "context", "one_line": "knowledge from Task A applied to similar Task B"}
+  ],
+  "core_question": "Do humans and neural networks show similar patterns of transfer and interference when learning Task A, then Task B, then re-tested on Task A?",
+  "key_assumptions": [
+    "transfer and interference can be operationalised within one canonical sequential rule-learning paradigm",
+    "hidden representations in networks are interpretable proxies for the learner's solution",
+    "training regime (rich vs lazy) maps onto qualitative human strategies"
+  ],
+  "manipulations": [
+    "task similarity between Task A and Task B (similar vs dissimilar)",
+    "learner type (human vs neural network)",
+    "network training regime (rich vs lazy)"
+  ],
+  "key_findings": [
+    "similar successive tasks yield greater transfer but also greater interference, in both humans and networks",
+    "network interference arises because existing solutions are reused and thereby corrupted for prior use",
+    "humans split into 'lumpers' (interference, better generalisation) and 'splitters' (no interference, better feature memory)",
+    "rich vs lazy training regimes recreate the lumper/splitter individual differences in networks"
+  ],
+  "interpretations": [
+    "human and network continual-learning behaviour share a common transfer/interference trade-off",
+    "individual strategy differences reflect the same representational regime that distinguishes rich from lazy network learning"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "continual learning",
+    "catastrophic interference",
+    "sequential rule learning",
+    "transfer of learning",
+    "individual differences",
+    "lumpers and splitters",
+    "rich vs lazy training",
+    "human-network comparison"
+  ],
+  "out_of_scope_note": null
+}

@@ -1,0 +1,44 @@
+{
+  "canonical_id": "1145d23db444fa5cb49e2e263288465b",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T02:21:17+0900",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "evidence accumulation", "role": "primary_lens", "one_line": "perceptual decision via integration of discrete sensory pulses over time"},
+    {"name": "Poisson pulse statistics", "role": "context", "one_line": "stochastic stimulus design enabling diverse yet controlled evidence streams"}
+  ],
+  "core_question": "Can head-fixed mice navigating virtual reality accumulate discrete visual pulses of evidence to support perceptual decisions?",
+  "key_assumptions": [
+    "mice can learn virtual T-maze navigation under head fixation",
+    "pulse counts on each side provide quantifiable evidence",
+    "decision behavior reflects integration rather than single-cue strategies"
+  ],
+  "manipulations": [
+    "side and number of visual pulses along the T-maze stem",
+    "Poisson rates of pulse occurrence",
+    "magnitude and duration of evidence"
+  ],
+  "key_findings": [
+    "many mice across genotypes learn the task at rat-comparable levels",
+    "mice are sensitive to single-pulse side differences with stable cue memory",
+    "decisions use pulses from throughout the cue region with mild early-cue overweighting",
+    "performance depends on evidence magnitude but not duration"
+  ],
+  "interpretations": [
+    "mice genuinely accumulate sensory evidence rather than relying on single cues",
+    "the paradigm is suitable for studying neural mechanisms of evidence integration in mice"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "evidence accumulation",
+    "perceptual decision making",
+    "virtual reality T-maze",
+    "head-fixed mice",
+    "Poisson pulse stimulus",
+    "primacy effect",
+    "psychophysical sensitivity"
+  ],
+  "out_of_scope_note": null
+}

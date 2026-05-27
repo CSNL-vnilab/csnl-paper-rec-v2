@@ -1,0 +1,44 @@
+{
+  "canonical_id": "2b761af080cff5dba595cf140283525e",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T02:21:37+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "brain-wide distributed coding", "role": "primary_lens", "one_line": "task variables represented across many regions rather than localized to specialist areas"},
+    {"name": "perceptual decision-making", "role": "context", "one_line": "sensory-cognitive-motor task as a substrate for probing region-by-region neural correlates"}
+  ],
+  "core_question": "How are sensory, cognitive, and motor variables of a decision-making task represented across the whole mouse brain at single-neuron resolution?",
+  "key_assumptions": [
+    "standardized task and recording protocol enables cross-lab pooling",
+    "Neuropixels sampling across 279 areas approximates a brain-wide view",
+    "task-variable encoding can be read off from single-neuron firing"
+  ],
+  "manipulations": [
+    "task variables: visual stimulus, choice, motor action, reward",
+    "recording site across 279 brain areas in forebrain, midbrain, hindbrain, cerebellum"
+  ],
+  "key_findings": [
+    "visual-stimulus representations appear transiently in classical visual areas after onset",
+    "stimulus signals then spread to ramp-like activity in midbrain and hindbrain regions that also encode choice",
+    "impending motor-action correlates appear almost everywhere in the brain",
+    "reward delivery and consumption responses are widespread"
+  ],
+  "interpretations": [
+    "decision-related computations are distributed across many regions rather than confined to specialist areas",
+    "the standardized brain-wide dataset is offered as a community resource"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "brain-wide Neuropixels recording",
+    "distributed neural coding",
+    "perceptual decision-making in mice",
+    "choice and action encoding",
+    "ramp-like activity",
+    "reward representation",
+    "International Brain Laboratory dataset",
+    "multi-region single-unit recording"
+  ],
+  "out_of_scope_note": null
+}
