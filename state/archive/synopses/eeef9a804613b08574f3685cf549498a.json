@@ -1,0 +1,59 @@
+{
+  "frameworks": [
+    {
+      "name": "activity-silent working memory",
+      "role": "compared_against",
+      "one_line": "memories stored in fast synaptic traces without persistent neuronal firing"
+    },
+    {
+      "name": "persistent activity working memory",
+      "role": "primary_lens",
+      "one_line": "active neuronal code maintains unattended memories across the delay"
+    },
+    {
+      "name": "EEG multivariate decoding",
+      "role": "extended",
+      "one_line": "decode memory content from voltage and alpha power around pinging impulses"
+    }
+  ],
+  "core_question": "Do visual pinging EEG reactivations during memory delays reflect an activity-silent code, or an electrically active one?",
+  "key_assumptions": [
+    "unattended short-term memories can be probed by a visual impulse",
+    "decoding presence indexes an active neural code",
+    "alpha power and raw voltage tap related but distinct memory signals"
+  ],
+  "manipulations": [
+    "re-analysis with more statistically powered decoding",
+    "decoding from alpha power versus raw voltage",
+    "comparison of pre-ping versus post-ping windows for unattended items"
+  ],
+  "key_findings": [
+    "originally reported absence of pre-ping decoding reflects weak statistical power",
+    "memory content is decodable in higher-powered analyses of the same data",
+    "alpha-power analyses reveal decoding of unattended items before the ping"
+  ],
+  "interpretations": [
+    "pinging reactivations occur on top of an active, not silent, memory code",
+    "evidence from these EEG datasets does not require activity-silent synaptic storage"
+  ],
+  "limitations_noted": [
+    "conclusions are constrained to the re-analyzed EEG datasets"
+  ],
+  "connecting_signals": [
+    "working memory",
+    "activity-silent code",
+    "persistent activity",
+    "visual pinging",
+    "EEG decoding",
+    "alpha power",
+    "unattended memory",
+    "memory reactivation"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "eeef9a804613b08574f3685cf549498a",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

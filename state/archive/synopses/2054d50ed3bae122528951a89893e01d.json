@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "Bayes factors",
+      "role": "primary_lens",
+      "one_line": "Relative evidence for one theory over another from the data."
+    },
+    {
+      "name": "Power analysis",
+      "role": "compared_against",
+      "one_line": "Pre-data sensitivity check argued to be insufficient for null-result interpretation."
+    },
+    {
+      "name": "Confidence intervals",
+      "role": "compared_against",
+      "one_line": "Interval estimation considered as an alternative way to read non-significant results."
+    },
+    {
+      "name": "Null hypothesis significance testing",
+      "role": "context",
+      "one_line": "Frequentist framework whose non-significant outcomes motivate the problem."
+    }
+  ],
+  "core_question": "How should researchers decide whether a non-significant result counts against a theory rather than reflecting data insensitivity?",
+  "key_assumptions": [
+    "A theory can be specified well enough to make a quantitative prediction",
+    "Evidence is meaningful only relative to at least two competing hypotheses",
+    "Data themselves can index their own sensitivity"
+  ],
+  "manipulations": [],
+  "key_findings": [
+    "Non-significant results do not automatically license any scientific conclusion",
+    "Power, intervals, and Bayes factors give different leverage on null findings",
+    "Bayes factors use the data to gauge their own sensitivity in distinguishing theories"
+  ],
+  "interpretations": [
+    "Bayes factors coherently distinguish evidence for the null from data insensitivity",
+    "Bayes factors better link theory to data than power or intervals for null results"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "Bayes factor",
+    "non-significant results",
+    "null hypothesis evidence",
+    "data sensitivity",
+    "model comparison",
+    "theory-data link",
+    "statistical inference"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "2054d50ed3bae122528951a89893e01d",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:35:24+09:00",
+  "review_status": "auto_unreviewed"
+}

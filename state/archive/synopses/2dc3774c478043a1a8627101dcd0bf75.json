@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "population-level neural decoding",
+      "role": "primary_lens",
+      "one_line": "dimensionality reduction and decoding isolate stimulus, action, and motion subspaces"
+    },
+    {
+      "name": "sensorimotor linking via mPFC",
+      "role": "extended",
+      "one_line": "prefrontal cortex links sensory cues to learned behavioral outputs"
+    },
+    {
+      "name": "goal-directed action selection",
+      "role": "context",
+      "one_line": "mPFC contributes to selection between alternative learned actions"
+    }
+  ],
+  "core_question": "How does mPFC population activity link sensory stimuli to learned avoidance behaviors?",
+  "key_assumptions": [
+    "population activity can be decomposed into stimulus, action, and motion components",
+    "mPFC mediates the sensory-to-behavior link for learned behaviors",
+    "calcium imaging captures behaviorally relevant prefrontal population dynamics"
+  ],
+  "manipulations": [
+    "tone-signaled active avoidance learning paradigm",
+    "comparison of two different learned avoidance actions",
+    "dimensionality reduction to isolate stimulus vs action vs motion activity"
+  ],
+  "key_findings": [
+    "tone-related activity was not informative about upcoming behavior",
+    "avoidance-related activity was predictive of upcoming avoidance actions",
+    "avoidance-related activity distinguished between two different learned avoidance actions"
+  ],
+  "interpretations": [
+    "mPFC contributes to selection between different goal-directed actions",
+    "prefrontal population codes implement the sensory-behavior link for learned avoidance"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "medial prefrontal cortex",
+    "active avoidance learning",
+    "population calcium imaging",
+    "dimensionality reduction",
+    "neural decoding",
+    "goal-directed action selection",
+    "sensorimotor transformation",
+    "tone-signaled behavior"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "2dc3774c478043a1a8627101dcd0bf75",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "spatial suppression / center-surround antagonism",
+      "role": "primary_lens",
+      "one_line": "Suppressive center-surround mechanisms subtract background motion to expose moving objects."
+    },
+    {
+      "name": "figure-ground segmentation",
+      "role": "extended",
+      "one_line": "Motion-based segregation reframed as a consequence of background-motion insensitivity."
+    },
+    {
+      "name": "perceptual learning",
+      "role": "context",
+      "one_line": "Training alters spatial suppression strength and concomitant segregation ability."
+    }
+  ],
+  "core_question": "Does spatial suppression of background motion signals causally support rapid figure-ground segmentation of moving objects?",
+  "key_assumptions": [
+    "Center-surround suppression effectively subtracts large-field background motion",
+    "Individual differences in motion processing index underlying suppression strength",
+    "Motion segregation and spatial suppression share a common neural substrate"
+  ],
+  "manipulations": [
+    "Individual differences in spatial suppression strength",
+    "Stimulus-driven variation in suppression",
+    "Aging (young vs older adults)",
+    "Perceptual-learning training on motion segregation"
+  ],
+  "key_findings": [
+    "Spatial suppression strength predicts motion segregation ability across individuals and stimuli",
+    "Aging brings superior background-motion perception alongside impaired motion segregation",
+    "Training improves segregation only when it also reduces background-motion sensitivity"
+  ],
+  "interpretations": [
+    "Insensitivity to large moving stimuli implements background subtraction that drives motion segregation",
+    "Spatial suppression is a critical computational substrate for rapid motion-based figure-ground segregation"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "spatial suppression",
+    "center-surround antagonism",
+    "motion segregation",
+    "figure-ground segmentation",
+    "background motion subtraction",
+    "perceptual learning",
+    "aging vision",
+    "individual differences in motion perception"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "05dd2e3a9535e277b9e810838550e734",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:35:24+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "second-order image statistics",
+      "role": "primary_lens",
+      "one_line": "low-level spectral/covariance regularities of natural images as scene-category code"
+    },
+    {
+      "name": "feedforward scene categorization",
+      "role": "primary_lens",
+      "one_line": "rapid category readout from low-level features without segmentation"
+    },
+    {
+      "name": "top-down contextual gating of object recognition",
+      "role": "extended",
+      "one_line": "scene gist used as early context to guide object localization"
+    }
+  ],
+  "core_question": "Do category-correlated low-level image statistics support feedforward scene categorization that constrains subsequent object processing?",
+  "key_assumptions": [
+    "image categories carry diagnostic second-order statistical regularities",
+    "scene-level information can be computed before grouping or segmentation",
+    "low-level features suffice to provide early contextual priors for objects"
+  ],
+  "manipulations": [
+    "image categories (scene types and object content)",
+    "scene scale",
+    "presence vs absence of objects in scenes"
+  ],
+  "key_findings": [
+    "second-order statistics correlate with image categories, scene scale, and object content",
+    "scene categorization can be computed feedforward from low-level features",
+    "simple image statistics predict object presence/absence prior to exploration",
+    "low-level categorization benefits object localization and identification"
+  ],
+  "interpretations": [
+    "scene gist computed from image statistics provides early top-down/contextual signal in the visual hierarchy",
+    "categorization without segmentation is a viable computational route for guiding object recognition"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "natural image statistics",
+    "scene categorization",
+    "second-order statistics",
+    "scene gist",
+    "feedforward visual processing",
+    "contextual priors for objects",
+    "object localization",
+    "scene scale"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "7b0708a998ab15e44f569c0f77bb446d",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:35:24+09:00",
+  "review_status": "auto_unreviewed"
+}

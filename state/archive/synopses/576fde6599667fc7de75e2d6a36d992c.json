@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "default-mode vs task-positive anticorrelation",
+      "role": "primary_lens",
+      "one_line": "reciprocal large-scale brain systems framework probed under NMDA blockade"
+    },
+    {
+      "name": "NMDA receptor hypofunction model of schizophrenia",
+      "role": "primary_lens",
+      "one_line": "glutamatergic dysfunction as mechanism for cognitive and psychotic symptoms"
+    },
+    {
+      "name": "biophysically realistic computational modeling of cortical disinhibition",
+      "role": "extended",
+      "one_line": "circuit-level disinhibition account proposed to explain large-scale connectivity disruption"
+    },
+    {
+      "name": "local circuit accounts of NMDA function",
+      "role": "compared_against",
+      "one_line": "prior work limited to local processes, extended here to large-scale systems"
+    }
+  ],
+  "core_question": "Does NMDA receptor antagonism disrupt the anticorrelation between default-mode and task-positive systems during working memory, and does this relate to cognition and schizophrenia-like symptoms?",
+  "key_assumptions": [
+    "NMDA-mediated glutamatergic transmission underlies cortical computations for cognition",
+    "default-mode and task-positive systems are normally reciprocally anticorrelated",
+    "ketamine acts as a pharmacological model of NMDA hypofunction"
+  ],
+  "manipulations": [
+    "administration of ketamine vs control",
+    "delayed working memory task engagement",
+    "measurement of task-dependent activation and connectivity"
+  ],
+  "key_findings": [
+    "ketamine disrupted reciprocal activation between default-mode and task-positive systems",
+    "ketamine disrupted reciprocal connectivity between these systems",
+    "degree of disruption predicted working memory task performance",
+    "disruption transiently evoked schizophrenia-characteristic symptoms"
+  ],
+  "interpretations": [
+    "NMDA hypofunction degrades large-scale anticorrelated system organization underlying cognition",
+    "cortical disinhibition offers a parsimonious circuit-level account of the disruption"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "NMDA receptor antagonism",
+    "ketamine challenge",
+    "default-mode network",
+    "task-positive network",
+    "anticorrelated brain systems",
+    "working memory",
+    "cortical disinhibition",
+    "schizophrenia computational model"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "576fde6599667fc7de75e2d6a36d992c",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,51 @@
+{
+  "frameworks": [
+    {
+      "name": "active inference",
+      "role": "primary_lens",
+      "one_line": "epistemic behaviour as inference over hierarchical generative models"
+    },
+    {
+      "name": "hierarchical generative models",
+      "role": "extended",
+      "one_line": "deep generative models with nested temporal structure across timescales"
+    }
+  ],
+  "core_question": "How can deep temporal generative models within active inference account for epistemic behaviour such as reading?",
+  "key_assumptions": [
+    "behaviour can be cast as inference over a generative model",
+    "generative models are hierarchical with nested timescales",
+    "epistemic value drives action selection"
+  ],
+  "manipulations": [
+    "depth of temporal hierarchy in the generative model",
+    "simulated reading task structure"
+  ],
+  "key_findings": [
+    "deep temporal models support simulation of reading via active inference",
+    "nested temporal structure emerges from hierarchical state transitions",
+    "simulations exhibit features of biological plausibility"
+  ],
+  "interpretations": [
+    "active inference with deep temporal models offers a principled account of epistemic behaviour",
+    "deep hierarchical models can plausibly map onto neural processing of sequential structure"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "active inference",
+    "deep generative models",
+    "hierarchical temporal structure",
+    "epistemic behaviour",
+    "free-energy principle",
+    "reading simulation",
+    "nested timescales",
+    "state transitions"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "91d036e6dd040509177818edee8477fb",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:35:24+09:00",
+  "review_status": "auto_unreviewed"
+}
