@@ -1,0 +1,34 @@
+{
+  "canonical_id": "fc113b5d6a63475e1fe784ae6f2fdf49",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.5,
+  "frameworks": [
+    {"name": "international brain laboratory", "role": "primary_lens", "one_line": "Multi-lab consortium coordinating standardized decision-making experiments across sites."},
+    {"name": "standardized mouse decision-making", "role": "primary_lens", "one_line": "Shared mouse behavioural paradigm enabling cross-lab comparability."},
+    {"name": "brain-wide neural recording", "role": "primary_lens", "one_line": "Coordinated measurements of activity across many mouse brain structures."}
+  ],
+  "core_question": "How can a multi-lab consortium dissect the brain-wide neural computations underlying decision-making in mice?",
+  "key_assumptions": [
+    "Decision-making engages coordinated activity across multiple brain structures.",
+    "Standardizing behaviour across labs enables meaningful pooling of neural data."
+  ],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [
+    "A coordinated multi-lab effort combining shared behaviour, brain-wide recordings, and theory can uncover the neural computations of decision-making."
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "International Brain Laboratory",
+    "IBL",
+    "mouse decision-making",
+    "brain-wide neural recordings",
+    "standardized behaviour",
+    "multi-site collaboration",
+    "neural computations of choice"
+  ],
+  "out_of_scope_note": null
+}

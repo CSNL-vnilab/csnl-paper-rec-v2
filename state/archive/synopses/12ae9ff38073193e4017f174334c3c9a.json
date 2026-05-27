@@ -1,0 +1,45 @@
+{
+  "canonical_id": "12ae9ff38073193e4017f174334c3c9a",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "thalamocortical connectivity mapping", "role": "primary_lens", "one_line": "Tracer-based comprehensive afferent mapping of cortical inputs to medial pulvinar."},
+    {"name": "multimodal integration via cell-cluster microunits", "role": "extended", "one_line": "Intermingled projection neurons form clusters supporting cross-modal integration."},
+    {"name": "directed attention and associative thalamus", "role": "context", "one_line": "PM cited as multimodal associative nucleus implicated in attention."}
+  ],
+  "core_question": "Which cortical areas project to the medial pulvinar in the marmoset, and how are these projections organized?",
+  "key_assumptions": [
+    "MRI-guided tracer injections faithfully reveal cortical afferents",
+    "Marmoset PM organization is informative for primate thalamocortical architecture",
+    "Reciprocal connectivity is a meaningful organizational principle"
+  ],
+  "manipulations": [
+    "Tracer injection sites targeted to PM via MRI guidance",
+    "Sampling across temporal, parietal, retrosplenial-cingulate, prefrontal, orbital cortex"
+  ],
+  "key_findings": [
+    "62 discrete cortices project to adult marmoset PM",
+    "New projections identified beyond ~20 previously reported cortices",
+    "PM-cortical connectivity is reciprocal across mapped regions",
+    "PM neurons projecting to different cortices are intermingled into multimodal cell clusters"
+  ],
+  "interpretations": [
+    "PM exhibits a microunit organization distinct from the large functional subdivisions typical of thalamic nuclei",
+    "Intermingled clusters likely facilitate cross-modal integration"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "medial pulvinar",
+    "thalamocortical afferents",
+    "marmoset primate connectivity",
+    "multimodal integration",
+    "directed attention thalamus",
+    "associative thalamic nucleus",
+    "reciprocal cortico-thalamic connectivity",
+    "MRI-guided tracer injection"
+  ],
+  "out_of_scope_note": null
+}

@@ -1,0 +1,43 @@
+{
+  "canonical_id": "c9ee8c78412bb3b8f09d606ba6e60693",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "cortical excitability", "role": "primary_lens", "one_line": "V1-V3 resting activity and excitability gate sensory imagery strength."},
+    {"name": "distributed imagery network", "role": "context", "one_line": "Prefrontal, parietal, temporal, and visual areas support image generation."}
+  ],
+  "core_question": "How does the imagery network control the strength of visual mental imagery?",
+  "key_assumptions": [
+    "Mental imagery recruits early visual cortex",
+    "Phosphene threshold indexes visual cortex excitability",
+    "tDCS can causally modulate visual cortex excitability"
+  ],
+  "manipulations": [
+    "Measured resting activity and excitability in early visual cortex (V1-V3)",
+    "Applied tDCS to decrease visual cortex excitability"
+  ],
+  "key_findings": [
+    "Lower resting activity in early visual cortex predicts stronger imagery",
+    "Lower cortical excitability (phosphene threshold) predicts stronger imagery",
+    "tDCS-induced decrease in visual cortex excitability increases imagery strength"
+  ],
+  "interpretations": [
+    "Visual cortex excitability causally controls visual imagery strength",
+    "A neurophysiological mechanism of cortical excitability underlies imagery strength"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "mental imagery strength",
+    "early visual cortex excitability",
+    "transcranial magnetic phosphene threshold",
+    "tDCS",
+    "resting visual cortex activity",
+    "V1-V3",
+    "sensory imagery",
+    "imagery network"
+  ],
+  "out_of_scope_note": null
+}

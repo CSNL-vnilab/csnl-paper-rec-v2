@@ -1,0 +1,45 @@
+{
+  "canonical_id": "214dc3a4611a0c7f4faadcc346a890a9",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "entrainment / Arnold tongue", "role": "primary_lens", "one_line": "External oscillatory drive locks endogenous rhythm within a frequency-amplitude wedge."},
+    {"name": "thalamo-cortical computational model", "role": "alternative_lens", "one_line": "Spiking network of cortex and higher-order thalamus reproduces tACS effects."}
+  ],
+  "core_question": "How does tACS interact with neuronal spiking to entrain endogenous alpha oscillations in the thalamo-cortical system?",
+  "key_assumptions": [
+    "alpha oscillations arise from thalamo-cortical interactions",
+    "weak electric fields (<0.5 mV/mm) can bias spike timing",
+    "Arnold tongue framework applies to in vivo entrainment"
+  ],
+  "manipulations": [
+    "applied alpha-band tACS at human-comparable field strength",
+    "varied stimulation parameters mapping the Arnold tongue",
+    "compared awake ferret recordings with thalamo-cortical model"
+  ],
+  "key_findings": [
+    "posterior parietal alpha drives V1 and higher-order visual thalamus",
+    "spike-field coherence peaks in the alpha band",
+    "fast-spiking inhibitory interneurons couple most strongly to endogenous alpha",
+    "tACS entrains alpha following the predicted Arnold tongue, with stronger entrainment of fast-spiking interneurons"
+  ],
+  "interpretations": [
+    "tACS entrains alpha by preferential phase synchronization of fast-spiking interneurons",
+    "stronger endogenous coupling of FS interneurons to alpha explains their preferential response to weak fields"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "transcranial alternating current stimulation",
+    "alpha oscillation entrainment",
+    "Arnold tongue",
+    "fast-spiking inhibitory interneurons",
+    "spike-field coherence",
+    "thalamo-cortical model",
+    "posterior parietal cortex",
+    "higher-order visual thalamus"
+  ],
+  "out_of_scope_note": null
+}

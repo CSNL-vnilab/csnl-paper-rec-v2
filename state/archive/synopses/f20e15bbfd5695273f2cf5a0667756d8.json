@@ -1,0 +1,43 @@
+{
+  "canonical_id": "f20e15bbfd5695273f2cf5a0667756d8",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "law of least mental effort", "role": "primary_lens", "one_line": "brain minimizes cognitive demand when choosing between tasks"},
+    {"name": "transdiagnostic latent-factor psychopathology", "role": "primary_lens", "one_line": "symptom dimensions cut across categorical diagnoses"}
+  ],
+  "core_question": "Which clinically-relevant symptoms, traits, and transdiagnostic factors are associated with avoidance of mental effort across individuals?",
+  "key_assumptions": [
+    "effort avoidance is a measurable individual-difference trait",
+    "psychiatric constructs are better modeled dimensionally than categorically",
+    "single-diagnosis findings should generalize to transdiagnostic structure"
+  ],
+  "manipulations": [
+    "diverse battery of clinical symptom/trait measures across one large sample",
+    "extraction of transdiagnostic latent factors from the symptom battery"
+  ],
+  "key_findings": [
+    "lack of perseverance (impulsiveness dimension) was associated with greater mental effort avoidance",
+    "positive urgency, distress intolerance, obsessive-compulsive symptoms, and disordered eating were associated with less effort avoidance",
+    "a latent factor of compulsive behavior and intrusive thoughts also predicted less effort avoidance"
+  ],
+  "interpretations": [
+    "deviations from normative effort expenditure span multiple psychiatric constructs rather than mapping to one diagnosis",
+    "effort avoidance does not align in one direction with pathology — some constructs increase and others decrease it"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "mental effort avoidance",
+    "cognitive demand",
+    "transdiagnostic latent factors",
+    "lack of perseverance",
+    "positive urgency",
+    "distress intolerance",
+    "obsessive-compulsive symptoms",
+    "individual differences in effort"
+  ],
+  "out_of_scope_note": null
+}

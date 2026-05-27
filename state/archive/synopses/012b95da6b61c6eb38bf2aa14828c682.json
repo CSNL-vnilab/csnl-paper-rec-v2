@@ -1,0 +1,50 @@
+{
+  "frameworks": [
+    {
+      "name": "cognitive science of human-machine interaction",
+      "role": "primary_lens",
+      "one_line": "framework linking levels of description to study brain mechanisms of human-robot interaction"
+    },
+    {
+      "name": "social cognition",
+      "role": "extended",
+      "one_line": "social cognitive systems extended to interactions with machines and robots"
+    },
+    {
+      "name": "cognitive neuroscience",
+      "role": "context",
+      "one_line": "multi-level brain and behavioural methods leveraged for human-machine research"
+    }
+  ],
+  "core_question": "What framework can integrate cognitive and brain mechanisms supporting human interactions with increasingly social machines?",
+  "key_assumptions": [
+    "machines are taking on increasingly social roles in everyday environments",
+    "human-machine interactions recruit multiple cognitive and brain systems",
+    "different levels of description can be linked via cognitive neuroscience theory and methods",
+    "individuals' expectations and prior experiences shape interaction"
+  ],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [
+    "a multi-level framework can respect diversity of machines, individuals, and brain systems",
+    "human-machine interaction poses unique challenges and opportunities for brain and behavioural science"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "human-machine interaction",
+    "human-robot interaction",
+    "social cognition",
+    "cognitive neuroscience framework",
+    "social robots",
+    "levels of description",
+    "individual differences in expectations",
+    "brain mechanisms of social interaction"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "012b95da6b61c6eb38bf2aa14828c682",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T02:12:30+09:00",
+  "review_status": "auto_unreviewed"
+}
