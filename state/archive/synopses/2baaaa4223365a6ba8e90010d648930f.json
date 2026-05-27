@@ -1,0 +1,43 @@
+{
+  "canonical_id": "2baaaa4223365a6ba8e90010d648930f",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [
+    {"name": "optimal encoding and decoding", "role": "primary_lens", "one_line": "joint theory of efficient sensory encoding matched to a perceptual decoder"},
+    {"name": "psychophysical law", "role": "extended", "one_line": "lawful mathematical relation linking discriminability to perceptual bias across stimulus space"}
+  ],
+  "core_question": "Is there a lawful mathematical relation between perceptual bias and discrimination threshold across stimulus value?",
+  "key_assumptions": [
+    "sensory encoding and perceptual decoding share identical assumptions about environmental statistics",
+    "perception is characterized by discrimination threshold and average perceived bias",
+    "encoder and decoder are jointly optimized"
+  ],
+  "manipulations": [
+    "stimulus value as the independent variable",
+    "contextual modulation conditions across reported datasets"
+  ],
+  "key_findings": [
+    "perceptual bias and discriminability follow a simple mathematical relation as functions of stimulus value",
+    "the relation holds across a wide range of psychophysical datasets",
+    "the relation captures perceptual changes induced by contextual modulation"
+  ],
+  "interpretations": [
+    "the bias-discriminability link may represent a general psychophysical law",
+    "sensory encoding and perceptual decoding are matched and co-optimized on shared environmental priors"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "perceptual bias",
+    "discrimination threshold",
+    "psychophysical law",
+    "optimal encoding decoding",
+    "contextual modulation",
+    "stimulus prior",
+    "bias-variance relation",
+    "efficient sensory coding"
+  ],
+  "out_of_scope_note": null,
+  "generator": "opus-4-7@2026-05-27",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "abstract_coverage": 1.0
+}

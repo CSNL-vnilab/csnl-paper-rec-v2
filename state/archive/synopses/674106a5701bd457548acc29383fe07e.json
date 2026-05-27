@@ -1,0 +1,41 @@
+{
+  "canonical_id": "674106a5701bd457548acc29383fe07e",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [
+    {"name": "Bayesian observer", "role": "primary_lens", "one_line": "optimal observer uses item-specific memory uncertainty in change-detection decisions"},
+    {"name": "point-estimate working memory", "role": "compared_against", "one_line": "alternative model in which only a stimulus point estimate is stored, without uncertainty"}
+  ],
+  "core_question": "Do people maintain stimulus-specific uncertainty in working memory and use it implicitly when making subsequent decisions?",
+  "key_assumptions": [
+    "memory precision varies item-by-item",
+    "decisions can be modeled as Bayesian inference over noisy memory representations",
+    "uncertainty information, if maintained, is available at decision time"
+  ],
+  "manipulations": [
+    "two conditions of an orientation change-detection task differing in whether uncertainty must be maintained vs. available only at decision",
+    "model comparison: Use Uncertainty vs. Ignore Uncertainty observer"
+  ],
+  "key_findings": [
+    "Use Uncertainty model fit better than Ignore Uncertainty model for all participants in both conditions",
+    "advantage holds in the condition that required maintaining uncertainty across the working memory delay"
+  ],
+  "interpretations": [
+    "people maintain item-specific memory uncertainty over a working memory delay",
+    "this uncertainty is used implicitly in a manner consistent with an optimal Bayesian observer"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "working memory uncertainty",
+    "item-specific memory precision",
+    "Bayesian observer model",
+    "orientation change detection",
+    "implicit use of uncertainty",
+    "memory delay representation",
+    "model comparison Use vs Ignore Uncertainty"
+  ],
+  "out_of_scope_note": null,
+  "generator": "opus-4-7@2026-05-27",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "abstract_coverage": 1.0
+}

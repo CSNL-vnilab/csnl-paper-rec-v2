@@ -1,0 +1,44 @@
+{
+  "canonical_id": "e1b49aff6976edd934418d126496a7a3",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [
+    {"name": "categorical bias in working memory", "role": "primary_lens", "one_line": "stored representations are pulled by the categorical structure of the stimulus space"},
+    {"name": "multivariate EEG decoding", "role": "primary_lens", "one_line": "channel-based decoding of held features from scalp EEG during the delay"},
+    {"name": "decision/response-stage bias account", "role": "compared_against", "one_line": "biases arise at report rather than in memory representations"}
+  ],
+  "core_question": "Are categorical biases present in the neural representations maintained in working memory, or do they emerge only at decision/response stages?",
+  "key_assumptions": [
+    "multivariate EEG decoding indexes the content of working memory representations",
+    "categorical structure of the stimulus space can shape stored representations",
+    "response-preparation strategies can be experimentally suppressed"
+  ],
+  "manipulations": [
+    "remembered feature: spatial location and orientation",
+    "follow-up design that prevents response-preparation strategy"
+  ],
+  "key_findings": [
+    "spatial working memory decoding was biased away from the nearest cardinal location, matching behavioral biases",
+    "categorical decoding biases persisted when response preparation was prevented",
+    "biases were observed in EEG decoding prior to the behavioral report"
+  ],
+  "interpretations": [
+    "working memory representations themselves are categorically biased, not just the report stage",
+    "models of working memory must accommodate categorical structure of the representational space"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "categorical bias",
+    "working memory representation",
+    "multivariate EEG decoding",
+    "spatial working memory",
+    "orientation working memory",
+    "cardinal reference",
+    "delay-period neural activity",
+    "decision-stage vs memory-stage bias"
+  ],
+  "out_of_scope_note": null,
+  "generator": "opus-4-7@2026-05-27",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "abstract_coverage": 1.0
+}

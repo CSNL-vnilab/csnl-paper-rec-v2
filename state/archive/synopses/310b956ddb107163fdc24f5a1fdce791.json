@@ -1,0 +1,56 @@
+{
+  "frameworks": [
+    {
+      "name": "Spectral Submanifolds (SSMs)",
+      "role": "primary_lens",
+      "one_line": "Low-dimensional attracting invariant manifolds tangent to fixed-point eigenspaces."
+    },
+    {
+      "name": "Recurrent Neural Networks",
+      "role": "extended",
+      "one_line": "High-dimensional RNN dynamics reduced via nonlinear invariant manifold theory."
+    },
+    {
+      "name": "Attractor dynamics",
+      "role": "context",
+      "one_line": "Line and ring attractors used to explain decision-making and working memory."
+    }
+  ],
+  "core_question": "Can data-driven nonlinear manifold techniques recover the core low-dimensional dynamics underlying high-dimensional RNNs used in neuroscience?",
+  "key_assumptions": [
+    "RNN activity is organized around fixed points with attracting invariant manifolds",
+    "Spectral submanifolds tangent to eigenspaces capture essential dynamics",
+    "Dimensionality reduction by orders of magnitude is feasible without loss of core behavior"
+  ],
+  "manipulations": [
+    "Choice of RNN architectures from contemporary neuroscience tasks",
+    "Identification of SSMs around different fixed points"
+  ],
+  "key_findings": [
+    "SSMs identified data-drivenly serve as nonlinear reduced models of full RNNs",
+    "SSM-reduced models cut RNN dimensionality by orders of magnitude",
+    "Mathematically precise definitions of line and ring attractors are obtained via SSM reduction"
+  ],
+  "interpretations": [
+    "Nonlinear dynamical systems theory clarifies the geometric structure underlying RNN computation",
+    "Intuitive attractor concepts in neuroscience can be formalized through invariant manifold reductions"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "recurrent neural networks",
+    "spectral submanifolds",
+    "invariant manifolds",
+    "dimensionality reduction",
+    "line attractors",
+    "ring attractors",
+    "decision-making",
+    "working memory"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "310b956ddb107163fdc24f5a1fdce791",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:21:21+09:00",
+  "review_status": "auto_unreviewed"
+}

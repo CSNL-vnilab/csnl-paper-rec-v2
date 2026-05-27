@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "sequential biases / trial-by-trial learning",
+      "role": "primary_lens",
+      "one_line": "past trials and outcomes shape current choice via short-term updates"
+    },
+    {
+      "name": "win-stay/lose-shift heuristic",
+      "role": "alternative_lens",
+      "one_line": "spatial choice tendency based on previous outcome side"
+    },
+    {
+      "name": "value-based decision-making under risk",
+      "role": "context",
+      "one_line": "choice between guaranteed and probabilistic rewards"
+    }
+  ],
+  "core_question": "Does lateral orbitofrontal cortex support trial-by-trial sequential biases in risky choice, and are different bias types neurally dissociable?",
+  "key_assumptions": [
+    "trial outcomes are independent so any sequential effect is endogenous",
+    "neural causality can be tested with temporally precise optogenetic inhibition",
+    "risk and spatial biases are conceptually separable forms of history dependence"
+  ],
+  "manipulations": [
+    "explicit cueing of guaranteed vs probabilistic reward options",
+    "previous-trial outcome (risky win, risky loss, safe)",
+    "optogenetic inhibition of lOFC during choice reporting"
+  ],
+  "key_findings": [
+    "rats showed increased risk-taking after risky wins and spatial win-stay/lose-shift",
+    "lOFC neurons strongly encoded reward history and outcome receipt",
+    "lOFC inhibition during choice reporting abolished the risky-win bias but spared spatial biases"
+  ],
+  "interpretations": [
+    "different sequential biases have dissociable neural substrates",
+    "lOFC promotes learning of abstract, task-specific biases rather than spatial ones"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "sequential biases",
+    "trial-by-trial learning",
+    "lateral orbitofrontal cortex",
+    "risky choice",
+    "reward history encoding",
+    "win-stay lose-shift",
+    "optogenetic inhibition",
+    "value-based decision-making"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "c69989227ac6b682f2aba2e7a828586d",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:21:21+09:00",
+  "review_status": "auto_unreviewed"
+}

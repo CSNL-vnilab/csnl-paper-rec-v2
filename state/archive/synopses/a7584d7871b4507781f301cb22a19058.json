@@ -1,0 +1,64 @@
+{
+  "frameworks": [
+    {
+      "name": "two-node attractor network",
+      "role": "primary_lens",
+      "one_line": "bistable attractor dynamics model decision memory in frontal cortex"
+    },
+    {
+      "name": "evidence integration",
+      "role": "compared_against",
+      "one_line": "integrator configuration tested as alternative account of bias"
+    },
+    {
+      "name": "evidence categorization",
+      "role": "compared_against",
+      "one_line": "categorization configuration tested as alternative account of bias"
+    },
+    {
+      "name": "decision memory",
+      "role": "primary_lens",
+      "one_line": "postcategorization memory configuration of attractor network"
+    }
+  ],
+  "core_question": "Which attractor-network configuration of the rat FOF explains the stimulus-independent bias caused by causal perturbation?",
+  "key_assumptions": [
+    "two-node attractor networks can flexibly capture distinct decision computations",
+    "FOF activity is causally involved in upcoming choice",
+    "configuration choice (integration vs categorization vs memory) is identifiable from perturbation effects"
+  ],
+  "manipulations": [
+    "pharmacological silencing of FOF",
+    "optogenetic perturbation of FOF",
+    "memory-duration variation across tasks",
+    "alternative model configurations fit to data"
+  ],
+  "key_findings": [
+    "FOF pharmacological silencing produced a stimulus-independent bias",
+    "only the memory configuration of the attractor model accounts for this bias",
+    "memory model also captures optogenetic perturbation effects in the same task",
+    "model predicts a memory-duration-dependent deficit in a different task"
+  ],
+  "interpretations": [
+    "FOF supports a postcategorization decision-memory role in upcoming choices",
+    "bistable attractor dynamics provide a mechanistic account of FOF function"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "frontal orienting fields",
+    "bistable attractor dynamics",
+    "decision memory",
+    "perceptual decision making",
+    "causal perturbation",
+    "pharmacological inactivation",
+    "optogenetic silencing",
+    "stimulus-independent bias"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "a7584d7871b4507781f301cb22a19058",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:21:21+09:00",
+  "review_status": "auto_unreviewed"
+}
