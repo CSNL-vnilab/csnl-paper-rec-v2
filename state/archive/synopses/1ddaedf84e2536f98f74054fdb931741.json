@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "evidence accumulation",
+      "role": "primary_lens",
+      "one_line": "pulsatile visual cues are integrated over time to drive a navigational decision"
+    },
+    {
+      "name": "multiplicative feedback-loop circuit",
+      "role": "extended",
+      "one_line": "sensory responses are gain-modulated by accumulated cognitive variables in a feedback loop"
+    },
+    {
+      "name": "Weber-Fechner law",
+      "role": "compared_against",
+      "one_line": "classical psychophysical law from which observed perceptual discrimination deviates"
+    },
+    {
+      "name": "sensory-cortex-as-input view",
+      "role": "compared_against",
+      "one_line": "view that sensory cortex only relays inputs to downstream accumulators"
+    }
+  ],
+  "core_question": "Do primary visual and neighboring posterior cortices serve only as sensory input, or do they carry cognitive variables during evidence-accumulation-based navigation?",
+  "key_assumptions": [
+    "pulsatile visual cues can be temporally integrated to inform a navigational choice",
+    "single-neuron activity across V1, secondary visual, and retrosplenial cortices is comparable",
+    "cue-locked sensory responses are separable from cognitive modulations"
+  ],
+  "manipulations": [
+    "cortical area (V1 vs secondary visual vs retrosplenial)",
+    "pulsatile visual cue sequences supporting evidence accumulation",
+    "navigational task variables (cue timing, accumulated evidence, place/time, decision, reward)"
+  ],
+  "key_findings": [
+    "only a small fraction of V1 neurons showed purely sensory-like cue responses",
+    "neurons across all areas were sequentially active and encoded sensory through cognitive variables",
+    "per-cue sensory responses were amplitude-modulated by accumulated evidence and other cognitive quantities",
+    "perceptual discrimination deviated from the Weber-Fechner law"
+  ],
+  "interpretations": [
+    "sensory cortices play a more intricate, feedback-coupled role in evidence accumulation than passive input",
+    "a multiplicative feedback-loop circuit can account for the deviation from Weber-Fechner discrimination"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "evidence accumulation",
+    "primary visual cortex",
+    "retrosplenial cortex",
+    "secondary visual cortex",
+    "sequential neural activity",
+    "cognitive modulation of sensory responses",
+    "multiplicative feedback loop",
+    "Weber-Fechner deviation"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "1ddaedf84e2536f98f74054fdb931741",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

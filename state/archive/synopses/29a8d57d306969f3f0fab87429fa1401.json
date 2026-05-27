@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "recurrent neural network dynamics",
+      "role": "primary_lens",
+      "one_line": "RNN state evolution analyzed via linearization around an operating point"
+    },
+    {
+      "name": "linearization of nonlinear dynamics",
+      "role": "extended",
+      "one_line": "two distinct linearizations (pre- vs post-nonlinearity) compared and related"
+    },
+    {
+      "name": "context-dependent neural computation",
+      "role": "context",
+      "one_line": "gating and context effects visible in activity- but not activation-linearizations"
+    }
+  ],
+  "core_question": "How are the activation-based and activity-based linearizations of an RNN related to each other?",
+  "key_assumptions": [
+    "RNN dynamics can be written in either activation or activity coordinates",
+    "pointwise nonlinearity is differentiable for local linearization",
+    "local linearization captures relevant dynamical structure near an operating point"
+  ],
+  "manipulations": [
+    "choice of coordinate (activations vs activities) for linearization",
+    "comparison of eigenstructures of the two linearized dynamics matrices"
+  ],
+  "key_findings": [
+    "the two linearizations yield different dynamics matrices",
+    "left and right eigenvectors of the two linearizations have a definable relationship",
+    "some context-dependent effects appear under activity linearization but not activation linearization"
+  ],
+  "interpretations": [
+    "coordinate choice matters when using linearization to interpret RNN computation",
+    "activity-based linearization can expose context-dependence hidden in activation-based linearization"
+  ],
+  "limitations_noted": [
+    "informal technical note rather than a full empirical study"
+  ],
+  "connecting_signals": [
+    "recurrent neural network linearization",
+    "activations vs activities",
+    "pointwise nonlinearity",
+    "left and right eigenvectors",
+    "dynamics matrix",
+    "context-dependent dynamics",
+    "RNN analysis"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "29a8d57d306969f3f0fab87429fa1401",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

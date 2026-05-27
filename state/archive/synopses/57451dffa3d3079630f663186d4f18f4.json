@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "evidence accumulation",
+      "role": "context",
+      "one_line": "Standard PPC framework for integrating sensory evidence to a decision."
+    },
+    {
+      "name": "transient/leaky integration",
+      "role": "primary_lens",
+      "one_line": "Evidence influence decays over a short, task-matched timescale."
+    },
+    {
+      "name": "urgency / collapsing-bound gain",
+      "role": "extended",
+      "one_line": "Gain on evidence rises with elapsed decision time."
+    },
+    {
+      "name": "change-point detection",
+      "role": "context",
+      "one_line": "Task frames the problem as detecting a transient change in a noisy stream."
+    }
+  ],
+  "core_question": "How do PPC neurons adjust their dynamics to evaluate evidence over short, change-detection-relevant timescales?",
+  "key_assumptions": [
+    "PPC encodes evidence used for the current decision",
+    "Behavioral timescale of evidence evaluation can be read from neural transients",
+    "Opposing evidence-tuned populations co-exist in PPC"
+  ],
+  "manipulations": [
+    "Free-response auditory change-detection task",
+    "Strength of momentary evidence pulses in a noisy stream",
+    "Decision time elapsed within a trial"
+  ],
+  "key_findings": [
+    "PPC firing scaled with evidence strength and was choice-selective",
+    "Opposing positively- and negatively-evidence-modulated populations",
+    "Pulse responses were transient, decaying over the behavioral evaluation timescale",
+    "Evidence gain in PPC grew with decision time, consistent with rising urgency"
+  ],
+  "interpretations": [
+    "PPC implements a time-adaptive, short-timescale evidence evaluator rather than a pure long-timescale integrator",
+    "Urgency-like gain changes reshape evidence influence as a decision unfolds"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "posterior parietal cortex",
+    "change detection",
+    "evidence accumulation",
+    "decision timescale",
+    "transient evidence response",
+    "urgency signal",
+    "Neuropixels rat PPC",
+    "choice-selective neurons"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "57451dffa3d3079630f663186d4f18f4",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:22:38+09:00",
+  "review_status": "auto_unreviewed"
+}

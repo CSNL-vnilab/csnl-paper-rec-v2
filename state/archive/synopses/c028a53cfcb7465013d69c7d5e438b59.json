@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "deep neural network (ventral stream model)",
+      "role": "primary_lens",
+      "one_line": "Untrained feedforward DNN used as model of ventral visual cortex."
+    },
+    {
+      "name": "innate / spontaneous tuning",
+      "role": "primary_lens",
+      "one_line": "Number selectivity emerges from random initialization without learning."
+    },
+    {
+      "name": "monotonic encoding combination",
+      "role": "extended",
+      "one_line": "Number tuning built from summed increasing and decreasing monotonic units."
+    }
+  ],
+  "core_question": "Can number-selective neurons and abstract number sense arise in a deep network without any training?",
+  "key_assumptions": [
+    "Random feedforward weights mimic bottom-up cortical projections",
+    "Ventral-stream-like DNN architecture is a valid analog of the brain",
+    "Number sense can be probed via single-unit tuning to numerosity"
+  ],
+  "manipulations": [
+    "Trained vs. randomly initialized (untrained) network",
+    "Numerosity of stimuli",
+    "Low-level visual cues (size, density) varied independently of number"
+  ],
+  "key_findings": [
+    "Number-selective units emerge spontaneously in untrained networks",
+    "Tuning arises from combining monotonically increasing and decreasing activities",
+    "Selective units show single- and multi-neuron signatures seen in brain",
+    "Network performs number-comparison tasks using these units"
+  ],
+  "interpretations": [
+    "Number sense can be an innate property arising from bottom-up statistics, not learning",
+    "Findings give insight into the origin of innate cognitive functions"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "number sense",
+    "numerosity tuning",
+    "untrained deep neural network",
+    "ventral visual stream model",
+    "spontaneous neuronal selectivity",
+    "monotonic number neurons",
+    "innate cognitive function",
+    "abstract numerosity discrimination"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "c028a53cfcb7465013d69c7d5e438b59",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:22:38+09:00",
+  "review_status": "auto_unreviewed"
+}

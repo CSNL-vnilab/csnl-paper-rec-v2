@@ -1,0 +1,47 @@
+{
+  "canonical_id": "132b61bd29188ac70a773af461aa2f94",
+  "frameworks": [
+    {
+      "name": "functional neuroimaging meta-analysis",
+      "role": "primary_lens",
+      "one_line": "synthesizes neuroimaging activations to characterize angular gyrus functions"
+    },
+    {
+      "name": "cross-modal hub",
+      "role": "extended",
+      "one_line": "AG as convergence zone integrating multisensory information into concepts"
+    }
+  ],
+  "core_question": "What are the multiple functional roles and anatomical subdivisions of the angular gyrus?",
+  "key_assumptions": [
+    "consistent task-evoked activations index functional involvement",
+    "AG processes concepts rather than percepts at perception-action interface"
+  ],
+  "manipulations": [],
+  "key_findings": [
+    "AG consistently activates across semantic processing, reading, number, memory retrieval, attention, reasoning, and social cognition tasks",
+    "evidence supports multiple anatomical subdivisions within AG",
+    "AG involvement spans default mode network and spatial cognition"
+  ],
+  "interpretations": [
+    "AG functions as a cross-modal hub integrating multisensory information to comprehend events and reorient attention",
+    "AG processes concepts rather than percepts when interfacing perception, recognition, and action"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "angular gyrus",
+    "inferior parietal lobule",
+    "semantic processing",
+    "default mode network",
+    "memory retrieval",
+    "attention reorienting",
+    "cross-modal integration",
+    "multisensory convergence"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:22:38+09:00",
+  "review_status": "auto_unreviewed"
+}

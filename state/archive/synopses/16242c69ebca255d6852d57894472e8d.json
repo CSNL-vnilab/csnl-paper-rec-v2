@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "feedback-as-evidence",
+      "role": "primary_lens",
+      "one_line": "corrective feedback informs the learner about the actual world state"
+    },
+    {
+      "name": "feedback-as-reward (reinforcement learning)",
+      "role": "compared_against",
+      "one_line": "treats corrective feedback as reward signals teaching choice values"
+    },
+    {
+      "name": "perceptual decision-making",
+      "role": "context",
+      "one_line": "framework for how humans integrate stimuli and history into choices"
+    }
+  ],
+  "core_question": "Do humans treat corrective feedback on perceptual decisions as evidence of world state or as reward for choices?",
+  "key_assumptions": [
+    "feedback interacts with previous stimuli and choices in shaping subsequent decisions",
+    "both hypotheses can be implemented on a shared learning platform",
+    "decision strategy is adjusted trial-by-trial to improve future choices"
+  ],
+  "manipulations": [
+    "type of learning signal interpretation (reward vs. evidence)",
+    "presence and history of corrective feedback",
+    "joint history of past stimuli and past choices"
+  ],
+  "key_findings": [
+    "feedback-as-evidence model outperforms feedback-as-reward in explaining decision strategy adjustment",
+    "corrective feedback jointly shapes choices alongside past stimuli and past choices",
+    "reinforcement-learning account of perceptual feedback is insufficient for human data"
+  ],
+  "interpretations": [
+    "humans use corrective feedback as evidence about the world state, not as reward for their choice",
+    "perceptual feedback learning is principally distinct from reward-based decision learning"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "corrective feedback",
+    "perceptual decision-making",
+    "feedback-as-evidence",
+    "reinforcement learning",
+    "choice history",
+    "stimulus history",
+    "decision strategy adjustment",
+    "world state inference"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "16242c69ebca255d6852d57894472e8d",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

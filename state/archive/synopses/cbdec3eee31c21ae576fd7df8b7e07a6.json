@@ -1,0 +1,48 @@
+{
+  "frameworks": [
+    {
+      "name": "decoded neurofeedback (DecNef)",
+      "role": "primary_lens",
+      "one_line": "closed-loop fMRI paired with machine-learning decoder to reinforce target neural patterns"
+    },
+    {
+      "name": "closed-loop fMRI",
+      "role": "context",
+      "one_line": "real-time fMRI feedback paradigm enabling participant-driven neural modulation"
+    }
+  ],
+  "core_question": "Can a public multi-study DecNef dataset enable broader investigation of factors underlying non-invasive modulation of brain dynamics?",
+  "key_assumptions": [
+    "decoder-trained sessions provide reliable target patterns for subsequent neural reinforcement",
+    "across-study aggregation preserves enough commonality for re-analysis"
+  ],
+  "manipulations": [
+    "data combined across 5 separate published DecNef studies",
+    "per participant: one decoder-training session plus 3-10 closed-loop reinforcement sessions"
+  ],
+  "key_findings": [
+    "release of fMRI data from 5 prior DecNef studies covering >60 participants",
+    "each participant contributes a decoder-training session and multiple closed-loop neural reinforcement sessions"
+  ],
+  "interpretations": [
+    "the curated public dataset can support the fMRI community in studying mechanisms of non-invasive brain-dynamics modulation"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "decoded neurofeedback",
+    "closed-loop fMRI",
+    "machine-learning decoder",
+    "real-time fMRI",
+    "neural reinforcement",
+    "brain dynamics modulation",
+    "open fMRI dataset",
+    "non-invasive neuromodulation"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "cbdec3eee31c21ae576fd7df8b7e07a6",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:22:38+09:00",
+  "review_status": "auto_unreviewed"
+}

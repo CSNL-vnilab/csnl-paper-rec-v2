@@ -1,0 +1,17 @@
+{
+  "canonical_id": "d410ef551bd12747166c02559c9728b2",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "Republished pediatric neurointerventional clinical case report on basilar-artery occlusion mechanical thrombectomy — pediatric stroke care, not cognitive/perceptual/computational neuroscience.",
+  "generator": "opus-4-7@2026-05-28",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "abstract_coverage": 0.0
+}
