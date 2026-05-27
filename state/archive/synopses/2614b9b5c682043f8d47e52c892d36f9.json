@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "context-dependent decision making",
+      "role": "primary_lens",
+      "one_line": "sample context gates the mapping from test odor to motor action"
+    },
+    {
+      "name": "premotor cortex circuit function",
+      "role": "extended",
+      "one_line": "ALM holds contextual identity to specify stimulus-response association"
+    },
+    {
+      "name": "sensory/association cortex representation",
+      "role": "context",
+      "one_line": "olfactory cortex encodes sample and test odors sufficient for match/non-match"
+    }
+  ],
+  "core_question": "Does the premotor area ALM compute match/non-match decisions or instead carry contextual information that gates stimulus-response mapping?",
+  "key_assumptions": [
+    "delayed match-to-sample requires holding sample identity across a delay",
+    "context-dependent and context-free olfactory decisions can be dissociated",
+    "transient inactivation during defined epochs can localize causal contributions"
+  ],
+  "manipulations": [
+    "inactivation of ALM versus orbitofrontal cortex",
+    "epoch-specific inactivation confined to before the test odor",
+    "context-dependent versus non-context-dependent olfactory decisions"
+  ],
+  "key_findings": [
+    "olfactory sensory and association cortex represent sample and test odors sufficient for match/non-match",
+    "ALM inactivation before the test odor grossly impairs task performance",
+    "orbitofrontal inactivation does not impair the task",
+    "non-context-dependent olfactory decisions remain intact under ALM inactivation"
+  ],
+  "interpretations": [
+    "ALM carries the sample identity as context to map test odor onto action, not a match/non-match outcome",
+    "a novel ALM layer 2 pyramidal population may mediate this contextual mapping"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "context-dependent decision making",
+    "delayed match-to-sample",
+    "olfactory decision",
+    "premotor cortex ALM",
+    "stimulus-response mapping",
+    "orbitofrontal cortex",
+    "layer 2 pyramidal neurons",
+    "working memory for context"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "2614b9b5c682043f8d47e52c892d36f9",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

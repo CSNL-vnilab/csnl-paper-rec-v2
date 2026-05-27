@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "three-layer convolutional network model",
+      "role": "primary_lens",
+      "one_line": "deep network fit to retinal ganglion responses under natural scenes"
+    },
+    {
+      "name": "predictive coding",
+      "role": "extended",
+      "one_line": "model reproduces and generates new hypotheses for predictive retinal phenomena"
+    },
+    {
+      "name": "interneuron decomposition",
+      "role": "extended",
+      "one_line": "decomposes ganglion computations into contributions of model interneurons"
+    },
+    {
+      "name": "ethological / natural-scene neuroscience",
+      "role": "context",
+      "one_line": "frames retinal code in terms of natural visual computation"
+    }
+  ],
+  "core_question": "What circuit mechanisms underlie the retinal neural code for natural scenes?",
+  "key_assumptions": [
+    "a three-layer network captures retinal computation under natural input",
+    "model interneurons correspond to real recorded interneurons",
+    "natural-scene fitting suffices to reproduce diverse retinal phenomena"
+  ],
+  "manipulations": [
+    "natural-scene stimuli used to fit the model",
+    "comparison of model interneurons to separately recorded interneurons",
+    "decomposition of ganglion outputs into interneuron contributions"
+  ],
+  "key_findings": [
+    "model predicts retinal natural-scene responses near experimental limits",
+    "model interneurons are highly correlated with separately recorded interneurons",
+    "natural-scene-fit models reproduce motion encoding, adaptation, and predictive coding",
+    "decomposition yields new hypotheses for how interneurons combine into retinal computations"
+  ],
+  "interpretations": [
+    "interpretable deep models reveal circuit mechanisms of ethological retinal computation",
+    "interneuron combinations can explain predictive phenomena currently lacking mechanism"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "retinal neural code",
+    "natural scenes",
+    "ganglion cell modeling",
+    "interneuron decomposition",
+    "predictive coding in retina",
+    "motion encoding and adaptation",
+    "interpretable deep network model",
+    "ethological visual computation"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "249d9a89cc1d386864fd7b10359800c2",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "frequency-band decomposition of LFP",
+      "role": "primary_lens",
+      "one_line": "separating local field potential into non-overlapping bands as distinct neural signal components"
+    },
+    {
+      "name": "BOLD-LFP coupling",
+      "role": "primary_lens",
+      "one_line": "linking hemodynamic signal to band-specific electrophysiological activity"
+    },
+    {
+      "name": "information theory",
+      "role": "extended",
+      "one_line": "characterizing statistical dependency between BOLD and LFP bands"
+    }
+  ],
+  "core_question": "Does the BOLD signal reflect each LFP band independently, or does it also encode relationships among different bands?",
+  "key_assumptions": [
+    "LFP components can be partly separated into non-overlapping frequency bands",
+    "BOLD-LFP statistical dependency can be quantified with information theory",
+    "spontaneous activity in visual cortex is informative about coupling structure"
+  ],
+  "manipulations": [
+    "frequency band identity (alpha, beta, gamma)",
+    "simultaneous BOLD and LFP recording during spontaneous activity",
+    "comparison of single-band vs cross-band information about BOLD"
+  ],
+  "key_findings": [
+    "alpha, beta, and gamma LFP bands all carry information about BOLD",
+    "gamma is the most informative band, with BOLD tracking gamma power increases and decreases",
+    "alpha and beta carry information about BOLD complementary to gamma",
+    "alpha-gamma relation maps onto BOLD amplitude; beta-gamma relation maps onto BOLD latency"
+  ],
+  "interpretations": [
+    "BOLD reflects not just individual LFP bands but specific cross-band relationships",
+    "amplitude and timing of BOLD encode distinct aspects of multi-band LFP structure"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "BOLD signal",
+    "local field potential",
+    "frequency band decomposition",
+    "gamma power",
+    "alpha-gamma coupling",
+    "beta-gamma coupling",
+    "neurovascular coupling",
+    "information theory neural signals"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "d39781ffbf90570ec04b20b96d8a6213",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,62 @@
+{
+  "frameworks": [
+    {
+      "name": "LLM-as-collaborator analogy",
+      "role": "primary_lens",
+      "one_line": "Schulz et al. frame working with LLMs as comparable to working with human collaborators"
+    },
+    {
+      "name": "critical-limitation perspective",
+      "role": "alternative_lens",
+      "one_line": "Bender et al. argue LLMs are misused and overhyped, favoring specialized interpretable tools"
+    },
+    {
+      "name": "responsible-use / attribution ethics",
+      "role": "alternative_lens",
+      "one_line": "Marelli et al. emphasize transparent attribution and responsible scientific use of LLMs"
+    },
+    {
+      "name": "human-led scientific roadmap",
+      "role": "alternative_lens",
+      "one_line": "Botvinick and Gershman argue humans must retain responsibility for scientific direction"
+    }
+  ],
+  "core_question": "How should the advancement of large language models affect the practice of science?",
+  "key_assumptions": [
+    "LLMs are increasingly being incorporated into scientific workflows",
+    "the implications of LLM integration are not yet fully understood",
+    "diverse expert perspectives can illuminate the tradeoffs"
+  ],
+  "manipulations": [
+    "juxtaposition of four contrasting expert positions",
+    "comparison of collaborator-analogy vs limitation-focused views"
+  ],
+  "key_findings": [
+    "experts disagree on whether LLM use resembles human collaboration",
+    "some argue LLMs are overhyped and limitations favor specialized tools",
+    "transparent attribution is highlighted as essential",
+    "humans should remain in charge of the scientific roadmap"
+  ],
+  "interpretations": [
+    "the role of LLMs in science is contested and not settled",
+    "responsible use requires attribution, interpretability, and human oversight"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "large language models in science",
+    "LLM scientific workflows",
+    "AI collaboration",
+    "responsible AI use",
+    "attribution and transparency",
+    "interpretable tools",
+    "human oversight of AI",
+    "opinion piece on LLMs"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "700b604cdcb37de76827ff103fd705a6",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

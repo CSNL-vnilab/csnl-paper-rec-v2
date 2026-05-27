@@ -1,0 +1,53 @@
+{
+  "frameworks": [
+    {
+      "name": "evidence accumulation",
+      "role": "primary_lens",
+      "one_line": "decisions arise from integrating sensory evidence to a commitment threshold"
+    },
+    {
+      "name": "commitment / bounded decision",
+      "role": "primary_lens",
+      "one_line": "decisions terminate via a commitment process that can be flexibly modulated"
+    },
+    {
+      "name": "temporal dependency / sequential decision-making",
+      "role": "extended",
+      "one_line": "static accumulation models extended to handle changing expectations and goals"
+    }
+  ],
+  "core_question": "How does the brain implement flexible visual decision-making when expectations, contingencies, and goals evolve over time?",
+  "key_assumptions": [
+    "decisions integrate immediate sensory input with past experience and future goals",
+    "evidence accumulation and commitment mechanisms underlie visual choice",
+    "decision processes can operate flexibly across multiple timescales"
+  ],
+  "manipulations": [],
+  "key_findings": [
+    "visual decision-making relies on evidence accumulation and commitment mechanisms",
+    "these mechanisms, well-characterized under static conditions, can operate more flexibly",
+    "decisions are embedded within streams of temporal dependencies rather than isolated"
+  ],
+  "interpretations": [
+    "a deeper account requires identifying principles governing flexibility across timescales",
+    "effective decisions in dynamic environments depend on temporally-embedded mechanisms"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "visual decision-making",
+    "evidence accumulation",
+    "commitment",
+    "uncertainty",
+    "dynamic environments",
+    "temporal dependencies",
+    "sequential decisions",
+    "expectations and goals"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "e8c2fae5ef125a6a2cdb2a217e951570",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,62 @@
+{
+  "frameworks": [
+    {
+      "name": "quasi-experimental causal inference",
+      "role": "primary_lens",
+      "one_line": "pre-registered design exploits WWII bombing exposure as natural experiment"
+    },
+    {
+      "name": "genetically informed neuroimaging",
+      "role": "extended",
+      "one_line": "controls for genetic and environmental confounds in linking exposure to brain"
+    },
+    {
+      "name": "developmental origins of adult health",
+      "role": "context",
+      "one_line": "prenatal stress shapes long-term neurodevelopmental and functional outcomes"
+    },
+    {
+      "name": "mediation analysis",
+      "role": "alternative_lens",
+      "one_line": "gray matter volume partially mediates exposure effects on cognition and obesity"
+    }
+  ],
+  "core_question": "Is in-utero exposure to WWII air raids associated with lasting differences in adult brain structure, cognition, and physical health?",
+  "key_assumptions": [
+    "historical bombing records index acute prenatal stress exposure",
+    "genetic and environmental factors can be statistically controlled",
+    "trimester and distance to bombing define exposure dose"
+  ],
+  "manipulations": [
+    "trimester of in-utero exposure",
+    "geographic distance to bombing (within 2 km)",
+    "quasi-experimental contrast across exposed vs unexposed individuals"
+  ],
+  "key_findings": [
+    "last-trimester exposure within 2 km associates with lower adult gray matter volume",
+    "gray matter reduction partially mediates adverse effects on intelligence",
+    "exposure also linked to higher obesity via mediated pathway"
+  ],
+  "interpretations": [
+    "prenatal acute stress plausibly causes long-term neurodevelopmental differences",
+    "fetal brain vulnerability highlights need to protect pregnant women in armed conflicts"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "prenatal stress",
+    "in-utero exposure",
+    "gray matter volume",
+    "quasi-experimental design",
+    "genetically informed neuroimaging",
+    "mediation analysis",
+    "developmental origins",
+    "war trauma"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "65c8bcd0d5b08a8a9653e085aa25a91c",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}
