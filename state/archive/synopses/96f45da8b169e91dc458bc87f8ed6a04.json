@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "compositional generalization",
+      "role": "primary_lens",
+      "one_line": "Combining symbolic features into novel composite representations"
+    },
+    {
+      "name": "linear combination of element codes",
+      "role": "primary_lens",
+      "one_line": "Composite neural patterns are predicted as sums of element patterns"
+    },
+    {
+      "name": "high- vs low-dimensional neural geometry",
+      "role": "extended",
+      "one_line": "Contrasts parallel high-D codes against low-D spatially anchored codes"
+    }
+  ],
+  "core_question": "Which regional neural codes support compositional generalization from symbolic features?",
+  "key_assumptions": [
+    "Composite stimuli should be predictable as linear combinations of element representations",
+    "Symbolic features (shape, color) can be cleanly individuated",
+    "BOLD pattern geometry reflects underlying representational format"
+  ],
+  "manipulations": [
+    "Combine two discrete symbolic features (shape and color)",
+    "Compare familiar elements vs novel composite stimuli",
+    "Region-by-region pattern analysis across hippocampus, vmPFC, PPC, V1"
+  ],
+  "key_findings": [
+    "Hippocampus encoded elementary visual attributes in a high-dimensional parallel format",
+    "vmPFC, PPC, and V1 patterns for composites were predictable as linear combinations of element signals",
+    "vmPFC composition occurred in a high-dimensional format",
+    "PPC and V1 composition used a low-dimensional spatial response-consistent reference frame"
+  ],
+  "interpretations": [
+    "Hippocampus supports flexible individuation of elementary features",
+    "Compositional generalization arises through region-specific linear composition formats"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "compositional generalization",
+    "symbolic feature binding",
+    "hippocampal representation",
+    "ventromedial prefrontal cortex",
+    "posterior parietal cortex",
+    "high-dimensional neural code",
+    "linear combination of representations",
+    "spatial reference frame"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "96f45da8b169e91dc458bc87f8ed6a04",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,66 @@
+{
+  "frameworks": [
+    {
+      "name": "competing stochastic integrations",
+      "role": "primary_lens",
+      "one_line": "Two-level race-to-threshold among noise-driven meta-stable neural populations"
+    },
+    {
+      "name": "collective neural population dynamics",
+      "role": "primary_lens",
+      "one_line": "Perceptual state emerges from collective interactions across populations"
+    },
+    {
+      "name": "distributed representation",
+      "role": "extended",
+      "one_line": "Sensory input and perceptual state encoded across multiple populations"
+    },
+    {
+      "name": "threshold decision mechanism",
+      "role": "context",
+      "one_line": "Competition between alternative representations resolved by crossing a threshold"
+    }
+  ],
+  "core_question": "What collective neural mechanism generates the perpetual alternation observed in bistable perception?",
+  "key_assumptions": [
+    "Individual neural populations are meta-stable, not bistable on their own",
+    "Sensory and perceptual content is distributed across multiple populations",
+    "Transitions between population states are noise-driven",
+    "Competition between alternatives is resolved by a threshold-crossing rule"
+  ],
+  "manipulations": [
+    "Varied number and interaction structure of meta-stable populations",
+    "Compared collective vs single-population dynamics",
+    "Examined dependence on noise level and threshold parameters"
+  ],
+  "key_findings": [
+    "Collective dynamics produce bistable alternation independent of single-unit time-scales",
+    "Model reproduces wide range of observed mean alternation rates",
+    "Model reproduces consistent variability of successive dominance periods",
+    "Model reproduces stabilizing effect of past perceptual states"
+  ],
+  "interpretations": [
+    "Bistable perception reflects collective neural decision making rather than properties of individual populations",
+    "Model predicts previously unsuspected relationships between observable quantities of bistable perception"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "bistable perception",
+    "stochastic integration",
+    "competing accumulators",
+    "noise-driven transitions",
+    "race to threshold",
+    "meta-stable neural populations",
+    "dominance period variability",
+    "perceptual alternation rate",
+    "collective neural dynamics",
+    "distributed perceptual representation"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "e3ea846d36294da2bf9b1dec2d777aab",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

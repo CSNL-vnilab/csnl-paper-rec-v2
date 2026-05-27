@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "reinforcement learning",
+      "role": "primary_lens",
+      "one_line": "Go/no-go RL task with active vs passive responses to escape or avoid aversive stimuli"
+    },
+    {
+      "name": "computational cognitive modeling",
+      "role": "primary_lens",
+      "one_line": "Model isolates decision-making biases including an active-response bias parameter"
+    },
+    {
+      "name": "escape theory of suicide",
+      "role": "context",
+      "one_line": "Suicidal thoughts and behaviors framed as efforts to escape painful emotions"
+    }
+  ],
+  "core_question": "Do suicidal individuals exhibit a heightened decision-making bias toward active responses when escaping aversive states?",
+  "key_assumptions": [
+    "Suicidal thoughts and behaviors reflect efforts to escape aversive internal states",
+    "Active vs passive response bias can be dissociated within an RL framework",
+    "A computational model parameter can index escape-related decision bias"
+  ],
+  "manipulations": [
+    "Response type required: active 'go' vs passive 'no-go'",
+    "Outcome contingency: escape vs avoid an aversive stimulus",
+    "Group: suicidal participants vs nonsuicidal psychiatric controls"
+  ],
+  "key_findings": [
+    "Suicidal participants showed higher active-response bias for escape than psychiatric controls",
+    "Suicidal participants performed worse when escape required a passive response",
+    "The bias parameter accounted for unique variance in group status beyond established suicidality-related constructs"
+  ],
+  "interpretations": [
+    "Elevated active-escape bias is specific to suicidality rather than general psychopathology",
+    "Decision-making biases for escape provide a computational signature of suicidal thoughts and behaviors"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "reinforcement learning",
+    "go/no-go task",
+    "active vs passive responses",
+    "escape from aversive states",
+    "computational psychiatry",
+    "suicidal thoughts and behaviors",
+    "decision-making bias",
+    "psychiatric controls"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "dc8b3888e1dc25132e29b7db16a75b3c",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

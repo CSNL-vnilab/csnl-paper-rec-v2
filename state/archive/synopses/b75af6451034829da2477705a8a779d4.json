@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "deep neural network representations",
+      "role": "primary_lens",
+      "one_line": "analyzing sentence representations in a deep NLP model"
+    },
+    {
+      "name": "compositional / systematic representation",
+      "role": "extended",
+      "one_line": "diagnostic tests for abstract composable structure in learned representations"
+    },
+    {
+      "name": "human cognitive analogues (zero-shot reasoning, belief bias)",
+      "role": "context",
+      "one_line": "drawing parallels between model behavior and human heuristics"
+    }
+  ],
+  "core_question": "Do learned sentence representations in deep NLP networks exhibit abstract composable structure similar to humans, or rely on heuristics?",
+  "key_assumptions": [
+    "diagnostic test sets can probe degree of compositional structure",
+    "training distribution shapes which strategies are learned",
+    "model-human parallels are informative for both cognition and AI"
+  ],
+  "manipulations": [
+    "diagnostic test dataset probing abstract composable structure",
+    "training distribution composition",
+    "augmentations applied to the training set"
+  ],
+  "key_findings": [
+    "representations lack systematicity and rely on heuristic strategies",
+    "training distribution shifts alter learned heuristics",
+    "models can generalize abstract rules zero-shot under certain conditions",
+    "generalization failures parallel human judgment errors like belief bias"
+  ],
+  "interpretations": [
+    "model-human parallels suggest shared explanations for psychological phenomena",
+    "findings inform best strategies for building human-like language understanding"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "machine-learned representations",
+    "compositional generalization",
+    "systematicity",
+    "heuristic strategies",
+    "zero-shot reasoning",
+    "belief bias",
+    "natural language inference",
+    "training distribution effects"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "b75af6451034829da2477705a8a779d4",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:35:52+09:00",
+  "review_status": "auto_unreviewed"
+}

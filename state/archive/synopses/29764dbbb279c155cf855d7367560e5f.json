@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "psychophysical reverse correlation",
+      "role": "primary_lens",
+      "one_line": "stimulus-fluctuation kernels relating noisy input to choice behavior"
+    },
+    {
+      "name": "bounded evidence accumulation / decision-making models",
+      "role": "extended",
+      "one_line": "decision bound and integration mechanism shape observed kernels"
+    },
+    {
+      "name": "linear sensory filter model",
+      "role": "compared_against",
+      "one_line": "assumption that kernels recover pure spatiotemporal sensory weights"
+    }
+  ],
+  "core_question": "Do psychophysical reverse-correlation kernels reflect only sensory filters, or are they also shaped by decision-making processes?",
+  "key_assumptions": [
+    "behavior arises from sensory encoding followed by a decision stage",
+    "stimulus fluctuations across trials drive choice variability",
+    "decision bound and evidence integration can be modeled within accumulator frameworks"
+  ],
+  "manipulations": [
+    "decision bound height in simulated accumulator models",
+    "mechanism of evidence integration (e.g., leaky vs perfect)",
+    "trial-to-trial variability of sensory/motor delays and decision times"
+  ],
+  "key_findings": [
+    "reverse correlations deviate systematically from the true sensory filter",
+    "changes in decision bound and integration mechanism alter the observed kernel",
+    "variability in sensory/motor delays and decision times distorts kernels in ways not attributable to sensory mechanisms"
+  ],
+  "interpretations": [
+    "psychophysical kernels jointly index sensory and decision-making processes",
+    "with proper decision-stage modeling, reverse correlation becomes a tool for studying both"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "psychophysical reverse correlation",
+    "psychophysical kernels",
+    "decision bound",
+    "evidence integration",
+    "sensory filters",
+    "non-decision time variability",
+    "perceptual decision-making",
+    "spatiotemporal weighting functions"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "29764dbbb279c155cf855d7367560e5f",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:35:52+09:00",
+  "review_status": "auto_unreviewed"
+}

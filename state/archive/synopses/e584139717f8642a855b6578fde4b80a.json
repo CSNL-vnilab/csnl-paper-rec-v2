@@ -1,0 +1,61 @@
+{
+  "frameworks": [
+    {
+      "name": "deep neural network model of perceptual confidence",
+      "role": "primary_lens",
+      "one_line": "DNN trained on naturalistic stimuli models confidence as probability-of-correct readout"
+    },
+    {
+      "name": "rational/normative account of confidence",
+      "role": "extended",
+      "one_line": "confidence biases follow from optimization to sensory input statistics"
+    },
+    {
+      "name": "common decision variable hypothesis",
+      "role": "alternative_lens",
+      "one_line": "decisions and confidence share an underlying decision variable despite dissociations"
+    },
+    {
+      "name": "low-dimensional idealized confidence models",
+      "role": "compared_against",
+      "one_line": "prior models relied on strong assumptions over abstract representations"
+    }
+  ],
+  "core_question": "Can decision-confidence dissociations be explained rationally by optimization to natural sensory statistics, while still sharing a decision variable with the choice itself?",
+  "key_assumptions": [
+    "confidence is a prediction of probability-correct",
+    "perceptual system is optimized for high-dimensional naturalistic stimulus statistics",
+    "a single computational model can capture both decision and confidence readouts"
+  ],
+  "manipulations": [
+    "training on high-dimensional naturalistic stimuli vs. idealized low-dimensional inputs",
+    "stimulus regimes producing known decision-confidence dissociations"
+  ],
+  "key_findings": [
+    "DNN model reproduces puzzling dissociations between decisions and confidence",
+    "dissociations emerge as rational consequences of optimization to natural input statistics",
+    "decisions and confidence are driven by a common underlying decision variable in the model"
+  ],
+  "interpretations": [
+    "apparent suboptimality of confidence is a rational byproduct of natural-statistics-tuned representations",
+    "shared decision variable and observed dissociations are not mutually exclusive"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "decision confidence",
+    "metacognition",
+    "decision-confidence dissociations",
+    "natural image statistics",
+    "deep neural network perceptual model",
+    "probability correct readout",
+    "common decision variable",
+    "rational account of confidence biases"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "e584139717f8642a855b6578fde4b80a",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:35:52+09:00",
+  "review_status": "auto_unreviewed"
+}
