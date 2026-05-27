@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "bounded accumulation / drift-diffusion",
+      "role": "primary_lens",
+      "one_line": "decision formation as accumulation of sensory evidence toward bounds"
+    },
+    {
+      "name": "starting-point bias account of choice history",
+      "role": "compared_against",
+      "one_line": "common assumption that history shifts the accumulator's starting point"
+    },
+    {
+      "name": "endogenous attention",
+      "role": "context",
+      "one_line": "history-dependent shift of attention toward previously selected interpretation"
+    }
+  ],
+  "core_question": "Does choice history bias perceptual decisions by shifting the starting point of evidence accumulation or by changing the accumulation process itself?",
+  "key_assumptions": [
+    "perceptual choices arise from bounded accumulation of sensory evidence",
+    "history biases can be captured by history-dependent parameters of accumulator models",
+    "individual differences in overt history bias reflect underlying model parameters"
+  ],
+  "manipulations": [
+    "task protocol across multiple perceptual choice paradigms",
+    "sensory modality varied across datasets",
+    "model variants differing in which parameter carries the history bias (starting point vs drift/accumulation)"
+  ],
+  "key_findings": [
+    "individual history biases were consistently explained by history-dependent change in evidence accumulation",
+    "history biases were not well explained by a shift in starting point",
+    "this pattern held across multiple task protocols and sensory modalities"
+  ],
+  "interpretations": [
+    "choice history signals bias interpretation of incoming sensory evidence rather than presetting the decision",
+    "the effect is akin to history-dependent shifting of endogenous attention toward (or away from) the prior choice"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "choice history bias",
+    "evidence accumulation",
+    "drift-diffusion model",
+    "starting-point bias",
+    "perceptual decision-making",
+    "serial dependence in choice",
+    "endogenous attention",
+    "history-dependent drift"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "5f88bbc4e92ba9a47cfe6e7cbd0ebc60",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:38:46+09:00",
+  "review_status": "auto_unreviewed"
+}

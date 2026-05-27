@@ -1,0 +1,59 @@
+{
+  "frameworks": [
+    {
+      "name": "neural variability quenching",
+      "role": "primary_lens",
+      "one_line": "Post-stimulus reduction of trial-to-trial response variability"
+    },
+    {
+      "name": "prestimulus-poststimulus interaction",
+      "role": "extended",
+      "one_line": "Ongoing prestimulus dynamics shape evoked poststimulus activity"
+    },
+    {
+      "name": "trial-to-trial variability analysis",
+      "role": "primary_lens",
+      "one_line": "Uses TTV as the dependent measure across frequency bands"
+    }
+  ],
+  "core_question": "How do prestimulus dynamics shape poststimulus trial-to-trial variability quenching?",
+  "key_assumptions": [
+    "Standard deviation across trials operationalizes prestimulus variability",
+    "Stimulus-evoked activity is separable from ongoing dynamics",
+    "Variability quenching is a meaningful index of stimulus processing"
+  ],
+  "manipulations": [
+    "Split trials by high vs low prestimulus variability",
+    "Compared early (0-300ms) vs later (300-600ms) poststimulus windows",
+    "Frequency band analyses including theta and alpha",
+    "Replication across sEEG and scalp EEG datasets"
+  ],
+  "key_findings": [
+    "Greater variability quenching in trials with high prestimulus variability across all frequency bands",
+    "Relative stimulus effect was larger in the later than the earlier poststimulus window",
+    "High prestimulus theta and alpha variability predicted faster reaction times",
+    "Findings replicated across intracranial sEEG and EEG datasets"
+  ],
+  "interpretations": [
+    "Stimulus-related activity is a blend of external stimulus effects and ongoing prestimulus dynamics",
+    "Prestimulus variability spills over into and shapes poststimulus responses and behavior"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "neural variability quenching",
+    "trial-to-trial variability",
+    "prestimulus dynamics",
+    "intracranial sEEG",
+    "theta and alpha band variability",
+    "poststimulus quenching",
+    "reaction time prediction",
+    "ongoing brain activity"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "007f2a87c53539d1e23484f5f73dfae0",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

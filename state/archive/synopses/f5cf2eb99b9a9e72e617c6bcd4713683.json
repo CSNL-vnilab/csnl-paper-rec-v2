@@ -1,0 +1,65 @@
+{
+  "frameworks": [
+    {
+      "name": "resource-rational evidence accumulation",
+      "role": "primary_lens",
+      "one_line": "Accumulation balances information gain against cognitive effort"
+    },
+    {
+      "name": "time-continuous Bayesian updating",
+      "role": "extended",
+      "one_line": "New dynamic Bayesian model with two efficiency parameters"
+    },
+    {
+      "name": "performance-effort trade-off",
+      "role": "primary_lens",
+      "one_line": "Optimal balance between accuracy and cognitive resource cost"
+    },
+    {
+      "name": "primacy-recency in evidence integration",
+      "role": "context",
+      "one_line": "Individual tendencies to weight early vs late samples"
+    }
+  ],
+  "core_question": "How does the precise temporal structure of evidence, including breaks, shape the dynamics of evidence accumulation?",
+  "key_assumptions": [
+    "Observers perform Bayesian updating over a noisy stimulus sequence",
+    "Encoding and memory maintenance have bounded resource efficiencies",
+    "Accumulation dynamics can be modulated post-break",
+    "Optimal trade-offs between performance and effort govern integration"
+  ],
+  "manipulations": [
+    "Break duration in the evidence sequence",
+    "Position of the break within the sequence",
+    "Otherwise regular noisy stimulus sequences vs perturbed ones",
+    "Angular position inference task across subjects"
+  ],
+  "key_findings": [
+    "Subjects compensated for memory loss during breaks by enhancing post-break integration",
+    "Evidence integration and memory maintenance were dynamically upregulated after breaks",
+    "Model with two efficiency parameters captured rich accumulation behavior",
+    "Individual differences in primacy vs recency weighting were predicted"
+  ],
+  "interpretations": [
+    "Evidence accumulation is a non-stationary, dynamically controlled process",
+    "Accumulation optimally balances incoming information against cognitive effort"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "evidence accumulation",
+    "resource-rational decision making",
+    "time-continuous Bayesian updating",
+    "memory maintenance",
+    "primacy and recency effects",
+    "temporal perturbations",
+    "performance-effort trade-off",
+    "visual estimation task"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "f5cf2eb99b9a9e72e617c6bcd4713683",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

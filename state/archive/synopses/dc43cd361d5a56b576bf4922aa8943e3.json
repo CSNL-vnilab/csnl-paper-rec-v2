@@ -1,0 +1,49 @@
+{
+  "frameworks": [
+    {
+      "name": "Normalization Model of Attention (NMoA)",
+      "role": "extended",
+      "one_line": "Divisive-normalization account of attentional gain, here extended with a stimulus-independent or direction-tuned normalization term."
+    },
+    {
+      "name": "response gain vs input gain",
+      "role": "compared_against",
+      "one_line": "Contrasting psychometric signatures of feature-based attention on neural and behavioral tuning."
+    }
+  ],
+  "core_question": "How does feature-based attention to motion direction shape psychometric performance, and can the Normalization Model of Attention account for the observed gain pattern?",
+  "key_assumptions": [
+    "Feature-based attentional effects on neurons translate into analogous psychometric signatures",
+    "Transparent motion displays isolate direction-selective attentional modulation",
+    "Normalization governs the interaction between attended and unattended features"
+  ],
+  "manipulations": [
+    "Cued attended motion direction in transparent-motion displays",
+    "Width of the attended motion-direction range (narrow vs broad)"
+  ],
+  "key_findings": [
+    "Feature-based attention produced a mixture of input gain and response gain rather than pure response gain",
+    "Narrow attended direction ranges yielded larger input-gain effects than broad ranges"
+  ],
+  "interpretations": [
+    "Standard NMoA must be extended with a stimulus-independent attentional contribution to normalization or direction-tuned normalization to fit these data"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "feature-based attention",
+    "normalization model of attention",
+    "response gain",
+    "input gain",
+    "transparent motion",
+    "motion direction tuning",
+    "psychometric function",
+    "divisive normalization"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "dc43cd361d5a56b576bf4922aa8943e3",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:38:46+09:00",
+  "review_status": "auto_unreviewed"
+}

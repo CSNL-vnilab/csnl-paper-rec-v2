@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "hierarchical / multi-level encoding",
+      "role": "primary_lens",
+      "one_line": "memory represents items jointly with group and display-level statistics"
+    },
+    {
+      "name": "ensemble statistics / summary representation",
+      "role": "extended",
+      "one_line": "mean size of a set biases memory of individual items"
+    },
+    {
+      "name": "independent-item visual working memory models",
+      "role": "compared_against",
+      "one_line": "items stored as independent units without between-item interactions"
+    },
+    {
+      "name": "constructive memory",
+      "role": "primary_lens",
+      "one_line": "memory integrates information across levels of abstraction"
+    }
+  ],
+  "core_question": "Does visual working memory encode items independently, or does it integrate items with higher-order ensemble statistics of the display?",
+  "key_assumptions": [
+    "real-world displays carry higher-order structure beyond single items",
+    "observers can compute summary statistics such as mean size",
+    "memory can be probed for individual-item size while ensemble context is present",
+    "color provides a grouping cue that defines sub-ensembles"
+  ],
+  "manipulations": [
+    "set-level mean size of items sharing a color",
+    "display-level mean size across all items",
+    "grouping of items by color into sub-ensembles"
+  ],
+  "key_findings": [
+    "remembered size of each item is biased toward the mean size of same-color items",
+    "remembered size is also biased toward the mean size of all items in the display",
+    "biases operate simultaneously at multiple grouping levels"
+  ],
+  "interpretations": [
+    "visual working memory is constructive, encoding displays at multiple levels of abstraction",
+    "memory integrates across item, group, and ensemble levels rather than storing veridical independent items"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "visual working memory",
+    "hierarchical encoding",
+    "ensemble statistics",
+    "summary representation",
+    "mean size bias",
+    "constructive memory",
+    "grouping by color",
+    "levels of abstraction"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "2ee59b70ff133c399686b49910a353f9",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:38:46+09:00",
+  "review_status": "auto_unreviewed"
+}

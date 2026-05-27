@@ -1,0 +1,45 @@
+{
+  "canonical_id": "e675454ad677a6e617567c53b4bf13fc",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [
+    {"name": "multivariate pattern analysis / classification", "role": "primary_lens", "one_line": "Decode stimulus color from spatially distributed fMRI voxel activity."},
+    {"name": "forward encoding model of color tuning", "role": "extended", "one_line": "Idealized color-tuning channels reconstruct novel untrained colors."},
+    {"name": "principal component analysis", "role": "alternative_lens", "one_line": "Derive perceptual color space from voxel response covariation."}
+  ],
+  "core_question": "How is color represented by spatially distributed patterns of activity in human visual cortex?",
+  "key_assumptions": [
+    "Color information is carried by distributed voxel patterns, not mean area response",
+    "Idealized color-tuning channels can model voxel responses linearly"
+  ],
+  "manipulations": [
+    "Stimulus color across multiple chromatic values",
+    "Cortical area (V1, V2, V3, V4, VO1, LO1, LO2, V3A/B, MT+)",
+    "Analysis method (classifier vs forward model vs PCA)"
+  ],
+  "key_findings": [
+    "Stimulus color was accurately decoded from V1, V2, V3, V4, VO1 but not LO1/LO2/V3A/B/MT+",
+    "Forward model matched classifier accuracy and additionally reconstructed novel untrained colors",
+    "Mean voxel-averaged responses were not reliably distinguishable across colors",
+    "In V4 and VO1, first two PC scores traced a progression through perceptual color space"
+  ],
+  "interpretations": [
+    "Each color is associated with a unique distributed activity pattern across early/ventral visual cortex",
+    "V4 and VO1 represent color in a perceptually organized space, unlike V1 despite V1's high decoding accuracy"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "color decoding",
+    "forward encoding model",
+    "fMRI multivariate pattern analysis",
+    "perceptual color space",
+    "V4 VO1 ventral visual cortex",
+    "voxel population tuning",
+    "stimulus reconstruction",
+    "distributed cortical representation"
+  ],
+  "out_of_scope_note": null,
+  "generator": "opus-4-7@2026-05-27",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "abstract_coverage": 1.0
+}

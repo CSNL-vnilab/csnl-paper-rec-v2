@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "persistent attractor dynamics",
+      "role": "primary_lens",
+      "one_line": "stable population patterns sustain choice representation across time"
+    },
+    {
+      "name": "transient sequence-based dynamics",
+      "role": "compared_against",
+      "one_line": "brief sequential activity claimed to encode choice over time"
+    },
+    {
+      "name": "random connectivity models",
+      "role": "alternative_lens",
+      "one_line": "diverse single-neuron responses arising from near-random recurrent wiring"
+    },
+    {
+      "name": "topographic cortical organization",
+      "role": "extended",
+      "one_line": "response-field topography as scaffold for learned task variables"
+    }
+  ],
+  "core_question": "How are choices represented across space and time in primate prefrontal cortical populations?",
+  "key_assumptions": [
+    "large-population recordings can resolve spatial and temporal structure of choice signals",
+    "single-neuron response diversity reflects underlying circuit structure",
+    "persistent vs sequential dynamics are distinguishable in population activity"
+  ],
+  "manipulations": [
+    "epoch around choice (delay period vs saccadic execution)",
+    "spatial sampling across the cortical surface",
+    "task-relevant choice variable across trials"
+  ],
+  "key_findings": [
+    "diverse choice responses reduce to a few mostly persistent population patterns",
+    "patterns are recruited at progressively later times around the choice",
+    "brief sequential activity appears during saccade but is absent in the delay",
+    "response-field topography across cortex explains much of the response diversity"
+  ],
+  "interpretations": [
+    "PFC choice coding is largely persistent, not sequence-based",
+    "spatial topography forms a fixed scaffold on which context-dependent task representations are learned"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "prefrontal cortex choice representation",
+    "persistent population dynamics",
+    "sequential neural activity",
+    "primate decision-making",
+    "response-field topography",
+    "population coding",
+    "saccadic choice",
+    "mixed selectivity scaffold"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "b6851f68d64723e627d819755700dae4",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:38:46+09:00",
+  "review_status": "auto_unreviewed"
+}
