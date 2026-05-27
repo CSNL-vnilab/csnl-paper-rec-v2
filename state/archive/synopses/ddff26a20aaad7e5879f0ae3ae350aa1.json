@@ -1,0 +1,62 @@
+{
+  "frameworks": [
+    {
+      "name": "change point detection",
+      "role": "primary_lens",
+      "one_line": "detecting moments when an evidence stream's generative state shifts"
+    },
+    {
+      "name": "evidence accumulation with adjustable timescales",
+      "role": "extended",
+      "one_line": "parallel accumulators with distinct integration windows over a shared stream"
+    },
+    {
+      "name": "model-based vs model-free decision analysis",
+      "role": "alternative_lens",
+      "one_line": "complementary characterization of the same choice behavior"
+    },
+    {
+      "name": "decision bound adjustment",
+      "role": "context",
+      "one_line": "cue-driven modulation of threshold for committing to a change"
+    }
+  ],
+  "core_question": "How does knowledge about the space of possible changes shape human change point detection over a single evidence stream?",
+  "key_assumptions": [
+    "observers can run multiple evidence-evaluation processes in parallel on one stream",
+    "informative cues convey the type of upcoming change",
+    "decision bounds can be set flexibly given cue information"
+  ],
+  "manipulations": [
+    "number and type of possible changes available",
+    "presence vs absence of informative cues about the change type",
+    "stochastic auditory evidence stream as the shared input"
+  ],
+  "key_findings": [
+    "subjects apply distinct timescales of evidence evaluation simultaneously to one stream",
+    "informative cues improve change point detection accuracy",
+    "improvements involve both timescale selection and decision bound shifts"
+  ],
+  "interpretations": [
+    "evidence evaluation supports multiple parallel timescales that can be rapidly adjusted",
+    "neural mechanisms must accommodate flexible timescales and information thresholds"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "change point detection",
+    "multiple timescales of evidence evaluation",
+    "informative cues",
+    "decision bound adjustment",
+    "stochastic auditory task",
+    "parallel evidence accumulation",
+    "model-based decision analysis",
+    "flexible integration window"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "ddff26a20aaad7e5879f0ae3ae350aa1",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

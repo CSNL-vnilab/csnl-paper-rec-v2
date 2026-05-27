@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "schema-based memory integration",
+      "role": "primary_lens",
+      "one_line": "new memories are integrated with prior knowledge via reinstatement"
+    },
+    {
+      "name": "reactivation-driven encoding",
+      "role": "extended",
+      "one_line": "subjective B-reactivation strength during AC learning supports BC inference"
+    },
+    {
+      "name": "mPFC-MTL schema network",
+      "role": "context",
+      "one_line": "mPFC and MTL jointly support schema-congruent memory consolidation"
+    }
+  ],
+  "core_question": "How do prior-knowledge congruency and reactivation interact to support memory integration across indirectly linked associations?",
+  "key_assumptions": [
+    "indirectly linked items can be integrated via a shared cue",
+    "subjective reactivation reports index neural reinstatement",
+    "schema congruency modulates encoding-related activity"
+  ],
+  "manipulations": [
+    "congruency of BC-association with prior knowledge (congruent vs incongruent)",
+    "subjective B-reactivation strength during AC learning",
+    "AB-AC inference paradigm with scene (B) and object (C) linked via pseudoword (A)"
+  ],
+  "key_findings": [
+    "both congruency and reactivation enhanced behavioral memory integration",
+    "univariate and multivariate parametric effects in MTL, mPFC, and PPA tracked these behavioral effects",
+    "mPFC showed larger functional connectivity with PPA for more congruent associations"
+  ],
+  "interpretations": [
+    "reactivation and congruency jointly optimize memory integration through reinstatement of prior knowledge",
+    "mPFC-PPA coupling implements schema-guided integration of new scene-object links"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "memory integration",
+    "schema congruency",
+    "reactivation",
+    "AB-AC inference paradigm",
+    "medial prefrontal cortex",
+    "medial temporal lobe",
+    "Parahippocampal Place Area",
+    "fMRI connectivity"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "d3756a0837995f89b097ea1d798e7ebe",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:03:12+09:00",
+  "review_status": "auto_unreviewed"
+}

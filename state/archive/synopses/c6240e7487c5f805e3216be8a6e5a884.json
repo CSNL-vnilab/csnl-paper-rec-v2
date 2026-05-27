@@ -1,0 +1,54 @@
+{
+  "frameworks": [
+    {
+      "name": "optimality",
+      "role": "compared_against",
+      "one_line": "statistical/Bayesian derivation of optimal solutions to perceptual problems"
+    },
+    {
+      "name": "heuristics",
+      "role": "primary_lens",
+      "one_line": "simple approximations that achieve near-optimal perceptual goals without full computation"
+    },
+    {
+      "name": "ecological-computational-energetic constraints",
+      "role": "extended",
+      "one_line": "perceptual theory bounded by environment, computation cost, and metabolic budget"
+    }
+  ],
+  "core_question": "When is perceptual decision-making achieved by optimal computation versus by heuristic approximation?",
+  "key_assumptions": [
+    "optimal solutions require perfect priors and complex computation",
+    "behavior may match optimal output without implementing optimal computation",
+    "ecological, computational, and energetic constraints shape mechanism"
+  ],
+  "manipulations": [
+    "cross-disciplinary review across perceptual decision tasks"
+  ],
+  "key_findings": [
+    "many perceptual behaviors can be approximated by heuristic strategies",
+    "optimality and heuristics can produce indistinguishable behavioral outputs"
+  ],
+  "interpretations": [
+    "searches for neural circuits implementing optimal computation will fail when behavior is actually heuristic",
+    "optimality should set computational goals while heuristics describe implementation under constraints"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "perceptual decision-making",
+    "optimality",
+    "heuristics",
+    "Bayesian observer",
+    "ecological constraints",
+    "energetic constraints",
+    "approximate computation",
+    "neural implementation"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "c6240e7487c5f805e3216be8a6e5a884",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

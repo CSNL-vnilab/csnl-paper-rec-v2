@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "conditional policy compression",
+      "role": "primary_lens",
+      "one_line": "chunking reduces cognitive cost by conditioning policy on extra information"
+    },
+    {
+      "name": "rate-distortion / reward-complexity trade-off",
+      "role": "extended",
+      "one_line": "chunks emerge from optimizing reward against conditional policy complexity"
+    },
+    {
+      "name": "working memory capacity limits",
+      "role": "context",
+      "one_line": "scarce cognitive resources drive higher degrees of policy compression"
+    }
+  ],
+  "core_question": "Why and under what conditions does action chunking occur during sequential skill learning?",
+  "key_assumptions": [
+    "policies have a measurable conditional complexity cost",
+    "agents optimize a reward versus policy-complexity trade-off",
+    "temporal structure in the environment can be leveraged for action selection",
+    "cognitive resources for policy storage are limited"
+  ],
+  "manipulations": [
+    "temporal structure of action sequences",
+    "working memory load",
+    "presence vs absence of chunkable sub-sequences"
+  ],
+  "key_findings": [
+    "chunking reduces conditional policy complexity and reaction times",
+    "chunking increases with working memory load",
+    "chunking reduces overall working memory load, freeing resources for non-chunked information"
+  ],
+  "interpretations": [
+    "action chunking originates from optimizing the reward versus conditional-policy-complexity trade-off",
+    "the degree of policy compression scales with the scarcity of cognitive resources"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "action chunking",
+    "conditional policy compression",
+    "policy complexity",
+    "reward-complexity trade-off",
+    "working memory load",
+    "sequential action selection",
+    "temporal structure",
+    "reaction time"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "91e36309f630b8f47c2935964a4d897d",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

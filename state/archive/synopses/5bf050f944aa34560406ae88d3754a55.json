@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "belief-desire-competence framework",
+      "role": "primary_lens",
+      "one_line": "extends belief-desire psychology by adding competence to predict collaborative effort allocation"
+    },
+    {
+      "name": "commonsense psychological reasoning",
+      "role": "extended",
+      "one_line": "intuitive theory of mind enriched with representations of partner competence"
+    },
+    {
+      "name": "recursive mentalizing",
+      "role": "context",
+      "one_line": "agents reason about partner's effort given mutual competence and rewards"
+    }
+  ],
+  "core_question": "What cognitive capacities allow humans to reason about partners and decide how to collaborate effectively?",
+  "key_assumptions": [
+    "collaborators recursively reason about each other's effort allocation",
+    "effort decisions depend jointly on rewards and competence",
+    "competence is a representable mental-state-like quantity"
+  ],
+  "manipulations": [
+    "rewards at stake for the joint task",
+    "self and partner competence levels",
+    "context: success prediction, incentive selection, partner recruitment"
+  ],
+  "key_findings": [
+    "framework captures judgments of whether a joint activity will succeed",
+    "framework predicts how people select incentives for collaborators",
+    "framework predicts which individuals people recruit for collaborative tasks"
+  ],
+  "interpretations": [
+    "collaboration is grounded in intuitive understanding of partners' minds and competence",
+    "competence representations are a core ingredient of human collaborative cognition"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "collaborative decision making",
+    "belief-desire-competence",
+    "theory of mind",
+    "joint action",
+    "effort allocation",
+    "partner selection",
+    "incentive design",
+    "commonsense psychology"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "5bf050f944aa34560406ae88d3754a55",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

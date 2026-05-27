@@ -1,0 +1,53 @@
+{
+  "frameworks": [
+    {
+      "name": "Bayesian confidence",
+      "role": "primary_lens",
+      "one_line": "Confidence equals posterior probability that the decision is correct."
+    },
+    {
+      "name": "qualitative signatures approach",
+      "role": "compared_against",
+      "one_line": "Pattern-based diagnostics proposed to test whether an observer is Bayesian."
+    }
+  ],
+  "core_question": "Are the proposed qualitative signatures of Bayesian confidence valid necessary or sufficient tests of the Bayesian model?",
+  "key_assumptions": [
+    "Bayesian observer assigns confidence as posterior probability of correctness",
+    "Signatures derived under specific stimulus-distribution and noise regimes",
+    "Class-conditioned stimulus distributions may or may not overlap"
+  ],
+  "manipulations": [
+    "Overlap vs. non-overlap of class-conditioned stimulus distributions",
+    "Low vs. high levels of internal noise",
+    "Stimulus magnitude on correct vs. incorrect trials"
+  ],
+  "key_findings": [
+    "0.75 average confidence at neutral evidence only holds with non-overlapping distributions and very low noise",
+    "Divergence of correct/incorrect confidence with stimulus magnitude only holds with non-overlap or high noise",
+    "Both signatures contain hidden assumptions limiting their applicability",
+    "Neither signature is necessary nor sufficient for Bayesian confidence"
+  ],
+  "interpretations": [
+    "Qualitative signatures are unreliable shortcuts for diagnosing Bayesian confidence",
+    "Quantitative model comparison is required to identify computations underlying confidence"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "Bayesian confidence",
+    "posterior probability of correctness",
+    "qualitative signatures",
+    "decision confidence",
+    "class-conditioned stimulus distributions",
+    "internal noise",
+    "model comparison",
+    "metacognition"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "90ce655110d246b8d0583eb22d720655",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:03:12+09:00",
+  "review_status": "auto_unreviewed"
+}

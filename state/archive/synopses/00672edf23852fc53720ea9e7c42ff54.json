@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "Random Forest classifier",
+      "role": "primary_lens",
+      "one_line": "Tree-ensemble classifier trained on resting-state fMRI to predict seizure outcome."
+    },
+    {
+      "name": "Support Vector Machine",
+      "role": "compared_against",
+      "one_line": "Alternative classifier used as validation baseline."
+    },
+    {
+      "name": "Neural Network classifier",
+      "role": "compared_against",
+      "one_line": "Second alternative classifier used as validation baseline."
+    },
+    {
+      "name": "resting-state functional connectivity biomarker",
+      "role": "context",
+      "one_line": "Framework treating rs-fMRI connectivity as biomarker of epileptogenesis."
+    }
+  ],
+  "core_question": "Can resting-state fMRI connectivity features predict seizure susceptibility after traumatic brain injury?",
+  "key_assumptions": [
+    "rs-fMRI connectivity carries signal about epileptogenesis risk",
+    "post-traumatic epilepsy is a discrete binary outcome learnable from imaging"
+  ],
+  "manipulations": [
+    "choice of classifier (Random Forest vs SVM vs Neural Network)",
+    "train/test split (70/30) across 100 stratified cross-validation rounds"
+  ],
+  "key_findings": [
+    "Random Forest achieved 69% test accuracy on seizure outcome",
+    "SVM and Neural Network classifiers gave comparable validation results"
+  ],
+  "interpretations": [
+    "rs-fMRI connectivity may serve as a biomarker for identifying high-risk TBI patients"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "traumatic brain injury",
+    "post-traumatic epilepsy",
+    "seizure susceptibility prediction",
+    "resting-state fMRI",
+    "Random Forest classifier",
+    "epileptogenesis biomarker",
+    "EpiBioS4Rx cohort",
+    "stratified cross-validation"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "00672edf23852fc53720ea9e7c42ff54",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:03:12+09:00",
+  "review_status": "auto_unreviewed"
+}
