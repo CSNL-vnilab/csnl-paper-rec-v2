@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "cortical state modulation",
+      "role": "primary_lens",
+      "one_line": "Transient changes in cortical power spectrum during cognitive acts"
+    },
+    {
+      "name": "beta-band oscillation",
+      "role": "primary_lens",
+      "one_line": "12-30 Hz modulation indexes perceptual decision processing in visual cortex"
+    },
+    {
+      "name": "perceptual decision-making",
+      "role": "context",
+      "one_line": "Converting graded perceptual signals into categorical format for behavior"
+    }
+  ],
+  "core_question": "Does the beta-band modulation in visual cortex during an elementary perceptual decision reflect the decision itself rather than motor, arousal, or secondary processes?",
+  "key_assumptions": [
+    "Beta-band power modulation indexes a top-down cortical signal",
+    "Target appearance/disappearance constitutes an elementary visual decision",
+    "MEG can dissociate motor, arousal, and decision components"
+  ],
+  "manipulations": [
+    "Overt button-press report vs silent counting of perceptual events",
+    "Target disappearance vs reappearance events",
+    "Compared beta-band against pupil arousal, fixational eye movements, gamma-band"
+  ],
+  "key_findings": [
+    "Target disappearance produced beta-band suppression; reappearance produced beta-band enhancement",
+    "Beta-band modulation occurred for both button-press and silent counting reports",
+    "Pupil-linked arousal, fixational eye movements, and gamma-band responses were not necessary for the beta-band modulation"
+  ],
+  "interpretations": [
+    "Beta-band modulation is a top-down signal tied to perceptual decision processing, not motor execution",
+    "It reflects converting graded perceptual signals into a categorical format underlying flexible behavior"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "beta-band modulation",
+    "magnetoencephalography",
+    "cortical state",
+    "perceptual decision",
+    "visual cortex",
+    "top-down signal",
+    "categorical perception",
+    "salient target detection"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "6a7a9afee660661aafd3f7b759a5afa9",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

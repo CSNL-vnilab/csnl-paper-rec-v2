@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "Gaussian population receptive field model",
+      "role": "primary_lens",
+      "one_line": "Voxel response modeled as Gaussian over feature space, parametrized by mean and size."
+    },
+    {
+      "name": "optimization theory",
+      "role": "alternative_lens",
+      "one_line": "Goodness-of-fit landscape analyzed for sensitivity to pRF mean vs size parameters."
+    },
+    {
+      "name": "bias-variance decomposition",
+      "role": "alternative_lens",
+      "one_line": "pRF size estimation framed as a bias-variance tradeoff problem."
+    }
+  ],
+  "core_question": "Why is the Gaussian pRF size estimate unreliable within and between subjects, and can the reliability be improved without sacrificing pRF mean estimation?",
+  "key_assumptions": [
+    "Voxel response is well-approximated by a Gaussian shape in feature space",
+    "pRF reliability can be quantified separately for mean and size parameters",
+    "Simulated and real fMRI data share the same estimator behavior"
+  ],
+  "manipulations": [
+    "Estimation procedure (single best-fit Gaussian vs linear combination of similar-fit models vs permutation approach)",
+    "Sensory domain (visual vs auditory fMRI)",
+    "Data source (simulated vs real fMRI)"
+  ],
+  "key_findings": [
+    "pRF mean estimates are highly reliable but pRF size estimates are inconsistent within and between subjects",
+    "Goodness-of-fit is less sensitive to variation in pRF size than to variation in pRF mean",
+    "Linear combination of similar-fit pRF models and a permutation-based approach improve pRF size reliability",
+    "The reliability improvement for size does not degrade pRF mean reliability or prediction accuracy"
+  ],
+  "interpretations": [
+    "pRF size inconsistency is an inherent property of the Gaussian pRF objective rather than a noise artifact",
+    "Aggregating across similar-fit models or permutations is a viable remedy for the size estimation problem"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "population receptive field",
+    "pRF size estimation reliability",
+    "Gaussian pRF model",
+    "fMRI visual field mapping",
+    "auditory pRF",
+    "bias-variance tradeoff",
+    "model averaging",
+    "permutation-based estimation"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "93de1b594aad3d63af670020bead6f0c",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:15:29+09:00",
+  "review_status": "auto_unreviewed"
+}

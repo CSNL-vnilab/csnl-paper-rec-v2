@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "two-streams (dorsal/ventral) hypothesis",
+      "role": "extended",
+      "one_line": "extends classical division by giving dorsal cortex a constitutive role in object recognition"
+    },
+    {
+      "name": "structural / part-based object recognition",
+      "role": "primary_lens",
+      "one_line": "objects are recognized via spatial relations among parts forming global shape"
+    },
+    {
+      "name": "multivariate pattern analysis of cortical representations",
+      "role": "context",
+      "one_line": "decoding and effective connectivity used to read out representational content"
+    }
+  ],
+  "core_question": "Does dorsal visual cortex compute object-centered spatial relations among parts and feed them to ventral cortex for object recognition?",
+  "key_assumptions": [
+    "global shape perception requires representing spatial relations among object parts",
+    "task-dependent connectivity reflects functional information transfer between dorsal and ventral cortex",
+    "intraparietal sulcus can be functionally parcellated by the computation it supports"
+  ],
+  "manipulations": [
+    "object-centered part relations vs other dorsal computations (allocentric relations, 3D shape, tools)",
+    "task demands modulating dorsal-to-ventral connectivity",
+    "decoding object category from posterior IPS vs ventral object regions"
+  ],
+  "key_findings": [
+    "IPS regions selectively engaged in computing object-centered part relations were identified",
+    "these regions showed task-dependent functional and effective connectivity with ventral cortex",
+    "posterior IPS multivariate response decoded object category at levels comparable to ventral object regions",
+    "mediation and effective connectivity suggested IPS contributes to ventral part-relation representations"
+  ],
+  "interpretations": [
+    "dorsal cortex computes object-centered part relations and transmits them to ventral pathway to support categorization",
+    "object recognition is a joint dorsal-ventral process rather than a purely ventral one"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "object-centered spatial relations",
+    "intraparietal sulcus",
+    "dorsal-ventral connectivity",
+    "part-based object recognition",
+    "global shape perception",
+    "effective connectivity",
+    "object category decoding",
+    "allocentric vs object-centered relations"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "41969ea62c3e794e96804d30fa7f64c0",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:15:29+09:00",
+  "review_status": "auto_unreviewed"
+}

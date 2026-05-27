@@ -1,0 +1,59 @@
+{
+  "frameworks": [
+    {
+      "name": "top-down vs bottom-up attention",
+      "role": "primary_lens",
+      "one_line": "Interaction of goal-driven cueing and stimulus-driven salience in working memory"
+    },
+    {
+      "name": "visual working memory",
+      "role": "primary_lens",
+      "one_line": "Limited-capacity short-term retention of visual items"
+    },
+    {
+      "name": "pre-cue attentional prioritization",
+      "role": "extended",
+      "one_line": "Informative cues bias encoding toward probable probe items"
+    }
+  ],
+  "core_question": "How do cue informativeness and probe status of salient items shape the interaction between top-down and bottom-up attention in visual working memory?",
+  "key_assumptions": [
+    "Pre-cues operationalize top-down attention via probe-frequency expectations",
+    "Visual salience operationalizes bottom-up attention on memory items",
+    "Cue informativeness and probe status jointly modulate this interaction"
+  ],
+  "manipulations": [
+    "Cue informativeness varied (100%, 80%, 50%)",
+    "Visual salience of memory items varied",
+    "Probe status of salient items varied across three experiments",
+    "Pre-cue probe frequencies"
+  ],
+  "key_findings": [
+    "Cueing benefits for cue-directed items observed consistently across experiments",
+    "Costs to non-cued items accompanied the cueing benefits",
+    "Cue informativeness emerged as a critical factor in the attention interaction",
+    "Probe status of salient items emerged as a critical factor in the interaction"
+  ],
+  "interpretations": [
+    "Top-down and bottom-up attention interact in VWM rather than acting independently",
+    "Cue informativeness and salient-item probe status jointly govern this interaction"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "visual working memory",
+    "top-down attention",
+    "bottom-up attention",
+    "cue informativeness",
+    "visual salience",
+    "pre-cue paradigm",
+    "probe status",
+    "attentional prioritization"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "38ca5e9fd17596994c2c225af80ef01d",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

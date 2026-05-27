@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "sensory-biased working memory",
+      "role": "primary_lens",
+      "one_line": "frontal subregions show modality-preferential recruitment during WM"
+    },
+    {
+      "name": "supramodal working memory",
+      "role": "alternative_lens",
+      "one_line": "regions recruited by WM across all sensory modalities"
+    },
+    {
+      "name": "resting-state functional connectivity",
+      "role": "context",
+      "one_line": "modality-selective regions segregate into distinct intrinsic networks"
+    }
+  ],
+  "core_question": "How are visual-, auditory-, tactile-selective and supramodal working memory regions jointly organized in individual human frontal cortex?",
+  "key_assumptions": [
+    "modality selectivity persists beyond primary sensory cortices",
+    "individual-subject mapping reveals joint topography missed by group averages",
+    "N-back recruitment indexes working memory"
+  ],
+  "manipulations": [
+    "sensory modality of N-back WM (auditory vs visual vs tactile)",
+    "blocked fMRI task design within subject"
+  ],
+  "key_findings": [
+    "confirmed multiple visual- and auditory-biased frontal regions",
+    "identified bilateral tactile-selective regions in dorsal/ventral precentral sulcus, postcentral sulcus, anterior IPS",
+    "supramodal WM regions overlap heavily with visual-biased frontal and parietal regions",
+    "modality-selective WM regions segregate into modality-specific resting-state networks"
+  ],
+  "interpretations": [
+    "frontal cortex contains a fine-grained mosaic of modality-biased and supramodal WM subregions",
+    "visual-biased and supramodal recruitment share substrate more than tactile or auditory do"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "working memory",
+    "sensory modality selectivity",
+    "tactile fMRI",
+    "frontal cortex topography",
+    "supramodal regions",
+    "N-back task",
+    "resting-state networks",
+    "individual subject mapping"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "03d0666b585967bcafddbbd6c17a8ac7",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:15:29+09:00",
+  "review_status": "auto_unreviewed"
+}
