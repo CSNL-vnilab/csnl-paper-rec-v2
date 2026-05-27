@@ -1,0 +1,56 @@
+{
+  "frameworks": [
+    {
+      "name": "psychophysics of subjective experience",
+      "role": "primary_lens",
+      "one_line": "rigorous psychophysical methods applied to characterize subjective experience in dementia"
+    },
+    {
+      "name": "blindsight / visual awareness",
+      "role": "extended",
+      "one_line": "impoverished-experience framework from blindsight imported to AD/ADRD"
+    },
+    {
+      "name": "neural correlates of consciousness (association cortex)",
+      "role": "context",
+      "one_line": "prefrontal and parietal NCC cited as potentially relevant substrate"
+    },
+    {
+      "name": "theories of consciousness",
+      "role": "compared_against",
+      "one_line": "explicitly rejected as premature and speculative for clinical AD work"
+    }
+  ],
+  "core_question": "How can subjective experience in Alzheimer's disease and related dementias be studied with the rigor of psychophysics?",
+  "key_assumptions": [
+    "subjective experience can be probed behaviourally with psychophysical paradigms",
+    "blindsight's impoverished-experience characterization generalizes to AD/ADRD",
+    "association-cortex NCC may underlie perceptual consciousness deficits"
+  ],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [
+    "psychophysics borrowed from visual-awareness research is a productive route into AD/ADRD subjective experience",
+    "current theories of consciousness should be set aside as too speculative for this clinical purpose"
+  ],
+  "limitations_noted": [
+    "current consciousness theories are too premature and speculative to ground the program"
+  ],
+  "connecting_signals": [
+    "subjective experience",
+    "Alzheimer's disease",
+    "dementia psychophysics",
+    "blindsight",
+    "visual awareness",
+    "neural correlates of consciousness",
+    "association cortex",
+    "prefrontal parietal cortex"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "bef0443a0966f30236c552ac4f98d4af",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:05:44+09:00",
+  "review_status": "auto_unreviewed"
+}

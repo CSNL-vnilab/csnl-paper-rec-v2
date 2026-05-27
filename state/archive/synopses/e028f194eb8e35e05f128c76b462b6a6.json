@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "dynamic brain network interactions",
+      "role": "primary_lens",
+      "one_line": "complex brain functions emerge from interactions across distributed cortical regions"
+    },
+    {
+      "name": "noninvasive brain stimulation",
+      "role": "extended",
+      "one_line": "TMS and tDCS used to causally probe network nodes and remote effects"
+    },
+    {
+      "name": "multimodal neuroimaging",
+      "role": "extended",
+      "one_line": "fMRI, PET and EEG combined with stimulation to read out network changes"
+    },
+    {
+      "name": "network dysregulation in neuropsychiatric disease",
+      "role": "context",
+      "one_line": "stroke, depression and schizophrenia framed as disorders of dynamic connectivity"
+    }
+  ],
+  "core_question": "How can combining noninvasive brain stimulation with neuroimaging clarify dynamic brain network interactions in health and disease?",
+  "key_assumptions": [
+    "complex behaviors arise from interactions among distributed cortical regions",
+    "TMS/tDCS alter activity at stimulation site and propagate to connected nodes",
+    "neuroimaging can index stimulation-induced changes in functional connectivity",
+    "neuropsychiatric disorders involve dysregulated dynamic networks"
+  ],
+  "manipulations": [
+    "type of noninvasive stimulation (TMS vs tDCS)",
+    "imaging modality paired with stimulation (fMRI, PET, EEG)",
+    "task state vs disease state contexts (stroke, depression, schizophrenia)"
+  ],
+  "key_findings": [
+    "stimulation induces focal effects plus distributed network effects beyond the site",
+    "combined stimulation-imaging enables causal assessment of inter-regional interactions",
+    "dynamic connectivity is altered in stroke, depression and schizophrenia"
+  ],
+  "interpretations": [
+    "concurrent stimulation-imaging reveals causal functional roles of network components",
+    "the approach offers a route to understanding and probing network dysregulation in disease"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "noninvasive brain stimulation",
+    "transcranial magnetic stimulation",
+    "transcranial direct current stimulation",
+    "functional connectivity",
+    "concurrent TMS-fMRI",
+    "dynamic brain networks",
+    "causal network mapping",
+    "neuropsychiatric network dysregulation"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "e028f194eb8e35e05f128c76b462b6a6",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,56 @@
+{
+  "frameworks": [
+    {
+      "name": "emergent property inference (EPI)",
+      "role": "primary_lens",
+      "one_line": "deep-network inverse problem solver targeting computational properties, not datasets"
+    },
+    {
+      "name": "probabilistic / Bayesian parameter inference",
+      "role": "context",
+      "one_line": "modern probabilistic toolkit applied to mechanistic circuit models"
+    },
+    {
+      "name": "mechanistic circuit modeling",
+      "role": "extended",
+      "one_line": "system-of-equations neural circuit models whose parameters EPI infers"
+    }
+  ],
+  "core_question": "How can one identify circuit-model parameters consistent with hypothesized emergent computational properties?",
+  "key_assumptions": [
+    "circuit models are characterized by emergent computational properties rather than fits to a particular dataset",
+    "parameter distributions yielding such properties can be learned by deep neural networks"
+  ],
+  "manipulations": [
+    "demonstrated EPI in stomatogastric ganglion as motivating example",
+    "applied EPI to models of primary visual cortex and superior colliculus",
+    "compared scaling in parameter dimension against alternative inverse-problem techniques"
+  ],
+  "key_findings": [
+    "EPI affords precise control over computational properties of inferred parameters",
+    "EPI scales better with parameter dimension than alternative inference techniques",
+    "novel parametric structure surfaced in V1 and superior colliculus circuit models"
+  ],
+  "interpretations": [
+    "deep-network inverse inference can interrogate theoretical circuit models at the level of emergent properties",
+    "examining inferred parameter structure yields new theoretical insights into neural computation"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "inverse problem",
+    "circuit model parameter inference",
+    "deep neural network density estimation",
+    "stomatogastric ganglion",
+    "primary visual cortex model",
+    "superior colliculus model",
+    "emergent computational properties",
+    "parameter degeneracy"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "e2d024be57534ba73d77535fcf28c3f4",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:05:44+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,46 @@
+{
+  "frameworks": [
+    {
+      "name": "signal detection theory",
+      "role": "compared_against",
+      "one_line": "response criterion shifts under degraded vision as alternative account for blindsight"
+    },
+    {
+      "name": "perceptual-vs-decisional dissociation",
+      "role": "primary_lens",
+      "one_line": "awareness can be impaired relative to visual sensitivity, not merely a criterion artifact"
+    }
+  ],
+  "core_question": "Can signal detection theory's criterion-artifact account fully explain blindsight phenomena?",
+  "key_assumptions": [
+    "blindsight involves residual visual sensitivity without commensurate awareness",
+    "criterion effects and perceptual effects are in principle separable"
+  ],
+  "manipulations": [],
+  "key_findings": [
+    "not all criterion effects in blindsight are decidedly nonperceptual",
+    "awareness is not completely abolished for some stimuli in some patients",
+    "in other cases awareness is clearly impaired relative to visual sensitivity"
+  ],
+  "interpretations": [
+    "criterion-artifact account does not jointly explain the key blindsight findings",
+    "the relative dissociation between sensitivity and awareness is what makes blindsight important"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "blindsight",
+    "signal detection theory",
+    "response criterion",
+    "visual awareness",
+    "perceptual sensitivity",
+    "consciousness dissociation",
+    "degraded conscious vision"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "06f341b90fa73d823a8c0d37980567ce",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:05:44+09:00",
+  "review_status": "auto_unreviewed"
+}

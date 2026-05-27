@@ -1,0 +1,53 @@
+{
+  "frameworks": [
+    {
+      "name": "decoded fMRI neurofeedback",
+      "role": "primary_lens",
+      "one_line": "closed-loop real-time decoding used to causally modulate pain-related multivoxel patterns"
+    },
+    {
+      "name": "multivoxel brain decoders (SIIPS, NPS)",
+      "role": "extended",
+      "one_line": "stimulus-intensity-independent and neurologic pain signatures as decoding targets"
+    }
+  ],
+  "core_question": "Can real-time neurofeedback modulating pain-related fMRI multivoxel patterns causally change subjective pain perception?",
+  "key_assumptions": [
+    "SIIPS and NPS index dissociable components of pain experience",
+    "MNI-space decoders can be applied online without subject-specific training",
+    "closed-loop feedback enables learned voluntary control of neural patterns"
+  ],
+  "manipulations": [
+    "double-blinded up- vs down-regulation of SIIPS via neurofeedback",
+    "regulation target signature (SIIPS vs NPS) tracked independently"
+  ],
+  "key_findings": [
+    "subjective pain ratings predictable in real time from SIIPS+NPS",
+    "participants learned to downregulate SIIPS independently of NPS",
+    "training success correlated with reduced perceived pain intensity after intervention"
+  ],
+  "interpretations": [
+    "a priori fMRI decoders support efficient closed-loop modulation of pain",
+    "results provide causal evidence linking SIIPS expression to subjective pain"
+  ],
+  "limitations_noted": [
+    "proof-of-concept with small sample"
+  ],
+  "connecting_signals": [
+    "decoded neurofeedback",
+    "real-time fMRI",
+    "multivoxel pattern analysis",
+    "SIIPS",
+    "neurologic pain signature",
+    "closed-loop brain imaging",
+    "subjective pain perception",
+    "MNI-space decoder"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "97593f80769650bb26c52664c843c98a",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:05:44+09:00",
+  "review_status": "auto_unreviewed"
+}

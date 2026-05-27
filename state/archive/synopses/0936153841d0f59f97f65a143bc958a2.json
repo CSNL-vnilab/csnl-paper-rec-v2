@@ -1,0 +1,59 @@
+{
+  "frameworks": [
+    {
+      "name": "predictive coding / perceptual expectation",
+      "role": "compared_against",
+      "one_line": "repetition suppression interpreted as fulfillment of top-down expectations about repeats"
+    },
+    {
+      "name": "bottom-up adaptation",
+      "role": "primary_lens",
+      "one_line": "repetition suppression as local stimulus-driven neural fatigue without expectation modulation"
+    },
+    {
+      "name": "repetition probability paradigm",
+      "role": "extended",
+      "one_line": "human fMRI design adapted to macaque single-unit/LFP recordings with attended faces"
+    }
+  ],
+  "core_question": "Does the probability of a stimulus repetition modulate repetition suppression in macaque IT cortex when faces are attended?",
+  "key_assumptions": [
+    "face patches in IT mirror human face-responsive cortex",
+    "attended faces engage top-down expectation signals if present",
+    "single-unit spikes and high gamma LFPs index local face processing"
+  ],
+  "manipulations": [
+    "repetition probability across blocks (high vs low)",
+    "task relevance of repetitions for behavioral decisions",
+    "use of faces as familiar attended stimuli"
+  ],
+  "key_findings": [
+    "significant repetition suppression in spiking activity and high gamma LFPs in both monkeys",
+    "no modulation of repetition suppression by repetition probability",
+    "no effect even when repetitions were task-relevant and influenced behavior"
+  ],
+  "interpretations": [
+    "macaque IT repetition suppression is not driven by perceptual expectation",
+    "human fMRI repetition-probability effects do not have a single-unit signature in macaque ML"
+  ],
+  "limitations_noted": [
+    "data from two monkeys, one face patch (ML) and one face-responsive region"
+  ],
+  "connecting_signals": [
+    "repetition suppression",
+    "macaque inferotemporal cortex",
+    "face patch ML",
+    "repetition probability",
+    "perceptual expectation",
+    "high gamma local field potentials",
+    "top-down vs bottom-up adaptation",
+    "single-unit recording"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "0936153841d0f59f97f65a143bc958a2",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

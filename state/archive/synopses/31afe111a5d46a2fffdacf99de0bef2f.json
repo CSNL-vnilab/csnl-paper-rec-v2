@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "bounded evidence accumulation",
+      "role": "primary_lens",
+      "one_line": "noisy evidence integrates to a terminating bound governing speed, accuracy, and confidence"
+    },
+    {
+      "name": "decision confidence",
+      "role": "extended",
+      "one_line": "confidence in a prior decision carried forward to set the next decision's termination bound"
+    },
+    {
+      "name": "speed-accuracy trade-off",
+      "role": "context",
+      "one_line": "strategic setting of the terminating bound balancing response time and correctness"
+    }
+  ],
+  "core_question": "How do subjects adjust strategy on a later decision given that the accuracy of an earlier decision is unknown?",
+  "key_assumptions": [
+    "each decision is bounded evidence accumulation to a terminating threshold",
+    "subjects cannot directly access accuracy of past decisions",
+    "confidence serves as an internal proxy for past-decision accuracy",
+    "reward depends on both decisions being correct"
+  ],
+  "manipulations": [
+    "sequential pairing of two perceptual decisions under joint reward contingency",
+    "variation in first-decision confidence across trials"
+  ],
+  "key_findings": [
+    "speed and accuracy of individual decisions fit by noisy accumulation to a terminating bound",
+    "the second-decision termination bound was elevated in proportion to first-decision confidence",
+    "subjects adjusted speed-accuracy setting based on prior confidence"
+  ],
+  "interpretations": [
+    "confidence functions as a bridge linking sequential decisions",
+    "the brain rapidly and precisely modulates decision-termination mechanisms across stages"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "bounded evidence accumulation",
+    "decision confidence",
+    "speed-accuracy trade-off",
+    "multi-stage decisions",
+    "sequential perceptual decisions",
+    "termination bound adjustment",
+    "drift-diffusion",
+    "confidence-guided strategy"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "31afe111a5d46a2fffdacf99de0bef2f",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}
