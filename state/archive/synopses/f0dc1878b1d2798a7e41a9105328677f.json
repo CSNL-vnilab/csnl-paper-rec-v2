@@ -1,0 +1,61 @@
+{
+  "canonical_id": "f0dc1878b1d2798a7e41a9105328677f",
+  "frameworks": [
+    {
+      "name": "reinforcement learning",
+      "role": "primary_lens",
+      "one_line": "policy learned from reward over latent multivoxel brain states"
+    },
+    {
+      "name": "real-time fMRI multivoxel pattern analysis (MVPA) decoded neurofeedback",
+      "role": "primary_lens",
+      "one_line": "reward contingencies defined online by decoded multivoxel patterns"
+    },
+    {
+      "name": "metacognition",
+      "role": "extended",
+      "one_line": "implicit metacognitive estimates boost RL over unconscious brain states"
+    },
+    {
+      "name": "artificial intelligence (high-dimensional policy learning)",
+      "role": "compared_against",
+      "one_line": "humans outperform current AI on dimensionality untangling"
+    }
+  ],
+  "core_question": "Can humans learn to derive reward-maximizing choices from high-dimensional unconscious neural states?",
+  "key_assumptions": [
+    "task-relevant brain states are below conscious threshold",
+    "multivoxel patterns carry the latent information defining reward",
+    "implicit metacognition can index unobservable internal states"
+  ],
+  "manipulations": [
+    "reward contingencies defined in real time by MVPA on fMRI activity",
+    "optimal policy made contingent on multidimensional, sub-threshold patterns"
+  ],
+  "key_findings": [
+    "subjects solved the decision task above chance",
+    "performance required implicit metacognition coupled to reinforcement learning",
+    "a frontal-striatal circuit supports exploitation of the latent states"
+  ],
+  "interpretations": [
+    "the brain flexibly untangles high-dimensional tasks via metacognition-augmented RL",
+    "this flexibility exceeds current AI on equivalent dimensionality"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "decoded neurofeedback",
+    "multivoxel pattern analysis",
+    "implicit metacognition",
+    "reinforcement learning over latent states",
+    "unconscious neural representations",
+    "frontal-striatal circuit",
+    "high-dimensional decision making",
+    "real-time fMRI"
+  ],
+  "abstract_coverage": 1.0,
+  "out_of_scope_note": null,
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:17:06+09:00",
+  "review_status": "auto_unreviewed"
+}

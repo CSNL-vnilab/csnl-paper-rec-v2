@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "ideal-observer / Bayes-optimal inference",
+      "role": "primary_lens",
+      "one_line": "optimal learner weights prior and evidence by their respective reliabilities"
+    },
+    {
+      "name": "hierarchical Bayesian inference",
+      "role": "extended",
+      "one_line": "disentangles distinct sources of uncertainty across nested levels"
+    },
+    {
+      "name": "delta-rule learning with constant learning rate",
+      "role": "compared_against",
+      "one_line": "classical reinforcement-style update shown to be suboptimal under volatility"
+    }
+  ],
+  "core_question": "Does the human brain's learning algorithm implement confidence weighting and hierarchical inference when transition probabilities change unpredictably?",
+  "key_assumptions": [
+    "observers combine prior and likelihood by their reliabilities",
+    "underlying transition probabilities can change at unpredicted moments",
+    "subjective confidence can be reported on a meaningful scale"
+  ],
+  "manipulations": [
+    "auditory versus visual sequence modality",
+    "transition probabilities that change at unpredicted change-points",
+    "elicitation of subjective confidence about learned probabilities"
+  ],
+  "key_findings": [
+    "subjective confidence reports tracked ideal-observer predictions",
+    "subjects attached distinct confidence levels to each learned transition probability",
+    "distinct brain regions tracked observation likelihood and prediction confidence",
+    "right inferior frontal gyrus combined both signals consistent with confidence weighting"
+  ],
+  "interpretations": [
+    "the brain's learning algorithm relies on confidence weighting rather than a fixed learning rate",
+    "right inferior frontal gyrus implements a hierarchical process separating sources of uncertainty"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "confidence weighting",
+    "hierarchical inference",
+    "ideal observer",
+    "transition probability learning",
+    "volatility and change-points",
+    "prediction reliability",
+    "right inferior frontal gyrus",
+    "subjective confidence reports"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "1b6e835b14eabcfd9f33e4d162b3ab12",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:17:06+09:00",
+  "review_status": "auto_unreviewed"
+}

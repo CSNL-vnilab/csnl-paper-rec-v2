@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "neural population tuning",
+      "role": "primary_lens",
+      "one_line": "sharpness of population response curves mediates anatomy-to-behavior link"
+    },
+    {
+      "name": "cortical anatomy decomposition (thickness vs surface area)",
+      "role": "extended",
+      "one_line": "treats thickness and surface area as genetically independent anatomical axes"
+    },
+    {
+      "name": "psychophysics of perceptual acuity",
+      "role": "context",
+      "one_line": "individual perceptual discrimination across visual field positions"
+    }
+  ],
+  "core_question": "How do cortical thickness and surface area of early visual cortex relate to neural population tuning and perceptual acuity?",
+  "key_assumptions": [
+    "cortical thickness and surface area are genetically independent variables",
+    "population tuning sharpness indexes early visual coding fidelity",
+    "perceptual discrimination accuracy reflects underlying cortical response properties"
+  ],
+  "manipulations": [
+    "individual differences in early visual cortical thickness",
+    "individual differences in early visual cortical surface area",
+    "visual field position for discrimination measurements"
+  ],
+  "key_findings": [
+    "thicker early visual cortex correlates with broader population tuning and lower discrimination accuracy",
+    "larger early visual cortical surface area correlates with sharper population tuning and higher discrimination accuracy",
+    "thickness and surface area exert opposite influences on tuning and behavior"
+  ],
+  "interpretations": [
+    "population tuning links visual cortical anatomy to perception",
+    "a perceptually advantageous early visual cortex is thinned with enlarged surface area"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "neural population tuning",
+    "cortical thickness",
+    "cortical surface area",
+    "early visual cortex",
+    "perceptual discrimination",
+    "visual field position",
+    "individual differences in perception",
+    "anatomy-behavior link"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "74649ccb4b86b83a3de8788f746cb353",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

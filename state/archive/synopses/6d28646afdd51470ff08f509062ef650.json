@@ -1,0 +1,51 @@
+{
+  "canonical_id": "6d28646afdd51470ff08f509062ef650",
+  "frameworks": [
+    {
+      "name": "evidence integration / accumulation",
+      "role": "primary_lens",
+      "one_line": "optimal gradual integration of pulsatile noisy evidence for decisions"
+    },
+    {
+      "name": "degenerate / non-integration strategies",
+      "role": "compared_against",
+      "one_line": "alternative heuristics that approximate near-optimal performance without integration"
+    }
+  ],
+  "core_question": "Do rats actually integrate pulsatile evidence in the Poisson Clicks task, or use degenerate non-integration strategies?",
+  "key_assumptions": [
+    "Poisson Clicks task is optimally solved by gradual integration",
+    "Pulsatile stimulus structure makes strategies behaviorally distinguishable",
+    "Behavioral choice patterns identify the underlying decision strategy"
+  ],
+  "manipulations": [
+    "Comparison of 3 candidate degenerate strategies vs the optimal integration strategy",
+    "Aggregation across 515 rats and >35 million trials"
+  ],
+  "key_findings": [
+    "Non-integration strategies can yield near-optimal performance on accumulation tasks",
+    "Pulsatile click structure permits dissociating integration from degenerate strategies",
+    "Overwhelmingly, rats are using an integration strategy"
+  ],
+  "interpretations": [
+    "Behavior supports gradual evidence integration as the mechanism in Poisson Clicks rats",
+    "Task design (pulsatile noise) is sufficient to rule out degenerate look-alike strategies"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "Poisson Clicks task",
+    "perceptual decision-making",
+    "evidence accumulation",
+    "degenerate strategies",
+    "non-integration strategies",
+    "pulsatile auditory noise",
+    "rat behavior",
+    "strategy identifiability"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:17:06+09:00",
+  "review_status": "auto_unreviewed"
+}

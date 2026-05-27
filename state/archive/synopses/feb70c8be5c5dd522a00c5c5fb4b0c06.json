@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "divisive normalization",
+      "role": "primary_lens",
+      "one_line": "value coding via divisive scaling of options against available alternatives"
+    },
+    {
+      "name": "cortical normalization (sensory analogy)",
+      "role": "context",
+      "one_line": "canonical sensory computation extended to reward valuation in OFC"
+    },
+    {
+      "name": "economic decision making / value-based choice",
+      "role": "extended",
+      "one_line": "context-dependent valuation underlying choice between meaningful alternatives"
+    }
+  ],
+  "core_question": "Do mOFC value signals follow divisive normalization, and does behavioral task context modulate that normalization?",
+  "key_assumptions": [
+    "value can be represented by single-neuron firing in mOFC",
+    "divisive normalization is a candidate computation for value coding",
+    "task context can alter how alternatives enter the normalization pool"
+  ],
+  "manipulations": [
+    "free choice between two reward-yielding lottery options",
+    "forced choice where one option is certain not to yield reward",
+    "relative value of competing options"
+  ],
+  "key_findings": [
+    "mOFC neurons signal relative option values via a divisive normalization function under free choice",
+    "the normalization model fits poorly under forced choice with one non-rewarding option",
+    "value normalization in mOFC is context-specific"
+  ],
+  "interpretations": [
+    "mOFC contributes valuation signals critical for economic decision making when meaningful alternatives are available",
+    "normalization of reward value depends on whether alternatives are behaviorally meaningful"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "divisive normalization",
+    "medial orbitofrontal cortex",
+    "reward value coding",
+    "relative value",
+    "free choice vs forced choice",
+    "context-dependent valuation",
+    "single-neuron recording in monkeys",
+    "economic decision making"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "feb70c8be5c5dd522a00c5c5fb4b0c06",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

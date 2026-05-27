@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "signal detection theory",
+      "role": "primary_lens",
+      "one_line": "decomposes metacognitive ability into meta-d' efficiency and confidence level"
+    },
+    {
+      "name": "adaptive feedback training",
+      "role": "primary_lens",
+      "one_line": "trial-by-trial feedback targeted at metacognitive judgments rather than task accuracy"
+    },
+    {
+      "name": "metacognitive calibration (Brier score)",
+      "role": "primary_lens",
+      "one_line": "quantifies agreement between confidence and objective accuracy"
+    }
+  ],
+  "core_question": "Can metacognitive ability be improved by targeted training, and does the improvement generalize across stimuli and task domains?",
+  "key_assumptions": [
+    "metacognition is dissociable from task performance",
+    "meta-d'/d' indexes metacognitive efficiency independent of accuracy",
+    "Brier score measures calibration of confidence to performance"
+  ],
+  "manipulations": [
+    "feedback target: metacognitive judgments vs decision performance only",
+    "training across 8 sessions",
+    "transfer probes: untrained stimuli and untrained recognition-memory task"
+  ],
+  "key_findings": [
+    "metacognitive-feedback group improved Brier calibration relative to active control",
+    "improvements generalized to untrained stimuli and an untrained recognition-memory task",
+    "gains driven by changes in both meta-d'/d' efficiency and confidence level",
+    "earlier confidence shifts positively mediated later increases in metacognitive efficiency"
+  ],
+  "interpretations": [
+    "metacognitive ability can be trained independently of task performance",
+    "training engages a domain-general metacognitive mechanism transferable across tasks"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "metacognition training",
+    "meta-d'/d' efficiency",
+    "Brier score calibration",
+    "confidence judgments",
+    "perceptual discrimination",
+    "recognition memory transfer",
+    "signal detection theory",
+    "domain-general metacognition"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "8092305b4da1e2876f12855d1e2cc030",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:17:06+09:00",
+  "review_status": "auto_unreviewed"
+}

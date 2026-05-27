@@ -1,0 +1,17 @@
+{
+  "canonical_id": "28a63a8a8e6b6ee7f82a73ce802df5de",
+  "synopsis_version": "v1.2026-05-28",
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "Finance/econometrics paper on serial dependence of asset returns and investment time horizons — financial-asset modeling, not cognitive/perceptual/computational neuroscience.",
+  "abstract_coverage": 0.0,
+  "generator": "opus-4-7@2026-05-28",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-28T00:00:00+09:00"
+}
