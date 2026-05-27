@@ -1,0 +1,59 @@
+{
+  "frameworks": [
+    {
+      "name": "somatic marker hypothesis",
+      "role": "primary_lens",
+      "one_line": "emotion-based bodily signals guide advantageous choices under uncertainty"
+    },
+    {
+      "name": "event-related potentials of decision making",
+      "role": "extended",
+      "one_line": "ERP components index option processing, response anticipation, and feedback evaluation"
+    },
+    {
+      "name": "emotional valence lateralization",
+      "role": "context",
+      "one_line": "positive and negative affect engage left and right hemispheres asymmetrically"
+    }
+  ],
+  "core_question": "What are the ERP signatures of decision making under uncertainty across option processing, response, and feedback stages in the Iowa Gambling Task?",
+  "key_assumptions": [
+    "IGT validly probes decision making under uncertain reward structure",
+    "ERP components reflect stage-specific cognitive and affective processes",
+    "hemispheric lateralization indexes valence of emotional processing"
+  ],
+  "manipulations": [
+    "advantageous vs disadvantageous deck selection",
+    "response type ('turn over' vs 'not turn over')",
+    "feedback valence (gain vs loss)",
+    "feedback amount"
+  ],
+  "key_findings": [
+    "advantage and disadvantage decks evoked similar P3 and late negative ERP modulations during option processing",
+    "P3 amplitude lateralized: advantage decks larger on left, disadvantage decks larger on right",
+    "'not turn over' responses preceded by larger negative ERP modulation (anticipatory effect)",
+    "P200, FRN, and P300 sensitive to feedback valence; FRN insensitive to amount"
+  ],
+  "interpretations": [
+    "ERP timing provides electrophysiological evidence for the somatic marker hypothesis",
+    "hemispheric P3 asymmetry reflects positive/negative emotion lateralization during uncertain choice"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "Iowa Gambling Task",
+    "decision making under uncertainty",
+    "somatic marker hypothesis",
+    "feedback-related negativity",
+    "P300",
+    "emotion lateralization",
+    "anticipatory ERP",
+    "reward valence processing"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "d280fbe38801a53c4a256c42266efa3d",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}

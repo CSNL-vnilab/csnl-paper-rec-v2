@@ -1,0 +1,49 @@
+{
+  "frameworks": [
+    {
+      "name": "resting-state functional connectivity",
+      "role": "primary_lens",
+      "one_line": "EEG phase-lag connectivity used as a biomarker of stimulation-induced plasticity"
+    },
+    {
+      "name": "anodal transcranial direct current stimulation (tDCS) plasticity",
+      "role": "context",
+      "one_line": "Non-invasive cortical stimulation whose response variability the paper tries to explain"
+    }
+  ],
+  "core_question": "Can resting-state EEG functional connectivity predict the variable corticospinal response to anodal tDCS over M1?",
+  "key_assumptions": [
+    "MEP amplitude change indexes tDCS-induced plasticity",
+    "debiased weighted phase lag index reflects volume-conduction-robust connectivity",
+    "scalp electrodes (e.g., C3) approximate underlying cortical sources"
+  ],
+  "manipulations": [
+    "stimulation type: anodal vs sham tDCS over left M1",
+    "test-retest session for reliability assessment"
+  ],
+  "key_findings": [
+    "High-beta (20-30 Hz) C3-to-left-parietal connectivity strongly predicted tDCS response (cross-validated R^2 = 0.69)",
+    "Greater C3-parietal connectivity tracked stronger anodal but not sham responses"
+  ],
+  "interpretations": [
+    "Pre-stimulation resting connectivity is a marker of individual tDCS-induced plasticity"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "anodal tDCS",
+    "resting-state EEG",
+    "functional connectivity",
+    "debiased weighted phase lag index",
+    "motor evoked potential",
+    "primary motor cortex M1",
+    "individual variability in plasticity",
+    "high-beta band connectivity"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "7d3ba4664f44c1aecaac3ce8dbc00391",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:34:16+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "prestimulus brain-state / spontaneous baseline fluctuations",
+      "role": "primary_lens",
+      "one_line": "Ongoing pre-stimulus activity biases how an ambiguous stimulus is perceived."
+    },
+    {
+      "name": "perceptual bistability / multistable perception",
+      "role": "context",
+      "one_line": "Necker cube reversals used as a probe of subjective perceptual state."
+    },
+    {
+      "name": "EEG microstate / scalp-map topography",
+      "role": "primary_lens",
+      "one_line": "Spatial configuration of scalp potentials indexes the momentary brain state."
+    }
+  ],
+  "core_question": "Does the brain state in the 50 ms before an ambiguous stimulus predict whether perception will reverse?",
+  "key_assumptions": [
+    "Scalp-map topography over a 50 ms window captures the sum of ongoing brain processes",
+    "Necker-cube percepts are an adequate readout of perceptual state",
+    "Distributed inverse solutions can localize prestimulus generators"
+  ],
+  "manipulations": [
+    "Intermittent presentation of an ambiguous Necker cube",
+    "Trial-by-trial sorting by reported reversal vs. stability",
+    "Classification of trials by which of two prestimulus scalp maps was present"
+  ],
+  "key_findings": [
+    "Two prestimulus scalp maps doubly dissociated reversal trials from stable trials",
+    "Inverse-solution contrast localized prereversal activity to right inferior parietal cortex",
+    "Prestimulus state predicted subsequent perceptual outcome"
+  ],
+  "interpretations": [
+    "Perceptual awareness is co-determined by ongoing brain state, not stimulus alone",
+    "Right inferior parietal cortex carries a prestimulus signature that gates perceptual reversal"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "prestimulus brain state",
+    "perceptual bistability",
+    "Necker cube reversal",
+    "ambiguous stimulus perception",
+    "EEG scalp topography / microstates",
+    "right inferior parietal cortex",
+    "spontaneous baseline fluctuations",
+    "distributed inverse solution"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "1fddf810b117743ed370efea3a1f4d57",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:34:16+09:00",
+  "review_status": "auto_unreviewed"
+}

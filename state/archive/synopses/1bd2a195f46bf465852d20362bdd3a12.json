@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "fMRI multivariate pattern decoding",
+      "role": "primary_lens",
+      "one_line": "linear classifiers trained within/across features to test independence of neural codes"
+    },
+    {
+      "name": "orthogonal independent feature coding",
+      "role": "compared_against",
+      "one_line": "shape and color represented in separable, non-interacting subspaces of OTC"
+    },
+    {
+      "name": "interactive feature binding in working memory",
+      "role": "extended",
+      "one_line": "delay-period representations integrate shape and color for efficient storage"
+    },
+    {
+      "name": "perception-to-VWM transformation",
+      "role": "context",
+      "one_line": "sensory representations are reformatted to meet working-memory demands"
+    }
+  ],
+  "core_question": "How are an object's shape and color jointly represented in human occipitotemporal cortex during visual working memory?",
+  "key_assumptions": [
+    "cross-decoding drop indexes interactive (non-independent) feature coding",
+    "OTC shape-selective and ventral color areas index relevant feature representations",
+    "VWM delay activity reflects maintained content"
+  ],
+  "manipulations": [
+    "task phase: VWM encoding vs delay",
+    "decoding scheme: within-color vs cross-color shape decoding",
+    "object features held in memory: shape paired with color"
+  ],
+  "key_findings": [
+    "encoding showed significant cross-decoding with no drop, indicating independent coding",
+    "delay also showed significant cross-decoding overall",
+    "delay produced a cross-decoding drop in OTC shape-selective and ventral color areas",
+    "sensory shape and color representations are transformed during VWM delay"
+  ],
+  "interpretations": [
+    "shape and color become interactively coded in OTC during VWM delay",
+    "transformation likely supports more efficient information storage in VWM"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "visual working memory",
+    "fMRI pattern decoding",
+    "occipitotemporal cortex",
+    "shape and color representation",
+    "cross-decoding",
+    "feature binding",
+    "VWM delay-period representation",
+    "ventral color areas"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "1bd2a195f46bf465852d20362bdd3a12",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}

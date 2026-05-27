@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "causal perturbation of cortical circuits",
+      "role": "primary_lens",
+      "one_line": "uses focal inactivation to test whether LIP neurons cause decision behaviour"
+    },
+    {
+      "name": "evidence accumulation for perceptual decisions",
+      "role": "context",
+      "one_line": "decisions framed as transformation of evidence samples into commitment"
+    },
+    {
+      "name": "distributed compensation across cortical areas",
+      "role": "extended",
+      "one_line": "unaffected areas take over function on fast and slow timescales"
+    }
+  ],
+  "core_question": "Do neurons in lateral intraparietal area (LIP) play a causal role in perceptual decision making?",
+  "key_assumptions": [
+    "perceptual decisions involve cortical computation over working-memory / attention / planning timescales",
+    "pharmacological and chemogenetic inactivation produces sustained neural silencing in LIP",
+    "behavioural biases reflect the contribution of the inactivated circuit"
+  ],
+  "manipulations": [
+    "unilateral pharmacological inactivation of LIP",
+    "unilateral chemogenetic inactivation of LIP",
+    "time within and across experimental sessions"
+  ],
+  "key_findings": [
+    "LIP inactivation produces clear biases in perceptual decisions",
+    "the behavioural bias dissipates within a session despite persistent neural inactivation",
+    "additional gradual recovery occurs across sessions"
+  ],
+  "interpretations": [
+    "other unaffected areas rapidly and gradually compensate for loss of LIP",
+    "compensation reconciles disparate prior causal results and constrains how focal perturbations are interpreted"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "lateral intraparietal area (LIP)",
+    "causal perturbation",
+    "pharmacological inactivation",
+    "chemogenetic inactivation",
+    "perceptual decision making",
+    "behavioural bias",
+    "cortical compensation",
+    "rhesus monkey"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "020fc7b29d5843c23f12f98ab8f0b9de",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:34:16+09:00",
+  "review_status": "auto_unreviewed"
+}

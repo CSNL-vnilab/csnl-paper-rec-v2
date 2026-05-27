@@ -1,0 +1,60 @@
+{
+  "frameworks": [
+    {
+      "name": "connectome-based large-scale cortex model",
+      "role": "primary_lens",
+      "one_line": "macaque-connectome network model with multiple neuron types and area-specific receptor density"
+    },
+    {
+      "name": "distributed persistent activity / attractor working memory",
+      "role": "extended",
+      "one_line": "persistent activity arises across many areas, modulated by a dopamine gradient"
+    },
+    {
+      "name": "activity-silent working memory",
+      "role": "alternative_lens",
+      "one_line": "memory held via short-term facilitation of inter-areal connections, no spiking trace"
+    }
+  ],
+  "core_question": "How does a macroscopic dopamine gradient across the primate cortical hierarchy shape distributed working memory?",
+  "key_assumptions": [
+    "dopamine receptor density varies systematically along the cortical hierarchy",
+    "large-scale dynamics can be captured by a connectome-constrained spiking model",
+    "dendrite-targeting interneurons mediate dopaminergic gating of inputs"
+  ],
+  "manipulations": [
+    "cortical dopamine level in the model",
+    "dopamine receptor density gradient incorporated from autoradiography",
+    "presence vs absence of distractor (irrelevant) stimuli",
+    "facilitation strength of inter-areal connections"
+  ],
+  "key_findings": [
+    "dopamine receptor density per neuron forms a macroscopic gradient along the macaque cortical hierarchy",
+    "model reproduces an inverted U-shaped dependence of working memory on dopamine",
+    "model captures spatial patterns of persistent activity matching over 90 experimental studies",
+    "dopamine filters irrelevant stimuli by enhancing inhibition from dendrite-targeting interneurons",
+    "facilitation of inter-areal connections can implement an activity-silent memory trace"
+  ],
+  "interpretations": [
+    "a cortex-wide dopamine gradient gates access to distributed working memory",
+    "adjusting cortical dopamine switches the network between activity-silent and distributed persistent memory states"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "dopamine gradient",
+    "macaque cortical hierarchy",
+    "distributed working memory",
+    "connectome-based large-scale model",
+    "inverted U-shaped dopamine dependence",
+    "dendrite-targeting interneurons",
+    "activity-silent memory",
+    "persistent activity"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "775f43b7f4ccacdfd207eaf2640a60ff",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:34:16+09:00",
+  "review_status": "auto_unreviewed"
+}

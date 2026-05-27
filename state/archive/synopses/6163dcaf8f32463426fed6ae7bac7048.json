@@ -1,0 +1,49 @@
+{
+  "frameworks": [
+    {
+      "name": "dynamic causal modeling",
+      "role": "primary_lens",
+      "one_line": "infer effective connectivity between parietal regions and V5/MT during bistable perception"
+    },
+    {
+      "name": "hierarchical parietal network model",
+      "role": "extended",
+      "one_line": "r-aSPL and r-pSPL play opposite hierarchical roles in triggering perceptual reversals"
+    }
+  ],
+  "core_question": "How do right anterior and posterior superior parietal regions interact with each other and visual area V5/MT during spontaneous perceptual reversals?",
+  "key_assumptions": [
+    "r-aSPL and r-pSPL have opposing causal roles in perceptual switches",
+    "bistable structure-from-motion provides spontaneous perceptual reversals without stimulus change",
+    "effective connectivity can be inferred from fMRI BOLD via DCM"
+  ],
+  "manipulations": [
+    "viewing a bistable structure-from-motion stimulus while fMRI is recorded",
+    "modeling reciprocal couplings among r-aSPL, r-pSPL, and V5/MT"
+  ],
+  "key_findings": [
+    "resolving perceptual ambiguity is associated with reciprocal interactions between the two parietal regions and V5/MT",
+    "bottom-up coupling strength from V5/MT to r-pSPL and from r-pSPL to r-aSPL predicts individual mean dominance duration"
+  ],
+  "interpretations": [
+    "parietal-V5/MT effective connectivity dynamics underlie spontaneous perceptual switches in bistable vision"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "bistable perception",
+    "perceptual reversals",
+    "structure-from-motion",
+    "dynamic causal modeling",
+    "effective connectivity",
+    "superior parietal lobule",
+    "V5/MT",
+    "dominance duration"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "6163dcaf8f32463426fed6ae7bac7048",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:34:16+09:00",
+  "review_status": "auto_unreviewed"
+}
