@@ -1,0 +1,47 @@
+{
+  "frameworks": [
+    {
+      "name": "retrieval-induced forgetting",
+      "role": "primary_lens",
+      "one_line": "reactivating a memory alters related, non-target memories from their original form"
+    },
+    {
+      "name": "constructive memory",
+      "role": "context",
+      "one_line": "human memory is reconstructive rather than a passive readout of the past"
+    }
+  ],
+  "core_question": "What is the hidden cognitive cost of reminiscing — does the act of recall itself distort related memories?",
+  "key_assumptions": [
+    "memory retrieval is an active reconstructive process, not passive readout",
+    "memories related to a recall target are co-reactivated and thus susceptible to change"
+  ],
+  "manipulations": [],
+  "key_findings": [
+    "reactivating memories can change them away from the original event",
+    "memories not directly targeted but related to the recall target are also affected",
+    "errors of conflating related episodes are common in everyday remembering"
+  ],
+  "interpretations": [
+    "reminiscence carries a hidden mnemonic cost: recall reshapes related memories without an external manipulator",
+    "constructive nature of human memory makes retrieval-induced distortion a routine, not exotic, phenomenon"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "retrieval-induced forgetting",
+    "memory reactivation",
+    "constructive memory",
+    "memory distortion",
+    "reminiscence",
+    "episodic memory interference",
+    "related memory effects",
+    "memory updating"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "1a6db7f9509b3554ce11f25952567c52",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:57:14+09:00",
+  "review_status": "auto_unreviewed"
+}

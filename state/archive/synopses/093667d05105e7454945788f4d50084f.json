@@ -1,0 +1,51 @@
+{
+  "frameworks": [
+    {
+      "name": "reward prediction error",
+      "role": "primary_lens",
+      "one_line": "dopamine firing tracks updates in predicted reward over time"
+    },
+    {
+      "name": "perceptual decision-making on random-dot motion",
+      "role": "extended",
+      "one_line": "extends RPE coding to perceptually demanding discrimination stimuli"
+    }
+  ],
+  "core_question": "Do midbrain dopamine neurons extract reward predictions from perceptually complicated stimuli, and how does that response unfold in time?",
+  "key_assumptions": [
+    "dopamine activity reflects reward prediction and prediction error",
+    "coherent motion direction is the reward-predictive feature requiring sensory processing",
+    "coarse motion detection precedes fine direction discrimination"
+  ],
+  "manipulations": [
+    "two coherent motion directions paired with different reward magnitudes",
+    "random-dot motion stimuli requiring directional discrimination"
+  ],
+  "key_findings": [
+    "dopamine neurons showed reward-predictive responses to random-dot motion",
+    "responses were temporally extended, tracking prediction updates from coarse detection to fine discrimination",
+    "differential reward-predictive activity emerged in a later phase than previously reported"
+  ],
+  "interpretations": [
+    "dopamine prediction signals are paced by the sensory evidence accumulation required to identify the cue",
+    "reward prediction error operates across coarse-to-fine perceptual scales rather than as a single transient"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "midbrain dopamine neurons",
+    "reward prediction error",
+    "random-dot motion",
+    "coherent motion discrimination",
+    "perceptual decision-making",
+    "temporally extended response",
+    "coarse-to-fine processing",
+    "reward-predictive stimuli"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "093667d05105e7454945788f4d50084f",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:57:14+09:00",
+  "review_status": "auto_unreviewed"
+}

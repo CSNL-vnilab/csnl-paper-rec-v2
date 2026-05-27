@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "Granger causal regression",
+      "role": "compared_against",
+      "one_line": "lag-based predictive causality regression benchmarked on BOLD time series."
+    },
+    {
+      "name": "Group Iterative Multiple Model Estimation (GIMME)",
+      "role": "compared_against",
+      "one_line": "group-level SEM-based effective connectivity recovery from fMRI."
+    },
+    {
+      "name": "non-Gaussian independent-component causal discovery",
+      "role": "primary_lens",
+      "one_line": "exploit non-Gaussianity of BOLD to identify directed feedback structure."
+    },
+    {
+      "name": "Fast Adjacency Skewness (FASK) and Two-Step",
+      "role": "extended",
+      "one_line": "two new non-Gaussian algorithms introduced and theoretically justified."
+    }
+  ],
+  "core_question": "Which statistical methods reliably recover feedforward and feedback effective connections, including cyclic structure, from BOLD fMRI time series?",
+  "key_assumptions": [
+    "BOLD signals carry non-Gaussian features informative for causal direction",
+    "effective connectivity can include direct feedback (2-cycles) and excitatory/inhibitory loops",
+    "synthetic ground-truth networks built on macaque anatomy are valid testbeds"
+  ],
+  "manipulations": [
+    "method choice across nine causal-discovery algorithms",
+    "presence vs absence of direct feedback (2-cycles) in ground-truth networks",
+    "excitatory vs inhibitory feedback connections",
+    "synthetic macaque-derived networks vs empirical human resting-state and task fMRI"
+  ],
+  "key_findings": [
+    "compared adequacy of multiple existing methods on synthetic BOLD with known feedback structure",
+    "introduced FASK and Two-Step and provided theoretical justification for both",
+    "evaluated methods on macaque-anatomy-based models and on empirical human resting-state and task data"
+  ],
+  "interpretations": [
+    "non-Gaussian features of BOLD can be leveraged to recover cyclic effective connectivity from fMRI",
+    "the new FASK and Two-Step algorithms are positioned as improved tools for feedback connectivity inference"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "effective connectivity",
+    "feedback connections",
+    "cyclic causal discovery",
+    "non-Gaussian BOLD signal",
+    "Granger causality",
+    "GIMME",
+    "FASK",
+    "macaque structural connectivity"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "c7f7bf2ee6229ef95e25e2c89a892375",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:57:14+09:00",
+  "review_status": "auto_unreviewed"
+}

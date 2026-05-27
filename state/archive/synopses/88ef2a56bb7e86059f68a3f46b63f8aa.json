@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "drift-diffusion",
+      "role": "primary_lens",
+      "one_line": "Decision variable as deterministic drift plus stochastic diffusion to a bound"
+    },
+    {
+      "name": "bounded evidence accumulation",
+      "role": "primary_lens",
+      "one_line": "Noisy evidence integrated over time until a commitment threshold is reached"
+    },
+    {
+      "name": "population coding",
+      "role": "extended",
+      "one_line": "Single scalar decision variable read out from weighted sum of LIP neurons"
+    }
+  ],
+  "core_question": "Can the drift-diffusion decision signal, including its stochastic component, be observed within a single trial in LIP population activity?",
+  "key_assumptions": [
+    "Parietal and prefrontal neurons represent accumulated noisy evidence",
+    "A weighted sum across the population yields the decision variable",
+    "Stochastic diffusion confers variability in choice and decision time"
+  ],
+  "manipulations": [
+    "Random dot motion direction discrimination task",
+    "Simultaneous recording of hundreds of LIP neurons",
+    "Single-trial analysis rather than averaging across trials"
+  ],
+  "key_findings": [
+    "A single scalar from population activity carries both drift and diffusion on individual decisions",
+    "The stochastic diffusion component is recoverable within single trials, not only in trial-averaged activity",
+    "The recovered signal aligns with the quantity the brain uses to commit to a choice"
+  ],
+  "interpretations": [
+    "LIP population activity instantiates a single-trial drift-diffusion decision variable",
+    "Choice commitment is governed by this neurally instantiated accumulation signal"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "drift-diffusion model",
+    "lateral intraparietal cortex",
+    "single-trial decision variable",
+    "evidence accumulation",
+    "random dot motion",
+    "population activity readout",
+    "decision bound",
+    "perceptual decision-making"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "88ef2a56bb7e86059f68a3f46b63f8aa",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,52 @@
+{
+  "frameworks": [
+    {
+      "name": "semantic surprise / divided attention",
+      "role": "primary_lens",
+      "one_line": "Attentional load shapes subjective semantic surprise that biases creativity judgments."
+    },
+    {
+      "name": "dual-task cognitive resource theory",
+      "role": "context",
+      "one_line": "Distractor task competes with evaluation for limited attentional resources."
+    }
+  ],
+  "core_question": "Do attentional demands from distractions bias how individuals evaluate the creativity of ideas?",
+  "key_assumptions": [
+    "Creativity evaluation requires cognitive resources",
+    "Distractor tasks divert attentional resources from primary evaluation",
+    "Creativity decomposes into novelty and usefulness dimensions"
+  ],
+  "manipulations": [
+    "Presence vs absence of a concurrent distractor task (Treatment vs Control)",
+    "Evaluation of 15 alternative uses of everyday objects"
+  ],
+  "key_findings": [
+    "Treatment group rated alternative uses as more creative on the novelty dimension",
+    "No effect of distraction on the usefulness dimension",
+    "EEG (event-related and spectral) and pupillometry confirmed attentional diversion in Treatment",
+    "Control group expended significantly more cognitive resources on evaluations"
+  ],
+  "interpretations": [
+    "Divided attention produces subjective semantic surprise that biases novelty ratings upward",
+    "Creativity evaluation is dissociable across novelty vs usefulness under attentional load"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "divided attention",
+    "creativity evaluation",
+    "semantic surprise",
+    "alternative uses task",
+    "novelty vs usefulness",
+    "pupillometry",
+    "event-related EEG",
+    "cognitive resource allocation"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "2f1dbf0e6e471d853ab18d50e3150693",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:57:14+09:00",
+  "review_status": "auto_unreviewed"
+}

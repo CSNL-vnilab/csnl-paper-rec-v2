@@ -1,0 +1,55 @@
+{
+  "frameworks": [
+    {
+      "name": "functional localization (fMRI)",
+      "role": "primary_lens",
+      "one_line": "identify cortical areas selectively activated by surface glossiness"
+    },
+    {
+      "name": "perceptual constancy",
+      "role": "extended",
+      "one_line": "leverages glossiness constancy across illumination to dissociate from low-level cues"
+    },
+    {
+      "name": "selective attention",
+      "role": "alternative_lens",
+      "one_line": "task-driven attention to glossiness vs form/orientation isolates gloss-selective activation"
+    }
+  ],
+  "core_question": "Which cortical areas underlie human perception of surface glossiness, independent of low-level luminance cues?",
+  "key_assumptions": [
+    "glossiness perception is constant across illumination changes",
+    "task-selective attention modulates gloss-relevant areas",
+    "low-level luminance and luminance-contrast can be dissociated from gloss"
+  ],
+  "manipulations": [
+    "object surface (glossy vs matte) under bright vs dim illumination",
+    "selective attention to glossiness vs 3D form vs 3D orientation"
+  ],
+  "key_findings": [
+    "regions responded more to glossy-dim than matte-bright stimuli despite lower luminance",
+    "regions responded more during glossiness discrimination than form or orientation tasks",
+    "bilateral ventral occipital areas are common across both experiments"
+  ],
+  "interpretations": [
+    "bilateral ventral occipital cortex is involved in glossiness perception independent of low-level luminance features"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "surface glossiness perception",
+    "material perception",
+    "ventral occipital cortex",
+    "fMRI localization",
+    "perceptual constancy",
+    "selective attention",
+    "luminance contrast control",
+    "specular reflection"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "daeb8c781081ba1e563c048ca9ac694b",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:57:14+09:00",
+  "review_status": "auto_unreviewed"
+}

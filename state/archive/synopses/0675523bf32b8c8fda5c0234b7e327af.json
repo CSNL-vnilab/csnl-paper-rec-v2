@@ -1,0 +1,51 @@
+{
+  "frameworks": [
+    {
+      "name": "trial-to-trial variability quenching",
+      "role": "primary_lens",
+      "one_line": "stimulus onset reduces spiking variability across identical trials"
+    },
+    {
+      "name": "thalamocortical comparative electrophysiology",
+      "role": "context",
+      "one_line": "contrasts variability dynamics between thalamic nuclei and cortex"
+    }
+  ],
+  "core_question": "Does stimulus-evoked variability quenching occur in thalamic nuclei as it does in cortex?",
+  "key_assumptions": [
+    "trial-to-trial spike-count variability is a meaningful neural state index",
+    "fixation periods provide comparable pre-stimulus baselines across regions"
+  ],
+  "manipulations": [
+    "recording site: ventral pulvinar, dorsal pulvinar, LGN, area V4",
+    "epoch: pre-stimulus fixation vs post-stimulus presentation"
+  ],
+  "key_findings": [
+    "pre-stimulus variability lower in pulvinar and LGN than in V4",
+    "V4 shows prominent variability reduction at stimulus onset",
+    "thalamic variability largely unaffected by visual stimulation",
+    "small but significant variability decrease in dorsal pulvinar only"
+  ],
+  "interpretations": [
+    "variability quenching is a predominantly cortical phenomenon",
+    "thalamic nuclei operate in a distinct, less stimulus-modulated variability regime"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "trial-to-trial variability",
+    "stimulus-onset quenching",
+    "pulvinar",
+    "lateral geniculate nucleus",
+    "area V4",
+    "macaque electrophysiology",
+    "thalamocortical comparison",
+    "spike-count Fano factor"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "0675523bf32b8c8fda5c0234b7e327af",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:57:14+09:00",
+  "review_status": "auto_unreviewed"
+}

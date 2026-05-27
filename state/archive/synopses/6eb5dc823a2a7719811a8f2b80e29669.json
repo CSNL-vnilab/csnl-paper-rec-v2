@@ -1,0 +1,44 @@
+{
+  "frameworks": [
+    {
+      "name": "working memory",
+      "role": "primary_lens",
+      "one_line": "retention of spatial information across a delay in DLPFC and LIP"
+    },
+    {
+      "name": "reinforcement learning",
+      "role": "context",
+      "one_line": "choice and outcome retained to update reward expectations"
+    }
+  ],
+  "core_question": "Does spatial memory across different behavioral contexts rely on a shared neural mechanism in DLPFC and LIP?",
+  "key_assumptions": [
+    "DLPFC and LIP are critical for retaining information over a delay",
+    "Similar spatial information is used across the three tasks",
+    "Memory demands can be separated into prospective and retrospective components"
+  ],
+  "manipulations": [
+    "task context (ODR vs visual search vs matching pennies)",
+    "type of memory demand (prospective only vs prospective + retrospective)"
+  ],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "dorsolateral prefrontal cortex",
+    "lateral intraparietal cortex",
+    "spatial working memory",
+    "oculomotor delayed response",
+    "matching pennies",
+    "prospective memory",
+    "retrospective memory",
+    "rhesus monkey single-unit recording"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "6eb5dc823a2a7719811a8f2b80e29669",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:57:14+09:00",
+  "review_status": "auto_unreviewed"
+}
