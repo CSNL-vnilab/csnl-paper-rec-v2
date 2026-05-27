@@ -1,0 +1,44 @@
+{
+  "canonical_id": "412e976a4596639e4d1e8eb283eb9375",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [
+    {"name": "hierarchical Bayesian inference", "role": "primary_lens", "one_line": "perception as joint inference across feature and category levels of the representational hierarchy"},
+    {"name": "holistic matching model", "role": "extended", "one_line": "method-of-adjustment reports reflect optimal joint match in feature and category"},
+    {"name": "categorical perception", "role": "alternative_lens", "one_line": "reframed as a consequence of holistic hierarchical inference rather than a separate mechanism"}
+  ],
+  "core_question": "Do perceptual reports in method-of-adjustment tasks reflect joint inference across both feature and higher-level category representations?",
+  "key_assumptions": [
+    "perception is Bayesian inference across the full representational hierarchy",
+    "reports optimally match test and probe at both feature and category levels",
+    "holistic match principle generalizes across feature domains"
+  ],
+  "manipulations": [
+    "stimulus feature domain (orientation vs color)",
+    "comparison against feature-only matching models on existing datasets"
+  ],
+  "key_findings": [
+    "holistic matching model accurately predicts subjects' response behavior in orientation matching",
+    "model outperforms previous feature-only models both qualitatively and quantitatively",
+    "model generalizes to color and provides an alternative account of categorical color perception"
+  ],
+  "interpretations": [
+    "categorical effects in sensory perception are ubiquitous",
+    "categorical effects emerge parsimoniously as optimal behavior over holistic hierarchical representations"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "hierarchical Bayesian inference",
+    "method of adjustment",
+    "orientation perception",
+    "categorical perception",
+    "holistic matching",
+    "feature-category interaction",
+    "categorical color perception",
+    "perceptual report bias"
+  ],
+  "out_of_scope_note": null,
+  "generator": "opus-4-7@2026-05-27",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "abstract_coverage": 1.0
+}

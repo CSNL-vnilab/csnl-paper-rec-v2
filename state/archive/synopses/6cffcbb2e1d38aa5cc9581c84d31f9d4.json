@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "continuous attractor neural network (CANN)",
+      "role": "primary_lens",
+      "one_line": "bump-attractor substrate for holding multiple items during WM retention"
+    },
+    {
+      "name": "short-term synaptic plasticity (STP)",
+      "role": "extended",
+      "one_line": "STP modulates synaptic efficacies to set relative item memory strengths"
+    },
+    {
+      "name": "multi-item working memory dynamics",
+      "role": "context",
+      "one_line": "temporal dynamics of co-held items as the locus of WM storage"
+    }
+  ],
+  "core_question": "Can temporally coherent luminance perturbation during retention causally alter the relative memory strengths of multiple items held in human working memory?",
+  "key_assumptions": [
+    "Multi-item WM retention relies on temporally structured neural dynamics",
+    "External temporally coherent input can entrain item-specific neural representations",
+    "STP-modulated CANN captures human multi-item WM behavior"
+  ],
+  "manipulations": [
+    "Temporally correlated luminance sequences presented during retention",
+    "Relative coherence of perturbation across competing WM items",
+    "Six experimental variants probing the manipulation"
+  ],
+  "key_findings": [
+    "Dynamic perturbation during retention reliably alters relative WM item strength across six experiments",
+    "Effect replicates in over 150 human subjects",
+    "CANN+STP model reproduces the empirical behavioral pattern"
+  ],
+  "interpretations": [
+    "Multi-item WM strengths are causally set by temporal neural dynamics during retention",
+    "STP-driven synaptic efficacy changes mediate the behavioral effect"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "multi-item working memory",
+    "retention dynamics",
+    "continuous attractor neural network",
+    "short-term synaptic plasticity",
+    "temporally coherent perturbation",
+    "luminance entrainment",
+    "relative memory strength",
+    "causal manipulation of WM"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "6cffcbb2e1d38aa5cc9581c84d31f9d4",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:23:22+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,44 @@
+{
+  "canonical_id": "d719f59653332bed04d55ceb641ffd93",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [
+    {"name": "limited resource hypothesis", "role": "primary_lens", "one_line": "movement planning draws on a shared, limited pool of precision-determining resources"},
+    {"name": "working memory resource models", "role": "context", "one_line": "analogy that motor plans share resources like items in working memory"}
+  ],
+  "core_question": "Do concurrently prepared movement plans share a limited resource, such that planning more reduces the precision of each?",
+  "key_assumptions": [
+    "movement plans, like working memory representations, may draw on a shared limited resource",
+    "initial movement direction variability indexes the precision of the underlying plan",
+    "delayed response cueing isolates the number of plans prepared before movement onset"
+  ],
+  "manipulations": [
+    "number of planned movements: one vs two (across targets or hands)",
+    "cue specifying target vs cue specifying hand",
+    "whether trajectory could be fully specified in advance"
+  ],
+  "key_findings": [
+    "initial movement direction variability was higher in two-plan than one-plan conditions across targets",
+    "the same cost appeared when two hands rather than two targets were planned",
+    "the one-plan precision advantage emerged only when the trajectory could be fully specified"
+  ],
+  "interpretations": [
+    "planning multiple movements incurs a precision cost consistent with a shared, limited planning resource",
+    "the cost reflects specification of full motor plans rather than general motor preparedness"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "movement planning",
+    "motor variability",
+    "limited resource",
+    "reaching movements",
+    "delayed response cueing",
+    "movement direction precision",
+    "bimanual planning",
+    "shared planning resource"
+  ],
+  "out_of_scope_note": null,
+  "generator": "opus-4-7@2026-05-27",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "abstract_coverage": 1.0
+}

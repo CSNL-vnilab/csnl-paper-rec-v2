@@ -1,0 +1,53 @@
+{
+  "frameworks": [
+    {
+      "name": "multivoxel pattern analysis",
+      "role": "primary_lens",
+      "one_line": "local spatial activity patterns indexing stimulus-driven shared cortical responses"
+    },
+    {
+      "name": "intersubject correlation",
+      "role": "extended",
+      "one_line": "extended from temporal-only ISC to spatial-pattern correlation across subjects"
+    }
+  ],
+  "core_question": "Are local meso-scale spatial patterns of cortical activity shared across subjects during naturalistic viewing, and how do they relate to shared temporal responses?",
+  "key_assumptions": [
+    "minimum interpolation (no functional alignment) preserves native spatial pattern structure",
+    "naturalistic nonsemantic stimulation drives baseline shared responses",
+    "spatial and temporal components of shared response are dissociable"
+  ],
+  "manipulations": [
+    "pattern (searchlight) size",
+    "3D versus 2D stimulus contrast",
+    "cortical region across visual cortex"
+  ],
+  "key_findings": [
+    "meso-scale spatial patterns are shared nonuniformly across visual cortex",
+    "shared spatial patterns carry information distinct from the shared temporal response",
+    "spatial patterns are modulated by pattern size",
+    "spatial patterns are more sensitive to 3D vs 2D contrast than temporal signals are"
+  ],
+  "interpretations": [
+    "stimulus-driven local spatial structure is a separate, nonuniform channel of shared cortical response",
+    "spatial pattern correlations offer added sensitivity over temporal ISC for certain stimulus features (e.g., depth)"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "intersubject spatial pattern correlation",
+    "naturalistic movie viewing fMRI",
+    "multivoxel pattern analysis",
+    "shared cortical response",
+    "meso-scale spatial patterns",
+    "visual cortex topography",
+    "3D versus 2D stimulus",
+    "searchlight pattern size"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "79ef693da2ca43825092bfcb1eb48bc9",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:23:22+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "Bayesian observer model",
+      "role": "primary_lens",
+      "one_line": "Ideal observer infers latent hierarchical motion structure during scene perception."
+    },
+    {
+      "name": "hierarchical motion structure",
+      "role": "extended",
+      "one_line": "Formal framework characterizing nested form-motion relations among stimulus features."
+    },
+    {
+      "name": "multiple object tracking",
+      "role": "context",
+      "one_line": "Established attention paradigm used as testbed for structured motion."
+    }
+  ],
+  "core_question": "Do humans actively employ knowledge of hierarchical motion structure when perceiving dynamic visual scenes?",
+  "key_assumptions": [
+    "Real-world motion exhibits hierarchical form-motion relations",
+    "Observers can represent latent structure and combine it with sensory evidence",
+    "Bayesian inference is an adequate normative description of structured perception"
+  ],
+  "manipulations": [
+    "Structured vs independent object motion in tracking",
+    "Depth of motion hierarchy across conditions",
+    "Visibility: occluded vs visible object trajectories in prediction task"
+  ],
+  "key_findings": [
+    "Tracking performance was higher under structured than independent motion",
+    "Bayesian observer attributes gain to active structure use, not simpler stimuli",
+    "In occlusion-prediction task, humans inferred correct or near-correct structure",
+    "Structure inference held even for deep motion hierarchies"
+  ],
+  "interpretations": [
+    "Humans actively exploit hierarchical motion structure during perception",
+    "Structure knowledge is used inferentially under uncertainty, not just as stimulus regularity"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "hierarchical motion structure",
+    "structured motion perception",
+    "multiple object tracking",
+    "Bayesian observer model",
+    "occluded trajectory prediction",
+    "motion hierarchy inference",
+    "structure-from-motion knowledge",
+    "dynamic scene perception"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "a011890b6f2354f6e92be9ec91d6fe7d",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:23:22+09:00",
+  "review_status": "auto_unreviewed"
+}

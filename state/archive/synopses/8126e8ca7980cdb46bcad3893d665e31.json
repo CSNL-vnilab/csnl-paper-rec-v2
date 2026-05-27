@@ -1,0 +1,45 @@
+{
+  "canonical_id": "8126e8ca7980cdb46bcad3893d665e31",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [
+    {"name": "high-level abstract scene coding", "role": "primary_lens", "one_line": "uniformity is represented as a whole-scene property in prefrontal cortex"},
+    {"name": "perceptual filling-in", "role": "compared_against", "one_line": "early-visual completion of missing peripheral detail, argued against here"},
+    {"name": "feedforward convolutional neural network", "role": "alternative_lens", "one_line": "intermediate/late CNN layers as a model of uniformity representation"}
+  ],
+  "core_question": "Where in the brain is the illusory percept of peripheral visual uniformity represented?",
+  "key_assumptions": [
+    "subjective uniformity in peripheral vision is partly illusory given coarse peripheral processing",
+    "illusory percepts can be decoded from voxel patterns",
+    "calibrated Gabor displays can dissociate uniform vs incoherent percepts"
+  ],
+  "manipulations": [
+    "peripheral Gabor patches: identical vs heterogeneous orientations",
+    "stimulus context: psychophysical Gabor display vs naturalistic movies",
+    "comparison of voxel patterns to layers of a feedforward CNN"
+  ],
+  "key_findings": [
+    "lateral prefrontal cortex voxel patterns predicted perceived uniformity",
+    "these patterns generalized to scene uniformity in naturalistic movies",
+    "intermediate and late layers of a feedforward CNN showed similar uniformity representations"
+  ],
+  "interpretations": [
+    "uniformity perception involves high-level coding of abstract whole-scene properties",
+    "this mechanism is distinct from early-visual filling-in of specific details"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "visual uniformity illusion",
+    "lateral prefrontal cortex",
+    "peripheral vision",
+    "Gabor orientation",
+    "naturalistic movie generalization",
+    "convolutional neural network layers",
+    "abstract scene representation",
+    "filling-in"
+  ],
+  "out_of_scope_note": null,
+  "generator": "opus-4-7@2026-05-27",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "abstract_coverage": 1.0
+}

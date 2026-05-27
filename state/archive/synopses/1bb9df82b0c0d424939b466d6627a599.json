@@ -1,0 +1,55 @@
+{
+  "frameworks": [
+    {
+      "name": "Bayesian reinforcement learning with evidence accumulation",
+      "role": "primary_lens",
+      "one_line": "Combines reinforcement-based learning with accumulation of uncertain sensory evidence"
+    },
+    {
+      "name": "drift-diffusion / evidence accumulation",
+      "role": "extended",
+      "one_line": "Standard accumulation model extended to incorporate learning from outcomes"
+    },
+    {
+      "name": "standard noise-driven perceptual decision-making",
+      "role": "compared_against",
+      "one_line": "Standard view attributing choice errors primarily to sensory noise"
+    }
+  ],
+  "core_question": "How does the history of recent choices and their outcomes interact with sensory evidence accumulation to shape speed-accuracy tradeoffs?",
+  "key_assumptions": [
+    "Observers combine prior beliefs with sensory likelihoods via Bayesian inference",
+    "Reinforcement-based learning updates choice policy from outcomes",
+    "Sensory evidence is uncertain and must be accumulated"
+  ],
+  "manipulations": [
+    "Trial history (recent choices and outcomes)",
+    "Olfactory stimulus difficulty during decision task"
+  ],
+  "key_findings": [
+    "Rat speed and accuracy on olfactory decisions best explained by Bayesian model combining learning with evidence accumulation",
+    "Model predicted the specific pattern of trial history effects observed in behavior"
+  ],
+  "interpretations": [
+    "Learning is a critical factor contributing to speed-accuracy tradeoffs",
+    "Task history effects are signatures of an optimal learning strategy rather than mere biases"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "speed-accuracy tradeoff",
+    "trial history effects",
+    "perceptual decision-making",
+    "evidence accumulation",
+    "reinforcement learning",
+    "Bayesian observer",
+    "olfactory decision task",
+    "sequential choice bias"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "1bb9df82b0c0d424939b466d6627a599",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:23:22+09:00",
+  "review_status": "auto_unreviewed"
+}
