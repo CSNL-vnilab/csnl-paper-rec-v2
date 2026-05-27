@@ -1,0 +1,42 @@
+{
+  "canonical_id": "fa8a487e1d28a32ce6d5e1db7f5622e7",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [
+    {"name": "activity-silent / hidden-state working memory", "role": "primary_lens", "one_line": "unattended WM items held in sub-threshold neural states not directly observable via MVPA"},
+    {"name": "multivariate pattern analysis (MVPA)", "role": "primary_lens", "one_line": "EEG-based decoding used to track feature representations across the WM delay"},
+    {"name": "selective storage of task-relevant features", "role": "compared_against", "one_line": "view that task-irrelevant object features are simply deprioritized and not stored"}
+  ],
+  "core_question": "Are task-irrelevant features of a single object stored in working memory in a hidden, sub-threshold state?",
+  "key_assumptions": [
+    "WM items can occupy different activation states depending on attention",
+    "hidden representations can be momentarily reawakened by a task-irrelevant flash",
+    "MVPA on EEG indexes active feature-specific WM content"
+  ],
+  "manipulations": [
+    "task relevance of object feature (orientation vs color remembered across blocks)",
+    "task-irrelevant flash stimulus presented during the delay period"
+  ],
+  "key_findings": [
+    "orientation was decodable throughout the delay only when task-relevant",
+    "flash-evoked signals supported above-chance decoding of both task-relevant and task-irrelevant orientations"
+  ],
+  "interpretations": [
+    "task-irrelevant object features may be retained in a hidden WM state, not discarded"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "working memory",
+    "task-irrelevant features",
+    "hidden state",
+    "activity-silent memory",
+    "MVPA",
+    "EEG decoding",
+    "delay-period reactivation",
+    "feature-based attention"
+  ],
+  "out_of_scope_note": null,
+  "generator": "opus-4-7@2026-05-27",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-27T00:00:00Z",
+  "abstract_coverage": 1.0
+}

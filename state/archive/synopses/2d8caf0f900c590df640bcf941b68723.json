@@ -1,0 +1,55 @@
+{
+  "frameworks": [
+    {
+      "name": "attentional priority",
+      "role": "primary_lens",
+      "one_line": "temporal-order recency confers higher priority that modulates working memory representations"
+    },
+    {
+      "name": "inverted encoding model",
+      "role": "primary_lens",
+      "one_line": "population-level reconstruction of orientation channels from fMRI activity"
+    },
+    {
+      "name": "frontoparietal control of visual working memory",
+      "role": "context",
+      "one_line": "debate over whether parietal and frontal cortex carry mnemonic content"
+    }
+  ],
+  "core_question": "Do mnemonic representations in parietal and frontal cortex depend on temporal-order-based attentional priority?",
+  "key_assumptions": [
+    "the most recent item carries higher attentional priority",
+    "orientation-selective channels can be recovered by an inverted encoding model",
+    "early visual cortex provides a baseline of order-invariant maintenance"
+  ],
+  "manipulations": [
+    "serial order of the cued grating (first vs second of two)",
+    "region of interest (V1-V3 vs IPS vs FEF)"
+  ],
+  "key_findings": [
+    "early visual cortex (V1-V3) reconstructed orientations robustly regardless of serial order",
+    "IPS and FEF showed stronger orientation representations when the second (more recent) grating was remembered"
+  ],
+  "interpretations": [
+    "mnemonic codes in frontoparietal cortex are gated by temporal-order-based attentional priority",
+    "variability in prior frontoparietal WM findings may reflect unmodeled attentional-priority signals"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "visual working memory",
+    "inverted encoding model",
+    "orientation representation",
+    "temporal order",
+    "attentional priority",
+    "frontoparietal cortex",
+    "IPS",
+    "FEF"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "2d8caf0f900c590df640bcf941b68723",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:13:01+09:00",
+  "review_status": "auto_unreviewed"
+}

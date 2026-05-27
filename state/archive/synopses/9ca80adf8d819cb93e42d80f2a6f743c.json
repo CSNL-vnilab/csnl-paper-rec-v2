@@ -1,0 +1,45 @@
+{
+  "canonical_id": "9ca80adf8d819cb93e42d80f2a6f743c",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [
+    {"name": "evidence accumulation", "role": "primary_lens", "one_line": "perceptual choices arise from build-up of action-selective signals over time"},
+    {"name": "dynamic prior expectations", "role": "extended", "one_line": "history biases instantiate trial-by-trial priors adapted to environmental statistics"},
+    {"name": "behavioral modeling of history bias", "role": "primary_lens", "one_line": "trial-by-trial choice/outcome history weights estimated from behavior"}
+  ],
+  "core_question": "Does the environment's correlation structure adaptively shape how history biases enter motor cortical decision build-up?",
+  "key_assumptions": [
+    "history biases act on the accumulation of evidence rather than on early sensory encoding",
+    "action-selective motor cortical activity indexes decision formation",
+    "observers can adapt bias weights to the statistical structure of the environment"
+  ],
+  "manipulations": [
+    "correlation structure of the sensory environment across blocks",
+    "trial-by-trial history of prior choices and outcomes"
+  ],
+  "key_findings": [
+    "behavioral history biases flexibly tracked the environment's correlation structure",
+    "history bias modulated the build-up rate of action-selective motor cortical activity",
+    "baseline level of motor cortical activity was not affected by history bias",
+    "history-bias effect added to the impact of the current stimulus on build-up"
+  ],
+  "interpretations": [
+    "motor cortical build-up reflects dynamic prior expectations from adaptive environmental interaction",
+    "action plans are shaped by an additive combination of current evidence and history-derived priors"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "choice history bias",
+    "evidence accumulation",
+    "action-selective motor cortex",
+    "build-up activity",
+    "magnetoencephalography",
+    "dynamic prior expectations",
+    "environmental correlation structure",
+    "perceptual decision-making"
+  ],
+  "out_of_scope_note": null,
+  "generator": "opus-4-7@2026-05-27",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-27T00:00:00Z",
+  "abstract_coverage": 1.0
+}

@@ -1,0 +1,45 @@
+{
+  "canonical_id": "fa650ea509ecc945f0cca0ccd59f5f78",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [
+    {"name": "contour-based orientation estimation", "role": "primary_lens", "one_line": "orientation extracted from object-bounding contours that delineate shape structure"},
+    {"name": "steerable pyramid (filter-based orientation energy)", "role": "compared_against", "one_line": "classical V1-style filter responses pooled as orientation energy across the image"},
+    {"name": "line drawing steerable pyramid", "role": "alternative_lens", "one_line": "filter-based orientation energy computed on contour-only line drawings"},
+    {"name": "image-computable encoding models of fMRI", "role": "extended", "one_line": "voxelwise prediction of natural-scene fMRI responses from competing orientation models"}
+  ],
+  "core_question": "Does the human visual system encode scene orientation from object contours rather than from filter-based orientation energy?",
+  "key_assumptions": [
+    "natural-scene orientation processing can be probed with image-computable models",
+    "contour-based and filter-based estimates can be made to diverge by patch selection",
+    "Natural Scenes Dataset fMRI supports voxelwise model comparison"
+  ],
+  "manipulations": [
+    "image patches chosen to maximize discrepancy between contour-based and filter-based orientation estimates",
+    "model class: Photo-Steerable Pyramid vs Line-drawing-Steerable Pyramid vs Contour-based"
+  ],
+  "key_findings": [
+    "behavioral orientation judgments matched contour-based estimates rather than filter-based energy",
+    "contour-prioritizing models better explained fMRI responses to natural scenes",
+    "contour models revealed discrete spatial patterns of orientation preferences in visual cortex"
+  ],
+  "interpretations": [
+    "the visual system encodes scene orientation primarily by extracting contours, the fundamental components of shape",
+    "filter-based orientation energy is insufficient to account for human orientation perception in real-world scenes"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "orientation selectivity",
+    "natural scene perception",
+    "contour processing",
+    "object boundaries",
+    "steerable pyramid",
+    "line drawings",
+    "Natural Scenes Dataset",
+    "image-computable encoding model"
+  ],
+  "out_of_scope_note": null,
+  "generator": "opus-4-7@2026-05-27",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "abstract_coverage": 1.0
+}

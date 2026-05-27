@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "population-level encoding model (image reconstruction from fMRI patterns)",
+      "role": "primary_lens",
+      "one_line": "Model-based reconstruction of remembered features from population activity in early visual cortex."
+    },
+    {
+      "name": "top-down vs bottom-up signaling",
+      "role": "alternative_lens",
+      "one_line": "Frontoparietal top-down drive instantiates WM content in sensory cortex absent bottom-up input."
+    },
+    {
+      "name": "sensory recruitment hypothesis of working memory",
+      "role": "context",
+      "one_line": "WM content is held in feature-selective early sensory cortex during the delay."
+    }
+  ],
+  "core_question": "How do population activity patterns in early visual cortex encode the content of working memory during a memory delay?",
+  "key_assumptions": [
+    "Spatial population patterns in early visual cortex carry decodable WM content",
+    "Memory-guided saccade goals can be modeled as a reconstructable feature",
+    "Antisaccade dissociation isolates the goal from bottom-up visual stimulation"
+  ],
+  "manipulations": [
+    "Prosaccade vs antisaccade memory-guided procedure (stimulus dissociated from goal)",
+    "Time across the memory delay period",
+    "Trial-by-trial frontal/parietal delay-period activity"
+  ],
+  "key_findings": [
+    "Saccade goal locations were successfully reconstructed from early visual cortex delay-period activity",
+    "Reconstruction succeeded even when the visual stimulus was dissociated from the goal (antisaccade)",
+    "Visual-cortex representations remained stable but could also evolve from remembered stimulus to prospective goal",
+    "Frontal/parietal delay-period activity correlated trial-by-trial with reconstruction precision in visual cortex"
+  ],
+  "interpretations": [
+    "Early visual cortex represents WM content via top-down signals, presumably from frontal/parietal cortex",
+    "WM representations in sensory cortex are not purely retrospective stimulus traces — they can transform into prospective action goals"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "working memory delay period",
+    "early visual cortex population activity",
+    "fMRI feature reconstruction",
+    "memory-guided saccade",
+    "antisaccade dissociation",
+    "top-down frontoparietal signals",
+    "prospective goal coding",
+    "sensory recruitment"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "f0fe485fa0d9892398b143832cbca4ad",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:13:01+09:00",
+  "review_status": "auto_unreviewed"
+}

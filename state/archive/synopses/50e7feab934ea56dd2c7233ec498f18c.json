@@ -1,0 +1,44 @@
+{
+  "canonical_id": "50e7feab934ea56dd2c7233ec498f18c",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [
+    {"name": "serial dependence (temporal-correlation prior)", "role": "primary_lens", "one_line": "perceptual decisions biased toward previous stimuli given a prior of temporal continuity"},
+    {"name": "sensory adaptation", "role": "alternative_lens", "one_line": "repulsive biases away from recent stimulus history"},
+    {"name": "temporal context tuning", "role": "extended", "one_line": "broader temporal statistics shape both attraction and repulsion in perception"}
+  ],
+  "core_question": "Does true temporal correlation in stimulus and decision history modulate serial dependence in orientation perception?",
+  "key_assumptions": [
+    "serial dependence reflects a prior assuming temporal correlation in sensory input",
+    "stimulus history and decision history act on distinct timescales",
+    "observers' orientation reproductions can dissociate attractive from repulsive biases"
+  ],
+  "manipulations": [
+    "temporal correlation in stimulus history within a trial",
+    "temporal correlation in decision history across trials"
+  ],
+  "key_findings": [
+    "increasing temporal correlation in stimulus history produced adaptation-like repulsive biases",
+    "increasing temporal correlation in decision history reduced attractive biases",
+    "a clear dissociation emerged between stimulus-history and decision-history effects"
+  ],
+  "interpretations": [
+    "temporal correlation enhances the visual system's discriminative ability",
+    "broader temporal context plays a fundamental role in shaping perception and decisions"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "serial dependence",
+    "temporal context",
+    "decision history",
+    "stimulus history",
+    "orientation reproduction",
+    "adaptation repulsion",
+    "attractive bias",
+    "temporal correlation prior"
+  ],
+  "out_of_scope_note": null,
+  "generator": "opus-4-7@2026-05-27",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-27T00:00:00Z",
+  "abstract_coverage": 1.0
+}

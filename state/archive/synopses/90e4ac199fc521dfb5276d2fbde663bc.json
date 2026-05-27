@@ -1,0 +1,45 @@
+{
+  "canonical_id": "90e4ac199fc521dfb5276d2fbde663bc",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [
+    {"name": "robust averaging", "role": "primary_lens", "one_line": "human observers downweight outlying features when averaging visual information"},
+    {"name": "ideal observer", "role": "compared_against", "one_line": "equal weighting of equally reliable sources as the optimality benchmark"},
+    {"name": "late noise integration model", "role": "extended", "one_line": "computational account where decision noise corrupts integration after encoding"}
+  ],
+  "core_question": "Why do humans discount outlying features when averaging visual information instead of weighting all reliable sources equally?",
+  "key_assumptions": [
+    "an ideal observer gives equal weight to equally reliable sources",
+    "averaging-style perceptual decisions can be modeled as feature integration",
+    "noise can arise during integration, not only at encoding"
+  ],
+  "manipulations": [
+    "tilt of individual gratings in a circular array relative to a central reference",
+    "presence and magnitude of outlying / deviant feature values"
+  ],
+  "key_findings": [
+    "observers downweighted deviant orientations when judging average tilt",
+    "degree of robust averaging positively predicted overall task performance",
+    "simulations: robust averaging is suboptimal for a perfect integrator",
+    "simulations: robust averaging improves performance when late noise is present"
+  ],
+  "interpretations": [
+    "discarding outlying decision information is a strategy for resilience against noise in neural computations",
+    "apparent suboptimality of human averaging is adaptive given internal decision noise"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "robust averaging",
+    "feature integration",
+    "orientation averaging",
+    "ideal observer",
+    "late noise",
+    "decision noise",
+    "outlier downweighting",
+    "perceptual decision-making"
+  ],
+  "out_of_scope_note": null,
+  "generator": "opus-4-7@2026-05-27",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-27T00:00:00Z",
+  "abstract_coverage": 1.0
+}

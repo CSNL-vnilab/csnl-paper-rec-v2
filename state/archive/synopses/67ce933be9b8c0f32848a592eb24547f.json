@@ -1,0 +1,45 @@
+{
+  "canonical_id": "67ce933be9b8c0f32848a592eb24547f",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [
+    {"name": "efficient coding", "role": "primary_lens", "one_line": "system dynamically reallocates encoding resources based on environmental statistics"},
+    {"name": "Bayesian inference", "role": "compared_against", "one_line": "prior information integrated to optimally estimate current state in motor planning"}
+  ],
+  "core_question": "How does the motor system leverage short-term priors from previous movements when planning the current reach in unpredictable environments?",
+  "key_assumptions": [
+    "prior information shapes movement planning",
+    "encoding resources can be dynamically reallocated",
+    "intrinsic motor variability interacts with sequential effects"
+  ],
+  "manipulations": [
+    "similarity between successive reach targets",
+    "trial-to-trial dependencies in reaching sequences",
+    "temporal dynamics of prior influence"
+  ],
+  "key_findings": [
+    "current movements were biased opposite to the direction of previous movements",
+    "movement variability decreased when successive reaches were similar",
+    "sequential bias is enhanced by intrinsic motor variability",
+    "sequential effects contradicted Bayesian models and aligned with efficient coding"
+  ],
+  "interpretations": [
+    "motor planning uses efficient coding rather than Bayesian integration to exploit short-term priors",
+    "the motor system dynamically reallocates encoding resources based on recent movement statistics"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "sequential effects",
+    "efficient coding",
+    "motor planning",
+    "reaching movements",
+    "short-term priors",
+    "repulsive bias",
+    "movement variability",
+    "Bayesian motor control"
+  ],
+  "out_of_scope_note": null,
+  "generator": "opus-4-7@2026-05-27",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-27T00:00:00Z",
+  "abstract_coverage": 1.0
+}

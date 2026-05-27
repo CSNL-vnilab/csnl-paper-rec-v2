@@ -1,0 +1,56 @@
+{
+  "frameworks": [
+    {
+      "name": "natural scene statistics hypothesis",
+      "role": "primary_lens",
+      "one_line": "low-level tuning in category-selective cortex reflects features diagnostic of preferred categories"
+    },
+    {
+      "name": "voxelwise forward encoding model",
+      "role": "primary_lens",
+      "one_line": "estimates per-voxel feature and spatial selectivity from fMRI responses to natural images"
+    },
+    {
+      "name": "Gabor feature representation",
+      "role": "context",
+      "one_line": "orientation and spatial frequency basis used to characterize low-level image content"
+    }
+  ],
+  "core_question": "Do low-level feature and spatial tuning biases in category-selective visual cortex reflect the statistical informativeness of those features for the region's preferred semantic category?",
+  "key_assumptions": [
+    "Gabor features capture low-level image content relevant to cortical tuning",
+    "voxelwise encoding can dissociate low-level feature selectivity from category selectivity",
+    "natural scene image statistics shape feature-category associations"
+  ],
+  "manipulations": [
+    "rich natural scene images sampled across semantic categories",
+    "voxel-level selectivity estimated across visual cortex regions"
+  ],
+  "key_findings": [
+    "low-level Gabor features reliably associate with high-level semantic categories in natural scenes",
+    "category-selective voxels show systematic low-level feature and spatial selectivity biases consistent with their preferred category",
+    "these low-level tuning biases are not driven by category selectivity itself"
+  ],
+  "interpretations": [
+    "low-level tuning in higher visual cortex reflects the diagnosticity of features for semantic categories",
+    "natural scene statistics provide a general account of feature-category coupling in visual cortex"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "natural scene statistics",
+    "category-selective visual cortex",
+    "voxelwise encoding model",
+    "Gabor feature tuning",
+    "spatial selectivity bias",
+    "low-level high-level feature coupling",
+    "diagnostic features",
+    "naturalistic image fMRI"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "c229dd9a84122f5e026730a51ff5bc29",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:14:59+09:00",
+  "review_status": "auto_unreviewed"
+}

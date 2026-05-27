@@ -1,0 +1,44 @@
+{
+  "canonical_id": "2aa95569104982301bb672044351bd70",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [
+    {"name": "deep neural network", "role": "primary_lens", "one_line": "hierarchical DNN repurposed as a computational model of visual perceptual learning"},
+    {"name": "visual perceptual learning", "role": "extended", "one_line": "DNN extends classical readout models with multi-layer plasticity over training"}
+  ],
+  "core_question": "Can a deep neural network serve as a unifying multi-level model of visual perceptual learning?",
+  "key_assumptions": [
+    "VPL involves plasticity distributed across multiple visual processing stages",
+    "a generic DNN's hierarchical units can stand in for cortical visual areas",
+    "Gabor orientation discrimination is a representative VPL task"
+  ],
+  "manipulations": [
+    "task precision of Gabor orientation discrimination during DNN training",
+    "stimulus conditions for testing transfer to coarse discriminations"
+  ],
+  "key_findings": [
+    "DNN reproduced increased specificity with higher task precision",
+    "learning precise discriminations transferred asymmetrically to coarse ones when stimulus conditions varied",
+    "distribution of plasticity shifted toward lower layers as task precision increased",
+    "learned unit changes resembled monkey visual-area electrophysiology"
+  ],
+  "interpretations": [
+    "DNNs provide a sufficiently rich substrate to link behavioral VPL and multi-area plasticity",
+    "precision of the task governs where in the hierarchy learning is allocated"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "visual perceptual learning",
+    "deep neural network model",
+    "Gabor orientation discrimination",
+    "task precision",
+    "specificity and transfer",
+    "distribution of plasticity",
+    "hierarchical visual cortex",
+    "learning-induced tuning changes"
+  ],
+  "out_of_scope_note": null,
+  "generator": "opus-4-7@2026-05-27",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-27T00:00:00Z",
+  "abstract_coverage": 1.0
+}

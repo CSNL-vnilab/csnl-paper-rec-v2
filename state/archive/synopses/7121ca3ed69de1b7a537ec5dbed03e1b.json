@@ -1,0 +1,52 @@
+{
+  "frameworks": [
+    {
+      "name": "ideal observer / optimal serial dependence",
+      "role": "primary_lens",
+      "one_line": "Formal model predicting reliability-weighted integration of past with current stimulus."
+    },
+    {
+      "name": "temporal redundancy exploitation",
+      "role": "context",
+      "one_line": "Brain leverages natural-scene serial correlations as optimization strategy."
+    }
+  ],
+  "core_question": "Does serial dependence in perception confer a functional advantage predicted by an optimal-integration model?",
+  "key_assumptions": [
+    "Natural scenes exhibit strong moment-to-moment serial correlations",
+    "Observer aims to minimize reproduction errors",
+    "Past stimuli should be weighted by current stimulus reliability"
+  ],
+  "manipulations": [
+    "Current stimulus reliability (e.g. low spatial frequency oblique Gabors)",
+    "Similarity between successive stimuli",
+    "Orientation reproduction task"
+  ],
+  "key_findings": [
+    "Serial dependence scales with current stimulus reliability, strongest for less precise stimuli",
+    "Serial dependence depends on similarity between successive stimuli",
+    "Serial dependence leads to faster response times"
+  ],
+  "interpretations": [
+    "Serial dependence behaves as predicted by an ideal observer minimizing reproduction errors",
+    "Benefits of serial integration extend beyond reproduction accuracy to response speed"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "serial dependence",
+    "orientation reproduction",
+    "stimulus reliability",
+    "ideal observer",
+    "temporal redundancy",
+    "reproduction error",
+    "response time benefit",
+    "natural scene statistics"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "7121ca3ed69de1b7a537ec5dbed03e1b",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:13:01+09:00",
+  "review_status": "auto_unreviewed"
+}

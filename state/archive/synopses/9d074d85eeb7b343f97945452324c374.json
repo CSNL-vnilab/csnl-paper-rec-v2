@@ -1,0 +1,62 @@
+{
+  "frameworks": [
+    {
+      "name": "retrospective Bayesian decoding",
+      "role": "primary_lens",
+      "one_line": "higher-level ordinal judgment retrospectively decodes lower-level absolute orientation memory"
+    },
+    {
+      "name": "low-to-high hierarchical decoding",
+      "role": "compared_against",
+      "one_line": "default view that decoding mirrors low-to-high encoding hierarchy"
+    },
+    {
+      "name": "reversed-hierarchy / global-precedence theories",
+      "role": "context",
+      "one_line": "descriptive accounts of high-to-low or bidirectional perceptual processing"
+    },
+    {
+      "name": "working memory in perception",
+      "role": "extended",
+      "one_line": "decoding requires noisy working memory across sequential inspections"
+    }
+  ],
+  "core_question": "Does perceptual decoding proceed low-to-high like encoding, or do higher-level features constrain lower-level ones retrospectively?",
+  "key_assumptions": [
+    "encoding progresses from low- to high-level features",
+    "higher-level features are more invariant, categorical, and behaviorally relevant",
+    "working memory of absolute features is noisy",
+    "ordinal judgments index higher-level representations"
+  ],
+  "manipulations": [
+    "absolute versus relative/ordinal judgments of orientation",
+    "two sequentially presented orientations within a trial"
+  ],
+  "key_findings": [
+    "absolute single-orientation judgments fail to account for relative/ordinal judgments",
+    "retrospective decoding by ordinal judgment explains correlation between reported orientations",
+    "retrospective decoding explains forward and backward aftereffects within a trial"
+  ],
+  "interpretations": [
+    "brain prioritizes higher-level decoding because it is more reliable and behaviorally relevant",
+    "reliable higher-level decoding retrospectively constrains less reliable lower-level decoding"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "retrospective Bayesian decoding",
+    "absolute versus relative orientation judgment",
+    "ordinal judgment",
+    "serial / sequential orientation perception",
+    "forward and backward aftereffects",
+    "working memory noise",
+    "reversed hierarchy of decoding",
+    "high-level constrains low-level"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "9d074d85eeb7b343f97945452324c374",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:14:59+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,55 @@
+{
+  "frameworks": [
+    {
+      "name": "serial dependence",
+      "role": "primary_lens",
+      "one_line": "Recent stimuli bias current perception toward prior input."
+    },
+    {
+      "name": "perceptual prior / temporal regularity exploitation",
+      "role": "context",
+      "one_line": "Brain leverages short-timescale world stability to form expectations."
+    },
+    {
+      "name": "sensory cortex representation (V1 orientation decoding)",
+      "role": "extended",
+      "one_line": "Behavioral bias linked to bias in early visual cortex activity patterns."
+    }
+  ],
+  "core_question": "Does the perceptual bias known as serial dependence have a neural correlate in primary visual cortex orientation representations?",
+  "key_assumptions": [
+    "Short-timescale stimulus regularities shape perceptual decisions",
+    "fMRI activity patterns in V1 carry decodable orientation information",
+    "Previous-trial reports can bias current-trial percepts"
+  ],
+  "manipulations": [
+    "Grating orientation across successive trials",
+    "Visual-field location of grating (left vs right)"
+  ],
+  "key_findings": [
+    "Reported orientation on the current trial was biased toward the previously reported orientation",
+    "V1 orientation signal was similarly biased toward the orientation presented on the previous trial",
+    "Both perceptual and neural biases were spatially specific to the same visual-field location"
+  ],
+  "interpretations": [
+    "Biases in perceptual decisions induced by recent stimuli may arise from neural biases in sensory cortex shaped by recent perceptual history"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "serial dependence",
+    "perceptual decisions",
+    "primary visual cortex (V1)",
+    "orientation decoding",
+    "fMRI activity patterns",
+    "spatial specificity",
+    "perceptual history",
+    "grating orientation bias"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "49132ecc0726009b1dacd57a55ee62c3",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:13:01+09:00",
+  "review_status": "auto_unreviewed"
+}

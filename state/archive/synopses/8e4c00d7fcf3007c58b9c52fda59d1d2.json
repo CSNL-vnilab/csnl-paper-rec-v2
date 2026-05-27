@@ -1,0 +1,45 @@
+{
+  "canonical_id": "8e4c00d7fcf3007c58b9c52fda59d1d2",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [
+    {"name": "Bayesian observer", "role": "primary_lens", "one_line": "observer combines prior with noisy likelihood to produce posterior estimates"},
+    {"name": "Weber's law", "role": "compared_against", "one_line": "classic psychophysical principle that response variability scales with magnitude"},
+    {"name": "Fechnerian logarithmic encoding", "role": "extended", "one_line": "internal representation of magnitude as logarithm of stimulus intensity"}
+  ],
+  "core_question": "Does Bayesian estimation predict Weber-like variability, or can it produce the opposite pattern under skewed priors and rewards?",
+  "key_assumptions": [
+    "observer combines prior with likelihood via Bayes rule",
+    "magnitudes are internally encoded on a logarithmic scale",
+    "reward function shapes the estimator's loss",
+    "numerosity estimation indexes general magnitude perception"
+  ],
+  "manipulations": [
+    "prior distribution skewness over numerosities (small- vs large-frequent)",
+    "reward function across blocks (rewarding small vs large magnitudes)"
+  ],
+  "key_findings": [
+    "Bayesian observer exhibits anti-Weber behavior when large magnitudes are more frequent or rewarding",
+    "human subjects show the same anti-Weber pattern, breaking the classic psychophysical result",
+    "subject responses are best reproduced by a logarithmic encoding of magnitudes"
+  ],
+  "interpretations": [
+    "increasing variability with magnitude may reflect skewness of natural priors rather than encoding noise",
+    "Fechner logarithmic encoding and anti-Weber behavior can coexist within a Bayesian framework"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "Bayesian observer",
+    "Weber's law",
+    "anti-Weber variability",
+    "Fechner logarithmic encoding",
+    "numerosity estimation",
+    "prior skewness",
+    "reward-shaped estimation",
+    "magnitude perception"
+  ],
+  "out_of_scope_note": null,
+  "generator": "opus-4-7@2026-05-27",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-27",
+  "abstract_coverage": 1.0
+}

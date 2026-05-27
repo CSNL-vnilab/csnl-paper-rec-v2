@@ -1,0 +1,56 @@
+{
+  "frameworks": [
+    {
+      "name": "Bayesian perception",
+      "role": "primary_lens",
+      "one_line": "Priors from perceptual history bias current perception"
+    },
+    {
+      "name": "serial dependence",
+      "role": "extended",
+      "one_line": "Paper probes whether the bias acts on encoding or decision"
+    },
+    {
+      "name": "surround tilt illusion",
+      "role": "context",
+      "one_line": "Used as a tool to dissociate perceived vs physical orientation"
+    }
+  ],
+  "core_question": "Does serial dependence bias early sensory encoding or only later perceptual decisions?",
+  "key_assumptions": [
+    "Perceptual systems exploit input stability via history-based priors",
+    "Serial dependence is maximal when past and present stimuli are similar",
+    "Surround flankers shift perceived orientation away from physical orientation"
+  ],
+  "manipulations": [
+    "Prior stimulus type: illusory (flanked) vs neutral",
+    "Current stimulus type: illusory vs neutral",
+    "Match basis: physical orientation vs perceived orientation"
+  ],
+  "key_findings": [
+    "For neutral current preceded by illusory prior, max serial dependence at matched perceived orientation",
+    "For illusory current preceded by neutral prior, max serial dependence at matched physical orientation"
+  ],
+  "interpretations": [
+    "Priors are high-level constructs incorporating contextual information",
+    "Priors interact directly with early sensory signals before flanker-induced bias"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "serial dependence",
+    "perceptual history",
+    "Bayesian priors",
+    "surround tilt illusion",
+    "orientation perception",
+    "early sensory encoding",
+    "contextual modulation",
+    "perceptual decision"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "999a5072eb0682438b31a7ff14b5589b",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:13:01+09:00",
+  "review_status": "auto_unreviewed"
+}

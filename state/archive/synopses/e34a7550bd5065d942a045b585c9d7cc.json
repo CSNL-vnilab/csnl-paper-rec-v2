@@ -1,0 +1,49 @@
+{
+  "frameworks": [
+    {
+      "name": "recurrent network model of primary visual cortex",
+      "role": "primary_lens",
+      "one_line": "Recurrent V1 dynamics drive short-timescale adaptation effects"
+    },
+    {
+      "name": "tilt aftereffect",
+      "role": "extended",
+      "one_line": "Classic repulsive TAE extended to attractive short-timescale regime"
+    }
+  ],
+  "core_question": "Can recurrent V1 network dynamics produce an attractive tilt aftereffect on short timescales?",
+  "key_assumptions": [
+    "Recurrent connectivity shapes adaptation dynamics",
+    "Short- and long-timescale adaptation can have different signs",
+    "Behavioral aftereffects reflect underlying V1 population dynamics"
+  ],
+  "manipulations": [
+    "Adapter-to-test time scale (short ~100 ms vs longer)",
+    "Novel adaptation protocol targeting short-timescale exposure"
+  ],
+  "key_findings": [
+    "Model predicted an attractive TAE on the ~100 ms timescale",
+    "Behavioral experiments confirmed the attractive short-term TAE"
+  ],
+  "interpretations": [
+    "Recurrent network dynamics contribute substantially to short-term adaptation",
+    "TAE sign depends on timescale and underlying network mechanism"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "tilt aftereffect",
+    "orientation adaptation",
+    "recurrent network dynamics",
+    "primary visual cortex",
+    "attractive aftereffect",
+    "short-term adaptation",
+    "perceived orientation"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "e34a7550bd5065d942a045b585c9d7cc",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:14:59+09:00",
+  "review_status": "auto_unreviewed"
+}
