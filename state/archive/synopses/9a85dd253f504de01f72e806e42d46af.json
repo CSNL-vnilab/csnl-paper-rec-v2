@@ -1,0 +1,55 @@
+{
+  "frameworks": [
+    {
+      "name": "structural neuroimaging / voxel-based morphometry",
+      "role": "primary_lens",
+      "one_line": "grey matter volume in rPPC as a structural correlate of risk preference"
+    },
+    {
+      "name": "economic risk preference / expected utility",
+      "role": "context",
+      "one_line": "tolerance for risky monetary rewards as a behavioral phenotype"
+    },
+    {
+      "name": "neurodevelopmental aging",
+      "role": "extended",
+      "one_line": "age-related cortical atrophy as a mechanism for shifting decision preferences"
+    }
+  ],
+  "core_question": "Do age-related declines in right posterior parietal cortex grey matter volume account for diminished risk tolerance in older adults better than chronological age?",
+  "key_assumptions": [
+    "rPPC grey matter volume causally relates to individual risk preference",
+    "healthy aging entails parietal grey matter loss",
+    "risk preference is stably measurable across adulthood"
+  ],
+  "manipulations": [
+    "participant age range spanning younger to older adults",
+    "choices over risky vs. certain rewards"
+  ],
+  "key_findings": [
+    "older adults show reduced tolerance for risky rewards",
+    "rPPC grey matter volume declines with age",
+    "rPPC grey matter volume mediates / outperforms age as a predictor of risk preference"
+  ],
+  "interpretations": [
+    "neuroanatomical decline, not age per se, drives shifts in risky choice across the lifespan",
+    "rPPC structure constrains the neural mechanism of value-based decision-making under risk"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "risk preference",
+    "right posterior parietal cortex",
+    "grey matter volume",
+    "voxel-based morphometry",
+    "aging and decision-making",
+    "individual differences in choice",
+    "value-based decision-making"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "9a85dd253f504de01f72e806e42d46af",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:19:33+09:00",
+  "review_status": "auto_unreviewed"
+}

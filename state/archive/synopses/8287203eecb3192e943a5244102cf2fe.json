@@ -1,0 +1,64 @@
+{
+  "frameworks": [
+    {
+      "name": "functional causal flow (FCF)",
+      "role": "primary_lens",
+      "one_line": "Delay-embedding-based inference of ensemble causal interactions from resting activity"
+    },
+    {
+      "name": "delay embedding",
+      "role": "primary_lens",
+      "one_line": "State-space reconstruction used to recover functional causal structure"
+    },
+    {
+      "name": "Granger causality",
+      "role": "compared_against",
+      "one_line": "Alternative connectivity measure benchmarked against FCF"
+    },
+    {
+      "name": "transfer entropy",
+      "role": "compared_against",
+      "one_line": "Information-theoretic alternative benchmarked against FCF"
+    }
+  ],
+  "core_question": "Can resting functional interactions predict which single-site microstimulations produce large downstream effects on ensemble activity?",
+  "key_assumptions": [
+    "Functional causal interactions inferred at rest generalize to perturbed states",
+    "Delay-embedding reconstructs ensemble dynamics from spiking activity",
+    "Single-site microstimulation effects can be modeled at the ensemble level"
+  ],
+  "manipulations": [
+    "Single-site microstimulation in alert monkey prefrontal cortex",
+    "FCF compared against Granger causality and transfer entropy",
+    "Tested robustness to recording duration and neuron sampling fraction",
+    "Validated on ground-truth cortical circuit models"
+  ],
+  "key_findings": [
+    "FCF predicts how microstimulation alters downstream ensemble spiking in PFC",
+    "FCF is robust to noise and recoverable from brief recordings",
+    "FCF works with only a small fraction of neurons sampled from the circuit",
+    "FCF outperforms Granger causality and transfer entropy in predicting perturbation effects"
+  ],
+  "interpretations": [
+    "Resting functional interactions encode causal structure that forecasts perturbation efficacy",
+    "FCF offers a principled alternative to trial-and-error site selection for targeted stimulation"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "functional causal flow",
+    "delay embedding",
+    "microstimulation efficacy prediction",
+    "prefrontal cortex ensemble",
+    "resting-state functional interactions",
+    "Granger causality comparison",
+    "transfer entropy comparison",
+    "targeted neural perturbation"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "8287203eecb3192e943a5244102cf2fe",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

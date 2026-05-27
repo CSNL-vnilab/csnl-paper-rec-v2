@@ -1,0 +1,56 @@
+{
+  "frameworks": [
+    {
+      "name": "rational inattention",
+      "role": "primary_lens",
+      "one_line": "optimal allocation of limited mental effort under information-processing costs."
+    },
+    {
+      "name": "Bayesian inference with noisy mental simulation",
+      "role": "extended",
+      "one_line": "noisy future-value simulations combined with priors yield apparent discounting."
+    },
+    {
+      "name": "temporal discounting (intrinsic-preference account)",
+      "role": "compared_against",
+      "one_line": "traditional view of impatience as intrinsic preference for sooner rewards."
+    }
+  ],
+  "core_question": "Can the magnitude effect in intertemporal choice arise from adaptive modulation of simulation noise under rational inattention?",
+  "key_assumptions": [
+    "noisy mental simulations of future rewards are combined with prior beliefs via Bayes rule",
+    "internal precision is a costly resource allocated to maximize expected utility",
+    "mental effort scales adaptively with task demands / reward magnitude"
+  ],
+  "manipulations": [
+    "reward magnitude across choice problems",
+    "re-analysis across two prior data sets plus one new experiment"
+  ],
+  "key_findings": [
+    "behavioral signatures linking choice stochasticity to the magnitude effect",
+    "magnitude effect emerges from optimal mental-effort allocation",
+    "temporal discounting patterns reproduced from internal uncertainty rather than pure preference"
+  ],
+  "interpretations": [
+    "some aspects of temporal discounting reflect adaptive responses to information-processing costs",
+    "intertemporal choice can be reframed as a rational-inattention computation rather than intrinsic impatience"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "rational inattention",
+    "intertemporal choice",
+    "temporal discounting",
+    "magnitude effect",
+    "mental simulation noise",
+    "Bayesian value representation",
+    "choice stochasticity",
+    "information-processing cost"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "2a360a1f54cc4b75567e5fac5348fd37",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:19:33+09:00",
+  "review_status": "auto_unreviewed"
+}

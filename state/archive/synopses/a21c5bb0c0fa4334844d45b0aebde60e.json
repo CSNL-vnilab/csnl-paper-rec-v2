@@ -1,0 +1,52 @@
+{
+  "frameworks": [
+    {
+      "name": "computational decision-making model of escape behavior",
+      "role": "primary_lens",
+      "one_line": "captures latent stimulus-driven bias influencing decisions to escape aversive noise"
+    },
+    {
+      "name": "stimulus-driven escape / aversion framework",
+      "role": "context",
+      "one_line": "frames suicide-related behavior as escape from acute distress"
+    }
+  ],
+  "core_question": "Does past suicide attempt relate to a weaker decision bias to actively escape from suicide-related stimuli?",
+  "key_assumptions": [
+    "explicit suicide aversion ratings index motivational valence",
+    "latent decision bias is recoverable from escape-task choices via computational modeling",
+    "personalized suicide imagery evokes relevant motivational responses"
+  ],
+  "manipulations": [
+    "stimulus type (personalized suicide pictures vs positive contrasts)",
+    "escape decisions tied to acutely distressing noise"
+  ],
+  "key_findings": [
+    "past-attempt individuals showed much lower explicit suicide aversion than others",
+    "suicidal group made more impulsive escape decisions for suicide vs positive stimuli",
+    "computational model captured a latent bias driven by suicide stimuli",
+    "weaker biases mediated the link between lower suicide aversion and past attempt"
+  ],
+  "interpretations": [
+    "weaker active-escape bias from suicide stimuli is a novel, specific, incrementally valid correlate of suicide attempt",
+    "decision science can illuminate mechanisms of escape-related risk processes in suicidality"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "suicide attempt correlate",
+    "escape decision-making",
+    "computational model of behavioral task",
+    "latent decision bias",
+    "stimulus-driven processes",
+    "personalized suicide imagery",
+    "aversion rating",
+    "impulsive escape"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "a21c5bb0c0fa4334844d45b0aebde60e",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:19:33+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "state-space decision axis",
+      "role": "primary_lens",
+      "one_line": "Bias appears as an offset along the decision axis in neural state space"
+    },
+    {
+      "name": "history-dependent choice bias",
+      "role": "primary_lens",
+      "one_line": "Choices and outcomes of recent trials shape current decisions"
+    },
+    {
+      "name": "heuristic suboptimality",
+      "role": "extended",
+      "one_line": "Ingrained priors persist despite training and reduce gains"
+    },
+    {
+      "name": "sensory-prior integration",
+      "role": "context",
+      "one_line": "Goal-directed behavior combines current sensory evidence with priors"
+    }
+  ],
+  "core_question": "How does prefrontal cortex represent history-dependent choice biases that shape upcoming decisions?",
+  "key_assumptions": [
+    "Pre-stimulus neural state can be projected onto a decision axis",
+    "Bias is decomposable into slow and fast time-scale components",
+    "Single-trial bias is predictable from behavioral history"
+  ],
+  "manipulations": [
+    "Motion direction discrimination task with only current stimulus behaviorally relevant",
+    "Varied stimulus strength to probe bias effects on weak trials",
+    "Analyzed bias across slow (tens-hundreds of trials) and fast (recent trials) scales"
+  ],
+  "key_findings": [
+    "Highly-trained monkeys showed systematic gain-reducing choice biases",
+    "Bias fluctuated at two time scales: slow and fast (recent choices/outcomes)",
+    "Pre-stimulus prearcuate ensemble activity represented bias as a decision-axis offset",
+    "Bias offset persisted through stimulus viewing, especially affecting weak-stimulus choices"
+  ],
+  "interpretations": [
+    "Pre-stimulus representation of history-dependent bias is indistinguishable from upcoming choice representation",
+    "Pre-stimulus choice representation can be fully defined by biases inferred from behavioral history"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "history-dependent choice bias",
+    "prearcuate gyrus",
+    "decision axis state space",
+    "motion direction discrimination",
+    "pre-stimulus neural activity",
+    "single-trial bias prediction",
+    "slow and fast bias time scales",
+    "heuristic suboptimality"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "eb4326d49ae113456c93d8265ae57df8",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

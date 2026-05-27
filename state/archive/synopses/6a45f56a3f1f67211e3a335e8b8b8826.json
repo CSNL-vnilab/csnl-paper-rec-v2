@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "memory reinstatement",
+      "role": "primary_lens",
+      "one_line": "Confidence relies on reactivating traces of stored memories"
+    },
+    {
+      "name": "representational similarity analysis",
+      "role": "primary_lens",
+      "one_line": "Shared neural representations between novel and learned items index confidence"
+    },
+    {
+      "name": "semantic gist account of false memory",
+      "role": "extended",
+      "one_line": "False memories arise from high-level semantic overlap with stored items"
+    },
+    {
+      "name": "perceptual gist account",
+      "role": "compared_against",
+      "one_line": "Posterior visual regions encode perceptual rather than confidence-driving gist"
+    }
+  ],
+  "core_question": "What neural basis supports confidence in false memories given that they were never stored?",
+  "key_assumptions": [
+    "Memory confidence requires a neural trace of stored content",
+    "Shared neural representations index reinstatement of learned memories",
+    "False memory confidence dissociates from veridical storage"
+  ],
+  "manipulations": [
+    "Presented learned vs novel objects during recognition",
+    "Compared trials by recognition response (learned vs non-learned)",
+    "Modulated confidence levels reported by participants",
+    "Contrasted prefrontal vs posterior visual regions"
+  ],
+  "key_findings": [
+    "For novel objects, false memory confidence scaled with shared prefrontal representations with learned objects",
+    "Posterior visual cortex did not show this confidence-dependent shared representation",
+    "Confidence-dependent shared representations were absent when novel objects were correctly identified as non-learned"
+  ],
+  "interpretations": [
+    "False memory confidence is based on prefrontal reinstatement of high-level semantic gist of stored memories",
+    "Perceptual gist in posterior regions is dissociable from confidence-driving semantic reinstatement"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "false memory confidence",
+    "prefrontal reinstatement",
+    "shared neural representations",
+    "semantic gist",
+    "recognition memory",
+    "memory traces",
+    "perceptual versus semantic gist",
+    "confidence judgments"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "6a45f56a3f1f67211e3a335e8b8b8826",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

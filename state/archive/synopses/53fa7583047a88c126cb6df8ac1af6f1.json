@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "retinotopic organization",
+      "role": "compared_against",
+      "one_line": "low-level spatial mapping that dominates early visual cortex"
+    },
+    {
+      "name": "shape-curvature representation",
+      "role": "primary_lens",
+      "one_line": "abstract shape coding based on curvature features in lateral occipital cortex"
+    },
+    {
+      "name": "representational similarity analysis",
+      "role": "primary_lens",
+      "one_line": "multivariate fMRI patterns compared against stimulus similarity models"
+    }
+  ],
+  "core_question": "Where along the lateral occipital pathway does cortical organization shift from retinotopic to shape-based representation?",
+  "key_assumptions": [
+    "extrastriate responses inherit signals from earlier retinotopic areas",
+    "neural similarity in fMRI patterns reflects representational content",
+    "shape similarity can be decomposed into low-level vs curvature-based measures"
+  ],
+  "manipulations": [
+    "shape exemplar varied across stimulus pairs",
+    "shape complexity varied across stimulus pairs",
+    "ROI compared across retinotopic (V1-V3, V4, VO-1/2) and functional (LO-1, LO-2, LO) areas"
+  ],
+  "key_findings": [
+    "V1-V3 similarity predicted by low-level but not abstract stimulus measures",
+    "LO similarity predicted by abstract but not low-level measures (double dissociation)",
+    "LO-2 patterns most predicted by abstract curvature measures, akin to LO",
+    "LO-1 patterns predicted by both low-level and abstract measures"
+  ],
+  "interpretations": [
+    "LO-1 may mark a transitional stage between retinotopic and shape-based organizational principles",
+    "ventral stream through V4 and VO-1/2 does not show the same retinotopic-to-abstract transition"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "lateral occipital cortex",
+    "LO-1 LO-2 subdivisions",
+    "shape curvature representation",
+    "retinotopic to functional transition",
+    "representational similarity analysis",
+    "ventral visual stream",
+    "object processing pathway",
+    "multivariate fMRI"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "53fa7583047a88c126cb6df8ac1af6f1",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:19:33+09:00",
+  "review_status": "auto_unreviewed"
+}

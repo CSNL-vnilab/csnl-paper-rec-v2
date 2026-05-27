@@ -1,0 +1,55 @@
+{
+  "frameworks": [
+    {
+      "name": "functional columnar organization",
+      "role": "primary_lens",
+      "one_line": "primate V1 columns process distinct visual features such as color, orientation, ocular dominance"
+    },
+    {
+      "name": "optogenetic circuit dissection",
+      "role": "extended",
+      "one_line": "channelrhodopsin via lentivirus extended to focal column-scale stimulation in macaques"
+    },
+    {
+      "name": "domain-based neuroprosthetics",
+      "role": "context",
+      "one_line": "framework motivating linkage of functional networks to targeted perceptual modulation"
+    }
+  ],
+  "core_question": "Can focal optogenetic stimulation selectively activate function-specific cortical columns and their connected networks in primate visual cortex?",
+  "key_assumptions": [
+    "primate V1 is organized into functionally distinct columns",
+    "lentiviral channelrhodopsin delivery yields spatially focal expression",
+    "anatomically connected domains share functional preference"
+  ],
+  "manipulations": [
+    "focal optogenetic stimulation of single functional domain",
+    "lentiviral targeting of channelrhodopsins to macaque V1"
+  ],
+  "key_findings": [
+    "first demonstration of focal channelrhodopsin targeting that stimulates functional domains in macaque",
+    "targeted stimulation selectively activates anatomically connected neighboring domains of similar function"
+  ],
+  "interpretations": [
+    "fine-scale optical stimulation can map domain-based functionally specific networks",
+    "approach opens path to domain-based neuroprosthetics linking networks to perception and behavior"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "primate visual cortex",
+    "optogenetic stimulation",
+    "channelrhodopsin",
+    "lentiviral vector",
+    "functional columns",
+    "orientation preference",
+    "ocular dominance",
+    "domain-based neuroprosthetics"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "11b1f2b50c2d262657c5a12102a08803",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:19:33+09:00",
+  "review_status": "auto_unreviewed"
+}
