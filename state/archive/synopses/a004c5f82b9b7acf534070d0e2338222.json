@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "drift-diffusion",
+      "role": "primary_lens",
+      "one_line": "evidence accumulates as a time-varying decision variable toward absorbing bounds"
+    },
+    {
+      "name": "attractor dynamics",
+      "role": "alternative_lens",
+      "one_line": "stable choice states emerge as the DV commits, resisting further evidence"
+    },
+    {
+      "name": "neural decoding of decision variable",
+      "role": "extended",
+      "one_line": "single-trial DV is read out from motor cortex in real time"
+    },
+    {
+      "name": "changes-of-mind framework",
+      "role": "context",
+      "one_line": "within-trial sign reversals of the DV link to behavioral change-of-mind statistics"
+    }
+  ],
+  "core_question": "Do moment-to-moment fluctuations of a neurally decoded decision variable carry behavioral significance during ongoing decisions?",
+  "key_assumptions": [
+    "motor cortex activity carries a decodable decision variable",
+    "the DV evolves continuously over the course of a trial",
+    "diffusion-to-bound and attractor models can both be tested against neural DV dynamics"
+  ],
+  "manipulations": [
+    "real-time decoding of the DV from motor cortex during deliberation",
+    "delivery of additional pulses of sensory evidence at varying DV states",
+    "tracking within-trial DV sign changes across trials"
+  ],
+  "key_findings": [
+    "within-trial DV fluctuations decoded in real time predict choice behavior",
+    "robust DV sign changes match statistical regularities of behavioral changes-of-mind",
+    "as the DV builds toward a choice, its moment-to-moment variability shrinks",
+    "committed DV states resist additional pulses of sensory evidence"
+  ],
+  "interpretations": [
+    "decisions involve absorbing bounds consistent with diffusion-to-bound and attractor models",
+    "changes-of-mind reflect genuine within-trial reversals of an evolving decision variable"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "decision variable",
+    "real-time neural decoding",
+    "motor cortex",
+    "changes-of-mind",
+    "absorbing decision bounds",
+    "diffusion-to-bound model",
+    "attractor model",
+    "evidence accumulation"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "a004c5f82b9b7acf534070d0e2338222",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

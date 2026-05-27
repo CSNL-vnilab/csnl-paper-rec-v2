@@ -1,0 +1,54 @@
+{
+  "frameworks": [
+    {
+      "name": "recurrent neural network response model",
+      "role": "primary_lens",
+      "one_line": "RNN with internal memory nonlinearly maps feature sequences to fMRI responses"
+    },
+    {
+      "name": "encoding model",
+      "role": "extended",
+      "one_line": "feature-to-response stage upgraded from linear convolution to RNN"
+    },
+    {
+      "name": "linear convolution response model",
+      "role": "compared_against",
+      "one_line": "standard linear hemodynamic convolution baseline for response prediction"
+    }
+  ],
+  "core_question": "Can recurrent neural networks serve as response models that better predict fMRI activity from feature sequences than linear convolution?",
+  "key_assumptions": [
+    "stimuli can be mapped to features via a feature model",
+    "feature-to-response mapping benefits from nonlinear temporal processing",
+    "hemodynamic responses exhibit long-term temporal dependencies"
+  ],
+  "manipulations": [
+    "response model class: RNN vs established linear convolution baseline",
+    "use of internal recurrent memory over feature sequences"
+  ],
+  "key_findings": [
+    "RNN response models significantly outperform established response models",
+    "RNNs accurately estimate long-term dependencies underlying hemodynamic responses"
+  ],
+  "interpretations": [
+    "recurrent memory enables better modeling of feature-evoked fMRI response sequences",
+    "response-model development is an underexplored axis of encoding-model improvement"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "encoding model",
+    "fMRI response prediction",
+    "recurrent neural network",
+    "hemodynamic response",
+    "long-term temporal dependencies",
+    "feature-to-response mapping",
+    "sensory representation"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "fe650ef6d7ab172b45dd38541cc8b365",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

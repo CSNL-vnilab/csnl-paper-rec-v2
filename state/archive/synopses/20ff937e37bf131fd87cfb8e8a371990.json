@@ -1,0 +1,60 @@
+{
+  "frameworks": [
+    {
+      "name": "variational Bayesian inference",
+      "role": "primary_lens",
+      "one_line": "tractable approximation to full posterior over latent variables and functions"
+    },
+    {
+      "name": "Gaussian process classification",
+      "role": "extended",
+      "one_line": "GP priors replace coefficient priors for multiclass classification"
+    },
+    {
+      "name": "data augmentation with Gaussian latent variables",
+      "role": "primary_lens",
+      "one_line": "auxiliary latents convert multinomial probit into conditionally Gaussian model"
+    },
+    {
+      "name": "Markov Chain Monte Carlo and Laplace approximation",
+      "role": "compared_against",
+      "one_line": "exact and alternative approximate inference baselines"
+    }
+  ],
+  "core_question": "Can a fully variational Bayesian treatment yield accurate, efficient multiclass GP classification without extra approximations to the non-Gaussian likelihood?",
+  "key_assumptions": [
+    "GP priors over class-specific latent functions are a priori independent",
+    "multinomial probit link with Gaussian auxiliary latents permits exact conditional analysis",
+    "factorized variational posterior is adequate for class coupling"
+  ],
+  "manipulations": [
+    "inference scheme varied: variational vs MCMC vs Laplace",
+    "sparse approximation via informative vector machine selection"
+  ],
+  "key_findings": [
+    "variational approximation matches MCMC accuracy at lower computational cost",
+    "variational method is more accurate than the Laplace approximation",
+    "sparse multiclass IVM approximations emerge naturally from the formulation"
+  ],
+  "interpretations": [
+    "data augmentation plus variational Bayes is a computationally economic alternative to full MCMC for multiclass GP classification"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "variational Bayesian inference",
+    "Gaussian process classification",
+    "multinomial probit regression",
+    "data augmentation",
+    "Gibbs sampling",
+    "informative vector machine",
+    "Laplace approximation",
+    "multiclass classification"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "20ff937e37bf131fd87cfb8e8a371990",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:21:12+09:00",
+  "review_status": "auto_unreviewed"
+}

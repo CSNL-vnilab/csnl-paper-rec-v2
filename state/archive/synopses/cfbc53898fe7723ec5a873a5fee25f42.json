@@ -1,0 +1,53 @@
+{
+  "frameworks": [
+    {
+      "name": "neural alignment / inter-subject representational similarity",
+      "role": "primary_lens",
+      "one_line": "Shared canonical neural patterns across learners and experts index successful learning"
+    },
+    {
+      "name": "expert-novice representational comparison",
+      "role": "extended",
+      "one_line": "Alignment to experts extends student-student ISC as a learning marker"
+    }
+  ],
+  "core_question": "Does the degree to which a learner's neural representations align with experts and peers predict learning outcomes in a real-world course?",
+  "key_assumptions": [
+    "successful learning requires forming the right neural representations",
+    "shared canonical activity patterns across individuals reflect correct conceptual structure",
+    "fMRI BOLD captures concept-specific representations"
+  ],
+  "manipulations": [
+    "longitudinal scanning across an introductory CS course",
+    "comparison group: graduate CS experts vs. novice students",
+    "concept-level analysis within individual students"
+  ],
+  "key_findings": [
+    "between-student neural alignment predicts final exam performance",
+    "within-student, concepts evoking higher alignment with experts yield better learning",
+    "concept-specific alignment with peers also tracks learning outcomes",
+    "neural patterns associated with specific learned concepts are identifiable in individuals"
+  ],
+  "interpretations": [
+    "learning is mirrored in convergence toward shared expert-like neural representations",
+    "neural alignment can serve as a real-life, online assay of conceptual learning"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "neural alignment",
+    "inter-subject correlation",
+    "expert-novice comparison",
+    "longitudinal fMRI",
+    "concept learning",
+    "educational neuroscience",
+    "shared neural representations",
+    "learning outcomes prediction"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "cfbc53898fe7723ec5a873a5fee25f42",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:21:12+09:00",
+  "review_status": "auto_unreviewed"
+}

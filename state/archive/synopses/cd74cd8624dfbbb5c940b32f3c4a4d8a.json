@@ -1,0 +1,49 @@
+{
+  "frameworks": [
+    {
+      "name": "deep convolutional autoencoder with embedded clustering",
+      "role": "primary_lens",
+      "one_line": "joint feature learning and clustering on fused functional + structural fiber descriptors"
+    },
+    {
+      "name": "tract-based analysis of white matter",
+      "role": "context",
+      "one_line": "downstream goal motivating fiber clustering of tractography output"
+    }
+  ],
+  "core_question": "Can whole-brain white-matter fibers be clustered into bundles that are both structurally and functionally meaningful by jointly encoding tractography and task-fMRI signals?",
+  "key_assumptions": [
+    "fiber similarity should reflect both anatomy and function, not anatomy alone",
+    "task-fMRI activation along a fiber carries information about its functional role",
+    "a deep autoencoder can learn a more discriminative embedding than handcrafted geometric features"
+  ],
+  "manipulations": [
+    "input representation: structural-only vs combined functional + structural features",
+    "use of embedded clustering layer inside the autoencoder"
+  ],
+  "key_findings": [
+    "method clusters whole-brain fibers into bundles described as functionally and structurally meaningful",
+    "fusing task-fMRI with tractography geometry improves cluster interpretability over structure-only approaches"
+  ],
+  "interpretations": [
+    "combining functional and structural cues inside a deep clustering pipeline yields bundles better suited for brain structure-function analysis"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "fiber clustering",
+    "white matter tractography",
+    "task fMRI",
+    "deep convolutional autoencoder",
+    "embedded clustering",
+    "structure-function relationship",
+    "tract-based analysis",
+    "fiber bundle parcellation"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "cd74cd8624dfbbb5c940b32f3c4a4d8a",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:21:12+09:00",
+  "review_status": "auto_unreviewed"
+}

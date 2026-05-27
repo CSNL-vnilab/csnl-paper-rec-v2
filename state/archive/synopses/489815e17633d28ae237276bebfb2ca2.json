@@ -1,0 +1,53 @@
+{
+  "frameworks": [
+    {
+      "name": "linear ballistic accumulator",
+      "role": "primary_lens",
+      "one_line": "evidence-accumulation model decomposing RT into motor and attentional components"
+    },
+    {
+      "name": "perceptual decision-making",
+      "role": "context",
+      "one_line": "two-choice perceptual task framework used to probe scanner-environment effects"
+    }
+  ],
+  "core_question": "How does performing a perceptual decision-making task inside an MRI scanner alter behavior and its underlying cognitive components?",
+  "key_assumptions": [
+    "RT and accuracy decompose into latent components recoverable by LBA",
+    "the same task structure applies inside and outside the scanner",
+    "task requirements modulate attention vs motor contributions"
+  ],
+  "manipulations": [
+    "testing environment: traditional setting vs inside MRI scanner",
+    "three separate perceptual decision-making experiments",
+    "specific task requirements across experiments"
+  ],
+  "key_findings": [
+    "response times consistently increase inside the MRI scanner",
+    "error rates also rise in the scanner but to a lesser extent",
+    "LBA fits attribute scanner effects to slower motor component and reduced attentional focus",
+    "balance of attentional vs motor effects depends on task requirements"
+  ],
+  "interpretations": [
+    "scanner environment slows motor response and reduces attentional focus on the task",
+    "fMRI behavioral measures may not be directly comparable to lab-setting measures"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "perceptual decision-making",
+    "linear ballistic accumulator",
+    "MRI scanner environment",
+    "response time",
+    "motor slowing",
+    "attentional focus",
+    "fMRI behavioral effects",
+    "evidence accumulation"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "489815e17633d28ae237276bebfb2ca2",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

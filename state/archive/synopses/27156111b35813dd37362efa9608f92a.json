@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "voxel-wise encoding models",
+      "role": "primary_lens",
+      "one_line": "deep-network visual features map to fMRI responses across cortex"
+    },
+    {
+      "name": "deep neural network feature extraction",
+      "role": "primary_lens",
+      "one_line": "DNN supplies the visual feature basis used to predict brain responses"
+    },
+    {
+      "name": "random projection model of working memory",
+      "role": "extended",
+      "one_line": "random sensory-to-PFC projections account for amplified individual variability"
+    },
+    {
+      "name": "individual differences in visual perception",
+      "role": "context",
+      "one_line": "behavioural idiosyncrasies framed as differing high-level neural codes"
+    }
+  ],
+  "core_question": "What is the lateral prefrontal cortex's role in coding visual features and why do individuals differ?",
+  "key_assumptions": [
+    "DNN-derived features approximate the visual feature space the brain encodes",
+    "voxel-wise encoding can index high-level visual representations beyond visual cortex",
+    "sensory-to-PFC projections are approximately random across individuals"
+  ],
+  "manipulations": [
+    "natural image stimuli at 7T",
+    "across-subject comparison of encoding-model representational structures",
+    "image screening for highest predicted LPFC responses"
+  ],
+  "key_findings": [
+    "encoding models robustly predict responses in patches of lateral prefrontal cortex",
+    "LPFC shows larger individual differences in coding scheme than visual regions",
+    "screening identifies images that maximally drive each individual's LPFC",
+    "random-projection working-memory model reproduces the amplified LPFC variability"
+  ],
+  "interpretations": [
+    "LPFC contributes to visual processing beyond classical visual cortex",
+    "idiosyncratic random sensory-to-PFC projections may underlie individual perceptual differences"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "lateral prefrontal cortex",
+    "individual differences in visual coding",
+    "voxel-wise encoding models",
+    "7T fMRI natural images",
+    "deep neural network features",
+    "random projection working memory",
+    "high-level visual representation",
+    "image screening for maximal response"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "27156111b35813dd37362efa9608f92a",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}
