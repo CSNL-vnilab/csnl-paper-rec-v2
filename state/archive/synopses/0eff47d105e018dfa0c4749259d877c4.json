@@ -1,0 +1,49 @@
+{
+  "frameworks": [
+    {
+      "name": "serial dependence",
+      "role": "primary_lens",
+      "one_line": "recent percepts bias current ones across consecutive perceptual episodes"
+    },
+    {
+      "name": "object identity / object continuity",
+      "role": "extended",
+      "one_line": "perceived identity links representations across moments to support continuity"
+    }
+  ],
+  "core_question": "How does the visual system represent perceptual continuity across moments via serial dependence?",
+  "key_assumptions": [
+    "vision must reconcile change with apparent stability",
+    "prior stimuli leave residual influence on current percepts",
+    "object identity guides binding across episodes"
+  ],
+  "manipulations": [],
+  "key_findings": [
+    "signatures of serial dependence appear across many diverse visual tasks",
+    "findings span the past decade of paradigms with disparate results"
+  ],
+  "interpretations": [
+    "serial dependence reflects an anticipatory mechanism linking consecutive percepts via object identity",
+    "apparently contrasting results share common patterns suggesting a unifying account"
+  ],
+  "limitations_noted": [
+    "disparate findings and interpretations lack a general picture",
+    "several questions about the phenomenon remain unanswered"
+  ],
+  "connecting_signals": [
+    "serial dependence",
+    "visual perception continuity",
+    "object identity",
+    "perceptual history effects",
+    "binding across perceptual episodes",
+    "temporal context in vision",
+    "stability versus change in perception"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "0eff47d105e018dfa0c4749259d877c4",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:47:39+09:00",
+  "review_status": "auto_unreviewed"
+}

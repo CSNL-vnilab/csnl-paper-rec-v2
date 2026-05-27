@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "adaptive memory distortion",
+      "role": "primary_lens",
+      "one_line": "memories of similar items are exaggerated apart to reduce mutual interference"
+    },
+    {
+      "name": "representational similarity analysis (fMRI pattern analysis)",
+      "role": "primary_lens",
+      "one_line": "neural representational distance between competing memories indexed by multivariate patterns"
+    },
+    {
+      "name": "memory interference theory",
+      "role": "context",
+      "one_line": "overlap between memory traces causes interference and forgetting"
+    }
+  ],
+  "core_question": "Are behavioral and neural memory representations adaptively distorted to reduce interference between similar memories?",
+  "key_assumptions": [
+    "similarity between memories drives interference and forgetting",
+    "exaggerating subtle differences can reduce mutual interference",
+    "parietal cortex carries feature-specific memory content during recall"
+  ],
+  "manipulations": [
+    "subtle color differences between otherwise identical object images",
+    "whether color was diagnostic for discriminating competing memories",
+    "repeated learning and retrieval of object-color associations"
+  ],
+  "key_findings": [
+    "behavioral color memory exaggerates differences between similar objects",
+    "greater memory exaggeration is associated with lower memory interference",
+    "color information in parietal cortex is stronger when color discriminates competing memories",
+    "greater representational distance in parietal cortex predicts more exaggeration and less interference"
+  ],
+  "interpretations": [
+    "memory representations are adaptively distorted away from competitors to reduce interference",
+    "parietal cortex supports feature-level differentiation of competing memories"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "memory interference",
+    "adaptive memory distortion",
+    "representational distance",
+    "parietal cortex",
+    "feature representations",
+    "color memory",
+    "competing memories",
+    "fMRI pattern analysis"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "73ea1cbfd8ff4732eb41447178684734",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}

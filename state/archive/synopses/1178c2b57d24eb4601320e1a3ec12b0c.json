@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "domain-generality vs domain-specificity of metacognition",
+      "role": "primary_lens",
+      "one_line": "tests whether self-evaluation relies on shared or task-specific neural resources"
+    },
+    {
+      "name": "multivoxel pattern analysis of confidence",
+      "role": "extended",
+      "one_line": "fMRI MVPA reveals confidence-predictive activity patterns across domains"
+    },
+    {
+      "name": "prefrontal substrate of metacognitive judgment",
+      "role": "context",
+      "one_line": "anterior PFC implicated as neural locus for evaluating one's own cognition"
+    }
+  ],
+  "core_question": "Does metacognition rely on a domain-general resource or on domain-specific self-evaluative processes?",
+  "key_assumptions": [
+    "metacognitive judgments can be elicited across perception and memory tasks",
+    "stimulus and performance can be matched across task domains",
+    "fMRI activity patterns can index confidence and accuracy"
+  ],
+  "manipulations": [
+    "task domain (perceptual vs memory judgments)",
+    "matched stimulus and performance characteristics across domains",
+    "trial-by-trial metacognitive confidence ratings"
+  ],
+  "key_findings": [
+    "multivoxel patterns in anterior prefrontal cortex predicted confidence in a domain-specific manner",
+    "domain-general signals predicting confidence and accuracy were found in frontal and posterior midline regions",
+    "both domain-specific and domain-general metacognitive representations coexist"
+  ],
+  "interpretations": [
+    "metacognition draws on both domain-general and domain-specific neural substrates",
+    "anterior PFC contributes domain-specific confidence representations while a wider network supports general self-evaluation"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "metacognition",
+    "confidence judgment",
+    "anterior prefrontal cortex",
+    "multivoxel pattern analysis",
+    "perception versus memory",
+    "domain-general self-evaluation",
+    "frontal midline",
+    "fMRI decoding of confidence"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "1178c2b57d24eb4601320e1a3ec12b0c",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "temporal context effect",
+      "role": "primary_lens",
+      "one_line": "long-flash context monotonically alters perceived brightness of a short flash"
+    },
+    {
+      "name": "retinotopic source reconstruction",
+      "role": "primary_lens",
+      "one_line": "MEG sources mapped to visual-area ROIs to dissociate brightness from luminance"
+    },
+    {
+      "name": "bottom-up vs top-down/lateral brightness coding",
+      "role": "extended",
+      "one_line": "fast stimulus-energy response vs slower context-driven integration"
+    }
+  ],
+  "core_question": "Which visual cortical areas and time windows encode context-dependent brightness versus physical luminance?",
+  "key_assumptions": [
+    "perceived brightness can dissociate from physical luminance",
+    "MEG source reconstruction can isolate occipital ROIs",
+    "TCE arises from interaction between long-flash context and short flash"
+  ],
+  "manipulations": [
+    "onset asynchrony between short flash and constant long-flash patch",
+    "onset- vs offset-synchronized short flashes",
+    "physical luminance level of short flash"
+  ],
+  "key_findings": [
+    "TCE-related responses in LO and V4 at 200-250 ms",
+    "luminance-driven responses in V1/V2, V4 and VO around 100 ms",
+    "different visual areas show differential representation of onset vs offset synchronized flashes"
+  ],
+  "interpretations": [
+    "two processes underlie brightness coding: fast bottom-up energy and slower context-driven top-down/lateral",
+    "V4 may dynamically integrate luminance signals into brightness perception"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "temporal context effect",
+    "brightness perception",
+    "perceived brightness vs luminance",
+    "MEG source reconstruction",
+    "retinotopic mapping",
+    "V4 integration",
+    "LO area",
+    "onset asynchrony"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "4853ac46d6e078f6ebe3b5f72df41b2b",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:47:39+09:00",
+  "review_status": "auto_unreviewed"
+}

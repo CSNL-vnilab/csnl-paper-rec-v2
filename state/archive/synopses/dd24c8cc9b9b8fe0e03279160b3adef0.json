@@ -1,0 +1,64 @@
+{
+  "frameworks": [
+    {
+      "name": "successor representation",
+      "role": "extended",
+      "one_line": "state encoding by predicted future states, learned probabilistically across contexts"
+    },
+    {
+      "name": "model-based vs model-free reinforcement learning",
+      "role": "compared_against",
+      "one_line": "two classical RL strategies between which SR provides an intermediate"
+    },
+    {
+      "name": "Bayesian uncertainty-weighted prediction-error learning",
+      "role": "primary_lens",
+      "one_line": "updates balance new observations against existing knowledge given uncertainty"
+    },
+    {
+      "name": "hippocampal predictive map",
+      "role": "context",
+      "one_line": "hippocampus hypothesized to encode SR for future-reward prediction"
+    }
+  ],
+  "core_question": "How can the successor representation be learned and arbitrated across contexts when uncertainty and task switches matter?",
+  "key_assumptions": [
+    "agents encode states via predicted future state occupancy (SR)",
+    "learning should adapt under uncertainty in observations vs prior knowledge",
+    "multiple contexts require multiple task-specific SRs",
+    "context inference can be driven by prediction accuracy"
+  ],
+  "manipulations": [
+    "introduction of contextual switches requiring task-specific SRs",
+    "varying uncertainty between new observations and existing knowledge",
+    "tasks demanding contextual memory and generalisation"
+  ],
+  "key_findings": [
+    "probabilistic SR learning rule optimally weights new evidence against prior estimates",
+    "model maintains and arbitrates multiple task-specific SRs across contexts",
+    "context selection driven by predictive accuracy of each SR",
+    "model captures animal behaviour in contextual memory and generalisation tasks"
+  ],
+  "interpretations": [
+    "SR learning should be cast as Bayesian inference balancing uncertainty",
+    "multi-context SR arbitration accounts for behaviour beyond single-task SR"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "successor representation",
+    "context-dependent learning",
+    "prediction error",
+    "uncertainty-weighted updating",
+    "multi-context inference",
+    "hippocampal predictive map",
+    "reinforcement learning",
+    "generalisation across tasks"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "dd24c8cc9b9b8fe0e03279160b3adef0",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}

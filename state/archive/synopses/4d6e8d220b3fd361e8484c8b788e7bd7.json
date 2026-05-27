@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "dopamine D2 receptor neuromodulation",
+      "role": "primary_lens",
+      "one_line": "D2R signaling in PFC gates learning, flexibility, and motivation"
+    },
+    {
+      "name": "prefrontal neural population coding",
+      "role": "extended",
+      "one_line": "direction-selective spiking encodes visuomotor associations under D2R control"
+    },
+    {
+      "name": "cortical alpha oscillation dynamics",
+      "role": "context",
+      "one_line": "alpha-band LFP indexes prefrontal disengagement under D2R blockade"
+    },
+    {
+      "name": "schizophrenia cognitive dysfunction",
+      "role": "context",
+      "one_line": "motivates D2R-PFC link to affective and cognitive symptoms"
+    }
+  ],
+  "core_question": "How do prefrontal D2 receptors modulate executive functions and neural coding during visuomotor associative learning in monkeys?",
+  "key_assumptions": [
+    "lateral PFC D2R causally mediates executive functions",
+    "local eticlopride injection selectively blocks D2R in PFC",
+    "spiking selectivity and LFP power index circuit computation"
+  ],
+  "manipulations": [
+    "local D2R antagonist (eticlopride) injection into lateral PFC",
+    "novel versus highly familiar visuomotor associations",
+    "left versus right saccade target mapping"
+  ],
+  "key_findings": [
+    "D2R blockade impaired associative learning and cognitive flexibility",
+    "D2R blockade reduced motivation but spared familiar-association performance",
+    "eticlopride reduced saccade-direction selectivity of prefrontal neurons",
+    "D2R blockade decreased neural information and increased alpha oscillations"
+  ],
+  "interpretations": [
+    "prefrontal D2R supports new learning and flexibility but not consolidated behavior",
+    "D2R loss in PFC degrades task-relevant coding and elevates idling alpha rhythms"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "dopamine D2 receptor",
+    "prefrontal cortex",
+    "eticlopride pharmacology",
+    "visuomotor association learning",
+    "cognitive flexibility",
+    "saccade direction selectivity",
+    "alpha oscillations",
+    "non-human primate electrophysiology"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "4d6e8d220b3fd361e8484c8b788e7bd7",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}

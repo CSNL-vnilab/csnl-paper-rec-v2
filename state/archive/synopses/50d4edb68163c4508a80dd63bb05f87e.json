@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "evidence accumulation",
+      "role": "primary_lens",
+      "one_line": "provisional choice formed by integrating evidence until action time"
+    },
+    {
+      "name": "changes-of-mind model",
+      "role": "extended",
+      "one_line": "behavioral model predicts mid-trial reversals of provisional decision"
+    },
+    {
+      "name": "frontal orienting fields motor-planning account",
+      "role": "context",
+      "one_line": "FOF represents provisional decision driving orienting action"
+    }
+  ],
+  "core_question": "Does the rat FOF encode a provisional decision during dynamic evidence accumulation, tracking model-predicted changes of mind?",
+  "key_assumptions": [
+    "accumulated evidence drives a provisional choice prior to action",
+    "behavioral model of decision process generalizes to neural reversals",
+    "FOF firing rates can be mapped to provisional choice state"
+  ],
+  "manipulations": [
+    "static vs dynamic evidence accumulation environment",
+    "trials inducing model-predicted changes of mind",
+    "temporal alignment to expected action time"
+  ],
+  "key_findings": [
+    "FOF encodes accumulated evidence throughout decision formation",
+    "encoding gain rises temporally toward potential action time",
+    "FOF firing-rate reversals align with model-predicted changes of mind"
+  ],
+  "interpretations": [
+    "FOF represents provisional decisions even in dynamic uncertain environments",
+    "this representation supports rapid motor execution when action is required"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "frontal orienting fields",
+    "evidence accumulation",
+    "changes of mind",
+    "provisional decision",
+    "dynamic environment",
+    "temporal gain modulation",
+    "choice coding",
+    "rat decision making"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "50d4edb68163c4508a80dd63bb05f87e",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}
