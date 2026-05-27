@@ -1,0 +1,55 @@
+{
+  "frameworks": [
+    {
+      "name": "population-level dimensionality reduction and decoding",
+      "role": "primary_lens",
+      "one_line": "isolate population activity patterns linked to stimulus, action, and motion"
+    },
+    {
+      "name": "sensorimotor linking via mPFC",
+      "role": "context",
+      "one_line": "mPFC posited to bridge sensory inputs and learned behavioral outputs"
+    },
+    {
+      "name": "goal-directed action selection",
+      "role": "extended",
+      "one_line": "mPFC contributes to choosing between distinct learned avoidance actions"
+    }
+  ],
+  "core_question": "How does medial prefrontal cortex population activity link tone stimuli to selection among learned avoidance actions?",
+  "key_assumptions": [
+    "population calcium imaging captures behaviorally relevant mPFC activity",
+    "stimulus, action, and motion signals are separable subspaces in population activity",
+    "active avoidance is a goal-directed learned behavior"
+  ],
+  "manipulations": [
+    "tone-signaled active avoidance paradigm in mice",
+    "two distinct learned avoidance actions to compare"
+  ],
+  "key_findings": [
+    "tone-related population activity was not informative about behavior",
+    "avoidance-related activity predicted upcoming avoidance actions",
+    "avoidance-related activity distinguished between two different learned avoidance actions"
+  ],
+  "interpretations": [
+    "mPFC population activity supports selection between different goal-directed actions rather than simple stimulus encoding"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "medial prefrontal cortex",
+    "population calcium imaging",
+    "active avoidance learning",
+    "dimensionality reduction",
+    "neural decoding",
+    "goal-directed action selection",
+    "tone-signaled behavior",
+    "prefrontal population dynamics"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "4144b5db873086cc57d19a2393b527c7",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:45:58+09:00",
+  "review_status": "auto_unreviewed"
+}

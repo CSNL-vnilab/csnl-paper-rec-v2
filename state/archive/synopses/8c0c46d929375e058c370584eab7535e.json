@@ -1,0 +1,56 @@
+{
+  "frameworks": [
+    {
+      "name": "perceptual decision-making with metacognitive confidence",
+      "role": "primary_lens",
+      "one_line": "single-neuron analysis testing whether SC encodes decision versus decision confidence"
+    },
+    {
+      "name": "decision-confidence dissociation paradigm",
+      "role": "extended",
+      "one_line": "task design that orthogonalizes perceptual evidence for choice from evidence for confidence"
+    },
+    {
+      "name": "buildup vs burst neuron taxonomy (superior colliculus)",
+      "role": "context",
+      "one_line": "classification of SC neurons by prelude activity used to stratify single-unit analyses"
+    }
+  ],
+  "core_question": "Do individual superior colliculus neurons carry signals reflecting decision confidence beyond decision accuracy?",
+  "key_assumptions": [
+    "decision accuracy and reported confidence are normally correlated and must be dissociated",
+    "SC neuronal subtypes (buildup vs non-buildup) may carry distinct decision-related signals",
+    "single-neuron modulation indexes underlying computation"
+  ],
+  "manipulations": [
+    "task dissociating perceptual information for the decision from perceptual information for the confidence report",
+    "stratification of SC neurons by prelude activity (buildup vs non-buildup)"
+  ],
+  "key_findings": [
+    "when accuracy and confidence covaried, modulation arose primarily in buildup neurons",
+    "after isolating confidence from accuracy, only a few neurons (mostly buildup) showed unique confidence-related signals",
+    "effect sizes for unique confidence coding were very small"
+  ],
+  "interpretations": [
+    "single SC neurons encode the decision itself rather than decision confidence",
+    "prior population-level confidence signals were largely inherited from accuracy covariation"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "superior colliculus single neurons",
+    "decision confidence",
+    "buildup neurons",
+    "perceptual decision-making",
+    "confidence-accuracy dissociation",
+    "lateral intraparietal area",
+    "supplementary eye field",
+    "metacognition in monkeys"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "8c0c46d929375e058c370584eab7535e",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:45:58+09:00",
+  "review_status": "auto_unreviewed"
+}

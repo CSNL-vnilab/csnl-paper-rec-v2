@@ -1,0 +1,62 @@
+{
+  "frameworks": [
+    {
+      "name": "recurrent neural network (connectionist)",
+      "role": "primary_lens",
+      "one_line": "RNN hidden-unit geometry compared with human neural representations during magnitude comparison"
+    },
+    {
+      "name": "neural state space / population geometry",
+      "role": "primary_lens",
+      "one_line": "parallel context-specific number lines aligned across contexts in neural state space"
+    },
+    {
+      "name": "neural normalisation",
+      "role": "extended",
+      "one_line": "normalisation reframed as a mechanism that supports relational transfer across scales"
+    },
+    {
+      "name": "abstract relational generalisation",
+      "role": "context",
+      "one_line": "transfer of 'more/less' concept across contexts at different physical scales"
+    }
+  ],
+  "core_question": "How do humans and recurrent neural networks represent magnitude so that relational concepts like 'more' or 'less' generalise across contexts on different physical scales?",
+  "key_assumptions": [
+    "magnitude comparison can be modelled with a shared task in humans and RNNs",
+    "multivariate signals (brain and hidden units) expose representational geometry",
+    "generalisation requires aligning context-specific representations"
+  ],
+  "manipulations": [
+    "context with different physical magnitude scales",
+    "magnitude comparison task across contexts",
+    "human brain signals vs RNN hidden-unit activity as model systems"
+  ],
+  "key_findings": [
+    "both humans and RNNs developed parallel 'number lines' per context",
+    "context-specific number state spaces were aligned across contexts",
+    "alignment explicitly facilitated generalisation of 'more' and 'less'"
+  ],
+  "interpretations": [
+    "neural normalisation has a previously overlooked role in supporting transfer of abstract relational knowledge",
+    "aligned state-space geometry is a shared solution to magnitude generalisation in biological and artificial systems"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "magnitude comparison",
+    "relational generalisation",
+    "neural state space alignment",
+    "number line representation",
+    "recurrent neural network",
+    "context generalisation",
+    "neural normalisation",
+    "representational geometry"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "1463bfa4d9558916ad96a265e631fc49",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:45:58+09:00",
+  "review_status": "auto_unreviewed"
+}

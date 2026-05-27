@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "production-style responsibility attribution",
+      "role": "primary_lens",
+      "one_line": "trait responsibility scales with a trait's predictive contribution to behavior"
+    },
+    {
+      "name": "counterfactual-style responsibility attribution",
+      "role": "compared_against",
+      "one_line": "responsibility judged by whether the outcome would change absent the trait"
+    },
+    {
+      "name": "folk-psychological model of personality traits as agents",
+      "role": "extended",
+      "one_line": "intra-personal trait society modeled like inter-personal group responsibility"
+    },
+    {
+      "name": "models of personal responsibility in groups",
+      "role": "context",
+      "one_line": "prior group-responsibility formalism adapted to traits within one person"
+    }
+  ],
+  "core_question": "Do people attribute responsibility to personality traits the way they attribute responsibility to people in groups?",
+  "key_assumptions": [
+    "traits can be reasoned about as quasi-agents inside a person",
+    "predictive relationships between traits and actions can be elicited and quantified",
+    "group-responsibility models transfer to intra-personal trait responsibility"
+  ],
+  "manipulations": [
+    "trait-action pairs whose predictive strength was varied",
+    "Experiment 1 elicited predictive relationships; Experiment 2 elicited responsibility judgments",
+    "alternative responsibility model classes (production-style vs counterfactual-style)"
+  ],
+  "key_findings": [
+    "responsibility judgments were best explained by a production-style model",
+    "responsibility scaled with a trait's predictive contribution to behavior",
+    "counterfactual-style models did not fit trait responsibility as well",
+    "trait responsibility shows both similarities to and differences from group responsibility"
+  ],
+  "interpretations": [
+    "folk psychology treats traits like members of an internal group, but weighs them by predictive contribution rather than counterfactual difference-making",
+    "trait responsibility attribution diverges from personal responsibility in groups specifically on counterfactual reasoning"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "trait responsibility attribution",
+    "folk psychology of personality",
+    "production-style responsibility model",
+    "counterfactual responsibility",
+    "predictive contribution to behavior",
+    "group responsibility attribution",
+    "intra-personal vs inter-personal responsibility",
+    "trait-action predictive relationship"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "ec59d67435c86beb7276249b9441769d",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

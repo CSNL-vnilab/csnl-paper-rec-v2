@@ -1,0 +1,56 @@
+{
+  "frameworks": [
+    {
+      "name": "population receptive field (pRF) mapping",
+      "role": "primary_lens",
+      "one_line": "Models spatial tuning of voxels to characterize visual field coverage across face areas."
+    },
+    {
+      "name": "dual-stream face processing (ventral vs lateral)",
+      "role": "extended",
+      "one_line": "Functional dissociation of static vs dynamic face streams extended to spatial-computation differences."
+    },
+    {
+      "name": "structural-functional scaffolding via white-matter connectivity",
+      "role": "primary_lens",
+      "one_line": "Diffusion-MRI tracts from EVC shape spatial tuning of high-level face regions."
+    }
+  ],
+  "core_question": "Do ventral and lateral face-selective regions perform different spatial computations, and are these grounded in white-matter connections to early visual cortex?",
+  "key_assumptions": [
+    "pRF properties reflect feedforward spatial sampling of high-level regions.",
+    "White-matter endpoints in EVC indicate the eccentricity origin of inputs."
+  ],
+  "manipulations": [
+    "Stream (ventral vs lateral face-selective regions).",
+    "Modality (functional pRF mapping vs diffusion MRI tractography)."
+  ],
+  "key_findings": [
+    "Ventral face-selective pRFs concentrate near the foveal center of gaze.",
+    "Lateral face-selective pRFs extend into peripheral visual field.",
+    "Ventral regions connect predominantly with foveal EVC via white matter.",
+    "Lateral regions show more uniform white-matter connectivity across EVC eccentricities."
+  ],
+  "interpretations": [
+    "Spatial computations differ across ventral and lateral face streams.",
+    "Fine-grained white-matter patterning from EVC scaffolds spatial tuning in high-level cortex."
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "population receptive field",
+    "face-selective cortex",
+    "ventral vs lateral visual stream",
+    "diffusion MRI tractography",
+    "white matter connectivity",
+    "eccentricity bias",
+    "foveal vs peripheral representation",
+    "early visual cortex inputs"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "d7546b9894345a9844e8a4bcd8f7e390",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:45:58+09:00",
+  "review_status": "auto_unreviewed"
+}

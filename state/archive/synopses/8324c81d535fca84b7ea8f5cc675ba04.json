@@ -1,0 +1,49 @@
+{
+  "frameworks": [
+    {
+      "name": "Continuous Performance Test paradigm",
+      "role": "primary_lens",
+      "one_line": "Sustained-attention task family used for ADHD detection."
+    },
+    {
+      "name": "signal-detection / classification accuracy",
+      "role": "context",
+      "one_line": "ADHD vs control discrimination via test scores."
+    }
+  ],
+  "core_question": "Does the Mathematics CPT compare favorably with CPT II and the Brown Scale in detecting ADHD?",
+  "key_assumptions": [
+    "CPT-type tasks index attention deficits relevant to ADHD",
+    "Self-report (Brown Scale) provides a partly convergent attention measure"
+  ],
+  "manipulations": [
+    "Test type: MATH-CPT vs CPT II vs Brown Scale",
+    "Group: ADHD vs control"
+  ],
+  "key_findings": [
+    "MATH-CPT classified 74.5% of participants vs 71.6% for CPT II",
+    "Moderate correlations between the two CPT-type tests",
+    "MATH-CPT final attention formula correlated significantly with Brown Scale; CPT II did not"
+  ],
+  "interpretations": [
+    "MATH-CPT performs at least as well as CPT II for ADHD detection and aligns better with questionnaire-based attention ratings"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "Continuous Performance Test",
+    "MATH-CPT",
+    "CPT II",
+    "Brown Scale",
+    "ADHD diagnosis",
+    "sustained attention",
+    "test comparison",
+    "classification accuracy"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "8324c81d535fca84b7ea8f5cc675ba04",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:45:58+09:00",
+  "review_status": "auto_unreviewed"
+}

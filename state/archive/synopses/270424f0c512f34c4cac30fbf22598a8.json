@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "neuromodulatory systems (catecholamine vs acetylcholine)",
+      "role": "primary_lens",
+      "one_line": "Distinct neuromodulator roles tested at cortex-wide network level in humans"
+    },
+    {
+      "name": "cortical circuit modeling (E/I balance and intracortical transmission)",
+      "role": "extended",
+      "one_line": "Circuit model linking pharmacology to local E/I balance and transmission changes"
+    },
+    {
+      "name": "exploration-exploitation in decision-making",
+      "role": "context",
+      "one_line": "Catecholamine mechanism linked to increased behavioral exploration"
+    }
+  ],
+  "core_question": "Do catecholamines and acetylcholine produce dissociable effects on cortex-wide network interactions and behavior in humans?",
+  "key_assumptions": [
+    "Pharmacological boosts selectively elevate target neuromodulator tone",
+    "Cortex-wide correlations index large-scale network interactions",
+    "Local E/I balance and intracortical transmission can be inferred from circuit models"
+  ],
+  "manipulations": [
+    "Pharmacological boost of catecholamine vs acetylcholine levels",
+    "Brain state: visual task vs rest",
+    "Behavioral task: perceptual choice vs value-based choice"
+  ],
+  "key_findings": [
+    "Catecholamine boost increased cortex-wide interactions during task but not rest",
+    "Acetylcholine boost decreased cortex-wide correlations during rest but not task",
+    "Circuit modeling attributed dissociation to differential E/I balance vs transmission changes",
+    "Catecholaminergic mechanism predicted and produced increased behavioral exploration"
+  ],
+  "interpretations": [
+    "Catecholamines and acetylcholine exert doubly dissociable effects on large-scale cortical dynamics",
+    "Differential modulation of local E/I balance vs intracortical transmission explains the dissociation"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "catecholamines",
+    "acetylcholine",
+    "neuromodulation",
+    "excitation-inhibition balance",
+    "cortex-wide network interactions",
+    "intracortical transmission",
+    "behavioral exploration",
+    "pharmacological manipulation"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "270424f0c512f34c4cac30fbf22598a8",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:45:58+09:00",
+  "review_status": "auto_unreviewed"
+}

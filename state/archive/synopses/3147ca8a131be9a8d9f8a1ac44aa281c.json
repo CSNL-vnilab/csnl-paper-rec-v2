@@ -1,0 +1,50 @@
+{
+  "frameworks": [
+    {
+      "name": "neural population subspace analysis",
+      "role": "primary_lens",
+      "one_line": "Population activity decomposed into orthogonal task-epoch subspaces in motor cortex."
+    },
+    {
+      "name": "existing motor cortical models (overlapping subspace accounts)",
+      "role": "compared_against",
+      "one_line": "Models predicting shared preparation/movement subspaces are inconsistent with observed orthogonality."
+    }
+  ],
+  "core_question": "How does the same motor cortical population implement preparation and movement on short timescales at the population level?",
+  "key_assumptions": [
+    "neural populations can rapidly change the computation they perform",
+    "task-related computation is readable from population-level subspaces",
+    "single neurons participate in both preparation and movement"
+  ],
+  "manipulations": [
+    "task epoch contrast: reach preparation vs movement execution"
+  ],
+  "key_findings": [
+    "preparatory and movement responses occupy exclusive, orthogonal population subspaces",
+    "response correlations reorganize completely between preparation and movement",
+    "preparatory subspace activity is lawfully related to subsequent movement subspace activity"
+  ],
+  "interpretations": [
+    "the same population acts as two separate circuits at different times via orthogonal subspaces",
+    "preparation and movement are separate but linked computations linked across subspaces"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "motor cortex population activity",
+    "preparatory subspace",
+    "movement subspace",
+    "orthogonal neural subspaces",
+    "reach preparation",
+    "population-level computation",
+    "response correlation reorganization",
+    "neural population dynamics"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "3147ca8a131be9a8d9f8a1ac44aa281c",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:45:58+09:00",
+  "review_status": "auto_unreviewed"
+}
