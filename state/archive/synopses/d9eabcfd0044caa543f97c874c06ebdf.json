@@ -1,0 +1,53 @@
+{
+  "frameworks": [
+    {
+      "name": "anchoring-and-adjustment",
+      "role": "primary_lens",
+      "one_line": "Inferences start from an anchor value and are adjusted toward the target."
+    },
+    {
+      "name": "affect inference / theory of mind",
+      "role": "context",
+      "one_line": "Inferring others' feelings from brief scenario descriptions."
+    }
+  ],
+  "core_question": "Do people use irrelevant semantic and numerical anchors when inferring others' feelings from scenarios, and does time pressure reduce adjustment?",
+  "key_assumptions": [
+    "Affect inference proceeds via an anchor-then-adjust process",
+    "Adjustment from an anchor is effortful and resource-limited",
+    "Experimenter-supplied irrelevant values can act as anchors"
+  ],
+  "manipulations": [
+    "Anchor value (high vs low)",
+    "Anchor type (semantic vs numerical)",
+    "Time pressure (present vs absent)",
+    "Between-subject scenario assignment"
+  ],
+  "key_findings": [
+    "Affect inferences were biased toward the supplied anchor",
+    "Bias appeared in a between-subject design across two studies",
+    "Time pressure increased anchoring under high anchors but not low anchors"
+  ],
+  "interpretations": [
+    "People integrate context with inference but adjust away from initial anchors",
+    "Time pressure discourages adequate adjustment, increasing anchor bias"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "anchoring-and-adjustment heuristic",
+    "affect inference",
+    "mental state attribution",
+    "scenario-based judgement",
+    "time pressure on inference",
+    "semantic anchor",
+    "numerical anchor",
+    "cognitive bias in social inference"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "d9eabcfd0044caa543f97c874c06ebdf",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:21:09+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,62 @@
+{
+  "frameworks": [
+    {
+      "name": "transcranial direct current stimulation neuromodulation",
+      "role": "primary_lens",
+      "one_line": "anodal TDCS over M1-HAND probed for lasting shifts in corticospinal excitability"
+    },
+    {
+      "name": "individual-differences multimodal mapping",
+      "role": "extended",
+      "one_line": "linking per-subject MEP change to task-related fMRI activity in motor network"
+    },
+    {
+      "name": "motor evoked potential excitability assay",
+      "role": "context",
+      "one_line": "single-pulse TMS-evoked MEPs index corticospinal output before and after TDCS"
+    }
+  ],
+  "core_question": "Does the individual change in corticospinal excitability after M1-HAND TDCS relate to changes in task-related motor cortical activity?",
+  "key_assumptions": [
+    "anodal TDCS can shift corticospinal excitability beyond stimulation",
+    "MEP amplitude indexes corticospinal output",
+    "task-related fMRI activity reflects cortical motor engagement",
+    "inter-individual variability is informative rather than noise"
+  ],
+  "manipulations": [
+    "real vs sham anodal TDCS at 0.75 mA for 20 min",
+    "pre vs post TDCS measurements",
+    "double-blinded cross-over across separate days",
+    "visuomotor tracking task during fMRI"
+  ],
+  "key_findings": [
+    "no consistent group-level aftereffect of real TDCS on mean MEP amplitude, task activity, or performance",
+    "individual MEP-amplitude change correlated positively with task-related activity change in supplementary motor area",
+    "individual MEP-amplitude change related to AP-LM MEP latency change"
+  ],
+  "interpretations": [
+    "TDCS aftereffects are best captured at the individual level rather than group means",
+    "corticospinal excitability shifts co-vary with supplementary motor area engagement"
+  ],
+  "limitations_noted": [
+    "small sample of seventeen healthy volunteers",
+    "no consistent mean effect of real TDCS"
+  ],
+  "connecting_signals": [
+    "transcranial direct current stimulation",
+    "primary motor cortex M1-HAND",
+    "corticospinal excitability",
+    "motor evoked potentials",
+    "supplementary motor area",
+    "task-related fMRI",
+    "inter-individual variability",
+    "visuomotor tracking"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "d3d7808b844e12c93963ec174bcbe183",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}

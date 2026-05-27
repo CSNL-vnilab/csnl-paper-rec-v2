@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "predictive coding",
+      "role": "primary_lens",
+      "one_line": "Bayesian framework where prediction errors from suppressed percept drive perceptual transitions"
+    },
+    {
+      "name": "mutual inhibition with adaptation",
+      "role": "compared_against",
+      "one_line": "Established bistability model based on competing populations and adaptation"
+    },
+    {
+      "name": "noise-driven bistability",
+      "role": "compared_against",
+      "one_line": "Model where stochastic noise alone triggers perceptual switches"
+    },
+    {
+      "name": "adaptation plus noise",
+      "role": "compared_against",
+      "one_line": "Hybrid model combining adaptation dynamics with noise-driven switching"
+    }
+  ],
+  "core_question": "Can a predictive coding model account for endogenous perceptual transitions during bistable vision and explain neural signals?",
+  "key_assumptions": [
+    "perception follows a generic Bayesian predictive coding framework",
+    "endogenous transitions arise from residual evidence for the suppressed percept",
+    "prediction errors emerge from mismatch between predicted and inferred percept"
+  ],
+  "manipulations": [
+    "bistable ambiguous stimulus viewing during fMRI",
+    "model parameter encoding perceptual stabilization fitted per participant",
+    "voxel-wise comparison across competing bistability models"
+  ],
+  "key_findings": [
+    "simulations reproduced temporal characteristics of perceptual bistability",
+    "stabilization parameter correlated with measured transition frequency across participants",
+    "predictive coding prediction errors correlated with bilateral inferior frontal gyri and anterior insula signals",
+    "voxel-wise selection favored predictive coding over conventional analyses in frontal regions"
+  ],
+  "interpretations": [
+    "bistable perception can be cast as a consequence of predictive coding prediction errors",
+    "frontal prediction-error signals support a predictive coding account of perceptual switching"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "bistable perception",
+    "predictive coding",
+    "prediction error",
+    "perceptual transitions",
+    "model-based fMRI",
+    "Bayesian inference",
+    "perceptual stabilization",
+    "anterior insula"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "b52567bc465c296a1175d72cd6ade0bb",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:21:09+09:00",
+  "review_status": "auto_unreviewed"
+}

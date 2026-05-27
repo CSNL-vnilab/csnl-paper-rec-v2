@@ -1,0 +1,60 @@
+{
+  "canonical_id": "892a1de295beff7bf493a58cdb477835",
+  "frameworks": [
+    {
+      "name": "Support Vector Machine classification",
+      "role": "primary_lens",
+      "one_line": "linear SVM classifies tDCS responders from individualized electric field features"
+    },
+    {
+      "name": "MRI-derived electric field modeling",
+      "role": "primary_lens",
+      "one_line": "person-specific finite-element current models quantify delivered field"
+    },
+    {
+      "name": "precision cognitive intervention",
+      "role": "context",
+      "one_line": "framing for individualized stimulation optimization in older adults"
+    }
+  ],
+  "core_question": "Can individual variability in MRI-derived tDCS electric fields predict working-memory improvement after stimulation?",
+  "key_assumptions": [
+    "delivered electric field varies meaningfully across individuals",
+    "field characteristics near stimulation electrodes drive cognitive response",
+    "responder status is a learnable function of current features"
+  ],
+  "manipulations": [
+    "individual electric field components derived from MRI models",
+    "responder vs non-responder grouping based on N-back change",
+    "tDCS at F3/F4 paired with two-week cognitive training"
+  ],
+  "key_findings": [
+    "SVM on current features classified responders vs non-responders with 86% accuracy",
+    "median current intensity near electrodes positively related to working-memory gain",
+    "current direction near electrodes also related to intervention response"
+  ],
+  "interpretations": [
+    "individual electric-field variability is a tractable predictor of tDCS cognitive benefit",
+    "field-informed targeting could enable person-specific tDCS optimization"
+  ],
+  "limitations_noted": [
+    "small pilot sample of fourteen healthy older adults",
+    "proof-of-concept design rather than clinical trial"
+  ],
+  "connecting_signals": [
+    "transcranial direct current stimulation",
+    "individual variability in electric field",
+    "MRI-derived current modeling",
+    "working memory training",
+    "responder classification",
+    "support vector machine",
+    "precision neuromodulation",
+    "older adults cognition"
+  ],
+  "abstract_coverage": 1.0,
+  "out_of_scope_note": null,
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:21:09+09:00",
+  "review_status": "auto_unreviewed"
+}

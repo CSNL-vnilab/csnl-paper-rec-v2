@@ -1,0 +1,52 @@
+{
+  "frameworks": [
+    {
+      "name": "reinforcement learning (RPE hypothesis)",
+      "role": "primary_lens",
+      "one_line": "phasic dopamine encodes reward prediction errors in basal ganglia"
+    },
+    {
+      "name": "temporal uncertainty / state estimation",
+      "role": "extended",
+      "one_line": "imperfect time-to-reward estimate is added as a key constraint on the learner"
+    }
+  ],
+  "core_question": "Can RPE models be reconciled with the observed pre-reward dopamine ramps under realistic temporal uncertainty?",
+  "key_assumptions": [
+    "phasic dopamine maps onto RPE signal",
+    "animals cannot perfectly estimate time-to-reward",
+    "learner is unbiased given its state estimate",
+    "sensory feedback reduces temporal uncertainty"
+  ],
+  "manipulations": [
+    "presence vs absence of sensory feedback during the delay",
+    "learning duration (post-extensive training)"
+  ],
+  "key_findings": [
+    "with sensory feedback, an unbiased learner produces ramping RPEs before reward",
+    "without sensory feedback, post-learning RPEs are flat",
+    "conventional fixed-delay RPE models predict convergence to baseline, conflicting with observed ramps"
+  ],
+  "interpretations": [
+    "dopamine ramps are consistent with the RPE hypothesis once state/temporal uncertainty is included",
+    "feedback-driven uncertainty reduction reconciles ramping and flat dopamine observations"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "dopamine ramps",
+    "reward prediction error",
+    "temporal uncertainty",
+    "state uncertainty",
+    "sensory feedback",
+    "basal ganglia reinforcement learning",
+    "phasic dopamine signal",
+    "time-to-reward estimation"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "2f61ded14b7f7ccfb472673bcb2a8ea8",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:21:09+09:00",
+  "review_status": "auto_unreviewed"
+}

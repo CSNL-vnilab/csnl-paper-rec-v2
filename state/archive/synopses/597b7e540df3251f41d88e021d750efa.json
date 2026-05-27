@@ -1,0 +1,66 @@
+{
+  "frameworks": [
+    {
+      "name": "data-driven controllability map",
+      "role": "primary_lens",
+      "one_line": "learn finite-horizon reachable manifold from input-output stimulation data without explicit dynamics model"
+    },
+    {
+      "name": "neural population manifold",
+      "role": "extended",
+      "one_line": "stimulation-evoked trajectories traverse a reachable manifold partially overlapping intrinsic activity manifold"
+    },
+    {
+      "name": "linear-superposition encoding model",
+      "role": "alternative_lens",
+      "one_line": "responses approximated as linear sum of localized stimulation fields with weak history dependence"
+    },
+    {
+      "name": "model-based closed-loop neuromodulation",
+      "role": "compared_against",
+      "one_line": "approaches requiring detailed in vivo circuit models or trial-and-error open-loop tuning"
+    }
+  ],
+  "core_question": "Can patterned multi-electrode microstimulation steer cortical population activity to designated target states without an explicit circuit model?",
+  "key_assumptions": [
+    "controllability is learnable from short random pulse-sequence training epochs",
+    "weak-stimulation regime yields approximately linear superposition of stimulation fields",
+    "population states occupy a low-dimensional manifold accessible via electrode subsets"
+  ],
+  "manipulations": [
+    "multi-electrode pulse sequences delivered through subsets of electrodes",
+    "stimulation parameters varied across sessions",
+    "designated target population states for closed-loop steering"
+  ],
+  "key_findings": [
+    "REACH-Ctrl achieves high real-time control accuracy in macaque prefrontal cortex",
+    "control is robust across sessions and stimulation parameters",
+    "reachable manifold shows substantial but incomplete overlap with intrinsic activity manifold",
+    "multi-electrode responses are well approximated by linear sum of stimulation fields with modest history dependence"
+  ],
+  "interpretations": [
+    "population control is feasible without explicit knowledge of connectivity or dynamics",
+    "weak patterned microstimulation engages a structured, partially intrinsic reachable subspace"
+  ],
+  "limitations_noted": [
+    "reachable manifold only partially overlaps the intrinsic activity manifold",
+    "linear-superposition approximation holds in the weak-stimulation regime"
+  ],
+  "connecting_signals": [
+    "patterned microstimulation",
+    "closed-loop cortical control",
+    "reachable manifold",
+    "multi-electrode stimulation",
+    "population spiking activity",
+    "macaque prefrontal cortex",
+    "stimulation fields",
+    "brain-computer interface"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "597b7e540df3251f41d88e021d750efa",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}

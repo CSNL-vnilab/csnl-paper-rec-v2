@@ -1,0 +1,64 @@
+{
+  "frameworks": [
+    {
+      "name": "lazy vs rich training dynamics",
+      "role": "primary_lens",
+      "one_line": "neural network transitions from kernel-like lazy regime to feature-learning rich regime"
+    },
+    {
+      "name": "neural tangent kernel",
+      "role": "compared_against",
+      "one_line": "initial NTK fits a kernel regression solution that fails to generalize"
+    },
+    {
+      "name": "feature learning theory",
+      "role": "extended",
+      "one_line": "late-time feature learning identifies a generalizing solution after train loss is low"
+    },
+    {
+      "name": "grokking phenomenon",
+      "role": "context",
+      "one_line": "delayed generalization where test loss drops long after train loss"
+    }
+  ],
+  "core_question": "Can grokking be explained as a transition from lazy to rich training dynamics in a neural network?",
+  "key_assumptions": [
+    "two-layer network on polynomial regression suffices to illustrate the mechanism",
+    "vanilla gradient descent without regularization",
+    "sufficient statistics for test loss can be identified and tracked",
+    "output-scaling parameters control the rate of feature learning"
+  ],
+  "manipulations": [
+    "output-scale parameters controlling feature learning rate",
+    "alignment between initial NTK top eigenvectors and target labels",
+    "dataset size relative to generalization threshold"
+  ],
+  "key_findings": [
+    "grokking arises without regularization in this simple setting",
+    "network first fits a kernel regression solution with initial features",
+    "late-time feature learning later yields a generalizing solution",
+    "key determinants are feature-learning rate and initial-feature/target alignment"
+  ],
+  "interpretations": [
+    "grokking reflects a lazy-to-rich training transition",
+    "delayed generalization requires NTK-label misalignment plus an intermediate dataset-size regime"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "grokking",
+    "lazy vs rich training",
+    "neural tangent kernel alignment",
+    "feature learning dynamics",
+    "delayed generalization",
+    "two-layer network",
+    "polynomial regression",
+    "sufficient statistics for test loss"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "32149f53a725e345d16b643cca4ba3a4",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}

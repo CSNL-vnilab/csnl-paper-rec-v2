@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "multi-dimensional population coding",
+      "role": "primary_lens",
+      "one_line": "decisions, context, and sensory variables coded along multiple population dimensions"
+    },
+    {
+      "name": "one-dimensional attractor dynamics",
+      "role": "compared_against",
+      "one_line": "single attractor axis insufficient to capture PFC decision representations"
+    },
+    {
+      "name": "rotational neural dynamics",
+      "role": "extended",
+      "one_line": "post-accumulation phase exhibits rotational structure during decision-making"
+    },
+    {
+      "name": "context-dependent perceptual decision-making",
+      "role": "context",
+      "one_line": "prefrontal role in selecting task-relevant sensory features under context"
+    }
+  ],
+  "core_question": "How does monkey prefrontal cortex population activity encode decisions across multiple dynamic dimensions?",
+  "key_assumptions": [
+    "task-relevant dimensions can be identified from population activity",
+    "decision variables are encoded at the population level rather than single units",
+    "broadly tuned neurons can simultaneously support distinct coding dimensions"
+  ],
+  "manipulations": [
+    "context cueing which sensory feature is relevant",
+    "presentation of relevant and irrelevant sensory information",
+    "tracking representations across time within the trial"
+  ],
+  "key_findings": [
+    "PFC carries a multi-dimensional code for decision, context, and sensory variables",
+    "representations evolve from a linear accumulation phase to a rotational phase",
+    "coding dimensions arise from a single broadly tuned population, not distinct subpopulations",
+    "dynamic transition coincides with a plateau in decoding accuracy"
+  ],
+  "interpretations": [
+    "PFC decision coding is multi-dimensional and time-evolving rather than one-dimensional attractor-like",
+    "broad tuning supports multiplexed representations across decision phases"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "prefrontal cortex population coding",
+    "context-dependent decision-making",
+    "multi-dimensional neural code",
+    "rotational dynamics",
+    "linear evidence accumulation",
+    "broad tuning",
+    "task-relevant dimensions",
+    "duplicate of paper #547 (same DOI, truncated title)"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "ad782f76e61ce46901529e8cec666451",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}
