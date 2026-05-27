@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "evidence accumulation",
+      "role": "primary_lens",
+      "one_line": "Internal belief about a hidden rule is built by integrating ambiguous sensory cues."
+    },
+    {
+      "name": "normative Bayesian belief updating",
+      "role": "primary_lens",
+      "one_line": "Normative model predicts how belief about the active rule should evolve."
+    },
+    {
+      "name": "model-based neural decoding",
+      "role": "primary_lens",
+      "one_line": "Source-level MEG signals decoded against a computational model of belief."
+    }
+  ],
+  "core_question": "How does the cortex represent and update an internal belief about a hidden behavioral rule across the brain?",
+  "key_assumptions": [
+    "Participants track a hidden rule by accumulating ambiguous cues",
+    "Internal decisions need not be tied to a specific motor effector",
+    "A normative model captures expected belief dynamics"
+  ],
+  "manipulations": [
+    "Unpredictable, hidden changes of the stimulus-response mapping rule",
+    "Ambiguous sensory cues across trials for rule inference",
+    "Visual orientation judgment task as the elementary sensory-motor decision"
+  ],
+  "key_findings": [
+    "Representations of the internal belief about the active rule were found in many cortical areas",
+    "Belief representations extend to occipital (visual) cortex, not only action-related frontal areas",
+    "Profiles of these representations match normative-model predictions and resemble those seen in frontal cortex during overt decisions"
+  ],
+  "interpretations": [
+    "A widely distributed cortical network implements evidence accumulation for internal decisions",
+    "Even visual cortex can represent high-level, abstract beliefs about task rules"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "internal decisions",
+    "evidence accumulation",
+    "stimulus-response mapping rule",
+    "hidden rule tracking",
+    "belief representation in visual cortex",
+    "MEG source-level decoding",
+    "normative model of decision dynamics",
+    "distributed cortical decision network"
+  ],
+  "abstract_coverage": 1.0,
+  "out_of_scope_note": null,
+  "canonical_id": "ab6a2ede63a92807b0e8704d3463dace",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:44:46+09:00",
+  "review_status": "auto_unreviewed"
+}

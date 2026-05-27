@@ -1,0 +1,54 @@
+{
+  "frameworks": [
+    {
+      "name": "temporal discounting",
+      "role": "primary_lens",
+      "one_line": "subjective value of a reward decays with delay to its delivery"
+    },
+    {
+      "name": "expected utility / risk preference",
+      "role": "extended",
+      "one_line": "utility curvature over outcomes treated as separable construct shaping discounting tasks"
+    },
+    {
+      "name": "computational psychiatry",
+      "role": "context",
+      "one_line": "frames choice impulsivity as a quantitative trans-diagnostic phenotype"
+    }
+  ],
+  "core_question": "How do risk preferences and time preferences interact mathematically and neurally to shape measurements of choice impulsivity in psychiatric populations?",
+  "key_assumptions": [
+    "choice impulsivity is a subcomponent of broader impulsivity",
+    "risk and time preferences are behaviourally and neurobiologically distinct constructs",
+    "subjective value can be decomposed into risk-utility and delay-discounting components"
+  ],
+  "manipulations": [],
+  "key_findings": [
+    "risk attitude can confound nearly every standard temporal-discounting assay",
+    "risk preference and time preference dissociate behaviourally and neurally despite shared subjective-value computation"
+  ],
+  "interpretations": [
+    "psychiatric research on impulsivity should jointly model risk and time preferences to recover clean discounting estimates",
+    "accounting for this interaction improves the clinical interpretation of choice impulsivity"
+  ],
+  "limitations_noted": [
+    "opinion piece rather than primary empirical study"
+  ],
+  "connecting_signals": [
+    "choice impulsivity",
+    "temporal discounting",
+    "delay discounting",
+    "risk preference",
+    "subjective value",
+    "computational psychiatry",
+    "utility curvature",
+    "intertemporal choice"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "55976d52661dae2a6d0425bddb5f41e3",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:46:55+09:00",
+  "review_status": "auto_unreviewed"
+}

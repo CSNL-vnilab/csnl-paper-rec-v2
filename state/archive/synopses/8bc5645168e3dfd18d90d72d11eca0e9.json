@@ -1,0 +1,56 @@
+{
+  "frameworks": [
+    {
+      "name": "sequential sampling",
+      "role": "primary_lens",
+      "one_line": "deliberation as accumulation of evidence drawn from memory"
+    },
+    {
+      "name": "memory-based value construction",
+      "role": "extended",
+      "one_line": "long-term memory retrieval supplies evidence for value decisions"
+    },
+    {
+      "name": "value-based decision making",
+      "role": "context",
+      "one_line": "choice between equally appealing options as a paradox of delay"
+    }
+  ],
+  "core_question": "Why does deciding between two equally appealing options take time, and what role does memory play?",
+  "key_assumptions": [
+    "value is not fully precomputed but partially constructed at choice time",
+    "hippocampal long-term memory can supply evidence for value comparison",
+    "deliberation time reflects an evidence-accumulation process"
+  ],
+  "manipulations": [
+    "choices between pairs of familiar food items varying in subjective appeal",
+    "matched vs mismatched value pairings to modulate deliberation difficulty"
+  ],
+  "key_findings": [
+    "deliberation time on familiar food choices tracks hippocampal activity in long-term-memory retrieval regions",
+    "value is partially constructed during deliberation rather than read out as a fixed quantity",
+    "this constructive memory process changes both behavior and brain responses"
+  ],
+  "interpretations": [
+    "memory functions as a supplier of evidence in value-based decisions",
+    "the apparent irrationality of slow deliberation between equal options is resolved by constructive memory sampling"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "sequential sampling",
+    "evidence accumulation",
+    "value-based decision making",
+    "hippocampus",
+    "long-term memory retrieval",
+    "deliberation time",
+    "constructive value",
+    "preference formation"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "8bc5645168e3dfd18d90d72d11eca0e9",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:46:55+09:00",
+  "review_status": "auto_unreviewed"
+}

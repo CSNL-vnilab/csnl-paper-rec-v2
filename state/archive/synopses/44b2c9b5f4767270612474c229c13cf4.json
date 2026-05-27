@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "reference price theory",
+      "role": "primary_lens",
+      "one_line": "Internal price standard consumers use to evaluate observed prices"
+    },
+    {
+      "name": "behavioral price research",
+      "role": "primary_lens",
+      "one_line": "Experimental tradition isolating antecedents and effects of reference price"
+    },
+    {
+      "name": "panel-data brand choice modeling",
+      "role": "alternative_lens",
+      "one_line": "Econometric calibration of reference price models on scanner panel data"
+    },
+    {
+      "name": "integrative framework for reference price",
+      "role": "extended",
+      "one_line": "Organizes formation, retrieval-and-use, and influences of reference price"
+    }
+  ],
+  "core_question": "What does prior research reveal about the formation, retrieval, use, and downstream effects of reference price on consumer purchase decisions?",
+  "key_assumptions": [
+    "Consumers form and retrieve an internal reference price when evaluating offers",
+    "Reference price effects can be studied through both behavioral experiments and panel-data models",
+    "Prior purchase history and contextual moderators shape reference price use"
+  ],
+  "manipulations": [
+    "Reviewed behavioral experiments varying antecedents of reference price",
+    "Reviewed panel-data calibrations of alternative reference price models",
+    "Examined moderators: purchase occasion, store promotional environment, product category"
+  ],
+  "key_findings": [
+    "Two distinct research streams (behavioral and modeling) have produced substantial cumulative evidence",
+    "Antecedents of reference price have measurable effects in experimental settings",
+    "Reference price influences brand choice and other purchase decisions in panel data",
+    "Prior purchase history and contextual moderators systematically shape reference price effects"
+  ],
+  "interpretations": [
+    "An integrative framework spanning formation, retrieval-and-use, and influences organizes the literature coherently",
+    "Unresolved issues remain and warrant a structured agenda for further research"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "reference price formation",
+    "internal reference price",
+    "brand choice modeling",
+    "scanner panel data",
+    "promotional environment",
+    "prior purchase history",
+    "price perception",
+    "consumer purchase decisions"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "44b2c9b5f4767270612474c229c13cf4",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

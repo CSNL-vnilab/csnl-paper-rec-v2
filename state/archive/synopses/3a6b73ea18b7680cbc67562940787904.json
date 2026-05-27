@@ -1,0 +1,56 @@
+{
+  "frameworks": [
+    {
+      "name": "activity-silent working memory",
+      "role": "primary_lens",
+      "one_line": "WM held in connectivity changes, read out by neutral impulse perturbation."
+    },
+    {
+      "name": "sensory recruitment of working memory",
+      "role": "extended",
+      "one_line": "Sensory cortices maintain modality-specific WM content during the delay."
+    },
+    {
+      "name": "impulse-response perturbation paradigm",
+      "role": "primary_lens",
+      "one_line": "Task-neutral stimulus pings the network to reveal hidden WM states."
+    }
+  ],
+  "core_question": "Is the impulse-driven readout of working memory unique to vision, or does it generalize across and between sensory modalities?",
+  "key_assumptions": [
+    "WM content can be silent and decoded only via perturbation",
+    "Task-neutral impulses do not themselves encode the memorandum",
+    "Modality-specific sensory cortices contribute to WM maintenance"
+  ],
+  "manipulations": [
+    "Memorandum modality (visual orientation vs auditory pure tone)",
+    "Impulse modality (visual vs auditory) during the maintenance delay"
+  ],
+  "key_findings": [
+    "Auditory impulse during auditory WM elicited a content-dependent EEG response",
+    "Visual impulse during auditory WM also elicited a content-dependent response",
+    "During visual WM, only visual impulses produced a content-specific response"
+  ],
+  "interpretations": [
+    "Impulse-driven WM readout generalizes to audition, supporting activity-silent maintenance",
+    "Visual cortex participates in auditory WM, but auditory cortex does not reciprocally support visual WM"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "activity-silent working memory",
+    "impulse perturbation EEG",
+    "auditory working memory",
+    "visual working memory",
+    "cross-modal sensory recruitment",
+    "pure tone maintenance",
+    "content-specific neural response",
+    "delay-period decoding"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "3a6b73ea18b7680cbc67562940787904",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:46:55+09:00",
+  "review_status": "auto_unreviewed"
+}

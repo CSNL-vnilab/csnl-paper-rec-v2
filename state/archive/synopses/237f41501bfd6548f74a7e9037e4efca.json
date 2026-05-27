@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "serial dependence",
+      "role": "primary_lens",
+      "one_line": "current representations attracted toward previously encoded items"
+    },
+    {
+      "name": "working memory reconstruction via multivariate decoding",
+      "role": "primary_lens",
+      "one_line": "MEG-based reconstruction of held motion directions across the trial"
+    },
+    {
+      "name": "neural reactivation of prior trial content",
+      "role": "context",
+      "one_line": "past trial information re-emerges to bias current representation"
+    }
+  ],
+  "core_question": "Does a direct neural correlate of the behavioral attractive serial-dependence bias exist in working memory?",
+  "key_assumptions": [
+    "behavioral attractive bias indexes serial dependence",
+    "MEG multivariate signals reconstruct held motion direction reliably",
+    "retro-cue isolates encoding from selection for report"
+  ],
+  "manipulations": [
+    "two sequentially presented motion directions per trial",
+    "retro-cue selecting one of the two memoranda for later report",
+    "across-trial relation between previous target and current item"
+  ],
+  "key_findings": [
+    "multivariate reconstructions recovered both memorized motion directions",
+    "reconstructed current direction was attractively shifted toward previous trial's target",
+    "neural attractive bias mirrored the behavioral attractive bias",
+    "neural bias emerged at post-encoding rather than encoding time points"
+  ],
+  "interpretations": [
+    "reconstructed shifts constitute a direct neural signature of serial dependence",
+    "the bias arises during post-encoding working-memory stages, not initial sensory encoding"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "serial dependence",
+    "working memory",
+    "motion direction",
+    "retro-cue task",
+    "magnetoencephalography",
+    "multivariate reconstruction",
+    "attractive bias",
+    "post-encoding representation"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "237f41501bfd6548f74a7e9037e4efca",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:44:46+09:00",
+  "review_status": "auto_unreviewed"
+}

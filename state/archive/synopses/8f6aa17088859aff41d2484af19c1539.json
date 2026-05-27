@@ -1,0 +1,62 @@
+{
+  "frameworks": [
+    {
+      "name": "deep recurrent neural network",
+      "role": "primary_lens",
+      "one_line": "Deep RNN learns low-dimensional nonlinear stochastic dynamics from spike trains"
+    },
+    {
+      "name": "low-dimensional latent dynamical systems",
+      "role": "primary_lens",
+      "one_line": "Population activity is summarized by a low-D nonlinear stochastic flow field"
+    },
+    {
+      "name": "attractor dynamics",
+      "role": "extended",
+      "one_line": "Flow fields and attractor structures are read out from the learned latents"
+    },
+    {
+      "name": "unsupervised representation learning",
+      "role": "primary_lens",
+      "one_line": "FINDR infers dynamics without explicit task-variable supervision"
+    }
+  ],
+  "core_question": "Can an unsupervised deep RNN infer interpretable low-dimensional nonlinear stochastic dynamics underlying neural population activity?",
+  "key_assumptions": [
+    "Population activity arises from low-dimensional nonlinear stochastic dynamics",
+    "Task-relevant and task-irrelevant components are separable in the latent space",
+    "Spike-train likelihoods constrain the inferred flow field"
+  ],
+  "manipulations": [
+    "Applied FINDR to frontal-region spike trains during an auditory decision task in rats",
+    "Compared FINDR against existing population-dynamics inference methods",
+    "Trained variants that disentangle task-relevant vs task-irrelevant latent components"
+  ],
+  "key_findings": [
+    "FINDR outperformed existing methods in capturing heterogeneous single-neuron responses",
+    "Disentangled training recovered interpretable low-dimensional dynamics",
+    "Learned low-D latents permitted explicit visualization of flow fields and attractors"
+  ],
+  "interpretations": [
+    "Unsupervised deep recurrent inference can recover interpretable latent dynamics of decision-related populations",
+    "Low-dimensional nonlinear stochastic flow fields are a useful descriptor of frontal-cortex computation"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "flow-field inference",
+    "deep recurrent network",
+    "low-dimensional neural dynamics",
+    "attractor structure",
+    "auditory decision-making",
+    "frontal cortex population activity",
+    "unsupervised latent dynamical systems",
+    "task-relevant vs task-irrelevant disentanglement"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "8f6aa17088859aff41d2484af19c1539",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

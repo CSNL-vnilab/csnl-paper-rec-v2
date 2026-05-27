@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "deep neural network / connectionist",
+      "role": "primary_lens",
+      "one_line": "Standard SGD-trained network augmented with biologically motivated constraints."
+    },
+    {
+      "name": "prefrontal context gating",
+      "role": "extended",
+      "one_line": "Hebbian task-to-hidden gating produces orthogonal task representations."
+    },
+    {
+      "name": "continual learning",
+      "role": "context",
+      "one_line": "Catastrophic-interference framing motivating blocked vs interleaved curricula."
+    }
+  ],
+  "core_question": "What computational constraints let a neural network learn sequential tasks without catastrophic interference, matching human curriculum effects?",
+  "key_assumptions": [
+    "Humans suffer less interference under blocked than interleaved training",
+    "Standard SGD networks show the opposite pattern",
+    "Prefrontal-style task gating can be modeled at the unit level"
+  ],
+  "manipulations": [
+    "Two algorithmic motifs added to SGD: sluggish (exponentially decaying) task units and a Hebbian step",
+    "Training curriculum: blocked vs interleaved",
+    "Sequential vs simultaneous task training"
+  ],
+  "key_findings": [
+    "Sluggish task units introduce a switch-cost that biases interleaved training toward a joint, context-ignoring representation",
+    "The Hebbian step builds a task-to-hidden gating scheme yielding orthogonal, interference-free representations",
+    "The augmented network matches human behavioural data under blocked and interleaved curricula"
+  ],
+  "interpretations": [
+    "Exponentially decaying task signals plus Hebbian context gating jointly capture the human cost of interleaved training",
+    "Two simple biologically inspired motifs are sufficient to reproduce curriculum-dependent continual learning in humans"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "continual learning",
+    "catastrophic interference",
+    "blocked vs interleaved training",
+    "Hebbian gating",
+    "sluggish task units",
+    "context gating",
+    "orthogonal task representations",
+    "prefrontal task units"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "f3c39b2ebe3bb2a49907474c8cda7670",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:46:55+09:00",
+  "review_status": "auto_unreviewed"
+}

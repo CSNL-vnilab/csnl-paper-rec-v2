@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "Bayesian inference",
+      "role": "compared_against",
+      "one_line": "General-purpose posterior computation that the paper argues humans do not solely rely on."
+    },
+    {
+      "name": "amortized inference / recognition model",
+      "role": "primary_lens",
+      "one_line": "Learned query-to-posterior map whose parameters adapt to the query distribution."
+    },
+    {
+      "name": "resource-rational analysis",
+      "role": "alternative_lens",
+      "one_line": "Limited computational resources allocated preferentially to high-probability queries."
+    }
+  ],
+  "core_question": "Why do human probabilistic inferences deviate from Bayesian optimality in opposite directions across tasks?",
+  "key_assumptions": [
+    "Brain computes posteriors approximately, not exactly",
+    "A recognition model maps queries to probability distributions",
+    "Computational resources are limited",
+    "Recognition model parameters are optimized to minimize average distance to the true posterior"
+  ],
+  "manipulations": [
+    "Query distribution / type of inference required",
+    "Whether deviation manifests as base-rate neglect or conservatism"
+  ],
+  "key_findings": [
+    "Humans sometimes under-react to prior probabilities (base-rate neglect)",
+    "Humans sometimes under-react to likelihood (conservatism)",
+    "Deviations from Bayesian optimality go in opposite directions across studies"
+  ],
+  "interpretations": [
+    "Opposing deviations are explained by a learned recognition model that allocates accuracy to high-probability queries",
+    "Apparent inconsistencies reflect adaptation of inference to the query distribution rather than a single general-purpose mechanism"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "amortized inference",
+    "recognition model",
+    "base-rate neglect",
+    "conservatism",
+    "approximate Bayesian inference",
+    "query distribution",
+    "resource-rational inference",
+    "learning to infer"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "4e5bd69bd0a20d050df6e36d918fbef5",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:44:46+09:00",
+  "review_status": "auto_unreviewed"
+}

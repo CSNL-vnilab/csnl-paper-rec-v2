@@ -1,0 +1,59 @@
+{
+  "frameworks": [
+    {
+      "name": "Bayesian inference",
+      "role": "primary_lens",
+      "one_line": "Mice estimate block-wise prior probability and combine it with sensory evidence"
+    },
+    {
+      "name": "brain-wide distributed coding",
+      "role": "extended",
+      "one_line": "Prior is encoded across sensory, motor and higher-order regions, not localized"
+    },
+    {
+      "name": "loop-based neural model",
+      "role": "alternative_lens",
+      "one_line": "Inter-area loops broadcast the prior versus localizing it to decision-making areas"
+    }
+  ],
+  "core_question": "Where in the mouse brain is the subjective prior probability over choice options represented?",
+  "key_assumptions": [
+    "Mice can estimate the latent block-wise prior probability",
+    "Subjective prior shapes choice accuracy in a Bayesian manner",
+    "Neural correlates of the prior can be read out from large-scale recordings"
+  ],
+  "manipulations": [
+    "Prior probability of stimulus side alternated between 0.2 and 0.8 across blocks",
+    "Block length varied",
+    "Stimulus location (left/right visual grating) varied",
+    "Brain-wide Neuropixels and widefield calcium imaging across regions"
+  ],
+  "key_findings": [
+    "Mice tracked the prior probability and improved decision accuracy accordingly",
+    "Subjective prior was encoded in 20-30% of brain regions sampled",
+    "Prior representation spanned early sensory areas (LGN, V1)",
+    "Prior representation also spanned motor and high-level cortical regions (M1/M2, dACC, vlOFC)"
+  ],
+  "interpretations": [
+    "Widespread prior encoding supports a loop-based Bayesian inference architecture",
+    "Argues against localized incorporation of the prior only in decision-making areas"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "Bayesian inference",
+    "subjective prior",
+    "brain-wide Neuropixels",
+    "widefield calcium imaging",
+    "block-wise prior probability",
+    "mouse decision-making",
+    "sensory-motor loop",
+    "International Brain Laboratory"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "4ff23567c2060bbe51e137547a0bab3f",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

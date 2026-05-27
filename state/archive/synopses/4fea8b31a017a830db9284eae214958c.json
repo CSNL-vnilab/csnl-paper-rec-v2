@@ -1,0 +1,55 @@
+{
+  "frameworks": [
+    {
+      "name": "Bayesian observer model",
+      "role": "primary_lens",
+      "one_line": "Perception as posterior combining slow-speed prior with sensory likelihood."
+    },
+    {
+      "name": "Efficient coding",
+      "role": "primary_lens",
+      "one_line": "Constrains sensory uncertainty structure so the Bayesian model is identifiable."
+    },
+    {
+      "name": "Neural population coding",
+      "role": "extended",
+      "one_line": "Area MT tuning curves treated as the neural-level prior over speed."
+    }
+  ],
+  "core_question": "Does a behavioral slow-speed prior inferred from psychophysics match the encoding accuracy of speed-tuned neurons in area MT?",
+  "key_assumptions": [
+    "Observers combine a prior with a likelihood via Bayes rule",
+    "Sensory likelihood structure is constrained by efficient coding",
+    "MT population coding accuracy reflects an implicit neural prior over speed"
+  ],
+  "manipulations": [
+    "Comparison of behavioral prior (fit to psychophysics) vs neural prior (from MT population)",
+    "Cross-validation model comparison between the two priors"
+  ],
+  "key_findings": [
+    "Efficient-coding-constrained Bayesian observer explains human visual speed perception",
+    "MT population coding accuracy matches a power-law slow-speed prior",
+    "Behavioral and neural priors are indistinguishable in cross-validation"
+  ],
+  "interpretations": [
+    "The Bayesian observer model under efficient coding is quantitatively validated at both behavioral and neural levels"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "slow-speed prior",
+    "visual speed perception",
+    "area MT tuning",
+    "Bayesian observer model",
+    "efficient coding constraint",
+    "neural population coding accuracy",
+    "behavioral vs neural prior",
+    "power-law prior"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "4fea8b31a017a830db9284eae214958c",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:44:46+09:00",
+  "review_status": "auto_unreviewed"
+}

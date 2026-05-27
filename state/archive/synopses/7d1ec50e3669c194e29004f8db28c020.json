@@ -1,0 +1,59 @@
+{
+  "frameworks": [
+    {
+      "name": "serial dependence",
+      "role": "primary_lens",
+      "one_line": "Attractive bias of current estimate toward immediately preceding stimulus."
+    },
+    {
+      "name": "short-term synaptic facilitation",
+      "role": "compared_against",
+      "one_line": "Fast plasticity proposed as serial-dependence substrate, deemed too fast here."
+    },
+    {
+      "name": "metaplasticity",
+      "role": "extended",
+      "one_line": "Slower plasticity mechanism invoked to explain session-long build-up."
+    },
+    {
+      "name": "natural-scene-statistics adaptation",
+      "role": "compared_against",
+      "one_line": "View that biases track stable environmental correlations."
+    }
+  ],
+  "core_question": "Does serial dependence arise for color working memory, and how does its strength evolve within a session?",
+  "key_assumptions": [
+    "Delayed-estimation reports reflect working-memory contents.",
+    "Sequential trial stimuli were temporally uncorrelated by design."
+  ],
+  "manipulations": [
+    "Trial position within an experimental session.",
+    "Pooling across 8 independent color delayed-estimation datasets."
+  ],
+  "key_findings": [
+    "Significant attractive serial dependence in 7 of 8 color datasets (n=760).",
+    "Strength of serial dependence built up gradually across the session."
+  ],
+  "interpretations": [
+    "Build-up implies a slower, metaplastic mechanism beyond short-term facilitation.",
+    "Uncorrelated stimuli argue against ongoing adaptation to environmental statistics."
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "serial dependence",
+    "color working memory",
+    "delayed estimation",
+    "attractive bias",
+    "metaplasticity",
+    "short-term synaptic facilitation",
+    "natural scene statistics",
+    "history effects"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "7d1ec50e3669c194e29004f8db28c020",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:46:55+09:00",
+  "review_status": "auto_unreviewed"
+}

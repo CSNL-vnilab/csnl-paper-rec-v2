@@ -1,0 +1,52 @@
+{
+  "canonical_id": "18e23823434e63a48e22163c9813c93c",
+  "frameworks": [
+    {
+      "name": "efficient coding",
+      "role": "primary_lens",
+      "one_line": "sensory encoding precision dynamically adapted to ensemble distribution relative to reference"
+    },
+    {
+      "name": "ensemble coding / robust averaging",
+      "role": "extended",
+      "one_line": "items closer to reference weighed more strongly in ensemble average judgment"
+    }
+  ],
+  "core_question": "How does the relative timing between reference and ensemble stimulus presentation affect efficient ensemble coding?",
+  "key_assumptions": [
+    "encoding precision can be dynamically adapted on a trial-by-trial basis",
+    "the reference value shapes the prior used for ensemble encoding",
+    "robust averaging reflects efficient allocation of coding resources"
+  ],
+  "manipulations": [
+    "time interval between ensemble and reference presentation",
+    "temporal order: simultaneous vs. ensemble-first vs. reference-first"
+  ],
+  "key_findings": [
+    "efficient ensemble coding clearly established only when reference and ensemble are simultaneous",
+    "efficient coding much weaker when ensemble preceded the reference",
+    "efficient coding largely absent when ensemble followed the reference",
+    "reduced efficient coding coincided with decreased decision accuracy in asynchronous conditions"
+  ],
+  "interpretations": [
+    "dynamic efficient ensemble coding requires concurrent access to reference information during encoding",
+    "the mechanism underlying robust averaging depends on temporal availability of the reference signal"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "ensemble coding",
+    "robust averaging",
+    "efficient coding",
+    "dynamic encoding precision",
+    "reference-anchored prior",
+    "stimulus-reference asynchrony",
+    "ensemble average discrimination",
+    "trial-by-trial adaptation"
+  ],
+  "abstract_coverage": 1.0,
+  "out_of_scope_note": null,
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:44:46+09:00",
+  "review_status": "auto_unreviewed"
+}

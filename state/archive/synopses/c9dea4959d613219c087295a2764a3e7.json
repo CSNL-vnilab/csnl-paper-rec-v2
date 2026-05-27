@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "leaky competing accumulator",
+      "role": "primary_lens",
+      "one_line": "Neural network model of evidence accumulation for decisions and confidence"
+    },
+    {
+      "name": "tuned normalization",
+      "role": "extended",
+      "one_line": "Heterogeneous normalization tuning across accumulator units shapes confidence readout"
+    },
+    {
+      "name": "confidence as probability correct",
+      "role": "compared_against",
+      "one_line": "Dominant view that confidence tracks the probability the decision is right"
+    },
+    {
+      "name": "positive-evidence (response-congruent) account",
+      "role": "alternative_lens",
+      "one_line": "Confidence reflects evidence favoring the choice, insensitive to opposing evidence"
+    }
+  ],
+  "core_question": "Can a biologically plausible accumulator with tuned normalization explain dissociations between perceptual confidence and decision accuracy?",
+  "key_assumptions": [
+    "Each accumulator neuron's normalization tuning sets its weight on decision vs confidence",
+    "Sensory neurons exhibit tuned normalization as a known property",
+    "Decision and confidence judgments draw on partly overlapping neural pools"
+  ],
+  "manipulations": [
+    "Varied tuned-normalization parameters across accumulator units in the model",
+    "Compared probability-correct vs positive-evidence readouts of confidence",
+    "Simulated counterintuitive confidence-accuracy dissociation paradigms",
+    "Tested model prediction in macaque superior colliculus recordings"
+  ],
+  "key_findings": [
+    "Model reproduces several reported dissociations between confidence and decision accuracy",
+    "Confidence in the model is more sensitive to evidence favoring the chosen option",
+    "A model prediction was validated in macaque superior colliculus"
+  ],
+  "interpretations": [
+    "Seemingly suboptimal confidence behavior emerges from tuned-normalization circuit architecture",
+    "Confidence need not directly encode probability correct to match observed behavior"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "perceptual decision-making",
+    "metacognition and confidence",
+    "leaky competing accumulator",
+    "tuned normalization",
+    "divisive normalization",
+    "confidence-accuracy dissociation",
+    "positive evidence bias",
+    "superior colliculus"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "c9dea4959d613219c087295a2764a3e7",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,59 @@
+{
+  "frameworks": [
+    {
+      "name": "resource-rational analysis",
+      "role": "primary_lens",
+      "one_line": "Brain minimizes weighted sum of behavioral and neural encoding costs"
+    },
+    {
+      "name": "normative theory of working memory",
+      "role": "primary_lens",
+      "one_line": "Set size effects derived from optimal cost minimization"
+    },
+    {
+      "name": "fixed-capacity working memory",
+      "role": "compared_against",
+      "one_line": "Hard-limit accounts that treat capacity as a constraint"
+    }
+  ],
+  "core_question": "Can set size effects in visual working memory be explained by rational minimization of behavioral and neural costs rather than fixed capacity limits?",
+  "key_assumptions": [
+    "Encoding precision incurs a neural cost",
+    "Behavioral cost is error-based on recall",
+    "Observer trades off these costs to set precision",
+    "Probing probability modulates expected behavioral cost"
+  ],
+  "manipulations": [
+    "Set size varied across delayed-estimation tasks",
+    "Probing probability varied across items or conditions",
+    "Model fit across nine delayed-estimation experiments"
+  ],
+  "key_findings": [
+    "Model predicts decreasing encoding precision with set size",
+    "Set size effects are mediated by probing probability",
+    "Total invested resource can vary non-monotonically with set size",
+    "Sometimes optimal to encode only a subset or none of the items"
+  ],
+  "interpretations": [
+    "Cognitive limitations may reflect rational cost minimization rather than hard capacity constraints",
+    "Set size effects emerge as optimal resource allocation given encoding costs"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "visual working memory",
+    "set size effects",
+    "resource-rational theory",
+    "encoding precision",
+    "delayed-estimation task",
+    "probing probability",
+    "neural encoding cost",
+    "optimal resource allocation"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "b1735c9126c09229d81db2914836ab7b",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}
