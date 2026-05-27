@@ -1,0 +1,56 @@
+{
+  "frameworks": [
+    {
+      "name": "longitudinal two-photon calcium imaging",
+      "role": "primary_lens",
+      "one_line": "Tracking activity of identified neurons across many sessions in same animal."
+    },
+    {
+      "name": "voluntary head-fixation",
+      "role": "extended",
+      "one_line": "Magnetic, no-moving-parts engagement replacing mechanical restraint paradigms."
+    },
+    {
+      "name": "memory persistence in hippocampus",
+      "role": "context",
+      "one_line": "Motivating problem of how CA1 supports lifetime-stable memory."
+    }
+  ],
+  "core_question": "How can the same hippocampal neurons be optically recorded during naturalistic behavior across a large fraction of an animal's lifetime?",
+  "key_assumptions": [
+    "Stable optical access to dorsal CA1 requires head-fixation",
+    "Voluntary engagement preserves naturalistic behavioral repertoire",
+    "GCaMP6f transgenic expression remains stable long-term"
+  ],
+  "manipulations": [
+    "Mechanical restraint replaced with magnetic voluntary head-fixation",
+    "Standard two-photon collection replaced with novel signal-enhancing scheme",
+    "Wild-type imaging replaced with transgenic GCaMP6f rat line in dorsal CA1"
+  ],
+  "key_findings": [
+    "Animals readily engage and disengage at will, system is failsafe and reliable",
+    "Novel two-photon collection scheme increases fluorescence signal",
+    "Same dorsal CA1 neurons can be tracked across a large fraction of animals' lives"
+  ],
+  "interpretations": [
+    "Voluntary head-fixation combined with transgenic GCaMP6f enables routine lifetime-scale single-neuron tracking during complex behavior"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "voluntary head-fixation",
+    "longitudinal two-photon imaging",
+    "dorsal CA1 hippocampus",
+    "GCaMP6f transgenic rat",
+    "lifetime neural tracking",
+    "same-cell chronic recording",
+    "naturalistic behavior under head fixation",
+    "memory persistence neural substrate"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "c012068438797dccad82ebcd5657e4c9",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:16:13+09:00",
+  "review_status": "auto_unreviewed"
+}

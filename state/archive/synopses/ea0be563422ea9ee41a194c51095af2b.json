@@ -1,0 +1,56 @@
+{
+  "frameworks": [
+    {
+      "name": "feedforward evidence accumulation",
+      "role": "compared_against",
+      "one_line": "Sensory cortex encodes evidence accumulated forward toward motor regions encoding action plan."
+    },
+    {
+      "name": "feedback / recurrent cortical processing",
+      "role": "primary_lens",
+      "one_line": "Choice-dependent feedback signals propagate from downstream regions back to early sensory cortex."
+    },
+    {
+      "name": "frequency-specific cortical oscillations",
+      "role": "extended",
+      "one_line": "Narrow-band ~10 Hz oscillations interpreted as carriers of decision-related feedback."
+    }
+  ],
+  "core_question": "Can decision-related feedforward and feedback signals in human cortex be dissociated during perceptual decision-making?",
+  "key_assumptions": [
+    "Choice-predictive signals can be compared to sensory-evidence weighting on choice",
+    "MEG can resolve direction-of-flow signatures across cortical hierarchy",
+    "Feedforward and feedback components are additively separable in cortical activity"
+  ],
+  "manipulations": [
+    "Perceptual decision task with measurable sensory evidence and choice",
+    "Comparison of signals across cortical processing stages (early sensory through motor)"
+  ],
+  "key_findings": [
+    "Choice-dependent feedback signals were prominent in primary visual cortex",
+    "Feedback was expressed in a narrow band around 10 Hz",
+    "Feedback signals built up during decision formation, following downstream choice-predictive dynamics"
+  ],
+  "interpretations": [
+    "Pure feedforward accounts of perceptual decision-making are insufficient",
+    "Frequency-specific cortical oscillations carry computational role of decision feedback"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "perceptual decision-making",
+    "evidence accumulation",
+    "cortical feedback",
+    "primary visual cortex",
+    "magnetoencephalography",
+    "alpha-band oscillations",
+    "choice-predictive signals",
+    "sensory-motor pathway"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "ea0be563422ea9ee41a194c51095af2b",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:16:13+09:00",
+  "review_status": "auto_unreviewed"
+}

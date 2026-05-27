@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "divisive normalization",
+      "role": "primary_lens",
+      "one_line": "canonical sensory gain-control computation extended to value coding for choice"
+    },
+    {
+      "name": "value-based choice model",
+      "role": "extended",
+      "one_line": "choice model in which option values are normalized by context"
+    },
+    {
+      "name": "rational choice theory",
+      "role": "compared_against",
+      "one_line": "classical axioms violated by context-dependent normalized value signals"
+    }
+  ],
+  "core_question": "Does divisive normalization of value signals shape context-dependent choice behavior in primates and humans?",
+  "key_assumptions": [
+    "value signals are encoded by a normalization computation analogous to sensory cortex",
+    "stochastic choice reads out normalized value representations",
+    "context is defined by the value and number of alternative options"
+  ],
+  "manipulations": [
+    "value of alternative (non-chosen) options",
+    "number of alternative options in the choice set",
+    "cross-species comparison between monkeys and humans"
+  ],
+  "key_findings": [
+    "choice models with normalization predict significant context-dependent choice phenomena",
+    "monkey choosers exhibit novel context-dependent behavior consistent with normalization",
+    "human choosers exhibit the same context-dependent behavior",
+    "predicted choice effects are classically irrational under standard axioms"
+  ],
+  "interpretations": [
+    "normalization of value signals critically shapes stochastic choice behavior",
+    "context effects in decision making can be unified within a quantitative normalization framework"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "divisive normalization",
+    "context-dependent choice",
+    "value coding",
+    "stochastic choice behavior",
+    "irrational choice phenomena",
+    "canonical neural computation",
+    "value-guided decision making",
+    "choice set size effects"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "344689bde42be28365ac0c3e30556822",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

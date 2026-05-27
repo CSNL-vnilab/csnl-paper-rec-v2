@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "meta-learning with memory",
+      "role": "primary_lens",
+      "one_line": "training memory-equipped agents across task distributions to induce implicit inference"
+    },
+    {
+      "name": "Bayes-optimal agents",
+      "role": "extended",
+      "one_line": "risk-neutral, ambiguity-neutral baseline emerging as the implicit meta-training solution"
+    },
+    {
+      "name": "risk-sensitive decision making",
+      "role": "primary_lens",
+      "one_line": "agents that exploit higher-order moments of return distributions"
+    },
+    {
+      "name": "ambiguity-sensitive decision making",
+      "role": "primary_lens",
+      "one_line": "agents that act differently when recognizing situations of unknown uncertainty"
+    }
+  ],
+  "core_question": "How can the meta-learning protocol be extended so that trained agents become risk- and ambiguity-sensitive rather than Bayes-optimal?",
+  "key_assumptions": [
+    "meta-training with memory implicitly solves a numerical optimization problem",
+    "Bayes-optimality is risk- and ambiguity-neutral by construction",
+    "human deviations from Bayes-optimality can be advantageous, especially in safety-critical settings"
+  ],
+  "manipulations": [
+    "modified meta-training algorithms that manipulate the learner's experience-generation process"
+  ],
+  "key_findings": [
+    "risk- and ambiguity-sensitivity emerge as solutions to modified meta-training optimizations"
+  ],
+  "interpretations": [
+    "sensitivity to higher-order return moments and to unknown uncertainty can be induced rather than hand-designed",
+    "such inductive biases may confer advantages in safety-critical decision making"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "meta-learning",
+    "Bayes-optimality",
+    "risk sensitivity",
+    "ambiguity aversion",
+    "memory-based agents",
+    "experience generation",
+    "safety-critical decision making",
+    "higher-order moments of return"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "2449c7883f3d9684ee59ee8dfcf2fd9e",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "working memory neural substrate",
+      "role": "primary_lens",
+      "one_line": "short-term storage and manipulation of task-relevant information across prefrontal and cortical regions"
+    },
+    {
+      "name": "noninvasive brain stimulation",
+      "role": "primary_lens",
+      "one_line": "localized cortical perturbation to causally probe and modulate cognitive function"
+    },
+    {
+      "name": "executive control of behavior",
+      "role": "context",
+      "one_line": "working memory framed as a component of goal-directed executive control"
+    },
+    {
+      "name": "stimulation combined with neuroimaging and electrophysiology",
+      "role": "extended",
+      "one_line": "concurrent recording during stimulation links perturbation to neural activity changes"
+    }
+  ],
+  "core_question": "What do brain-stimulation studies reveal about the neural substrate and mechanisms supporting working memory in humans?",
+  "key_assumptions": [
+    "working memory comprises encoding, maintenance, and manipulation stages",
+    "prefrontal and other cortical regions causally support working memory",
+    "noninvasive stimulation can be localized enough to dissect cortical contributions",
+    "stimulation effects on cognition reflect underlying neural mechanisms"
+  ],
+  "manipulations": [
+    "noninvasive stimulation site across prefrontal and other cortical regions",
+    "combination of stimulation with neuroimaging or electrophysiological recording",
+    "stimulation applied during working-memory cognitive tasks"
+  ],
+  "key_findings": [
+    "brain stimulation can noninvasively modulate working-memory performance in humans",
+    "combined stimulation-recording methods reveal stimulation-linked neural activity changes",
+    "deficits in working memory accompany brain damage and neuropsychological disorders"
+  ],
+  "interpretations": [
+    "stimulation studies clarify the neural substrate and mechanisms underlying working memory",
+    "causal intervention complements correlational recording for understanding cognitive control"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "working memory",
+    "noninvasive brain stimulation",
+    "prefrontal cortex",
+    "encoding maintenance manipulation",
+    "executive control",
+    "stimulation with neuroimaging",
+    "stimulation with electrophysiology",
+    "cognitive modulation"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "cab7ef19dcc4e9adff108ebcd2dc4475",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

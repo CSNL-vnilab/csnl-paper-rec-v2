@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "adaptive (non-linear) evidence accumulation",
+      "role": "primary_lens",
+      "one_line": "evidence integration that adjusts to hidden environmental change points"
+    },
+    {
+      "name": "recurrent cortical microcircuit",
+      "role": "extended",
+      "one_line": "circuit-level mechanism proposed to implement the adaptive accumulation"
+    },
+    {
+      "name": "pupil-linked arousal modulation",
+      "role": "alternative_lens",
+      "one_line": "arousal as a gain signal shaping sensory-cortex state during accumulation"
+    }
+  ],
+  "core_question": "How does the human cortex implement non-linear, adaptive evidence accumulation in environments with hidden state changes?",
+  "key_assumptions": [
+    "optimal accuracy in changing environments requires non-linear accumulation",
+    "MEG population activity indexes decision-related cortical dynamics",
+    "action-encoding parietal/frontal regions carry accumulation signals"
+  ],
+  "manipulations": [
+    "visual evidence accumulation task with hidden state changes",
+    "expected probability of environmental change",
+    "trial-by-trial pupil-linked arousal"
+  ],
+  "key_findings": [
+    "behavior shows hallmarks of adaptive (non-linear) evidence accumulation",
+    "action-planning parietal/frontal regions exhibit matching decision dynamics",
+    "frequency-specific modulation of visual cortex mirrors decision state",
+    "this sensory modulation depends on pupil-linked arousal and change probability"
+  ],
+  "interpretations": [
+    "adaptive accumulation can be realized by a recurrent cortical microcircuit",
+    "decision-related feedback to sensory cortex is itself adaptive to environmental statistics"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "adaptive evidence accumulation",
+    "changing environment",
+    "change-point detection",
+    "non-linear integration",
+    "recurrent cortical microcircuit",
+    "MEG decision dynamics",
+    "pupil-linked arousal",
+    "decision feedback to sensory cortex"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "5ada3c311e6d7a1d31627f8fc442b071",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:16:13+09:00",
+  "review_status": "auto_unreviewed"
+}
