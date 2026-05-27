@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "Bayesian model selection",
+      "role": "primary_lens",
+      "one_line": "model evidence used to objectively choose between competing high-level parameter-dynamics models"
+    },
+    {
+      "name": "superstatistical random walks",
+      "role": "extended",
+      "one_line": "two-level process where short-timescale model has slowly fluctuating parameters"
+    },
+    {
+      "name": "hierarchical time-series modeling",
+      "role": "primary_lens",
+      "one_line": "low-level data model with a high-level model governing parameter variation over time"
+    }
+  ],
+  "core_question": "How can one efficiently infer time-varying parameters of a low-level process and objectively select the high-level model that governs their fluctuations?",
+  "key_assumptions": [
+    "time series have short-range correlations on short timescales",
+    "low-level data-generating model is known or dictated by data type",
+    "model parameters fluctuate on longer timescales according to an unknown high-level model"
+  ],
+  "manipulations": [
+    "candidate high-level models for parameter dynamics",
+    "application domain (finance, cell biology, occupational safety, climate)"
+  ],
+  "key_findings": [
+    "method recovers the time course of parameter variations from short-correlation series",
+    "model evidence discriminates between competing high-level dynamics models",
+    "detects anomalous price movements in financial markets",
+    "characterizes cancer cell invasiveness, coal-mine safety policy effects, and climate-change scenarios"
+  ],
+  "interpretations": [
+    "objective model comparison enables principled choice among high-level dynamics hypotheses",
+    "a single computationally efficient framework generalizes across diverse complex systems"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "Bayesian model selection",
+    "model evidence",
+    "time-varying parameters",
+    "superstatistics",
+    "hierarchical time-series inference",
+    "change-point detection",
+    "non-stationary dynamics",
+    "complex dynamic systems"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "279202d0368f890f4aac3159fc4f1d11",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

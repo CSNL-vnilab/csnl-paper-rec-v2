@@ -1,0 +1,56 @@
+{
+  "frameworks": [
+    {
+      "name": "distributed semantic vector space",
+      "role": "primary_lens",
+      "one_line": "words and sentences represented as vectors from massive text corpora"
+    },
+    {
+      "name": "brain decoding (linear mapping from fMRI to semantic vectors)",
+      "role": "primary_lens",
+      "one_line": "learn map from imaging features to semantic vector targets"
+    },
+    {
+      "name": "compositional sentence meaning",
+      "role": "extended",
+      "one_line": "extends concrete-noun decoding to sentence-level abstract meaning"
+    }
+  ],
+  "core_question": "Can a brain decoder generalize from individual-word imaging data to sentence meanings spanning concrete and abstract topics?",
+  "key_assumptions": [
+    "linguistic meaning is captured by vectors in a corpus-derived semantic space",
+    "sampling the semantic space efficiently maximizes generalization from limited fMRI data",
+    "training on individual concepts transfers to sentence-level meaning"
+  ],
+  "manipulations": [
+    "training stimuli selected to efficiently sample the semantic vector space",
+    "testing across two separate fMRI datasets",
+    "varying stimulus content from concrete to abstract topics"
+  ],
+  "key_findings": [
+    "decoder trained on individual concepts decodes semantic vectors for whole sentences",
+    "generalizes across two separate datasets and to abstract topics",
+    "decoded representations distinguish even semantically similar sentences",
+    "decoded representations capture similarity structure between sentence meanings"
+  ],
+  "interpretations": [
+    "corpus-derived semantic vectors plus efficient stimulus sampling enable a universal-style decoder of meaning from brain activity"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "brain decoding of meaning",
+    "semantic vector space",
+    "fMRI sentence decoding",
+    "concrete and abstract concepts",
+    "generalization across stimuli",
+    "compositional semantics",
+    "distributional semantics from text corpora"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "b9cdae2f85c6822404808145f4d0bd5f",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:13:04+09:00",
+  "review_status": "auto_unreviewed"
+}

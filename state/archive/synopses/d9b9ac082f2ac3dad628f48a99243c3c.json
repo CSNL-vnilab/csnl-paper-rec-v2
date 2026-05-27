@@ -1,0 +1,59 @@
+{
+  "frameworks": [
+    {
+      "name": "working memory load and oscillatory dynamics",
+      "role": "primary_lens",
+      "one_line": "WM load modulates theta/alpha/beta spectral power across cortical sources"
+    },
+    {
+      "name": "training-induced neural efficiency",
+      "role": "extended",
+      "one_line": "modality-specific training reshapes load-related neural processing for efficient maintenance"
+    },
+    {
+      "name": "modality-specific vs modality-irrelevant transfer",
+      "role": "compared_against",
+      "one_line": "auditory training contrasted with tactile training and no-training controls"
+    }
+  ],
+  "core_question": "How does modality-specific auditory working memory training change load-related neural processing during high-demand WM tasks?",
+  "key_assumptions": [
+    "WM capacity is trainable",
+    "post-training efficiency modulates neural processing under high load",
+    "EEG source-space spectral power indexes WM-relevant cortical activity"
+  ],
+  "manipulations": [
+    "WM load (low vs high) in auditory task",
+    "training type (auditory-specific, tactile, no training)",
+    "pre- vs post-training EEG assessment"
+  ],
+  "key_findings": [
+    "modality-specific training improved behavioral WM performance versus control",
+    "load increased frontal theta and decreased parietal theta across groups",
+    "centro-parietal alpha and central beta decreased with higher load",
+    "auditory-trained group showed trend toward reduced right medial temporal beta at high load"
+  ],
+  "interpretations": [
+    "reduced beta in voice-selective regions suggests more efficient maintenance of task-relevant stimuli after modality-specific training"
+  ],
+  "limitations_noted": [
+    "right medial temporal beta effect reported as a tendency rather than confirmed effect"
+  ],
+  "connecting_signals": [
+    "auditory working memory",
+    "WM training",
+    "EEG source spectral power",
+    "theta-band frontal/parietal",
+    "alpha-band centro-parietal",
+    "beta-band medial temporal",
+    "neural efficiency",
+    "voice-selective regions"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "d9b9ac082f2ac3dad628f48a99243c3c",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

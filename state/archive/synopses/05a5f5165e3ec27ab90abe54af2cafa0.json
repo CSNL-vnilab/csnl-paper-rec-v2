@@ -1,0 +1,64 @@
+{
+  "frameworks": [
+    {
+      "name": "signal-detection theory",
+      "role": "primary_lens",
+      "one_line": "decision variable compared to a criterion to categorize perceptual reports"
+    },
+    {
+      "name": "fixed-criterion model of subjective inflation",
+      "role": "compared_against",
+      "one_line": "criterion for subjective visibility does not adjust to sensory uncertainty"
+    },
+    {
+      "name": "flexible-criterion decision-making",
+      "role": "alternative_lens",
+      "one_line": "criterion adapts to sensory uncertainty including under inattention"
+    },
+    {
+      "name": "metacognition of perceptual awareness",
+      "role": "context",
+      "one_line": "criterion-crossing taken to mark conscious access and subjective visibility"
+    }
+  ],
+  "core_question": "Do existing empirical findings on subjective inflation actually require a fixed perceptual decision criterion?",
+  "key_assumptions": [
+    "perceptual decisions arise from comparing a decision variable to a criterion",
+    "subjective visibility reports reflect a criterion on a graded internal signal",
+    "criterion behavior under uncertainty is testable across consciousness and decision paradigms"
+  ],
+  "manipulations": [
+    "formal comparison of fixed vs. flexible criterion accounts",
+    "varying mapping between decision variable and stimulus feature space",
+    "varying task incentives to adjust criterion with response variance"
+  ],
+  "key_findings": [
+    "previous subjective-inflation evidence is consistent with both fixed and flexible criteria",
+    "without a clear decision-to-feature mapping, criterion flexibility is unidentifiable",
+    "without an incentive to adjust, observers may keep the criterion fixed even if flexible"
+  ],
+  "interpretations": [
+    "the fixed-criterion model of subjective inflation requires re-thinking",
+    "specific task design conditions are needed to infer criterion flexibility"
+  ],
+  "limitations_noted": [
+    "analysis is mathematical/conceptual rather than a new empirical test"
+  ],
+  "connecting_signals": [
+    "perceptual decision-making",
+    "decision criterion",
+    "subjective inflation",
+    "sensory uncertainty",
+    "inattention",
+    "metacognitive mismatch",
+    "signal-detection theory",
+    "subjective visibility"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "05a5f5165e3ec27ab90abe54af2cafa0",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

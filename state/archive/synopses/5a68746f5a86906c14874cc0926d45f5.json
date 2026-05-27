@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "evidence integration",
+      "role": "primary_lens",
+      "one_line": "decisions combine multiple pieces of evidence to discriminate between alternatives"
+    },
+    {
+      "name": "normative probabilistic inference",
+      "role": "extended",
+      "one_line": "integration as Bayesian-style accumulation extended from milliseconds to tens of seconds"
+    },
+    {
+      "name": "neural network models of integration",
+      "role": "compared_against",
+      "one_line": "network dynamics impose acute timescale limits that this work challenges"
+    }
+  ],
+  "core_question": "Can evidence integration models that explain rapid perceptual decisions generalize to deliberations unfolding over tens of seconds?",
+  "key_assumptions": [
+    "evidence integration is the canonical mechanism for perceptual decision-making",
+    "normative integration combines independent samples probabilistically",
+    "memory leak and noise can be quantified across long inter-sample gaps"
+  ],
+  "manipulations": [
+    "duration and unpredictability of gaps between visual evidence samples",
+    "number and informativeness of brief evidence samples",
+    "extended timescale of deliberation up to tens of seconds"
+  ],
+  "key_findings": [
+    "humans integrate brief visual samples separated by long unpredictable gaps",
+    "behavior approximates a normative integration process across tens of seconds",
+    "no significant memory leak or accumulation noise emerges over prolonged timescales"
+  ],
+  "interpretations": [
+    "evidence integration generalizes beyond rapid judgments to extended deliberation",
+    "computational insights from short-timescale tasks extend to naturalistic long decisions"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "evidence integration",
+    "prolonged timescales",
+    "probabilistic inference",
+    "perceptual decision-making",
+    "memory leak",
+    "accumulation noise",
+    "normative integration",
+    "brief visual samples"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "5a68746f5a86906c14874cc0926d45f5",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

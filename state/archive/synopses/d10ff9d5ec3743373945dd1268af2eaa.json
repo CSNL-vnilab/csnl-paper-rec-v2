@@ -1,0 +1,61 @@
+{
+  "frameworks": [
+    {
+      "name": "fMRI multivoxel pattern decoding",
+      "role": "primary_lens",
+      "one_line": "decoded representations of feared objects identified from multivoxel fMRI patterns"
+    },
+    {
+      "name": "decoded neurofeedback / unconscious reinforcement",
+      "role": "primary_lens",
+      "one_line": "monetary reward paired with unconscious occurrences of feared-object brain patterns"
+    },
+    {
+      "name": "hyperalignment across subjects",
+      "role": "extended",
+      "one_line": "fear representations inferred for a target subject using surrogate participants"
+    },
+    {
+      "name": "exposure therapy",
+      "role": "compared_against",
+      "one_line": "standard aversive intervention with high premature attrition this method aims to bypass"
+    }
+  ],
+  "core_question": "Can hardwired fear responses to objects like spiders and snakes be reprogrammed unconsciously in the human brain?",
+  "key_assumptions": [
+    "feared-object representations are decodable from multivoxel fMRI patterns",
+    "representations transfer across individuals via hyperalignment",
+    "pairing reward with unconscious neural representations can modify fear"
+  ],
+  "manipulations": [
+    "pairing of monetary reward with unconscious decoded fear representations",
+    "use of surrogate-derived representations instead of explicit image exposure"
+  ],
+  "key_findings": [
+    "method reliably reduced physiological fear responses measured by skin conductance",
+    "amygdala hemodynamic activity to feared objects was reduced",
+    "fear decoding was achieved without conscious presentation of feared images"
+  ],
+  "interpretations": [
+    "unconscious decoded neurofeedback can bypass the aversiveness of conscious exposure",
+    "hyperalignment-based decoding enables clinically tractable fear reprogramming"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "decoded neurofeedback",
+    "multivoxel pattern decoding",
+    "hyperalignment",
+    "unconscious reinforcement",
+    "fear conditioning",
+    "amygdala activity",
+    "skin conductance response",
+    "exposure therapy alternative"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "d10ff9d5ec3743373945dd1268af2eaa",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

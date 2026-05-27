@@ -1,0 +1,61 @@
+{
+  "frameworks": [
+    {
+      "name": "perceptual history / serial dependence",
+      "role": "primary_lens",
+      "one_line": "past percepts bias current interpretation under ambiguity"
+    },
+    {
+      "name": "bistable perception",
+      "role": "context",
+      "one_line": "ambiguous stimuli alternate between rival interpretations"
+    },
+    {
+      "name": "internal vs external mode of sensory processing",
+      "role": "extended",
+      "one_line": "slow fluctuation between prior-driven and evidence-driven perception"
+    },
+    {
+      "name": "computational modeling of perceptual inference",
+      "role": "alternative_lens",
+      "one_line": "model formalises balance between history and sensory evidence"
+    }
+  ],
+  "core_question": "How does the balance between perceptual history and current sensory evidence vary over time when stimuli are only partially ambiguous?",
+  "key_assumptions": [
+    "perception integrates prior percepts with current sensory evidence",
+    "partial ambiguity is more ecologically relevant than fully ambiguous stimuli",
+    "the prior/evidence weighting can vary across time within an observer"
+  ],
+  "manipulations": [
+    "stimulus ambiguity (partial vs full ambiguity)",
+    "extended viewing intervals allowing temporal fluctuations to emerge"
+  ],
+  "key_findings": [
+    "perception was at times dominated by perceptual history, at other times by sensory evidence",
+    "these regimes alternated as slow fluctuations spanning up to several minutes",
+    "the past/present balance is not stationary"
+  ],
+  "interpretations": [
+    "conscious perception of ambiguous stimuli is modulated by slow shifts between internally and externally oriented processing modes",
+    "perceptual history and sensory evidence are dynamically reweighted rather than fixed"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "perceptual history",
+    "bistable perception",
+    "partial ambiguity",
+    "internal vs external mode",
+    "slow fluctuations in perception",
+    "sensory evidence weighting",
+    "conscious experience",
+    "computational modeling of perception"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "69e1c4ddf8190627fc5f60fd6d28f097",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:13:04+09:00",
+  "review_status": "auto_unreviewed"
+}

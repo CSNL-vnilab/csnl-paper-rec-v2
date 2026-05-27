@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "early vs late noise decomposition",
+      "role": "primary_lens",
+      "one_line": "noise injected at value-coding versus choice-readout stages drives opposite context effects"
+    },
+    {
+      "name": "context-dependent choice",
+      "role": "extended",
+      "one_line": "contextual modulation of option values can help or hurt accuracy depending on noise locus"
+    },
+    {
+      "name": "value coding and decision-making models",
+      "role": "context",
+      "one_line": "neural computations transforming option values into choices under stochastic perturbation"
+    }
+  ],
+  "core_question": "How do noise sources arising early versus late in the decision process differentially shape context-dependent choice?",
+  "key_assumptions": [
+    "noise can be localized to distinct early (value-coding) and late (choice) stages",
+    "contextual information modulates option representations",
+    "stochasticity in choice arises from internal noise sources"
+  ],
+  "manipulations": [
+    "induced value uncertainty to inject early noise",
+    "imposed time pressure to inject late noise",
+    "varied contextual information across option sets"
+  ],
+  "key_findings": [
+    "model simulations: early noise makes context enhance choice accuracy",
+    "model simulations: late noise makes context degrade choice accuracy",
+    "human experiments confirm dissociable positive and negative context effects"
+  ],
+  "interpretations": [
+    "opposing context effects reflect a unified mechanism gated by noise locus",
+    "reconciles prior conflicting findings on contextual influences in choice"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "context-dependent choice",
+    "early versus late noise",
+    "value coding",
+    "decision noise",
+    "time pressure",
+    "value uncertainty",
+    "context effects in decision-making",
+    "stochastic choice errors"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "612b731b649613977c187be56f48f7e0",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}
