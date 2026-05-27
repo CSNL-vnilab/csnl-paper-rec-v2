@@ -1,0 +1,51 @@
+{
+  "frameworks": [
+    {
+      "name": "excitation-inhibition (E/I) balance",
+      "role": "primary_lens",
+      "one_line": "Excitatory and inhibitory activity assumed balanced across spatial and temporal scales."
+    },
+    {
+      "name": "magnetic resonance spectroscopy (edited MRS)",
+      "role": "context",
+      "one_line": "In vivo measurement framework for glutamate and GABA concentrations."
+    }
+  ],
+  "core_question": "Are regional glutamate and GABA concentrations correlated in the healthy resting human brain?",
+  "key_assumptions": [
+    "Excitatory and inhibitory neural activity are balanced at multiple scales",
+    "MRS Glx and GABA+ levels reflect underlying neurotransmitter pools",
+    "E/I balance has a measurable neurochemical signature"
+  ],
+  "manipulations": [
+    "Aggregation across 19 scanning sites (n=220)",
+    "Statistical control for site, scanner vendor, and demographics",
+    "Statistical control for neurochemicals tied to neuronal density and metabolism"
+  ],
+  "key_findings": [
+    "Glx and GABA+ levels were highly correlated across the corpus",
+    "Correlation persisted after controlling for site, vendor, and demographics",
+    "Controlling for density/metabolism neurochemicals significantly reduced the correlation"
+  ],
+  "interpretations": [
+    "Findings are consistent with the notion of regional E/I balance",
+    "GABA+ and Glx levels may be critically linked to regional metabolism"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "excitation-inhibition balance",
+    "glutamate GABA correlation",
+    "edited MRS",
+    "Glx GABA+ levels",
+    "resting human brain neurochemistry",
+    "multi-site MRS corpus",
+    "regional metabolism"
+  ],
+  "out_of_scope_note": null,
+  "canonical_id": "50cd8368b7f30d08ca9ba77c996a1ad9",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:41:41+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.0
+}

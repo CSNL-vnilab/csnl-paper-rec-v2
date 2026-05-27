@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "GABAergic inhibition / excitation-inhibition balance",
+      "role": "primary_lens",
+      "one_line": "Local cortical GABA concentration as a regulator of network-level functional connectivity"
+    },
+    {
+      "name": "Resting-state functional connectivity",
+      "role": "primary_lens",
+      "one_line": "Intrinsic motor-network coupling measured at rest with fMRI"
+    },
+    {
+      "name": "Neuromodulation via tDCS",
+      "role": "extended",
+      "one_line": "Anodal tDCS used as a causal perturbation of M1 GABA and connectivity"
+    }
+  ],
+  "core_question": "Does perturbing M1 GABA with anodal tDCS causally change resting-state functional connectivity, and are the two changes linked?",
+  "key_assumptions": [
+    "MRS-measured GABA reflects functionally relevant inhibition in M1",
+    "Anodal tDCS reliably reduces local GABA and alters cortical excitability",
+    "Resting motor-network connectivity is a stable, interpretable readout"
+  ],
+  "manipulations": [
+    "Anodal vs sham 1 mA tDCS over M1 for 20 minutes",
+    "Pre- vs post-stimulation measurement of GABA (MRS) and fMRI connectivity"
+  ],
+  "key_findings": [
+    "Baseline M1 GABA negatively correlated with resting motor-network connectivity",
+    "Anodal tDCS reduced M1 GABA concentration",
+    "Anodal tDCS increased functional connectivity in the stimulated motor cortex",
+    "Within-subject changes in GABA and connectivity were not correlated"
+  ],
+  "interpretations": [
+    "Baseline GABA-connectivity coupling reflects different mechanisms than the tDCS-induced changes",
+    "tDCS effects on GABA and on connectivity may be driven by distinct underlying processes"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "M1 GABA",
+    "magnetic resonance spectroscopy",
+    "anodal tDCS",
+    "resting-state functional connectivity",
+    "motor cortex network",
+    "excitation-inhibition balance",
+    "neuromodulation",
+    "baseline inhibition"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "0810c8ec6e637670cf71bcba07de6aa6",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:41:41+09:00",
+  "review_status": "auto_unreviewed"
+}

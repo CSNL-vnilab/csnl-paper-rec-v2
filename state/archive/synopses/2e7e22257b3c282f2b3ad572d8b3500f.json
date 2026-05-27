@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "pupil-linked arousal",
+      "role": "primary_lens",
+      "one_line": "Pupil size as index of subcortical neuromodulatory arousal shaping cortical state."
+    },
+    {
+      "name": "aperiodic / 1-f cortical activity",
+      "role": "extended",
+      "one_line": "Arousal modulates the aperiodic component of population activity, not only band power."
+    },
+    {
+      "name": "homogeneous-modulator account of arousal",
+      "role": "compared_against",
+      "one_line": "Traditional view that arousal uniformly modulates cortex across regions."
+    }
+  ],
+  "core_question": "How do spontaneous fluctuations in pupil-linked arousal map onto frequency-resolved neuronal population activity across the human cortex?",
+  "key_assumptions": [
+    "Pupil size indexes central arousal / neuromodulatory state",
+    "Spontaneous pupil dilations have a definable peak time anchoring cortical effects",
+    "MEG band power reflects local cortical population activity"
+  ],
+  "manipulations": [
+    "Time-locking cortical activity to peak of spontaneous pupil dilations",
+    "Parsing cortical signal into low (2-8 Hz), intermediate (8-32 Hz), and high (>64 Hz) bands",
+    "Decomposing population activity into periodic vs aperiodic components"
+  ],
+  "key_findings": [
+    "Low-frequency (2-8 Hz) power decreases in temporal and lateral frontal cortex around pupil peak",
+    "High-frequency (>64 Hz) power increases in mid-frontal regions following the low-frequency drop",
+    "Intermediate band (8-32 Hz) in occipito-parietal cortex shows monotonic and inverted-U relations to arousal",
+    "Aperiodic component of cortical activity changes widely with pupil-linked arousal"
+  ],
+  "interpretations": [
+    "Arousal is not a homogeneous cortical modulator but a region- and frequency-specific cascade",
+    "Pupil-linked arousal restructures both oscillatory and aperiodic cortical dynamics"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "pupil-linked arousal",
+    "spontaneous pupil dilation",
+    "MEG cortical state",
+    "aperiodic 1/f component",
+    "frequency-specific cortical modulation",
+    "neuromodulation cortical dynamics",
+    "inverted-U arousal performance",
+    "subcortical arousal systems"
+  ],
+  "abstract_coverage": 1.0,
+  "out_of_scope_note": null,
+  "canonical_id": "2e7e22257b3c282f2b3ad572d8b3500f",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:41:41+09:00",
+  "review_status": "auto_unreviewed"
+}

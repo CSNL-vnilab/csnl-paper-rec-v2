@@ -1,0 +1,53 @@
+{
+  "frameworks": [
+    {
+      "name": "multivariate pattern classification",
+      "role": "primary_lens",
+      "one_line": "decode distributed brain activation patterns into discrete emotion categories"
+    },
+    {
+      "name": "affective neuroscience category models",
+      "role": "extended",
+      "one_line": "extends evoked-emotion decoders to spontaneous resting-state activity"
+    }
+  ],
+  "core_question": "Can neural classifiers trained on evoked emotions decode spontaneous emotional states from resting-state brain activity?",
+  "key_assumptions": [
+    "distinct emotion categories have separable distributed neural signatures",
+    "classifiers trained under emotion induction generalize to unprovoked states",
+    "self-reported feelings index ongoing emotional experience"
+  ],
+  "manipulations": [
+    "evoked emotion induction vs. resting state",
+    "two independent experiments testing predictive validity",
+    "individual differences in mood and personality traits"
+  ],
+  "key_findings": [
+    "resting-state activity decodes into distinct emotion categories",
+    "decoded states show spatiotemporal coherence",
+    "decoded states covary with mood and personality traits",
+    "decoded states predict online self-reported feelings"
+  ],
+  "interpretations": [
+    "validates objective brain-based models of emotion categories",
+    "emotional states emerge dynamically from separable neural systems"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "multivariate pattern classification",
+    "resting-state fMRI",
+    "emotion category decoding",
+    "spontaneous brain activity",
+    "affective neuroscience",
+    "individual differences",
+    "self-reported feelings",
+    "distributed neural patterns"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "ea845a220f56f522c86d40c2b44767d4",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:41:41+09:00",
+  "review_status": "auto_unreviewed"
+}

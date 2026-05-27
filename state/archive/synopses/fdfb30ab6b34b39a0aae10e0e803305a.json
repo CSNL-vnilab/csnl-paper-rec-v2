@@ -1,0 +1,65 @@
+{
+  "frameworks": [
+    {
+      "name": "theory-based reinforcement learning",
+      "role": "primary_lens",
+      "one_line": "structured causal world models serve as forward simulators for planning and generalization"
+    },
+    {
+      "name": "program synthesis",
+      "role": "extended",
+      "one_line": "synthesizes hierarchical theory programs as the world model representation"
+    },
+    {
+      "name": "bilevel planning",
+      "role": "extended",
+      "one_line": "hierarchical planner exploits abstractions grounded by a low-level transition model"
+    },
+    {
+      "name": "model-based reinforcement learning",
+      "role": "compared_against",
+      "one_line": "standard RL contrasted for falling short of human sample efficiency"
+    }
+  ],
+  "core_question": "Can hierarchical theory representations and program synthesis make theory-based RL agents scale to large domains while preserving sample-efficient human-like learning?",
+  "key_assumptions": [
+    "agents benefit from structured causal world models as forward simulators",
+    "general-purpose abstractions (e.g., 'move to') transfer across environments",
+    "hierarchical theory structure admits efficient bilevel planning"
+  ],
+  "manipulations": [
+    "theory representation language (hierarchical vs restrictive)",
+    "planning algorithm (bilevel vs flat)",
+    "grounding of abstractions through learned low-level transition model"
+  ],
+  "key_findings": [
+    "TheoryCoder learns and plans in larger domains than prior TBRL systems",
+    "hierarchical theory representations support more powerful generalization",
+    "program synthesis yields theories usable as forward simulators"
+  ],
+  "interpretations": [
+    "hierarchical theories plus program synthesis overcome TBRL scalability limits",
+    "general-purpose abstractions grounded by learned transitions enable human-like planning"
+  ],
+  "limitations_noted": [
+    "prior TBRL theory languages are restrictive",
+    "prior TBRL planning algorithms do not scale"
+  ],
+  "connecting_signals": [
+    "theory-based reinforcement learning",
+    "world model",
+    "program synthesis",
+    "bilevel planning",
+    "hierarchical abstraction",
+    "sample efficiency",
+    "model-based planning",
+    "causal forward simulator"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "fdfb30ab6b34b39a0aae10e0e803305a",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

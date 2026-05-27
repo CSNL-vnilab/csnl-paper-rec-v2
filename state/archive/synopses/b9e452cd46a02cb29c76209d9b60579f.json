@@ -1,0 +1,58 @@
+{
+  "canonical_id": "b9e452cd46a02cb29c76209d9b60579f",
+  "title": "Learning shapes cortical dynamics to enhance integration of relevant sensory input",
+  "frameworks": [
+    {
+      "name": "recurrent neural network dynamics",
+      "role": "primary_lens",
+      "one_line": "cortex modeled as recurrently connected circuit with integrating modes shaping coding"
+    },
+    {
+      "name": "excitatory-inhibitory circuit model",
+      "role": "extended",
+      "one_line": "E/I connectivity changes among tuned neurons realign integrating modes"
+    },
+    {
+      "name": "perceptual learning",
+      "role": "context",
+      "one_line": "discrimination training drives task-relevant cortical reorganization"
+    }
+  ],
+  "core_question": "How does learning reshape recurrent cortical dynamics to better integrate task-relevant sensory input?",
+  "key_assumptions": [
+    "sensory coding depends on recurrent circuit dynamics, not just feedforward drive",
+    "information in network output depends on alignment between input and integrating modes",
+    "E/I connectivity between tuned neurons determines slow integrating modes"
+  ],
+  "manipulations": [
+    "training mice on visual feature discrimination over learning",
+    "comparison of feedforward input alignment with circuit integrating modes",
+    "varying excitatory-inhibitory connectivity among feature-tuned units in model"
+  ],
+  "key_findings": [
+    "information in network output varies with alignment between input and integrating modes",
+    "slow patterns of cortical dynamics realigned over learning to integrate task-relevant input",
+    "realignment explained by E/I connectivity changes among neurons tuned to relevant features"
+  ],
+  "interpretations": [
+    "learning tunes temporal dynamics of cortical circuits to optimally integrate relevant input",
+    "recurrent circuit reorganization, not just tuning changes, supports adaptive sensory behavior"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "recurrent cortical dynamics",
+    "integrating modes",
+    "visual discrimination learning",
+    "excitatory-inhibitory connectivity",
+    "feedforward input alignment",
+    "task-relevant sensory integration",
+    "mouse visual cortex",
+    "population coding"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:41:41+09:00",
+  "review_status": "auto_unreviewed"
+}
