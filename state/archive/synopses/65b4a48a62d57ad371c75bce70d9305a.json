@@ -1,0 +1,47 @@
+{
+  "frameworks": [
+    {
+      "name": "optimal filtering",
+      "role": "primary_lens",
+      "one_line": "probabilistic filter that separates signal from non-salient repetitive input"
+    },
+    {
+      "name": "attentional filter account of habituation",
+      "role": "extended",
+      "one_line": "formalizes the long-standing filter metaphor into an explicit probabilistic model"
+    }
+  ],
+  "core_question": "Can habituation to repetitive stimuli be explained as the operation of an optimal probabilistic filter?",
+  "key_assumptions": [
+    "responding tracks an inferred signal rather than raw input",
+    "non-salient repetitive stimuli are statistically distinguishable from salient ones",
+    "an observer optimally filters input under a simple probabilistic model"
+  ],
+  "manipulations": [
+    "stimulus repetition / salience structure within the probabilistic model"
+  ],
+  "key_findings": [
+    "the optimal-filter model reproduces the major characteristics of habituation",
+    "it also captures relatively neglected characteristics of habituation"
+  ],
+  "interpretations": [
+    "habituation can be understood as a form of optimal filtering rather than passive fatigue"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "habituation",
+    "optimal filtering",
+    "attentional filter",
+    "repetitive stimuli",
+    "salience",
+    "probabilistic model",
+    "response reduction"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "65b4a48a62d57ad371c75bce70d9305a",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:28:46+09:00",
+  "review_status": "auto_unreviewed"
+}

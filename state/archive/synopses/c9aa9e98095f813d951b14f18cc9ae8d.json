@@ -1,0 +1,52 @@
+{
+  "canonical_id": "c9aa9e98095f813d951b14f18cc9ae8d",
+  "frameworks": [
+    {
+      "name": "prefrontal theories of conscious perception",
+      "role": "primary_lens",
+      "one_line": "PFC activity is essential for subjective conscious experience"
+    },
+    {
+      "name": "no-report paradigms / posterior theories",
+      "role": "compared_against",
+      "one_line": "view that PFC involvement reflects task reports, not awareness"
+    }
+  ],
+  "core_question": "Do null findings from low-sensitivity studies refute prefrontal cortex involvement in conscious perception?",
+  "key_assumptions": [
+    "subjective experience can be dissociated from objective task performance",
+    "method sensitivity determines whether PFC effects are detectable"
+  ],
+  "manipulations": [
+    "review of PFC lesion outcomes on subjective perception",
+    "review of PFC activity decoding for perceptual content",
+    "review of report vs no-report paradigms"
+  ],
+  "key_findings": [
+    "PFC lesions do affect subjective perception",
+    "PFC activity reflects specific perceptual content",
+    "PFC involvement is not solely driven by report requirements"
+  ],
+  "interpretations": [
+    "PFC plays an essential role in enabling subjective perceptual experience",
+    "conflating objective task capacity with subjective experience causes confusion"
+  ],
+  "limitations_noted": [
+    "claims depend on excluding low-sensitivity methods from the evidence base"
+  ],
+  "connecting_signals": [
+    "prefrontal cortex",
+    "conscious perception",
+    "subjective experience",
+    "perceptual awareness",
+    "no-report paradigm",
+    "PFC lesions",
+    "neural correlates of consciousness"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:28:46+09:00",
+  "review_status": "auto_unreviewed"
+}

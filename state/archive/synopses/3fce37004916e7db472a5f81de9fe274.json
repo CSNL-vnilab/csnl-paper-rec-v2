@@ -1,0 +1,54 @@
+{
+  "frameworks": [
+    {
+      "name": "phrase-structure tree (merge operation)",
+      "role": "primary_lens",
+      "one_line": "syntax built by recursive merge of words into nested phrases"
+    },
+    {
+      "name": "sequential transition probability",
+      "role": "compared_against",
+      "one_line": "language as linear lexical/syntactic-category transition statistics"
+    }
+  ],
+  "core_question": "Does brain activity during sentence reading reflect construction of nested phrase structures rather than mere sequential word transitions?",
+  "key_assumptions": [
+    "syntax involves a tree of nested phrases, not a linear word sequence",
+    "high-gamma power indexes local linguistic computation",
+    "a single merge operation applies across phrases of arbitrary complexity"
+  ],
+  "manipulations": [
+    "sentences vs. word lists, presented word-by-word",
+    "successive word position within a sentence",
+    "boundaries where words can be merged into a phrase",
+    "model comparison: phrase construction vs. transition probability"
+  ],
+  "key_findings": [
+    "high-gamma power increased with each successive word in a sentence",
+    "high-gamma power decreased suddenly at phrase-merge boundaries",
+    "each added word or multiword phrase added similar amounts of activity",
+    "transition-probability models captured only posterior middle temporal gyrus activity"
+  ],
+  "interpretations": [
+    "left superior temporal and inferior frontal cortices implement a merge operation over linguistic objects of arbitrary complexity",
+    "phrase-structure construction fits neural activity better than surface sequential statistics at most language sites"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "phrase structure building",
+    "merge operation",
+    "intracranial high-gamma",
+    "sentence processing",
+    "syntactic tree",
+    "transition probability model",
+    "superior temporal gyrus",
+    "inferior frontal cortex"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "3fce37004916e7db472a5f81de9fe274",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

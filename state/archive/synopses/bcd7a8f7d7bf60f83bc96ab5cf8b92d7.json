@@ -1,0 +1,52 @@
+{
+  "frameworks": [
+    {
+      "name": "generative adversarial networks",
+      "role": "primary_lens",
+      "one_line": "implicit generative model trained by fooling a discriminator into accepting samples as real"
+    },
+    {
+      "name": "explicit density generative models",
+      "role": "compared_against",
+      "one_line": "prior brain-as-generative-model theories that assign probabilities to world states"
+    },
+    {
+      "name": "predictive coding / Bayesian brain",
+      "role": "context",
+      "one_line": "broader idea that the brain learns generative models of the world"
+    }
+  ],
+  "core_question": "Can an adversarial generator-discriminator framework serve as a viable theory of probabilistic computation in the brain?",
+  "key_assumptions": [
+    "the brain learns a generative model of the world",
+    "implicit (sample-based) density models are tractable where explicit ones are not",
+    "generator and discriminator can be instantiated as distinct neural subsystems"
+  ],
+  "manipulations": [],
+  "key_findings": [
+    "adversarial framing sidesteps the approximate-inference pitfalls of explicit density models",
+    "psychological and neural evidence is reviewed as consistent with a generator-discriminator architecture",
+    "breakdown of generator or discriminator is mapped onto delusional symptoms in mental disorders"
+  ],
+  "interpretations": [
+    "generative adversarial algorithms offer a tractable alternative theory of brain-based probabilistic computation",
+    "imbalance between generator and discriminator could explain certain psychiatric delusions"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "generative adversarial networks",
+    "implicit density model",
+    "generator-discriminator architecture",
+    "probabilistic computation in the brain",
+    "approximate inference",
+    "delusions and mental disorders",
+    "generative models of the world"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "bcd7a8f7d7bf60f83bc96ab5cf8b92d7",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:28:46+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,17 @@
+{
+  "frameworks": [],
+  "core_question": "",
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "Engineering paper on TPOT, a tree-based AutoML pipeline-optimization tool — generic data-science automation, unrelated to cognitive/perceptual/computational neuroscience.",
+  "abstract_coverage": 0.0,
+  "canonical_id": "803b54266c70c2b952f14aca90cd728b",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

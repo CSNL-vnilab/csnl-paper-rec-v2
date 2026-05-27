@@ -1,0 +1,45 @@
+{
+  "frameworks": [
+    {
+      "name": "computational modeling of behavior",
+      "role": "primary_lens",
+      "one_line": "fitting algorithmic models to behavioral data to probe latent cognitive variables"
+    }
+  ],
+  "core_question": "How should researchers relate computational models to behavioral data so that fits yield meaningful insights about cognition?",
+  "key_assumptions": [
+    "behavior can be characterized by tractable algorithmic models",
+    "model parameters map onto latent cognitive or neural variables",
+    "rigorous fitting and validation procedures generalize across techniques"
+  ],
+  "manipulations": [],
+  "key_findings": [
+    "ten pragmatic rules cover model specification, fitting, and validation for behavioral data",
+    "rules are illustrated with the simplest accessible modeling techniques and online code",
+    "most rules also extend to more advanced modeling techniques"
+  ],
+  "interpretations": [
+    "following these guidelines helps researchers avoid common pitfalls in behavioral modeling",
+    "principled modeling can reveal algorithms, neural correlates, and effects of drugs, illness, and interventions"
+  ],
+  "limitations_noted": [
+    "tutorial focuses on the simplest techniques accessible to beginners"
+  ],
+  "connecting_signals": [
+    "computational modeling of behavior",
+    "model fitting to behavioral data",
+    "parameter recovery",
+    "model comparison",
+    "latent cognitive variables",
+    "neural correlates of computational variables",
+    "tutorial best practices",
+    "behavioral data analysis"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "44201bc35bbb63c188b41a2748305615",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:28:46+09:00",
+  "review_status": "auto_unreviewed"
+}
