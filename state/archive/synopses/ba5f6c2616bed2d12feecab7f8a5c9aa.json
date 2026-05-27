@@ -1,0 +1,61 @@
+{
+  "frameworks": [
+    {
+      "name": "multiscale computation",
+      "role": "primary_lens",
+      "one_line": "adaptive integration of information across local and global scales in time and space"
+    },
+    {
+      "name": "dynamic attention",
+      "role": "primary_lens",
+      "one_line": "modulation of integration scale to balance computation cost and explore-exploit"
+    },
+    {
+      "name": "prefrontal cognitive control",
+      "role": "extended",
+      "one_line": "dACC and dlPFC implement top-down scale modulation across hierarchies"
+    },
+    {
+      "name": "transformer and attention architectures",
+      "role": "context",
+      "one_line": "AI systems with dynamic scale modulation contrasted with fixed-scale RNN/CNN"
+    }
+  ],
+  "core_question": "How do biological brains and AI systems adaptively modulate integration across multiple scales to support hierarchical goals?",
+  "key_assumptions": [
+    "intelligence requires integrating information across scales in time and space",
+    "fixed-scale architectures are computationally inefficient",
+    "scale modulation jointly addresses efficiency and explore-exploit"
+  ],
+  "manipulations": [
+    "review across decision inertia, habit formation, information search, risky choice, foraging domains",
+    "comparison of fixed-scale RNN/CNN against attention/transformer/dynamic convolution architectures"
+  ],
+  "key_findings": [
+    "dorsal anterior cingulate and dorsolateral prefrontal cortex represent and modulate across scales",
+    "sensory-to-prefrontal hierarchies show local-to-global consolidation",
+    "AI progress tracks innovations from fixed scaling to dynamic multiscale modulation"
+  ],
+  "interpretations": [
+    "biological and artificial multiscale modulation share architectural principles",
+    "dynamic scale modulation resolves computational inefficiency and explore-exploit simultaneously"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "multiscale computation",
+    "dynamic attention",
+    "explore-exploit tradeoff",
+    "dorsal anterior cingulate cortex",
+    "dorsolateral prefrontal cortex",
+    "transformer architecture",
+    "consciousness priors",
+    "hierarchical goals"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "ba5f6c2616bed2d12feecab7f8a5c9aa",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

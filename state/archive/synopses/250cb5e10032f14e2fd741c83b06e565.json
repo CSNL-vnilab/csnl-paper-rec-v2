@@ -1,0 +1,54 @@
+{
+  "frameworks": [
+    {
+      "name": "psychophysical generalized linear model (PsyTrack-style time-varying GLM)",
+      "role": "primary_lens",
+      "one_line": "trial-to-trial weights on stimuli and history covariates capture evolving decision strategy"
+    },
+    {
+      "name": "logistic regression / signal-detection style choice model",
+      "role": "extended",
+      "one_line": "static psychophysical weights are extended into a dynamic per-trial estimate"
+    }
+  ],
+  "core_question": "How can we characterize trial-to-trial changes in decision-making strategy across learning and within trained behavior?",
+  "key_assumptions": [
+    "choice on each trial is driven by a weighted combination of task-relevant stimuli and task-irrelevant covariates",
+    "strategy weights vary smoothly across trials",
+    "history terms (previous choice, reward, stimulus) contribute alongside current stimulus"
+  ],
+  "manipulations": [
+    "species (mice, rats, humans)",
+    "task type (auditory discrimination, visual detection)",
+    "learning stage (early training through well-trained)",
+    "time-varying task statistics across sessions"
+  ],
+  "key_findings": [
+    "method recovers trial-to-trial sensitivity to task-relevant stimuli",
+    "method also recovers weights on task-irrelevant covariates (choice, reward, stimulus history)",
+    "learning trajectories show suppression of sub-optimal strategies and adaptation to changing task statistics",
+    "shared behavioral dynamics emerge across subjects within an experimental population"
+  ],
+  "interpretations": [
+    "standard static behavioral analyses miss the dynamic structure of decision strategy",
+    "a flexible time-varying weight model exposes how strategies evolve and converge across subjects"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "time-varying psychophysical weights",
+    "trial-to-trial strategy dynamics",
+    "history effects in choice",
+    "learning trajectories in decision-making",
+    "auditory discrimination task",
+    "visual detection task",
+    "cross-species behavioral modeling",
+    "sub-optimal strategy suppression"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "250cb5e10032f14e2fd741c83b06e565",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:32:18+09:00",
+  "review_status": "auto_unreviewed"
+}

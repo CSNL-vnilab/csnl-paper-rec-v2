@@ -1,0 +1,56 @@
+{
+  "frameworks": [
+    {
+      "name": "fitness-maximizing neural encoding",
+      "role": "primary_lens",
+      "one_line": "early sensory codes are tuned to maximize reward expectation rather than representational accuracy"
+    },
+    {
+      "name": "accurate sensory representation",
+      "role": "compared_against",
+      "one_line": "encoding that minimizes reconstruction error of the sensory signal"
+    },
+    {
+      "name": "unified normative framework",
+      "role": "extended",
+      "one_line": "combines neuroscience, computer science, and economics to predict reward-driven codes"
+    }
+  ],
+  "core_question": "Do early sensory neural codes maximize organism fitness rather than representational accuracy?",
+  "key_assumptions": [
+    "encoding can be evaluated against an organismal fitness/reward objective",
+    "biological coding limits constrain feasible representations",
+    "reward structure imposed by environment shapes peripheral coding"
+  ],
+  "manipulations": [
+    "comparison of fitness-maximizing vs accuracy-maximizing predictions",
+    "reward/fitness structure across retinotopic locations in humans"
+  ],
+  "key_findings": [
+    "blowfly LMC retinal responses match reward-maximizing codes, not accurate representations",
+    "human early sensory areas adopt fitness-promoting codes in a retinotopically-specific way",
+    "these encoding changes impact decision behavior"
+  ],
+  "interpretations": [
+    "fitness-maximizing rules from the environment act at the earliest stages of sensory processing",
+    "sensory coding is best understood as reward-driven rather than fidelity-driven"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "fitness maximization",
+    "reward expectation encoding",
+    "early sensory cortex",
+    "blowfly large monopolar cells",
+    "retinotopic neural code",
+    "normative encoding framework",
+    "decision behavior",
+    "sensory representation accuracy"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "7fdb85dd29125d8080d0fd35ce07b9d2",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

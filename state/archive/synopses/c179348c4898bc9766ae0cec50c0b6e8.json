@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "evidence accumulation",
+      "role": "primary_lens",
+      "one_line": "perceptual decisions arise from gradual integration of sensory pulses over time"
+    },
+    {
+      "name": "Poisson pulse stimulus design",
+      "role": "extended",
+      "one_line": "discrete randomly-timed pulses enable model-based dissection of integration"
+    },
+    {
+      "name": "virtual reality navigation paradigm",
+      "role": "context",
+      "one_line": "head-fixed mice navigate a virtual T-maze to report decisions"
+    }
+  ],
+  "core_question": "Can head-fixed mice in virtual reality perform an accumulation-of-evidence task amenable to computational dissection?",
+  "key_assumptions": [
+    "decision reflects integration of discrete sensory pulses",
+    "Poisson-timed pulses yield a well-controlled yet diverse stimulus set",
+    "mice can serve as a model organism for accumulation tasks given genetic and optical tool availability"
+  ],
+  "manipulations": [
+    "number and side of visual pulses along virtual T-maze stem",
+    "magnitude (pulse count difference) of evidence",
+    "duration of the evidence period"
+  ],
+  "key_findings": [
+    "mice across genotypes learn the task at rat-comparable levels",
+    "mice are sensitive to single-pulse side differences",
+    "decisions integrate multiple pulses across the cue region with small early-cue overweighting",
+    "performance depends on evidence magnitude but not duration"
+  ],
+  "interpretations": [
+    "mice genuinely accumulate sensory evidence rather than relying on single cues",
+    "the task is suitable for computational and circuit-level study of perceptual decision making in mice"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "evidence accumulation",
+    "perceptual decision making",
+    "Poisson pulses",
+    "virtual reality T-maze",
+    "head-fixed mice behavior",
+    "psychophysical kernel",
+    "primacy bias",
+    "sensory integration"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "c179348c4898bc9766ae0cec50c0b6e8",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:32:18+09:00",
+  "review_status": "auto_unreviewed"
+}

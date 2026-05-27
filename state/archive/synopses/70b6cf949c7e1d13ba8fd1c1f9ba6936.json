@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "successor features and generalised policy improvement (SF&GPI)",
+      "role": "primary_lens",
+      "one_line": "reuse decomposed task-value representations to evaluate prior policies for new tasks"
+    },
+    {
+      "name": "model-free perseveration",
+      "role": "compared_against",
+      "one_line": "stimulus-response habit reuse without task-value decomposition"
+    },
+    {
+      "name": "model-based control",
+      "role": "compared_against",
+      "one_line": "planning using a full environment model rather than cached policies"
+    },
+    {
+      "name": "successor representation",
+      "role": "context",
+      "one_line": "predictive state representation underlying the SF&GPI decomposition"
+    }
+  ],
+  "core_question": "How do humans generalise solutions from past tasks to novel tasks, and is this implemented neurally?",
+  "key_assumptions": [
+    "task value decomposes into reusable features and reward weights",
+    "candidate policies from prior tasks can be evaluated on new tasks",
+    "generalisation should be reward-selective rather than blanket reuse"
+  ],
+  "manipulations": [
+    "training tasks versus novel test tasks",
+    "reward structure across tasks supporting selective reuse",
+    "task configurations distinguishing SF&GPI from model-free and model-based predictions"
+  ],
+  "key_findings": [
+    "participants learned optimal training-task solutions and reused them on novel test tasks in a reward-selective way",
+    "choice behaviour matched SF&GPI predictions, not model-free perseveration or full model-based control",
+    "fMRI decoding showed SF&GPI solutions activated in visual and prefrontal cortex on test tasks",
+    "stronger visual-cortex SF&GPI activation tracked greater behavioural reuse"
+  ],
+  "interpretations": [
+    "humans generalise via an SF&GPI-like policy reuse algorithm rather than habit or full planning",
+    "visual and prefrontal cortex provide a candidate neural substrate for adaptive cross-task generalisation"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "successor features",
+    "generalised policy improvement",
+    "successor representation",
+    "policy reuse",
+    "task generalisation",
+    "reinforcement learning in humans",
+    "fMRI decoding of policies",
+    "prefrontal cortex value representation"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "70b6cf949c7e1d13ba8fd1c1f9ba6936",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}
