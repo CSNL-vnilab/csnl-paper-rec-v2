@@ -2,12 +2,12 @@
   "version": "v1.2026-05-27",
   "started_at": "2026-05-27T19:55:00+09:00",
   "priority_queue_path": "state/archive/synopsis_priority_queue.txt",
-  "completed_count": 1000,
+  "completed_count": 1008,
   "failed_count": 0,
-  "next_index": 1000,
+  "next_index": 1008,
   "batch_size": 8,
   "meta_review_every_n_papers": 200,
-  "last_batch_at": "2026-05-28T01:24:50+09:00",
+  "last_batch_at": "2026-05-28T01:26:51+09:00",
   "last_meta_review_at": null,
   "notes": "P21 autonomous synopsis builder. Each batch spawns N=4 context-isolated Opus sub-agents. JSON cache lives at state/archive/synopses/<cid>.json. Operator-run scripts/archive/import_synopses.py imports cache into csnl_paper_rec.archive_paper_synopses."
 }

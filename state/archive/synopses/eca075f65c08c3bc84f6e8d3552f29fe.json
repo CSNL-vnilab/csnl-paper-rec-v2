@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "structural equation modeling",
+      "role": "primary_lens",
+      "one_line": "decomposes striatal effects on cognition into direct vs fronto-parietal-mediated paths"
+    },
+    {
+      "name": "resting-state functional connectivity",
+      "role": "primary_lens",
+      "one_line": "ventral-dorsal striatum and fronto-parietal cortex measured at rest"
+    },
+    {
+      "name": "cortico-cortical strengthening hypothesis",
+      "role": "extended",
+      "one_line": "striatum contributes to executive function by reinforcing cortical connectivity"
+    }
+  ],
+  "core_question": "How does striatal connectivity contribute to executive function across childhood development?",
+  "key_assumptions": [
+    "resting-state functional connectivity indexes functional coupling relevant to cognition",
+    "executive function is a compound of working memory, inhibition, and set-shifting",
+    "indirect effects via fronto-parietal pathways can be statistically separated from direct effects"
+  ],
+  "manipulations": [
+    "inter-individual variation in ventral-dorsal striatum connectivity",
+    "age across 3-20 years",
+    "fronto-parietal connectivity as candidate mediator"
+  ],
+  "key_findings": [
+    "striatal connectivity shows indirect effect on executive function via fronto-parietal connectivity",
+    "striatal connectivity also shows a direct effect on executive function",
+    "fronto-parietal influence on cognition is age-invariant across childhood",
+    "striatal connectivity tracks developmental changes in cognitive ability"
+  ],
+  "interpretations": [
+    "striatum promotes cognitive development by strengthening cortico-cortical connectivity",
+    "striatum has a specific role in cognitive plasticity during development"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "striatal connectivity",
+    "fronto-parietal connectivity",
+    "executive function",
+    "resting-state fMRI",
+    "structural equation modeling",
+    "cognitive development",
+    "working memory inhibition set-shifting",
+    "inter-individual differences"
+  ],
+  "abstract_coverage": 1.0,
+  "out_of_scope_note": null,
+  "canonical_id": "eca075f65c08c3bc84f6e8d3552f29fe",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:26:51+09:00",
+  "review_status": "auto_unreviewed"
+}

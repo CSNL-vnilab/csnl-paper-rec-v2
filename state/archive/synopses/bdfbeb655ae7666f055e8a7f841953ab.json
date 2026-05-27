@@ -1,0 +1,62 @@
+{
+  "frameworks": [
+    {
+      "name": "low-dimensional neural trajectories",
+      "role": "primary_lens",
+      "one_line": "delay-period population activity confined to a low-dimensional manifold over time"
+    },
+    {
+      "name": "recurrent neural network trained with backpropagation",
+      "role": "extended",
+      "one_line": "trained RNNs reproduce the observed time-encoding and dimensionality"
+    },
+    {
+      "name": "sustained-activity working memory",
+      "role": "compared_against",
+      "one_line": "constant persistent firing as the substrate of delay memory"
+    },
+    {
+      "name": "reservoir / high-dimensional dynamics",
+      "role": "compared_against",
+      "one_line": "memory and timing via rich high-dimensional recurrent trajectories"
+    }
+  ],
+  "core_question": "What neural population mechanisms simultaneously support working memory and the encoding of elapsed time during delays?",
+  "key_assumptions": [
+    "delay activity in nonhuman primates carries both memory and timing signals",
+    "dimensionality of neural trajectories is a meaningful constraint on mechanism",
+    "decodability of elapsed time indexes the presence of slow-timescale signals"
+  ],
+  "manipulations": [
+    "task relevance of timing information across four delay experiments",
+    "comparison of candidate mechanisms (sustained, reservoir, trained RNN)",
+    "cumulative dimensionality of population trajectory measured over the delay"
+  ],
+  "key_findings": [
+    "elapsed time decoded with high precision when timing is task-relevant, lower when irrelevant",
+    "neural trajectories during delays are consistently low-dimensional",
+    "linear ramping component of single-neuron firing drives the slow timescale that enables time decoding"
+  ],
+  "interpretations": [
+    "constant sustained-activity and high-dimensional reservoir models are ruled out as delay mechanisms",
+    "backprop-trained recurrent networks capture both the timing and low-dimensional structure"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "working memory",
+    "time encoding",
+    "delay-period activity",
+    "low-dimensional neural trajectory",
+    "ramping firing rate",
+    "recurrent neural network",
+    "reservoir computing",
+    "nonhuman primate prefrontal recordings"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "bdfbeb655ae7666f055e8a7f841953ab",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

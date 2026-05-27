@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "bounded-capacity serial bottleneck",
+      "role": "primary_lens",
+      "one_line": "Decisions update one-at-a-time despite parallel sensory intake."
+    },
+    {
+      "name": "evidence accumulation / sequential sampling",
+      "role": "extended",
+      "one_line": "Standard accumulator extended with buffered evidence and time-multiplexed access."
+    },
+    {
+      "name": "parallel sensory acquisition",
+      "role": "context",
+      "one_line": "Early stimulus features are encoded simultaneously across dimensions."
+    }
+  ],
+  "core_question": "When two decisions concern one object, are evidence streams incorporated in parallel or serially?",
+  "key_assumptions": [
+    "color and motion are separable stimulus dimensions of the same display",
+    "decision formation can be decoupled from sensory acquisition",
+    "evidence samples can be buffered while decision access is blocked"
+  ],
+  "manipulations": [
+    "difficulty of the color decision",
+    "difficulty of the motion decision",
+    "requirement to report both decisions about a single dynamic random-dot display"
+  ],
+  "key_findings": [
+    "accuracy of one decision is unaffected by difficulty of the other",
+    "response times reveal the two decisions do not form simultaneously",
+    "both dimensions are acquired in parallel for the initial ~0.1 s",
+    "after this period evidence is incorporated serially in time-multiplexed bouts"
+  ],
+  "interpretations": [
+    "a central bottleneck precludes updating more than one decision at a time",
+    "a sensory buffer stores evidence while decision access is blocked, plausibly explaining long cognitive timescales"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "perceptual decision making",
+    "color and motion discrimination",
+    "dynamic random dot display",
+    "evidence accumulation",
+    "time-multiplexed processing",
+    "central bottleneck",
+    "sensory buffer",
+    "dual-task response times"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "cbcd9a45cce42bbd7564e9e0acdd3aa3",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:26:51+09:00",
+  "review_status": "auto_unreviewed"
+}

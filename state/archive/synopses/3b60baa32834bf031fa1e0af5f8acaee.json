@@ -1,0 +1,52 @@
+{
+  "canonical_id": "3b60baa32834bf031fa1e0af5f8acaee",
+  "title": "A neural mechanism for terminating decisions",
+  "frameworks": [
+    {
+      "name": "bounded evidence accumulation",
+      "role": "primary_lens",
+      "one_line": "decisions accumulate evidence until a threshold triggers commitment"
+    },
+    {
+      "name": "threshold / bound-crossing mechanism",
+      "role": "extended",
+      "one_line": "SC burst implements the threshold sensor applied to LIP accumulation"
+    }
+  ],
+  "core_question": "Where and how is an evidence-accumulation decision terminated in the primate brain?",
+  "key_assumptions": [
+    "LIP activity represents accumulated evidence on single trials",
+    "decisions require a discrete commitment event distinct from accumulation",
+    "eye movements report the chosen alternative"
+  ],
+  "manipulations": [
+    "simultaneous LIP and SC recording during perceptual decisions",
+    "focal pharmacological inactivation of SC"
+  ],
+  "key_findings": [
+    "LIP tracks graded evidence accumulation on each trial",
+    "SC produces one burst at decision end, sometimes preceded by smaller bursts",
+    "SC inactivation requires a stronger LIP signal to terminate a decision"
+  ],
+  "interpretations": [
+    "SC bursts act as a threshold sensor reading out LIP accumulation",
+    "termination reflects a distinct transformation from deliberation to commitment"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "evidence accumulation",
+    "decision termination",
+    "lateral intraparietal cortex",
+    "superior colliculus",
+    "bound crossing threshold",
+    "perceptual decision making",
+    "single-trial neural dynamics",
+    "focal inactivation"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:26:51+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "production functions",
+      "role": "primary_lens",
+      "one_line": "economic framework decomposing sophistication into multiplicative cognitive inputs"
+    },
+    {
+      "name": "psychophysics",
+      "role": "extended",
+      "one_line": "lawful contextual scaling of capabilities extended to strategic reasoning"
+    },
+    {
+      "name": "Nash equilibrium / classical game theory",
+      "role": "compared_against",
+      "one_line": "rational-reasoning benchmark that human behavior deviates from"
+    }
+  ],
+  "core_question": "How do social-reasoning and arithmetic cognitive demands jointly determine strategic sophistication in games?",
+  "key_assumptions": [
+    "strategic sophistication decomposes into separable social and non-social demands",
+    "capabilities combine multiplicatively as a production function",
+    "psychophysical regularity applies to strategic reasoning"
+  ],
+  "manipulations": [
+    "social cognitive demand of the game",
+    "non-social arithmetic demand of the game",
+    "overall game-complexity"
+  ],
+  "key_findings": [
+    "social and arithmetic demands act as lawful contextual factors on sophistication",
+    "subjects trade off social vs arithmetic capabilities as complexity varies",
+    "behavior deviates systematically from Nash equilibrium predictions"
+  ],
+  "interpretations": [
+    "strategic sophistication can be modeled as a psychophysical product of social and arithmetic capabilities",
+    "individual-decision and psychophysics concepts can be hybridized with strategic social reasoning"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "strategic sophistication",
+    "game complexity",
+    "production function",
+    "social cognition",
+    "psychophysics of reasoning",
+    "Nash equilibrium deviations",
+    "arithmetic cognitive demand",
+    "behavioral game theory"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "91c40e115c91f1a4b116e2f6c4c1220b",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:26:51+09:00",
+  "review_status": "auto_unreviewed"
+}

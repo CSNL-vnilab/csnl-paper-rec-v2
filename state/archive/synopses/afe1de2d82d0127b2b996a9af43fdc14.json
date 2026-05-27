@@ -1,0 +1,56 @@
+{
+  "frameworks": [
+    {
+      "name": "optimal evidence accumulation",
+      "role": "primary_lens",
+      "one_line": "Bayesian-optimal integration of noisy evidence over an adapted timescale."
+    },
+    {
+      "name": "dynamic-environment inference",
+      "role": "extended",
+      "one_line": "Extends static accumulator models by adding optimal discounting of stale evidence."
+    },
+    {
+      "name": "drift-diffusion / bounded accumulation",
+      "role": "context",
+      "one_line": "Classical static accumulator framework that the paper builds on and generalizes."
+    }
+  ],
+  "core_question": "Can rats adapt the timescale over which they accumulate and discount sensory evidence to match a changing environment?",
+  "key_assumptions": [
+    "optimal timescale jointly depends on stimulus volatility and sensory noise",
+    "decisions arise from accumulated evidence with leak matched to environment statistics",
+    "rats can be modeled as near-optimal Bayesian inference agents"
+  ],
+  "manipulations": [
+    "environment dynamics (volatility / switch rate of the latent state)",
+    "stimulus statistics setting the optimal discounting timescale"
+  ],
+  "key_findings": [
+    "rats accumulated and discounted evidence near-optimally when sensory noise was accounted for",
+    "experimenter-controlled environment dynamics shifted rats between short and long accumulation timescales",
+    "the optimal timescale depends jointly on stimulus statistics and sensory noise"
+  ],
+  "interpretations": [
+    "rodents flexibly adapt their evidence-accumulation timescale to environmental volatility",
+    "a unified normative account links static and dynamic accumulation regimes and predicts changes of mind"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "evidence accumulation",
+    "dynamic environment",
+    "optimal discounting",
+    "accumulation timescale",
+    "sensory noise",
+    "rat decision-making",
+    "changes of mind",
+    "volatility adaptation"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "afe1de2d82d0127b2b996a9af43fdc14",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:26:51+09:00",
+  "review_status": "auto_unreviewed"
+}

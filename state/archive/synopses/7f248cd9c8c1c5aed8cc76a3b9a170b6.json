@@ -1,0 +1,49 @@
+{
+  "frameworks": [
+    {
+      "name": "sequential sampling models",
+      "role": "primary_lens",
+      "one_line": "decisions formed by accumulating sensory evidence to a bound"
+    },
+    {
+      "name": "neurophysiological signatures of decision formation",
+      "role": "extended",
+      "one_line": "neural signals used to empirically test and refine sampling-model assumptions"
+    }
+  ],
+  "core_question": "How can neural signals reflecting decision computations be used to discriminate among variants of sequential sampling models that make similar behavioural predictions?",
+  "key_assumptions": [
+    "perceptual decisions arise from accumulation of sensory evidence to a decision bound",
+    "different sampling-model variants can be behaviourally indistinguishable",
+    "some neural signals index core decision computations"
+  ],
+  "manipulations": [],
+  "key_findings": [
+    "many sampling-model variants invoke different mechanisms yet predict similar choice behaviour",
+    "recent work has identified neural signals reflecting components of decision formation"
+  ],
+  "interpretations": [
+    "neural signals open avenues for empirically testing and refining sampling-model assumptions",
+    "inferring decision computations from complex neural data poses conceptual and methodological challenges"
+  ],
+  "limitations_noted": [
+    "conceptual and methodological challenges in inferring decision computations from complex neural data"
+  ],
+  "connecting_signals": [
+    "perceptual decision-making",
+    "sequential sampling models",
+    "evidence accumulation",
+    "decision bound",
+    "neural signals of decision formation",
+    "model discrimination",
+    "choice behaviour",
+    "neurophysiology of decisions"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "7f248cd9c8c1c5aed8cc76a3b9a170b6",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}
