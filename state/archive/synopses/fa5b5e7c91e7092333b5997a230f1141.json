@@ -1,0 +1,49 @@
+{
+  "frameworks": [
+    {
+      "name": "Signal Detection Theory",
+      "role": "primary_lens",
+      "one_line": "Unequal-variance SDT explains metacognitive asymmetries under matched type 1 performance."
+    },
+    {
+      "name": "type 1 / type 2 metacognition framework",
+      "role": "extended",
+      "one_line": "Extends type 2 analysis to absence reports under matched type 1 sensitivity."
+    }
+  ],
+  "core_question": "Why do metacognitive asymmetries persist between visibility manipulations when type 1 performance is matched?",
+  "key_assumptions": [
+    "Type 1 performance can be equated across conditions by stimulus matching",
+    "Metacognitive ability is indexed by area under the type 2 ROC curve",
+    "Signal and noise distributions may differ in variance"
+  ],
+  "manipulations": [
+    "Visibility reduction via phase-scrambling vs attentional blink",
+    "Detection trial type (hits vs correct rejections)"
+  ],
+  "key_findings": [
+    "Metacognitive AUC for reporting stimulus absence was higher in the attentional blink condition",
+    "Asymmetry emerged despite matched type 1 performance across manipulations"
+  ],
+  "interpretations": [
+    "Metacognitive differences under equal type 1 performance arise from unequal signal/noise variance"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "metacognition",
+    "type 2 ROC",
+    "unequal-variance signal detection",
+    "attentional blink",
+    "phase scrambling",
+    "stimulus absence reports",
+    "detection vs categorization",
+    "metacognitive asymmetry"
+  ],
+  "abstract_coverage": 1.0,
+  "out_of_scope_note": null,
+  "canonical_id": "fa5b5e7c91e7092333b5997a230f1141",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:51:00+09:00",
+  "review_status": "auto_unreviewed"
+}

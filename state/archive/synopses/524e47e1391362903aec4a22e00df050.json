@@ -1,0 +1,45 @@
+{
+  "frameworks": [
+    {
+      "name": "hierarchical vector analysis",
+      "role": "primary_lens",
+      "one_line": "Motion patterns decomposed into nested relative motion vectors across reference frames."
+    },
+    {
+      "name": "compositional neural computation",
+      "role": "extended",
+      "one_line": "Motion parsing as a tractable case of compositional high-level cognition in circuits."
+    }
+  ],
+  "core_question": "How does the brain parse complex layered visual motion into a hierarchy of relative motion vectors?",
+  "key_assumptions": [
+    "Motion scenes admit decomposition into simpler perceptually meaningful components",
+    "Relative motion vectors form a nested hierarchy used by perception and action"
+  ],
+  "manipulations": [],
+  "key_findings": [
+    "Psychophysical evidence supports hierarchical decomposition of motion into relative vectors",
+    "Recent computational models account for the algorithmic and neural basis of this parsing"
+  ],
+  "interpretations": [
+    "Hierarchical motion perception serves as a model system for neural implementation of compositionality"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "motion parsing",
+    "hierarchical motion perception",
+    "relative motion vectors",
+    "motion decomposition",
+    "compositionality in neural circuits",
+    "visual motion perception",
+    "algorithmic models of motion",
+    "scene segmentation by motion"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "524e47e1391362903aec4a22e00df050",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:51:00+09:00",
+  "review_status": "auto_unreviewed"
+}

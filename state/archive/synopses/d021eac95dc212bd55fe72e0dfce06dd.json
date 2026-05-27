@@ -1,0 +1,56 @@
+{
+  "frameworks": [
+    {
+      "name": "pattern completion",
+      "role": "primary_lens",
+      "one_line": "recurrent local circuits fill in missing sensory features from partial input"
+    },
+    {
+      "name": "sensory inference",
+      "role": "primary_lens",
+      "one_line": "brain combines prior expectations with incomplete input to infer perceptual objects"
+    },
+    {
+      "name": "top-down predictive signaling",
+      "role": "extended",
+      "one_line": "specialized V1 neurons receive and locally broadcast top-down information"
+    }
+  ],
+  "core_question": "What are the neural codes and circuits in V1 that implement sensory inference from incomplete visual input?",
+  "key_assumptions": [
+    "perception of incomplete stimuli relies on prior expectations",
+    "illusory contours probe the neural substrate of sensory inference",
+    "holographic photoactivation of selected neurons can recreate a visual representation"
+  ],
+  "manipulations": [
+    "illusory bar stimuli vs component image segments",
+    "selective holographic optogenetic photoactivation of IC-encoder neurons",
+    "multi-Neuropixels and mesoscale 2p calcium imaging in mouse V1"
+  ],
+  "key_findings": [
+    "a specialized subset of V1 neurons responds emergently to illusory bars but not to component segments",
+    "selective photoactivation of these IC-encoders recreates the IC representation in V1 without any visual stimulus"
+  ],
+  "interpretations": [
+    "IC-encoder neurons are specialized to receive and locally broadcast top-down information",
+    "pattern completion circuits in lower cortical areas selectively reinforce activity matching prior expectations as a step in perceptual inference"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "illusory contours",
+    "pattern completion",
+    "sensory inference",
+    "primary visual cortex (V1)",
+    "top-down feedback",
+    "holographic optogenetics",
+    "Neuropixels",
+    "recurrent cortical circuits"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "d021eac95dc212bd55fe72e0dfce06dd",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:51:00+09:00",
+  "review_status": "auto_unreviewed"
+}

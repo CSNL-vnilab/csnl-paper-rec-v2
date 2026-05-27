@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "proactive sensory adaptation",
+      "role": "primary_lens",
+      "one_line": "adaptation prospectively retunes encoding for the next expected input"
+    },
+    {
+      "name": "information theoretic encoding analysis",
+      "role": "primary_lens",
+      "one_line": "quantifies how coding resources are reallocated across orientation"
+    },
+    {
+      "name": "natural scene statistics",
+      "role": "alternative_lens",
+      "one_line": "temporal statistics of retinal orientations predict encoding shift"
+    }
+  ],
+  "core_question": "Does sensory adaptation proactively optimize encoding for the next expected stimulus rather than merely reacting to past input?",
+  "key_assumptions": [
+    "total coding capacity is conserved across adaptation states",
+    "discrimination thresholds index local encoding accuracy",
+    "retinal input statistics reflect ecologically relevant priors"
+  ],
+  "manipulations": [
+    "adaptor orientation across psychophysical conditions",
+    "comparison of post-adaptation discrimination at multiple test orientations",
+    "analysis of natural retinal input from freely behaving subjects"
+  ],
+  "key_findings": [
+    "discrimination accuracy peaks at the adaptor orientation",
+    "total coding capacity remains constant across adaptation",
+    "local orientation distribution in retinal input peaks at recent mean orientation"
+  ],
+  "interpretations": [
+    "adaptation reallocates coding resources to optimize for the next expected input",
+    "encoding changes are matched to short-history natural input statistics"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "orientation adaptation",
+    "discrimination threshold",
+    "proactive adaptation",
+    "coding capacity reallocation",
+    "natural scene statistics",
+    "retinal input history",
+    "information theoretic encoding",
+    "adaptor orientation"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "8559e3891401d4804ff1fdc3630eeafa",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:51:00+09:00",
+  "review_status": "auto_unreviewed"
+}

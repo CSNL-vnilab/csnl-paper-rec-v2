@@ -1,0 +1,61 @@
+{
+  "frameworks": [
+    {
+      "name": "temporal discounting",
+      "role": "primary_lens",
+      "one_line": "future reward value discounted by delay drives duration categorization"
+    },
+    {
+      "name": "temporal bisection task",
+      "role": "extended",
+      "one_line": "classic short/long duration categorization paradigm reinterpreted with reward dynamics"
+    },
+    {
+      "name": "scalar timing / noisy duration estimation",
+      "role": "alternative_lens",
+      "one_line": "noisy internal duration estimates as one of two drivers of choice"
+    },
+    {
+      "name": "arithmetic vs geometric mean accounts of interval timing",
+      "role": "compared_against",
+      "one_line": "species-difference framing contrasting human arithmetic vs animal geometric bisection points"
+    }
+  ],
+  "core_question": "Why does the temporal bisection point sit near the geometric mean for rats but the arithmetic mean for humans?",
+  "key_assumptions": [
+    "rats' choices reflect noisy duration estimates plus reward value",
+    "future rewards are temporally discounted",
+    "behavioral model can absorb species difference without separate timing mechanisms"
+  ],
+  "manipulations": [
+    "reward magnitude across short vs long options (unequal rewards)",
+    "task variant that eliminates temporally-discounted reward component"
+  ],
+  "key_findings": [
+    "model predicts bisection-point shifts induced by unequal rewards",
+    "model accounts for previously paradoxical psychometric reversals",
+    "removing the temporal-discounting component shifts rats' bisection point from geometric to arithmetic mean"
+  ],
+  "interpretations": [
+    "apparent human/non-human difference in interval timing is largely a reward-discounting artefact, not a representational divergence",
+    "rats' bisection behavior is jointly driven by duration noise and discounted reward value"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "temporal bisection task",
+    "temporal discounting",
+    "bisection point",
+    "geometric vs arithmetic mean timing",
+    "interval timing in rats",
+    "reward-modulated psychophysics",
+    "psychometric reversals",
+    "duration categorization"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "ecdd8394b170c9659085157fcca8e048",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:51:00+09:00",
+  "review_status": "auto_unreviewed"
+}

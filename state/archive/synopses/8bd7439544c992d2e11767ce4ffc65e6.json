@@ -1,0 +1,56 @@
+{
+  "frameworks": [
+    {
+      "name": "retinotopic functional organization",
+      "role": "primary_lens",
+      "one_line": "columnar maps of visual feature preference aligned to retinal position"
+    },
+    {
+      "name": "orientation columns",
+      "role": "extended",
+      "one_line": "extends cortical-style columnar organization to a subcortical structure"
+    },
+    {
+      "name": "translation-invariant object recognition",
+      "role": "compared_against",
+      "one_line": "framework the colliculus is argued to be unsuitable for"
+    }
+  ],
+  "core_question": "Is orientation preference in the mouse superior colliculus organized in a systematic, retinotopically structured way?",
+  "key_assumptions": [
+    "superficial SC inherits retinal input with retinotopic precision",
+    "neurons in a perpendicular column share visual feature tuning",
+    "orientation tuning can be read out from calcium imaging and extracellular recording"
+  ],
+  "manipulations": [
+    "grating orientation across visual locations",
+    "recording position across the tectal surface and depth (columns perpendicular to surface)"
+  ],
+  "key_findings": [
+    "neurons in perpendicular columns share visual location and preferred orientation",
+    "preferred orientation varies with retinotopic location",
+    "preferred orientation is parallel to the concentric circle around the centre of vision through the receptive field"
+  ],
+  "interpretations": [
+    "orientations are not equally represented across the visual field, so SC differs from visual cortex",
+    "this anisotropy makes SC unsuitable for translation-invariant object recognition and may give stimuli location-dependent behavioural meaning"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "superior colliculus",
+    "orientation preference",
+    "retinotopic map",
+    "concentric orientation tuning",
+    "columnar organization",
+    "mouse visual system",
+    "calcium imaging",
+    "anisotropic visual field representation"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "8bd7439544c992d2e11767ce4ffc65e6",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:51:00+09:00",
+  "review_status": "auto_unreviewed"
+}

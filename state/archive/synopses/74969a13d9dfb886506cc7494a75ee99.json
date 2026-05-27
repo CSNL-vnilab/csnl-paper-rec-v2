@@ -1,0 +1,52 @@
+{
+  "frameworks": [
+    {
+      "name": "ambiguity vs risk decision-making",
+      "role": "primary_lens",
+      "one_line": "Choices under known (risky) vs unknown (ambiguous) probabilistic outcomes."
+    },
+    {
+      "name": "incidental arousal / stress modulation of value",
+      "role": "extended",
+      "one_line": "Tests whether off-task sympathetic arousal or acute stress shifts ambiguity preferences."
+    }
+  ],
+  "core_question": "Does incidental sympathetic arousal or acute psychosocial stress bias ambiguity (vs risk) preferences?",
+  "key_assumptions": [
+    "Ambiguity and risk attitudes can be separated within-subject",
+    "Pupil dilation and salivary cortisol index successful arousal/stress induction",
+    "Prior work linking transient arousal and lifetime stress to ambiguity generalizes to incidental manipulations"
+  ],
+  "manipulations": [
+    "Anticipatory threat-of-shock paradigm (Experiment 1)",
+    "Acute psychosocial stressor incidental to choice (Experiment 2)",
+    "Lottery type: known-probability (risky) vs unknown-probability (ambiguous) vs $5 sure option"
+  ],
+  "key_findings": [
+    "Participants were more averse to ambiguity than to numerically matched risk",
+    "Pupil dilation and cortisol confirmed effective arousal and stress inductions",
+    "Neither threat-induced arousal nor acute stress shifted ambiguity preferences",
+    "No bias of risk preferences by either manipulation"
+  ],
+  "interpretations": [
+    "Incidental arousal/stress does not causally modulate ambiguity attitudes, contrary to predictions from prior correlational links"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "ambiguity aversion",
+    "risk preferences",
+    "incidental acute stress",
+    "threat of shock",
+    "pupil dilation",
+    "salivary cortisol",
+    "sympathetic arousal",
+    "decisions under uncertainty"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "74969a13d9dfb886506cc7494a75ee99",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:51:00+09:00",
+  "review_status": "auto_unreviewed"
+}
