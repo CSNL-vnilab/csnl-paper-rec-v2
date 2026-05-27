@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "evidence accumulation",
+      "role": "primary_lens",
+      "one_line": "decisions emerge from temporal integration of stimulus pulses to a bound"
+    },
+    {
+      "name": "joint neural-behavioral generative model",
+      "role": "extended",
+      "one_line": "unified framework fitting choices and multi-neuron spikes simultaneously per region"
+    },
+    {
+      "name": "behavior-only accumulation model",
+      "role": "compared_against",
+      "one_line": "accumulator fit to choices alone, contrasted with neural-derived accumulators"
+    }
+  ],
+  "core_question": "Do different rat brain regions implement distinct accumulation dynamics, and how do these relate to the animal's choice?",
+  "key_assumptions": [
+    "choices arise from accumulation of pulse-based evidence to a decision",
+    "per-region spiking activity reflects a region-specific accumulation process",
+    "behavioral and neural data can be jointly modeled within one framework"
+  ],
+  "manipulations": [
+    "recording region (PPC vs FOF vs ADS)",
+    "data source used to fit the accumulator (neural vs behavioral)",
+    "stimulus pulse trains driving accumulation"
+  ],
+  "key_findings": [
+    "each region was best fit by a distinct accumulation model",
+    "all region-derived models differed from the choice-derived model",
+    "FOF activity favored early evidence; ADS reflected near-perfect accumulation",
+    "ADS showed more instances of decision vacillation than FOF"
+  ],
+  "interpretations": [
+    "different regions differentially reflect choice-related accumulation signals",
+    "an accumulation-based framework predicts choices better when combining all regions"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "evidence accumulation",
+    "pulse-based decision task",
+    "posterior parietal cortex",
+    "frontal orienting fields",
+    "anterior-dorsal striatum",
+    "joint neural-behavioral modeling",
+    "decision vacillation",
+    "multi-region population dynamics"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "c12ece61018db6d24ce8156f691e81c7",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

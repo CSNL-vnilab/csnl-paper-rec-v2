@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "deep reinforcement learning",
+      "role": "primary_lens",
+      "one_line": "RL trains a social planner to allocate resources in a multiplayer trust game."
+    },
+    {
+      "name": "iterated multiplayer trust game",
+      "role": "context",
+      "one_line": "Economic paradigm framing the common-pool resource social dilemma."
+    },
+    {
+      "name": "conditional cooperation",
+      "role": "compared_against",
+      "one_line": "Baseline allocation heuristic against which the RL policy is benchmarked."
+    },
+    {
+      "name": "neural network models of human players",
+      "role": "extended",
+      "one_line": "Networks imitate human behaviour to form a simulated economy for planner training."
+    }
+  ],
+  "core_question": "Can a deep RL social planner design an allocation mechanism that sustains human contributions to a common-pool resource?",
+  "key_assumptions": [
+    "Human player behaviour can be approximated by trained neural networks",
+    "Aggregate human surplus is an appropriate planner objective",
+    "Trust-game dynamics generalise the common-pool resource dilemma"
+  ],
+  "manipulations": [
+    "Allocation mechanism (RL planner vs unrestricted welfare vs conditional cooperation)",
+    "Available resource level conditioning the planner's generosity",
+    "Sanctioning of defectors via reduced allocations"
+  ],
+  "key_findings": [
+    "RL planner discovered a redistributive policy yielding large surplus and roughly equal gains",
+    "RL mechanism increased human surplus above unrestricted welfare and conditional cooperation baselines",
+    "Policy conditioned generosity on resources and temporarily sanctioned defectors",
+    "An explainable derived mechanism matched performance and was more popular with players"
+  ],
+  "interpretations": [
+    "Endogenously learned redistributive allocation can promote sustainable cooperation in social dilemmas",
+    "Examining RL policies can yield interpretable, human-acceptable governance mechanisms"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "deep reinforcement learning",
+    "social planner",
+    "common-pool resource",
+    "iterated trust game",
+    "mechanism design",
+    "conditional cooperation",
+    "redistributive policy",
+    "explainable AI policy"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "9288dc1205d986f1b97c1e7b70d9afdb",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:56:48+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "flexible information routing",
+      "role": "primary_lens",
+      "one_line": "trial-by-trial gating of which sensory source feeds the decision circuit"
+    },
+    {
+      "name": "perceptual decision-making (evidence accumulation)",
+      "role": "context",
+      "one_line": "parietal neurons accumulate motion evidence for choice"
+    },
+    {
+      "name": "selective spatial attention",
+      "role": "alternative_lens",
+      "one_line": "cued attention selects the informative motion patch"
+    }
+  ],
+  "core_question": "What neural signature marks the establishment of functional connectivity between sensory and decision circuits when routing is variable across trials?",
+  "key_assumptions": [
+    "parietal cortex carries decision-related signals for motion direction",
+    "routing of evidence must be configured before sensory transmission",
+    "trial-by-trial uncertainty about source/destination requires an explicit setup signal"
+  ],
+  "manipulations": [
+    "spatial predictability of the motion stimulus (variable vs fixed location)",
+    "presence of an attention cue indicating the informative patch among two",
+    "single vs two-patch motion display"
+  ],
+  "key_findings": [
+    "transient firing-rate oscillations appeared in parietal neurons at motion onset when location was unpredictable",
+    "oscillations also appeared at onset of an attention cue selecting one of two patches",
+    "oscillations were absent when stimulus location was fixed across trials"
+  ],
+  "interpretations": [
+    "the transient oscillation reflects the mechanism that establishes source and destination of routed evidence",
+    "the oscillation indexes routing setup rather than the transmission of sensory evidence itself"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "flexible information routing",
+    "transient neural oscillations",
+    "parietal cortex firing rate",
+    "perceptual decision-making",
+    "motion direction discrimination",
+    "spatial attention cueing",
+    "functional connectivity gating",
+    "monkey electrophysiology"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "eb6fb7f928cc6b4547005818f0b3be0e",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:56:48+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "transcranial direct current stimulation (tDCS)",
+      "role": "primary_lens",
+      "one_line": "anodal and cathodal polarities exert opposing modulation on cortical excitability"
+    },
+    {
+      "name": "GABA/glutamate neurochemical balance",
+      "role": "extended",
+      "one_line": "polarity-specific changes in inhibitory and excitatory transmitter synthesis explain excitability shifts"
+    },
+    {
+      "name": "visually evoked field potential read-out",
+      "role": "context",
+      "one_line": "VEP amplitude indexes net neuronal excitability in cat area 21a"
+    }
+  ],
+  "core_question": "How does anodal versus cathodal tDCS alter cortical neuronal activity and the GABA/glutamate synthesis machinery in visual cortex?",
+  "key_assumptions": [
+    "VEP amplitude tracks neuronal excitability in target cortex",
+    "tDCS effect localizes to stimulated region (area 21a)",
+    "transmitter synthesis enzymes (GAD65/67, GLS) index inhibitory and excitatory output"
+  ],
+  "manipulations": [
+    "tDCS polarity (anodal vs cathodal)",
+    "post-stimulation time window for VEP measurement",
+    "biochemical assay of GABA and glutamate concentration and synthesizing enzymes"
+  ],
+  "key_findings": [
+    "anodal tDCS enhanced and cathodal tDCS suppressed VEP amplitude in area 21a",
+    "effect persisted ~60-70 min after stimulation",
+    "anodal tDCS selectively decreased GABA concentration and GAD65/GAD67 expression",
+    "cathodal tDCS selectively decreased glutamate concentration and glutaminase mRNA/protein"
+  ],
+  "interpretations": [
+    "polarity-specific tDCS effects arise from selective suppression of GABA versus glutamate synthesis",
+    "reduced inhibitory or excitatory transmitter output explains opposing excitability changes"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "transcranial direct current stimulation",
+    "anodal cathodal polarity",
+    "visual cortex area 21a",
+    "GABA glutamate balance",
+    "GAD65 GAD67 glutaminase",
+    "visually evoked potentials",
+    "cortical excitability modulation",
+    "neurotransmitter synthesis"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "24cb04d41cea4fc6d95eb9ffff3c7fd1",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

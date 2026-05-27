@@ -1,0 +1,50 @@
+{
+  "frameworks": [
+    {
+      "name": "divisive normalization",
+      "role": "primary_lens",
+      "one_line": "Feature-tuned divisive gain control as substrate enabling attentional modulation."
+    },
+    {
+      "name": "attentional gain modulation",
+      "role": "extended",
+      "one_line": "Attentional response gain framed as consequence of normalization strength."
+    }
+  ],
+  "core_question": "Does a visuocortical subpopulation's degree of divisive normalization determine its potential for attentional modulation?",
+  "key_assumptions": [
+    "fMRI BOLD reflects population-level visuocortical activity",
+    "stimuli sharing features normalize one another more strongly",
+    "feature-tuned normalization can be quantified per subpopulation"
+  ],
+  "manipulations": [
+    "feature-overlap of paired stimuli (shared vs distinct features)",
+    "attentional state (attended vs unattended)",
+    "stimulus configuration forcing weaker vs stronger normalization regime"
+  ],
+  "key_findings": [
+    "responses to feature-sharing stimuli show stronger mutual normalization",
+    "subpopulations with stronger normalization show larger attentional benefits",
+    "forcing a subpopulation into stronger normalization increases its attentional gain"
+  ],
+  "interpretations": [
+    "normalization strength gates the magnitude of attentional modulation in visual cortex"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "divisive normalization",
+    "feature-tuned normalization",
+    "attentional modulation",
+    "visual cortex fMRI",
+    "response gain",
+    "subpopulation responses",
+    "attentional benefit"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "a5071ffb935f32e3a46547390daa6e86",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:56:48+09:00",
+  "review_status": "auto_unreviewed"
+}
