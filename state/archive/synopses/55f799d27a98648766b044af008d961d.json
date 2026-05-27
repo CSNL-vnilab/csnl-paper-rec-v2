@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "Bayesian hierarchy discovery",
+      "role": "primary_lens",
+      "one_line": "formal Bayesian model infers state clusters supporting hierarchical planning"
+    },
+    {
+      "name": "hierarchical planning",
+      "role": "extended",
+      "one_line": "decomposing tasks into sub-problems via discovered state abstractions"
+    },
+    {
+      "name": "structure learning",
+      "role": "context",
+      "one_line": "principles imported to motivate discovery of useful abstractions"
+    },
+    {
+      "name": "robotics hierarchical decomposition",
+      "role": "context",
+      "one_line": "robotics-derived hierarchy principles applied to human planning"
+    }
+  ],
+  "core_question": "How do humans spontaneously discover hierarchical abstractions of environments to enable efficient planning?",
+  "key_assumptions": [
+    "humans cluster environment states into useful abstractions",
+    "hierarchy discovery is sensitive to topology, reward, and task distribution",
+    "hierarchical representations support breaking problems into sub-problems"
+  ],
+  "manipulations": [
+    "environment topological structure",
+    "reward distribution across states",
+    "distribution of tasks within the environment"
+  ],
+  "key_findings": [
+    "model accounts for prior effects of environment structure on planning behavior",
+    "model captures detection of bottleneck states and transitions",
+    "task and reward distributions influence planning via discovered hierarchy",
+    "hierarchy discovery unfolds incrementally across trials"
+  ],
+  "interpretations": [
+    "humans spontaneously organize environments into clusters supporting hierarchical planning",
+    "useful abstractions emerge from a Bayesian inference process over environment statistics"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "hierarchical planning",
+    "Bayesian hierarchy discovery",
+    "state abstraction",
+    "bottleneck states",
+    "sub-problem decomposition",
+    "structure learning",
+    "incremental hierarchy formation",
+    "task distribution effects"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "55f799d27a98648766b044af008d961d",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,64 @@
+{
+  "frameworks": [
+    {
+      "name": "fMRI neurofeedback",
+      "role": "primary_lens",
+      "one_line": "closed-loop brain imaging that lets participants modulate their own brain activity"
+    },
+    {
+      "name": "closed-loop brain imaging intervention",
+      "role": "extended",
+      "one_line": "real-time fMRI used as a therapeutic tool for mental disorders"
+    },
+    {
+      "name": "machine learning pattern decoding",
+      "role": "extended",
+      "one_line": "decoders identify precise activity patterns to be targeted for feedback"
+    },
+    {
+      "name": "double-blind placebo-controlled trial methodology",
+      "role": "context",
+      "one_line": "framework supporting rigorous causal evaluation of psychological interventions"
+    }
+  ],
+  "core_question": "Can contemporary real-time fMRI neurofeedback serve as a rigorous, targeted treatment for mental health disorders?",
+  "key_assumptions": [
+    "mental disorders involve dysregulation of specific brain processes",
+    "brain activity patterns can be directly modulated via closed-loop feedback",
+    "neurofeedback designs admit double-blind placebo-controlled evaluation"
+  ],
+  "manipulations": [
+    "feedback signal targeting specific brain activity patterns",
+    "methodological guidelines applied to neurofeedback design",
+    "machine-learning-defined target patterns versus simpler regional signals"
+  ],
+  "key_findings": [
+    "neurofeedback historically failed to achieve mainstream clinical acceptance partly due to methodological issues",
+    "modern guidelines permit double-blind placebo-controlled neurofeedback trials",
+    "machine learning and statistics enable targeting of precise activity patterns for therapy"
+  ],
+  "interpretations": [
+    "rt-fMRI neurofeedback is a uniquely controllable, targeted psychological intervention",
+    "the approach is now positioned for legitimate clinical translation in mental health"
+  ],
+  "limitations_noted": [
+    "prior lack of mainstream acceptance due to methodological considerations"
+  ],
+  "connecting_signals": [
+    "real-time fMRI",
+    "neurofeedback",
+    "closed-loop brain imaging",
+    "mental health intervention",
+    "brain activity modulation",
+    "double-blind placebo-controlled trials",
+    "machine learning decoding",
+    "targeted brain pattern therapy"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "b28e15cd8b95c3829839e0cf3b33cdd2",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}

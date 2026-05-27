@@ -1,0 +1,56 @@
+{
+  "frameworks": [
+    {
+      "name": "drift-diffusion model",
+      "role": "primary_lens",
+      "one_line": "evidence-accumulation model parameterising perceptual decisions, here used to localise the tRNS effect"
+    },
+    {
+      "name": "stochastic resonance",
+      "role": "primary_lens",
+      "one_line": "added noise enhances subthreshold signal quality in nonlinear sensory systems"
+    },
+    {
+      "name": "transcranial random noise stimulation",
+      "role": "extended",
+      "one_line": "noise injected into visual cortex as the experimental instantiation of stochastic resonance"
+    }
+  ],
+  "core_question": "Does adding random noise to visual cortex via tRNS obey stochastic-resonance principles during perceptual decision-making, and which decision component does it modulate?",
+  "key_assumptions": [
+    "perceptual decisions arise from gradual accumulation of noisy sensory evidence",
+    "an optimal level of added noise can enhance subthreshold signals in nonlinear neural systems",
+    "drift-diffusion parameters dissociate sensory evidence quality from non-decision components"
+  ],
+  "manipulations": [
+    "presence vs absence of bilateral visual-cortex tRNS",
+    "motion-coherence level relative to perceptual threshold (well-below, just-below, above)"
+  ],
+  "key_findings": [
+    "bilateral tRNS improved motion-direction judgements only for just-subthreshold stimuli",
+    "no behavioural benefit when stimuli were well below or above threshold",
+    "drift-diffusion fits attributed the benefit specifically to an increased drift rate"
+  ],
+  "interpretations": [
+    "human perceptual decisions follow stochastic-resonance principles when cortical noise is added externally",
+    "tRNS acts on the rate of sensory evidence accumulation rather than other decision components"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "stochastic resonance",
+    "transcranial random noise stimulation",
+    "tRNS",
+    "drift diffusion model",
+    "drift rate",
+    "evidence accumulation",
+    "random dot kinematogram",
+    "perceptual threshold"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "c5bcbe5c2eaaa2e118d1575a32e3191d",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:52:13+09:00",
+  "review_status": "auto_unreviewed"
+}

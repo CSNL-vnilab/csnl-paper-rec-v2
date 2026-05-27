@@ -1,0 +1,51 @@
+{
+  "frameworks": [
+    {
+      "name": "mental physics engine / forward model of dynamics",
+      "role": "primary_lens",
+      "one_line": "Brain simulates physics by encoding abstract physical variables like mass."
+    },
+    {
+      "name": "motion-pattern analysis without physical-variable encoding",
+      "role": "compared_against",
+      "one_line": "Alternative account predicting motion without representing latent physics."
+    }
+  ],
+  "core_question": "Does the human brain represent abstract physical variables such as mass, rather than only surface motion patterns, when understanding object interactions?",
+  "key_assumptions": [
+    "Intuitive physical inference recruits specific parietal/frontal regions identified in prior work",
+    "Mass representations should generalize across irrelevant surface features if abstract"
+  ],
+  "manipulations": [
+    "Scenario varied across object interactions indicating mass",
+    "Material and friction varied",
+    "Motion energy varied",
+    "Task focus (action-free viewing; orthogonal color task)"
+  ],
+  "key_findings": [
+    "fMRI decoding recovered mass representations in physics-inference regions",
+    "Mass representations generalized across scenario, material, friction, and motion energy",
+    "Invariant mass coding emerged without action planning and under an orthogonal color task"
+  ],
+  "interpretations": [
+    "Parietal and frontal cortex encode abstract physical variables as inputs to a forward dynamics model akin to a physics engine"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "intuitive physics",
+    "mass representation",
+    "invariant neural coding",
+    "forward model of dynamics",
+    "mental physics engine",
+    "fMRI decoding",
+    "parietal and frontal cortex",
+    "object interaction videos"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "a97ef80da01aad3198af125b735f2fad",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:52:13+09:00",
+  "review_status": "auto_unreviewed"
+}

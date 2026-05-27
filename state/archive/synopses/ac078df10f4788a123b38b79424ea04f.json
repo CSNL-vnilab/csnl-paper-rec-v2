@@ -1,0 +1,62 @@
+{
+  "frameworks": [
+    {
+      "name": "adaptive gain control",
+      "role": "primary_lens",
+      "one_line": "single normalization mechanism unifying distraction effects across decision domains"
+    },
+    {
+      "name": "perceptual decision making",
+      "role": "extended",
+      "one_line": "tilt illusion reframed as gain modulation by irrelevant context"
+    },
+    {
+      "name": "cognitive control / conflict adaptation",
+      "role": "extended",
+      "one_line": "Eriksen flanker conflict effects predicted by gain-controlled decision variable"
+    },
+    {
+      "name": "economic decision making",
+      "role": "extended",
+      "one_line": "decoy effects in value-guided choice explained by adaptive gain"
+    }
+  ],
+  "core_question": "Can a single adaptive gain control model account for distraction effects across perceptual, cognitive, and value-guided choice?",
+  "key_assumptions": [
+    "irrelevant information modulates the gain of decision-relevant signals",
+    "the same gain mechanism operates across domains",
+    "a dorsal cortical network indexes the gain-modulated decision variable"
+  ],
+  "manipulations": [
+    "task domain (perceptual, cognitive, economic)",
+    "presence and type of distractors in flanker variants",
+    "decision context affecting irrelevant information"
+  ],
+  "key_findings": [
+    "adaptive gain control accounts for tilt illusion, conflict adaptation, and decoy effects",
+    "model predicts counterintuitive new behavioral phenomena in flanker task variants",
+    "BOLD signals in a dorsal network including anterior cingulate cortex track the gain-modulated decision variable"
+  ],
+  "interpretations": [
+    "distraction across domains reflects a unified adaptive gain mechanism",
+    "anterior cingulate cortex implements gain modulation of decision signals"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "adaptive gain control",
+    "distraction",
+    "tilt illusion",
+    "conflict adaptation",
+    "Eriksen flanker task",
+    "decoy effect",
+    "anterior cingulate cortex",
+    "decision variable"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "ac078df10f4788a123b38b79424ea04f",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}

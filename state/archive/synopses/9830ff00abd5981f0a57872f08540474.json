@@ -1,0 +1,51 @@
+{
+  "frameworks": [
+    {
+      "name": "reinforcement learning",
+      "role": "primary_lens",
+      "one_line": "RL theory prescribes which predictive representations are useful and how to compute them"
+    },
+    {
+      "name": "successor representation",
+      "role": "extended",
+      "one_line": "SR and its generalizations cast as versatile predictive building blocks"
+    },
+    {
+      "name": "cognitive and neural modeling",
+      "role": "context",
+      "one_line": "SR applied as engineering tool and as model of cognition and brain function"
+    }
+  ],
+  "core_question": "What kinds of predictive representations support adaptive behavior across engineering and brain function?",
+  "key_assumptions": [
+    "adaptive behavior often requires predicting future events",
+    "reinforcement learning theory specifies useful predictive representations",
+    "predictive representations can serve both engineering and brain modeling"
+  ],
+  "manipulations": [],
+  "key_findings": [
+    "successor representation and its generalizations have been widely applied as engineering tools",
+    "the same representations have been deployed as models of brain function"
+  ],
+  "interpretations": [
+    "particular predictive representations function as versatile building blocks of intelligence",
+    "convergence across engineering and neuroscience supports SR-like representations"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "predictive representations",
+    "successor representation",
+    "reinforcement learning",
+    "building blocks of intelligence",
+    "models of brain function",
+    "generalizations of SR",
+    "adaptive behavior"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "9830ff00abd5981f0a57872f08540474",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}

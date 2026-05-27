@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "ensemble representation",
+      "role": "primary_lens",
+      "one_line": "population activity patterns encode sensory stimuli across output neuron channels"
+    },
+    {
+      "name": "pattern separation",
+      "role": "primary_lens",
+      "one_line": "distinguishability of population responses to different stimuli over days"
+    },
+    {
+      "name": "long-term experience-dependent plasticity",
+      "role": "extended",
+      "one_line": "ensemble reorganization driven by passive exposure vs active learning"
+    },
+    {
+      "name": "cortical feedback circuit model",
+      "role": "context",
+      "one_line": "top-down input on bulb interneurons proposed to trigger plasticity forms"
+    }
+  ],
+  "core_question": "How do distinct output channels of the olfactory bulb reorganize their ensemble representations across passive experience versus active discrimination learning?",
+  "key_assumptions": [
+    "mitral and tufted cells form parallel output channels with potentially distinct dynamics",
+    "ensemble representations can be tracked longitudinally with chronic imaging in awake mice",
+    "pattern separation is a meaningful population-level readout of representational quality"
+  ],
+  "manipulations": [
+    "behavioral context: passive sensory experience vs active odor discrimination learning",
+    "output neuron layer: mitral cells vs tufted cells",
+    "time across days of chronic imaging"
+  ],
+  "key_findings": [
+    "both mitral and tufted populations show similar odor response profiles",
+    "passive experience reorganizes ensembles in both populations while pattern separation stays stable",
+    "active learning improves pattern separation in mitral but not tufted cells",
+    "both populations reorganize their ensemble representations during learning"
+  ],
+  "interpretations": [
+    "plasticity of ensemble representations is context- and output-layer dependent",
+    "cortical feedback onto bulb interneurons can trigger both representational reorganization and improved pattern separation"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "ensemble representation",
+    "pattern separation",
+    "mitral cells",
+    "tufted cells",
+    "olfactory bulb",
+    "chronic two-photon calcium imaging",
+    "odor discrimination learning",
+    "cortical feedback"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "ca3e845c08c1198117d40e6fc5485c0d",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,62 @@
+{
+  "frameworks": [
+    {
+      "name": "serial dependence",
+      "role": "primary_lens",
+      "one_line": "attractive temporal integration stabilizing perception across noisy discontinuous input"
+    },
+    {
+      "name": "perceptual adaptation",
+      "role": "alternative_lens",
+      "one_line": "local repulsive aftereffect recalibrating stimulus representation automatically"
+    },
+    {
+      "name": "cortical feedback processing",
+      "role": "extended",
+      "one_line": "high-level modulatory feedback on early cortical activity gates serial dependence"
+    },
+    {
+      "name": "visual backward masking",
+      "role": "context",
+      "one_line": "method used to suppress feedback signals onto early cortical representations"
+    }
+  ],
+  "core_question": "Does cortical feedback gate attractive serial dependence and reveal an underlying repulsive adaptation?",
+  "key_assumptions": [
+    "serial dependence reflects an active temporal stabilization process",
+    "visual backward masking selectively suppresses high-level modulatory feedback",
+    "early cortical activity can host local recalibration without feedback"
+  ],
+  "manipulations": [
+    "presence vs absence of visual backward masking",
+    "stimulus duration manipulated down to 50 ms",
+    "three psychophysical experiments varying feedback conditions"
+  ],
+  "key_findings": [
+    "backward masking abolishes the attractive serial dependence effect",
+    "without modulatory feedback a robust repulsive aftereffect emerges after only 50 ms",
+    "two opposing cortical mechanisms operate at short timescales"
+  ],
+  "interpretations": [
+    "cortical feedback is critical for attractive serial dependence",
+    "an automatic local repulsive recalibration coexists with feedback-driven stabilization"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "serial dependence",
+    "repulsive adaptation",
+    "visual backward masking",
+    "cortical feedback",
+    "perceptual stabilization",
+    "short-timescale aftereffect",
+    "early cortical activity",
+    "modulatory signals"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "5868105a9154818b4d9243f082e58eed",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}
