@@ -1,0 +1,62 @@
+{
+  "frameworks": [
+    {
+      "name": "Pavlovian-instrumental arbitration",
+      "role": "primary_lens",
+      "one_line": "controllability inference governs the weighting of Pavlovian versus instrumental action selection"
+    },
+    {
+      "name": "inferred controllability",
+      "role": "extended",
+      "one_line": "a computational signal modulating how much Pavlovian biases drive behavior"
+    },
+    {
+      "name": "model-based behavioral analysis",
+      "role": "primary_lens",
+      "one_line": "fit a computational arbitration model to Go/NoGo choices and neural signals"
+    },
+    {
+      "name": "frontal theta oscillations",
+      "role": "context",
+      "one_line": "frontal theta-band power as a neural correlate of inferred control"
+    }
+  ],
+  "core_question": "How does the brain arbitrate between Pavlovian and instrumental influences on action selection?",
+  "key_assumptions": [
+    "Pavlovian and instrumental systems contribute jointly to action selection",
+    "inferred controllability over outcomes adjusts their relative weighting",
+    "controllability can be inferred online from task structure"
+  ],
+  "manipulations": [
+    "Go/NoGo task with congruent and conflicting Pavlovian cues",
+    "conditions varying inferred controllability of outcomes"
+  ],
+  "key_findings": [
+    "frontal theta-band oscillatory power tracks inferred controllability",
+    "inferred controllability predicts the strength of Pavlovian action biases",
+    "inferior frontal gyrus activity correlates with action probability",
+    "ventromedial prefrontal activity correlates with outcome valence, modulated by controllability"
+  ],
+  "interpretations": [
+    "frontal theta indexes a controllability signal arbitrating Pavlovian vs instrumental control",
+    "prefrontal value and action signals are gated by inferred controllability"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "Pavlovian-instrumental arbitration",
+    "Pavlovian bias",
+    "inferred controllability",
+    "Go/NoGo task",
+    "frontal theta oscillations",
+    "inferior frontal gyrus",
+    "ventromedial prefrontal cortex",
+    "action selection"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "c9d2dc1ae10c6511960851249e49d5a8",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}

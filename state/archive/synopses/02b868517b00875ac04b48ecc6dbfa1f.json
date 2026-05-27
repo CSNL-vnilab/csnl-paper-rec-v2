@@ -1,0 +1,56 @@
+{
+  "frameworks": [
+    {
+      "name": "convolutional neural network encoding model",
+      "role": "primary_lens",
+      "one_line": "CNN trained to predict neural responses to natural images, then used to synthesise RFs."
+    },
+    {
+      "name": "nonlinear receptive field characterisation",
+      "role": "extended",
+      "one_line": "Generalises RF estimation beyond linear/parametric assumptions to arbitrary nonlinearities."
+    },
+    {
+      "name": "simple-cell / complex-cell dichotomy",
+      "role": "context",
+      "one_line": "Classical V1 RF taxonomy used to validate shift-invariance recovered by the method."
+    }
+  ],
+  "core_question": "Can a CNN-based encoding model recover nonlinear receptive fields of visual neurons without assuming a specific nonlinearity?",
+  "key_assumptions": [
+    "Neural responses to natural images are predictable from image input via CNN",
+    "An image that maximally activates the trained CNN approximates the neuron's RF",
+    "No prior parametric form for the nonlinearity is required"
+  ],
+  "manipulations": [
+    "Type of nonlinearity in simulated cells (shift-invariant, rotation-invariant, etc.)",
+    "Dataset source (simulated cells vs. mouse V1 recordings)"
+  ],
+  "key_findings": [
+    "RF images synthesised from CNN recovered diverse simulated nonlinearities including shift- and rotation-invariant RFs",
+    "Applied to mouse V1, the method visualised simple-cell-like and complex-cell-like RFs",
+    "Degree of shift-invariance could be quantified from the synthesised RFs"
+  ],
+  "interpretations": [
+    "CNN-based RF synthesis provides assumption-free nonlinear RF characterisation",
+    "Approach may extend to higher visual areas with more complex nonlinearities"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "convolutional neural network encoding model",
+    "nonlinear receptive field",
+    "shift-invariant receptive field",
+    "rotation-invariant receptive field",
+    "mouse V1",
+    "natural image responses",
+    "complex cell",
+    "RF synthesis by maximisation"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "02b868517b00875ac04b48ecc6dbfa1f",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:10:04+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "evidence accumulation",
+      "role": "primary_lens",
+      "one_line": "decisions arise from gradual integration of noisy sensory evidence over time"
+    },
+    {
+      "name": "drift-diffusion-style accumulator model",
+      "role": "extended",
+      "one_line": "trial-by-trial pulse-timing models that separate memory noise from sensory noise"
+    },
+    {
+      "name": "signal-detection / psychophysical modeling",
+      "role": "context",
+      "one_line": "decision-making framed as discrimination under noisy input"
+    }
+  ],
+  "core_question": "What are the distinct sources of internal noise that limit evidence accumulation during perceptual decision-making?",
+  "key_assumptions": [
+    "evidence is gradually accumulated over time toward a decision",
+    "noise can be decomposed into sensory-input vs accumulator-memory components",
+    "richly timed pulse trains identify mechanisms that average rates cannot",
+    "rats and humans share a comparable accumulation mechanism"
+  ],
+  "manipulations": [
+    "stimuli delivered as randomly timed sensory pulses",
+    "pulse-by-pulse trial structure for model fitting",
+    "cross-species comparison (rats and humans)"
+  ],
+  "key_findings": [
+    "accumulator's memory was effectively noiseless in both rats and humans",
+    "noise associated with incoming sensory evidence was the primary source of variability",
+    "pulse-timing analysis distinguishes alternative decision-making mechanisms"
+  ],
+  "interpretations": [
+    "errors in this task arise mainly from sensory input, not from memory decay during accumulation",
+    "pulse-based tasks plus detailed trial models reveal internal properties of decision processes"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "evidence accumulation",
+    "perceptual decision-making",
+    "accumulator memory noise",
+    "sensory noise",
+    "Poisson clicks task",
+    "pulse-based psychophysics",
+    "rodent decision-making",
+    "drift-diffusion modeling"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "83dd9ff21b8672d6bdbd2ffa55848b0d",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}

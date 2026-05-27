@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "population codebook / maximum-entropy population coding",
+      "role": "primary_lens",
+      "one_line": "vocabulary of binary spike patterns across simultaneously recorded units, shaped by pairwise correlations"
+    },
+    {
+      "name": "independent (rate-only) population model",
+      "role": "compared_against",
+      "one_line": "baseline that ignores spatial and temporal correlations between units"
+    },
+    {
+      "name": "Markov / history-dependent sequence dynamics",
+      "role": "extended",
+      "one_line": "transitions between population patterns with epoch-specific correlation time scales"
+    },
+    {
+      "name": "encoding/decoding asymmetry",
+      "role": "context",
+      "one_line": "complex encoder paired with simple downstream readout"
+    }
+  ],
+  "core_question": "How do spatial and temporal spiking correlations shape the population code of prefrontal cortex across distinct task epochs, and does that complexity matter for decoding behavior?",
+  "key_assumptions": [
+    "10 ms time bins capture relevant fine temporal structure",
+    "population activity can be described as a vocabulary of binary patterns (codebook)",
+    "task epochs index distinct computational regimes",
+    "decoders are evaluated on behavioral readout from population responses"
+  ],
+  "manipulations": [
+    "task epoch within a visual discrimination task",
+    "model class: correlated vs rate-only (independent) population models",
+    "temporal scale of pattern transitions"
+  ],
+  "key_findings": [
+    "different codebooks of population patterns are used in different task epochs",
+    "spiking correlations are required to capture the observed codebooks; rate-only models fail",
+    "pattern sequences are strongly history-dependent with epoch-specific transition probabilities and correlation time scales",
+    "observed sequences are many orders of magnitude more likely than predicted by correlation-ignoring models, yet simple correlation-ignoring decoders read out behavior well"
+  ],
+  "interpretations": [
+    "PFC uses an encoding scheme whose spatiotemporal complexity is structured to permit simple downstream decoders that need not learn correlations"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "prefrontal cortex population coding",
+    "spike pattern codebook",
+    "spatial and temporal spiking correlations",
+    "history-dependent population dynamics",
+    "task-epoch-specific neural dynamics",
+    "encoding-decoding complexity asymmetry",
+    "simple linear decoder readout",
+    "fine temporal structure 10 ms bins"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "619b29c9449165574f0997281e5f1c57",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:10:04+09:00",
+  "review_status": "auto_unreviewed"
+}

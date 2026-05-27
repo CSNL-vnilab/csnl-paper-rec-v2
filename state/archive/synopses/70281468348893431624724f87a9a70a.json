@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "response gain modulation by attention",
+      "role": "primary_lens",
+      "one_line": "attention scales neuronal gain in favor of attended stimuli"
+    },
+    {
+      "name": "neural representation of stimulus change",
+      "role": "extended",
+      "one_line": "attention amplifies coding of abrupt change beyond static feature encoding"
+    },
+    {
+      "name": "sensory adaptation",
+      "role": "compared_against",
+      "one_line": "adaptation also amplifies change signals but less than attention does"
+    },
+    {
+      "name": "accuracy-detectability tradeoff in perception",
+      "role": "primary_lens",
+      "one_line": "improving change detection comes at the cost of accurate feature representation"
+    }
+  ],
+  "core_question": "Does attention distort neural representations of sensory changes at the expense of accurate stimulus representation?",
+  "key_assumptions": [
+    "attention modulates neural response gain in visual cortex",
+    "neural representations of stimulus features can be read out from population activity",
+    "perceptual judgments reflect underlying cortical representations"
+  ],
+  "manipulations": [
+    "attended vs unattended motion stimuli",
+    "presence vs absence of a motion direction change",
+    "comparison of attention effects with adaptation effects",
+    "neurophysiology in monkeys plus perceptual reports in humans"
+  ],
+  "key_findings": [
+    "attention amplifies neural representation of motion direction changes in visual cortex",
+    "this amplification exceeds a similar effect produced by adaptation",
+    "humans overestimate the magnitude of direction changes perceptually"
+  ],
+  "interpretations": [
+    "attention distorts representations of abrupt sensory changes, reducing perceptual accuracy",
+    "this tradeoff may be an evolutionarily adaptive mechanism prioritizing change detection over fidelity"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "selective attention",
+    "response gain modulation",
+    "motion direction change detection",
+    "sensory adaptation",
+    "perceptual overestimation",
+    "visual cortex population coding",
+    "change detection vs accuracy tradeoff",
+    "rhesus monkey electrophysiology"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "70281468348893431624724f87a9a70a",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}

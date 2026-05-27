@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "cerebello-thalamo-prefrontal network",
+      "role": "primary_lens",
+      "one_line": "interactions between cerebellum and prefrontal cortex support motor skill acquisition"
+    },
+    {
+      "name": "non-invasive brain stimulation (HD-tDCS)",
+      "role": "extended",
+      "one_line": "high-definition tDCS used as causal probe of prefrontal contribution to learning"
+    },
+    {
+      "name": "explicit motor sequence learning",
+      "role": "context",
+      "one_line": "paradigm in which subjects deliberately acquire a finger-movement sequence"
+    }
+  ],
+  "core_question": "Does modulating the dorsolateral prefrontal cortex with HD-tDCS alter explicit motor sequence learning?",
+  "key_assumptions": [
+    "skill acquisition is partly supported by cerebello-thalamo-prefrontal interactions",
+    "HD-tDCS can transiently alter cortical function under the targeted electrode",
+    "anodal and cathodal montages exert dissociable polarity-specific effects"
+  ],
+  "manipulations": [
+    "HD-tDCS polarity over DLPFC (anodal vs cathodal vs sham)",
+    "mixed within- and between-subjects assignment of stimulation",
+    "stimulation delivered prior to an explicit motor sequence task"
+  ],
+  "key_findings": [
+    "anodal DLPFC stimulation impeded motor sequence learning relative to sham",
+    "cathodal DLPFC stimulation also impeded motor sequence learning relative to sham",
+    "both active polarities produced a negative effect on skill acquisition"
+  ],
+  "interpretations": [
+    "active prefrontal stimulation exerts an overall negative influence on acquisition of a sequential finger-movement pattern",
+    "DLPFC engagement is functionally relevant to explicit sequence learning within the cerebello-prefrontal network"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "motor sequence learning",
+    "dorsolateral prefrontal cortex",
+    "HD-tDCS",
+    "cerebello-thalamo-prefrontal network",
+    "explicit skill acquisition",
+    "anodal versus cathodal stimulation",
+    "finger-movement sequence",
+    "non-invasive brain stimulation"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "5f1e17a8a46ef07f5cd1717618c554d4",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}

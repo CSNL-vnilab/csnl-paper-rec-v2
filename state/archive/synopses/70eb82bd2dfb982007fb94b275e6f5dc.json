@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "prediction error / reinforcement learning from feedback",
+      "role": "primary_lens",
+      "one_line": "surprise as mismatch between expected and observed choice outcome"
+    },
+    {
+      "name": "phasic arousal (locus coeruleus-noradrenergic system)",
+      "role": "primary_lens",
+      "one_line": "pupil and slow-wave ERP as readouts of arousal-encoded learning signal"
+    },
+    {
+      "name": "signal-detection / perceptual decision under uncertainty",
+      "role": "context",
+      "one_line": "elementary two-choice task with internally fluctuating confidence"
+    }
+  ],
+  "core_question": "Do pupil dilation and the slow-wave ERP track surprise driven by intrinsic variability in decision confidence rather than external task variables?",
+  "key_assumptions": [
+    "expectation of being correct fluctuates due to internal state (e.g., engagement)",
+    "pupil and slow-wave ERP index rapid changes in brain arousal",
+    "surprise = mismatch between expected correctness and feedback outcome"
+  ],
+  "manipulations": [
+    "feedback outcome (correct vs error) on each trial",
+    "feedback awareness condition",
+    "trial-by-trial intrinsic variability in decision confidence"
+  ],
+  "key_findings": [
+    "both pupil response and slow-wave ERP reflect surprise about choice outcome",
+    "pupil response and slow-wave ERP are unrelated to each other",
+    "prediction-error computations depend on feedback awareness"
+  ],
+  "interpretations": [
+    "phasic arousal markers index a learning-relevant surprise signal driven by internal confidence",
+    "pupil and slow-wave ERP capture dissociable arousal-linked components of feedback processing"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "pupil dilation",
+    "slow-wave ERP",
+    "decision confidence",
+    "phasic arousal",
+    "locus coeruleus noradrenergic",
+    "prediction error",
+    "feedback awareness",
+    "surprise signal"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "70eb82bd2dfb982007fb94b275e6f5dc",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:10:04+09:00",
+  "review_status": "auto_unreviewed"
+}
