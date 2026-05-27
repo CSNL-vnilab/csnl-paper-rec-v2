@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "bounded evidence accumulation",
+      "role": "primary_lens",
+      "one_line": "noisy sensory evidence integrates to a decision bound over time"
+    },
+    {
+      "name": "discrete stepping (rapid commitment)",
+      "role": "alternative_lens",
+      "one_line": "single-trial activity jumps in discrete steps rather than ramping"
+    },
+    {
+      "name": "trial-averaged ramping",
+      "role": "compared_against",
+      "one_line": "smooth ramps in averaged firing may mask underlying spiking dynamics"
+    }
+  ],
+  "core_question": "Do single-trial spiking statistics in superior colliculus delay-period activity reflect accumulation or stepping, across different decision tasks?",
+  "key_assumptions": [
+    "second-order spike-train statistics discriminate accumulation from stepping",
+    "trial-averaged ramping can be produced by multiple latent processes",
+    "spike-train simulations capture the candidate latent dynamics"
+  ],
+  "manipulations": [
+    "task type (motion direction discrimination vs orientation detection vs delayed saccade)",
+    "subjects (four monkeys, two prior datasets)"
+  ],
+  "key_findings": [
+    "motion discrimination delay activity is statistically consistent with accumulation",
+    "orientation detection delay activity superficially ramps but is statistically consistent with stepping",
+    "simple delayed-saccade activity matches neither accumulation nor stepping",
+    "simulations reproduce both accumulation and stepping signatures"
+  ],
+  "interpretations": [
+    "delay-period SC activity reflects task-dependent latent dynamics, not a single universal accumulation process",
+    "differences cannot be attributed to attention, reward, or motor planning since saccade controls also differ"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "superior colliculus",
+    "evidence accumulation",
+    "discrete stepping models",
+    "single-trial spike statistics",
+    "delay-period activity",
+    "decision-making",
+    "second-order statistics",
+    "saccade task"
+  ],
+  "abstract_coverage": 1.0,
+  "out_of_scope_note": null,
+  "canonical_id": "546be44b557ffb71cf70eae6af4865c8",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:54:19+09:00",
+  "review_status": "auto_unreviewed"
+}

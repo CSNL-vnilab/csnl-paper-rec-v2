@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "Bayesian causal structure learning",
+      "role": "primary_lens",
+      "one_line": "Beliefs about causal structure between contexts and cues are updated via Bayesian inference"
+    },
+    {
+      "name": "associative learning",
+      "role": "compared_against",
+      "one_line": "Stimulus-stimulus associations learned under a given causal structure"
+    },
+    {
+      "name": "representational similarity analysis",
+      "role": "context",
+      "one_line": "Used to probe distributed encoding of probability distributions over structures"
+    }
+  ],
+  "core_question": "What are the neural substrates that arbitrate between abstract causal structures versus those that learn stimulus associations under a given structure?",
+  "key_assumptions": [
+    "Beliefs about causal structure constrain which stimuli enter into association",
+    "Bayesian updating governs acquisition of structural beliefs from experience",
+    "Structure arbitration and association learning are computationally distinct"
+  ],
+  "manipulations": [
+    "Cue-outcome contingencies consistent with different latent causal structures",
+    "Context manipulations modulating presumed causal relationships"
+  ],
+  "key_findings": [
+    "Structure learning signals encoded in rostrolateral prefrontal cortex and angular gyrus",
+    "Associative learning signals are anatomically distinct from structure learning correlates",
+    "Within-subject encoding variability predicts behavioral performance variability",
+    "Inferior frontal gyrus may encode the full posterior over causal structures"
+  ],
+  "interpretations": [
+    "Distinct neural systems support causal-structure arbitration versus association learning",
+    "Some regions represent the full distribution over candidate causal structures, not just a point estimate"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "causal structure learning",
+    "Bayesian model arbitration",
+    "context in animal learning",
+    "rostrolateral prefrontal cortex",
+    "angular gyrus",
+    "representational similarity analysis",
+    "associative learning",
+    "posterior over causal structures"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "1d2764d6d7682e7526fc61a07ad0e96b",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:54:19+09:00",
+  "review_status": "auto_unreviewed"
+}

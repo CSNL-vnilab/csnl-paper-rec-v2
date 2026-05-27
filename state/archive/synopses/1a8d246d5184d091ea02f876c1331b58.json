@@ -1,0 +1,61 @@
+{
+  "frameworks": [
+    {
+      "name": "divisive normalization",
+      "role": "primary_lens",
+      "one_line": "Current value is divided by the average of recently observed values"
+    },
+    {
+      "name": "adaptive value coding",
+      "role": "extended",
+      "one_line": "Extends neural adaptive value coding to behavioral valuation"
+    },
+    {
+      "name": "temporal context effects in decision making",
+      "role": "context",
+      "one_line": "Links valuation history dependence to broader context effects"
+    },
+    {
+      "name": "perceptual adaptation",
+      "role": "context",
+      "one_line": "Frames valuation adaptation as analogous to perceptual context effects"
+    }
+  ],
+  "core_question": "Does human behavioral valuation dynamically adapt to the recent history of observed values?",
+  "key_assumptions": [
+    "Subjective value can be operationalized from human valuation reports",
+    "Recent reward environment statistics shape current value representations",
+    "Divisive normalization captures both spatial and temporal context effects"
+  ],
+  "manipulations": [
+    "Varied the history of previously observed item values",
+    "Examined how average recent value influences current valuations"
+  ],
+  "key_findings": [
+    "Current valuations vary inversely with the average value of recently observed items",
+    "Human valuation adapts to the history of previous values",
+    "Divisive normalization captures the dynamics of adaptive valuation"
+  ],
+  "interpretations": [
+    "Adaptation is a universal feature of neural information processing",
+    "Divisive normalization unifies temporal and spatial context effects across perception and economic choice"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "divisive normalization",
+    "subjective value",
+    "adaptive value coding",
+    "temporal context effects",
+    "history dependence in valuation",
+    "economic choice",
+    "reward environment statistics",
+    "context effects in decision making"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "1a8d246d5184d091ea02f876c1331b58",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

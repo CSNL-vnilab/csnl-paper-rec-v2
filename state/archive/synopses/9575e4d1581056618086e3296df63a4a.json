@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "prospective value computation",
+      "role": "primary_lens",
+      "one_line": "Decisions valued by anticipated future states and own future actions"
+    },
+    {
+      "name": "model-based sequential decision making",
+      "role": "primary_lens",
+      "one_line": "Planning over state transitions where benefits arrive only after later choices"
+    },
+    {
+      "name": "metacognitive self-modeling",
+      "role": "extended",
+      "one_line": "Agents reason about their own anticipated future biases when planning"
+    }
+  ],
+  "core_question": "How do humans plan sequential decisions whose payoffs depend on their own future behavior, and how is this prospective value represented in medial frontal cortex?",
+  "key_assumptions": [
+    "Choices have delayed, contingent benefits requiring forward simulation",
+    "Agents can model their own future behavioral tendencies",
+    "Medial frontal cortex supports value-based prospective computation"
+  ],
+  "manipulations": [
+    "Sequential decision-making task with delayed contingent benefits",
+    "Behavioral testing in humans (n=76) and fMRI subsample (n=24)",
+    "Model-based decomposition of prospective-value components"
+  ],
+  "key_findings": [
+    "Participants computed prospective value taking future states and own responses into account",
+    "Participants anticipated their own future biases and avoided states triggering them",
+    "Dorsal anterior cingulate cortex tracked prospective value",
+    "Area 8m/9 reflected anticipated changes in prospective value; perigenual ACC reflected its influence on choice"
+  ],
+  "interpretations": [
+    "Prospective decision making is decomposable into dissociable medial frontal subcomponents",
+    "Insight into one's own future behavioral biases shapes adaptive sequential choice"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "prospective value",
+    "sequential decision making",
+    "model-based planning",
+    "medial frontal cortex",
+    "dorsal anterior cingulate cortex",
+    "perigenual anterior cingulate cortex",
+    "anticipated behavioral bias",
+    "metacognitive insight"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "9575e4d1581056618086e3296df63a4a",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

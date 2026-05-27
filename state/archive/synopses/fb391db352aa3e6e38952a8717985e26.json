@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "Portilla-Simoncelli statistics",
+      "role": "primary_lens",
+      "one_line": "image statistics from Gabor-like filter outputs and pairwise filter correlations"
+    },
+    {
+      "name": "linear-weighted encoding model",
+      "role": "primary_lens",
+      "one_line": "optimally weighted sum of filter outputs mimics single-neuron responses"
+    },
+    {
+      "name": "hierarchical cortical processing",
+      "role": "context",
+      "one_line": "natural scene analysis progresses from V1 to higher area V4"
+    }
+  ],
+  "core_question": "To what extent do Portilla-Simoncelli image statistics explain V1 and V4 neural responses to naturalistic videos, and how are tuning preferences spatially organized?",
+  "key_assumptions": [
+    "natural scene responses can be captured by weighted sums of filter outputs and filter-correlation statistics",
+    "two-photon calcium imaging signals reflect tuning of individual neurons",
+    "Portilla-Simoncelli decomposition spans relevant low- to higher-order image statistics"
+  ],
+  "manipulations": [
+    "cortical area (V1 vs V4)",
+    "image-statistic class (luminance histogram, Gabor outputs, pairwise filter correlations across positions/orientations/scales)",
+    "cortical distance between neuron pairs at an imaging site"
+  ],
+  "key_findings": [
+    "encoding model reproduced responses in a subpopulation of V1 and V4 neurons",
+    "V1 neurons were predominantly driven by Gabor-like low-level statistics",
+    "V4 showed increased contribution of higher-order statistics such as cross-scale correlation",
+    "preferred image statistics varied across V4 sites and response similarity declined with cortical distance"
+  ],
+  "interpretations": [
+    "natural-scene analysis progresses hierarchically from V1 to V4",
+    "neurons sharing preferred image statistics are locally clustered in V4"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "Portilla-Simoncelli statistics",
+    "naturalistic videos",
+    "two-photon calcium imaging",
+    "macaque V1 and V4",
+    "encoding model",
+    "Gabor filter outputs",
+    "cross-scale correlation",
+    "functional clustering"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "fb391db352aa3e6e38952a8717985e26",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:54:19+09:00",
+  "review_status": "auto_unreviewed"
+}

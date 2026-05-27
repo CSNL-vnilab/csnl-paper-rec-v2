@@ -1,0 +1,53 @@
+{
+  "frameworks": [
+    {
+      "name": "model-based reinforcement learning",
+      "role": "primary_lens",
+      "one_line": "value updating via simulating an internal model of the environment"
+    },
+    {
+      "name": "imagination-augmented RL with optimism bonus",
+      "role": "extended",
+      "one_line": "RL model extended with a bonus added onto imagined rewards"
+    }
+  ],
+  "core_question": "How does imaginative simulation of paths bias subsequent value-based decisions, and what neural systems support this?",
+  "key_assumptions": [
+    "agents can update value estimates by simulating an internal world model",
+    "accuracy of the internal model gates rational imagination-based learning",
+    "imagined rewards enter the same value computation as experienced rewards"
+  ],
+  "manipulations": [
+    "whether participants imagined a path before sequential decisions",
+    "presence vs absence of outcome feedback along imagined paths",
+    "individual differences in optimism about imagined rewards"
+  ],
+  "key_findings": [
+    "imagination biases participants toward imagined paths even when suboptimal",
+    "the bias scales with participants' optimism about imagined-path rewards",
+    "feedback strongly attenuates the imagination-induced bias",
+    "valuation network activity predicts the magnitude of the imagination effect"
+  ],
+  "interpretations": [
+    "imagination supports learning but is susceptible to motivational/optimism biases",
+    "an optimism bonus on imagined rewards captures the behavioural effect within RL"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "imaginative reinforcement learning",
+    "model-based RL",
+    "internal model simulation",
+    "sequential decision-making",
+    "optimism bias",
+    "imagined rewards",
+    "valuation network fMRI",
+    "motivational bias in learning"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "abd5a8ee8cf7687f41f051d7e4f7b7a8",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:54:19+09:00",
+  "review_status": "auto_unreviewed"
+}

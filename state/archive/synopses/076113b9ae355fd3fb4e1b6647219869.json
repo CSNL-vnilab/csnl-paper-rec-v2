@@ -1,0 +1,65 @@
+{
+  "frameworks": [
+    {
+      "name": "representational models",
+      "role": "primary_lens",
+      "one_line": "Hypotheses about the distribution of activity profiles across experimental conditions"
+    },
+    {
+      "name": "encoding analysis",
+      "role": "compared_against",
+      "one_line": "Predicts activity patterns from feature models via regression"
+    },
+    {
+      "name": "pattern component modeling (PCM)",
+      "role": "compared_against",
+      "one_line": "Likelihood-ratio test on the second moment of activity profiles"
+    },
+    {
+      "name": "representational similarity analysis (RSA)",
+      "role": "compared_against",
+      "one_line": "Compares condition-pair dissimilarity structures across models"
+    }
+  ],
+  "core_question": "How are encoding analysis, PCM, and RSA mathematically related, and how do they compare in power to adjudicate between representational models?",
+  "key_assumptions": [
+    "Representational geometry is captured by the second moment of activity profiles",
+    "Activity profiles across conditions follow a definable distribution",
+    "Decodability of features depends on representational geometry"
+  ],
+  "manipulations": [
+    "Simulated data across three different experimental designs",
+    "Compared encoding analysis, PCM, and RSA on the same datasets",
+    "Varied which competing representational models were tested"
+  ],
+  "key_findings": [
+    "All three methods evaluate the same second moment of activity profile distributions",
+    "PCM provides the most powerful test when its assumptions hold",
+    "Encoding analysis and RSA can perform similarly when conducted appropriately",
+    "The three methods differ in computational demands, ease of use, and extensibility"
+  ],
+  "interpretations": [
+    "The three analyses share a common mathematical core via the second moment, making them unifiable under one framework",
+    "Each method renders different aspects of representational information explicit and has distinct practical advantages"
+  ],
+  "limitations_noted": [
+    "PCM's power advantage depends on its assumptions holding"
+  ],
+  "connecting_signals": [
+    "representational models",
+    "second moment of activity profiles",
+    "encoding analysis",
+    "pattern component modeling",
+    "representational similarity analysis",
+    "representational geometry",
+    "multivariate brain activity",
+    "model adjudication power"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "076113b9ae355fd3fb4e1b6647219869",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}
