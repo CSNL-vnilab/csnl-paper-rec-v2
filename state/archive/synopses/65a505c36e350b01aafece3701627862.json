@@ -1,0 +1,44 @@
+{
+  "canonical_id": "65a505c36e350b01aafece3701627862",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T10:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "GABAergic intracortical inhibition", "role": "primary_lens", "one_line": "Cortical excitation/inhibition balance modulated by tDCS, indexed psychophysically."},
+    {"name": "surround suppression", "role": "primary_lens", "one_line": "Psychophysical index of V1 intracortical inhibition."},
+    {"name": "overlay suppression", "role": "compared_against", "one_line": "LGN-origin suppression used as a non-cortical control measure."}
+  ],
+  "core_question": "Can anodal tDCS reduce intracortical inhibition in the human visual cortex as measured psychophysically?",
+  "key_assumptions": [
+    "Surround suppression indexes V1 intracortical (GABA-mediated) inhibition.",
+    "Overlay suppression originates in the LGN and is non-cortical.",
+    "Anodal tDCS reduces GABA-mediated inhibition as shown previously in motor cortex."
+  ],
+  "manipulations": [
+    "Stimulation polarity (anodal vs cathodal) over occipital poles.",
+    "Suppression type measured (surround vs overlay)."
+  ],
+  "key_findings": [
+    "Anodal occipital tDCS significantly reduced psychophysical surround suppression.",
+    "Anodal tDCS had no effect on overlay suppression.",
+    "Cathodal stimulation had no effect on either measure."
+  ],
+  "interpretations": [
+    "tDCS can reduce intracortical inhibition within human visual cortex, generalizing beyond motor cortex.",
+    "Effect is polarity-specific and localized to cortical (not subcortical) suppression."
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "transcranial direct current stimulation",
+    "surround suppression",
+    "overlay suppression",
+    "GABA inhibition",
+    "human visual cortex",
+    "V1",
+    "intracortical inhibition",
+    "psychophysics"
+  ],
+  "out_of_scope_note": null
+}

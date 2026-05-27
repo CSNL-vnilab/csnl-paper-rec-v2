@@ -1,0 +1,43 @@
+{
+  "canonical_id": "136ffd922b00dd0c7e18edc4247e1e5f",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T02:10:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "evidence accumulation", "role": "primary_lens", "one_line": "Gradual integration of sensory evidence over time to drive a decision."},
+    {"name": "cortico-striatal decision circuit", "role": "extended", "one_line": "Striatum proposed as a direct accumulation node beyond cortical regions."}
+  ],
+  "core_question": "Which brain region directly implements evidence accumulation during perceptual decision-making?",
+  "key_assumptions": [
+    "Accumulation regions must causally affect behavior, encode graded evidence, and contribute throughout accumulation.",
+    "Posterior parietal cortex and frontal orienting fields may not be the direct accumulators."
+  ],
+  "manipulations": [
+    "Pharmacological inactivation of anterior dorsal striatum (ADS).",
+    "Optogenetic perturbation during the auditory accumulation task.",
+    "Electrophysiological recording across the trial timecourse."
+  ],
+  "key_findings": [
+    "ADS perturbation affects accumulation-based decisions.",
+    "ADS neurons exhibit graded encoding of accumulated evidence.",
+    "ADS contributes throughout the accumulation period, not just at choice."
+  ],
+  "interpretations": [
+    "ADS is the first identified region satisfying all three criteria for direct involvement in evidence accumulation.",
+    "ADS may be a primary node of the evidence-accumulation network."
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "evidence accumulation",
+    "anterior dorsal striatum",
+    "perceptual decision-making",
+    "rodent auditory task",
+    "optogenetic inactivation",
+    "graded neural encoding",
+    "drift-diffusion-like dynamics",
+    "cortico-striatal circuit"
+  ],
+  "out_of_scope_note": null
+}

@@ -1,0 +1,45 @@
+{
+  "canonical_id": "590e2d0827dcd466d43a82dd74933d1d",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T10:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "prefrontal cortex theory of consciousness", "role": "primary_lens", "one_line": "PFC is essential for subjective conscious visual experience"},
+    {"name": "report-based vs no-report paradigms", "role": "compared_against", "one_line": "view that PFC activity merely reflects task report demands"},
+    {"name": "randomly connected recurrent neural network", "role": "alternative_lens", "one_line": "analogy for why PFC lesions show limited perceptual deficits"},
+    {"name": "convolutional neural network", "role": "compared_against", "one_line": "early feedforward layers contrasted against PFC's recurrent architecture"}
+  ],
+  "core_question": "Is the prefrontal cortex critical for conscious visual perception?",
+  "key_assumptions": [
+    "subjective experience is dissociable from objective task performance",
+    "lesion effects and neural content can adjudicate consciousness theories",
+    "machine learning architectures inform PFC functional interpretation"
+  ],
+  "manipulations": [
+    "evaluation of three claims commonly made against PFC's role",
+    "comparison of PFC to different neural network architectures"
+  ],
+  "key_findings": [
+    "PFC lesions do affect subjective perception, contra common claim",
+    "PFC activity does reflect specific perceptual content",
+    "PFC involvement is not solely driven by report demands"
+  ],
+  "interpretations": [
+    "PFC plays essential role in enabling subjective perceptual experience",
+    "limited lesion effects explainable if PFC resembles randomly connected RNN rather than feedforward early layers"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "prefrontal cortex",
+    "conscious visual perception",
+    "subjective experience",
+    "perceptual awareness",
+    "no-report paradigms",
+    "lesion effects",
+    "recurrent neural networks",
+    "neural correlates of consciousness"
+  ],
+  "out_of_scope_note": null
+}

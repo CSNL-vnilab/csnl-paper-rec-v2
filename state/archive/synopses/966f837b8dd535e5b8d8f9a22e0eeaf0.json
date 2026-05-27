@@ -1,0 +1,44 @@
+{
+  "canonical_id": "966f837b8dd535e5b8d8f9a22e0eeaf0",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T10:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "chronic Neuropixels electrophysiology", "role": "primary_lens", "one_line": "long-term multi-probe extracellular recording in freely moving rats"}
+  ],
+  "core_question": "Can Neuropixels probes be chronically implanted, reused, and recorded from over months in freely moving rats?",
+  "key_assumptions": [
+    "probe reuse is feasible if explant noise stays below single-unit threshold",
+    "yield can be assessed across anatomical positions"
+  ],
+  "manipulations": [
+    "anatomical position of probe insertion",
+    "probe reuse across multiple implantation cycles",
+    "number of probes implanted per rat"
+  ],
+  "key_findings": [
+    "hundreds of units recorded for multiple months in unrestrained rats",
+    "yields depended systematically on anatomical position",
+    "explanted probes showed small noise increase versus unimplanted",
+    "noise increase insufficient to impair future single-unit recordings"
+  ],
+  "interpretations": [
+    "cost-effective multi-region multi-probe Neuropixels chronic recording is viable in rats",
+    "approach may facilitate standardization of chronic Neuropixels recordings in freely moving animals"
+  ],
+  "limitations_noted": [
+    "long-term stability and probe reusability were previously unaddressed in initial studies"
+  ],
+  "connecting_signals": [
+    "chronic Neuropixels recording",
+    "freely moving rats",
+    "probe reuse",
+    "multi-probe implantation",
+    "long-term single-unit yield",
+    "explanted probe noise",
+    "unrestrained behavior electrophysiology"
+  ],
+  "out_of_scope_note": null
+}

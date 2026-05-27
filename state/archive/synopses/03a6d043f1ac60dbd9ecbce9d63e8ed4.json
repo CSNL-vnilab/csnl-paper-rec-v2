@@ -1,0 +1,37 @@
+{
+  "canonical_id": "03a6d043f1ac60dbd9ecbce9d63e8ed4",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.4,
+  "frameworks": [
+    {"name": "decentralized ledger / blockchain analogy", "role": "primary_lens", "one_line": "linked list, hash functions, and sharding as metaphors for episodic memory mechanisms"},
+    {"name": "episodic memory", "role": "extended", "one_line": "mammalian episodic memory reframed via distributed-ledger primitives"},
+    {"name": "metacognition and reality monitoring", "role": "context", "one_line": "introspective judgments cited as inspiration for probabilistic consensus"},
+    {"name": "probabilistic consensus protocols", "role": "extended", "one_line": "blockchain consensus possibly informed by perceptual conscious experience"}
+  ],
+  "core_question": "Can computer-science primitives from blockchain (linked list, hash functions, sharding) illuminate neural mechanisms of episodic memory, and can brain phenomena reciprocally inform consensus protocol design?",
+  "key_assumptions": [
+    "memory traces can be usefully analogized to chained, hashed, sharded ledger entries",
+    "metacognition and reality monitoring share computational structure with consensus mechanisms"
+  ],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [
+    "blockchain primitives are more relevant to episodic-memory neuroscience than previously recognized",
+    "brain phenomena (metacognition, reality monitoring, conscious perception) may inspire probabilistic consensus protocol design"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "blockchain",
+    "distributed ledger",
+    "hash functions",
+    "sharding",
+    "episodic memory",
+    "metacognition",
+    "reality monitoring",
+    "probabilistic consensus"
+  ],
+  "out_of_scope_note": null
+}

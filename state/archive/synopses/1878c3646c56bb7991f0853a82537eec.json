@@ -1,0 +1,45 @@
+{
+  "canonical_id": "1878c3646c56bb7991f0853a82537eec",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T10:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "high-dimensional neural population dynamics", "role": "primary_lens", "one_line": "M1 activity occupies many population dimensions reflecting distinct control computations"},
+    {"name": "compositional / mixture-of-subskills control", "role": "extended", "one_line": "subskills are deployed flexibly, sometimes combined compositionally during skilled movement"},
+    {"name": "low-dimensional motor cortex view", "role": "compared_against", "one_line": "traditional assumption that M1 dynamics are low-dimensional and uniform"}
+  ],
+  "core_question": "How does primary motor cortex flexibly combine multiple subskills, each with its own control strategy, to produce skilled movement?",
+  "key_assumptions": [
+    "different behavioral control strategies map onto distinct neural subspaces",
+    "population factors can be selectively engaged or silenced by task demands",
+    "single external degree of freedom does not constrain neural dimensionality"
+  ],
+  "manipulations": [
+    "force-tracking task requiring different control strategies within a single DoF",
+    "epochs eliciting distinct subskills and their compositional combinations"
+  ],
+  "key_findings": [
+    "M1 activity is higher-dimensional than traditionally assumed",
+    "neural dynamics transition among many dimensions reflecting distinct computations",
+    "different control strategies occupy distinct neural locations and dimensions, sometimes used compositionally",
+    "groups of population factors activate only when their dynamics are needed, otherwise remain silent"
+  ],
+  "interpretations": [
+    "M1 hosts a flexible, high-dimensional repertoire of subskills rather than a single low-dimensional controller",
+    "engaged subskill dominates neural activity, so activity can differ even for matched motor output"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "primary motor cortex (M1)",
+    "Neuropixels recordings",
+    "macaque force-tracking task",
+    "neural population dimensionality",
+    "subskill composition",
+    "population-level factors",
+    "flexible motor control",
+    "neural dynamics transitions"
+  ],
+  "out_of_scope_note": null
+}

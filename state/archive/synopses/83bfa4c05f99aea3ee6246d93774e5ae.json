@@ -1,0 +1,43 @@
+{
+  "canonical_id": "83bfa4c05f99aea3ee6246d93774e5ae",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T10:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "task-specific neural coding", "role": "primary_lens", "one_line": "single neurons participate in only some tasks, not all"},
+    {"name": "context-dependent neural representation", "role": "extended", "one_line": "physical context, not task identity, drives neuronal recruitment"}
+  ],
+  "core_question": "Do individual parietal cortex neurons participate in multiple behavioral tasks, and what determines their participation?",
+  "key_assumptions": [
+    "the same neurons can be tracked across multiple task sessions",
+    "physical apparatus context can be dissociated from task demands"
+  ],
+  "manipulations": [
+    "two visual decision tasks (steering wheel vs virtual T-maze)",
+    "recording in same apparatus without task stimuli",
+    "hybrid task combining steering-wheel context with T-maze visuals"
+  ],
+  "key_findings": [
+    "neurons active during T-maze task were typically inactive during steering-wheel task and vice versa",
+    "recording without task stimuli yielded the same neuronal specificity as during the task",
+    "hybrid task engaged the same neurons as the steering-wheel task, not the T-maze task"
+  ],
+  "interpretations": [
+    "parietal neuron participation is task specific",
+    "task specificity is determined by physical context rather than task demands"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "parietal cortex",
+    "task specificity",
+    "head-fixed mice",
+    "visual decision task",
+    "virtual T-maze",
+    "steering wheel task",
+    "context-dependent neural activity",
+    "chronic neural recording"
+  ],
+  "out_of_scope_note": null
+}
