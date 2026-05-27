@@ -1,0 +1,52 @@
+{
+  "frameworks": [
+    {
+      "name": "generative adversarial network",
+      "role": "primary_lens",
+      "one_line": "generator-discriminator dynamics frame visual imagery in brain"
+    },
+    {
+      "name": "two-pathway visual processing",
+      "role": "extended",
+      "one_line": "conscious and nonconscious pathways instantiate adversarial interaction"
+    },
+    {
+      "name": "predictive processing",
+      "role": "context",
+      "one_line": "internal predictions shape subjective visual experience"
+    }
+  ],
+  "core_question": "Can generative adversarial mechanisms explain intrusive visual imagery in PTSD and acute stress disorder?",
+  "key_assumptions": [
+    "subjective imagery depends on generator-discriminator-like neural interaction",
+    "two visual pathways interact adversarially in healthy perception",
+    "imbalance between adversarial signals can produce pathological imagery"
+  ],
+  "manipulations": [],
+  "key_findings": [
+    "proposes nonconscious pathway generates predictions influencing the conscious pathway",
+    "models intrusive imagery as overrepresentation of disturbing predicted content"
+  ],
+  "interpretations": [
+    "intrusive flashbacks reflect adversarial imbalance, not just memory dysfunction",
+    "subjective experience of mental disorders is tractable via AI-inspired adversarial models"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "generative adversarial network",
+    "intrusive imagery",
+    "PTSD flashbacks",
+    "visual imagination",
+    "two visual pathways",
+    "subjective experience of mental disorders",
+    "discriminator network",
+    "nonconscious prediction"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "67e75c482135c7d121036b27a924f46c",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:20:36+09:00",
+  "review_status": "auto_unreviewed"
+}

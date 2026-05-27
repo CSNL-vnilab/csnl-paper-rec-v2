@@ -1,0 +1,59 @@
+{
+  "frameworks": [
+    {
+      "name": "time-varying generalized linear model",
+      "role": "primary_lens",
+      "one_line": "flexible psychophysical weights that drift trial-to-trial to capture strategy dynamics"
+    },
+    {
+      "name": "psychophysical weighting analysis",
+      "role": "extended",
+      "one_line": "standard sensitivity-to-stimulus model extended to include history covariates over time"
+    },
+    {
+      "name": "sensory decision-making",
+      "role": "context",
+      "one_line": "perceptual choice tasks in mice, rats, and humans across modalities"
+    }
+  ],
+  "core_question": "How can we characterize trial-to-trial changes in an animal's decision-making strategy during learning and in trained subjects?",
+  "key_assumptions": [
+    "decision strategies evolve smoothly over trials",
+    "choices depend on task-relevant stimuli and task-irrelevant history covariates",
+    "shared dynamics may exist across subjects within a population"
+  ],
+  "manipulations": [
+    "learning stage across training",
+    "task-relevant stimulus features versus task-irrelevant covariates (choice, reward, stimulus history)",
+    "species (mice, rats, humans)",
+    "task modality (auditory discrimination, visual detection)"
+  ],
+  "key_findings": [
+    "method captures trial-to-trial changes in sensitivity to task stimuli",
+    "also tracks sensitivity to task-irrelevant covariates like choice, reward, and stimulus history",
+    "reveals adaptation to time-varying task statistics and suppression of sub-optimal strategies during learning",
+    "uncovers shared behavioral dynamics across subjects within a population"
+  ],
+  "interpretations": [
+    "standard static analyses miss systematic, time-varying components of behavior",
+    "decision strategies remain dynamic even in well-trained animals"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "time-varying strategy",
+    "trial-to-trial dynamics",
+    "psychophysical weights",
+    "history effects",
+    "choice history",
+    "reward history",
+    "stimulus history",
+    "learning dynamics"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "04172e9c62ea99b4becbe7226b2355fb",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

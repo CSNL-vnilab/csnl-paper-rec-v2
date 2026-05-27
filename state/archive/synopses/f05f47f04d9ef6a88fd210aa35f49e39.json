@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "drift-diffusion model",
+      "role": "primary_lens",
+      "one_line": "normative evidence accumulation account mapped onto distributed cortical MEG dynamics"
+    },
+    {
+      "name": "cortical hierarchy of perceptual decision-making",
+      "role": "primary_lens",
+      "one_line": "decision signals distributed across sensory, parietal, frontal and motor cortex"
+    },
+    {
+      "name": "post-decisional confidence computation",
+      "role": "extended",
+      "one_line": "choice-locked feedback signals propagate to visual cortex to support confidence"
+    }
+  ],
+  "core_question": "How are perceptual decision signals dynamically distributed across the human cortical hierarchy during choice and confidence formation?",
+  "key_assumptions": [
+    "perceptual choice can be approximated by drift-diffusion evidence accumulation",
+    "MEG source-localized activity indexes region- and frequency-specific decision signals",
+    "feedforward and feedback signals can be temporally dissociated around the choice"
+  ],
+  "manipulations": [
+    "perceptual decisions with subsequent confidence report",
+    "alignment of neural activity to stimulus vs. choice",
+    "comparison across cortical regions and frequency bands"
+  ],
+  "key_findings": [
+    "choice-predictive signals emerge progressively up the cortical hierarchy into motor cortex",
+    "choice-locked feedback signals propagate from association cortex back to visual cortex",
+    "distinct cortical networks carry evidence accumulation versus confidence-related signals",
+    "decision dynamics span many regions and frequency bands rather than a single locus"
+  ],
+  "interpretations": [
+    "perceptual decisions are implemented as large-scale distributed dynamics across cortex",
+    "post-decisional feedback to sensory cortex supports confidence computation"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "perceptual decision-making",
+    "drift-diffusion model",
+    "MEG source localization",
+    "cortical hierarchy",
+    "evidence accumulation",
+    "post-decisional confidence",
+    "feedback to visual cortex",
+    "large-scale cortical dynamics"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 0.85,
+  "canonical_id": "f05f47f04d9ef6a88fd210aa35f49e39",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

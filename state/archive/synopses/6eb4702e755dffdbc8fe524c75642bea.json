@@ -1,0 +1,55 @@
+{
+  "frameworks": [
+    {
+      "name": "fronto-parietal attention network",
+      "role": "primary_lens",
+      "one_line": "PPC carries prioritized attention signals and feeds back to sensory cortex."
+    },
+    {
+      "name": "higher-order thalamic regulation of cortical functional connectivity",
+      "role": "extended",
+      "one_line": "Pulvinar gates information exchange between dorsal and ventral visual pathways."
+    },
+    {
+      "name": "sustained delay-period activity in PPC",
+      "role": "context",
+      "one_line": "Maintained spiking in LIP encodes attention without feedforward input."
+    }
+  ],
+  "core_question": "Does the pulvinar regulate information transmission between LIP and V4 during sustained attention?",
+  "key_assumptions": [
+    "LIP delay activity reflects attentional priority",
+    "Pulvinar is anatomically connected to both LIP and V4",
+    "Directed influence is measurable from simultaneous multi-area spikes"
+  ],
+  "manipulations": [
+    "Selective attention task with delay period",
+    "Simultaneous recording across pulvinar, LIP, and V4 in macaques"
+  ],
+  "key_findings": [
+    "LIP influenced V4 during the attention-task delay period",
+    "Pulvinar regulated LIP-V4 information exchange",
+    "Pulvino-cortical effects were consistent with pulvinar sustaining LIP activity"
+  ],
+  "interpretations": [
+    "Pulvinar regulation of cortical functional connectivity generalizes to dorsal-ventral interactions"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "pulvinar",
+    "posterior parietal cortex",
+    "lateral intraparietal area (LIP)",
+    "V4",
+    "selective attention",
+    "delay-period activity",
+    "cortico-cortical functional connectivity",
+    "higher-order thalamus"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "6eb4702e755dffdbc8fe524c75642bea",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:20:36+09:00",
+  "review_status": "auto_unreviewed"
+}

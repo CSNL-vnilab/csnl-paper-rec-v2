@@ -1,0 +1,56 @@
+{
+  "frameworks": [
+    {
+      "name": "amplitude coupling of cortical oscillations",
+      "role": "primary_lens",
+      "one_line": "transient coincidences of high-amplitude oscillatory events as inter-areal coupling"
+    },
+    {
+      "name": "phase coherence",
+      "role": "alternative_lens",
+      "one_line": "alternative oscillatory mechanism for inter-areal interactions"
+    },
+    {
+      "name": "large-scale functional brain networks",
+      "role": "context",
+      "one_line": "dynamic emergence of distributed networks supporting cognition"
+    }
+  ],
+  "core_question": "Does inter-areal amplitude coupling of cortical oscillations support cognition through transient high-amplitude events rather than sustained coupling?",
+  "key_assumptions": [
+    "amplitude correlation indexes inter-areal interaction",
+    "MEG resolves brain-wide oscillatory dynamics",
+    "behaviorally relevant networks are transient"
+  ],
+  "manipulations": [
+    "task probing attention and decision-making",
+    "comparison of correct vs other decision trials",
+    "attention allocation periods"
+  ],
+  "key_findings": [
+    "amplitude coupling reflects coincident high-amplitude events, not sustained coupling",
+    "parieto-frontal alpha/beta coincidences increase before correct decisions",
+    "visual, medial parietal, lateral prefrontal theta/alpha coincidences increase during attention allocation"
+  ],
+  "interpretations": [
+    "brain-wide orchestration of high-amplitude oscillatory events facilitates inter-areal interactions for efficient cognition"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "amplitude coupling",
+    "high-amplitude oscillatory events",
+    "transient cortical networks",
+    "magnetoencephalography",
+    "alpha beta coherence",
+    "parieto-frontal network",
+    "attention and decision-making",
+    "theta alpha oscillations"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "8375564c064786dda5baa1ed040ab1cb",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:20:36+09:00",
+  "review_status": "auto_unreviewed"
+}

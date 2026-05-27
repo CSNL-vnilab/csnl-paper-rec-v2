@@ -1,0 +1,55 @@
+{
+  "frameworks": [
+    {
+      "name": "Bayesian structure learning",
+      "role": "primary_lens",
+      "one_line": "Probabilistic assignment of individuals to groups by combining evidence with prior beliefs."
+    },
+    {
+      "name": "dyadic-similarity account",
+      "role": "compared_against",
+      "one_line": "Alternative view that group inference reduces to pairwise similarity between individuals."
+    },
+    {
+      "name": "structure learning (cross-domain)",
+      "role": "extended",
+      "one_line": "Generalizes structure-learning models from other domains to the social domain."
+    }
+  ],
+  "core_question": "How do people infer social group structure from experience with individuals?",
+  "key_assumptions": [
+    "Group structure is latent and must be inferred from observations",
+    "Inference combines individual-level evidence with prior beliefs about group structure via Bayes rule",
+    "Social-structure learning shares computational principles with non-social structure learning"
+  ],
+  "manipulations": [
+    "Information available about individuals",
+    "Population studied (adults vs. children)"
+  ],
+  "key_findings": [
+    "Behavioural patterns in adults and children align with the Bayesian structure-learning framework",
+    "Results rule out alternative accounts that reduce group inference to dyadic similarity"
+  ],
+  "interpretations": [
+    "Social group identification is a structure-learning computation, not mere similarity matching",
+    "This framework has implications for intergroup cognition, stereotype updating, and coalition formation"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "social-structure learning",
+    "Bayesian inference",
+    "group assignment",
+    "prior beliefs about group structure",
+    "stereotype updating",
+    "coalition formation",
+    "intergroup cognition",
+    "structure learning"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "eb6492c321f2b550aa5e972a5f686b06",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:20:36+09:00",
+  "review_status": "auto_unreviewed"
+}
