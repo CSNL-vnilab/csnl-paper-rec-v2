@@ -1,0 +1,58 @@
+{
+  "canonical_id": "23189e08980f50cc2df5a7f48b346779",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T10:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "causal connectivity / functional circuit modulation",
+      "role": "primary_lens",
+      "one_line": "Effective synaptic connectivity measured causally and treated as task-phase dynamic."
+    },
+    {
+      "name": "perceptual decision-making (evidence accumulation, commitment, motor readout)",
+      "role": "context",
+      "one_line": "Sequential-phase decision computations frame the behavioral epochs probed."
+    },
+    {
+      "name": "fixed-anatomy / flexible-function neural circuit",
+      "role": "extended",
+      "one_line": "Extends fixed-wiring view with fast connectivity modulation as a mechanism."
+    }
+  ],
+  "core_question": "Does the causal connectivity among cortical excitatory neurons change across different phases of a decision-making task?",
+  "key_assumptions": [
+    "All-optical perturbation reveals causal, not merely correlational, connectivity",
+    "Anatomical synaptic connectivity is approximately fixed on task timescales",
+    "Decision-making can be decomposed into distinct sequential epochs",
+    "Layer 2/3 retrosplenial cortex participates in navigation-based decisions"
+  ],
+  "manipulations": [
+    "Behavioral epoch (cue/decision vs later task phases vs no-task)",
+    "Single-cell optogenetic perturbations of L2/3 excitatory neurons",
+    "Task presence vs absence (in-task vs no-task baseline)"
+  ],
+  "key_findings": [
+    "In-task causal connectivity differed from no-task causal connectivity",
+    "Connectivity differences were selective to the cue / decision phase",
+    "These differences tapered off in later stages of the task"
+  ],
+  "interpretations": [
+    "Fast modulation of connectivity is a prevalent mechanism in neural circuit function",
+    "Different task phases are implemented partly by phase-specific reweighting of connectivity"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "all-optical perturbation",
+    "causal connectivity",
+    "single-cell photostimulation",
+    "layer 2/3 retrosplenial cortex",
+    "evidence accumulation",
+    "decision commitment",
+    "task-phase modulation",
+    "navigation-based decision-making"
+  ],
+  "out_of_scope_note": null
+}

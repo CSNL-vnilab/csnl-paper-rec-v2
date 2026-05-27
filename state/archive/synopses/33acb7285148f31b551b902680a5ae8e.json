@@ -1,0 +1,44 @@
+{
+  "canonical_id": "33acb7285148f31b551b902680a5ae8e",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:57:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "recurrent neural networks", "role": "primary_lens", "one_line": "RNNs trained without connectivity constraints used to model neural computation."},
+    {"name": "low-rank / low-dimensional connectivity", "role": "extended", "one_line": "Extends prior constrained low-rank RNN theory to unconstrained trained networks."},
+    {"name": "continual learning / catastrophic forgetting", "role": "context", "one_line": "Cited as motivation for separating functions across weight subspaces."}
+  ],
+  "core_question": "How does network dynamics relate to connectivity in RNNs trained without specific structural constraints?",
+  "key_assumptions": [
+    "removing connectivity components that strongly affect local dynamics identifies functionally relevant structure",
+    "task performance is a valid readout of functional sufficiency of a weight subspace"
+  ],
+  "manipulations": [
+    "identification and removal of operative dimensions from the weight matrix",
+    "reconstruction of RNNs from only a few operative dimensions",
+    "tasks previously employed in neuroscience used as training objectives"
+  ],
+  "key_findings": [
+    "a low-dimensional, functionally relevant subspace exists within apparently high-dimensional trained connectivity",
+    "weight matrices built from only a few operative dimensions sustain original RNN performance",
+    "much of the high-dimensional structure of trained connectivity is functionally irrelevant"
+  ],
+  "interpretations": [
+    "an operative low-dimensional subspace simplifies linking connectivity to dynamics in unconstrained RNNs",
+    "independent network functions could be placed in separate weight subspaces to avoid catastrophic forgetting"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "operative dimensions",
+    "recurrent neural network connectivity",
+    "low-dimensional weight subspace",
+    "network dynamics",
+    "trained RNNs",
+    "catastrophic forgetting",
+    "continual learning",
+    "functionally relevant subspace"
+  ],
+  "out_of_scope_note": null
+}

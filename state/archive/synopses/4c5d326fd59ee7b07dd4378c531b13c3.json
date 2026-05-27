@@ -1,0 +1,45 @@
+{
+  "canonical_id": "4c5d326fd59ee7b07dd4378c531b13c3",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "executive function (inhibitory control, working memory, cognitive flexibility)", "role": "primary_lens", "one_line": "Three core executive components are probed before and after stimulation."},
+    {"name": "transcranial direct current stimulation (HD-tDCS)", "role": "primary_lens", "one_line": "Anodal high-definition tDCS over left DLPFC as neuromodulatory intervention."},
+    {"name": "functional near-infrared spectroscopy (fNIRS) hemodynamics", "role": "primary_lens", "one_line": "Bilateral DLPFC HbO concentration tracks cortical activation during executive tasks."}
+  ],
+  "core_question": "Do repeated anodal HD-tDCS sessions over left DLPFC alter the three core executive functions and their associated DLPFC activation in healthy adults?",
+  "key_assumptions": [
+    "DLPFC is the cortical substrate of executive function",
+    "Repeated anodal stimulation produces cumulative neuromodulatory effects beyond single-session tDCS",
+    "fNIRS HbO concentration indexes task-related DLPFC activation"
+  ],
+  "manipulations": [
+    "Group: anodal HD-tDCS vs sham",
+    "Number of repeated stimulation sessions (nine sessions)",
+    "Executive function probe (inhibitory control, working memory, cognitive flexibility)"
+  ],
+  "key_findings": [
+    "Cognitive flexibility improved more in the anodal group than in the sham group",
+    "Stroop-related decrease in DLPFC HbO concentration appeared in the anodal but not the sham group"
+  ],
+  "interpretations": [
+    "Repeated anodal HD-tDCS over left DLPFC can significantly promote cognitive flexibility"
+  ],
+  "limitations_noted": [
+    "Pilot study with single-blinded design"
+  ],
+  "connecting_signals": [
+    "HD-tDCS",
+    "dorsolateral prefrontal cortex",
+    "executive function",
+    "cognitive flexibility",
+    "inhibitory control",
+    "working memory",
+    "fNIRS",
+    "oxygenated hemoglobin"
+  ],
+  "out_of_scope_note": null
+}

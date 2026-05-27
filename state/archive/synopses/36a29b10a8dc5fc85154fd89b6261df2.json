@@ -1,0 +1,17 @@
+{
+  "canonical_id": "36a29b10a8dc5fc85154fd89b6261df2",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:57:41+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.0,
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "Environmental health policy / air-pollution exposure assessment review. Focuses on granular measurement of air pollutants, individual-level exposure science, and policy responses (e.g., urban traffic restrictions). Not relevant to computational neuroscience — no neural, cognitive, perceptual, or behavioral modeling content."
+}

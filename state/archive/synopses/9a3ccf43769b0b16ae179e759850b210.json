@@ -1,0 +1,46 @@
+{
+  "canonical_id": "9a3ccf43769b0b16ae179e759850b210",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "risk vs ambiguity (decision under uncertainty)", "role": "primary_lens", "one_line": "distinguishes choices with known vs unknown outcome probabilities"},
+    {"name": "lesion-behavior mapping", "role": "primary_lens", "one_line": "infers regional function from focal lesion effects on choice"},
+    {"name": "computational modeling of choice", "role": "primary_lens", "one_line": "parameterizes risk and ambiguity attitudes from behavior"},
+    {"name": "arousal/autonomic signaling of value", "role": "alternative_lens", "one_line": "tests whether peripheral arousal couples to uncertain choice"}
+  ],
+  "core_question": "Which prefrontal and amygdala regions are functionally required for decisions under risk versus ambiguity?",
+  "key_assumptions": [
+    "risk and ambiguity are dissociable psychological constructs",
+    "focal lesions reveal necessary regional contributions",
+    "arousal response indexes uncertainty processing"
+  ],
+  "manipulations": [
+    "lesion site (mPFC vs lPFC vs amygdala vs controls)",
+    "uncertainty type (risk with known probabilities vs ambiguity with unknown probabilities)"
+  ],
+  "key_findings": [
+    "lPFC lesions increased both risk and ambiguity seeking",
+    "lPFC lesions disrupted the arousal-choice relationship",
+    "mPFC and amygdala lesions did not impair risk processing",
+    "mPFC showed only a tenuous link to ambiguity"
+  ],
+  "interpretations": [
+    "lPFC operates as a unitary system processing the aversive nature of uncertainty",
+    "risk and ambiguity share an lPFC-based substrate rather than separable mPFC/amygdala substrates"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "decision under uncertainty",
+    "risk versus ambiguity",
+    "lateral prefrontal cortex lesion",
+    "medial prefrontal cortex",
+    "amygdala lesion",
+    "arousal response",
+    "computational model of choice",
+    "ambiguity aversion"
+  ],
+  "out_of_scope_note": null
+}

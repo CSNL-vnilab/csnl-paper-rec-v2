@@ -1,0 +1,44 @@
+{
+  "canonical_id": "e66f0391777469be3bb245031e99979b",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:58:13+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "spontaneous low-frequency cortical oscillations", "role": "primary_lens", "one_line": "ongoing ~0.1 Hz neuronal oscillations as a brain-state variable modulating evoked responses"},
+    {"name": "neurovascular coupling", "role": "alternative_lens", "one_line": "linking calcium transients to cerebral hemodynamics during sensory processing"},
+    {"name": "trial-to-trial variability of evoked responses", "role": "context", "one_line": "framing variability as brain-state-dependent rather than noise"}
+  ],
+  "core_question": "How do spontaneous low-frequency cortical oscillations interact with sensory-stimulus-evoked neuronal and hemodynamic responses in somatosensory cortex?",
+  "key_assumptions": [
+    "ongoing low-frequency oscillations index a meaningful brain state",
+    "neuronal Ca2+ and hemodynamic signals can be coregistered simultaneously",
+    "single-trial detection is feasible without averaging given system sensitivity"
+  ],
+  "manipulations": [
+    "single-pulse forepaw stimulus intensity (weak vs strong)",
+    "phase/state of ongoing low-frequency oscillation at stimulus onset"
+  ],
+  "key_findings": [
+    "ongoing neuronal oscillations inversely modulate stimulus-evoked Ca2+ transients",
+    "high-intensity stimuli reset spontaneous oscillations to an unpreferable post-stimulus excitability",
+    "hemodynamic responses inversely interact with spontaneous hemodynamic oscillations",
+    "hemodynamic interaction correlates with the neuronal Ca2+ transient changes"
+  ],
+  "interpretations": [
+    "spontaneous oscillations and evoked activity compete to shape sensory cortical responses and their hemodynamic readout"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "spontaneous low-frequency oscillations",
+    "trial-to-trial variability",
+    "neuronal calcium imaging",
+    "cerebral hemodynamics",
+    "neurovascular coupling",
+    "somatosensory cortex",
+    "forepaw stimulation",
+    "brain state modulation"
+  ],
+  "out_of_scope_note": null
+}
