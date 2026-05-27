@@ -1,0 +1,53 @@
+{
+  "frameworks": [
+    {
+      "name": "finite element method electric field modeling",
+      "role": "primary_lens",
+      "one_line": "Computational head models predict TDCS electric fields from MRI anatomy."
+    },
+    {
+      "name": "high-definition TDCS (4x1 and bipolar HD)",
+      "role": "compared_against",
+      "one_line": "Focal montages contrasted with conventional large-electrode TDCS."
+    }
+  ],
+  "core_question": "Are more focal TDCS montages more susceptible to interindividual anatomical variability in induced electric fields?",
+  "key_assumptions": [
+    "Individual MRI-based head models faithfully capture relevant anatomy",
+    "Electric field magnitude is the relevant dosimetric outcome",
+    "Focality and variability are separable montage properties"
+  ],
+  "manipulations": [
+    "Electrode size in M1-contralateral forehead montage",
+    "Montage type: conventional vs 4x1 HD vs bipolar HD",
+    "Across 77 individual anatomies",
+    "13 montage configurations"
+  ],
+  "key_findings": [
+    "Interindividual EF variability increased with focality for conventional and 4x1 HD montages",
+    "4x1 HD-TDCS had highest focality and greatest variability",
+    "Bipolar HD montages broke the trend: comparable magnitude, slightly lower focality, lower variability"
+  ],
+  "interpretations": [
+    "Focality in TDCS comes at the cost of increased interindividual variability",
+    "Bipolar HD offers a favorable focality-variability trade-off"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "transcranial direct current stimulation",
+    "electric field focality",
+    "interindividual variability",
+    "high-definition TDCS",
+    "finite element modeling",
+    "individual head models",
+    "electrode montage",
+    "dosimetry"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "03ddfa57d2574831c94c19a8b1c74079",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:42:01+09:00",
+  "review_status": "auto_unreviewed"
+}

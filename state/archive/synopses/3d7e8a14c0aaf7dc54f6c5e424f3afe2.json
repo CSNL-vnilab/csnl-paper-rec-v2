@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "multivoxel pattern analysis (MVPA)",
+      "role": "primary_lens",
+      "one_line": "Multivariate decoding from fMRI voxel patterns to extract neural information"
+    },
+    {
+      "name": "noise correlation theory of population decoding",
+      "role": "extended",
+      "one_line": "Extends neuron-scale theory of correlated variability to fMRI voxel populations"
+    },
+    {
+      "name": "voxel selectivity / mixed selectivity account",
+      "role": "compared_against",
+      "one_line": "Standard view that MVPA succeeds via aggregating weak voxel selectivities"
+    }
+  ],
+  "core_question": "Do noise correlations between heterogeneous voxel populations contribute to MVPA decoding performance in human fMRI?",
+  "key_assumptions": [
+    "Voxel-level noise correlations are analogous to neuronal noise correlations",
+    "Heterogeneous voxel populations carry decodable information beyond individual selectivity",
+    "Decoding accuracy is a valid index of population information content"
+  ],
+  "manipulations": [
+    "Selecting voxels with high vs low noise correlations during classifier training",
+    "Comparing GLM selectivity against MVPA classification weights",
+    "Simulations of fMRI-like data to test generality"
+  ],
+  "key_findings": [
+    "Decoding performance enhanced when high noise-correlation voxels are selected for training",
+    "Strongly class-selective voxels exhibit high noise correlations with voxels selective for the opposing class",
+    "Selectivity and noise correlations exert distinguishable influences on decoding in simulation",
+    "Pattern holds as a general property of fMRI data"
+  ],
+  "interpretations": [
+    "Noise correlations between heterogeneous voxel populations meaningfully contribute to MVPA success",
+    "Information underlying MVPA is not reducible to aggregated individual voxel selectivity"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "noise correlations",
+    "multivoxel pattern analysis",
+    "MVPA decoding",
+    "heterogeneous neural populations",
+    "voxel selectivity",
+    "fMRI pattern classification",
+    "correlated variability",
+    "population coding"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "3d7e8a14c0aaf7dc54f6c5e424f3afe2",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

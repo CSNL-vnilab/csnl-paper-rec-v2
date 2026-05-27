@@ -1,0 +1,64 @@
+{
+  "frameworks": [
+    {
+      "name": "policy compression",
+      "role": "primary_lens",
+      "one_line": "Context-dependent policies stored as bounded-codelength internal representations"
+    },
+    {
+      "name": "information-theoretic cognitive control",
+      "role": "primary_lens",
+      "one_line": "Cognitive costs framed as information-theoretic codelength of policies"
+    },
+    {
+      "name": "rate-distortion",
+      "role": "context",
+      "one_line": "Bounded capacity for storing context-action mappings"
+    },
+    {
+      "name": "neural dimensionality",
+      "role": "extended",
+      "one_line": "Code space for complex policies constrained by neural state-space dimensionality"
+    }
+  ],
+  "core_question": "How are the costs of context-dependent decisions explained by information-theoretic compression of policies?",
+  "key_assumptions": [
+    "Brain has limited capacity to store context-dependent policies",
+    "Policies are compressed to representations with bounded codelength",
+    "Actions are decoded by sequentially inspecting code bits",
+    "Longer codes take more time to decode"
+  ],
+  "manipulations": [
+    "Response deadline imposed on rule-based action selection",
+    "Rule-based action selection task analyzed with EEG",
+    "Policy complexity measured as information-theoretic quantity"
+  ],
+  "key_findings": [
+    "Policy complexity increased with longer response deadlines",
+    "Higher policy complexity associated with higher accuracy",
+    "Higher policy complexity associated with lower behavioral variability",
+    "Policy complexity correlated with neural dimensionality measure"
+  ],
+  "interpretations": [
+    "Cognitive control costs reflect information-theoretic compression bounds on policies",
+    "Complex policies require higher neural dimensionality to encode"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "policy compression",
+    "policy complexity",
+    "cognitive control cost",
+    "rule-based action selection",
+    "response deadline",
+    "neural dimensionality",
+    "information-theoretic decision policy",
+    "perseveration"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "4aae64b5018b1ed903c8fd7fee0f7ebb",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

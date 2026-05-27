@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "fMRI-based alertness marker",
+      "role": "primary_lens",
+      "one_line": "Continuous time-resolved alertness extracted from fMRI signal alone"
+    },
+    {
+      "name": "arousal state modulation",
+      "role": "context",
+      "one_line": "Ongoing alertness fluctuations shape neural and behavioral responses"
+    },
+    {
+      "name": "trial-to-trial behavioral variability",
+      "role": "extended",
+      "one_line": "Explains response variance via prestimulus alertness state"
+    }
+  ],
+  "core_question": "Can a continuous alertness marker be extracted from fMRI alone and predict trial-by-trial behavioral variability?",
+  "key_assumptions": [
+    "Alertness leaves a recoverable fMRI signature without EEG or pupillometry",
+    "A short pre-stimulus interval suffices to index ongoing arousal",
+    "A small voxel subset carries the relevant alertness information"
+  ],
+  "manipulations": [
+    "Extracted pre-stimulus alertness marker from fMRI",
+    "Compared task-evoked responses with and without alertness covariate",
+    "Tested prediction across full-brain vs sparse voxel subsets"
+  ],
+  "key_findings": [
+    "Pre-stimulus fMRI alertness marker captures trial-to-trial behavioral responses",
+    "EEG and behavioral prediction achievable from a small fraction of fMRI voxels",
+    "Accounting for alertness increases statistical detection of task-activated areas"
+  ],
+  "interpretations": [
+    "fMRI alone can recover ongoing arousal information previously requiring EEG or pupillometry",
+    "Existing fMRI datasets can be enriched with alertness covariates to study neural variability"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "fMRI alertness marker",
+    "trial-to-trial response variability",
+    "pre-stimulus arousal state",
+    "EEG-free arousal estimation",
+    "task-activated brain area detection",
+    "neural variability in health and disease",
+    "voxel subset prediction",
+    "concurrent pupillometry surrogate"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "6f2bc7d7d48fc8e233275d19961bc966",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

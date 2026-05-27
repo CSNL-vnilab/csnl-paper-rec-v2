@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "population receptive field (pRF) mapping",
+      "role": "compared_against",
+      "one_line": "Voxel-based pRF estimates that conflate many neurons with scattered RFs"
+    },
+    {
+      "name": "spatial frequency selectivity to checkerboard patterns",
+      "role": "primary_lens",
+      "one_line": "Uses SF tuning to back out average single-neuron RF size noninvasively"
+    },
+    {
+      "name": "cross-species fMRI-electrophysiology validation",
+      "role": "extended",
+      "one_line": "Matches noninvasive estimates against invasive single-unit recordings in NHP"
+    }
+  ],
+  "core_question": "Can fMRI estimate average single-neuron visual receptive field sizes noninvasively in humans?",
+  "key_assumptions": [
+    "Spatial frequency selectivity to checkerboards reflects underlying single-neuron RF size",
+    "Voxel pRF reflects a population with scattered individual RFs rather than a single neuron",
+    "NHP single-unit physiology is a valid ground truth for the new fMRI estimate"
+  ],
+  "manipulations": [
+    "Varied checkerboard spatial frequency",
+    "Compared new SF-based estimate to prior pRF estimates",
+    "Compared human fMRI to nonhuman primate fMRI and electrophysiology"
+  ],
+  "key_findings": [
+    "Obtained noninvasive average single-neuron RF estimates across human early visual cortex",
+    "Single-neuron RF estimates were significantly smaller than prior pRF estimates",
+    "fMRI and electrophysiology in nonhuman primates showed exceptionally good match"
+  ],
+  "interpretations": [
+    "Spatial-frequency selectivity provides a valid noninvasive proxy for average single-neuron RF size",
+    "Conventional pRF overestimates single-neuron RF because it pools across scattered RFs"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "single-neuron receptive field size",
+    "population receptive field (pRF)",
+    "spatial frequency selectivity",
+    "checkerboard stimuli",
+    "human early visual cortex",
+    "fMRI receptive field estimation",
+    "nonhuman primate electrophysiology",
+    "RF scatter within voxels"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "f384360a4f1111c1cbb922b2fd394cb4",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

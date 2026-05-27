@@ -1,0 +1,62 @@
+{
+  "frameworks": [
+    {
+      "name": "continual learning",
+      "role": "primary_lens",
+      "one_line": "successive multi-task learning over a lifespan without forgetting."
+    },
+    {
+      "name": "factorized task representation",
+      "role": "extended",
+      "one_line": "orthogonal task-rule codes that segregate tasks to prevent interference."
+    },
+    {
+      "name": "supervised deep neural networks",
+      "role": "compared_against",
+      "one_line": "standard backprop nets suffer catastrophic forgetting under blocked training."
+    },
+    {
+      "name": "unsupervised generative embedding",
+      "role": "alternative_lens",
+      "one_line": "pre-learning a stimulus-space embedding mitigates interference in deep nets."
+    }
+  ],
+  "core_question": "Why can humans learn successive tasks without forgetting, and what design lets neural networks do the same?",
+  "key_assumptions": [
+    "task rules can be orthogonal over a shared stimulus space",
+    "individuals differ in prior tendency to structure the stimulus space",
+    "interference arises in deeper representational layers"
+  ],
+  "manipulations": [
+    "training regime: blocked vs interleaved exposure to two orthogonal rules",
+    "agent type: humans vs standard deep nets vs deep nets augmented with generative embedding"
+  ],
+  "key_findings": [
+    "blocked training improved later interleaved-test performance in humans relative to interleaved control",
+    "human error patterns indicated factorized task representations under blocked training",
+    "the factorization benefit was stronger in individuals with structured stimulus-space priors",
+    "standard deep nets showed catastrophic forgetting under blocked training; an unsupervised generative pre-embedding reduced it"
+  ],
+  "interpretations": [
+    "blocked exposure promotes orthogonal task codes that protect prior knowledge from interference",
+    "a learned stimulus-space embedding is a key ingredient for human-like continual learning in machines"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "continual learning",
+    "catastrophic forgetting",
+    "blocked vs interleaved training",
+    "factorized representation",
+    "orthogonal task rules",
+    "representational interference",
+    "unsupervised generative embedding",
+    "individual differences in prior structure"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "b104495620a67490be91bb9e2813a7f8",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:42:01+09:00",
+  "review_status": "auto_unreviewed"
+}
