@@ -1,0 +1,41 @@
+{
+  "canonical_id": "8e95201c5468171d12b186a500586dbd",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "deep neural networks", "role": "compared_against", "one_line": "End-to-end pattern recognition models trained on object/game tasks"},
+    {"name": "causal models of the world", "role": "primary_lens", "one_line": "Structured generative models supporting explanation and understanding"},
+    {"name": "intuitive theories of physics and psychology", "role": "primary_lens", "one_line": "Core-knowledge priors that ground and enrich learning"},
+    {"name": "compositionality and learning-to-learn", "role": "primary_lens", "one_line": "Reusable structured primitives enabling rapid generalization to new tasks"}
+  ],
+  "core_question": "What ingredients beyond current deep-network engineering are required for machines to learn and think like humans?",
+  "key_assumptions": [
+    "Human-like intelligence requires more than pattern recognition",
+    "Cognitive science offers normative constraints on machine intelligence",
+    "Structured models and statistical learning are complementary, not opposed"
+  ],
+  "manipulations": [],
+  "key_findings": [
+    "Deep nets match or beat humans on some object recognition, video and board game tasks",
+    "These systems still diverge from human intelligence in crucial ways"
+  ],
+  "interpretations": [
+    "Human-like machines must build causal world models, ground learning in intuitive physics/psychology, and exploit compositionality plus learning-to-learn",
+    "Combining neural-network strengths with structured cognitive models is the promising route forward"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "human-like learning",
+    "causal world models",
+    "intuitive physics",
+    "intuitive psychology",
+    "compositionality",
+    "learning-to-learn",
+    "structured cognitive models",
+    "deep neural networks vs cognition"
+  ],
+  "out_of_scope_note": null
+}

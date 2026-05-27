@@ -1,0 +1,17 @@
+{
+  "canonical_id": "f730a43f43d726fcff7d189d9cd568d7",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.0,
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": ["metacognition", "confidence", "introspection", "self-monitoring", "computational modeling of metacognition"],
+  "out_of_scope_note": "Book chapter introduction / overview chapter (Elsevier handbook), not a primary research paper. Abstract explicitly frames the chapter as 'an invitation for readers to explore' and 'an overview of the latest research findings' — no specific framework, manipulation, or empirical finding to extract."
+}

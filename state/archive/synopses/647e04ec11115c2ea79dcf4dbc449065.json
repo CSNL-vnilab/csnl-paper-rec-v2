@@ -1,0 +1,43 @@
+{
+  "canonical_id": "647e04ec11115c2ea79dcf4dbc449065",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "empowerment", "role": "primary_lens", "one_line": "intrinsic drive to maximize future options the agent can reach"},
+    {"name": "intrinsic motivation", "role": "context", "one_line": "exploration without explicit external reward signals"},
+    {"name": "semantic world knowledge", "role": "extended", "one_line": "prior knowledge shapes which combinations agents try"}
+  ],
+  "core_question": "What drives human exploration in a large, richly structured combinatorial environment without explicit rewards?",
+  "key_assumptions": [
+    "exploration choices reflect underlying motivational drives",
+    "empowerment can be operationalized as creating objects that unlock further objects",
+    "semantic content of the environment can be manipulated independently of its structure"
+  ],
+  "manipulations": [
+    "semantic version vs. semantics-stripped version of the game",
+    "combinatorial state across 720 reachable objects"
+  ],
+  "key_findings": [
+    "players preferentially create objects that empower further creation",
+    "the empowerment drive disappears when recognizable semantics are removed"
+  ],
+  "interpretations": [
+    "empowerment is a potent intrinsic motivator in richly structured domains lacking explicit reward",
+    "world knowledge guides exploration by linking semantics to empowerment"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "empowerment",
+    "intrinsic motivation",
+    "exploration behavior",
+    "combinatorial environments",
+    "Little Alchemy 2",
+    "semantic knowledge",
+    "reward-free exploration",
+    "open-ended environments"
+  ],
+  "out_of_scope_note": null
+}
