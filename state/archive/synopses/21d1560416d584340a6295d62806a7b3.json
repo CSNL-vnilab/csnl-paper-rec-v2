@@ -1,0 +1,54 @@
+{
+  "frameworks": [
+    {
+      "name": "Bayesian observer model",
+      "role": "primary_lens",
+      "one_line": "Speed perception modeled as prior combined with likelihood via Bayes rule"
+    },
+    {
+      "name": "efficient coding",
+      "role": "extended",
+      "one_line": "Stimulus distribution jointly constrains prior and likelihood"
+    }
+  ],
+  "core_question": "Can efficient-coding constraints yield a better-identified Bayesian observer model of visual speed perception?",
+  "key_assumptions": [
+    "Observer combines prior with likelihood via Bayes rule",
+    "Stimulus distribution links and jointly constrains likelihood and prior",
+    "Discrimination thresholds and biases reflect a single normative model"
+  ],
+  "manipulations": [
+    "Fit model across a broad range of stimulus speeds",
+    "Fit model across multiple stimulus uncertainty levels",
+    "Cross-validated against parametric per-curve psychometric approximations"
+  ],
+  "key_findings": [
+    "Constrained model fits discrimination data as well as parametric per-curve approximations",
+    "Extracted prior follows a power-law function with exponent near -1",
+    "Recovered prior is much more consistent across subjects than under a previous model"
+  ],
+  "interpretations": [
+    "Efficient-coding constraint resolves identifiability problems of the Bayesian framework for speed perception",
+    "A low-speed power-law prior is a robust, subject-invariant feature of visual speed estimation"
+  ],
+  "limitations_noted": [
+    "Framework flexibility makes Bayesian models hard to validate without added constraints"
+  ],
+  "connecting_signals": [
+    "low-speed prior",
+    "Bayesian observer model",
+    "efficient coding",
+    "speed discrimination",
+    "psychophysical prior estimation",
+    "stimulus uncertainty",
+    "power-law prior",
+    "area MT encoding"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "21d1560416d584340a6295d62806a7b3",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

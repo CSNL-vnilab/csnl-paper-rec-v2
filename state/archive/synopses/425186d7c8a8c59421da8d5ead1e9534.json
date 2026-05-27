@@ -1,0 +1,56 @@
+{
+  "frameworks": [
+    {
+      "name": "drift-diffusion",
+      "role": "primary_lens",
+      "one_line": "noisy evidence accumulates over time to a bound terminating the decision"
+    },
+    {
+      "name": "bounded accumulation / threshold-crossing",
+      "role": "extended",
+      "one_line": "extends accumulator account by reading drift-diffusion on single trials"
+    },
+    {
+      "name": "population coding in LIP",
+      "role": "context",
+      "one_line": "weighted sum of LIP neurons indexes the decision variable"
+    }
+  ],
+  "core_question": "Can the stochastic drift-diffusion signal underlying a single perceptual decision be observed directly in cortical activity?",
+  "key_assumptions": [
+    "noisy evidence is integrated over time toward a termination bound",
+    "trial-to-trial choice and RT variability arise from a stochastic diffusion component",
+    "a scalar decision variable can be read from a weighted sum of LIP population activity"
+  ],
+  "manipulations": [
+    "direction discrimination of random-dot motion",
+    "simultaneous large-scale recording of hundreds of LIP neurons within single trials"
+  ],
+  "key_findings": [
+    "a scalar derived from weighted LIP population activity exhibits both deterministic drift and stochastic diffusion within single trials",
+    "this single-trial signal carries the unobserved stochastic component thought to drive choice and RT variability",
+    "the signal approximates the quantity at which decisions are terminated"
+  ],
+  "interpretations": [
+    "LIP population activity directly instantiates the drift-diffusion decision variable on individual decisions, not just in trial averages",
+    "supports drift-diffusion as the mechanistic, not merely descriptive, account of perceptual choice termination"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "drift-diffusion model",
+    "single-trial decision variable",
+    "lateral intraparietal cortex (LIP)",
+    "random-dot motion discrimination",
+    "evidence accumulation to bound",
+    "population decoding",
+    "stochastic diffusion component",
+    "perceptual decision-making"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "425186d7c8a8c59421da8d5ead1e9534",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:00:10+09:00",
+  "review_status": "auto_unreviewed"
+}

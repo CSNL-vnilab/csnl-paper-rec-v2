@@ -1,0 +1,56 @@
+{
+  "frameworks": [
+    {
+      "name": "rate-distortion theory",
+      "role": "primary_lens",
+      "one_line": "information-theoretic account of mental cost via state-action mutual information"
+    },
+    {
+      "name": "policy complexity",
+      "role": "extended",
+      "one_line": "mutual information between states and actions as the cost-bearing quantity"
+    },
+    {
+      "name": "linear mental cost models",
+      "role": "compared_against",
+      "one_line": "conventional assumption that cost scales linearly with cognitive resource use"
+    }
+  ],
+  "core_question": "What is the functional form of mental cost when humans adapt policy complexity across context-dependent decisions?",
+  "key_assumptions": [
+    "mental cost is a function of state-action mutual information",
+    "policies are mappings from states to actions",
+    "context-dependent decisions consume a limited cognitive resource"
+  ],
+  "manipulations": [
+    "task demands varied across four decision-making experiments",
+    "context-sensitivity requirements of the policy"
+  ],
+  "key_findings": [
+    "policy complexity adapts parsimoniously to task demands across four experiments",
+    "a quadratic (supralinear) cost on policy complexity fits human behavior best",
+    "linear cost formulations are outperformed"
+  ],
+  "interpretations": [
+    "mental cost scales supralinearly with policy complexity",
+    "rate-distortion framing offers a unified account of context-sensitivity costs"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "policy complexity",
+    "rate-distortion theory",
+    "mental cost",
+    "context-dependent decision-making",
+    "mutual information",
+    "supralinear cost",
+    "cognitive resource limits",
+    "state-action mapping"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "153bf18b15df8e9cf78b256a53d1cc7c",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:00:10+09:00",
+  "review_status": "auto_unreviewed"
+}

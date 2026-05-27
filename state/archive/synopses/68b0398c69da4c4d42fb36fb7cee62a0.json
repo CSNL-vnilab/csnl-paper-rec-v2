@@ -1,0 +1,52 @@
+{
+  "frameworks": [
+    {
+      "name": "reference-dependent valuation",
+      "role": "primary_lens",
+      "one_line": "Options are evaluated relative to a hidden internal benchmark."
+    },
+    {
+      "name": "distributed population coding",
+      "role": "primary_lens",
+      "one_line": "Reference and subjective-value signals are distributed across frontal regions."
+    }
+  ],
+  "core_question": "Where and how is the decisional reference point encoded in primate frontal cortex?",
+  "key_assumptions": [
+    "A hidden reference point underlies subjective valuation",
+    "Reference point can be dissociated from objective reward via wealth accumulation",
+    "Population activity reveals encoding not visible at single-neuron level"
+  ],
+  "manipulations": [
+    "Wealth accumulation task dissociating objective value from reference",
+    "Recording across six frontal regions including vbACC, dACC, dlPFC"
+  ],
+  "key_findings": [
+    "Reference-related signals were broadly distributed at single-neuron level across frontal regions",
+    "At population level, only vbACC significantly encoded the reference point",
+    "dACC and dlPFC encoded reference-dependent subjective value at the population level",
+    "Temporal sequence and anatomy suggest vbACC supplies reference signal to downstream value regions"
+  ],
+  "interpretations": [
+    "A dedicated frontal circuit underlies reference dependence, with vbACC as a global reference source",
+    "Reference encoding and reference-dependent value encoding are anatomically separable"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "decisional reference point",
+    "reference-dependent value",
+    "ventral anterior cingulate cortex",
+    "dorsolateral prefrontal cortex",
+    "wealth accumulation task",
+    "subjective value encoding",
+    "frontal population coding",
+    "macaque decision-making"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "68b0398c69da4c4d42fb36fb7cee62a0",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:00:10+09:00",
+  "review_status": "auto_unreviewed"
+}

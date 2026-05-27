@@ -1,0 +1,62 @@
+{
+  "frameworks": [
+    {
+      "name": "subjective economic valuation",
+      "role": "primary_lens",
+      "one_line": "Momentary willingness-to-pay as instantaneous subjective value"
+    },
+    {
+      "name": "multiplicative gain on value",
+      "role": "extended",
+      "one_line": "Craving rescales economic value by a selective gain factor"
+    },
+    {
+      "name": "attribute-based similarity generalization",
+      "role": "primary_lens",
+      "one_line": "Craving generalizes across goods in proportion to attribute similarity"
+    },
+    {
+      "name": "cue-induced craving",
+      "role": "context",
+      "one_line": "Selective cue exposure as the laboratory induction of desire state"
+    }
+  ],
+  "core_question": "How does a craving-like desire state computationally transform subjective valuation to bias choice?",
+  "key_assumptions": [
+    "Momentary willingness-to-pay indexes subjective value",
+    "Goods can be embedded in a subjective attribute similarity space",
+    "Craving acts on valuation rather than on choice noise"
+  ],
+  "manipulations": [
+    "Selective cue exposure to a specific high-calorie snack",
+    "Attribute similarity between exposed and nonexposed goods",
+    "Reward size variation across trials"
+  ],
+  "key_findings": [
+    "Cue exposure raised willingness-to-pay for the exposed snack",
+    "The effect generalized to nonexposed goods proportional to subjective attribute similarity",
+    "Effects of reward size scaled consistent with a multiplicative gain on value"
+  ],
+  "interpretations": [
+    "Craving is a selective multiplicative gain on economic value rather than an additive bias",
+    "Generalization tracks subjective similarity, defining the selectivity of the gain"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "craving",
+    "willingness to pay",
+    "subjective valuation",
+    "multiplicative gain",
+    "cue-induced desire",
+    "attribute similarity generalization",
+    "food reward",
+    "addiction and obesity"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "63324414ae0a09061bea5cef1737f75a",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

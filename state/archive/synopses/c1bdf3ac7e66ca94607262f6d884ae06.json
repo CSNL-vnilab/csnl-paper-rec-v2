@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "artificial neural network with oscillatory dynamics",
+      "role": "primary_lens",
+      "one_line": "ANN augmented with alpha-like pulsed inhibition and unit refraction"
+    },
+    {
+      "name": "multiplexing via temporal coding",
+      "role": "extended",
+      "one_line": "Competing inputs separated into sequential output activations over time"
+    },
+    {
+      "name": "convolutional neural networks from visual cortex",
+      "role": "context",
+      "one_line": "CNN heritage from simple/complex cells motivates the model"
+    },
+    {
+      "name": "neocortical oscillatory dynamics",
+      "role": "primary_lens",
+      "one_line": "Alpha-band rhythmic inhibition imported from cortical models"
+    }
+  ],
+  "core_question": "Can oscillatory dynamics added to an ANN convert simultaneous competing inputs into a temporal code?",
+  "key_assumptions": [
+    "Refractory hidden units approximate biological neuronal refraction",
+    "Pulsed inhibition meaningfully mimics neuronal alpha oscillations",
+    "Simultaneous-letter presentation is a valid bottleneck test"
+  ],
+  "manipulations": [
+    "Trained ANN on individually presented letters",
+    "Added refraction to hidden units post-training",
+    "Introduced pulsed inhibition mimicking alpha oscillations",
+    "Presented single vs two simultaneous letters"
+  ],
+  "key_findings": [
+    "Without dynamics the network produced mixed output for two simultaneous letters",
+    "With refraction and oscillatory inhibition output nodes activated sequentially",
+    "Single-letter classification was preserved by the trained network"
+  ],
+  "interpretations": [
+    "Oscillatory dynamics resolve a bottleneck by multiplexing competing inputs into a temporal code",
+    "Combining computational neuroscience and machine learning can implement biologically motivated mechanisms in ANNs"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "alpha oscillations",
+    "pulsed inhibition",
+    "neural refraction",
+    "temporal multiplexing",
+    "competing inputs",
+    "artificial neural network dynamics",
+    "oscillatory inhibition",
+    "temporal coding"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "c1bdf3ac7e66ca94607262f6d884ae06",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

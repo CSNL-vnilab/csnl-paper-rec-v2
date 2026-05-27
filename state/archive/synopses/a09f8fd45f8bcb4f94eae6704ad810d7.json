@@ -1,0 +1,61 @@
+{
+  "frameworks": [
+    {
+      "name": "transient-trajectory dynamics",
+      "role": "primary_lens",
+      "one_line": "Working memory encoded by dynamic transient neural trajectories rather than fixed states."
+    },
+    {
+      "name": "attractor dynamics / persistent activity",
+      "role": "compared_against",
+      "one_line": "Classical view that WM relies on stable persistent firing attractors."
+    },
+    {
+      "name": "recurrent neural networks",
+      "role": "extended",
+      "one_line": "RNN architecture extended with self-inhibition, sparse connectivity, hierarchical topology."
+    },
+    {
+      "name": "reinforcement learning",
+      "role": "context",
+      "one_line": "Used as task framework for delayed choice and spatial memory evaluation."
+    }
+  ],
+  "core_question": "Does working memory rely on persistent attractor activity or on transient neural trajectories?",
+  "key_assumptions": [
+    "WM mechanism can be probed via biologically plausible RNN architectures",
+    "Self-inhibition, sparse connection, and hierarchical topology yield biologically realistic dynamics",
+    "Activity patterns in RNNs can be compared to animal recordings"
+  ],
+  "manipulations": [
+    "Network architecture: TRNN vs vanilla RNN",
+    "Encoding time duration",
+    "Task type: delayed choice and spatial memory RL tasks"
+  ],
+  "key_findings": [
+    "TRNNs produce transient activity resembling animal recordings",
+    "TRNNs retain versatility across variable encoding times",
+    "TRNNs outperform vanilla RNNs on delayed choice and spatial memory RL tasks"
+  ],
+  "interpretations": [
+    "Evidence supports transient-activity theory of working memory from a model-design perspective"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "working memory encoding",
+    "transient neural trajectories",
+    "persistent activity attractors",
+    "recurrent neural network models",
+    "self-inhibition and sparse connectivity",
+    "hierarchical network topology",
+    "delayed choice task",
+    "spatial memory reinforcement learning"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "a09f8fd45f8bcb4f94eae6704ad810d7",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:00:10+09:00",
+  "review_status": "auto_unreviewed"
+}

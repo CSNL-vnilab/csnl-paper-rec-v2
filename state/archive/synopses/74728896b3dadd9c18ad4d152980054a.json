@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "bounded evidence accumulation",
+      "role": "primary_lens",
+      "one_line": "decision terminates when accumulated evidence crosses a criterion"
+    },
+    {
+      "name": "collapsing bound / time-varying criterion",
+      "role": "extended",
+      "one_line": "termination criterion grows lax with elapsed deliberation time"
+    },
+    {
+      "name": "speed-accuracy tradeoff",
+      "role": "context",
+      "one_line": "decision policy balances time cost against accuracy gain"
+    }
+  ],
+  "core_question": "Does increasing the cost of deliberation time make perceptual decision criteria more lax over time?",
+  "key_assumptions": [
+    "evidence is accumulated sequentially until a termination criterion",
+    "participants aim to maximize points per unit time",
+    "time pressure can be implemented via deadline-based trial cancellation"
+  ],
+  "manipulations": [
+    "cost of deliberation time (mid-experiment deadline introduced)",
+    "motion-discrimination difficulty across trials",
+    "points feedback contingent on correctness"
+  ],
+  "key_findings": [
+    "introducing a deadline that cancelled <5% of trials sped up decisions",
+    "time-pressure manipulation altered the speed-accuracy tradeoff",
+    "behavior consistent with a more lax termination criterion under time cost"
+  ],
+  "interpretations": [
+    "decision termination criterion incorporates a cost of deliberation time",
+    "small implicit time costs reshape evidence-accumulation policy"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "perceptual decision making",
+    "reaction time",
+    "evidence accumulation",
+    "speed-accuracy tradeoff",
+    "collapsing bound",
+    "random-dot motion",
+    "deliberation cost",
+    "termination criterion"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "74728896b3dadd9c18ad4d152980054a",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:00:10+09:00",
+  "review_status": "auto_unreviewed"
+}
