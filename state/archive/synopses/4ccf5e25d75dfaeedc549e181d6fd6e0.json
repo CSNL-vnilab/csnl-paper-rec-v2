@@ -1,0 +1,55 @@
+{
+  "frameworks": [
+    {
+      "name": "uncertainty-directed exploration",
+      "role": "primary_lens",
+      "one_line": "choice driven by reducing uncertainty over option values"
+    },
+    {
+      "name": "feature-based generalization",
+      "role": "primary_lens",
+      "one_line": "learned value generalizes across options via shared features"
+    },
+    {
+      "name": "computational models of exploration",
+      "role": "extended",
+      "one_line": "lab models tested at real-world consumer-choice scale"
+    }
+  ],
+  "core_question": "Do computational models of exploration generalize from lab tasks to real-world consumer choice?",
+  "key_assumptions": [
+    "exploration trades off uncertainty reduction vs immediate value",
+    "value can be generalized across options sharing features",
+    "order history reflects deliberate choice under uncertainty"
+  ],
+  "manipulations": [
+    "naturalistic variation in customers, restaurants, and orders",
+    "comparison of model variants (uncertainty-directed vs alternatives)"
+  ],
+  "key_findings": [
+    "customers show hallmarks of adaptive exploration in real orders",
+    "behavior fits uncertainty-directed exploration",
+    "feature-based generalization guides which options are explored"
+  ],
+  "interpretations": [
+    "lab-derived exploration models scale to complex real-world choice",
+    "people use sophisticated structured strategies, not random exploration"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "uncertainty-directed exploration",
+    "feature-based generalization",
+    "exploration-exploitation tradeoff",
+    "real-world consumer choice",
+    "computational models of decision making",
+    "structured exploration",
+    "large-scale behavioral dataset"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "4ccf5e25d75dfaeedc549e181d6fd6e0",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:54:37+09:00",
+  "review_status": "auto_unreviewed"
+}

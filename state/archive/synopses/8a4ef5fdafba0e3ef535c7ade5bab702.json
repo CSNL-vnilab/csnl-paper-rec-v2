@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "high-density silicon electrode array technology",
+      "role": "primary_lens",
+      "one_line": "integrated CMOS probe enabling large-scale single-unit population recording"
+    },
+    {
+      "name": "large-scale neural population recording",
+      "role": "extended",
+      "one_line": "scaling simultaneous single-neuron recording into nonhuman primate brain"
+    },
+    {
+      "name": "systems neuroscience in nonhuman primates",
+      "role": "context",
+      "one_line": "macaque as close model for human cognition and behavior"
+    }
+  ],
+  "core_question": "Can a high-density silicon electrode array be designed to enable large-scale simultaneous single-unit recording across superficial and deep structures in the macaque brain?",
+  "key_assumptions": [
+    "macaque is a close model of human cognition and behavior",
+    "single-cell resolution at large scale is the key bottleneck",
+    "programmable channel selection on a long shank supports multi-area recording"
+  ],
+  "manipulations": [
+    "shank length and electrode count (4416 along 45 mm vs 2496 along 25 mm)",
+    "programmable selection of 384 active channels from the array",
+    "single-probe vs multi-probe simultaneous configurations"
+  ],
+  "key_findings": [
+    "fabricated Neuropixels 1.0-NHP in two long-shank versions",
+    "recorded over 3000 single neurons within a single session with one probe",
+    "recorded over 1000 neurons simultaneously using multiple probes",
+    "enabled simultaneous superficial and deep multi-area recording in macaque"
+  ],
+  "interpretations": [
+    "represents a significant increase in recording access and scalability versus existing primate technologies",
+    "extends high-density population recording from rodents to large-animal brains"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "Neuropixels 1.0-NHP",
+    "high-density silicon electrode array",
+    "nonhuman primate electrophysiology",
+    "macaque large-scale recording",
+    "single-unit population recording",
+    "multi-area simultaneous recording",
+    "deep-structure neural recording",
+    "programmable channel selection"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "8a4ef5fdafba0e3ef535c7ade5bab702",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

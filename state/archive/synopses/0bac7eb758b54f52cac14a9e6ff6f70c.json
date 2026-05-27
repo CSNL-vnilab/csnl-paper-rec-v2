@@ -1,0 +1,58 @@
+{
+  "canonical_id": "0bac7eb758b54f52cac14a9e6ff6f70c",
+  "title": "Contributions of cortical feedback to sensory processing in primary visual cortex",
+  "year": 2014,
+  "venue": "Frontiers in Psychology",
+  "doi": "10.3389/fpsyg.2014.01223",
+  "is_preprint": false,
+  "frameworks": [
+    {
+      "name": "cortical feedback",
+      "role": "primary_lens",
+      "one_line": "top-down projections shape V1 responses beyond feedforward sensory drive"
+    },
+    {
+      "name": "structure-function mapping",
+      "role": "context",
+      "one_line": "linking anatomical feedback projections to functional V1 modulation"
+    },
+    {
+      "name": "internal brain states",
+      "role": "extended",
+      "one_line": "V1 activity reflects ongoing state, not only stimulus drive"
+    }
+  ],
+  "core_question": "How does cortical feedback to V1 shape sensory processing beyond what feedforward inputs predict?",
+  "key_assumptions": [
+    "feedback projections to V1 are anatomically quantifiable",
+    "textbook feedforward accounts under-describe V1 response complexity"
+  ],
+  "manipulations": [],
+  "key_findings": [
+    "V1 responses are more complex than textbook feedforward descriptions suggest",
+    "V1 local activity reflects both sensory input and internal brain states"
+  ],
+  "interpretations": [
+    "feedback function in V1 is poorly understood relative to anatomy",
+    "internal state contributes to V1 activity alongside sensory processing"
+  ],
+  "limitations_noted": [
+    "understanding of feedback function is rudimentary compared to its quantified anatomy"
+  ],
+  "connecting_signals": [
+    "cortical feedback",
+    "primary visual cortex",
+    "V1",
+    "top-down modulation",
+    "sensory processing",
+    "internal brain states",
+    "structure-function divide",
+    "feedback projections"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:54:37+09:00",
+  "review_status": "auto_unreviewed"
+}

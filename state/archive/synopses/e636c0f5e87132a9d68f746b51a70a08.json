@@ -1,0 +1,59 @@
+{
+  "frameworks": [
+    {
+      "name": "regularised gated neural network",
+      "role": "primary_lens",
+      "one_line": "gradient-descent network with gating and noise as model of insight"
+    },
+    {
+      "name": "insight / aha-moment cognition",
+      "role": "compared_against",
+      "one_line": "human sudden strategy switch traditionally tied to meta-cognition"
+    },
+    {
+      "name": "gradual associative learning",
+      "role": "extended",
+      "one_line": "gradient descent extended to produce abrupt behavioural transitions"
+    }
+  ],
+  "core_question": "Can simple gradient-descent neural networks reproduce insight-like sudden strategy switches observed in humans?",
+  "key_assumptions": [
+    "input-output associations learned only via gradual gradient descent",
+    "constant learning rate across training",
+    "regularised gating mechanism in network architecture",
+    "stochastic noise injected into gradient updates"
+  ],
+  "manipulations": [
+    "presence vs absence of hidden task regularity",
+    "network architecture (gating, regularisation) variants",
+    "noise on gradient updates"
+  ],
+  "key_findings": [
+    "only some humans discover the hidden regularity, with sudden strategy switch",
+    "simple regularised networks mimic delay, suddenness, and selectivity of human insight",
+    "insight-like switches depend on regularised gating plus gradient noise",
+    "networks accumulate 'silent knowledge' initially suppressed by gating"
+  ],
+  "interpretations": [
+    "insight-like behaviour need not require meta-cognition; it can emerge from gradual learning with gating and noise",
+    "regularised gating creates latent representations that surface abruptly as performance jumps"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "aha-moment",
+    "sudden strategy switch",
+    "insight learning",
+    "regularised gating",
+    "silent knowledge",
+    "gradient noise",
+    "perceptual decision task",
+    "hidden regularity"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "e636c0f5e87132a9d68f746b51a70a08",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:54:37+09:00",
+  "review_status": "auto_unreviewed"
+}

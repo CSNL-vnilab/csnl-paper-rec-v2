@@ -1,0 +1,62 @@
+{
+  "frameworks": [
+    {
+      "name": "uncertainty-directed exploration",
+      "role": "primary_lens",
+      "one_line": "choices are biased toward options whose value is uncertain"
+    },
+    {
+      "name": "feature-based generalization",
+      "role": "primary_lens",
+      "one_line": "value learned from features transfers to guide exploration of new options"
+    },
+    {
+      "name": "computational models of exploration",
+      "role": "extended",
+      "one_line": "lab-derived exploration models tested against real-world consumer choices"
+    },
+    {
+      "name": "adaptive exploration",
+      "role": "context",
+      "one_line": "exploration level scales with environmental average quality"
+    }
+  ],
+  "core_question": "Do laboratory models of exploration and generalization explain choice in a large-scale real-world decision setting?",
+  "key_assumptions": [
+    "choice value can be modeled from observed order history",
+    "lab exploration models extend to naturalistic decisions",
+    "restaurant features support cross-option generalization"
+  ],
+  "manipulations": [
+    "variation in average restaurant quality across cities",
+    "variation in option uncertainty within each customer's history",
+    "variation in shared features across restaurants"
+  ],
+  "key_findings": [
+    "customers engage in uncertainty-directed exploration",
+    "exploration level is adjusted to a city's average restaurant quality",
+    "feature-based generalization steers exploration toward promising restaurants"
+  ],
+  "interpretations": [
+    "hallmarks of adaptive exploration generalize from lab tasks to real-world choice",
+    "computational exploration models capture naturalistic consumer behavior"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "uncertainty-directed exploration",
+    "feature-based generalization",
+    "exploration-exploitation tradeoff",
+    "real-world decision making",
+    "naturalistic choice data",
+    "consumer exploration behavior",
+    "adaptive exploration",
+    "computational model generalization"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "99672ac43b669955c12c8fc0fcae1d11",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

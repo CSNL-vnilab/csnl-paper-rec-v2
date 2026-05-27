@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "recurrent neural network",
+      "role": "primary_lens",
+      "one_line": "trained RNNs as model substrate for perceptual decision-making circuits"
+    },
+    {
+      "name": "dynamical systems analysis",
+      "role": "extended",
+      "one_line": "network solutions interpreted via dynamical structure underlying decisions"
+    },
+    {
+      "name": "causal circuit perturbation",
+      "role": "context",
+      "one_line": "framework for interpreting artificial inactivation experiments in neural circuits"
+    }
+  ],
+  "core_question": "How can the dynamical structure of recurrent neural circuits explain the behavioral consequences of partial inactivation?",
+  "key_assumptions": [
+    "perceptual decision behavior emerges from recurrent dynamics",
+    "trained RNNs are an adequate proxy for biological decision circuits",
+    "dynamical system structure governs sensitivity to perturbation"
+  ],
+  "manipulations": [
+    "partial inactivation of units in trained recurrent networks",
+    "perceptual decision task as behavioral readout",
+    "post-perturbation re-learning of network weights"
+  ],
+  "key_findings": [
+    "dynamical structure predicts magnitude of behavioral effects from perturbations",
+    "complex circuits compensate and adapt to partial inactivation",
+    "certain behavioral features are most sensitive to perturbation"
+  ],
+  "interpretations": [
+    "dynamical-systems lens provides a precise account of perturbation effects on behavior",
+    "design strategies can improve interpretability of inactivation experiments"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "recurrent neural network",
+    "perceptual decision making",
+    "partial inactivation",
+    "dynamical systems",
+    "circuit perturbation",
+    "compensation and re-learning",
+    "causal inference in circuits",
+    "interpretability of inactivation"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "70b34e0e0e43acdabee6987a61a10fc9",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}
