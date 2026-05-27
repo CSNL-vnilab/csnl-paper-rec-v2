@@ -1,0 +1,59 @@
+{
+  "frameworks": [
+    {
+      "name": "convolutional neural networks",
+      "role": "primary_lens",
+      "one_line": "CNNs as model class for hierarchical human visual cortex representations"
+    },
+    {
+      "name": "representational similarity analysis",
+      "role": "primary_lens",
+      "one_line": "Compares CNN feature geometry against fMRI response geometry"
+    },
+    {
+      "name": "recurrent processing",
+      "role": "alternative_lens",
+      "one_line": "Tested whether recurrence narrows the CNN-brain gap"
+    }
+  ],
+  "core_question": "Do convolutional neural networks fully capture human visual cortex representations of real-world and artificial objects?",
+  "key_assumptions": [
+    "RSA over fMRI responses indexes representational structure",
+    "Real-world and artificial visual stimuli engage overlapping neural circuits",
+    "CNN architecture/training choices span a meaningful model space"
+  ],
+  "manipulations": [
+    "CNN identity across 14 architectures",
+    "Stimulus class: natural vs artificial images",
+    "Visual hierarchy level: lower vs higher cortical stages",
+    "Training regime and presence of recurrence"
+  ],
+  "key_findings": [
+    "CNNs match lower-level representations of real-world objects",
+    "CNNs fail to fully capture higher-level real-world representations",
+    "CNNs fail at both lower and higher levels for artificial objects",
+    "Failures persist across architecture, training, and recurrence"
+  ],
+  "interpretations": [
+    "CNN-brain correspondence is bounded and stimulus-class dependent",
+    "Current CNNs are not sufficient models of high-level human vision"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "convolutional neural networks",
+    "representational similarity analysis",
+    "fMRI visual cortex",
+    "object recognition",
+    "artificial vs natural images",
+    "higher-level visual representation",
+    "recurrent processing",
+    "CNN-brain correspondence"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "19a78d1c52d0bfb3dd38c975b4237ec7",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:50:03+09:00",
+  "review_status": "auto_unreviewed"
+}

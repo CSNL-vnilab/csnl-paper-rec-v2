@@ -1,0 +1,62 @@
+{
+  "frameworks": [
+    {
+      "name": "Bayesian causal inference",
+      "role": "primary_lens",
+      "one_line": "audiovisual integration weighted by sensory uncertainty for spatial localization"
+    },
+    {
+      "name": "optimal Bayesian learner with exponential discounting",
+      "role": "extended",
+      "one_line": "uncertainty estimates combine past and current signals via exponential decay"
+    },
+    {
+      "name": "instantaneous independent uncertainty estimation",
+      "role": "compared_against",
+      "one_line": "leading view that brain computes uncertainty per-stimulus without history"
+    },
+    {
+      "name": "perceptual inference",
+      "role": "context",
+      "one_line": "how the brain combines noisy signals to form reliable percepts"
+    }
+  ],
+  "core_question": "Does the brain estimate sensory uncertainty instantaneously per stimulus, or does it integrate past experience?",
+  "key_assumptions": [
+    "observers weight multisensory inputs by their estimated uncertainty",
+    "auditory localization is biased by spatially disparate visual signals",
+    "Bayesian observer model captures multisensory integration"
+  ],
+  "manipulations": [
+    "visual noise level changed dynamically over time",
+    "continuous vs intermittent (jump) changes in visual noise",
+    "spatial disparity between auditory and visual signals"
+  ],
+  "key_findings": [
+    "observers integrate audiovisual inputs weighted by uncertainty combining past and current signals",
+    "behavior is consistent with an optimal Bayesian learner approximated by exponential discounting",
+    "results deviate from models using only current-stimulus uncertainty"
+  ],
+  "interpretations": [
+    "the brain exploits temporal dynamics of the world to estimate sensory uncertainty",
+    "uncertainty estimation combines past experience with new incoming signals"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "sensory uncertainty estimation",
+    "audiovisual integration",
+    "Bayesian causal inference",
+    "exponential discounting",
+    "temporal dynamics of noise",
+    "multisensory perception",
+    "perceptual inference",
+    "history-dependent reliability"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "9cd37bb4080b41407f712ce6de5a65ae",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

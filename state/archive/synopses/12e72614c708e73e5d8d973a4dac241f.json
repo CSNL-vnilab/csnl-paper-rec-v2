@@ -1,0 +1,56 @@
+{
+  "frameworks": [
+    {
+      "name": "perceptual decision-making",
+      "role": "primary_lens",
+      "one_line": "parietal neurons accumulating evidence about motion direction"
+    },
+    {
+      "name": "decision confidence / choice certainty",
+      "role": "extended",
+      "one_line": "same accumulator signal also encodes graded certainty"
+    },
+    {
+      "name": "post-decision wagering (opt-out paradigm)",
+      "role": "primary_lens",
+      "one_line": "behavioral readout of certainty via safe sure-bet option"
+    }
+  ],
+  "core_question": "Do neurons that form a perceptual decision also represent the decision-maker's confidence in it?",
+  "key_assumptions": [
+    "confidence is a graded, probabilistic assessment of expected outcome",
+    "opt-out choices reveal the animal's internal certainty",
+    "parietal neurons previously linked to decision formation are candidate substrates"
+  ],
+  "manipulations": [
+    "direction-of-motion difficulty across a range of coherences",
+    "trial-by-trial availability of an opt-out for small certain reward"
+  ],
+  "key_findings": [
+    "monkeys used the opt-out option in a graded way reflecting their certainty",
+    "parietal neurons represented formation of the direction decision",
+    "the same neurons encoded the degree of certainty underlying opt-out choices"
+  ],
+  "interpretations": [
+    "a single parietal population jointly represents the decision and confidence in it",
+    "decision confidence is computed within the perceptual-decision circuit, not by a separate module"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "decision confidence",
+    "opt-out paradigm",
+    "post-decision wagering",
+    "parietal cortex",
+    "random-dot motion",
+    "evidence accumulation",
+    "choice certainty",
+    "rhesus monkey single-unit recordings"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "12e72614c708e73e5d8d973a4dac241f",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:50:03+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,53 @@
+{
+  "frameworks": [
+    {
+      "name": "fMRI brain dynamics / co-activation patterns (CAPs)",
+      "role": "primary_lens",
+      "one_line": "Resting-state dynamics characterized via reoccurring co-activation patterns and their temporal properties."
+    },
+    {
+      "name": "transcranial direct current stimulation (tDCS) neuromodulation",
+      "role": "primary_lens",
+      "one_line": "Anodal tDCS as causal perturbation tool to modulate cortical excitability and brain-state dynamics."
+    }
+  ],
+  "core_question": "Can repeated tDCS to rDLPFC and lOFC causally modulate the temporal properties of fMRI co-activation patterns?",
+  "key_assumptions": [
+    "Temporal properties of CAPs index meaningful aspects of brain-state dynamics",
+    "tDCS enhances neuronal excitability of the targeted cortical region",
+    "Sham tDCS provides a valid causal control"
+  ],
+  "manipulations": [
+    "Active vs sham tDCS",
+    "Stimulation target (rDLPFC vs lOFC)",
+    "Time window during/after stimulation",
+    "Repeated tDCS-fMRI sessions"
+  ],
+  "key_findings": [
+    "Two reoccurring CAPs identified using rDLPFC and lOFC as seeds",
+    "Active tDCS significantly decreased occurrence rate of one CAP and increased that of another during the first 6 min",
+    "tDCS-associated changes persisted across subsequent testing sessions"
+  ],
+  "interpretations": [
+    "Enhanced excitability of rDLPFC/lOFC causally shifts the temporal occupancy of resting-state brain dynamics",
+    "tDCS is a viable tool to manipulate fMRI brain dynamics, opening a path to probe disrupted dynamics in neuropsychiatric disorders"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "co-activation patterns (CAPs)",
+    "resting-state fMRI dynamics",
+    "transcranial direct current stimulation (tDCS)",
+    "right dorsolateral prefrontal cortex",
+    "left orbitofrontal cortex",
+    "simultaneous tDCS-fMRI",
+    "occurrence rate of brain states",
+    "causal neuromodulation"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "643b4885c68b2810211b01bfbd00b535",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:50:03+09:00",
+  "review_status": "auto_unreviewed"
+}

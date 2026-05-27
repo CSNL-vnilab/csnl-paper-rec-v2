@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "fMRI adaptation",
+      "role": "primary_lens",
+      "one_line": "release from adaptation indexes neural discrimination of adjacent stimuli"
+    },
+    {
+      "name": "categorical perception of color",
+      "role": "compared_against",
+      "one_line": "tests whether early visual cortex shows a category-boundary signature for hue"
+    },
+    {
+      "name": "continuous hue representation",
+      "role": "alternative_lens",
+      "one_line": "smooth distance-graded code rather than categorical clusters in early visual areas"
+    }
+  ],
+  "core_question": "Does early visual cortex represent hue categorically or continuously across the blue-green boundary?",
+  "key_assumptions": [
+    "fMRI adaptation recovery scales with represented distance between stimuli",
+    "categorical coding would produce a step-like recovery at the category boundary",
+    "early retinotopic areas (V1, V2/3, hV4) carry the relevant hue code"
+  ],
+  "manipulations": [
+    "hue distance between adjacent stimuli along the blue-green continuum",
+    "task: passive viewing versus active categorization",
+    "comparison across early visual areas V1, V2/3, hV4"
+  ],
+  "key_findings": [
+    "release from adaptation increased smoothly with hue distance in V1, V2/3, and hV4",
+    "no categorical step in adaptation recovery across the blue-green boundary",
+    "direct fMRI response was enhanced for hues near the category border, largest in hV4 and during active categorization"
+  ],
+  "interpretations": [
+    "early visual cortex carries a noncategorical, continuous hue representation",
+    "category-related modulation appears as a response gain near the boundary, especially under task engagement, rather than as a categorical code"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "fMRI adaptation",
+    "hue representation",
+    "blue-green category boundary",
+    "categorical perception",
+    "early visual cortex",
+    "hV4",
+    "release from adaptation",
+    "task-dependent response gain"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "06b78301a40a5a4da7cfece53262bb26",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:50:03+09:00",
+  "review_status": "auto_unreviewed"
+}

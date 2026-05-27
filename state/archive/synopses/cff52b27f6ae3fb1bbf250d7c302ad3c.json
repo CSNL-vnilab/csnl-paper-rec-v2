@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "inverted encoding model",
+      "role": "extended",
+      "one_line": "population-level tuning model used to reconstruct stimuli from neural responses"
+    },
+    {
+      "name": "channel response profile reconstruction",
+      "role": "compared_against",
+      "one_line": "standard IEM evaluation via aligned/averaged reconstructions ignoring assumed basis set"
+    },
+    {
+      "name": "population tuning function decoding",
+      "role": "context",
+      "one_line": "decoding framework grounded in neuronal tuning across continuous stimulus space"
+    }
+  ],
+  "core_question": "How can inverted encoding models be evaluated without confounding results with the encoder's assumed channel response profiles?",
+  "key_assumptions": [
+    "population-level tuning functions reflect underlying neuronal tuning",
+    "decoding can occur on a continuous stimulus scale beyond trained values",
+    "standard reconstructions implicitly inherit the chosen basis set"
+  ],
+  "manipulations": [
+    "comparison of standard versus modified IEM evaluation",
+    "simulated channel response profiles",
+    "application to fMRI data from visual perception and attention studies"
+  ],
+  "key_findings": [
+    "standard IEM evaluations can produce spurious conclusions by ignoring assumed channel profiles",
+    "the proposed modification accounts for encoder basis set in reconstructions",
+    "modified method enables trial-by-trial goodness-of-fit estimates"
+  ],
+  "interpretations": [
+    "current IEM evaluation practices conflate basis-set assumptions with decoded content",
+    "accounting for channel response profiles improves decoding interpretability"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "inverted encoding model",
+    "channel response profile",
+    "basis set",
+    "stimulus reconstruction",
+    "fMRI decoding",
+    "trial-by-trial goodness-of-fit",
+    "population tuning function",
+    "visual perception and attention"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "cff52b27f6ae3fb1bbf250d7c302ad3c",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}

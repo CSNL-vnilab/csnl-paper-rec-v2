@@ -1,0 +1,65 @@
+{
+  "frameworks": [
+    {
+      "name": "Bayesian confidence",
+      "role": "compared_against",
+      "one_line": "confidence reports as posterior probability that the decision is correct"
+    },
+    {
+      "name": "non-Bayesian heuristic models",
+      "role": "primary_lens",
+      "one_line": "simple rules using sensory uncertainty in non-normative ways"
+    },
+    {
+      "name": "perceptual categorization",
+      "role": "context",
+      "one_line": "two-category decision tasks used to probe confidence behaviour"
+    },
+    {
+      "name": "signal-detection / sensory uncertainty access",
+      "role": "extended",
+      "one_line": "confidence circuits read low-level uncertainty representations"
+    }
+  ],
+  "core_question": "Do human confidence reports reflect Bayesian posterior probability of correctness, or are they better explained by non-Bayesian heuristics that still use sensory uncertainty?",
+  "key_assumptions": [
+    "confidence is a reportable graded quantity",
+    "sensory uncertainty is internally represented and accessible",
+    "Bayesian confidence makes specific predictions linking uncertainty to reports",
+    "model comparison can adjudicate between Bayesian and heuristic accounts"
+  ],
+  "manipulations": [
+    "sensory uncertainty manipulation across trials",
+    "perceptual categorization task variant",
+    "response modality for confidence reports",
+    "model comparison metric and Bayesian-model flexibility"
+  ],
+  "key_findings": [
+    "subjects incorporate sensory uncertainty into confidence reports",
+    "behaviour is not fully consistent with the Bayesian confidence hypothesis",
+    "simple heuristic models using uncertainty fit confidence better than Bayesian models",
+    "conclusions hold across tasks, uncertainty manipulations, and modelling choices"
+  ],
+  "interpretations": [
+    "confidence-reporting brain areas can access low-level sensory-uncertainty representations",
+    "rational accounts of confidence likely require implementational constraints"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "perceptual confidence",
+    "Bayesian confidence",
+    "sensory uncertainty",
+    "heuristic confidence models",
+    "perceptual categorization",
+    "metacognition",
+    "model comparison",
+    "non-Bayesian decision rules"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "b79e3db63560dc583afa372593604c72",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}

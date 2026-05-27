@@ -1,0 +1,62 @@
+{
+  "frameworks": [
+    {
+      "name": "mechanism design",
+      "role": "extended",
+      "one_line": "designing rules of interaction without rationality, baseline, or fixed-objective assumptions"
+    },
+    {
+      "name": "learning-from-human-preferences",
+      "role": "primary_lens",
+      "one_line": "mechanism parameters are tuned via direct participant preference feedback"
+    },
+    {
+      "name": "self-play electoral contest",
+      "role": "primary_lens",
+      "one_line": "candidate mechanisms compete against copies of themselves to elicit preferences"
+    },
+    {
+      "name": "resource allocation game",
+      "role": "context",
+      "one_line": "stylized testbed pitting productivity, equality, and free-riding against one another"
+    }
+  ],
+  "core_question": "Can a general-purpose method learn value-aligned mechanisms directly from human preferences without strong prior assumptions?",
+  "key_assumptions": [
+    "participants can express preferences over mechanism variants",
+    "mechanism quality can be improved through iterative electoral competition",
+    "no a priori rationality, baseline, or welfare objective is required"
+  ],
+  "manipulations": [
+    "mechanism parameters adjusted via self-play preference contests",
+    "comparison against a strong baseline mechanism",
+    "deployment on a resource allocation game with productivity-equality tension"
+  ],
+  "key_findings": [
+    "HCMD-zero produces a mechanism humans prefer over a strong baseline",
+    "method works without prior knowledge or hand-specified objectives",
+    "human behavioral trajectories are used sparingly and effectively"
+  ],
+  "interpretations": [
+    "value-aligned mechanisms can be learned end-to-end from preference data",
+    "self-play electoral contests provide a scalable signal for mechanism improvement"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "mechanism design",
+    "value alignment",
+    "learning from human preferences",
+    "self-play",
+    "resource allocation game",
+    "free-riding",
+    "productivity-equality tradeoff",
+    "preference elicitation"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "a8b37df5deb75bb0e77d298bddde8be0",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}
