@@ -1,0 +1,17 @@
+{
+  "canonical_id": "362f0ce8e185df28c34d3cab3abe8471",
+  "synopsis_version": "v1.2026-05-28",
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "OSF preregistration document for planned pupillometry analyses within a DFG research unit on belief updating — preregistration boilerplate, not a research article with empirical findings to extract.",
+  "generator": "opus-4-7@2026-05-28",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "abstract_coverage": 0.0
+}

@@ -1,0 +1,55 @@
+{
+  "frameworks": [
+    {
+      "name": "penumbra of learning",
+      "role": "primary_lens",
+      "one_line": "change in one variable informs expected change rate in others"
+    },
+    {
+      "name": "synaptic tagging and capture",
+      "role": "context",
+      "one_line": "neural-level analog where strong plasticity rescues weak plasticity"
+    },
+    {
+      "name": "normative computational theory of learning",
+      "role": "extended",
+      "one_line": "Bayesian-style account linking correlated change to belief updating"
+    }
+  ],
+  "core_question": "Do humans exploit correlations between variables so that observed change in one rescues learning about another?",
+  "key_assumptions": [
+    "genuine environmental changes are correlated across variables",
+    "expectations should update only when genuine change is inferred",
+    "individual variables are unreliable indicators of change"
+  ],
+  "manipulations": [
+    "presence vs absence of a co-occurring change cue around the learning task",
+    "strength of the to-be-learned signal in a number prediction task"
+  ],
+  "key_findings": [
+    "weak learning of a task can be rescued by novelty exposure before or after it",
+    "human number prediction shows behavioral signatures consistent with the penumbra account"
+  ],
+  "interpretations": [
+    "correlated change provides cross-variable information that gates expectation updating",
+    "behavioral tagging at the cognitive level parallels synaptic tagging at the neural level"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "behavioral tagging",
+    "synaptic tagging and capture",
+    "novelty-induced memory enhancement",
+    "change detection across variables",
+    "number prediction task",
+    "correlated environmental change",
+    "expectation updating",
+    "normative learning theory"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "3d3834c05d7d8e502fcfcb2798670dd3",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:39:32+09:00",
+  "review_status": "auto_unreviewed"
+}

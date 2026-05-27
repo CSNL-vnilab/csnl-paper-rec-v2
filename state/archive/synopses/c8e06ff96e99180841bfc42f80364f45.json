@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "reinforcement learning",
+      "role": "primary_lens",
+      "one_line": "classic RL model components serve as the interpretable scaffold being augmented"
+    },
+    {
+      "name": "artificial neural networks",
+      "role": "extended",
+      "one_line": "ANNs replace individual RL components one-by-one to increase flexibility"
+    },
+    {
+      "name": "hybrid cognitive modeling",
+      "role": "primary_lens",
+      "one_line": "combining ANN expressivity with classic-model interpretability for human behavior"
+    }
+  ],
+  "core_question": "Can hybrid ANN/classic models match neural-network fit while retaining interpretability of cognitive mechanisms in human reward-based learning?",
+  "key_assumptions": [
+    "classic RL components can be modularly swapped with ANN substitutes",
+    "interpretability is preserved when ANN replaces a single component at a time",
+    "human reward-based learning has identifiable mechanistic structure"
+  ],
+  "manipulations": [
+    "which RL component is replaced by an ANN (one-by-one)",
+    "comparison of fully-general ANNs vs hybrid models vs classic RL models"
+  ],
+  "key_findings": [
+    "hybrid models fit data comparably to fully-general ANNs",
+    "hybrid models recover reward-based learning mechanisms similar to classic RL",
+    "hybrid models reveal additional reward-blind mechanisms not in classic RL",
+    "specific memory contents are identified for reward-based and reward-blind processes"
+  ],
+  "interpretations": [
+    "ANN/classic hybrids can preserve interpretability while improving predictive power",
+    "human learning involves both reward-based and reward-blind mechanisms with distinct memory contents"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "hybrid cognitive models",
+    "artificial neural networks",
+    "reinforcement learning",
+    "interpretability",
+    "reward-based learning",
+    "reward-blind mechanisms",
+    "human decision making",
+    "model component substitution"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "c8e06ff96e99180841bfc42f80364f45",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

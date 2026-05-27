@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "beta-VAE disentangled generative model",
+      "role": "primary_lens",
+      "one_line": "unsupervised deep generative model factorising sensory data into interpretable latent factors"
+    },
+    {
+      "name": "deep supervised classifier model of ventral stream",
+      "role": "compared_against",
+      "one_line": "high-dimensional distributed population coding view of IT responses"
+    },
+    {
+      "name": "single-neuron semantic coding",
+      "role": "extended",
+      "one_line": "individual IT cells map onto interpretable disentangled generative factors"
+    }
+  ],
+  "core_question": "Do single inferotemporal face-patch neurons encode interpretable disentangled generative factors rather than only a distributed high-dimensional code?",
+  "key_assumptions": [
+    "beta-VAE latents approximate the disentangling objective of the ventral stream",
+    "single-unit IT responses can be meaningfully compared to model latent factors",
+    "face stimuli admit a low-dimensional semantically interpretable factorisation"
+  ],
+  "manipulations": [
+    "modelling IT face-patch responses with an unsupervised beta-VAE versus a supervised classifier",
+    "varying generative latent factors (e.g. gender, hair length)",
+    "reconstructing face images from population subsets of varying size"
+  ],
+  "key_findings": [
+    "beta-VAE latent factors correspond closely to factors coded by single IT neurons",
+    "face images can be reconstructed from signals of just a handful of cells",
+    "IT face code is more interpretable at the single-unit level than classifier models predict"
+  ],
+  "interpretations": [
+    "the ventral stream may optimise a disentangling objective",
+    "the resulting neural code is low-dimensional and semantically interpretable at the single-unit level"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "beta-VAE",
+    "disentangled representations",
+    "inferotemporal face patches",
+    "single-neuron interpretability",
+    "unsupervised generative model",
+    "ventral visual stream",
+    "face image reconstruction",
+    "semantic latent factors"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "190870b6d3fcd5dee90e4bab1315177c",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

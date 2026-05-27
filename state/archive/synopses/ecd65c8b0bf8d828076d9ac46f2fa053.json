@@ -1,0 +1,54 @@
+{
+  "frameworks": [
+    {
+      "name": "reinforcement learning",
+      "role": "compared_against",
+      "one_line": "Optimizing receipt of external reward signals as model of animal behaviour."
+    },
+    {
+      "name": "homeostatic / multi-dimensional value",
+      "role": "primary_lens",
+      "one_line": "Animals minimise distance between current and desired internal states across value dimensions."
+    },
+    {
+      "name": "context-sensitive valuation",
+      "role": "extended",
+      "one_line": "Valuation depends on internal state context rather than fixed external reward."
+    }
+  ],
+  "core_question": "Where does the value signal that drives animal decision-making actually come from?",
+  "key_assumptions": [
+    "Animals possess current and desired internal states",
+    "Value is multi-dimensional rather than scalar",
+    "External reward functions are not pre-specified for biological systems"
+  ],
+  "manipulations": [],
+  "key_findings": [
+    "RL framework leaves open how the external reward function is designed for biological systems",
+    "Valuation is context-sensitive in natural environments",
+    "Framework accounts for canonical phenomena in psychology, behavioural ecology, and economics",
+    "Framework aligns with recent brain imaging findings on value-guided decision-making"
+  ],
+  "interpretations": [
+    "Rather than optimizing external reward, animals minimise distance to goal across multiple internal value dimensions",
+    "Reframing value as internal-state tracking unifies behavioural and neural observations"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "reinforcement learning",
+    "value-guided decision-making",
+    "context-sensitive valuation",
+    "internal states",
+    "multi-dimensional value",
+    "reward function design",
+    "behavioural ecology",
+    "value-based decision neuroimaging"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "ecd65c8b0bf8d828076d9ac46f2fa053",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:39:32+09:00",
+  "review_status": "auto_unreviewed"
+}
