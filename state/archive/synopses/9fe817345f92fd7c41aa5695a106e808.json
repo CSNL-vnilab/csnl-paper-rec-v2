@@ -1,0 +1,64 @@
+{
+  "frameworks": [
+    {
+      "name": "recurrent neural network dynamics",
+      "role": "primary_lens",
+      "one_line": "population-level model whose connectivity is engineered to implement specified task dynamics"
+    },
+    {
+      "name": "low-dimensional manifold of neural activity",
+      "role": "primary_lens",
+      "one_line": "task-relevant dynamics unfold on correlated patterns forming a low-dimensional manifold"
+    },
+    {
+      "name": "drift-diffusion process",
+      "role": "extended",
+      "one_line": "ring-attractor working-memory dynamics implemented as drift-diffusion on a ring manifold"
+    },
+    {
+      "name": "input-driven cognitive flexibility",
+      "role": "context",
+      "one_line": "inputs reshape network dynamics to switch between task computations"
+    }
+  ],
+  "core_question": "How can RNN connectivity be designed so that its dynamics implement a specified task in an interpretable way?",
+  "key_assumptions": [
+    "neural computations can be cast as dynamics on low-dimensional manifolds",
+    "task-relevant dynamics can be specified a priori and inverted to connectivity",
+    "manifold shape and dynamics together determine network capacity"
+  ],
+  "manipulations": [
+    "specification of task manifold shape (e.g., ring)",
+    "specification of dynamics on the manifold (e.g., drift-diffusion)",
+    "inputs that reconfigure dynamics for different tasks",
+    "representation geometry varied to probe capacity"
+  ],
+  "key_findings": [
+    "method synthesizes RNN connectivity from prescribed manifold and dynamics",
+    "working memory implemented as drift-diffusion over a ring manifold",
+    "inputs can flexibly switch the network between dynamical regimes",
+    "representation geometry trades off against network capacity"
+  ],
+  "interpretations": [
+    "interpretable RNNs can be engineered top-down from task-relevant manifolds and dynamics",
+    "neural computation is fruitfully framed as low-dimensional manifold dynamics"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "recurrent neural network",
+    "task-relevant manifold",
+    "ring attractor",
+    "drift-diffusion",
+    "working memory",
+    "network connectivity engineering",
+    "low-dimensional neural dynamics",
+    "representation geometry and capacity"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "9fe817345f92fd7c41aa5695a106e808",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

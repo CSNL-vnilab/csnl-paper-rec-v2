@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "speed-accuracy trade-off (computational modeling of latent decisional processes)",
+      "role": "primary_lens",
+      "one_line": "Latent decisional processes driving strategic adjustment of speed vs accuracy"
+    },
+    {
+      "name": "transcranial direct current stimulation (tDCS) neuromodulation",
+      "role": "primary_lens",
+      "one_line": "Cathodal tDCS over left prefrontal and superior medial frontal cortex"
+    },
+    {
+      "name": "dopaminergic modulation of cognition",
+      "role": "primary_lens",
+      "one_line": "Pharmacological dopamine manipulation interacts with stimulation effects"
+    }
+  ],
+  "core_question": "Does dopamine causally modulate how tDCS alters speed-accuracy trade-off decision-making?",
+  "key_assumptions": [
+    "tDCS effects on cognition are at least partly dopamine-dependent",
+    "Computational modeling can dissociate latent decisional sub-processes",
+    "Dot-motion judgments engage ubiquitous strategic operations of the speed-accuracy trade-off"
+  ],
+  "manipulations": [
+    "Pharmacological dopamine manipulation vs placebo",
+    "Cathodal tDCS over left prefrontal and superior medial frontal cortex vs sham",
+    "Instructional emphasis: speed vs accuracy vs both",
+    "Dot-motion direction discrimination task"
+  ],
+  "key_findings": [
+    "Dopamine combined with tDCS impaired decision accuracy",
+    "Dopamine combined with tDCS impaired discriminability",
+    "Neither tDCS alone nor dopamine alone produced these impairments"
+  ],
+  "interpretations": [
+    "Dopamine-tDCS interaction altered the encoding or representation of discriminative evidence",
+    "Provides causal evidence for a dopaminergic role in tDCS effects on cognition and behavior"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "speed-accuracy trade-off",
+    "transcranial direct current stimulation",
+    "dopamine pharmacology",
+    "dot-motion direction discrimination",
+    "prefrontal cortex stimulation",
+    "computational modeling of decision-making",
+    "evidence encoding and discriminability",
+    "preregistered double-blinded design"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "341545a18d4d8c5db8dc82313391f7b1",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:11:03+09:00",
+  "review_status": "auto_unreviewed"
+}

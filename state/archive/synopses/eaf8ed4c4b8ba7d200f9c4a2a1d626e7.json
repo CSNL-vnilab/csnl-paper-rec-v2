@@ -1,0 +1,61 @@
+{
+  "frameworks": [
+    {
+      "name": "reinforcement learning",
+      "role": "primary_lens",
+      "one_line": "spatial representation chosen to maximize future expected reward"
+    },
+    {
+      "name": "predictive representation (successor representation)",
+      "role": "extended",
+      "one_line": "place cells encode expected future state occupancy, not pure geometry"
+    },
+    {
+      "name": "cognitive map",
+      "role": "compared_against",
+      "one_line": "purely geometric place-cell view that the paper argues is incomplete"
+    },
+    {
+      "name": "hierarchical planning via low-dimensional basis",
+      "role": "alternative_lens",
+      "one_line": "grid cells as eigenbasis enabling multiscale prediction"
+    }
+  ],
+  "core_question": "What kind of hippocampal spatial representation is most useful for maximizing future reward?",
+  "key_assumptions": [
+    "place cell activity reflects a learned representation rather than fixed geometry",
+    "useful representations are those that support reward-directed behavior",
+    "entorhinal grid cells provide a basis set decomposition of hippocampal codes"
+  ],
+  "manipulations": [
+    "theoretical comparison of geometric vs predictive representations",
+    "dimensionality of the basis set encoding the predictive map"
+  ],
+  "key_findings": [
+    "place cell responses show predictive coding, reward sensitivity, and policy dependence beyond pure spatial coding",
+    "a predictive representation reproduces many non-geometric place cell properties",
+    "grid cells correspond to a low-dimensional basis set for the predictive representation"
+  ],
+  "interpretations": [
+    "the hippocampus functions as a predictive map shaped by reward-maximizing policies",
+    "grid cells support noise suppression and multiscale hierarchical planning via basis decomposition"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "successor representation",
+    "predictive map",
+    "place cells",
+    "grid cells",
+    "reinforcement learning in hippocampus",
+    "policy-dependent spatial coding",
+    "low-dimensional basis set",
+    "hierarchical planning"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "eaf8ed4c4b8ba7d200f9c4a2a1d626e7",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:11:03+09:00",
+  "review_status": "auto_unreviewed"
+}

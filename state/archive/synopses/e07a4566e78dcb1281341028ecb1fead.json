@@ -1,0 +1,53 @@
+{
+  "frameworks": [
+    {
+      "name": "locus coeruleus-noradrenaline pupil-linked arousal",
+      "role": "primary_lens",
+      "one_line": "Phasic LC-NA activity, indexed by pupil dilation, modulates encoding-related plasticity."
+    },
+    {
+      "name": "noradrenergic synaptic plasticity account of memory",
+      "role": "context",
+      "one_line": "NA release during encoding is hypothesized to consolidate memory traces."
+    }
+  ],
+  "core_question": "Do task-irrelevant sounds that boost phasic pupil-linked arousal also enhance memory formation?",
+  "key_assumptions": [
+    "Pupil dilation indexes phasic LC-NA arousal",
+    "Encoding-time arousal causally supports memory consolidation",
+    "Task-irrelevant sounds reliably drive pupil-linked arousal"
+  ],
+  "manipulations": [
+    "Task-irrelevant white-noise sounds present vs absent",
+    "Sound timing relative to memoranda (before, during, after)",
+    "Memorandum modality (images vs spoken words)",
+    "Memory test type (recognition vs free recall, next day)"
+  ],
+  "key_findings": [
+    "Trial-by-trial encoding pupil dilations (no sound) predicted later memory success",
+    "Task-irrelevant white-noise sounds robustly dilated the pupil",
+    "Sound-evoked pupil dilations did not improve recognition or free recall for words or images"
+  ],
+  "interpretations": [
+    "Exogenous, sound-driven pupil-linked arousal is dissociable from endogenous encoding arousal",
+    "Phasic LC-NA arousal alone is not sufficient to enhance memory formation"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "pupil-linked arousal",
+    "locus coeruleus noradrenaline",
+    "phasic arousal",
+    "memory encoding",
+    "task-irrelevant sounds",
+    "white noise",
+    "recognition and free recall",
+    "trial-by-trial pupil dilation"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "e07a4566e78dcb1281341028ecb1fead",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:11:03+09:00",
+  "review_status": "auto_unreviewed"
+}

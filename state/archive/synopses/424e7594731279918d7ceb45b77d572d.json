@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "successor representation",
+      "role": "primary_lens",
+      "one_line": "predictive state representation bridging model-based and model-free value learning"
+    },
+    {
+      "name": "temporal difference learning",
+      "role": "extended",
+      "one_line": "TD value learning extended to predictive state features rather than rewards"
+    },
+    {
+      "name": "model-based reinforcement learning",
+      "role": "compared_against",
+      "one_line": "dynamic-programming evaluation contrasted as costlier decision-time alternative"
+    },
+    {
+      "name": "model-free reinforcement learning",
+      "role": "context",
+      "one_line": "cached-value mechanism that successor representation partially subsumes"
+    }
+  ],
+  "core_question": "How can model-based behavior emerge from neural circuits built on model-free temporal difference learning?",
+  "key_assumptions": [
+    "neural circuits supporting model-based and model-free RL overlap structurally",
+    "value can be decomposed into a predictive state representation times a learned reward vector",
+    "TD learning can update predictive features as well as scalar values"
+  ],
+  "manipulations": [
+    "simulated tasks contrasting successor representation against model-based and model-free baselines",
+    "introduction of two algorithmic extensions that progressively mitigate successor-representation limitations"
+  ],
+  "key_findings": [
+    "successor representation combined with TD yields a subset of model-based behaviors at lower decision-time cost",
+    "behavioral repertoire of the successor representation partially matches biological organisms",
+    "two new algorithms extend the successor representation to address its limitations"
+  ],
+  "interpretations": [
+    "model-based computation may be constructed on top of a TD-learning core via predictive representations",
+    "successor representation offers a unifying account linking model-free mechanisms to model-based behavior"
+  ],
+  "limitations_noted": [
+    "successor representation alone captures only a subset of model-based behaviors"
+  ],
+  "connecting_signals": [
+    "successor representation",
+    "predictive state representation",
+    "model-based reinforcement learning",
+    "temporal difference learning",
+    "value computation",
+    "decision-time computation",
+    "model-free model-based dichotomy",
+    "reward prediction"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "424e7594731279918d7ceb45b77d572d",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:11:03+09:00",
+  "review_status": "auto_unreviewed"
+}

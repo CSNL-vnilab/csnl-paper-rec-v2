@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "transcranial direct current stimulation (tDCS)",
+      "role": "primary_lens",
+      "one_line": "anodal cortical stimulation modulates V1 excitability to enhance perceptual function"
+    },
+    {
+      "name": "cortical magnification",
+      "role": "context",
+      "one_line": "central visual field is over-represented in V1, predicting stronger stimulation effects"
+    },
+    {
+      "name": "neural plasticity",
+      "role": "extended",
+      "one_line": "repetitive noninvasive stimulation produces lasting changes in visual cortex function"
+    }
+  ],
+  "core_question": "Can repetitive anodal tDCS over V1 produce lasting improvements in contrast sensitivity in healthy adults?",
+  "key_assumptions": [
+    "anodal tDCS increases cortical excitability in targeted V1",
+    "contrast sensitivity is a core V1-mediated function",
+    "current density and cortical magnification jointly shape stimulation effects"
+  ],
+  "manipulations": [
+    "stimulation type (anodal tDCS vs sham)",
+    "repeated daily sessions across 5 consecutive days",
+    "visual field eccentricity of contrast threshold measurement"
+  ],
+  "key_findings": [
+    "contrast sensitivity improved from the second day of anodal tDCS onward",
+    "improvement effects lasted 24 hours between sessions",
+    "anodal group showed larger gains than sham after the final stimulation (23 vs 5%)",
+    "long-term effects at 4 weeks were confined to the central 2-4 degrees of the visual field"
+  ],
+  "interpretations": [
+    "repetitive anodal tDCS over V1 can produce lasting enhancement of visual perception",
+    "central-field specificity reflects higher current density and cortical magnification of central retina"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "transcranial direct current stimulation",
+    "anodal tDCS",
+    "contrast sensitivity",
+    "primary visual cortex",
+    "threshold perimetry",
+    "cortical magnification",
+    "visual perception enhancement",
+    "long-lasting plasticity"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "8061affc0e84e8d127187afb2f0bb653",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}
