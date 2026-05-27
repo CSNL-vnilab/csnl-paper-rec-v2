@@ -1,0 +1,49 @@
+{
+  "frameworks": [
+    {
+      "name": "functional connectivity (task-based fMRI)",
+      "role": "primary_lens",
+      "one_line": "ROI-pair connectivity in language regions during convergent creative problem solving"
+    },
+    {
+      "name": "gene-by-stress interaction (5-HTTLPR)",
+      "role": "context",
+      "one_line": "serotonin-transporter short-allele as stress-susceptibility moderator"
+    }
+  ],
+  "core_question": "Does acute stress alter functional connectivity among language-processing regions during a verbal creative problem-solving task, and is the effect modulated by gender or 5-HTTLPR genotype?",
+  "key_assumptions": [
+    "convergent verbal problem solving (CRA) engages divergent-thinking processes relevant to creativity",
+    "MIST reliably induces psychosocial stress inside the scanner",
+    "S-allele of serotonin transporter indexes stress susceptibility"
+  ],
+  "manipulations": [
+    "stress vs no-stress session (modified MIST vs control)",
+    "compound remote associates trials interleaved with stressor blocks",
+    "between-subjects: gender and 5-HTTLPR S-allele presence"
+  ],
+  "key_findings": [
+    "no main effect of stress on functional connectivity for individual language-ROI pairs"
+  ],
+  "interpretations": [
+    "stress does not produce uniform ROI-pair FC changes during this convergent verbal task"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "functional connectivity",
+    "stress fMRI",
+    "Montreal Imaging Stress Test",
+    "compound remote associates",
+    "verbal creativity",
+    "serotonin transporter polymorphism",
+    "5-HTTLPR",
+    "language network"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "dd8882fbc1d1533345affd502bb64a5e",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:24:50+09:00",
+  "review_status": "auto_unreviewed"
+}

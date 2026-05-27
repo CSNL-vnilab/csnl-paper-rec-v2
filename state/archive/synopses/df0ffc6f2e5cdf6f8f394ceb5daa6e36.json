@@ -1,0 +1,56 @@
+{
+  "frameworks": [
+    {
+      "name": "bounded rationality",
+      "role": "primary_lens",
+      "one_line": "decision-makers act under finite computational resources, not unlimited reasoning"
+    },
+    {
+      "name": "information-theoretic / statistical-mechanics formalization of bounded rationality",
+      "role": "extended",
+      "one_line": "formal model trading expected utility against an information/resource cost"
+    },
+    {
+      "name": "subjective expected utility theory",
+      "role": "compared_against",
+      "one_line": "classical baseline assuming unlimited computational resources for choice"
+    }
+  ],
+  "core_question": "Can an information-theoretic bounded-rationality model account for human choice under time-limited combinatorial decisions?",
+  "key_assumptions": [
+    "decision-makers face resource constraints rather than unlimited reasoning",
+    "behavior trades off expected utility against an information/resource cost",
+    "agents fall back on learned prior choice patterns when resources are scarce"
+  ],
+  "manipulations": [
+    "time limit imposed on each decision",
+    "combinatorial puzzle as the choice task"
+  ],
+  "key_findings": [
+    "bounded-rational model fits human choice data across time limits well",
+    "fitted parameters separate subjective utility from information capacity",
+    "behavior collapses toward learned prior patterns as time pressure increases"
+  ],
+  "interpretations": [
+    "human deliberation is well described as resource-limited rationality, not full expected-utility maximization",
+    "information capacity is a meaningful, recoverable individual-level limit"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "bounded rationality",
+    "information-theoretic decision model",
+    "resource-limited choice",
+    "time pressure",
+    "expected utility",
+    "prior choice patterns",
+    "combinatorial puzzles",
+    "information capacity"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "df0ffc6f2e5cdf6f8f394ceb5daa6e36",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:24:50+09:00",
+  "review_status": "auto_unreviewed"
+}

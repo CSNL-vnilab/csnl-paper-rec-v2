@@ -1,0 +1,61 @@
+{
+  "frameworks": [
+    {
+      "name": "task-optimized deep neural network",
+      "role": "primary_lens",
+      "one_line": "DNN trained to classify images and predict its own correctness models confidence"
+    },
+    {
+      "name": "balance-of-evidence rule",
+      "role": "compared_against",
+      "one_line": "optimal account of confidence using full evidence distribution"
+    },
+    {
+      "name": "response-congruent-evidence heuristic",
+      "role": "compared_against",
+      "one_line": "heuristic confidence read-out using only evidence congruent with the choice"
+    },
+    {
+      "name": "metacognition / decision confidence",
+      "role": "context",
+      "one_line": "metacognitive assessment of decision correctness as the target phenomenon"
+    }
+  ],
+  "core_question": "Can a task-optimized neural network reproduce the behavioral dissociations between decisions and confidence?",
+  "key_assumptions": [
+    "confidence is the model's predicted probability of being correct",
+    "optimization for naturalistic image statistics yields humanlike read-outs",
+    "decisions and confidence can share computations within one network"
+  ],
+  "manipulations": [
+    "joint training to classify images and predict own correctness",
+    "comparison of learned strategy against balance-of-evidence and response-congruent rules"
+  ],
+  "key_findings": [
+    "the trained network naturally reproduces key decision-confidence dissociations",
+    "neither balance-of-evidence nor response-congruent-evidence fully describes the learned strategy",
+    "the model approximates the distribution of its training data flexibly"
+  ],
+  "interpretations": [
+    "apparent suboptimality in human confidence may reflect optimization for naturalistic statistics",
+    "confidence read-out is a learned, data-distribution-shaped function, not a fixed rule"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "decision confidence",
+    "metacognition",
+    "task-optimized neural network",
+    "balance-of-evidence",
+    "response-congruent evidence",
+    "image classification",
+    "confidence-decision dissociation",
+    "naturalistic statistics"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "dc2207f09b9a63f398472de28958e39a",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

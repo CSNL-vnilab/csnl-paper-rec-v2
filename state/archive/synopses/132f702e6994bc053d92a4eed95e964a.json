@@ -1,0 +1,17 @@
+{
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "Systematic-review meta-paper on construct-validity flaws in large-language-model benchmarks — ML-evaluation methodology in NLP, not cognitive/perceptual/computational neuroscience.",
+  "abstract_coverage": 0.0,
+  "canonical_id": "132f702e6994bc053d92a4eed95e964a",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

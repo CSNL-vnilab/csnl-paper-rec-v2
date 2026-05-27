@@ -1,0 +1,52 @@
+{
+  "frameworks": [
+    {
+      "name": "pupil-linked arousal",
+      "role": "primary_lens",
+      "one_line": "pupil dilation indexes physiological arousal predicting memory encoding"
+    },
+    {
+      "name": "central arousal systems gating synaptic plasticity",
+      "role": "context",
+      "one_line": "arousal modulates neocortical plasticity supporting rapid memory formation"
+    }
+  ],
+  "core_question": "Does trial-by-trial pupil dilation during encoding predict which stimuli are later remembered?",
+  "key_assumptions": [
+    "pupil response is a reliable proxy for physiological arousal",
+    "arousal at encoding influences long-term memory formation",
+    "subsequent-memory effects can be read out trial-by-trial"
+  ],
+  "manipulations": [
+    "encoding modality (visual vs auditory)",
+    "memory test delay (immediate vs 24 hr)",
+    "emotional arousal content of stimuli"
+  ],
+  "key_findings": [
+    "pupil dilation during encoding predicted later recall across modalities",
+    "prediction held at immediate test and after 24 hr",
+    "effect was strongest for emotionally arousing stimuli"
+  ],
+  "interpretations": [
+    "the eyes provide a window onto long-term memory formation",
+    "central arousal systems support rapid memory, possibly by gating neocortical synaptic plasticity"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "pupil dilation",
+    "subsequent memory effect",
+    "long-term memory encoding",
+    "physiological arousal",
+    "emotional arousal",
+    "locus coeruleus / central arousal systems",
+    "synaptic plasticity gating",
+    "cross-modal encoding"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "b061680697be8b4a0f41863941ce8dee",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:24:50+09:00",
+  "review_status": "auto_unreviewed"
+}

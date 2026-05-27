@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "active inference under the free-energy principle",
+      "role": "primary_lens",
+      "one_line": "agents minimize free-energy by adjusting internal states and sampling of the environment"
+    },
+    {
+      "name": "reinforcement learning",
+      "role": "compared_against",
+      "one_line": "reward/value-based optimization of behaviour the paper argues is unnecessary"
+    },
+    {
+      "name": "dynamic programming / optimal control",
+      "role": "compared_against",
+      "one_line": "value-iteration control framework benchmarked against free-energy formulation"
+    },
+    {
+      "name": "predictive coding / perception-action unification",
+      "role": "extended",
+      "one_line": "free-energy formulation extended to jointly explain perception and action"
+    }
+  ],
+  "core_question": "Can adaptive goal-directed behaviour be produced without invoking reward, value, or utility, using only free-energy minimization?",
+  "key_assumptions": [
+    "agents act to minimize free-energy of sensory exchanges with environment",
+    "perception and action share a single objective",
+    "causal structure of the environment is learnable in self-supervised fashion",
+    "no explicit reward signal is required"
+  ],
+  "manipulations": [
+    "replacing reward-based optimization with free-energy minimization",
+    "applying active inference to the mountain-car benchmark",
+    "contrasting resulting policy with dynamic-programming solution"
+  ],
+  "key_findings": [
+    "agent learns environmental causal structure via free-energy minimization",
+    "behavioural policies reproduce those obtained by reinforcement learning and dynamic programming",
+    "mountain-car benchmark solved without reward, value, or utility"
+  ],
+  "interpretations": [
+    "free-energy principle gives a unified account of action and perception",
+    "results invite a reappraisal of dopamine's role beyond reward signalling"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "active inference",
+    "free-energy principle",
+    "reinforcement learning alternative",
+    "dynamic programming",
+    "mountain-car problem",
+    "perception-action unification",
+    "self-supervised exploration",
+    "dopamine reappraisal"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "48b4c4707a4ec9d0760013f1b4aeba5e",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

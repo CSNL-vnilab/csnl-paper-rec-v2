@@ -1,0 +1,56 @@
+{
+  "frameworks": [
+    {
+      "name": "Bayesian inference",
+      "role": "primary_lens",
+      "one_line": "combines subject fMRI observation with learned atlas prior to infer retinotopic maps"
+    },
+    {
+      "name": "retinotopic atlas",
+      "role": "extended",
+      "one_line": "learned cortical atlas serves as the prior in the Bayesian mapping model"
+    },
+    {
+      "name": "voxel-wise fMRI mapping",
+      "role": "compared_against",
+      "one_line": "standard per-voxel analysis is limited by noise and subjective boundary calls"
+    }
+  ],
+  "core_question": "Can combining a learned retinotopic atlas prior with limited fMRI observations yield more accurate cortical visual maps than either source alone?",
+  "key_assumptions": [
+    "an atlas learned across subjects captures a useful prior over retinotopic organization",
+    "subject fMRI measurements act as a noisy observation of the true map",
+    "areal boundaries and discontinuities are inferable jointly with the map"
+  ],
+  "manipulations": [
+    "amount of subject-specific fMRI data fed into the model",
+    "atlas-only vs measurement-only vs combined Bayesian estimate",
+    "evaluation against held-out validation data"
+  ],
+  "key_findings": [
+    "method automatically draws areal boundaries from combined evidence",
+    "discontinuities in measured maps are corrected by the prior",
+    "Bayesian estimate predicts validation data better than atlas alone or data alone"
+  ],
+  "interpretations": [
+    "Bayesian fusion of atlas prior and short fMRI runs improves retinotopic mapping accuracy",
+    "approach enables automatic large-scale analysis and quantification of inter-individual map variation"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "Bayesian retinotopic mapping",
+    "visual cortex areal boundaries",
+    "retinotopic atlas prior",
+    "fMRI map estimation",
+    "automatic visual area parcellation",
+    "individual differences in cortical maps",
+    "prior-observation fusion"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "d77841e15a68b9713d506b0db24d112e",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}
