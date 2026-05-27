@@ -1,0 +1,64 @@
+{
+  "frameworks": [
+    {
+      "name": "decision by sampling",
+      "role": "extended",
+      "one_line": "Subjective value equals rank within a memory-retrieved sample of attribute values"
+    },
+    {
+      "name": "efficient coding",
+      "role": "primary_lens",
+      "one_line": "Provides a normative justification for the DbS rank transformation"
+    },
+    {
+      "name": "range-frequency theory",
+      "role": "alternative_lens",
+      "one_line": "Closely connected to the noisy-channel generalization of DbS"
+    },
+    {
+      "name": "classic stable-preference theory",
+      "role": "compared_against",
+      "one_line": "Cannot account for the context dependence DbS explains"
+    }
+  ],
+  "core_question": "Can efficient coding normatively justify decision by sampling and extend it to noisy, finite-sample regimes?",
+  "key_assumptions": [
+    "Subjective value derives from rank in a memory-retrieved sample",
+    "Efficient representation in a noiseless channel yields a uniform response distribution",
+    "Cognitive limitations make decision samples finite and thus noisy",
+    "Efficient coding in a noisy channel requires signal smoothing"
+  ],
+  "manipulations": [
+    "Contrasted noiseless versus noisy communication-channel regimes",
+    "Varied the number of available response categories",
+    "Compared classic stable-preference accounts against DbS-based accounts"
+  ],
+  "key_findings": [
+    "Rank transformation implements the uniform output distribution required by noiseless efficient coding",
+    "A new smoothed generalization of DbS emerges from noisy-channel efficient coding",
+    "The generalized DbS captures how context sensitivity varies with the number of response categories",
+    "The generalized account aligns closely with range-frequency theory"
+  ],
+  "interpretations": [
+    "DbS is a normatively efficient strategy under capacity and sample-size constraints",
+    "Context-dependent valuation can be derived from efficient coding rather than stipulated"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "decision by sampling",
+    "efficient coding",
+    "psychoeconomic functions",
+    "rank transformation",
+    "range-frequency theory",
+    "context-dependent valuation",
+    "noisy channel coding",
+    "subjective value"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "916af6b68634cda0bf44e72dc38342a8",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

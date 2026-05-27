@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "ideal observer analysis",
+      "role": "primary_lens",
+      "one_line": "Derives expected behavior of an optimal but capacity-limited memory system"
+    },
+    {
+      "name": "rate-distortion theory",
+      "role": "primary_lens",
+      "one_line": "Information-theoretic bound on accuracy at fixed information capacity"
+    },
+    {
+      "name": "fixed item-limit models",
+      "role": "compared_against",
+      "one_line": "Slot-based VWM models with a hard cap on stored items"
+    },
+    {
+      "name": "variable-number storage model",
+      "role": "extended",
+      "one_line": "Allows variability in number of stored representations without fixed item limit"
+    }
+  ],
+  "core_question": "What are the principled limits on visual working memory under a fixed information capacity?",
+  "key_assumptions": [
+    "Visual working memory has a fixed information-transmission capacity",
+    "An optimal memory system trades distortion against capacity",
+    "Behavior approximates the optimum subject to capacity constraints"
+  ],
+  "manipulations": [
+    "Empirical tasks designed to probe ideal-observer predictions",
+    "Comparison of alternative VWM models within the same framework",
+    "Variation of memory load implicit in task structure"
+  ],
+  "key_findings": [
+    "Ideal observer analysis yields novel quantitative predictions for VWM",
+    "Two empirical studies confirm the predicted performance bounds",
+    "A model allowing variable number of stored representations fits the data well",
+    "No fixed item limit is required to account for empirical VWM data"
+  ],
+  "interpretations": [
+    "VWM capacity is best characterized as bounded information rate rather than discrete item slots",
+    "Existing slot-limit models can be reinterpreted as special cases of a rate-distortion account"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "ideal observer analysis",
+    "rate-distortion theory",
+    "visual working memory",
+    "information capacity",
+    "capacity-limited memory",
+    "fixed item limit",
+    "variable storage model",
+    "memory precision"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "11448ba24a06d25212fac327b23da486",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

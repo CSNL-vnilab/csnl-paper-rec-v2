@@ -1,0 +1,64 @@
+{
+  "frameworks": [
+    {
+      "name": "selective integration",
+      "role": "primary_lens",
+      "one_line": "Successive attributes compete for processing; integration biased toward locally preferred attribute"
+    },
+    {
+      "name": "sequential sampling / evidence accumulation",
+      "role": "context",
+      "one_line": "Decisions follow integration of attribute information across alternatives"
+    },
+    {
+      "name": "unbiased integration",
+      "role": "compared_against",
+      "one_line": "Rival model without local-preference bias used for comparison"
+    },
+    {
+      "name": "optimality under late noise",
+      "role": "alternative_lens",
+      "one_line": "Bias is optimal when post-sensory noise corrupts decisions"
+    }
+  ],
+  "core_question": "Do posterior neural signals encode locally preferred attributes with higher gain during sequential value integration?",
+  "key_assumptions": [
+    "Attributes are processed in turn rather than simultaneously",
+    "Attributes compete for limited processing resources",
+    "Late (post-sensory) noise corrupts decisions",
+    "Posterior cortex contralateral signals index attribute encoding"
+  ],
+  "manipulations": [
+    "Two simultaneous streams of bars with varying heights",
+    "Judge higher vs lower average height across sessions",
+    "Compare selective-integration model vs unbiased rival model",
+    "Single-trial analysis of contralateral posterior EEG"
+  ],
+  "key_findings": [
+    "Selective integration model fit choice data better than unbiased rival",
+    "Contralateral posterior EEG covaried more steeply with decision information from locally preferred attributes",
+    "Neural gain asymmetry tracks the behavioral bias predicted by the model"
+  ],
+  "interpretations": [
+    "Posterior cortex implements gain modulation favoring locally preferred attributes",
+    "Selective integration is realized as differential neural gain rather than information loss alone"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "selective integration",
+    "sequential sampling",
+    "evidence accumulation",
+    "attribute integration bias",
+    "posterior EEG decision signals",
+    "contralateral gain modulation",
+    "late noise optimality",
+    "value-based choice biases"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "8c5b30c06eebe6b1205dfd16c6445fb7",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "bounded diffusion (sequential sampling)",
+      "role": "primary_lens",
+      "one_line": "evidence accumulated from stored sensory memory until a decision bound is reached"
+    },
+    {
+      "name": "working memory",
+      "role": "extended",
+      "one_line": "memory retains sensory evidence based on its future utility for upcoming choices"
+    },
+    {
+      "name": "perceptual decision-making",
+      "role": "context",
+      "one_line": "categorical decisions about noisy sensory evidence guide subsequent action"
+    }
+  ],
+  "core_question": "When perceptual decisions are uncoupled from actions, do humans postpone categorization until response options appear, and what computation supports the delay?",
+  "key_assumptions": [
+    "stored sensory evidence can be re-sampled after stimulus offset",
+    "a bounded diffusion process governs accumulation to a decision",
+    "categorical commitment can be deferred until choice targets are known"
+  ],
+  "manipulations": [
+    "delay between random-dot motion stimulus and choice-target onset",
+    "motion-evidence strength (RDM coherence)",
+    "uncoupling of perceptual category from motor response mapping"
+  ],
+  "key_findings": [
+    "subjects with higher decision accuracy showed prolonged deliberation after target onset",
+    "decision-report time depended on motion-evidence strength",
+    "accuracy and report-time patterns were captured by a bounded diffusion model sampling from memory",
+    "individual differences in motion-evidence integration ability were observed"
+  ],
+  "interpretations": [
+    "decisions can be postponed by sequentially sampling stored sensory information once response options appear",
+    "working memory strategically retains evidence based on its future decision utility"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "random-dot motion",
+    "bounded diffusion model",
+    "sequential sampling from memory",
+    "perceptual decision-making",
+    "working memory utility",
+    "decision postponement",
+    "evidence accumulation",
+    "action-uncoupled choice"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "fe775b076b193d82d929178e2410a609",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:25:44+09:00",
+  "review_status": "auto_unreviewed"
+}

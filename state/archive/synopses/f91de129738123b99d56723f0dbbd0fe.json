@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "spontaneous activity-driven cortical wiring",
+      "role": "primary_lens",
+      "one_line": "Structured pre-eye-opening activity instructs feature-specific cortical circuitry"
+    },
+    {
+      "name": "feedforward Hebbian co-activation",
+      "role": "primary_lens",
+      "one_line": "Co-activated iso-tuning neurons strengthen long-range horizontal links"
+    },
+    {
+      "name": "retinal wave propagation model",
+      "role": "extended",
+      "one_line": "Anatomically constrained retinal mosaic generates spatiotemporally patterned input"
+    },
+    {
+      "name": "orientation map and salt-and-pepper organization",
+      "role": "context",
+      "one_line": "Cortical topographies compared between higher mammals and rodents"
+    }
+  ],
+  "core_question": "Can spontaneous retinal waves initialize feature-specific long-range horizontal connections in V1 before eye-opening?",
+  "key_assumptions": [
+    "Retinal-wave-driven activity drives feedforward cortical co-activation",
+    "Iso-orientation co-activation suffices to wire long-range horizontal connections",
+    "Pre-eye-opening retinal mosaics generate spatiotemporally structured activity"
+  ],
+  "manipulations": [
+    "Structured retinal wave input vs equivalent random activity",
+    "Higher-mammal orientation-map cortex vs rodent salt-and-pepper cortex",
+    "Anatomy-based retinal mosaic model parameters"
+  ],
+  "key_findings": [
+    "Propagating retinal waves coactivate similar-tuning neurons and wire long-range horizontal connections",
+    "Equivalent random retinal activity fails to induce such organized connectivity",
+    "Emerged long-range horizontal connections produce patterned cortical activity matching the orientation map",
+    "Model also reproduces feature-specific microcircuits in rodent salt-and-pepper organizations"
+  ],
+  "interpretations": [
+    "Long-range horizontal connections in V1 may originate from spatiotemporally structured retinal-wave input",
+    "Early peripheral spontaneous activity contributes significantly to cortical functional circuit development"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "spontaneous retinal waves",
+    "long-range horizontal connections",
+    "primary visual cortex development",
+    "iso-orientation domains",
+    "feature-specific wiring",
+    "pre-eye-opening activity",
+    "orientation map",
+    "salt-and-pepper organization"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "f91de129738123b99d56723f0dbbd0fe",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

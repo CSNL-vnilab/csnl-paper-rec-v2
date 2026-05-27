@@ -1,0 +1,64 @@
+{
+  "frameworks": [
+    {
+      "name": "nonlinear dynamical systems",
+      "role": "primary_lens",
+      "one_line": "Neural circuits modeled as nonlinear dynamical systems to be steered"
+    },
+    {
+      "name": "control theory",
+      "role": "primary_lens",
+      "one_line": "Control-theoretic design of inputs that drive activity to a target"
+    },
+    {
+      "name": "recurrent network models",
+      "role": "primary_lens",
+      "one_line": "Recurrent network simulations serve as the testbed for the method"
+    },
+    {
+      "name": "data-driven methods",
+      "role": "extended",
+      "one_line": "Spontaneous-activity statistics used to identify high-leverage perturbation sites"
+    }
+  ],
+  "core_question": "Can spatiotemporal patterns of multi-site stimulation be designed to steer neural activity and behavior toward a desired target?",
+  "key_assumptions": [
+    "Effective perturbation sites can be inferred from short observations of spontaneous activity",
+    "Network dynamics are sufficiently captured by recurrent dynamical models",
+    "Stimulation efficacy and selectivity can be jointly optimized"
+  ],
+  "manipulations": [
+    "Selection of perturbation sites (hubs) from spontaneous activity",
+    "Design of multi-site spatiotemporal stimulation patterns",
+    "Combination of control-theoretic and data-driven design steps"
+  ],
+  "key_findings": [
+    "A two-step pipeline identifies hub sites and designs multi-site stimulation patterns",
+    "Hubs can be identified from short spontaneous-activity observations alone",
+    "Feasibility demonstrated with multi-site stimulation in recurrent network models"
+  ],
+  "interpretations": [
+    "Model-based design can replace laborious trial-and-error for complex multi-site perturbations",
+    "Combining dynamical systems, control, and data-driven tools enables precise causal manipulation"
+  ],
+  "limitations_noted": [
+    "Demonstration is in recurrent network models rather than in vivo"
+  ],
+  "connecting_signals": [
+    "multi-site microstimulation",
+    "perturbation hub identification",
+    "spontaneous neural activity",
+    "control theory for neural circuits",
+    "nonlinear dynamical systems",
+    "recurrent network models",
+    "spatiotemporal stimulation design",
+    "causal manipulation of brain circuits"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "3eab6d7a0a9029ebd162e64a98a6751c",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "directed exploration",
+      "role": "primary_lens",
+      "one_line": "Uncertainty-driven information-seeking sensitive to relative uncertainty"
+    },
+    {
+      "name": "random exploration",
+      "role": "primary_lens",
+      "one_line": "Stochastic exploration modulated by total uncertainty"
+    },
+    {
+      "name": "undirected exploration",
+      "role": "primary_lens",
+      "one_line": "Choice stochasticity insensitive to uncertainty or value"
+    },
+    {
+      "name": "trait anxiety latent-factor model",
+      "role": "extended",
+      "one_line": "Decomposes anxiety into somatic and cognitive factors relating to exploration"
+    }
+  ],
+  "core_question": "How do latent factors of trait anxiety relate to directed, random, and undirected exploration strategies under volatility-induced uncertainty?",
+  "key_assumptions": [
+    "Exploration is a hybrid of directed, random, and undirected strategies",
+    "Relative and total uncertainty are dissociable signals driving choice",
+    "Trait anxiety decomposes into somatic and cognitive latent factors"
+  ],
+  "manipulations": [
+    "Volatility-induced uncertainty during decision-making",
+    "Two independent studies aggregating N = 985 participants",
+    "Latent-factor decomposition of trait anxiety scales"
+  ],
+  "key_findings": [
+    "People used a hybrid of directed, random, and undirected exploration",
+    "Strategies were respectively sensitive to relative uncertainty, total uncertainty, and value difference",
+    "Somatic anxiety inversely correlated with directed and undirected exploration",
+    "Somatic anxiety associated with underestimation of relative uncertainty"
+  ],
+  "interpretations": [
+    "Trait somatic anxiety selectively modulates uncertainty-driven and value-driven exploration",
+    "Reduced directed exploration in somatic anxiety reflects underestimation of relative uncertainty"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "directed exploration",
+    "random exploration",
+    "relative uncertainty",
+    "total uncertainty",
+    "trait somatic anxiety",
+    "volatility-induced uncertainty",
+    "uncertainty underestimation",
+    "choice stochasticity"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "ebb3d66df5e2edc63d271e3d9582bf05",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}
