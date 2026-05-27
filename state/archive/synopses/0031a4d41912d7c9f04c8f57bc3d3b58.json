@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "Bayesian pedagogical sampling",
+      "role": "primary_lens",
+      "one_line": "teachers choose examples that maximize a learner's posterior belief in the correct answer"
+    },
+    {
+      "name": "mentalizing / theory of mind",
+      "role": "extended",
+      "one_line": "social-brain regions represent the learner's evolving belief state during teaching"
+    },
+    {
+      "name": "computational model of communication",
+      "role": "context",
+      "one_line": "teaching framed as selecting evidence under a model of the learner"
+    }
+  ],
+  "core_question": "What computations guide teachers' decisions about which examples to communicate to a learner?",
+  "key_assumptions": [
+    "teachers maintain an internal model of the learner",
+    "example selection is goal-directed toward improving the learner's belief",
+    "mentalizing regions encode others' mental contents"
+  ],
+  "manipulations": [
+    "abstract multiple-choice questions for which teachers selected examples",
+    "fMRI scanning of teachers during example selection",
+    "independent learner sample tested on teacher-selected examples"
+  ],
+  "key_findings": [
+    "example choices best fit a model maximizing learner belief in the correct answer",
+    "teachers' predictions of learner performance tracked actual learner outcomes",
+    "bilateral TPJ and middle/dorsal medial prefrontal cortex tracked learner posterior belief"
+  ],
+  "interpretations": [
+    "teaching recruits mentalizing circuitry to represent learner beliefs",
+    "human pedagogy is supported by belief-directed example selection"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "pedagogical sampling",
+    "mentalizing regions",
+    "temporoparietal junction",
+    "medial prefrontal cortex",
+    "learner belief representation",
+    "theory of mind in teaching",
+    "Bayesian model of communication",
+    "example selection"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "0031a4d41912d7c9f04c8f57bc3d3b58",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

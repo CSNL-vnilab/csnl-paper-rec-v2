@@ -1,0 +1,55 @@
+{
+  "frameworks": [
+    {
+      "name": "mouse-tracking",
+      "role": "primary_lens",
+      "one_line": "hand movement trajectories as continuous index of multiple response activations"
+    },
+    {
+      "name": "reaction time",
+      "role": "compared_against",
+      "one_line": "traditional discrete temporal measure benchmarked against continuous mouse-tracking"
+    },
+    {
+      "name": "brain imaging",
+      "role": "context",
+      "one_line": "future mapping of mouse-tracking signals to neural representations"
+    }
+  ],
+  "core_question": "How can mouse-tracking expose the micro-structure and millisecond time-course of real-time decisions across psychological science?",
+  "key_assumptions": [
+    "hand movements reflect multiple simultaneous response activations",
+    "continuous motor output is informative about latent decision dynamics",
+    "millisecond-resolution trajectories index component processes of choice"
+  ],
+  "manipulations": [],
+  "key_findings": [
+    "mouse-tracking has become widely adopted across psychological science in the past decade",
+    "recent work shows the method is broadly applicable beyond its early debate-specific use",
+    "the method exposes component processes and millisecond time-course of real-time decisions"
+  ],
+  "interpretations": [
+    "mouse-tracking is a general-purpose, theory-informing measure with broader value than originally appreciated",
+    "comparisons with reaction time and other temporally sensitive methods position mouse-tracking as a complementary continuous measure"
+  ],
+  "limitations_noted": [
+    "theoretical understanding of mouse-tracking methodology itself still needs improvement"
+  ],
+  "connecting_signals": [
+    "mouse-tracking",
+    "hand movement trajectories",
+    "real-time decision making",
+    "response activation dynamics",
+    "millisecond time-course",
+    "reaction time comparison",
+    "choice tasks",
+    "process tracing methodology"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "bef47d99bf80165d3e6501ceb8de7c1b",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:45:34+09:00",
+  "review_status": "auto_unreviewed"
+}

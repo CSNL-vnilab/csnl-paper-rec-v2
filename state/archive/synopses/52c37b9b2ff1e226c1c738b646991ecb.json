@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "running-average evidence integration",
+      "role": "primary_lens",
+      "one_line": "TEa encodes a running mean of task-relevant evidence as decision variable"
+    },
+    {
+      "name": "bounded accumulation with ramping",
+      "role": "compared_against",
+      "one_line": "canonical frontoparietal ramp signature of integration to bound"
+    },
+    {
+      "name": "subunit model of decision dynamics",
+      "role": "extended",
+      "one_line": "combines momentary evidence with running-average DV to fit TEa responses"
+    },
+    {
+      "name": "ventral visual pathway for object decisions",
+      "role": "context",
+      "one_line": "repositions inferotemporal cortex as decision-aware, not purely sensory"
+    }
+  ],
+  "core_question": "Does anterior inferotemporal cortex (TEa) implement evidence integration during object-based decisions, and in what format?",
+  "key_assumptions": [
+    "stochastic face categorization isolates evidence integration for object features",
+    "simultaneous LIP recording allows inheritance-from-feedback testing",
+    "running-mean code is a viable alternative to bounded ramp accumulation"
+  ],
+  "manipulations": [
+    "momentary feature fluctuations across stochastic face stimuli",
+    "pre- vs post-commitment epochs to probe sensitivity collapse",
+    "simultaneous TEa and LIP recordings during the same trials"
+  ],
+  "key_findings": [
+    "TEa neurons track momentary feature fluctuations and an accumulated DV concurrently",
+    "DV is encoded as running average of task-relevant evidence, without ramps",
+    "category SNR increases via flexible amplification of task-relevant features",
+    "sensitivity to new evidence sharply collapses after commitment"
+  ],
+  "interpretations": [
+    "TEa implements a previously unrecognized non-ramp format for evidence integration",
+    "TEa acts as a decision-aware hub within the ventral visual pathway, not inherited from LIP"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "evidence integration",
+    "decision variable",
+    "running average code",
+    "inferotemporal cortex TEa",
+    "object-based decision",
+    "stochastic face categorization",
+    "LIP comparison",
+    "commitment and sensitivity collapse"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "52c37b9b2ff1e226c1c738b646991ecb",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

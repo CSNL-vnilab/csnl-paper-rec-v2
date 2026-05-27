@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "hemodynamic response function (HRF) modeling",
+      "role": "primary_lens",
+      "one_line": "Cell-type-specific HRFs link neuronal activity to BOLD signals."
+    },
+    {
+      "name": "neurovascular coupling",
+      "role": "context",
+      "one_line": "Excitatory and inhibitory activity differentially drive BOLD responses."
+    },
+    {
+      "name": "optogenetic cell-type dissection",
+      "role": "extended",
+      "one_line": "VGAT-ChR2 and CaMKII-ChR2 separate inhibitory and excitatory contributions."
+    }
+  ],
+  "core_question": "How do excitatory versus inhibitory neuronal activities each contribute to the BOLD fMRI signal?",
+  "key_assumptions": [
+    "BOLD signals can be decomposed into cell-type-specific neural contributions",
+    "Optogenetic stimulation in VGAT/CaMKII mice selectively drives inhibitory or excitatory populations",
+    "Hemodynamic response can be modeled as a linear function of neuronal activity"
+  ],
+  "manipulations": [
+    "Cell type targeted (VGAT-ChR2 inhibitory vs CaMKII-ChR2 excitatory)",
+    "Stimulation duration (20 s vs 5 s)",
+    "Stimulation modality (somatosensory vs optogenetic)"
+  ],
+  "key_findings": [
+    "Excitatory and somatosensory stimulation produced positive BOLD responses in the somatosensory network",
+    "Inhibitory stimulation produced biphasic BOLD (initial positive, later negative) at the site and negative BOLD downstream",
+    "Shortening inhibitory stimulation to 5 s yielded only positive BOLD responses",
+    "Inhibitory HRF is highly sensitive to stimulation frequency and peaks earlier than excitatory HRF"
+  ],
+  "interpretations": [
+    "Inhibitory neurons contribute distinctly and nonlinearly to BOLD, with cell-type-specific HRFs",
+    "Excitatory HRF is comparatively stable across conditions while inhibitory HRF is condition-dependent"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "BOLD fMRI",
+    "inhibitory neurons",
+    "excitatory neurons",
+    "optogenetic stimulation",
+    "VGAT-ChR2",
+    "CaMKII-ChR2",
+    "hemodynamic response function",
+    "neurovascular coupling"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "8eb0b4f03229ecbaffe5d07599011e14",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:45:34+09:00",
+  "review_status": "auto_unreviewed"
+}

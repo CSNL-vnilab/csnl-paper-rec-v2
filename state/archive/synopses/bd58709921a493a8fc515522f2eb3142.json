@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "predictive coding",
+      "role": "primary_lens",
+      "one_line": "brain inhibits predictable input via hierarchical prediction and error units"
+    },
+    {
+      "name": "energy efficiency",
+      "role": "extended",
+      "one_line": "minimising metabolic cost as the objective from which predictive coding emerges"
+    },
+    {
+      "name": "recurrent neural network modelling",
+      "role": "primary_lens",
+      "one_line": "RNNs trained on predictive environments studied as a brain-inspired computational substrate"
+    }
+  ],
+  "core_question": "Does the hierarchical wiring of predictive coding need to be hard-wired, or can it emerge from an energy-efficiency objective?",
+  "key_assumptions": [
+    "neural activity carries a metabolic cost worth minimising",
+    "sensory environments contain predictable temporal structure",
+    "recurrent networks can approximate cortical message passing"
+  ],
+  "manipulations": [
+    "training RNNs to minimise energy consumption in predictive environments",
+    "virtual lesioning of distinct network components",
+    "comparing lateral versus longer-range recurrent pathways"
+  ],
+  "key_findings": [
+    "networks self-organise into prediction and error units with appropriate excitatory and inhibitory connections",
+    "trained networks learn to inhibit predictable sensory input",
+    "predictions operate on two timescales: fast lateral and slower integrative cycles"
+  ],
+  "interpretations": [
+    "predictive coding architecture need not be hard-wired but is a consequence of energy efficiency",
+    "predictions in cortex may rely on both lateral sensory and slower evidence-integrating computations"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "predictive coding",
+    "energy efficiency",
+    "recurrent neural networks",
+    "prediction and error units",
+    "excitatory-inhibitory interactions",
+    "top-down feedback",
+    "lateral prediction",
+    "virtual lesioning"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "bd58709921a493a8fc515522f2eb3142",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "resting-state functional connectivity",
+      "role": "primary_lens",
+      "one_line": "inter-regional correlations of spontaneous BOLD fluctuations as a brain-state signature"
+    },
+    {
+      "name": "locus ceruleus-norepinephrine neuromodulation",
+      "role": "primary_lens",
+      "one_line": "catecholaminergic system as dynamic sculptor of cortical interaction topography"
+    },
+    {
+      "name": "structural-functional connectivity mapping",
+      "role": "context",
+      "one_line": "fixed anatomy sets a baseline that state-dependent factors modulate"
+    },
+    {
+      "name": "resting-state networks",
+      "role": "context",
+      "one_line": "canonical large-scale network partition used to evaluate modulation specificity"
+    }
+  ],
+  "core_question": "Does endogenous catecholaminergic neuromodulation dynamically shape the topography of intrinsic functional connectivity in the human brain?",
+  "key_assumptions": [
+    "spontaneous BOLD correlations index inter-regional functional interactions",
+    "anatomical connectivity partly determines but does not fully fix intrinsic topography",
+    "atomoxetine elevates synaptic catecholamine levels via NE transporter blockade"
+  ],
+  "manipulations": [
+    "pharmacological catecholamine elevation via atomoxetine vs placebo",
+    "double-blind placebo-controlled crossover design",
+    "analysis across three levels of spatial organization"
+  ],
+  "key_findings": [
+    "atomoxetine reduced inter-regional correlation strength across spatial scales",
+    "decrease followed an anterior-posterior cortical gradient",
+    "magnitude of decrease depended on baseline functional connectivity strength",
+    "effect strongest for between-network connections relative to within-network"
+  ],
+  "interpretations": [
+    "catecholamines reduce the strength of functional interactions during rest",
+    "neuromodulation imparts spatial specificity to state-dependent connectivity changes"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "resting-state functional connectivity",
+    "catecholaminergic neuromodulation",
+    "locus ceruleus norepinephrine",
+    "atomoxetine pharmacological MRI",
+    "intrinsic BOLD fluctuations",
+    "anterior-posterior cortical gradient",
+    "between-network connectivity",
+    "brain state modulation"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "a1fa63033a515b8b67ab573489bd3e3f",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

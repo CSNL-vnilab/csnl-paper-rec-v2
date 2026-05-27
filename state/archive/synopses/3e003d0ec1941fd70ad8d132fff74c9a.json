@@ -1,0 +1,62 @@
+{
+  "frameworks": [
+    {
+      "name": "mental simulation of internal models",
+      "role": "primary_lens",
+      "one_line": "primates run model-based simulations of external dynamics to infer latent states"
+    },
+    {
+      "name": "recurrent neural network model of behavior",
+      "role": "extended",
+      "one_line": "RNNs with explicit dynamic-latent representation are compared to primate behavior"
+    },
+    {
+      "name": "RNN without dynamic latent tracking",
+      "role": "compared_against",
+      "one_line": "baseline networks lacking dynamic inference fail to match primate patterns"
+    },
+    {
+      "name": "behavioral modeling of physical inference",
+      "role": "context",
+      "one_line": "prior work used behavioral models that do not emulate neural computations"
+    }
+  ],
+  "core_question": "Do primates rely on dynamic mental simulations of latent variables to make flexible physical predictions?",
+  "key_assumptions": [
+    "primate physical inference involves latent-variable tracking",
+    "RNN dynamics can stand in for neural computations",
+    "ball interception requires inferring unobservable physical state"
+  ],
+  "manipulations": [
+    "presence vs absence of explicit dynamic-latent representation in RNNs",
+    "species comparison between humans and monkeys",
+    "training a large set of RNN variants on the interception task"
+  ],
+  "key_findings": [
+    "humans and monkeys show similar behavioral patterns on ball interception",
+    "RNNs with dynamic inference best capture the primate behavioral pattern",
+    "RNNs lacking dynamic latent tracking fail to match primate behavior"
+  ],
+  "interpretations": [
+    "the primate brain uses dynamic inferences to support flexible physical predictions",
+    "model neural systems can test computational hypotheses of higher brain function"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "dynamic latent variables",
+    "mental simulation",
+    "physical inference",
+    "ball interception task",
+    "recurrent neural network model",
+    "primate behavior comparison",
+    "model-based inference",
+    "intuitive physics"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "3e003d0ec1941fd70ad8d132fff74c9a",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}
