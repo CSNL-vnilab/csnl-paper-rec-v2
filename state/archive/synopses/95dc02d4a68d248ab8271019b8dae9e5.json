@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "interval timing",
+      "role": "primary_lens",
+      "one_line": "Estimating a target sub-second to seconds-range time interval via motor response"
+    },
+    {
+      "name": "pupil-linked arousal",
+      "role": "primary_lens",
+      "one_line": "Pupil diameter indexes task- and feedback-related arousal responses"
+    },
+    {
+      "name": "trial-by-trial feedback adjustment",
+      "role": "primary_lens",
+      "one_line": "Adaptive updating of response times based on previous-trial feedback"
+    },
+    {
+      "name": "dopaminergic modulation of motor control",
+      "role": "context",
+      "one_line": "Levodopa replacement in GCH1-deficient dopamine biosynthesis"
+    }
+  ],
+  "core_question": "How do GCH1 mutations and levodopa treatment affect time estimation, trial-to-trial adjustment, and arousal responses in dopa-responsive dystonia?",
+  "key_assumptions": [
+    "Pupil dilation indexes task- and feedback-related arousal",
+    "Time estimation accuracy reflects intact internal timing mechanisms",
+    "Trial-to-trial response time adjustment indexes feedback-driven adaptation",
+    "ON vs OFF levodopa contrast isolates dopaminergic contribution"
+  ],
+  "manipulations": [
+    "Levodopa ON vs OFF (within-patient withdrawal)",
+    "DRD patients vs matched healthy controls",
+    "Trial-by-trial feedback on a 1200 ms target interval"
+  ],
+  "key_findings": [
+    "Time estimation accuracy comparable to controls ON medication but reduced OFF medication",
+    "Task-related pupil responses showed the reverse pattern (larger OFF or smaller ON)",
+    "Trial-to-trial response time adjustments were reduced in DRD, particularly OFF medication"
+  ],
+  "interpretations": [
+    "Dopamine modulates timing performance and feedback-driven trial-to-trial adjustment",
+    "Pupil-linked arousal compensates or shifts inversely to performance under dopamine depletion"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "time estimation",
+    "interval timing",
+    "pupil-linked arousal",
+    "trial-by-trial feedback adjustment",
+    "dopa-responsive dystonia",
+    "levodopa withdrawal",
+    "GCH1 deficiency",
+    "feedback processing"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "95dc02d4a68d248ab8271019b8dae9e5",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

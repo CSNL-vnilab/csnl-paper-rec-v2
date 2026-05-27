@@ -1,0 +1,49 @@
+{
+  "frameworks": [
+    {
+      "name": "fMRI adaptation",
+      "role": "compared_against",
+      "one_line": "BOLD reduction after prolonged stimulus reveals subvoxel neuronal selectivity"
+    },
+    {
+      "name": "multivariate pattern analysis (MVPA)",
+      "role": "compared_against",
+      "one_line": "multivariate statistics recovers subvoxel selectivity biases across voxels"
+    }
+  ],
+  "core_question": "How do fMRI adaptation and MVPA compare in their sensitivity for probing subvoxel neuronal selectivity in visual cortex?",
+  "key_assumptions": [
+    "voxels contain heterogeneous neuronal populations not resolvable at mm scale",
+    "adaptation-induced BOLD reduction reflects stimulus-selective neuronal subpopulations",
+    "small per-voxel response biases carry information recoverable by multivariate decoders"
+  ],
+  "manipulations": [
+    "method used to probe subvoxel selectivity (adaptation vs MVPA)",
+    "stimulus characteristics targeted in visual cortex"
+  ],
+  "key_findings": [
+    "both techniques were applied within the same study to visual cortex",
+    "the two methods had not previously been compared explicitly under matched conditions"
+  ],
+  "interpretations": [
+    "direct comparison clarifies the relative sensitivities of adaptation and MVPA for subvoxel inference"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "fMRI adaptation",
+    "multivariate pattern analysis",
+    "MVPA",
+    "BOLD response",
+    "subvoxel selectivity",
+    "visual cortex",
+    "neuronal population coding",
+    "method comparison"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 0.67,
+  "canonical_id": "0eef922f0cde58b2d83f1c6e63ddb578",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:55:04+09:00",
+  "review_status": "auto_unreviewed"
+}

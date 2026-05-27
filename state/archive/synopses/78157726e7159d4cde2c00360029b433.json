@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "sampling-based probabilistic representation",
+      "role": "primary_lens",
+      "one_line": "cortical population activity patterns are samples from an inferred posterior distribution"
+    },
+    {
+      "name": "probabilistic inference in cortex",
+      "role": "primary_lens",
+      "one_line": "visual cortex performs Bayesian inference over latent causes of stimuli"
+    },
+    {
+      "name": "Poisson-like / unstructured variability models",
+      "role": "compared_against",
+      "one_line": "prior accounts ignore variability or treat it as unstructured noise"
+    }
+  ],
+  "core_question": "Can the magnitude and structure of cortical response variability be explained as samples from a probabilistic inference performed by the visual cortex?",
+  "key_assumptions": [
+    "cortical computation implements probabilistic inference",
+    "population activity patterns correspond to statistical samples from a posterior",
+    "stimulus uncertainty has a representational signature in neural responses"
+  ],
+  "manipulations": [
+    "stimulus presence vs. absence (driven vs. spontaneous activity)",
+    "stimulus properties that modulate perceptual uncertainty",
+    "comparison across noise, signal, and spontaneous variability regimes"
+  ],
+  "key_findings": [
+    "structured stimulus-dependent variability in V1 matches sampling predictions",
+    "noise, signal, and spontaneous variability and correlations are jointly accounted for",
+    "perceptual uncertainty is encoded by response variability, not the mean"
+  ],
+  "interpretations": [
+    "cortical variability is a computational signature of probabilistic inference rather than nuisance noise",
+    "a sampling-based code unifies multiple variability phenomena in primary visual cortex"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "neural variability",
+    "sampling-based representation",
+    "probabilistic inference",
+    "primary visual cortex",
+    "noise correlations",
+    "spontaneous activity",
+    "perceptual uncertainty",
+    "stimulus-dependent variability"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "78157726e7159d4cde2c00360029b433",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:55:04+09:00",
+  "review_status": "auto_unreviewed"
+}

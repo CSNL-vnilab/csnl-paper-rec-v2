@@ -1,0 +1,53 @@
+{
+  "frameworks": [
+    {
+      "name": "drift-diffusion / bounded evidence accumulation",
+      "role": "primary_lens",
+      "one_line": "Noisy samples of evidence accumulate to a bound during perceptual decision formation."
+    },
+    {
+      "name": "discrete stepping model of LIP firing rates",
+      "role": "compared_against",
+      "one_line": "Single-trial rates jump from intermediate to low/high level at a random time."
+    },
+    {
+      "name": "Bayesian model comparison",
+      "role": "context",
+      "one_line": "Used by the challenged study to rank stepping above ramping."
+    }
+  ],
+  "core_question": "Does single-trial LIP spiking really favor a discrete stepping account over drift-diffusion?",
+  "key_assumptions": [
+    "LIP firing reflects the decision variable during deliberation",
+    "Trial-averaged ramps could arise from either diffusion or averaged steps",
+    "Model comparison is valid only if each model is faithfully specified"
+  ],
+  "manipulations": [
+    "Re-specification of the drift-diffusion model used in the prior comparison",
+    "Re-analysis of LIP single-trial spike sequences under corrected diffusion"
+  ],
+  "key_findings": [
+    "A shortcoming in the mathematical depiction of drift-diffusion biased the original model comparison",
+    "Once corrected, the evidence no longer favors stepping over diffusion-like accumulation"
+  ],
+  "interpretations": [
+    "There is currently no compelling evidence that single-trial LIP activity steps rather than ramps"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "LIP single-trial dynamics",
+    "drift-diffusion vs stepping",
+    "evidence accumulation",
+    "perceptual decision making",
+    "Bayesian model comparison pitfalls",
+    "ramp-like firing rates",
+    "parietal cortex deliberation"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "0bf0b48a7ac991d9ec1a64fb4c8b9d7c",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:55:04+09:00",
+  "review_status": "auto_unreviewed"
+}

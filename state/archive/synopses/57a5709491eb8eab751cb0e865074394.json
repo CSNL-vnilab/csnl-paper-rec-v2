@@ -1,0 +1,56 @@
+{
+  "frameworks": [
+    {
+      "name": "deterministic V1-to-choice linkage",
+      "role": "compared_against",
+      "one_line": "view that V1 neural activity directly determines trial-by-trial perceptual choices"
+    },
+    {
+      "name": "population decoding of human V1",
+      "role": "primary_lens",
+      "one_line": "reading stimulus and choice signals from human V1 ensemble activity"
+    },
+    {
+      "name": "choice probability / choice-related activity",
+      "role": "context",
+      "one_line": "framework for relating sensory neuron activity to perceptual decisions"
+    }
+  ],
+  "core_question": "Do stimulus-related and choice-related signals in human V1 share the same neural ensemble and timing during a difficult perceptual discrimination?",
+  "key_assumptions": [
+    "V1 distributes sensory representations to higher visual areas",
+    "deterministic linkage predicts co-localized stimulus and choice signals in V1",
+    "population-level fMRI activity can index trial-by-trial sensory and choice variability"
+  ],
+  "manipulations": [
+    "difficult visual discrimination task with trial-by-trial choice variability",
+    "comparison of stimulus-driven versus choice-correlated V1 population responses"
+  ],
+  "key_findings": [
+    "choice-related activity was present in human V1 during the discrimination task",
+    "stimulus-related activity was carried by a distinct V1 neural ensemble",
+    "choice-related activity was advanced in time relative to stimulus-related activity"
+  ],
+  "interpretations": [
+    "V1 choice signals do not arise from the same neurons that encode the task-relevant stimulus difference",
+    "findings contradict a strictly deterministic V1-to-choice account"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "human V1 population activity",
+    "perceptual decision-making",
+    "choice-related activity",
+    "stimulus versus choice dissociation",
+    "fMRI visual discrimination",
+    "choice probability",
+    "trial-by-trial variability",
+    "neural ensemble"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "57a5709491eb8eab751cb0e865074394",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:55:04+09:00",
+  "review_status": "auto_unreviewed"
+}

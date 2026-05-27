@@ -1,0 +1,59 @@
+{
+  "frameworks": [
+    {
+      "name": "economic decision-making under uncertainty",
+      "role": "primary_lens",
+      "one_line": "Distinguishes choices under risk (known probabilities) from ambiguity (unknown probabilities)"
+    },
+    {
+      "name": "cumulative lifetime stress exposure",
+      "role": "primary_lens",
+      "one_line": "Aggregated major stressors across the lifespan as an individual-difference factor"
+    },
+    {
+      "name": "individual differences in uncertainty preferences",
+      "role": "context",
+      "one_line": "Prior work explains risk attitudes; ambiguity aversion remains less characterized"
+    }
+  ],
+  "core_question": "Does cumulative lifetime stress exposure predict individual differences in ambiguity aversion?",
+  "key_assumptions": [
+    "STRAIN inventory validly indexes cumulative lifetime stress exposure",
+    "Standard economic tasks dissociate risk from ambiguity preferences",
+    "Stress effects on uncertainty preferences are stable individual differences"
+  ],
+  "manipulations": [
+    "Measured cumulative lifetime stress with the STRAIN inventory",
+    "Separated early-life from total lifetime stress exposure",
+    "Quantified risk and ambiguity preferences via an economic choice task",
+    "Replicated across two independent samples"
+  ],
+  "key_findings": [
+    "Greater lifetime stress exposure predicted higher ambiguity aversion",
+    "Effect was particularly pronounced for early-life stress exposure",
+    "No association observed between stress exposure and risk attitudes",
+    "Pattern held across two studies (n=58 and n=188)"
+  ],
+  "interpretations": [
+    "Cumulative life stress, especially early-life stress, selectively shapes aversion to ambiguity rather than risk",
+    "Lifetime stress is a candidate individual-difference factor explaining ambiguity aversion"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "ambiguity aversion",
+    "risk preferences",
+    "cumulative lifetime stress",
+    "STRAIN inventory",
+    "early-life stress",
+    "economic decision-making",
+    "individual differences",
+    "decision under uncertainty"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "0754f660307d8643d2c43eb2e0d80da3",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

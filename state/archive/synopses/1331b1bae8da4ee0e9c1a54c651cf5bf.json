@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "neural variability quenching",
+      "role": "primary_lens",
+      "one_line": "trial-by-trial variability is reduced after stimulus onset."
+    },
+    {
+      "name": "alpha-beta band oscillations",
+      "role": "extended",
+      "one_line": "oscillatory power suppression is proposed as the mechanism of quenching."
+    },
+    {
+      "name": "inter-trial phase coherence",
+      "role": "compared_against",
+      "one_line": "ITPC is contrasted as an alternative oscillatory signature."
+    }
+  ],
+  "core_question": "Are stimulus-induced neural variability quenching and oscillatory power suppression manifestations of the same underlying phenomenon?",
+  "key_assumptions": [
+    "trial-by-trial fluctuations and oscillatory power reflect comparable neural dynamics",
+    "MEG sensors recover band-limited cortical activity faithfully",
+    "between-subject variation in quenching is a stable individual trait"
+  ],
+  "manipulations": [
+    "repeated presentations of a visual stimulus",
+    "selective band-stop filtering (alpha-beta vs other bands)",
+    "between-subject comparison of MEG measures"
+  ],
+  "key_findings": [
+    "variability quenching and alpha-beta power suppression share timing, amplitude, and spatial topography",
+    "removing the alpha-beta band eliminates variability quenching while removing other bands does not",
+    "individual alpha-beta power magnitude explains 86% of between-subject differences in quenching",
+    "inter-trial phase coherence is not correlated with quenching"
+  ],
+  "interpretations": [
+    "variability quenching is largely driven by suppression of alpha-beta oscillatory power",
+    "amplitude rather than phase dynamics couples oscillations to trial-by-trial variability"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "trial-by-trial neural variability",
+    "variability quenching",
+    "alpha-beta oscillations",
+    "oscillatory power suppression",
+    "magnetoencephalography",
+    "individual differences",
+    "inter-trial phase coherence",
+    "stimulus-evoked dynamics"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "1331b1bae8da4ee0e9c1a54c651cf5bf",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:55:04+09:00",
+  "review_status": "auto_unreviewed"
+}

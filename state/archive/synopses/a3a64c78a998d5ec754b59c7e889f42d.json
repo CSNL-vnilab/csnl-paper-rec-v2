@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "working memory population coding",
+      "role": "primary_lens",
+      "one_line": "neural population representations of multiple remembered items in PFC"
+    },
+    {
+      "name": "feature binding / misbinding",
+      "role": "extended",
+      "one_line": "swap errors as breakdown of object-feature binding across items"
+    },
+    {
+      "name": "selective readout from working memory",
+      "role": "primary_lens",
+      "one_line": "error emerges when target is selected, not during storage"
+    }
+  ],
+  "core_question": "What neural mechanism gives rise to swap errors when multiple items are held in working memory?",
+  "key_assumptions": [
+    "swap errors reflect misattribution of features between memoranda",
+    "neural population activity during delay encodes multiple items jointly",
+    "behavioral swap errors are a tractable correlate of binding failure"
+  ],
+  "manipulations": [
+    "retrospective vs prospective cueing of which item to report",
+    "multiple colored items at different locations",
+    "comparison of correct trials vs swap-error trials"
+  ],
+  "key_findings": [
+    "monkeys made swap errors in both retrospective and prospective tasks",
+    "neural correlates of swap errors emerged at the selection-from-memory stage",
+    "on swap trials the distractor color was represented as if it were the target"
+  ],
+  "interpretations": [
+    "swap errors arise from a misdirected selection/readout, not faulty storage",
+    "binding failures can be localized to the moment information is selected from working memory"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "swap errors",
+    "working memory",
+    "feature binding",
+    "prefrontal cortex population coding",
+    "selection from working memory",
+    "multi-item memory",
+    "retrospective and prospective cueing",
+    "monkey neurophysiology"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "a3a64c78a998d5ec754b59c7e889f42d",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:55:04+09:00",
+  "review_status": "auto_unreviewed"
+}
