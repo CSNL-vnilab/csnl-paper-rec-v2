@@ -1,0 +1,50 @@
+{
+  "canonical_id": "7324292685f8b2392cd7ea3743eefed0",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [
+    {"name": "differential correlations / information-limiting noise correlations",
+     "role": "primary_lens",
+     "one_line": "Pairwise noise structure aligned with stimulus tuning derivative bounds linear Fisher information."},
+    {"name": "efficient coding",
+     "role": "context",
+     "one_line": "Motivates whether early visual cortex preserves information matching behavioral discrimination."},
+    {"name": "leaky integrate-and-fire LGN-V1 circuit model",
+     "role": "alternative_lens",
+     "one_line": "Spiking simulation used to validate the eigenvector-alignment detection method."}
+  ],
+  "core_question": "Can differential (information-limiting) correlations be reliably detected in early visual cortex with realistic neuron and trial counts?",
+  "key_assumptions": [
+    "Linear Fisher information is the relevant readout bound for downstream circuits",
+    "f′ direction and noise covariance Σ can be estimated from ~100s of neurons and trials",
+    "Strong differential correlations imply f′ lies within the top eigenvectors of Σ"
+  ],
+  "manipulations": [
+    "Compared f′ alignment with leading vs trailing eigenvectors of Σ",
+    "Tested method on LIF LGN-V1 simulations with controlled correlation strength",
+    "Applied method to V1 population recordings in awake monkeys"
+  ],
+  "key_findings": [
+    "Proposed eigenvector-alignment method detects differential correlations with on the order of 100s of neurons and trials",
+    "Simulations recover correlations consistent with 0.5–3 degree orientation discrimination thresholds",
+    "V1 recordings in awake monkeys show signatures of differential correlations"
+  ],
+  "interpretations": [
+    "Early visual areas carry strong information-limiting correlations, constraining how much sensory information downstream circuits can read out"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "differential correlations",
+    "information-limiting correlations",
+    "linear Fisher information",
+    "noise covariance eigenstructure",
+    "orientation discrimination threshold",
+    "population coding in V1",
+    "LGN-V1 LIF model",
+    "stimulus tuning derivative f-prime"
+  ],
+  "out_of_scope_note": null,
+  "generator": "opus-4-7@2026-05-27",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "abstract_coverage": 1.0
+}

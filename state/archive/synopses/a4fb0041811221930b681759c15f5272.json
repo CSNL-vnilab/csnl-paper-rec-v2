@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "policy compression",
+      "role": "primary_lens",
+      "one_line": "capacity-limited agents trade reward for simpler action policies"
+    },
+    {
+      "name": "capacity-limited reinforcement learning",
+      "role": "primary_lens",
+      "one_line": "RL with an information bottleneck on the state-to-action mapping"
+    },
+    {
+      "name": "rate-distortion",
+      "role": "context",
+      "one_line": "information-theoretic cost on policy complexity"
+    },
+    {
+      "name": "reward-maximizing reinforcement learning",
+      "role": "compared_against",
+      "one_line": "unconstrained RL baseline cannot account for action bias"
+    }
+  ],
+  "core_question": "Do humans trade reward for simpler action policies as predicted by capacity-limited reinforcement learning?",
+  "key_assumptions": [
+    "agents face a capacity limit on the state-action policy",
+    "cognitive cost scales with policy complexity",
+    "actions are decoded from a compressed code in a time-dependent manner"
+  ],
+  "manipulations": [
+    "redundancy of the reward-maximizing policy across states",
+    "memory load",
+    "time pressure at decision"
+  ],
+  "key_findings": [
+    "people exploit state-action-reward structure to compress policies",
+    "compressed policies are biased toward high marginal-probability actions, discarding state information",
+    "action bias grows with redundancy in the optimal policy and with memory load",
+    "time pressure further reduces policy complexity and increases action bias"
+  ],
+  "interpretations": [
+    "human choice balances reward maximization against a cost on policy complexity",
+    "alternative non-compression models fail to explain the observed action biases"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "policy compression",
+    "capacity-limited reinforcement learning",
+    "action bias",
+    "marginal action probability",
+    "memory load",
+    "time pressure",
+    "rate-distortion in decision making",
+    "cognitive cost of control"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "a4fb0041811221930b681759c15f5272",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:34:29+09:00",
+  "review_status": "auto_unreviewed"
+}

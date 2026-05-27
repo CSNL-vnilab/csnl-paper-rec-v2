@@ -1,0 +1,44 @@
+{
+  "canonical_id": "81f0e50778348b89ce54559e20c1b2aa",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [
+    {"name": "attentional template / target template", "role": "primary_lens", "one_line": "memory representation of the target that guides search and identification"},
+    {"name": "relational account of template tuning", "role": "alternative_lens", "one_line": "template shifts away from distractors via relative feature comparison"},
+    {"name": "optimal account of template tuning", "role": "alternative_lens", "one_line": "template shifts to maximize target-distractor distinctiveness"}
+  ],
+  "core_question": "Does a single target template govern both attentional guidance and identity decisions during visual search, or do these stages rely on different template information?",
+  "key_assumptions": [
+    "search involves a look-identify cycle with distinct guidance and decision stages",
+    "the target template can be characterized in feature space relative to distractors",
+    "linearly separable distractors induce a directional template shift"
+  ],
+  "manipulations": [
+    "feature relation between target and linearly separable distractors",
+    "stage of search measured (initial gaze guidance vs. subsequent identity decision)"
+  ],
+  "key_findings": [
+    "initial attentional guidance is consistent with a coarse, relational code",
+    "subsequent match decisions are consistent with an optimal, distinctiveness-maximizing representation",
+    "the two prior accounts (relational vs. optimal) each fit a different stage of search"
+  ],
+  "interpretations": [
+    "the target template is not a single fixed source of information; precision differs between sensory selection and identity decisions",
+    "the relational-vs-optimal debate is resolved by assigning each account to a different stage of the look-identify cycle"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "attentional template",
+    "target template",
+    "visual search",
+    "linearly separable distractors",
+    "relational account",
+    "optimal tuning",
+    "attentional guidance",
+    "match decision"
+  ],
+  "out_of_scope_note": null,
+  "generator": "opus-4-7@2026-05-27",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "abstract_coverage": 1.0
+}

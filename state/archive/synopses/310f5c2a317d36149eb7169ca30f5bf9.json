@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "population coding with conjunction neurons",
+      "role": "primary_lens",
+      "one_line": "Neural populations with conjunction responses bind features in working memory"
+    },
+    {
+      "name": "neural decoding under noise",
+      "role": "extended",
+      "one_line": "Swap errors and response variability emerge from decoding noisy population activity"
+    },
+    {
+      "name": "location-mediated feature binding",
+      "role": "compared_against",
+      "one_line": "Nonspatial features bind through shared location rather than directly"
+    }
+  ],
+  "core_question": "What neural mechanism binds different visual features into coherent objects in working memory, and how does it produce swap errors in cued recall?",
+  "key_assumptions": [
+    "Object features are stored as conjunction-tuned neural population activity",
+    "Recall errors reflect decoding of noisy neural representations",
+    "Cued recall taps the same binding mechanism for spatial and nonspatial features"
+  ],
+  "manipulations": [
+    "Cue feature dimension (color, orientation, or location)",
+    "Reported feature dimension (spatial vs nonspatial)",
+    "Similarity between items in the cue feature dimension"
+  ],
+  "key_findings": [
+    "Swap probability scaled with item similarity in the cue feature dimension",
+    "Swap errors in spatial and nonspatial report were strongly correlated",
+    "A conjunction-population model quantitatively fit both swap rates and response variability"
+  ],
+  "interpretations": [
+    "Feature binding in working memory is implemented by conjunction-tuned neural populations",
+    "Nonspatial features (color, orientation) bind exclusively via shared location, not directly to each other"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "visual working memory",
+    "feature binding",
+    "swap errors",
+    "cued recall",
+    "conjunction neurons",
+    "population coding",
+    "location-mediated binding",
+    "response variability"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "310f5c2a317d36149eb7169ca30f5bf9",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

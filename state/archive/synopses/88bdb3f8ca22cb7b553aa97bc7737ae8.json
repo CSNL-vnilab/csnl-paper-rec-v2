@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "resource model of visual working memory",
+      "role": "primary_lens",
+      "one_line": "limited memory resource distributed flexibly across items, not slot-bound"
+    },
+    {
+      "name": "parallel encoding",
+      "role": "extended",
+      "one_line": "information from multiple items accumulates simultaneously into memory"
+    },
+    {
+      "name": "slot-based working memory",
+      "role": "compared_against",
+      "one_line": "fixed item-number capacity model is not supported by the data"
+    }
+  ],
+  "core_question": "How does visual working memory precision evolve over encoding time and how is it reallocated by attentional cues?",
+  "key_assumptions": [
+    "recall precision indexes memory resolution",
+    "orientation report tasks isolate WM fidelity",
+    "memory resources are continuous and divisible"
+  ],
+  "manipulations": [
+    "stimulus exposure duration before masking",
+    "presence and type of post-display flash cue (salient vs goal-relevant)",
+    "timing of cue relative to encoding/storage"
+  ],
+  "key_findings": [
+    "recall variability decreased incrementally with longer exposure",
+    "two independent limits fit data: an encoding rate and a storage fidelity ceiling",
+    "no evidence for a fixed limit on number of items stored",
+    "cues rapidly reallocated memory resources to prioritized items, even post-encoding"
+  ],
+  "interpretations": [
+    "encoding and storage are dissociable capacity constraints on working memory",
+    "limited memory resources can be dynamically and rapidly reallocated by attention"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "visual working memory",
+    "recall precision",
+    "encoding rate limit",
+    "storage fidelity limit",
+    "resource reallocation",
+    "attentional cuing",
+    "orientation reproduction",
+    "masked displays"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "88bdb3f8ca22cb7b553aa97bc7737ae8",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:34:29+09:00",
+  "review_status": "auto_unreviewed"
+}

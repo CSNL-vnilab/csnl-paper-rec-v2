@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "lossy data compression / chunking",
+      "role": "primary_lens",
+      "one_line": "Similar features are jointly encoded to optimize limited working-memory capacity."
+    },
+    {
+      "name": "center-surround dynamics",
+      "role": "extended",
+      "one_line": "Neural mechanism proposed to implement the chunking process."
+    },
+    {
+      "name": "independent-item encoding models",
+      "role": "compared_against",
+      "one_line": "Standard VWM models assuming items are stored independently."
+    },
+    {
+      "name": "reinforcement learning",
+      "role": "alternative_lens",
+      "one_line": "Chunking policy is optimized via reinforcement signals."
+    }
+  ],
+  "core_question": "Does visual working memory exploit chunking of similar features rather than encoding items independently?",
+  "key_assumptions": [
+    "Working-memory capacity is limited and shared across items",
+    "Similar features can be jointly represented without separate slots",
+    "Recall precision and effective capacity trade off"
+  ],
+  "manipulations": [
+    "Feature similarity between memoranda in a canonical VWM task",
+    "Set size / interitem distance manipulations",
+    "Comparison of chunking vs independent-encoding model fits"
+  ],
+  "key_findings": [
+    "Performance advantages when similar features could be chunked",
+    "Precision detriments accompanied the capacity gain",
+    "Interitem dependencies and trial-to-trial adjustments diagnostic of chunking",
+    "Center-surround chunking model fit human data better than independent-item models"
+  ],
+  "interpretations": [
+    "Chunking is a rational lossy-compression strategy for VWM",
+    "Apparent individual capacity differences reflect differences in chunking implementation"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "visual working memory",
+    "chunking",
+    "lossy compression",
+    "center-surround dynamics",
+    "capacity-precision tradeoff",
+    "interitem dependencies",
+    "rate-distortion in memory",
+    "individual differences in capacity"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "1d29792f9b5fd39dfaea8fe602782f79",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:36:33+09:00",
+  "review_status": "auto_unreviewed"
+}

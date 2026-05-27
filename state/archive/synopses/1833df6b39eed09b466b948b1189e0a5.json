@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "sensory recruitment hypothesis",
+      "role": "primary_lens",
+      "one_line": "early visual cortex supports both perception and working memory maintenance"
+    },
+    {
+      "name": "retinotopic feature representation",
+      "role": "extended",
+      "one_line": "memory representations preserve spatial specificity when binding is required"
+    },
+    {
+      "name": "nonretinotopic working memory",
+      "role": "compared_against",
+      "one_line": "claim that V1 holds orientation information independent of location"
+    }
+  ],
+  "core_question": "Do early visual areas maintain working memory representations in a spatially specific, retinotopic manner?",
+  "key_assumptions": [
+    "fMRI multivariate patterns index feature-specific memory traces",
+    "early visual cortex serves as substrate for both perception and short-term retention",
+    "task demands modulate whether features are bound to spatial locations"
+  ],
+  "manipulations": [
+    "two laterally presented gratings held in memory simultaneously",
+    "contralateral vs ipsilateral hemisphere classification",
+    "comparison across V1, V2, and higher extrastriate areas",
+    "time-resolved analysis across retention interval"
+  ],
+  "key_findings": [
+    "orientation of each remembered grating classified more accurately from contralateral V1 and V2",
+    "higher extrastriate areas showed similar classification across hemispheres",
+    "retinotopic specificity in V1/V2 persisted throughout the retention interval"
+  ],
+  "interpretations": [
+    "early visual cortex can maintain feature information in a spatially specific manner",
+    "task-induced feature-location binding shapes retinotopic organization of working memory"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "visual working memory",
+    "sensory recruitment",
+    "retinotopic specificity",
+    "orientation maintenance",
+    "multivariate pattern analysis",
+    "early visual cortex V1 V2",
+    "feature-location binding",
+    "contralateral hemisphere classification"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "1833df6b39eed09b466b948b1189e0a5",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:36:33+09:00",
+  "review_status": "auto_unreviewed"
+}

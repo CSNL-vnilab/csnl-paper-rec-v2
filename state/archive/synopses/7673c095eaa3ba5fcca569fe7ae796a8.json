@@ -1,0 +1,45 @@
+{
+  "canonical_id": "7673c095eaa3ba5fcca569fe7ae796a8",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [
+    {"name": "hierarchical visual processing", "role": "primary_lens", "one_line": "V1 extracts local borders; higher areas identify perceptually relevant ones"},
+    {"name": "feedforward vs feedback contextual modulation", "role": "extended", "one_line": "early feedforward V1 tuning plus delayed contextual enhancement for relevant borders"}
+  ],
+  "core_question": "Does V1 distinguish perceptually relevant object borders from irrelevant ones in natural scenes?",
+  "key_assumptions": [
+    "human-marked borders index perceptual relevance",
+    "low-level features (contrast, oriented-filter energy) can be matched as controls",
+    "early V1 activity (~50 ms) reflects feedforward-driven tuning"
+  ],
+  "manipulations": [
+    "perceptually relevant vs irrelevant borders in natural images",
+    "matched simple features (contrast, oriented-filter energy)",
+    "response latency window (early feedforward vs delayed contextual)"
+  ],
+  "key_findings": [
+    "early visual cortex responds more strongly to perceptually relevant borders",
+    "discrimination emerges fast (~50 ms) during feedforward activity",
+    "an additional delayed contextual modulation further enhances responses to relevant borders",
+    "effect persists after matching simple low-level features"
+  ],
+  "interpretations": [
+    "V1 neurons are tuned to features characterizing perceptually relevant borders",
+    "border-relevance computation is not exclusive to higher areas; V1 carries both feedforward tuning and later contextual enhancement"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "primary visual cortex (V1)",
+    "natural scene segmentation",
+    "perceptually relevant borders",
+    "feedforward response latency",
+    "contextual modulation",
+    "macaque electrophysiology",
+    "human neuroimaging",
+    "oriented-filter energy controls"
+  ],
+  "out_of_scope_note": null,
+  "generator": "opus-4-7@2026-05-27",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "abstract_coverage": 1.0
+}

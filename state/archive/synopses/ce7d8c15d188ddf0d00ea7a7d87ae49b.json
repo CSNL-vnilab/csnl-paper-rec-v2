@@ -1,0 +1,61 @@
+{
+  "frameworks": [
+    {
+      "name": "deep visual encoder feature space",
+      "role": "primary_lens",
+      "one_line": "State-of-the-art deep image features stand in for stored memory representations"
+    },
+    {
+      "name": "continuous-report models of visual working memory",
+      "role": "extended",
+      "one_line": "Extends artificial-stimulus recall models to natural-image continuous reports"
+    },
+    {
+      "name": "set-size models of working memory capacity",
+      "role": "compared_against",
+      "one_line": "Classic artificial-display benchmark the deep-encoder account is tested against"
+    }
+  ],
+  "core_question": "Can deep-encoder feature spaces explain human visual working memory errors for natural images, and do the same models also account for errors in artificial-display tasks?",
+  "key_assumptions": [
+    "Recall errors are graded along a continuous response space, not categorical",
+    "Image-generation algorithms can yield natural response alternatives varying from the stimulus",
+    "Stored VWM representations are rich enough to require natural-image stimuli"
+  ],
+  "manipulations": [
+    "Stimulus class (natural images vs simple artificial displays)",
+    "Response alternatives generated to vary continuously from the target",
+    "Feature space used to score memory similarity (deep encoders vs baselines)",
+    "Set size in the artificial-display domain"
+  ],
+  "key_findings": [
+    "Deep-encoder features explained coarse-grained and some fine-grained trial-by-trial difficulty in natural-image recall",
+    "Reasonable baseline feature spaces failed to capture this difficulty",
+    "Deep visual encoders reproduced set-size effects in artificial displays",
+    "Deep encoders gave an overall poorer fit to human data in the artificial domain"
+  ],
+  "interpretations": [
+    "Deep-encoder representations capture meaningful structure of VWM errors for natural stimuli",
+    "A single feature-space account does not yet unify natural-image and artificial-display recall"
+  ],
+  "limitations_noted": [
+    "Deep encoders provide a worse account of human errors in the artificial-display domain"
+  ],
+  "connecting_signals": [
+    "visual working memory",
+    "natural image recall",
+    "continuous report task",
+    "deep visual encoder features",
+    "trial-by-trial difficulty",
+    "set-size effects",
+    "image generation for response alternatives",
+    "memory representation similarity"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "ce7d8c15d188ddf0d00ea7a7d87ae49b",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

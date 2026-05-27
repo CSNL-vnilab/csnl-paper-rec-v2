@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "multivariate pattern analysis / neural decoding",
+      "role": "primary_lens",
+      "one_line": "decode WM contents from distributed delay-period fMRI activity patterns"
+    },
+    {
+      "name": "cross-modality decoding",
+      "role": "extended",
+      "one_line": "train on one feature, test on another to probe shared abstract code"
+    },
+    {
+      "name": "hierarchical visual representation",
+      "role": "context",
+      "one_line": "low-level sensory codes vs higher-level abstract feature codes"
+    }
+  ],
+  "core_question": "What is the representational format of contents held in visual working memory across the visual hierarchy?",
+  "key_assumptions": [
+    "WM contents are decodable from delay-period spatial activity patterns",
+    "orientation and motion direction share a candidate abstract feature axis",
+    "neurons in early visual cortex carry feature-specific tuning while higher areas may carry abstract codes"
+  ],
+  "manipulations": [
+    "stimulus type maintained during delay (gabor orientation vs random-dot-kinematogram motion direction)",
+    "decoder train-test pairing (within-feature vs cross-feature)",
+    "12s delay period of a delayed estimation WM task"
+  ],
+  "key_findings": [
+    "WM contents could be decoded from distributed delay-period activity across many maps",
+    "in some maps, a decoder trained on gabor orientation successfully decoded dot-motion direction (and vice versa)",
+    "cross-modality decoding succeeds despite mismatched low-level sensory features"
+  ],
+  "interpretations": [
+    "the format of the WM representation is not the low-level visual feature itself",
+    "some cortical maps maintain a more abstract feature code shared across modalities"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "visual working memory",
+    "delayed estimation task",
+    "cross-modality decoding",
+    "fMRI multivariate pattern analysis",
+    "delay-period activity",
+    "orientation representation",
+    "motion direction representation",
+    "abstract feature code"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "5651a2260be4ba2acdea667baca5049b",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:36:33+09:00",
+  "review_status": "auto_unreviewed"
+}

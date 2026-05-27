@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "diffusion of working memory representations",
+      "role": "primary_lens",
+      "one_line": "Latent memory trace drifts over delay, thresholded match/non-match decision plus lapses."
+    },
+    {
+      "name": "model-based behavioral psychophysics",
+      "role": "primary_lens",
+      "one_line": "Fit individual behavior with a computational latent-dynamics model."
+    },
+    {
+      "name": "persistent stimulus-selective cortical activity",
+      "role": "context",
+      "one_line": "Distributed delay-period activity assumed as substrate of working memory."
+    }
+  ],
+  "core_question": "What computational and neural mechanisms underlie working memory decline in healthy aging and mild cognitive impairment?",
+  "key_assumptions": [
+    "Working memory contents are maintained by stimulus-selective persistent activity across distributed cortex.",
+    "Memory representations diffuse stochastically across the delay period.",
+    "Behavior arises from a threshold on the diffused trace plus an independent lapse process."
+  ],
+  "manipulations": [
+    "Temporal delay between sample and test in a visuo-spatial delayed-match-to-sample task.",
+    "Spatial distance between sample and test stimulus locations.",
+    "Group: younger adults vs. older healthy controls vs. older adults with MCI."
+  ],
+  "key_findings": [
+    "Behavior on the delayed-match-to-sample task was captured by a latent diffusion + threshold + lapse model fit per individual.",
+    "Older adults with MCI were compared to healthy older controls using model-based psychophysics combined with MEG.",
+    "Younger adults provided a behavioral reference, characterized with the same computational model."
+  ],
+  "interpretations": [
+    "Working memory in aging and MCI can be dissected into latent dynamic components (diffusion, decision threshold, lapses) linked to cortical activity.",
+    "Combining computational modeling with MEG offers a path to relate cognitive integrity to working-memory dynamics in the aging brain."
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "working memory",
+    "delayed-match-to-sample",
+    "memory diffusion / drift over delay",
+    "mild cognitive impairment",
+    "aging",
+    "magnetoencephalography (MEG)",
+    "persistent activity",
+    "model-based psychophysics"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "89000628f4a8e1c73cf888b4861fd4df",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:34:29+09:00",
+  "review_status": "auto_unreviewed"
+}

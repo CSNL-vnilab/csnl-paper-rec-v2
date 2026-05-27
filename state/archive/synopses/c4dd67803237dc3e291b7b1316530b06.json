@@ -1,0 +1,52 @@
+{
+  "frameworks": [
+    {
+      "name": "serial dependence",
+      "role": "primary_lens",
+      "one_line": "current percepts are biased toward recently presented stimuli"
+    },
+    {
+      "name": "temporal continuity exploitation",
+      "role": "context",
+      "one_line": "perceptual systems leverage temporal redundancy for efficiency"
+    }
+  ],
+  "core_question": "Does serial dependence arise within perception itself or at later decision and response stages?",
+  "key_assumptions": [
+    "sequential stimuli produce biases toward previous stimulus",
+    "perceptual, decision, and response stages can be experimentally dissociated"
+  ],
+  "manipulations": [
+    "orientation of sequentially presented stimuli",
+    "dissociation of stimulus from response across trials",
+    "range of orientation differences spanning predicted maximal effect"
+  ],
+  "key_findings": [
+    "strong serial dependence observed in orientation judgements",
+    "serial dependence present in both perceptual and decision processes",
+    "very little contribution from the response stage",
+    "dependence arises between stimuli, not responses"
+  ],
+  "interpretations": [
+    "serial dependence acts directly on perception itself",
+    "the bias exploits temporal redundancies to enhance perceptual efficiency"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "serial dependence",
+    "orientation judgements",
+    "perceptual bias",
+    "temporal continuity",
+    "perception versus decision",
+    "response dissociation",
+    "perceptual efficiency",
+    "sequential stimuli"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "c4dd67803237dc3e291b7b1316530b06",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:36:33+09:00",
+  "review_status": "auto_unreviewed"
+}

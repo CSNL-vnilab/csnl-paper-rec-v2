@@ -1,0 +1,54 @@
+{
+  "frameworks": [
+    {
+      "name": "Bayesian inference",
+      "role": "context",
+      "one_line": "Normative posterior computation that human judgments are compared to."
+    },
+    {
+      "name": "amortized inference / recognition model",
+      "role": "primary_lens",
+      "one_line": "Query-to-posterior mapping whose parameters are optimized for expected accuracy."
+    },
+    {
+      "name": "resource-rational analysis",
+      "role": "extended",
+      "one_line": "Limited compute allocated preferentially to high-probability queries."
+    }
+  ],
+  "core_question": "Why do humans systematically deviate from Bayesian inference, and when do they under-react to data versus prior?",
+  "key_assumptions": [
+    "Brain implements a recognition model mapping queries to posteriors",
+    "Recognition-model parameters optimize average closeness to the true posterior",
+    "Computational resources are limited and allocated by query probability"
+  ],
+  "manipulations": [
+    "Query distribution shaped to favor different question types"
+  ],
+  "key_findings": [
+    "People under-react to data or to prior in patterned ways",
+    "These two underreactions can be controlled by changing the query distribution"
+  ],
+  "interpretations": [
+    "Inference is amortized: the brain learns to infer by adapting to the distribution of queries it faces",
+    "Memory effects, belief bias, and response variability fall out of the same recognition-model account"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "amortized inference",
+    "recognition model",
+    "query distribution",
+    "underreaction to prior",
+    "underreaction to data",
+    "belief bias",
+    "response variability",
+    "resource-rational inference"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "04ee0bd4a045ccbbfc30e891835062b5",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:36:33+09:00",
+  "review_status": "auto_unreviewed"
+}

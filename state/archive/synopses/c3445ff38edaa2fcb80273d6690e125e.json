@@ -1,0 +1,62 @@
+{
+  "frameworks": [
+    {
+      "name": "divisive normalization",
+      "role": "extended",
+      "one_line": "Normalization weights are dynamically retuned to homeostatically maintain response products."
+    },
+    {
+      "name": "homeostatic plasticity",
+      "role": "primary_lens",
+      "one_line": "Adaptation maintains pairwise response products as a learned target."
+    },
+    {
+      "name": "feedforward gain control",
+      "role": "compared_against",
+      "one_line": "Multi-layer feedforward gain models that the authors find less consistent with data."
+    },
+    {
+      "name": "homeostatic covariance/correlation models",
+      "role": "alternative_lens",
+      "one_line": "Variants maintaining correlations or covariance instead of products."
+    }
+  ],
+  "core_question": "What learning rule governs orientation adaptation in V1 to explain both gain changes and tuning shifts?",
+  "key_assumptions": [
+    "Adaptation reflects homeostatic regulation of pairwise response statistics",
+    "Divisive normalization weights are plastic on adaptation timescales",
+    "V1 neurons have orientation tuning shaped by normalization pool"
+  ],
+  "manipulations": [
+    "Adapter orientation relative to neuron's preferred orientation",
+    "Choice of homeostatic target (product vs covariance vs correlation)",
+    "Model architecture (recurrent normalization vs multi-layer feedforward)"
+  ],
+  "key_findings": [
+    "Neurons near adapter are suppressed and shift preferred orientation away from adapter",
+    "A simple learning rule reweighting normalization reproduces these effects",
+    "Simulations closely match physiological adaptation data"
+  ],
+  "interpretations": [
+    "Homeostatic maintenance of response products best accounts for V1 adaptation phenomena",
+    "Adaptation is a dynamic adjustment of normalization weights rather than feedforward gain alone"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "pattern adaptation",
+    "divisive normalization",
+    "normalization reweighting",
+    "V1 orientation tuning shift",
+    "homeostatic plasticity",
+    "response product maintenance",
+    "gain control learning rule",
+    "tilt aftereffect mechanism"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "c3445ff38edaa2fcb80273d6690e125e",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:34:29+09:00",
+  "review_status": "auto_unreviewed"
+}

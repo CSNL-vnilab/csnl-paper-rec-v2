@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "structural alignment / structure mapping",
+      "role": "primary_lens",
+      "one_line": "value representations align with neural codes for an abstract magnitude dimension"
+    },
+    {
+      "name": "mental number line / magnitude representation",
+      "role": "extended",
+      "one_line": "symbolic-number magnitude code is reused to encode bandit reward probability"
+    },
+    {
+      "name": "reward-guided learning",
+      "role": "context",
+      "one_line": "task frame in which payout probabilities are learned for novel visual bandits"
+    },
+    {
+      "name": "neural network simulation",
+      "role": "alternative_lens",
+      "one_line": "connectionist model showing structural alignment can support transfer learning"
+    }
+  ],
+  "core_question": "Does the brain represent learned reward probabilities by aligning them with an abstract magnitude code?",
+  "key_assumptions": [
+    "magnitude is an abstract relational concept compactly encoded on a single dimension",
+    "neural patterns for symbolic numbers index a stable magnitude representation",
+    "reward probabilities can be ordered on the same magnitude dimension"
+  ],
+  "manipulations": [
+    "viewing symbolic numbers to map magnitude code",
+    "reward-guided learning with novel complex visual bandits",
+    "varying bandit payout probability across the magnitude range"
+  ],
+  "key_findings": [
+    "neural patterns for novel bandits reflected their payout probability",
+    "bad bandits shared neural representation with small numbers",
+    "good bandits shared neural representation with large numbers",
+    "network simulations reproduced the structural-alignment pattern"
+  ],
+  "interpretations": [
+    "reward-probability learning is accompanied by structural alignment with an abstract magnitude code",
+    "such structural alignment can promote transfer learning across domains"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "structural alignment",
+    "mental number line",
+    "magnitude representation",
+    "reward probability learning",
+    "bandit task",
+    "transfer learning",
+    "abstract concept encoding",
+    "neural pattern similarity"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "885cc5e4c903f0ae235561fff41185b4",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:34:29+09:00",
+  "review_status": "auto_unreviewed"
+}

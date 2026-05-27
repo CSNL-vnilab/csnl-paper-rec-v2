@@ -1,0 +1,51 @@
+{
+  "frameworks": [
+    {
+      "name": "reference-dependent valuation (behavioral economics)",
+      "role": "primary_lens",
+      "one_line": "Reference point conditions whether outcomes feel positive or negative."
+    },
+    {
+      "name": "deep brain stimulation of anterior cingulate cortex",
+      "role": "context",
+      "one_line": "Prior DBS depression treatment reinterpreted as reference-point modulation."
+    }
+  ],
+  "core_question": "Is the decisional reference point pathologically altered in major depressive disorder, and can it serve as a diagnostic marker?",
+  "key_assumptions": [
+    "Reference point is the central mechanism conditioning reinforcer evaluation",
+    "Reference point setting is a measurable dynamic process",
+    "Anterior cingulate cortex implements reference-point computation"
+  ],
+  "manipulations": [
+    "Patient status (depressed vs control)",
+    "Reinforcer events used to probe reference-point evaluation and setting dynamics"
+  ],
+  "key_findings": [
+    "Reference point is significantly and pathologically elevated in depressed patients",
+    "Elevation correlates with depression severity",
+    "Reference-point setting dynamics are profoundly impaired in depression"
+  ],
+  "interpretations": [
+    "Reference-point pathology is a novel mechanism of MDD, linking ACC DBS efficacy to reference-point modulation",
+    "Findings support a brief virtual diagnostic test for depression"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "decisional reference point",
+    "reference-dependent valuation",
+    "major depressive disorder",
+    "anterior cingulate cortex",
+    "deep brain stimulation",
+    "reinforcer evaluation",
+    "behavioral economics biomarker",
+    "diagnostic test for depression"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "6f396e0d3d49e15b5f335de20deeb28c",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:36:33+09:00",
+  "review_status": "auto_unreviewed"
+}
