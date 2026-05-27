@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "surround inhibition",
+      "role": "primary_lens",
+      "one_line": "GABAergic lateral inhibition in V1 underlies size- and velocity-dependent perceptual suppression"
+    },
+    {
+      "name": "MEG gamma oscillations as inhibition index",
+      "role": "extended",
+      "one_line": "velocity-dependent gamma attenuation slope indexes inhibitory interactions in primary visual cortex"
+    },
+    {
+      "name": "spatial suppression psychophysics",
+      "role": "context",
+      "one_line": "directional sensitivity drops for large high-contrast drifting gratings, more so at higher velocity"
+    }
+  ],
+  "core_question": "Does the slope of velocity-dependent MEG gamma attenuation in V1 predict individual differences in psychophysical spatial suppression?",
+  "key_assumptions": [
+    "gamma response attenuation slope reflects cortical inhibitory strength",
+    "spatial suppression strength reflects surround inhibition",
+    "inter-individual variability is stable and measurable"
+  ],
+  "manipulations": [
+    "grating size (center vs surround-extending)",
+    "grating drift velocity (low to high)",
+    "participant population (school-age boys vs adult women)"
+  ],
+  "key_findings": [
+    "GR attenuation slope predicted inter-individual SS in both samples",
+    "neuro-behavioral correlation was test-retest reliable across two sessions in adults",
+    "GR frequency and absolute amplitude did not correlate with SS"
+  ],
+  "interpretations": [
+    "spatial suppression is driven by inhibitory processes in human primary visual cortex",
+    "velocity-dependent gamma slope is a valid inhibitory marker linking neural and perceptual measures"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "spatial suppression",
+    "surround inhibition",
+    "MEG gamma oscillations",
+    "primary visual cortex V1",
+    "drifting grating motion perception",
+    "velocity-dependent gamma attenuation",
+    "individual differences in perception",
+    "test-retest reliability"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "f9de630ee2184c83c88267fbb1f920aa",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:58:59+09:00",
+  "review_status": "auto_unreviewed"
+}

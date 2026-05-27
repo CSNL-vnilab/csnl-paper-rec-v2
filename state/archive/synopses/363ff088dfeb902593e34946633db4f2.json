@@ -1,0 +1,62 @@
+{
+  "frameworks": [
+    {
+      "name": "β-VAE (disentangled deep generative model)",
+      "role": "primary_lens",
+      "one_line": "self-supervised model factorising sensory input into interpretable latent factors"
+    },
+    {
+      "name": "Active Appearance Model",
+      "role": "compared_against",
+      "one_line": "handcrafted state-of-the-art face perception model used as baseline"
+    },
+    {
+      "name": "deep supervised classifier",
+      "role": "compared_against",
+      "one_line": "category-trained deep networks used as alternative baseline for IT coding"
+    },
+    {
+      "name": "ventral visual stream coding",
+      "role": "context",
+      "one_line": "framing learning objective of macaque face-patch responses"
+    }
+  ],
+  "core_question": "What learning objective best explains how single IT face-patch neurons encode faces?",
+  "key_assumptions": [
+    "single-neuron IT responses reflect a learned representation of face features",
+    "interpretable latent factors of face variation exist (e.g., gender, age)",
+    "disentangled generative representations are a candidate brain objective"
+  ],
+  "manipulations": [
+    "model class compared (β-VAE vs. AAM vs. deep classifiers)",
+    "varying which latent units are read out for reconstruction",
+    "matching model factors to single-unit response profiles"
+  ],
+  "key_findings": [
+    "β-VAE latent factors correspond strongly to single IT face-patch neurons",
+    "correspondence exceeds AAM and supervised deep-classifier baselines",
+    "novel face images can be reconstructed from a small number of IT cells"
+  ],
+  "interpretations": [
+    "optimising disentanglement yields representations resembling single-unit IT codes",
+    "disentangling is a plausible learning objective for the visual brain"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "β-VAE",
+    "disentangled representation",
+    "inferotemporal face patch",
+    "single-neuron coding",
+    "self-supervised generative model",
+    "face perception",
+    "Active Appearance Model",
+    "ventral stream learning objective"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "363ff088dfeb902593e34946633db4f2",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,61 @@
+{
+  "frameworks": [
+    {
+      "name": "residual dynamics",
+      "role": "extended",
+      "one_line": "Disentangles recurrent dynamical contributions from inputs and feedforward processing in population trajectories."
+    },
+    {
+      "name": "line-attractor dynamics",
+      "role": "alternative_lens",
+      "one_line": "Integration-like regime recoverable from residual dynamics in decision-making areas."
+    },
+    {
+      "name": "rotational dynamics",
+      "role": "alternative_lens",
+      "one_line": "Alternative recurrent regime distinguished by residual dynamics in cortical populations."
+    },
+    {
+      "name": "recurrent neural network model",
+      "role": "compared_against",
+      "one_line": "Two-area RNN simulations used as ground-truth validation."
+    }
+  ],
+  "core_question": "How can recurrent contributions to neural population dynamics be separated from input-driven and feedforward processing?",
+  "key_assumptions": [
+    "Population trajectories are a deterministic dynamical system driven by external inputs",
+    "Removing input-driven components leaves state-dependent recurrent evolution as residual"
+  ],
+  "manipulations": [
+    "Brain area (LIP vs FEF vs PFC)",
+    "Task condition during perceptual decision-making",
+    "Ground-truth dynamical regime in two-area RNN simulations"
+  ],
+  "key_findings": [
+    "Residual dynamics reveal distinct recurrent computations across areas (integration, rotation, feedforward)",
+    "Method correctly recovers ground-truth recurrent contributions in RNN simulations",
+    "Line-attractor vs rotational regimes are distinguishable from residual dynamics"
+  ],
+  "interpretations": [
+    "Residual dynamics provides a principled way to attribute neural computation to recurrent vs feedforward sources",
+    "Framework extends to compare experimental data against alternative dynamical model hypotheses"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "residual dynamics",
+    "recurrent neural dynamics",
+    "line attractor",
+    "rotational dynamics",
+    "perceptual decision-making",
+    "LIP FEF PFC population",
+    "two-area RNN",
+    "dynamical systems neural population"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "39aff8a8e1144fda714bbdd067a1f158",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:58:59+09:00",
+  "review_status": "auto_unreviewed"
+}

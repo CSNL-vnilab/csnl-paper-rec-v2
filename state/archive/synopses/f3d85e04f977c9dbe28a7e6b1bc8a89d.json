@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "Neural Theory of Visual Attention",
+      "role": "primary_lens",
+      "one_line": "vSTM capacity depends on structural connectivity between posterior thalamus and visual occipital cortices"
+    },
+    {
+      "name": "probabilistic tractography of white-matter pathways",
+      "role": "extended",
+      "one_line": "diffusion-weighted imaging used to estimate PT-OC connection probability across age"
+    },
+    {
+      "name": "cognitive aging of visual short-term memory",
+      "role": "context",
+      "one_line": "age-related decline in vSTM capacity linked to thalamo-cortical changes"
+    }
+  ],
+  "core_question": "Does aging modify the association between vSTM capacity and posterior thalamus to occipital cortex structural connectivity?",
+  "key_assumptions": [
+    "vSTM capacity is supported by PT-OC structural connectivity per NTVA",
+    "probabilistic tractography indexes anatomical connection probability",
+    "whole-report psychophysics yields valid vSTM capacity estimates"
+  ],
+  "manipulations": [
+    "age across adult lifespan (20-77 years)",
+    "PT-OC connection probability measured per individual",
+    "white-matter microstructure of PT-OC tracts"
+  ],
+  "key_findings": [
+    "vSTM capacity is reduced with aging",
+    "PT-OC connection probability is aberrant in older adults",
+    "younger adults show negative correlation between vSTM capacity and PT-OC connection probability",
+    "older adults show positive correlation between vSTM capacity and PT-OC connection probability"
+  ],
+  "interpretations": [
+    "age inverts the vSTM-PT-OC association, possibly reflecting white-matter property changes",
+    "thalamo-cortical structural connectivity underlies age-related vSTM decline"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "visual short-term memory capacity",
+    "posterior thalamus",
+    "occipital cortex connectivity",
+    "diffusion-weighted imaging",
+    "probabilistic tractography",
+    "cognitive aging",
+    "white-matter microstructure",
+    "whole-report psychophysics"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "f3d85e04f977c9dbe28a7e6b1bc8a89d",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

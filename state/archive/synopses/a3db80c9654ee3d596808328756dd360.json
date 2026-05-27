@@ -1,0 +1,62 @@
+{
+  "frameworks": [
+    {
+      "name": "compositional Bayesian regression",
+      "role": "primary_lens",
+      "one_line": "intuitive functions modeled as compositions of simpler building-block functions"
+    },
+    {
+      "name": "grammar over Gaussian process kernels",
+      "role": "extended",
+      "one_line": "kernel grammar formalizes how simple kernels combine into complex functions"
+    },
+    {
+      "name": "non-compositional function learning",
+      "role": "compared_against",
+      "one_line": "monolithic function priors lacking decomposition into reusable parts"
+    },
+    {
+      "name": "broad principles of human cognition",
+      "role": "context",
+      "one_line": "compositionality as a general organizing principle across cognitive domains"
+    }
+  ],
+  "core_question": "Do people learn complex functions by composing simpler building blocks rather than as monolithic structures?",
+  "key_assumptions": [
+    "complex function structure can be decomposed into simpler parts",
+    "Bayesian regression with kernel grammar captures human function priors",
+    "predictability judgments reflect underlying generative priors"
+  ],
+  "manipulations": [
+    "compositional vs non-compositional function extrapolations",
+    "elicited samples from human prior over functions",
+    "predictability ratings for matched compositional vs non-compositional functions"
+  ],
+  "key_findings": [
+    "participants prefer compositional over non-compositional extrapolations",
+    "samples from human function priors are best fit by a compositional model",
+    "compositional functions are perceived as more predictable than non-compositional counterparts"
+  ],
+  "interpretations": [
+    "intuitive functions have a compositional structure",
+    "compositionality of function learning aligns with broad principles of human cognition"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "compositionality",
+    "intuitive functions",
+    "Gaussian process kernels",
+    "kernel grammar",
+    "function learning",
+    "Bayesian regression",
+    "function extrapolation",
+    "predictability judgments"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "a3db80c9654ee3d596808328756dd360",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}
