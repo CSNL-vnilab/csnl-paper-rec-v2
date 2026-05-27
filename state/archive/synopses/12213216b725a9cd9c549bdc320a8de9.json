@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "state-unspecific functional brain networks",
+      "role": "primary_lens",
+      "one_line": "individual variation in connectivity shared across task and rest states"
+    },
+    {
+      "name": "Common Neural Modes (CNMs)",
+      "role": "extended",
+      "one_line": "data-driven modes capturing trait-like connectivity across multiple states"
+    },
+    {
+      "name": "state-specific brain network characterization",
+      "role": "compared_against",
+      "one_line": "traditional view that connectivity is largely defined by task state"
+    },
+    {
+      "name": "individual differences in functional connectivity",
+      "role": "context",
+      "one_line": "fMRI-based neural substrates of behavioral and cognitive variation"
+    }
+  ],
+  "core_question": "Can state-unspecific whole-brain functional connectivity patterns be identified and do they predict stable individual traits?",
+  "key_assumptions": [
+    "individual variability in connectivity has both state-specific and state-unspecific components",
+    "whole-brain connectivity patterns generalize across task and resting states",
+    "stable cognitive traits relate to invariant connectivity structure"
+  ],
+  "manipulations": [
+    "eight task and resting states aggregated from a large fMRI database",
+    "dimensions of features used to extract modes",
+    "association of modes with cognitive measures and life outcomes"
+  ],
+  "key_findings": [
+    "three Common Neural Modes were robustly extracted across feature dimensions",
+    "each CNM preferentially correlated with distinct cognitive measures",
+    "associations emerged unsupervised from connectivity data alone",
+    "CNMs predicted life outcomes including income and life satisfaction"
+  ],
+  "interpretations": [
+    "state-unspecific connectivity modes reflect stable individual traits",
+    "trait-relevant brain organization is invariant across cognitive states"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "whole-brain functional connectivity",
+    "state-unspecific brain networks",
+    "Common Neural Modes",
+    "individual differences fMRI",
+    "stable cognitive traits",
+    "resting and task states",
+    "life outcome prediction",
+    "unsupervised connectivity decomposition"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "12213216b725a9cd9c549bdc320a8de9",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}

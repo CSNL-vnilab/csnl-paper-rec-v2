@@ -1,0 +1,61 @@
+{
+  "frameworks": [
+    {
+      "name": "statistical learning of sensory regularities",
+      "role": "primary_lens",
+      "one_line": "learned transitional regularities shape neural responses to expected stimuli"
+    },
+    {
+      "name": "predictive coding / sensory attenuation",
+      "role": "extended",
+      "one_line": "expectation-driven attenuation reframed as attention-gated rather than automatic"
+    },
+    {
+      "name": "attention as gain modulation",
+      "role": "alternative_lens",
+      "one_line": "attention required to express prediction-related response suppression"
+    },
+    {
+      "name": "probabilistic perceptual inference",
+      "role": "context",
+      "one_line": "perception as integration of prior knowledge with sensory input"
+    }
+  ],
+  "core_question": "Does sensory attenuation following statistical learning occur automatically or require attention to the predictable stimuli?",
+  "key_assumptions": [
+    "the first object can predict the identity of the second object after exposure",
+    "ventral visual stream BOLD reflects sensory response strength",
+    "attention can be directed away from predictable features"
+  ],
+  "manipulations": [
+    "stimulus expectedness (expected vs unexpected second object)",
+    "direction of attention (toward vs away from predictable objects)"
+  ],
+  "key_findings": [
+    "reliable attenuation of neural activity for expected vs unexpected stimuli in ventral visual stream",
+    "sensory attenuation only present when stimuli were attended",
+    "attenuation vanished when attention was directed away from the predictable objects"
+  ],
+  "interpretations": [
+    "statistical-learning attenuation is not automatic but depends on attention",
+    "neurocomputational theories of prior-likelihood integration must accommodate attentional gating"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "statistical learning",
+    "expectation suppression",
+    "sensory attenuation",
+    "ventral visual stream",
+    "attention and prediction",
+    "predictive coding",
+    "object expectation",
+    "fMRI BOLD"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "fb83739ac3827d0baad4bf6d5ae11909",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

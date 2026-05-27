@@ -1,0 +1,56 @@
+{
+  "frameworks": [
+    {
+      "name": "directed vs random exploration",
+      "role": "primary_lens",
+      "one_line": "two distinct exploration strategies modulating uncertainty-driven choice and choice stochasticity"
+    },
+    {
+      "name": "exploration-exploitation trade-off",
+      "role": "context",
+      "one_line": "agents must balance choosing known high-reward options against gathering information"
+    },
+    {
+      "name": "dopaminergic neurogenetics of decision-making",
+      "role": "extended",
+      "one_line": "prefrontal vs striatal dopamine variants linked to distinct exploration components"
+    }
+  ],
+  "core_question": "Do dopamine-related genetic polymorphisms predict individual differences in directed versus random exploration strategies?",
+  "key_assumptions": [
+    "directed and random exploration are dissociable strategies",
+    "the optimal exploration-exploitation solution is intractable",
+    "SNPs in COMT and DARPP-32 index prefrontal and striatal dopamine function respectively"
+  ],
+  "manipulations": [
+    "task independently varies uncertainty driving directed exploration vs random exploration",
+    "genotype variation at COMT and DARPP-32 loci across participants"
+  ],
+  "key_findings": [
+    "COMT variation predicts degree of directed exploration and overall choice randomness",
+    "DARPP-32 variation predicts both directed and random exploration",
+    "individual differences in exploration strategies covary with dopaminergic genotype"
+  ],
+  "interpretations": [
+    "dopamine makes multiple contributions to exploration depending on afferent target",
+    "prefrontal and striatal dopamine systems differentially support exploration components"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "directed exploration",
+    "random exploration",
+    "exploration-exploitation trade-off",
+    "COMT polymorphism",
+    "DARPP-32 polymorphism",
+    "prefrontal dopamine",
+    "striatal dopamine",
+    "individual differences in decision-making"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "7c0cc85488bd176e6a0d2f6b34f1a92d",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}

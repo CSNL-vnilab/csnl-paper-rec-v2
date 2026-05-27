@@ -1,0 +1,17 @@
+{
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "Engineering applied-ML paper on air-pollution forecasting with RNN/LSTM/CNN — outside computational neuroscience scope.",
+  "abstract_coverage": 0.0,
+  "canonical_id": "b5a1cc464e2845ee307565cccdba57e3",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}

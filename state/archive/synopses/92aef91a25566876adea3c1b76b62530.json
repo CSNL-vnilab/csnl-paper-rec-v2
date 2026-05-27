@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "Bayesian optimal observer",
+      "role": "primary_lens",
+      "one_line": "ideal computation of posterior probability of correct response under variable reliability"
+    },
+    {
+      "name": "evidence accumulation with collapsing/urgency bound",
+      "role": "extended",
+      "one_line": "linear urgency signal added to accumulated evidence to drive commitment"
+    },
+    {
+      "name": "predictive-coding-style precision weighting",
+      "role": "alternative_lens",
+      "one_line": "samples weighted by inverse prediction error to track changing reliability"
+    },
+    {
+      "name": "speed-accuracy trade-off in decision making",
+      "role": "context",
+      "one_line": "balancing information harvesting against opportunity cost of deliberation"
+    }
+  ],
+  "core_question": "How do humans decide when to stop sampling and commit when evidence reliability itself varies unpredictably over time?",
+  "key_assumptions": [
+    "observers can estimate the moment-to-moment reliability of evidence",
+    "deliberation incurs an opportunity cost that grows with time",
+    "decision commitment occurs when accumulated evidence crosses a threshold"
+  ],
+  "manipulations": [
+    "categorization of serially presented oriented gratings",
+    "variable variance (heteroscedasticity) of decision-relevant information across time",
+    "free choice of stopping time by the observer"
+  ],
+  "key_findings": [
+    "humans adaptively down-weight samples with high prediction error",
+    "accumulated evidence is combined with a linear urgency signal to a threshold",
+    "this heuristic model approximates the full Bayesian posterior of correctness",
+    "the model predicts adaptive weighting reflected in neural signals"
+  ],
+  "interpretations": [
+    "optional stopping under heteroscedasticity is approximated by precision-weighted accumulation plus urgency",
+    "an approximate algorithm can implement near-Bayesian optimality in non-stationary environments"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "optional stopping",
+    "heteroscedastic evidence",
+    "Bayesian decision making",
+    "urgency signal",
+    "evidence accumulation",
+    "precision weighting",
+    "inverse prediction error",
+    "speed-accuracy trade-off"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "92aef91a25566876adea3c1b76b62530",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "evidence accumulation in dynamic environments",
+      "role": "primary_lens",
+      "one_line": "decisions formed by integrating noisy evidence with discounting of older samples"
+    },
+    {
+      "name": "provisional decision coding in frontal cortex",
+      "role": "extended",
+      "one_line": "FOF representation generalized from static to changing-state decisions"
+    },
+    {
+      "name": "behavioral model of changes of mind",
+      "role": "primary_lens",
+      "one_line": "model-derived timing of mind-changes used to align neural activity"
+    },
+    {
+      "name": "temporal gain modulation",
+      "role": "context",
+      "one_line": "evidence-encoding gain rises toward the action period"
+    }
+  ],
+  "core_question": "How does rat FOF represent accumulated evidence and provisional decisions when the environmental state can change during the trial?",
+  "key_assumptions": [
+    "rats optimally discount older evidence in dynamic settings",
+    "provisional decisions are encoded in FOF firing rates",
+    "behavioral model predicts moment-by-moment changes of mind"
+  ],
+  "manipulations": [
+    "dynamic environment with switching state versus static decisions",
+    "trial epochs probing pre-action evidence integration",
+    "events identified as model-predicted changes of mind"
+  ],
+  "key_findings": [
+    "FOF encodes evidence throughout decision formation",
+    "encoding gain rises until the period when the rat may need to act",
+    "FOF neurons respond rapidly to changes of mind",
+    "firing rates track the new provisional decision after mind-changes"
+  ],
+  "interpretations": [
+    "FOF supports a stable representation of the current provisional choice even as it updates",
+    "evidence integration and choice updating are dissociable and both observable in FOF"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "changes of mind",
+    "frontal orienting fields",
+    "evidence accumulation",
+    "dynamic decision-making",
+    "provisional decision",
+    "temporal gain modulation",
+    "evidence discounting",
+    "rat decision-making"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "b8a157f0efdd33b098db2f17487c93f1",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}
