@@ -1,0 +1,60 @@
+{
+  "frameworks": [
+    {
+      "name": "resting-state functional connectivity",
+      "role": "primary_lens",
+      "one_line": "Pre-stimulation network connectivity as predictor of individual tDCS response."
+    },
+    {
+      "name": "default mode network / central executive network",
+      "role": "primary_lens",
+      "one_line": "Two WM-relevant networks indexed for connectivity with stimulation site."
+    },
+    {
+      "name": "transcranial direct current stimulation",
+      "role": "context",
+      "one_line": "Anodal right frontal tDCS paired with visual WM training."
+    }
+  ],
+  "core_question": "Can resting-state connectivity between the tDCS stimulation site and WM-relevant networks predict initial and longitudinal benefits from tDCS-paired WM training?",
+  "key_assumptions": [
+    "individual differences drive variable tDCS outcomes",
+    "DMN and CEN are the WM-relevant networks for right frontal stimulation",
+    "resting-state connectivity is a stable individual trait"
+  ],
+  "manipulations": [
+    "active anodal right frontal tDCS vs sham",
+    "5 days of visual WM training",
+    "resting-state connectivity measured between stimulation site and DMN/CEN"
+  ],
+  "key_findings": [
+    "only the active tDCS group significantly improved over the training period",
+    "no significant correlation between initial tDCS response and resting-state connectivity",
+    "DMN activity in anterior cingulate cortex correlated with WM training slope"
+  ],
+  "interpretations": [
+    "individual differences in baseline network activity shape longitudinal tDCS-paired training gains",
+    "sampling considerations matter critically in tDCS studies"
+  ],
+  "limitations_noted": [
+    "single-session tDCS designs are prone to variable outcomes",
+    "healthy young adults only"
+  ],
+  "connecting_signals": [
+    "transcranial direct current stimulation",
+    "working memory training",
+    "resting-state fMRI",
+    "default mode network",
+    "central executive network",
+    "anterior cingulate cortex",
+    "individual differences",
+    "longitudinal response prediction"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "2d1c2a52d7fe8b11be68ede20803d205",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:14:09+09:00",
+  "review_status": "auto_unreviewed"
+}

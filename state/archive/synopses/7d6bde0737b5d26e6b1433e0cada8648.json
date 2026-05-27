@@ -1,0 +1,45 @@
+{
+  "frameworks": [
+    {
+      "name": "functional localizer approach",
+      "role": "primary_lens",
+      "one_line": "category-selective ROIs (EBA, FFA, OFA, PPA) defined per-subject via functional contrasts"
+    }
+  ],
+  "core_question": "How reproducible are within-subject fMRI localizations of high-level category-specific visual areas across runs and sessions?",
+  "key_assumptions": [
+    "category-selective regions can be defined per-subject by contrast-based localizers",
+    "peak voxel location and T-value are valid stability indices"
+  ],
+  "manipulations": [
+    "different functional runs within a session",
+    "scanning sessions separated by 3 weeks"
+  ],
+  "key_findings": [
+    "all six subjects showed significant bilateral activation in EBA, FFA, OFA, PPA",
+    "within-session mean peak-voxel distance ~1.5 mm",
+    "between-session mean peak-voxel distance ~2.9 mm",
+    "T-value stability was high within and between sessions"
+  ],
+  "interpretations": [
+    "high-level category-specific visual areas can be robustly localized within subjects across scanning sessions"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "functional localizer reproducibility",
+    "extrastriate body area",
+    "fusiform face area",
+    "occipital face area",
+    "parahippocampal place area",
+    "within-subject fMRI reliability",
+    "peak voxel stability",
+    "category-selective visual cortex"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "7d6bde0737b5d26e6b1433e0cada8648",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:14:09+09:00",
+  "review_status": "auto_unreviewed"
+}

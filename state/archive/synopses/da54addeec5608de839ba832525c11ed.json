@@ -1,0 +1,54 @@
+{
+  "frameworks": [
+    {
+      "name": "neural correlates of consciousness",
+      "role": "context",
+      "one_line": "search for brain signals specific to awareness independent of attention"
+    },
+    {
+      "name": "attention-matching paradigm",
+      "role": "compared_against",
+      "one_line": "equating attention across awareness conditions to isolate awareness-specific activity"
+    },
+    {
+      "name": "attention vs awareness dissociation",
+      "role": "primary_lens",
+      "one_line": "treating attention and awareness as separable processes requiring careful experimental disentangling"
+    }
+  ],
+  "core_question": "Can the proposed attention-matching method successfully disentangle attention from awareness in fMRI studies of consciousness?",
+  "key_assumptions": [
+    "attention and awareness are dissociable processes",
+    "behavioral attention indices can index attentional state across awareness conditions",
+    "matching attention across conditions isolates awareness-specific neural signals"
+  ],
+  "manipulations": [
+    "critique of an existing fMRI experimental design",
+    "logical analysis of attention-awareness confound"
+  ],
+  "key_findings": [
+    "the targeted experimental design conflicts with known features of attention",
+    "logical and methodological gaps remain in disentangling attention from awareness"
+  ],
+  "interpretations": [
+    "attention-matching as proposed does not cleanly isolate neural correlates of awareness",
+    "rigorous attention-awareness dissociation requires additional methodological controls"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "neural correlates of awareness",
+    "attention awareness dissociation",
+    "fMRI consciousness",
+    "attentional confound",
+    "experimental design critique",
+    "attention matching",
+    "consciousness methodology"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "da54addeec5608de839ba832525c11ed",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

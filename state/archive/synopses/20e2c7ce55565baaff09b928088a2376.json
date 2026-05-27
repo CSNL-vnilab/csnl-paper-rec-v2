@@ -1,0 +1,62 @@
+{
+  "frameworks": [
+    {
+      "name": "attractor neural networks",
+      "role": "compared_against",
+      "one_line": "delay activity sustained by stable fixed-point attractors with constant rates"
+    },
+    {
+      "name": "chaotic reservoir networks",
+      "role": "compared_against",
+      "one_line": "delay activity arises from high-dimensional chaotic recurrent dynamics"
+    },
+    {
+      "name": "recurrent neural networks trained with backpropagation through time",
+      "role": "compared_against",
+      "one_line": "task-optimized RNNs produce delay trajectories shaped by training objective"
+    },
+    {
+      "name": "low-dimensional neural trajectory analysis",
+      "role": "primary_lens",
+      "one_line": "characterize delay dynamics via cumulative dimensionality and time decodability"
+    }
+  ],
+  "core_question": "How is information held during delays, and what mechanisms encode the passage of time across tasks?",
+  "key_assumptions": [
+    "delay-period neural activity supports working memory and time estimation",
+    "candidate network classes make distinguishable predictions about delay dynamics",
+    "passage of time can be read out from population activity"
+  ],
+  "manipulations": [
+    "task relevance of timing information across four primate datasets",
+    "comparison across three classes of recurrent network models",
+    "analysis method: time decoding vs cumulative trajectory dimensionality"
+  ],
+  "key_findings": [
+    "time is decoded with high precision when timing is task-relevant",
+    "time is decoded with lower precision when timing is task-irrelevant",
+    "cumulative dimensionality of delay trajectories is low across all datasets"
+  ],
+  "interpretations": [
+    "working memory need not rely on constant rates around a fixed attractor pattern",
+    "low-dimensional trajectories constrain plausible mechanisms of time encoding"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "delay activity",
+    "working memory",
+    "time encoding",
+    "neural trajectories",
+    "low-dimensional dynamics",
+    "attractor networks",
+    "chaotic reservoir",
+    "recurrent neural network"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "20e2c7ce55565baaff09b928088a2376",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

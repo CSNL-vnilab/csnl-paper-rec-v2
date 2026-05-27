@@ -1,0 +1,61 @@
+{
+  "frameworks": [
+    {
+      "name": "Shepard generalization gradient",
+      "role": "primary_lens",
+      "one_line": "Probability of generalization decays exponentially with psychological distance."
+    },
+    {
+      "name": "psychological space (multidimensional scaling)",
+      "role": "extended",
+      "one_line": "Stimuli embedded in metric space where distance governs generalization."
+    },
+    {
+      "name": "probabilistic geometry of natural kinds",
+      "role": "primary_lens",
+      "one_line": "Derives exponential law from priors over consequential regions."
+    },
+    {
+      "name": "evolutionary internalization",
+      "role": "context",
+      "one_line": "Universal regularities evolved to be common to all sentient organisms."
+    }
+  ],
+  "core_question": "Is there a universal functional form by which learned responses generalize across stimuli for any sentient organism?",
+  "key_assumptions": [
+    "stimuli admit a metric psychological space",
+    "generalization probability is an invariant monotonic function of distance",
+    "consequential regions in psychological space have natural-kind structure",
+    "metric form depends on whether stimulus dimensions are integral or separable"
+  ],
+  "manipulations": [
+    "distance between stimuli in psychological space",
+    "relation between dimensions (integral vs separable) governing metric choice"
+  ],
+  "key_findings": [
+    "generalization probability decays approximately exponentially with psychological distance",
+    "one of two metrics (Euclidean or city-block) applies depending on dimensional relation"
+  ],
+  "interpretations": [
+    "exponential decay law is mathematically derivable from universal probabilistic-geometric principles",
+    "regularity may be evolutionarily internalized across all sentient organisms"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "generalization gradient",
+    "psychological space",
+    "exponential decay law",
+    "multidimensional scaling",
+    "integral vs separable dimensions",
+    "city-block metric",
+    "consequential regions",
+    "natural kinds"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "aade3650e8345c91b99c2bb0bf698145",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:14:09+09:00",
+  "review_status": "auto_unreviewed"
+}

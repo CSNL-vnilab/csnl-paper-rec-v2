@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "global theories of consciousness",
+      "role": "extended",
+      "one_line": "broadcast-based accounts the book synthesizes with local theories"
+    },
+    {
+      "name": "local theories of consciousness",
+      "role": "extended",
+      "one_line": "region-specific accounts the book synthesizes with global theories"
+    },
+    {
+      "name": "signal detection theory",
+      "role": "context",
+      "one_line": "framework underlying critique of perceptual-capacity null findings"
+    },
+    {
+      "name": "metacognition",
+      "role": "primary_lens",
+      "one_line": "second-order judgments framing subjective experience mechanistically"
+    }
+  ],
+  "core_question": "What mechanistic account best explains subjective experience given current cognitive neuroscience evidence?",
+  "key_assumptions": [
+    "subjective experience is dissociable from perceptual capacity",
+    "null findings in consciousness research can reflect low method sensitivity",
+    "physiology and AI offer convergent constraints on a mechanistic theory"
+  ],
+  "manipulations": [],
+  "key_findings": [
+    "existing empirical studies are often misinterpreted as supporting capacity-based accounts",
+    "null findings are overemphasized despite limited methodological sensitivity",
+    "global and local theories can be combined into a single synthesis"
+  ],
+  "interpretations": [
+    "a synthesis of global and local theories better captures the qualitative nature of subjective experience",
+    "the resulting view extends to agency, emotion, rationality, culture, and clinical applications"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "subjective experience",
+    "conscious perception",
+    "metacognition",
+    "global workspace",
+    "local recurrent processing",
+    "perceptual capacity vs awareness",
+    "sense of agency",
+    "qualia"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "b6377b1dda427bf0b981be047a61b631",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:14:09+09:00",
+  "review_status": "auto_unreviewed"
+}

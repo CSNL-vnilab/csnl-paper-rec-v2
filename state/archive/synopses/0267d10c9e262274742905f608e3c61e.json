@@ -1,0 +1,64 @@
+{
+  "frameworks": [
+    {
+      "name": "constraint-based causal discovery",
+      "role": "primary_lens",
+      "one_line": "uses conditional independence between contemporaneous and lagged variables to recover causal links"
+    },
+    {
+      "name": "Granger causality",
+      "role": "compared_against",
+      "one_line": "time-lagged predictive causality that cannot model contemporaneous effects or latent common causes"
+    },
+    {
+      "name": "dynamic causal modeling",
+      "role": "compared_against",
+      "one_line": "generative biophysical model for effective connectivity but limited in handling contemporaneous structure"
+    },
+    {
+      "name": "causal structure learning",
+      "role": "extended",
+      "one_line": "extends DAG-style discovery to large-scale, low-resolution time series allowing feedback"
+    }
+  ],
+  "core_question": "Can a scalable causal-discovery method recover whole-brain causal connectomes from fMRI despite contemporaneous effects, latent confounders, and feedback?",
+  "key_assumptions": [
+    "conditional independence patterns identify causal links in low-resolution time series",
+    "contemporaneous and lagged dependencies are both informative for causality",
+    "feedback (cyclic) structure must be permitted, not assumed away",
+    "macaque connectome provides ground truth for simulated benchmarking"
+  ],
+  "manipulations": [
+    "method compared across simple simulated fMRI topologies",
+    "scaling to macaque-connectome-derived simulated fMRI",
+    "application to resting-state human fMRI"
+  ],
+  "key_findings": [
+    "CaLLTiF achieves higher accuracy and scalability than tested alternatives on macaque simulations",
+    "learned human causal connectomes are highly consistent across individuals",
+    "top-down causal flow runs from attention and default mode to sensorimotor networks",
+    "causal interactions show Euclidean distance dependence and are dominated by contemporaneous effects"
+  ],
+  "interpretations": [
+    "contemporaneous effects are central to brain causal structure and must be modeled explicitly",
+    "constraint-based discovery enables practical whole-brain causal connectomics from fMRI"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "causal discovery",
+    "whole-brain connectome",
+    "fMRI",
+    "contemporaneous effects",
+    "latent confounders",
+    "feedback cycles",
+    "constraint-based methods",
+    "resting-state networks"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "0267d10c9e262274742905f608e3c61e",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

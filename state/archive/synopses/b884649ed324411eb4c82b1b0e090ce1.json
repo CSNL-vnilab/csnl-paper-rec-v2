@@ -1,0 +1,51 @@
+{
+  "frameworks": [
+    {
+      "name": "Bayesian function learning",
+      "role": "primary_lens",
+      "one_line": "Posterior inference over functions defined on graph-structured input spaces."
+    },
+    {
+      "name": "reward learning / exploration-exploitation search",
+      "role": "extended",
+      "one_line": "Sampling for rewards extended from continuous to graph-correlated value structures."
+    }
+  ],
+  "core_question": "How do people learn functions and search for rewards on graph-structured spaces with correlated values?",
+  "key_assumptions": [
+    "Value structure over options is correlated according to a graph",
+    "Human function learning can be modeled as Bayesian inference over functions",
+    "The same generative belief supports both prediction and reward-directed sampling"
+  ],
+  "manipulations": [
+    "Task type: function-learning vs reward-search",
+    "Underlying graph structure governing value correlations",
+    "Number of options available to the participant"
+  ],
+  "key_findings": [
+    "Proposed Bayesian model fits predictions and sampling behavior better than alternative models",
+    "Model reproduces human-like learning curves on graph-structured tasks",
+    "Model also captures participants' confidence judgements"
+  ],
+  "interpretations": [
+    "Human function learning and reward search generalize to complex graph-structured domains under a shared Bayesian account"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "graph-structured spaces",
+    "function learning",
+    "Bayesian model of generalization",
+    "reward search",
+    "exploration with structured options",
+    "confidence judgements",
+    "learning curves",
+    "graph-correlated values"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "b884649ed324411eb4c82b1b0e090ce1",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:14:09+09:00",
+  "review_status": "auto_unreviewed"
+}
