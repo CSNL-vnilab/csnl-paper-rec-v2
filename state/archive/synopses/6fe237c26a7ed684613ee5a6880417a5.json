@@ -1,0 +1,59 @@
+{
+  "frameworks": [
+    {
+      "name": "Bayesian observer model",
+      "role": "primary_lens",
+      "one_line": "Posterior estimation combining slow-speed prior with sensory likelihood"
+    },
+    {
+      "name": "efficient coding",
+      "role": "primary_lens",
+      "one_line": "Constraint linking sensory uncertainty structure to stimulus statistics"
+    },
+    {
+      "name": "neural population coding",
+      "role": "extended",
+      "one_line": "Quantifying MT population accuracy as a 'neural prior' over speed"
+    }
+  ],
+  "core_question": "Do MT neurons' speed tuning characteristics quantitatively match the prior inferred from human psychophysics under an efficient-coding-constrained Bayesian model?",
+  "key_assumptions": [
+    "Visual speed perception follows Bayesian inference",
+    "Sensory uncertainty is structured by efficient coding",
+    "Slow-speed prior follows a power-law form",
+    "Population coding accuracy can be read out as a neural prior"
+  ],
+  "manipulations": [
+    "Fit Bayesian observer model to psychophysical speed data",
+    "Extract behavioral prior from model fit",
+    "Estimate neural prior from MT population coding accuracy",
+    "Cross-validation model comparison between priors"
+  ],
+  "key_findings": [
+    "Bayesian observer model with efficient coding explains human visual speed perception",
+    "MT population coding accuracy is precisely predicted by the behavioral slow-speed prior",
+    "Behavioral prior and neural prior are indistinguishable under cross-validation"
+  ],
+  "interpretations": [
+    "Bayesian observer model constrained by efficient coding is quantitatively validated at both behavioral and neural levels",
+    "Slow-speed prior in perception has a direct correspondence in MT population tuning"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "Bayesian observer model",
+    "efficient coding constraint",
+    "slow-speed prior",
+    "visual speed perception",
+    "area MT neural tuning",
+    "population coding accuracy",
+    "behavioral prior vs neural prior",
+    "power-law prior"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "6fe237c26a7ed684613ee5a6880417a5",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

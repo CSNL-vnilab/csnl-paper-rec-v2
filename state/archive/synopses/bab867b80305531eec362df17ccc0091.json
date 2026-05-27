@@ -1,0 +1,61 @@
+{
+  "frameworks": [
+    {
+      "name": "policy compression",
+      "role": "primary_lens",
+      "one_line": "Capacity-constrained agents minimize mutual information between actions and states"
+    },
+    {
+      "name": "matching law",
+      "role": "extended",
+      "one_line": "Choice ratio matches reward ratio; explained via capacity limits"
+    },
+    {
+      "name": "rate-distortion",
+      "role": "primary_lens",
+      "one_line": "Reward maximization traded against policy complexity cost"
+    },
+    {
+      "name": "dopaminergic modulation",
+      "role": "context",
+      "one_line": "Dopamine level mapped to policy complexity capacity in Parkinson's"
+    }
+  ],
+  "core_question": "Why do agents systematically undermatch rather than match or overmatch in concurrent choice tasks?",
+  "key_assumptions": [
+    "Agents jointly maximize reward and minimize policy complexity",
+    "Policy complexity = mutual information between actions and states",
+    "Cognitive cost is a capacity constraint on state-dependent policies"
+  ],
+  "manipulations": [
+    "Task conditions predicted to exaggerate undermatching tested in mice",
+    "Dopamine level varied in Parkinson's patients (medication state)"
+  ],
+  "key_findings": [
+    "Capacity-constrained agents can only undermatch or perfectly match, never overmatch",
+    "Mouse behavioral data validated a novel prediction about which conditions exaggerate undermatching",
+    "Higher dopamine levels in Parkinson's patients reduced undermatching"
+  ],
+  "interpretations": [
+    "Undermatching is a normative consequence of policy compression under capacity constraints",
+    "Dopamine modulates effective policy complexity capacity"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "policy compression",
+    "matching law",
+    "undermatching",
+    "policy complexity",
+    "mutual information between actions and states",
+    "capacity-constrained agents",
+    "Parkinson's disease dopamine",
+    "rate-distortion in choice"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "bab867b80305531eec362df17ccc0091",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

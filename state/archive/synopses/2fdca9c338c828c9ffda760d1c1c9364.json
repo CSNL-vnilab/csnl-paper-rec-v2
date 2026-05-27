@@ -1,0 +1,65 @@
+{
+  "frameworks": [
+    {
+      "name": "optimal control",
+      "role": "primary_lens",
+      "one_line": "learning rules as policies for navigating partially observable loss landscapes"
+    },
+    {
+      "name": "online Bayesian inference",
+      "role": "extended",
+      "one_line": "adaptive optimizers cast as inference of loss-landscape shape"
+    },
+    {
+      "name": "gradient descent",
+      "role": "compared_against",
+      "one_line": "emerges as the short-horizon special case of the control policy"
+    },
+    {
+      "name": "natural gradient methods",
+      "role": "alternative_lens",
+      "one_line": "arise from accounting for parameter-space geometry"
+    }
+  ],
+  "core_question": "Under what assumptions can a given parameter-update rule be considered optimal for navigating a loss landscape?",
+  "key_assumptions": [
+    "learning is policy-based navigation over a (partially observable) loss landscape",
+    "optimality is defined by an associated optimal control objective",
+    "loss-landscape shape can be estimated online from observations",
+    "different horizons and observability regimes select different optimal policies"
+  ],
+  "manipulations": [
+    "planning horizon (short vs long)",
+    "controllability of parameters (full vs partial)",
+    "knowledge of parameter-space geometry",
+    "task uncertainty / non-stationarity"
+  ],
+  "key_findings": [
+    "gradient descent recovered from short-horizon optimization",
+    "momentum recovered from longer-horizon planning",
+    "natural gradients recovered from parameter-space geometry",
+    "Adam-like adaptive rules recovered from online Bayesian inference"
+  ],
+  "interpretations": [
+    "diverse learning rules share a single normative objective",
+    "continual-learning tactics like weight resetting are optimal responses to task uncertainty"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "learning rules",
+    "loss landscape navigation",
+    "optimal control of learning",
+    "normative framework",
+    "adaptive optimizers",
+    "online Bayesian inference",
+    "continual learning",
+    "parameter-space geometry"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "2fdca9c338c828c9ffda760d1c1c9364",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:52:16+09:00",
+  "review_status": "auto_unreviewed"
+}

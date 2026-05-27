@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "terror management theory",
+      "role": "primary_lens",
+      "one_line": "Mortality awareness drives compensatory psychological coping responses"
+    },
+    {
+      "name": "trait self-control",
+      "role": "primary_lens",
+      "one_line": "Individual differences in self-regulation moderate affective responses"
+    },
+    {
+      "name": "attentional positivity bias",
+      "role": "extended",
+      "one_line": "Selective attention to positive over negative affective stimuli"
+    }
+  ],
+  "core_question": "Does trait self-control moderate the effect of mortality salience on attention to positive versus negative images?",
+  "key_assumptions": [
+    "Gaze patterns index selective attentional allocation",
+    "Mortality salience can be experimentally induced via contemplation prompts",
+    "Trait self-control captures stable individual differences in regulation",
+    "Affective image valence reliably divides positive from negative stimuli"
+  ],
+  "manipulations": [
+    "Mortality salience versus control topic contemplation",
+    "Continuous trait self-control measured by questionnaire",
+    "Positive versus negative affective images presented during gaze recording"
+  ],
+  "key_findings": [
+    "Mortality salience increased attention to positive over negative images among high self-control individuals",
+    "Lower self-control individuals showed a non-significant trend in the opposite direction",
+    "A self-control by mortality salience interaction emerged on positivity bias in gaze"
+  ],
+  "interpretations": [
+    "High trait self-control facilitates a positivity bias as a coping response to death awareness",
+    "Attentional positivity bias may explain why self-controlled individuals attain better life outcomes"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "mortality salience",
+    "trait self-control",
+    "terror management",
+    "attentional positivity bias",
+    "gaze patterns",
+    "affective image viewing",
+    "emotion regulation",
+    "individual differences in attention"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "5e2c66b239d29e6dedead713136cad1c",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

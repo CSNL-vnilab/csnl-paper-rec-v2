@@ -1,0 +1,56 @@
+{
+  "frameworks": [
+    {
+      "name": "uncertainty-driven exploration",
+      "role": "primary_lens",
+      "one_line": "mental exploration during planning preferentially targets options with high epistemic uncertainty"
+    },
+    {
+      "name": "human planning algorithms",
+      "role": "extended",
+      "one_line": "extends exploration mechanisms from action selection to internal plan-space search"
+    },
+    {
+      "name": "tree-search planning",
+      "role": "context",
+      "one_line": "planning framed as selective traversal of a branching plan space"
+    }
+  ],
+  "core_question": "Does mental exploration during planning preferentially target plan-space branches with high epistemic uncertainty?",
+  "key_assumptions": [
+    "the space of possible plans is too vast for exhaustive search",
+    "planning and execution can be behaviorally dissociated",
+    "number of successor states indexes epistemic uncertainty"
+  ],
+  "manipulations": [
+    "number of potential future states available from each current state",
+    "value differences across plan branches",
+    "phase: planning versus execution"
+  ],
+  "key_findings": [
+    "participants preferred to explore options with more successor states after controlling for value",
+    "uncertainty effect was larger during planning than during execution"
+  ],
+  "interpretations": [
+    "mental exploration is uncertainty-driven, mirroring action-level exploration",
+    "the uncertainty bias reflects a property of planning algorithms, not an intrinsic preference for uncertainty"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "uncertainty-driven exploration",
+    "mental simulation",
+    "planning",
+    "epistemic uncertainty",
+    "binary tree task",
+    "route planning",
+    "plan-space search",
+    "successor states"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "404fb2df9e99ba007e54702e2324cae4",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:52:16+09:00",
+  "review_status": "auto_unreviewed"
+}

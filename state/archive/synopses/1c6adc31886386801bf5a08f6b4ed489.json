@@ -1,0 +1,62 @@
+{
+  "frameworks": [
+    {
+      "name": "slow drifts in decision criterion correction (Lak'20 / Mendonça'20)",
+      "role": "compared_against",
+      "one_line": "Existing convenient correction that subtracts slow drifts from decision criterion"
+    },
+    {
+      "name": "trial-history bias / systematic updating of decision variables",
+      "role": "primary_lens",
+      "one_line": "Trial-by-trial systematic updates of decision variables reveal heuristic and learning strategies"
+    },
+    {
+      "name": "random drifts in decision variables",
+      "role": "alternative_lens",
+      "one_line": "Non-systematic drifts that can mimic systematic updating signatures"
+    },
+    {
+      "name": "model-based inference of decision dynamics",
+      "role": "extended",
+      "one_line": "Proposed approach to disambiguate systematic updates from random drifts"
+    }
+  ],
+  "core_question": "Can the proposed correction for slow drifts in decision criterion robustly recover systematic trial-history updating strategies?",
+  "key_assumptions": [
+    "Trial-history biases reflect systematic updates of decision variables",
+    "Random drifts in decision variables can mimic systematic update signatures",
+    "Correct inference of updating strategy requires accounting for slow drifts"
+  ],
+  "manipulations": [
+    "Applied the proposed correction across a variety of assumed updating scenarios",
+    "Compared correction performance on real and synthetic datasets",
+    "Evaluated against a model-based disambiguation approach"
+  ],
+  "key_findings": [
+    "Correction fails for a wide range of commonly assumed systematic updating strategies",
+    "Correction distorts inference away from veridical strategies toward a narrow subset",
+    "Proposed model-based approach successfully disambiguates systematic updates from random drifts on real and synthetic data"
+  ],
+  "interpretations": [
+    "The slow-drift correction is unreliable as a general tool for inferring trial-history updating strategies",
+    "A model-based approach is needed to robustly separate random drifts from systematic decision-variable updates"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "slow drifts in decision criterion",
+    "trial-history bias",
+    "systematic updating of decision variables",
+    "random drift correction",
+    "decision-making heuristics",
+    "trial-by-trial inference",
+    "model-based disambiguation",
+    "learning processes in perceptual decisions"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "1c6adc31886386801bf5a08f6b4ed489",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

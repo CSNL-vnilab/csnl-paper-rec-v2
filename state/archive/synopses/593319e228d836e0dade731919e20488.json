@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "distributed working memory",
+      "role": "primary_lens",
+      "one_line": "Working memory arises from interactions between prefrontal and sensory cortex representations"
+    },
+    {
+      "name": "high-dimensional integrative representations",
+      "role": "primary_lens",
+      "one_line": "PFC encodes arbitrary combinations via high-dimensional mixed selectivity"
+    },
+    {
+      "name": "structured sensory representations",
+      "role": "extended",
+      "one_line": "Sensory cortex contributes feature-specific tuning to working memory content"
+    },
+    {
+      "name": "interference-limited capacity",
+      "role": "primary_lens",
+      "one_line": "Capacity limit emerges from interference among co-active distributed representations"
+    }
+  ],
+  "core_question": "Do the flexibility and limited capacity of working memory reflect the same underlying neural mechanism?",
+  "key_assumptions": [
+    "Working memory holds about three to four items at once",
+    "Flexibility requires representing arbitrary task-relevant content",
+    "Distributed coding across PFC and sensory cortex underlies maintenance"
+  ],
+  "manipulations": [],
+  "key_findings": [
+    "Evidence converges on PFC-sensory interactions supporting flexible maintenance",
+    "Distributed representations cause interference between concurrently held items",
+    "Brain employs mechanisms that reduce interference and raise effective capacity"
+  ],
+  "interpretations": [
+    "Flexibility and limited capacity are two sides of the same distributed-coding mechanism",
+    "Effective capacity reflects a balance between representational flexibility and interitem interference"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "working memory capacity",
+    "prefrontal cortex",
+    "sensory cortex representations",
+    "high-dimensional representations",
+    "interference between items",
+    "flexible maintenance",
+    "distributed coding",
+    "capacity limit mechanisms"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "593319e228d836e0dade731919e20488",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}
