@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "multiplicative attention-value model",
+      "role": "compared_against",
+      "one_line": "Attention causally biases choice via multiplicative interaction with subjective value"
+    },
+    {
+      "name": "Bayesian inference over latent values",
+      "role": "compared_against",
+      "one_line": "Gaze allocation arises from inference about latent option values"
+    },
+    {
+      "name": "post-decisional attention account",
+      "role": "primary_lens",
+      "one_line": "Attention reflects choices after the decision has completed"
+    }
+  ],
+  "core_question": "Does attention causally bias preferential choice through a multiplicative interaction with value, or does it reflect a post-decisional process?",
+  "key_assumptions": [
+    "Multiplicative models predict last fixation is more informative when overall value is high",
+    "Multiplicative models predict more attention to chosen option on preference-conflicting trials",
+    "Food-choice tasks index value-based decision processes"
+  ],
+  "manipulations": [
+    "Reanalysis of food-choice task data",
+    "Compared trials by overall value of alternatives",
+    "Compared choices conflicting vs consistent with stated preferences"
+  ],
+  "key_findings": [
+    "No evidence that last fixation was more informative when overall value was high",
+    "No evidence of greater attention to chosen option on preference-conflicting trials",
+    "A post-decisional attention model explains last-fixation bias and gaze-cascade effect",
+    "Post-decisional model captures overall-value effects on response times"
+  ],
+  "interpretations": [
+    "Multiplicative attention-value and recent normative gaze models are inconsistent with the data",
+    "Attention reflects choices after the decision has completed rather than driving them"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "preferential choice",
+    "gaze-cascade effect",
+    "last-fixation bias",
+    "attentional drift-diffusion model",
+    "post-decisional attention",
+    "food-choice task",
+    "value-based decision-making",
+    "eye fixations and choice"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "eb9902c9ffe09ce2ea408cf6f2691108",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

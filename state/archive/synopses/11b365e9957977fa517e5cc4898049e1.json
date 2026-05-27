@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "neural adaptation",
+      "role": "primary_lens",
+      "one_line": "Recent stimulus history reshapes encoding gain and noise correlations in MT."
+    },
+    {
+      "name": "population decoding",
+      "role": "primary_lens",
+      "one_line": "Single-trial decoding links adapted population activity to perceptual bias."
+    },
+    {
+      "name": "direction aftereffect",
+      "role": "extended",
+      "one_line": "Repulsive perceptual bias predicted from adaptation-induced population shifts."
+    }
+  ],
+  "core_question": "How does brief, continuous adaptation reshape MT population codes to produce persistent perceptual biases for visual motion?",
+  "key_assumptions": [
+    "Encoding changes that go uncorrected by the decoder produce perceptual bias",
+    "Simultaneously recorded MT neurons approximate the population code for motion direction",
+    "Direction selectivity organizes adaptation effects across the population"
+  ],
+  "manipulations": [
+    "Direction of the adapting stimulus relative to each neuron's preferred direction",
+    "Sequence of motion directions changing every 500 ms",
+    "Time elapsed since the adapting stimulus"
+  ],
+  "key_findings": [
+    "0.5 s of adaptation altered encoding for up to 2 s",
+    "Response gain was reduced for neurons preferring directions near the adapter",
+    "Spike-count correlations dropped between pairs tuned near the adapting direction",
+    "Single-trial decoding predicted repulsive direction biases"
+  ],
+  "interpretations": [
+    "Brief adaptation induces persistent, structured changes in MT population codes",
+    "These population-level shifts account for the direction aftereffect"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "rapid adaptation",
+    "middle temporal area MT",
+    "population coding of motion direction",
+    "noise correlations",
+    "response gain reduction",
+    "direction aftereffect",
+    "repulsive perceptual bias",
+    "single-trial decoding"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "11b365e9957977fa517e5cc4898049e1",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:53:02+09:00",
+  "review_status": "auto_unreviewed"
+}

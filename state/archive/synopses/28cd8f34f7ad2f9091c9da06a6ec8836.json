@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "limited resource model of visual working memory",
+      "role": "primary_lens",
+      "one_line": "Memory capacity is a continuous resource shared dynamically across items"
+    },
+    {
+      "name": "fixed-slot (item-limit) model",
+      "role": "compared_against",
+      "one_line": "Capacity as a discrete fixed number (~4) of stored objects"
+    },
+    {
+      "name": "selective attention allocation",
+      "role": "extended",
+      "one_line": "Attention biases distribution of memory resource across scene items"
+    }
+  ],
+  "core_question": "Is visual working memory limited by a fixed number of items or by a flexibly shared resource?",
+  "key_assumptions": [
+    "Recall precision indexes the amount of resource allocated to an item",
+    "Resource allocation can be measured per-item in a multi-item scene",
+    "Eye-movement targets and attended items receive prioritized allocation"
+  ],
+  "manipulations": [
+    "Varied number of items in the visual scene",
+    "Biased allocation via selective attention cues",
+    "Biased allocation via targets of upcoming eye movements"
+  ],
+  "key_findings": [
+    "Memory precision decreases as more items are added rather than capacity hitting a hard 4-item cap",
+    "Attention shifts more resource (and thus higher precision) to cued items",
+    "Saccade targets receive elevated memory resource allocation",
+    "Precision relates to allocated proportion through a simple power law"
+  ],
+  "interpretations": [
+    "Visual working memory is a dynamically shared limited resource, not a fixed slot count",
+    "Resource allocation is flexibly governed by attention and oculomotor priority"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "visual working memory",
+    "memory precision",
+    "limited resource model",
+    "fixed-slot model",
+    "selective attention",
+    "saccade target",
+    "resource allocation",
+    "power law precision"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "28cd8f34f7ad2f9091c9da06a6ec8836",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

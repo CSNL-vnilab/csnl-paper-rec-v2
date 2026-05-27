@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "information theory (KL divergence between prior and posterior beliefs)",
+      "role": "primary_lens",
+      "one_line": "pupil dilation indexes Bayesian belief update size during cognitive processing"
+    },
+    {
+      "name": "evidence accumulation / decision making",
+      "role": "extended",
+      "one_line": "summed KL divergences over the accumulation process explain uncertainty-related dilation"
+    },
+    {
+      "name": "arousal modulation of pupil",
+      "role": "context",
+      "one_line": "pupil as classical index of cognitive arousal under constant illumination"
+    }
+  ],
+  "core_question": "Can a single information-theoretic quantity unify the diverse cognitive correlates of pupil dilation?",
+  "key_assumptions": [
+    "illumination is held constant so pupil reflects cognition not light",
+    "the brain maintains and updates an internal probabilistic model",
+    "belief updating can be quantified by KL divergence (prior vs posterior)"
+  ],
+  "manipulations": [
+    "stimulus informativeness about itself",
+    "stimulus informativeness about other task variables",
+    "decision uncertainty during evidence accumulation"
+  ],
+  "key_findings": [
+    "pupil response scales with stimulus self-information",
+    "pupil response scales with information the stimulus provides about other task variables",
+    "uncertainty-related dilation tracks summed KL divergences across the accumulation process"
+  ],
+  "interpretations": [
+    "diverse cognitive correlates of pupil dilation share a common denominator: KL-divergence belief updates",
+    "pupil-uncertainty link arises from wandering of evidence accumulation producing larger cumulative belief updates"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "pupil dilation",
+    "KL divergence",
+    "information gain",
+    "Bayesian belief update",
+    "evidence accumulation",
+    "decision uncertainty",
+    "internal model update",
+    "arousal and cognition"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "b2e0bec75e285b9dd33a3be1a1afd56f",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:53:02+09:00",
+  "review_status": "auto_unreviewed"
+}

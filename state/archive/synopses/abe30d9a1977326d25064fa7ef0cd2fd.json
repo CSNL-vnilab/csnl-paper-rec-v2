@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "neural variability quenching",
+      "role": "primary_lens",
+      "one_line": "Post-stimulus reduction of trial-to-trial variability in cortical populations"
+    },
+    {
+      "name": "stimulus-induced oscillatory power suppression",
+      "role": "primary_lens",
+      "one_line": "Alpha-beta band power decreases after stimulus onset"
+    },
+    {
+      "name": "cortical population oscillations",
+      "role": "extended",
+      "one_line": "Band-limited oscillations couple to single-trial variability structure"
+    }
+  ],
+  "core_question": "Are trial-by-trial variability quenching and stimulus-induced oscillatory power suppression tightly coupled in large cortical populations?",
+  "key_assumptions": [
+    "MEG reflects activity of large cortical neural populations",
+    "Trial-to-trial variability and oscillatory power can be decomposed by frequency band",
+    "Across-trial standard deviation indexes neural variability"
+  ],
+  "manipulations": [
+    "Repeated presentations of a visual stimulus to healthy subjects",
+    "Selective exclusion of the alpha-beta band from the recordings",
+    "Selective exclusion of other frequency bands as control"
+  ],
+  "key_findings": [
+    "Timing, amplitude, and spatial topography of variability-quenching and power-suppression were remarkably similar",
+    "Excluding the alpha-beta band eliminated variability quenching",
+    "Excluding other frequency bands did not eliminate variability quenching",
+    "Alpha-beta band power explained 86% of between-subject differences in variability quenching"
+  ],
+  "interpretations": [
+    "Variability quenching and oscillatory power suppression are tightly coupled, likely reflecting a shared cortical mechanism",
+    "Alpha-beta oscillations are the principal driver of trial-by-trial neural variability in large populations"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "trial-by-trial variability",
+    "variability quenching",
+    "alpha-beta band power",
+    "stimulus-induced power suppression",
+    "MEG cortical oscillations",
+    "between-subject variability",
+    "visual stimulus response",
+    "neural population dynamics"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "abe30d9a1977326d25064fa7ef0cd2fd",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

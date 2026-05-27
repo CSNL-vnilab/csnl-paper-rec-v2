@@ -1,0 +1,52 @@
+{
+  "frameworks": [
+    {
+      "name": "economic decision-making under uncertainty (risk vs ambiguity)",
+      "role": "primary_lens",
+      "one_line": "distinguishes preferences under known vs unknown outcome probabilities"
+    },
+    {
+      "name": "cumulative lifetime stressor exposure (STRAIN)",
+      "role": "extended",
+      "one_line": "links psychosocial stress history to ambiguity-aversion individual differences"
+    }
+  ],
+  "core_question": "Does cumulative lifetime stressor exposure predict individual differences in ambiguity aversion?",
+  "key_assumptions": [
+    "risk and ambiguity preferences are dissociable economic constructs",
+    "STRAIN validly quantifies lifetime stressor exposure",
+    "early-life stressors are separable from later-life stressors"
+  ],
+  "manipulations": [
+    "outcome-probability information (known = risk vs unknown = ambiguity)",
+    "lifetime stressor exposure measured across early and later life"
+  ],
+  "key_findings": [
+    "greater lifetime stressor exposure associated with higher ambiguity aversion",
+    "early-life stressor exposure was particularly predictive",
+    "stressor exposure did not predict risk preferences",
+    "effect replicated across two independent studies"
+  ],
+  "interpretations": [
+    "cumulative psychosocial stress is an individual-difference factor specifically shaping aversion to unknown probabilities",
+    "ambiguity aversion and risk aversion have distinct origins in stress history"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "ambiguity aversion",
+    "risk preferences",
+    "decision-making under uncertainty",
+    "lifetime stressor exposure",
+    "early-life stress",
+    "individual differences",
+    "STRAIN inventory",
+    "economic decision-making"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "9537e6eb5d59c415a57e8a634d0b7a08",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:53:02+09:00",
+  "review_status": "auto_unreviewed"
+}

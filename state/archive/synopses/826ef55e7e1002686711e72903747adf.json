@@ -1,0 +1,64 @@
+{
+  "frameworks": [
+    {
+      "name": "collinear lateral inhibition",
+      "role": "primary_lens",
+      "one_line": "Flanking Gabors reduce detectability of peripheral target via inhibitory interaction"
+    },
+    {
+      "name": "transcranial direct current stimulation (a-tDCS)",
+      "role": "primary_lens",
+      "one_line": "Anodal V1 stimulation used to modulate cortical excitability"
+    },
+    {
+      "name": "perceptual learning",
+      "role": "context",
+      "one_line": "Cited as the slow alternative route to reducing lateral inhibition"
+    },
+    {
+      "name": "visual crowding",
+      "role": "context",
+      "one_line": "Possible behavioral consequence linked to peripheral lateral inhibition"
+    }
+  ],
+  "core_question": "Can a single session of anodal V1 tDCS reduce collinear lateral inhibition in normal peripheral vision?",
+  "key_assumptions": [
+    "Collinear flankers at 2 wavelengths induce lateral inhibition; 6 wavelengths serves as control",
+    "Anodal tDCS over V1 modulates primary visual cortex excitability",
+    "Contrast detection thresholds index lateral inhibition strength",
+    "Sham stimulation provides an appropriate within-subject control"
+  ],
+  "manipulations": [
+    "Real anodal tDCS vs sham stimulation (within-subject, single-masked)",
+    "Flanker separation (2 wavelengths inhibition vs 6 wavelengths control)",
+    "Peripheral stimulus location 6 degrees from fixation",
+    "Single 20-minute stimulation session"
+  ],
+  "key_findings": [
+    "Anodal tDCS significantly reduced detection thresholds at 2 wavelength separation",
+    "Sham stimulation produced no effect on detection thresholds",
+    "Effect was specific to the lateral inhibition condition"
+  ],
+  "interpretations": [
+    "Short anodal V1 tDCS can rapidly reduce collinear lateral inhibition in peripheral vision",
+    "tDCS offers a faster alternative to intensive perceptual learning for modulating peripheral suppression"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "collinear lateral inhibition",
+    "peripheral vision",
+    "anodal tDCS",
+    "primary visual cortex excitability",
+    "contrast detection threshold",
+    "Gabor flankers",
+    "visual crowding",
+    "perceptual learning alternative"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "826ef55e7e1002686711e72903747adf",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}
