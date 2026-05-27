@@ -1,0 +1,62 @@
+{
+  "frameworks": [
+    {
+      "name": "linear/nonlinear neuronal pooling",
+      "role": "primary_lens",
+      "one_line": "MT responses pooled linearly with trainable weights followed by fixed power-law nonlinearity"
+    },
+    {
+      "name": "selective readout of sensory neurons",
+      "role": "extended",
+      "one_line": "learning sharpens weighting toward neurons most sensitive to the trained stimulus"
+    },
+    {
+      "name": "ideal-observer / neurometric analysis",
+      "role": "compared_against",
+      "one_line": "single-neuron neurometric functions used to benchmark psychometric improvements"
+    },
+    {
+      "name": "perceptual learning",
+      "role": "context",
+      "one_line": "long-lasting improvement in discriminating simple sensory stimuli"
+    }
+  ],
+  "core_question": "How do the threshold and slope of psychometric functions co-vary during perceptual learning, and what pooling scheme explains the divergence from neurometric functions?",
+  "key_assumptions": [
+    "MT neurons carry sensory information used for direction discrimination",
+    "MT response properties themselves do not change with training",
+    "perceptual readout can be modelled as weighted pooling plus a fixed nonlinearity"
+  ],
+  "manipulations": [
+    "amount of training on a direction-discrimination task",
+    "comparison of psychometric vs neurometric thresholds and slopes",
+    "varying linear pooling weights in the model"
+  ],
+  "key_findings": [
+    "training lowered psychometric thresholds and slightly shallowed psychometric slopes",
+    "the threshold-slope relationship was much weaker in MT neurometric functions",
+    "MT response properties did not change with training"
+  ],
+  "interpretations": [
+    "learning changes linear pooling weights to read out the most sensitive MT neurons",
+    "a fixed power-law nonlinearity makes the psychometric slope shallower as uninformative neurons are dropped"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "perceptual learning",
+    "psychometric function slope",
+    "neurometric function",
+    "direction discrimination",
+    "middle temporal area MT",
+    "selective neuronal readout",
+    "linear-nonlinear pooling",
+    "threshold-slope relationship"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "f17f9b779d9e504f33e7f056a9e299d9",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

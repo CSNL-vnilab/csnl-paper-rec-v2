@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "adaptive gain control",
+      "role": "primary_lens",
+      "one_line": "Single gain-modulation mechanism explains distraction across decision domains."
+    },
+    {
+      "name": "divisive normalization",
+      "role": "context",
+      "one_line": "Adaptive gain framing related to normalization of competing inputs."
+    },
+    {
+      "name": "decision variable / value-based choice",
+      "role": "extended",
+      "one_line": "Gain-modulated decision variable indexed in dorsal cortical network."
+    }
+  ],
+  "core_question": "Can a single adaptive gain-control model unify distraction effects across perceptual, cognitive and value-based decisions?",
+  "key_assumptions": [
+    "Distraction shares a common computational substrate across domains",
+    "Adaptive gain modulates how irrelevant information enters the decision variable",
+    "dACC tracks the model's decision variable"
+  ],
+  "manipulations": [
+    "Decision domain (perceptual, cognitive, economic)",
+    "Eriksen flanker task variants",
+    "Irrelevant/distractor information presence and structure"
+  ],
+  "key_findings": [
+    "Adaptive gain model accounts for tilt illusion, conflict adaptation, and decoy effects",
+    "Model predicts counterintuitive new behaviour on flanker task variants",
+    "BOLD signals in dorsal network including dACC track gain-modulated decision variable"
+  ],
+  "interpretations": [
+    "Distraction across perceptual, cognitive and economic choice reflects a shared adaptive gain mechanism",
+    "dACC implements a gain-modulated decision variable predicted by the unified model"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "adaptive gain control",
+    "distraction",
+    "Eriksen flanker task",
+    "conflict adaptation",
+    "tilt illusion",
+    "decoy effects",
+    "value-guided choice",
+    "anterior cingulate cortex"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "1ea7b0e579b31af9479de3d4523ac0ed",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:54:36+09:00",
+  "review_status": "auto_unreviewed"
+}

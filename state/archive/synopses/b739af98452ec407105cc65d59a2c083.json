@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "Bayesian ideal observer",
+      "role": "primary_lens",
+      "one_line": "Trial-by-trial inference over event-timing statistics yielding surprise estimates"
+    },
+    {
+      "name": "probabilistic inference of environmental statistics",
+      "role": "context",
+      "one_line": "Frames adaptive behavior as tracking latent structure"
+    },
+    {
+      "name": "neuromodulatory phasic-response account",
+      "role": "context",
+      "one_line": "Brainstem systems broadcast surprise signals to cortex"
+    }
+  ],
+  "core_question": "Where and when in cortex does surprise about sensory event timing modulate population activity?",
+  "key_assumptions": [
+    "Observers track timing statistics via probabilistic inference",
+    "Bayesian ideal-observer model approximates trial-by-trial surprise",
+    "Beta-band MEG power indexes cortical population activity"
+  ],
+  "manipulations": [
+    "Interval timing of changes in a simple visual detection task",
+    "Model-derived trial-by-trial temporal surprise versus raw interval"
+  ],
+  "key_findings": [
+    "Model surprise predicted reaction-time variation better than observed intervals",
+    "Surprise correlated negatively with cortical population power",
+    "Power suppression was transient around response, specific to beta band",
+    "Effect peaked in parietal and prefrontal cortex, distinct from motor beta suppression"
+  ],
+  "interpretations": [
+    "Temporal surprise drives transient parietal/prefrontal beta suppression",
+    "Surprise-related cortical transients are dissociable from motor report signals"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "temporal surprise",
+    "Bayesian ideal observer",
+    "event-timing statistics",
+    "beta-band suppression",
+    "MEG population activity",
+    "parietal and prefrontal cortex",
+    "trial-by-trial reaction time",
+    "probabilistic inference"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "b739af98452ec407105cc65d59a2c083",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:54:36+09:00",
+  "review_status": "auto_unreviewed"
+}

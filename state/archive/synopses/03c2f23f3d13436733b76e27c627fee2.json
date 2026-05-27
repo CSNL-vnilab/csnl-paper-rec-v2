@@ -1,0 +1,62 @@
+{
+  "frameworks": [
+    {
+      "name": "approximate object representation (body vs shape)",
+      "role": "primary_lens",
+      "one_line": "simplified body approximations support physical reasoning, distinct from fine-grained shape representations"
+    },
+    {
+      "name": "intuitive physics / mental simulation",
+      "role": "extended",
+      "one_line": "people predict physical behavior using engineer-style real-time simulation approximations"
+    },
+    {
+      "name": "convex-hull approximation",
+      "role": "compared_against",
+      "one_line": "body representation lies between convex hulls and fine-grained shapes"
+    },
+    {
+      "name": "classical psychophysics (causality, collision, change detection)",
+      "role": "context",
+      "one_line": "three classic paradigms repurposed to dissociate body from shape"
+    }
+  ],
+  "core_question": "Do people rely on simplified body approximations rather than fine-grained shape when reasoning about physical behavior of objects?",
+  "key_assumptions": [
+    "tracking/action and recognition use distinct object representations",
+    "real-time physical prediction requires principled approximations",
+    "body and shape can be dissociated experimentally"
+  ],
+  "manipulations": [
+    "task type (causality perception, collision detection, change detection)",
+    "settings designed to dissociate body from shape",
+    "stimulus geometry varying between convex hulls and fine-grained shapes"
+  ],
+  "key_findings": [
+    "behavior across tasks indicates reliance on approximate bodies for physical reasoning",
+    "the body approximation lies between convex hulls and fine-grained shapes",
+    "body and shape representations dissociate across the three tasks"
+  ],
+  "interpretations": [
+    "physical reasoning uses an approximate body representation distinct from recognition shape",
+    "human approximations parallel engineer-developed real-time simulation models"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "intuitive physics",
+    "object representation",
+    "physical reasoning",
+    "causality perception",
+    "collision detection",
+    "change detection",
+    "convex hull approximation",
+    "body versus shape"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "03c2f23f3d13436733b76e27c627fee2",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

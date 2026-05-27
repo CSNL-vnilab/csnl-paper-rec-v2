@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "event schema / situation model",
+      "role": "primary_lens",
+      "one_line": "high-level situation model abstracts narrative events using schematic scripts"
+    },
+    {
+      "name": "Hidden Markov Model",
+      "role": "extended",
+      "one_line": "HMM used to identify and align schematic event states in fMRI patterns"
+    },
+    {
+      "name": "event segmentation theory",
+      "role": "context",
+      "one_line": "narrative comprehension as segmentation into discrete events"
+    }
+  ],
+  "core_question": "Which brain regions represent abstract event schemas that generalize across stories, modalities, and subjects during narrative perception?",
+  "key_assumptions": [
+    "comprehension depends on prior knowledge of schematic event scripts",
+    "schematic representations abstract away from perceptual surface details",
+    "shared script structure produces shared neural patterns across stories"
+  ],
+  "manipulations": [
+    "script category (restaurant vs airport)",
+    "presentation modality (audiovisual clips vs spoken narration)",
+    "temporal order (intact sequence vs scrambled events)"
+  ],
+  "key_findings": [
+    "posterior medial cortex, mPFC, and superior frontal gyrus show schematic event patterns generalizing across stories, subjects, and modalities",
+    "HMM-derived patterns predict the underlying script of unlabeled data with high accuracy",
+    "shared schematic patterns enable temporal alignment of multiple stories with a common script"
+  ],
+  "interpretations": [
+    "these regions encode abstract event schemas independent of surface narrative form",
+    "schematic scripts shape neural representations during real-world narrative perception"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "event schemas",
+    "situation model",
+    "narrative perception",
+    "Hidden Markov Model",
+    "posterior medial cortex",
+    "medial prefrontal cortex",
+    "script knowledge",
+    "cross-modal neural alignment"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "224d513fc3bb5cb9c39c44dbcc85e55d",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}

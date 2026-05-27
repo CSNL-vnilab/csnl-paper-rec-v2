@@ -1,0 +1,56 @@
+{
+  "frameworks": [
+    {
+      "name": "Bayesian canonical correlation analysis",
+      "role": "primary_lens",
+      "one_line": "latent-variable model linking image pixels to fMRI voxels for modular encoding/decoding"
+    },
+    {
+      "name": "modular encoding/decoding of fMRI",
+      "role": "extended",
+      "one_line": "decomposes complex stimuli into elements via data-driven modules instead of hand-crafted bases"
+    },
+    {
+      "name": "multiscale local image bases",
+      "role": "compared_against",
+      "one_line": "prior approach used heuristically determined image-basis shapes for reconstruction"
+    }
+  ],
+  "core_question": "Can encoding and decoding modules between visual stimuli and fMRI activity be extracted automatically from data instead of being hand-designed?",
+  "key_assumptions": [
+    "stimuli and brain activity share latent variables relating pixel sets to voxel sets",
+    "complex stimuli can be represented as combinations of simple elements",
+    "linear latent mappings suffice for stimulus-brain correspondence"
+  ],
+  "manipulations": [
+    "automatic extraction of modules from data versus heuristic image bases",
+    "use of estimated mappings to build both encoding and decoding models"
+  ],
+  "key_findings": [
+    "the model recovers a modular representation with spatially localized multiscale image bases",
+    "estimated latent-to-pixel mappings function as data-driven image bases",
+    "resulting encoding and decoding models produce accurate predictions of brain activity and stimulus images"
+  ],
+  "interpretations": [
+    "Bayesian CCA can automatically learn stimulus-brain modular mappings comparable to hand-crafted bases",
+    "shared latent variables provide a unified basis for both encoding and decoding"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "Bayesian canonical correlation analysis",
+    "fMRI encoding model",
+    "fMRI decoding model",
+    "image reconstruction from brain activity",
+    "latent variable model",
+    "modular representation",
+    "multiscale image bases",
+    "stimulus-brain mapping"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "ae68684aa94aa7a5ecb0c76701b106f5",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}

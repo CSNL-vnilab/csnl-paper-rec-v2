@@ -1,0 +1,62 @@
+{
+  "frameworks": [
+    {
+      "name": "rhythmic content representation",
+      "role": "primary_lens",
+      "one_line": "visual brain rhythms carry stimulus content, not only modulate gain"
+    },
+    {
+      "name": "multivariate decoding of oscillatory signals",
+      "role": "primary_lens",
+      "one_line": "frequency-resolved decoding disentangles feedforward and feedback content"
+    },
+    {
+      "name": "alpha-band feedback propagation",
+      "role": "extended",
+      "one_line": "alpha dynamics support content-specific top-down signaling in visual cortex"
+    },
+    {
+      "name": "predictive / generative vision (perception, imagery, prediction)",
+      "role": "context",
+      "one_line": "framework where internally generated content shapes visual processing"
+    }
+  ],
+  "core_question": "Do rhythmic neural signals in the visual system represent and communicate specific visual content, beyond modulating responses?",
+  "key_assumptions": [
+    "neural oscillations carry decodable content, not just gain",
+    "different frequency bands index different directional pathways",
+    "feedforward and feedback content can be separated by band"
+  ],
+  "manipulations": [
+    "comparison across visual tasks: perception, imagery, prediction",
+    "multivariate decoding across frequency bands",
+    "contrast of feedforward vs feedback signal directions"
+  ],
+  "key_findings": [
+    "rhythmic signals carry decodable content during perception, imagery, and prediction",
+    "frequency bands distinguish feedforward from feedback content transfer",
+    "alpha-band activity preferentially carries content-specific feedback signals"
+  ],
+  "interpretations": [
+    "visual rhythms function as a channel for content representation and routing",
+    "alpha dynamics are central to top-down content propagation in vision"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "neural oscillations",
+    "alpha rhythm",
+    "multivariate decoding",
+    "feedforward feedback",
+    "visual imagery",
+    "visual prediction",
+    "content-specific representation",
+    "rhythmic communication"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "d4b0ce8e19a042b3544c8b326f1b66ad",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}

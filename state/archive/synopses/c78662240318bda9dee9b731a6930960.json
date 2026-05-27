@@ -1,0 +1,55 @@
+{
+  "frameworks": [
+    {
+      "name": "divisive normalization",
+      "role": "primary_lens",
+      "one_line": "canonical neural computation rescaling choice values by context"
+    },
+    {
+      "name": "efficient coding",
+      "role": "context",
+      "one_line": "DN as efficient encoder of Pareto-distributed stimuli"
+    },
+    {
+      "name": "environment-matched encoding",
+      "role": "extended",
+      "one_line": "subjects recalibrate DN parameters to fit each environment's statistics"
+    }
+  ],
+  "core_question": "Does the brain switch encoding functions across choice environments, or does divisive normalization persist outside Pareto-distributed contexts?",
+  "key_assumptions": [
+    "choice values are encoded through a divisive computation",
+    "encoding can be calibrated to environmental stimulus statistics",
+    "within-subject design isolates environment effects on choice"
+  ],
+  "manipulations": [
+    "choice-set value distribution: Pareto vs uniform",
+    "within-subject exposure to two distinct environments"
+  ],
+  "key_findings": [
+    "subjects' choices are better described by divisive coding in both environments",
+    "DN function is recalibrated to match each environment's statistical properties"
+  ],
+  "interpretations": [
+    "divisive normalization generalizes beyond Pareto stimuli to other choice environments",
+    "the brain adapts DN parameters rather than swapping encoding strategies"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "divisive normalization",
+    "value coding",
+    "choice environment",
+    "Pareto distribution",
+    "uniform distribution",
+    "context-dependent choice",
+    "efficient representation",
+    "canonical neural computation"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "c78662240318bda9dee9b731a6930960",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}
