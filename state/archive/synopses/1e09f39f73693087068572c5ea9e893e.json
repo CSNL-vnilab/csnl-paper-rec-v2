@@ -1,0 +1,50 @@
+{
+  "frameworks": [
+    {
+      "name": "serial dependence",
+      "role": "primary_lens",
+      "one_line": "current percepts are attracted toward recently seen stimuli"
+    },
+    {
+      "name": "feature binding",
+      "role": "primary_lens",
+      "one_line": "object representation as a conjunction of multiple features"
+    }
+  ],
+  "core_question": "Does serial dependence operate at the level of individual features, integrated objects, or both?",
+  "key_assumptions": [
+    "perceptual reports reflect attraction toward recent stimuli",
+    "objects can be decomposed into bound features (shape, emotional expression)"
+  ],
+  "manipulations": [
+    "reported feature: shape vs emotional expression",
+    "feature composition of the object across trials"
+  ],
+  "key_findings": [
+    "reports of both shape and emotional expression were attracted toward recently seen stimuli",
+    "serial dependence arose at the feature level and at the integrated-object level",
+    "shape serial dependence was largely independent of other co-defining features",
+    "emotional-expression serial dependence operated on the object-level conjunction"
+  ],
+  "interpretations": [
+    "the level at which serial dependence operates depends on the feature/object type",
+    "perceptual history bias can attach to features or to bound object representations"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "serial dependence",
+    "feature binding",
+    "object representation",
+    "shape perception",
+    "emotional expression",
+    "perceptual history",
+    "feature-level vs object-level attraction"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "1e09f39f73693087068572c5ea9e893e",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:23:12+09:00",
+  "review_status": "auto_unreviewed"
+}

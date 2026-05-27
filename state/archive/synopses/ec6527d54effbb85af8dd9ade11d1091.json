@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "efficient coding",
+      "role": "primary_lens",
+      "one_line": "Partial whitening of correlated task variables across neural population modes."
+    },
+    {
+      "name": "neural population coding",
+      "role": "primary_lens",
+      "one_line": "Population modes, not single neurons, as the unit of representation."
+    },
+    {
+      "name": "sequential neural dynamics",
+      "role": "extended",
+      "one_line": "Random sequential activity used as a temporal scaffold for time-dependent encoding."
+    }
+  ],
+  "core_question": "How can multiple correlated task variables be represented simultaneously in cortex without interference and updated through time?",
+  "key_assumptions": [
+    "Population modes are the relevant encoding unit, not individual neurons",
+    "Task variables can be correlated yet must be jointly decodable",
+    "Sequential dynamics can serve as a temporal substrate for stable encoding"
+  ],
+  "manipulations": [
+    "Multiple interrelated task variables varied within a dynamic behavioural task",
+    "Task-variable correlations change throughout the trial"
+  ],
+  "key_findings": [
+    "Highly correlated task variables map onto less-correlated neural population modes",
+    "Pairs of neurons show a spectrum of signal correlations",
+    "Different variables are encoded with different signal-to-noise levels (partial whitening)",
+    "The encoding function is multiplexed with sequential neural dynamics and tracks changing task-variable correlations"
+  ],
+  "interpretations": [
+    "Cortex implements an efficient, partially-whitened population code at the level of modes",
+    "Random sequential dynamics provide a simple temporal scaffold for time-dependent encoding"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "efficient coding",
+    "population modes",
+    "signal correlations",
+    "partial whitening",
+    "sequential dynamics",
+    "multiplexed encoding",
+    "posterior cortex",
+    "task variable representation"
+  ],
+  "abstract_coverage": 1.0,
+  "out_of_scope_note": null,
+  "canonical_id": "ec6527d54effbb85af8dd9ade11d1091",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:23:12+09:00",
+  "review_status": "auto_unreviewed"
+}

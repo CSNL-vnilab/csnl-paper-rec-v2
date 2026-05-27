@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "resting-state functional connectivity",
+      "role": "primary_lens",
+      "one_line": "intrinsic correlation between BOLD signals in retinotopically defined sub-regions"
+    },
+    {
+      "name": "partial correlation analysis",
+      "role": "extended",
+      "one_line": "isolates direct pairwise coupling by regressing out shared network effects"
+    },
+    {
+      "name": "retinotopic mapping",
+      "role": "primary_lens",
+      "one_line": "subdivides V1/V2/V3 by quadrant and eccentricity for fine-grained ROI definition"
+    },
+    {
+      "name": "critical-period plasticity",
+      "role": "context",
+      "one_line": "altered childhood visual experience reshapes adult visual cortex"
+    }
+  ],
+  "core_question": "Does amblyopia alter short-range retinotopically organized functional connectivity within early visual cortex?",
+  "key_assumptions": [
+    "early visual areas can be meaningfully subdivided by quadrant and eccentricity",
+    "partial correlation reveals direct connectivity beyond network-wide effects",
+    "resting-state BOLD reflects intrinsic functional architecture"
+  ],
+  "manipulations": [
+    "group: amblyopic vs normal-vision subjects",
+    "ROI scale: sub-area retinotopic patches within V1, V2, V3",
+    "connectivity metric: full vs partial correlation"
+  ],
+  "key_findings": [
+    "only partial (not full) correlation distinguished groups",
+    "amblyopes showed higher V1 partial correlation between para-foveal and peripheral representations",
+    "this para-foveal-peripheral effect correlated with poorer acuity of the worse eye",
+    "amblyopes showed reduced V1-V2 and V2-V3 connectivity between isoeccentric regions"
+  ],
+  "interpretations": [
+    "abnormal retinotopically organized intra- and inter-area coupling characterizes amblyopic visual cortex",
+    "fine-scale partial-correlation analysis reveals deficits invisible to coarse or full-correlation measures"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "amblyopia",
+    "retinotopic mapping",
+    "partial correlation",
+    "resting-state fMRI",
+    "functional connectivity",
+    "V1 V2 V3",
+    "eccentricity representation",
+    "visual cortex plasticity"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "7df13310a5351a872543253a7d04a5f0",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:23:12+09:00",
+  "review_status": "auto_unreviewed"
+}

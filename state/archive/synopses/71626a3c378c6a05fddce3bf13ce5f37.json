@@ -1,0 +1,54 @@
+{
+  "frameworks": [
+    {
+      "name": "evidence accumulation",
+      "role": "primary_lens",
+      "one_line": "Observer integrates sensory evidence over an adjustable temporal window."
+    },
+    {
+      "name": "perceptual confidence",
+      "role": "extended",
+      "one_line": "Confidence read-out uses the same task-adapted timescale as the decision."
+    },
+    {
+      "name": "change detection",
+      "role": "context",
+      "one_line": "Auditory change-point task probes timescale of evidence weighting."
+    }
+  ],
+  "core_question": "Do people adapt the timescale of evidence evaluation for both decisions and confidence to the expected signal duration of the task?",
+  "key_assumptions": [
+    "Decisions reflect temporal integration of relevant evidence",
+    "Confidence is derived from the same evidence stream as the decision",
+    "Task context can shift the integration window"
+  ],
+  "manipulations": [
+    "Expected signal duration (short vs longer) across contexts",
+    "Auditory change-detection setting (extending prior visual results)"
+  ],
+  "key_findings": [
+    "Shorter signal-duration contexts yield shorter evidence-evaluation timescales for change detection",
+    "Confidence judgments also adopt correspondingly shorter timescales in short-duration contexts",
+    "Effects hold in model-free analyses and generalize to the auditory domain"
+  ],
+  "interpretations": [
+    "Both decision and confidence evidence weighting are flexibly tuned to task demands"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "timescale of evidence evaluation",
+    "auditory change detection",
+    "perceptual confidence",
+    "task-adapted integration window",
+    "signal duration context",
+    "evidence weighting",
+    "metacognition"
+  ],
+  "abstract_coverage": 1.0,
+  "out_of_scope_note": null,
+  "canonical_id": "71626a3c378c6a05fddce3bf13ce5f37",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:23:12+09:00",
+  "review_status": "auto_unreviewed"
+}
