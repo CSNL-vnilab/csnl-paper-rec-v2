@@ -1,0 +1,59 @@
+{
+  "frameworks": [
+    {
+      "name": "serial dependence",
+      "role": "primary_lens",
+      "one_line": "current input blends with recent past to promote perceptual stability"
+    },
+    {
+      "name": "visual working memory",
+      "role": "extended",
+      "one_line": "memory delay is the locus where past-present blending emerges"
+    },
+    {
+      "name": "adaptation",
+      "role": "compared_against",
+      "one_line": "repulsive bias dominates immediately after perception, opposite of attractive bias"
+    }
+  ],
+  "core_question": "Does serial dependence arise at the moment of perception or during post-perceptual working memory?",
+  "key_assumptions": [
+    "temporal autocorrelation of natural scenes motivates a stability mechanism",
+    "spatial delayed-response task isolates perception vs memory contributions",
+    "behavioral bias indexes the underlying representational state"
+  ],
+  "manipulations": [
+    "delay between stimulus and response varied parametrically",
+    "trial-to-trial inducer-target relationships across the delay axis"
+  ],
+  "key_findings": [
+    "immediate responses show adaptation but no attractive serial dependence",
+    "attractive blending emerges only as the memory period lengthens",
+    "the attractive effect peaks around a six-second delay",
+    "relative strengths of adaptation and serial dependence vary widely across individuals"
+  ],
+  "interpretations": [
+    "serial dependence is a mnemonic rather than perceptual phenomenon",
+    "stability across views is implemented in working memory, not early perception"
+  ],
+  "limitations_noted": [
+    "large individual variability in adaptation vs serial-dependence balance"
+  ],
+  "connecting_signals": [
+    "serial dependence",
+    "visual working memory",
+    "delayed response task",
+    "perceptual adaptation",
+    "temporal autocorrelation",
+    "mnemonic blending",
+    "individual differences",
+    "perceptual stability"
+  ],
+  "abstract_coverage": 1.0,
+  "out_of_scope_note": null,
+  "canonical_id": "5ec8fbeb2c9c59764a7929c0001ce84e",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:29:57+09:00",
+  "review_status": "auto_unreviewed"
+}

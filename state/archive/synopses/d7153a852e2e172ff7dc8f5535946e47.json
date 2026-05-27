@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "latent-state generative model with reward-gated modulation",
+      "role": "primary_lens",
+      "one_line": "reward outcome gates how the latent environment model influences the current choice"
+    },
+    {
+      "name": "sequential-sampling transition bias",
+      "role": "extended",
+      "one_line": "trial-to-trial repeat/alternate bias extended with an outcome-dependent gate"
+    },
+    {
+      "name": "reinforcement-learning style outcome modulation",
+      "role": "context",
+      "one_line": "previous-trial reward signal modulates use of internal expectations"
+    }
+  ],
+  "core_question": "Can the impact of expectations on perceptual decisions be flexibly modulated by the outcome of the previous decision?",
+  "key_assumptions": [
+    "subjects maintain an internal estimate of stimulus-sequence repeating probability",
+    "expectations and sensory evidence combine to drive choice",
+    "previous-trial outcome can act as a modulatory gate without resetting the internal estimate"
+  ],
+  "manipulations": [
+    "block-wise repeating probability of previous stimulus category",
+    "previous-trial outcome (correct vs error)",
+    "trial position relative to error and subsequent correct"
+  ],
+  "key_findings": [
+    "rats exploit block-wise sequence correlations via a transition bias",
+    "the transition bias is null on trials following an error",
+    "the bias re-emerges after the next correct response, indicating the internal estimate is not reset"
+  ],
+  "interpretations": [
+    "a reward-driven modulatory signal gates the impact of the latent environmental model on current decisions",
+    "expectations and their deployment are dissociable: storage of the model is preserved while its influence is gated by recent outcomes"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "transition bias",
+    "sequence correlations",
+    "previous-trial outcome",
+    "expectation modulation",
+    "reward-gated decision",
+    "latent environment model",
+    "perceptual decision-making in rats",
+    "error-driven bias suppression"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "d7153a852e2e172ff7dc8f5535946e47",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:32:24+09:00",
+  "review_status": "auto_unreviewed"
+}

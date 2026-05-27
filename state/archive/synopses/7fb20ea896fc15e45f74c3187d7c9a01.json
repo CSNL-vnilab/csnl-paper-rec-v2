@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "multivariate information analysis",
+      "role": "primary_lens",
+      "one_line": "decomposes response into contributions from current and preceding stimuli/responses"
+    },
+    {
+      "name": "models of sequential dependencies",
+      "role": "context",
+      "one_line": "framework for interpreting assimilation vs contrast effects across trials"
+    },
+    {
+      "name": "multiple regression analysis",
+      "role": "alternative_lens",
+      "one_line": "regression-based comparator applied to the same identification data"
+    }
+  ],
+  "core_question": "How do stimulus information and set size modulate sequential dependencies in absolute identification?",
+  "key_assumptions": [
+    "current response is influenced by immediately preceding stimulus and response",
+    "information-theoretic decomposition can isolate sequential contributions",
+    "sensitivity measures alone (d', transmitted information) do not capture trial-to-trial coupling"
+  ],
+  "manipulations": [
+    "stimulus information (discriminability) level",
+    "number of stimuli in the identification set",
+    "analysis method (information analysis vs multiple regression)"
+  ],
+  "key_findings": [
+    "sequential dependencies grew larger as stimulus information decreased",
+    "sequential dependencies grew larger as the number of stimuli increased",
+    "information-analysis and regression-analysis results were directly compared on the same data"
+  ],
+  "interpretations": [
+    "magnitude of sequential dependencies is governed by task difficulty factors consistent with prior literature",
+    "results constrain models of sequential dependencies in absolute identification"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "absolute identification",
+    "sequential dependencies",
+    "assimilation and contrast effects",
+    "multivariate information analysis",
+    "stimulus information",
+    "set size effect",
+    "response-to-response dependencies",
+    "information transmission"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "7fb20ea896fc15e45f74c3187d7c9a01",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:29:57+09:00",
+  "review_status": "auto_unreviewed"
+}

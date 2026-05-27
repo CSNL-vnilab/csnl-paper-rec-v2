@@ -1,0 +1,55 @@
+{
+  "frameworks": [
+    {
+      "name": "abstract categorical encoding",
+      "role": "primary_lens",
+      "one_line": "category identity encoded as internal cognitive state, dissociated from stimulus and action"
+    },
+    {
+      "name": "perceptual decision making",
+      "role": "context",
+      "one_line": "categorization framed as a tractable window into decision processes more broadly"
+    },
+    {
+      "name": "hierarchical cortical processing",
+      "role": "extended",
+      "one_line": "transformation from feature encoding to flexible category representations across cortical hierarchy"
+    }
+  ],
+  "core_question": "How are flexible, abstract category representations encoded and transformed across the primate cortical hierarchy?",
+  "key_assumptions": [
+    "categorical decisions can dissociate category identity from motor action",
+    "categories used are arbitrary, learned groupings rather than innate features",
+    "monkey single-unit physiology generalizes to primate decision circuits"
+  ],
+  "manipulations": [
+    "review of training monkeys to group visual stimuli into arbitrary categories",
+    "comparison of neural encoding across early visual, parietal, and prefrontal areas"
+  ],
+  "key_findings": [
+    "early visual areas encode stimulus features while parietal and prefrontal areas show flexible categorical representations",
+    "category signals are not rigidly tied to specific stimuli or to the action used to report the choice"
+  ],
+  "interpretations": [
+    "category representations reflect abstract internal cognitive states downstream of feature encoding",
+    "categorization provides a model paradigm for studying abstract decision variables more generally"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "visual categorization",
+    "abstract category representation",
+    "parietal cortex",
+    "prefrontal cortex",
+    "perceptual decision making",
+    "stimulus-action dissociation",
+    "primate single-unit recording",
+    "cortical hierarchy"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "c70e9f6f8817964a7cd2b992d878ccec",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:32:24+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,46 @@
+{
+  "canonical_id": "d3f4e124a8bd31ba33820b097adc0be7",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [
+    {"name": "evidence accumulation / drift-diffusion", "role": "primary_lens", "one_line": "history biases enter as drift bias (parietal) and starting-point bias (motor)"},
+    {"name": "choice history bias", "role": "primary_lens", "one_line": "idiosyncratic tendency to repeat or alternate previous perceptual choices"},
+    {"name": "persistent neural activity", "role": "extended", "one_line": "sustained band-limited cortical activity carries previous-trial information across trials"}
+  ],
+  "core_question": "Which cortical circuits produce idiosyncratic choice history biases in perceptual decisions, and how?",
+  "key_assumptions": [
+    "history biases can be decomposed into accumulation parameters (drift bias vs starting-point bias)",
+    "MEG band-limited power indexes circuit-level persistent activity",
+    "sensory stimuli are presented in random sequence so biases are endogenous"
+  ],
+  "manipulations": [
+    "previous choice identity (across consecutive trials)",
+    "previous motor action (across consecutive trials)",
+    "behavioral modeling: drift bias vs starting-point bias parameterization"
+  ],
+  "key_findings": [
+    "parietal gamma-band activity sustainedly tracks previous choice",
+    "motor beta-band activity inversely reflects previous motor action",
+    "parietal signal biases drift / evidence accumulation toward repetition; motor signal biases starting point toward alternation",
+    "parietal (not motor) signal mediates impact of previous on current choice and explains individual differences in repetition"
+  ],
+  "interpretations": [
+    "distinct parietal vs motor persistent signals implement dissociable accumulation biases",
+    "posterior parietal cortex is the locus of individual-level choice repetition bias"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "choice history bias",
+    "serial dependence in perceptual decisions",
+    "drift bias",
+    "starting-point bias",
+    "posterior parietal cortex",
+    "gamma-band persistent activity",
+    "beta-band motor activity",
+    "MEG decision dynamics"
+  ],
+  "out_of_scope_note": null,
+  "generator": "opus-4-7@2026-05-27",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "abstract_coverage": 1.0
+}

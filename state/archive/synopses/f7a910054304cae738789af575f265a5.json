@@ -1,0 +1,44 @@
+{
+  "canonical_id": "f7a910054304cae738789af575f265a5",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [
+    {"name": "serial dependence", "role": "primary_lens", "one_line": "Recent perceptual history biases current perceptual decisions."}
+  ],
+  "core_question": "Which aspects of prior perceptual decisions (sensory features, choices, or motor actions) drive serial dependence?",
+  "key_assumptions": [
+    "Serial dependence reflects a genuine perceptual/decisional bias rather than response bias alone",
+    "Low-level sensory information, choices, and motor actions can be experimentally dissociated"
+  ],
+  "manipulations": [
+    "Discriminated feature (location vs color)",
+    "Motor action mapping across prior and test (same vs different keys)",
+    "Low-level stimulus similarity (color match/mismatch) across discriminations",
+    "Relevance of prior discriminations to the test feature"
+  ],
+  "key_findings": [
+    "Location discriminations were biased toward prior choices even when reported with different motor keys",
+    "Biased priors on an irrelevant feature (color) did not substantially shift subsequent location decisions",
+    "When color was the discriminated feature, biased prior locations no longer influenced location decisions",
+    "Shared low-level stimulus and motor features did not trigger serial dependence alone but boosted it"
+  ],
+  "interpretations": [
+    "Relevance across perceptual decisions is the key driver of serial dependence",
+    "Choice-level signals, not sensory or motor traces by themselves, carry the bias"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "serial dependence",
+    "perceptual decision bias",
+    "prior choice influence",
+    "relevance of perceptual decisions",
+    "location discrimination",
+    "motor action dissociation",
+    "feature-based attention",
+    "history bias"
+  ],
+  "out_of_scope_note": null,
+  "generator": "opus-4-7@2026-05-27",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "abstract_coverage": 1.0
+}

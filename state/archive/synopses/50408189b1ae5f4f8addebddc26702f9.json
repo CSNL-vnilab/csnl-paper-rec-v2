@@ -1,0 +1,62 @@
+{
+  "frameworks": [
+    {
+      "name": "divisive normalization",
+      "role": "primary_lens",
+      "one_line": "Canonical neural gain-control rule applied to consumer valuation."
+    },
+    {
+      "name": "discrete choice model",
+      "role": "extended",
+      "one_line": "Standard discrete choice framework augmented with a normalization stage."
+    },
+    {
+      "name": "range normalization",
+      "role": "compared_against",
+      "one_line": "Alternative context-dependent valuation rule the authors test against."
+    },
+    {
+      "name": "efficient coding under neurobiological constraints",
+      "role": "context",
+      "one_line": "Motivates normalization as an error-minimizing representation."
+    }
+  ],
+  "core_question": "Can divisive normalization of valuations explain how consumer choice depends on the size and composition of the choice set?",
+  "key_assumptions": [
+    "Valuations are transformed during the choice process, not fixed a priori.",
+    "Neural representations face fixed capacity / neurobiological constraints.",
+    "Substitution patterns reveal the underlying valuation transform."
+  ],
+  "manipulations": [
+    "Size of the choice set was varied across trials.",
+    "Composition of the choice set was varied across trials.",
+    "Two distinct choice-experiment paradigms were used."
+  ],
+  "key_findings": [
+    "Choice behaviour depends jointly on choice-set size and composition.",
+    "Divisive normalization fits observed choices better than range normalization and other alternatives.",
+    "The result is robust across both experimental paradigms."
+  ],
+  "interpretations": [
+    "Divisive normalization is an efficient valuation code that minimizes choice errors given neural constraints.",
+    "Context-dependent preferences emerge from a canonical neural computation rather than ad hoc choice heuristics."
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "divisive normalization",
+    "context-dependent preferences",
+    "discrete choice model",
+    "choice set size and composition",
+    "range normalization",
+    "neuroeconomic valuation",
+    "efficient coding under neural constraints",
+    "substitution patterns"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "50408189b1ae5f4f8addebddc26702f9",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:29:57+09:00",
+  "review_status": "auto_unreviewed"
+}

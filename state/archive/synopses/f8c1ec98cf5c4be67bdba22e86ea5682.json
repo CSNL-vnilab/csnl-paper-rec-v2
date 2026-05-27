@@ -1,0 +1,48 @@
+{
+  "canonical_id": "f8c1ec98cf5c4be67bdba22e86ea5682",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [
+    {"name": "lateral intracortical connectivity", "role": "primary_lens", "one_line": "Long-distance horizontal V1 connections shape subthreshold surround responses."},
+    {"name": "psychophysical association field", "role": "extended", "one_line": "Cortical analog of collinear contour-grouping field mapped in V1 synaptic input."},
+    {"name": "top-down binding hypothesis", "role": "compared_against", "one_line": "Higher-area top-down binding contrasted with bottom-up V1 lateral integration."},
+    {"name": "dynamic association field", "role": "extended", "one_line": "Proposed motion-dependent extension of static association field at saccadic speeds."}
+  ],
+  "core_question": "Do long-distance horizontal connections in V1 mediate low-level perceptual binding of form and motion across the visual field?",
+  "key_assumptions": [
+    "subthreshold synaptic responses reveal lateral functional connectivity beyond spiking RF",
+    "anesthetized cat V1 is a valid model for low-level perceptual integration",
+    "in-phase summation of horizontal and feedforward inputs indexes facilitation"
+  ],
+  "manipulations": [
+    "oriented stimulus position across nonspiking RF surround",
+    "isolated flashes vs apparent-motion sequences",
+    "motion direction (centripetal vs centrifugal) along preferred-orientation axis",
+    "stimulus speed including saccadic-like regimes"
+  ],
+  "key_findings": [
+    "subthreshold surround responses to oriented flashes cluster geometrically around the preferred-orientation axis",
+    "this functional bias mirrors the psychophysical association field for collinear contours",
+    "apparent-motion stimuli evoke facilitatory nonlinear interactions when horizontal and feedforward inputs sum in-phase",
+    "facilitation is specific to centripetal collinear activation at saccadic-like speeds"
+  ],
+  "interpretations": [
+    "V1 lateral connectivity implements a dynamic association field binding form and motion at low level",
+    "low-level perceptual grouping does not require top-down higher-area binding"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "primary visual cortex V1",
+    "horizontal intracortical connections",
+    "association field collinear contour",
+    "subthreshold receptive field surround",
+    "intracellular recording cat area 17",
+    "apparent motion saccadic speed",
+    "centripetal collinear facilitation",
+    "form and motion binding"
+  ],
+  "out_of_scope_note": null,
+  "generator": "opus-4-7@2026-05-27",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "abstract_coverage": 1.0
+}

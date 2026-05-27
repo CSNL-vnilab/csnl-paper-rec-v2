@@ -1,0 +1,45 @@
+{
+  "canonical_id": "e79742ae7d157f8708601100c4823042",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [
+    {"name": "attentional guidance from working memory", "role": "primary_lens", "one_line": "VWM contents automatically bias visual search toward feature-matching objects"},
+    {"name": "single-item special focus / privileged state account", "role": "compared_against", "one_line": "claim that one VWM item occupies a distinct prioritized state that alone guides attention"},
+    {"name": "continuous-report mixture modeling of memory fidelity", "role": "extended", "one_line": "treats per-item representational precision as a graded variable that predicts guidance"}
+  ],
+  "core_question": "Can multiple concurrently held working-memory items guide attention, or does only the strongest-represented item do so?",
+  "key_assumptions": [
+    "VWM contents can automatically bias attention toward matching features",
+    "individual items vary in representational fidelity that can be measured per trial",
+    "guidance on a trial can be attributed to a specific item"
+  ],
+  "manipulations": [
+    "memory load (one vs two colors held)",
+    "match between memory items and search distractors",
+    "per-item memory precision via continuous report"
+  ],
+  "key_findings": [
+    "reliable attentional guidance observed with both one- and two-item loads",
+    "the apparent multi-item guidance effect is explained by single-item guidance on a proportion of trials",
+    "items naturally vary in fidelity and typically only the strongest item guides attention"
+  ],
+  "interpretations": [
+    "no distinct prioritized VWM state is required to explain single-item guidance effects",
+    "graded representational fidelity, not a categorical focus-of-attention, governs which item drives guidance"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "visual working memory",
+    "attentional guidance",
+    "representational fidelity",
+    "memory-driven attention",
+    "continuous report",
+    "single-item guidance",
+    "focus of attention in working memory",
+    "feature-based attention"
+  ],
+  "out_of_scope_note": null,
+  "generator": "opus-4-7@2026-05-27",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "abstract_coverage": 1.0
+}

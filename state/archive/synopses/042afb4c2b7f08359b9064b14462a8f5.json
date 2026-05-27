@@ -1,0 +1,55 @@
+{
+  "frameworks": [
+    {
+      "name": "mixture model of visual working memory",
+      "role": "primary_lens",
+      "one_line": "Decomposes recall errors into precision and guessing components"
+    },
+    {
+      "name": "exogenous vs endogenous attention",
+      "role": "extended",
+      "one_line": "Extends retro-cueing literature from voluntary to involuntary attention"
+    },
+    {
+      "name": "retro-cueing of working memory",
+      "role": "context",
+      "one_line": "Post-stimulus attention cues modulate stored memory representations"
+    }
+  ],
+  "core_question": "Do uninformative exogenous retro-cues modulate visual working memory performance, and if so, via which error component?",
+  "key_assumptions": [
+    "Recall errors decompose into precision vs guess-rate components",
+    "Uninformative cues engage exogenous, not endogenous, attention",
+    "Attention can act on memory representations after stimuli disappear"
+  ],
+  "manipulations": [
+    "Cue informativeness (uninformative exogenous retro-cue)",
+    "Cue timing relative to stimulus offset (retro-cue)",
+    "Delayed estimation report of remembered feature"
+  ],
+  "key_findings": [
+    "Uninformative exogenous retro-cues improved visual working memory performance",
+    "Improvement appeared specifically in the precision component of recall"
+  ],
+  "interpretations": [
+    "Memory precision is a flexible trait modulated even by involuntary attention",
+    "Attention-memory link extends to exogenous cueing applied after stimulus offset"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "visual working memory precision",
+    "exogenous retro-cue",
+    "uninformative attention cue",
+    "delayed estimation task",
+    "mixture model recall errors",
+    "attention and working memory",
+    "involuntary attentional capture"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "042afb4c2b7f08359b9064b14462a8f5",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:32:24+09:00",
+  "review_status": "auto_unreviewed"
+}

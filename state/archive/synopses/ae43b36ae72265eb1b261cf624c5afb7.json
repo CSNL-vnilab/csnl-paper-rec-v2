@@ -1,0 +1,45 @@
+{
+  "canonical_id": "ae43b36ae72265eb1b261cf624c5afb7",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [
+    {"name": "noisy template matching", "role": "primary_lens", "one_line": "ensemble-averaged template compared item-by-item under computational noise"},
+    {"name": "approximate number system (ANS)", "role": "extended", "one_line": "mechanistic account of ANS numerosity estimation"},
+    {"name": "ensemble coding", "role": "context", "one_line": "template formed via ensemble averaging across array items"}
+  ],
+  "core_question": "What computational mechanism underlies approximate numerosity estimation in the ANS?",
+  "key_assumptions": [
+    "observers form a template via ensemble averaging of array items",
+    "each item is compared to the template through a matching process",
+    "underlying computations are inherently noisy",
+    "encoding mechanism is shared across magnitudes"
+  ],
+  "manipulations": [
+    "stimulus factors hypothesized to modulate the coherence illusion"
+  ],
+  "key_findings": [
+    "model reproduces Weber's law for numerosity",
+    "model accounts for systematic numerosity underestimation",
+    "model accounts for the coherence illusion",
+    "two novel predictions about coherence-illusion modulators confirmed empirically"
+  ],
+  "interpretations": [
+    "noisy template matching is a plausible mechanistic substrate for the ANS",
+    "core psychophysical signatures of number perception emerge from limited, noisy comparison processes"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "approximate number system",
+    "numerosity perception",
+    "Weber's law",
+    "template matching",
+    "ensemble averaging",
+    "coherence illusion",
+    "numerosity underestimation",
+    "noisy computation"
+  ],
+  "out_of_scope_note": null,
+  "generator": "opus-4-7@2026-05-27",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "abstract_coverage": 1.0
+}

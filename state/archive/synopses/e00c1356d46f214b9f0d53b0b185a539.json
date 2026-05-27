@@ -1,0 +1,56 @@
+{
+  "frameworks": [
+    {
+      "name": "attractor field model",
+      "role": "primary_lens",
+      "one_line": "perceived similarity warps perception space so dense regions inflate"
+    },
+    {
+      "name": "perception-driven mimicry coevolution",
+      "role": "extended",
+      "one_line": "predator perception biases drive prey-prey similarity dynamics"
+    },
+    {
+      "name": "categorical perception of intermediate forms",
+      "role": "context",
+      "one_line": "intermediate morphs are assigned to the rarer category"
+    }
+  ],
+  "core_question": "How does predator perception shape the coevolutionary dynamics of mimicry between similar prey species?",
+  "key_assumptions": [
+    "morphologically intermediate forms are perceived as belonging to rarer rather than abundant forms",
+    "mimicry requires at least two similar organisms and a selective perceiving agent",
+    "confusion probability between species exerts pressure on the predator's perception space"
+  ],
+  "manipulations": [
+    "relative density of species representations in perception space",
+    "degree of morphological similarity between model and mimic"
+  ],
+  "key_findings": [
+    "numerical simulations show perception-space inflation in regions with high species-representation density",
+    "inflation increases discriminability between similar species by the predator",
+    "atypical (rare) species need less similarity to the model to gain mimicry benefit"
+  ],
+  "interpretations": [
+    "adaptive mimicry can emerge more easily among atypical species due to perception-space deformation",
+    "predator perception dynamics constitute an interface linking prey-prey interactions with sensory cognition"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "attractor field model",
+    "perception space deformation",
+    "mimicry coevolution",
+    "perceived similarity",
+    "predator perception",
+    "categorical perception of rare forms",
+    "discrimination between similar species",
+    "numerical simulation of perception"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "e00c1356d46f214b9f0d53b0b185a539",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:29:57+09:00",
+  "review_status": "auto_unreviewed"
+}
