@@ -1,0 +1,55 @@
+{
+  "frameworks": [
+    {
+      "name": "Bayesian latent-cause inference",
+      "role": "primary_lens",
+      "one_line": "structure learning segments experience into latent causes governing memory traces"
+    },
+    {
+      "name": "classical associative learning",
+      "role": "extended",
+      "one_line": "trace modification mechanism extended with latent-cause-gated eligibility"
+    },
+    {
+      "name": "Pavlovian conditioning",
+      "role": "context",
+      "one_line": "empirical domain used to validate the computational model"
+    }
+  ],
+  "core_question": "When does retrieval modify an existing memory trace versus create a new one?",
+  "key_assumptions": [
+    "memory modification proceeds via classical associative learning",
+    "eligibility for modification is gated by inferred latent-cause structure",
+    "the agent segments experience into statistically distinct clusters",
+    "probabilistic / generative inference underlies trace assignment"
+  ],
+  "manipulations": [
+    "inferred sameness vs novelty of latent cause across sensory observations"
+  ],
+  "key_findings": [
+    "model decides between forming a new memory and modifying an old one based on latent-cause inference",
+    "simulations reproduce major Pavlovian memory-modification phenomena"
+  ],
+  "interpretations": [
+    "memory modification is governed by structure learning over latent causes, not by retrieval alone",
+    "old and new observations share a trace only when attributed to the same latent cause"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "latent cause inference",
+    "memory modification",
+    "structure learning",
+    "Pavlovian conditioning",
+    "associative learning",
+    "trace updating",
+    "segmentation of experience",
+    "reconsolidation"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "ed06dfa259289d91cf852e24954e1139",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:40:47+09:00",
+  "review_status": "auto_unreviewed"
+}

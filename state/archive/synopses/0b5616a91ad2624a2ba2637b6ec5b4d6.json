@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "amortized inference",
+      "role": "primary_lens",
+      "one_line": "reuse of prior computations or summary statistics across related probabilistic queries"
+    },
+    {
+      "name": "sample-based Bayesian cognition",
+      "role": "extended",
+      "one_line": "probability distributions over hypotheses approximated by samples"
+    },
+    {
+      "name": "cognitive load manipulation",
+      "role": "alternative_lens",
+      "one_line": "load used to distinguish caching of summary statistics from raw samples"
+    }
+  ],
+  "core_question": "Do people amortize probabilistic inference across related queries by reusing samples or summary statistics?",
+  "key_assumptions": [
+    "people compute probability distributions over hypotheses",
+    "inference can be approximated by sampling",
+    "related queries share reusable computational substructure"
+  ],
+  "manipulations": [
+    "structure of a preceding query in a sequential pair",
+    "cognitive load during sequential queries",
+    "queries about natural scenes"
+  ],
+  "key_findings": [
+    "answers to a second query depend systematically on the first query's structure",
+    "load manipulation distinguishes cached summary statistics from raw sample sets",
+    "evidence is more consistent with caching summary statistics"
+  ],
+  "interpretations": [
+    "the brain approximates probabilistic inference via amortized reuse",
+    "summary statistics, not raw samples, are the unit of reuse"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "amortized inference",
+    "sample-based approximation",
+    "sequential queries",
+    "summary statistics caching",
+    "natural scene statistics",
+    "cognitive load",
+    "Bayesian cognition",
+    "hypothesis generation"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "0b5616a91ad2624a2ba2637b6ec5b4d6",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

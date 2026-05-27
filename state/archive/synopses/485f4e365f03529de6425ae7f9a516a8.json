@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "invariance learning for concept generalisation",
+      "role": "primary_lens",
+      "one_line": "rotational invariance over transition vectors enables abstract concept recognition"
+    },
+    {
+      "name": "spatial scaffolding of abstract cognition",
+      "role": "extended",
+      "one_line": "physical space provides a transferable structure for non-spatial relational learning"
+    },
+    {
+      "name": "relational structure learning",
+      "role": "context",
+      "one_line": "concepts as transition patterns on a two-dimensional feature manifold"
+    }
+  ],
+  "core_question": "How do humans learn invariances that allow generalisation of abstract relational concepts across rotations?",
+  "key_assumptions": [
+    "concepts can be defined as transition patterns on a 2D manifold",
+    "rotational generalisation indexes acquired invariance",
+    "feature manifolds and physical space can be operationalised analogously"
+  ],
+  "manipulations": [
+    "domain of stimulus sequences (physical space vs nonspatial feature manifold)",
+    "rotation of transition vectors across exemplars",
+    "pre-training that maps auditory or visual features onto spatial locations"
+  ],
+  "key_findings": [
+    "humans generalise rotated exemplars in physical space but not on nonspatial feature manifolds",
+    "feature-to-space pre-training enables rotational generalisation in nonspatial domains",
+    "rotational invariance is not automatic for abstract concepts"
+  ],
+  "interpretations": [
+    "space acts as a scaffold for learning abstract conceptual invariances",
+    "spatial mappings can transfer rotational invariance to nonspatial concept domains"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "rotational generalisation",
+    "invariance learning",
+    "abstract concepts",
+    "feature manifold",
+    "spatial scaffold",
+    "transition vectors",
+    "relational pattern learning",
+    "cross-modal mapping"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "485f4e365f03529de6425ae7f9a516a8",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

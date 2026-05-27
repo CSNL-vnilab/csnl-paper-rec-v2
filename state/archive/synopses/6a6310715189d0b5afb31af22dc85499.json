@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "computational psychiatry",
+      "role": "primary_lens",
+      "one_line": "model-based decision parameters as clinical markers of reuse risk"
+    },
+    {
+      "name": "decision neuroscience under risk and ambiguity",
+      "role": "primary_lens",
+      "one_line": "separates tolerance of known risk vs partially unknown (ambiguous) risk"
+    },
+    {
+      "name": "time-lagged mixed-effects logistic regression",
+      "role": "context",
+      "one_line": "links session-by-session model parameters to prospective opioid use"
+    }
+  ],
+  "core_question": "Do model-based decision parameters from a risky choice task prospectively predict opioid reuse in patients with opioid use disorder?",
+  "key_assumptions": [
+    "risky decision-making decomposes into separable risk and ambiguity attitudes",
+    "session-level computational parameters track current cognitive state",
+    "between-session use events can be modeled with time-lagged regression"
+  ],
+  "manipulations": [
+    "longitudinal repeated assessment up to 7 months in a community treatment setting",
+    "risky decision-making task with known-risk and ambiguous options",
+    "comparison of patients with opioid use disorder vs control participants"
+  ],
+  "key_findings": [
+    "ambiguity tolerance, not known-risk tolerance, was elevated prior to opioid use events",
+    "ambiguity tolerance predicted prospective use independent of standard clinical factors",
+    "patients overall showed higher tolerance of known risks than controls"
+  ],
+  "interpretations": [
+    "ambiguity tolerance indexes a transient cognitive vulnerability window for reuse",
+    "computational decision markers can yield mechanistic, individual-level relapse signals beyond clinical scales"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "ambiguity tolerance",
+    "risk tolerance",
+    "opioid use disorder",
+    "computational psychiatry",
+    "relapse prediction",
+    "longitudinal mixed-effects logistic regression",
+    "risky decision-making task",
+    "individual-level behavioral markers"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "6a6310715189d0b5afb31af22dc85499",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:40:47+09:00",
+  "review_status": "auto_unreviewed"
+}

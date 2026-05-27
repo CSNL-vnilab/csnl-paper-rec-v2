@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "hierarchical timescale organization",
+      "role": "primary_lens",
+      "one_line": "intrinsic timescales of neural dynamics follow anatomical hierarchy across the brain"
+    },
+    {
+      "name": "temporal receptive windows",
+      "role": "context",
+      "one_line": "regions integrate information over windows that lengthen with hierarchical depth"
+    },
+    {
+      "name": "resting-state functional connectivity",
+      "role": "extended",
+      "one_line": "intrinsic timescale gradients predict individual functional connectivity features"
+    }
+  ],
+  "core_question": "Do intrinsic timescales of spontaneous brain activity follow hierarchical spatial gradients across cortex and subcortical structures?",
+  "key_assumptions": [
+    "temporal autocorrelation of resting activity indexes intrinsic timescale",
+    "anatomical hierarchy organizes both task-evoked and spontaneous dynamics",
+    "whole-brain fMRI captures dynamics across cortex and subcortex"
+  ],
+  "manipulations": [
+    "mapping timescales across cortical regions at rest",
+    "comparing cortical timescale gradients to striatum, thalamus, and cerebellum",
+    "examining timescale variation along the hippocampal long axis"
+  ],
+  "key_findings": [
+    "resting-state timescales follow hierarchical spatial gradients across human cortex",
+    "intrinsic timescale gradients produce frequency differences among large-scale networks",
+    "timescales predict individual-specific functional connectivity features",
+    "cortical gradients are topographically mirrored in striatum, thalamus, cerebellum, and hippocampus"
+  ],
+  "interpretations": [
+    "hierarchical timescales are a global organizing principle of mammalian brain function",
+    "subcortical dynamics inherit a topographic timescale map from cortex"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "intrinsic timescale gradient",
+    "temporal autocorrelation",
+    "resting-state fMRI",
+    "cortical hierarchy",
+    "temporal receptive window",
+    "subcortical timescale map",
+    "hippocampal long axis",
+    "individual functional connectivity"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "74dea6f44c77591d6f5594ae0f11c17e",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:40:47+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "value-based decision-making with metacognition",
+      "role": "primary_lens",
+      "one_line": "economic choice and confidence dissected into encoding, decoding, and comparison noise"
+    },
+    {
+      "name": "canonical decision theory (signal-detection / noisy-evidence accumulation)",
+      "role": "context",
+      "one_line": "choice consistency tied to precision of value encoding"
+    },
+    {
+      "name": "gaze-dependent attentional model of choice",
+      "role": "extended",
+      "one_line": "gaze-shift dynamics and endogenous attentional effort shape confidence"
+    }
+  ],
+  "core_question": "What sources of uncertainty drive confidence reports in value-based choice?",
+  "key_assumptions": [
+    "confidence is a subjective estimate of decision quality",
+    "value-based decisions involve separable encoding, decoding, and comparison stages",
+    "attentional effort and gaze dynamics modulate choice processing"
+  ],
+  "manipulations": [
+    "trial-to-trial fluctuations in value-encoding precision",
+    "gaze-shift dynamics across alternatives",
+    "endogenous attentional effort toward options"
+  ],
+  "key_findings": [
+    "encoding-precision fluctuations affect choice consistency",
+    "encoding uncertainty does not influence confidence reports",
+    "confidence tracks endogenous attentional effort toward alternatives",
+    "confidence tracks downstream noise in the comparison process"
+  ],
+  "interpretations": [
+    "confidence (mis)attributions in value-guided behaviour arise from attentional and comparison-stage noise rather than encoding noise",
+    "endogenous attentional states mechanistically guide decisions and metacognitive certainty"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "value-based choice",
+    "decision confidence",
+    "metacognition",
+    "encoding precision",
+    "gaze-shift dynamics",
+    "endogenous attention",
+    "comparison-process noise",
+    "economic decision-making"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "5f1ced4e08b3eaa800889c539c4b69a8",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

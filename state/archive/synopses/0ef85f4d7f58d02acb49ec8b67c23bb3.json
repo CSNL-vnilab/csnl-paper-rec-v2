@@ -1,0 +1,64 @@
+{
+  "frameworks": [
+    {
+      "name": "bounded accumulation decision model",
+      "role": "primary_lens",
+      "one_line": "evidence accumulates to a decision bound that can be adjusted trial-by-trial"
+    },
+    {
+      "name": "decision confidence",
+      "role": "extended",
+      "one_line": "internal correctness estimate used to update subsequent decision policy"
+    },
+    {
+      "name": "speed-accuracy tradeoff",
+      "role": "extended",
+      "one_line": "policy knob adjusted by previous-trial confidence rather than objective outcome"
+    },
+    {
+      "name": "centro-parietal EEG component",
+      "role": "context",
+      "one_line": "neural signature tracking confidence that predicts next-trial bound shifts"
+    }
+  ],
+  "core_question": "Do agents use internally computed decision confidence to adjust the speed-accuracy tradeoff on subsequent decisions when external feedback is absent?",
+  "key_assumptions": [
+    "decisions arise from bounded evidence accumulation",
+    "confidence is internally computed in absence of feedback",
+    "decision bound can be set trial-by-trial",
+    "low confidence motivates gathering more evidence next time"
+  ],
+  "manipulations": [
+    "reported confidence on the previous trial",
+    "three different perceptual choice tasks",
+    "fitting bounded accumulation model to behavior",
+    "EEG recording during decision making"
+  ],
+  "key_findings": [
+    "decision bound on a trial depended on previous-trial reported confidence",
+    "this confidence-dependent bound shift was independent of objective accuracy",
+    "a centro-parietal EEG component sensitive to confidence predicted the bound increase"
+  ],
+  "interpretations": [
+    "the brain uses internal confidence signals to continuously adjust decision policies",
+    "speed-accuracy tradeoff is regulated by metacognitive estimates rather than external feedback"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "decision confidence",
+    "speed-accuracy tradeoff",
+    "bounded accumulation model",
+    "trial-by-trial bound adjustment",
+    "metacognition",
+    "centro-parietal EEG",
+    "perceptual decision making",
+    "sequential decision policy"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "0ef85f4d7f58d02acb49ec8b67c23bb3",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}
