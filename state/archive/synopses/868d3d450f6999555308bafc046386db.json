@@ -1,0 +1,47 @@
+{
+  "canonical_id": "868d3d450f6999555308bafc046386db",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [
+    {"name": "model-based inference", "role": "primary_lens", "one_line": "one-trial context switching from a single unexpected outcome"},
+    {"name": "neural population geometry", "role": "primary_lens", "one_line": "curvilinear decision manifolds displaced along the decision-variable axis"},
+    {"name": "recurrent neural network", "role": "compared_against", "one_line": "RNNs trained on the task reproduce behavior and geometric shifts"},
+    {"name": "evidence accumulation", "role": "context", "one_line": "decision variable accumulates sensory evidence prior to choice"}
+  ],
+  "core_question": "How is reward context learned, represented, and updated in prefrontal populations during perceptual decision making?",
+  "key_assumptions": [
+    "latent reward context must be inferred from outcomes",
+    "a fixed linear readout can decode choice across contexts",
+    "decision variable and choice can be mapped onto low-dimensional manifolds"
+  ],
+  "manipulations": [
+    "reward contingency favoring leftward vs rightward choices, switched unpredictably",
+    "learning stage (early vs trained) within longitudinal recordings",
+    "comparison of monkey neural data with task-matched RNN models"
+  ],
+  "key_findings": [
+    "trained monkeys infer context switches from one unexpected outcome and adjust bias and RT",
+    "early in learning, adaptation unfolds gradually across many trials",
+    "reward context shifts neural manifold geometry primarily along the decision-variable axis",
+    "with learning, transitions between context manifolds become faster"
+  ],
+  "interpretations": [
+    "context-dependent biases arise from geometric displacement of decision manifolds rather than remapping",
+    "the speed of representational transitions tracks the emergence of one-trial behavioral generalization"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "context-dependent decisions",
+    "reward context inference",
+    "lateral prefrontal cortex population activity",
+    "decision manifold geometry",
+    "choice bias",
+    "one-trial learning",
+    "direction discrimination",
+    "recurrent neural network model"
+  ],
+  "out_of_scope_note": null,
+  "generator": "opus-4-7@2026-05-27",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "abstract_coverage": 1.0
+}

@@ -1,0 +1,57 @@
+{
+  "canonical_id": "550240aad5702c385788538e46c15542",
+  "frameworks": [
+    {
+      "name": "attractor network dynamics",
+      "role": "primary_lens",
+      "one_line": "neural population dynamics organized as attractors mediate perceptual choice"
+    },
+    {
+      "name": "evidence accumulation",
+      "role": "context",
+      "one_line": "decision arises from integrating pulsatile auditory evidence over time"
+    },
+    {
+      "name": "unsupervised deep learning of neural dynamics",
+      "role": "primary_lens",
+      "one_line": "data-driven discovery of low-dimensional decision-related trajectories"
+    }
+  ],
+  "core_question": "Do attractor-like dynamics in frontal cortex and striatum underlie perceptual decision-making, and when does commitment occur?",
+  "key_assumptions": [
+    "decision behavior is mediated by attractor-network dynamics",
+    "trial-by-trial population trajectories can be recovered from simultaneous large-scale recordings",
+    "commitment corresponds to a discrete change in dynamical regime"
+  ],
+  "manipulations": [
+    "pulsatile auditory evidence accumulated by rats",
+    "alignment of behavior to neurally-inferred commitment time (nTc)"
+  ],
+  "key_findings": [
+    "population trajectories evolve along two sequential regimes",
+    "first regime is dominated by sensory inputs; second by autonomous dynamics",
+    "the two regimes flow along largely orthogonal neural modes",
+    "evidence before nTc affects choice while evidence after nTc does not"
+  ],
+  "interpretations": [
+    "the transition between regimes marks the moment of decision commitment",
+    "a simplified coupled dynamics-and-mode model permits single-trial inference of commitment"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "perceptual decision-making",
+    "attractor dynamics",
+    "decision commitment",
+    "neural mode",
+    "frontal cortex and striatum",
+    "population trajectories",
+    "pulsatile evidence accumulation",
+    "unsupervised deep learning of neural dynamics"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:17:16+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,56 @@
+{
+  "frameworks": [
+    {
+      "name": "Bayesian feature inference with categorical prior",
+      "role": "primary_lens",
+      "one_line": "Estimates emerge from combining sensory memory with a categorical prior downstream."
+    },
+    {
+      "name": "Direct categorical modification of working memory",
+      "role": "compared_against",
+      "one_line": "Hypothesis that category labels rewrite sensory representations in memory."
+    },
+    {
+      "name": "Selective memory recall / sample filtering",
+      "role": "alternative_lens",
+      "one_line": "Feedback gates which memory samples enter the inference process."
+    }
+  ],
+  "core_question": "Do categorical judgments directly modify sensory representations in working memory, or do they bias estimates via downstream inference?",
+  "key_assumptions": [
+    "Working memory holds a sensory representation that can be probed by estimation",
+    "Categorical prior is applied during feature inference, not at encoding",
+    "Subjects can flexibly switch categorical commitments given feedback"
+  ],
+  "manipulations": [
+    "Feedback forcing reversal of an initial categorical judgment before estimation",
+    "Comparison of estimates following correct vs. corrected category labels"
+  ],
+  "key_findings": [
+    "Estimates after reversal show no trace of the initial categorical judgment",
+    "Subjects flexibly adopt the corrected categorical prior for feature inference",
+    "Model comparison favors selective recall of memory samples consistent with the current category"
+  ],
+  "interpretations": [
+    "Categorical judgments act as top-down expectations on recall and inference, not as modifications of working memory contents",
+    "Categorical biases arise downstream from working memory via prior-based inference"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "categorical prior",
+    "working memory representation",
+    "feature inference",
+    "selective memory recall",
+    "top-down expectation",
+    "feedback-driven category switching",
+    "perceptual estimation bias",
+    "psychophysics of category effects"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "ac17a81c9001a4df62e43efeefc2502f",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:17:16+09:00",
+  "review_status": "auto_unreviewed"
+}

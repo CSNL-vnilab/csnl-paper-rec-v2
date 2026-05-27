@@ -1,0 +1,48 @@
+{
+  "frameworks": [
+    {
+      "name": "anatomical-physiological accounting of the visual pathway",
+      "role": "primary_lens",
+      "one_line": "combine known anatomy and physiology to count neurons supporting a behavioral task."
+    },
+    {
+      "name": "information content along the visual pathway",
+      "role": "context",
+      "one_line": "neuron counts at each stage feed downstream estimates of representational efficiency."
+    }
+  ],
+  "core_question": "How many retinal ganglion, LGN, and V1 neurons in the macaque are engaged by an orientation-discrimination task?",
+  "key_assumptions": [
+    "macaque anatomical and physiological measurements transfer across the cited literature",
+    "neuron counts at each pathway stage can be combined multiplicatively from published densities and coverage"
+  ],
+  "manipulations": [
+    "computation evaluated for a specific orientation-discrimination experiment",
+    "comparison across pathway stages (RGC vs LGN vs V1)"
+  ],
+  "key_findings": [
+    "presents a step-by-step calculation yielding neuron-count estimates at RGC, LGN, and V1 for a discrimination task"
+  ],
+  "interpretations": [
+    "such per-stage counts let researchers compare information content between visual periphery and cortex",
+    "the calculation supports assessing the efficiency of computations along the pathway"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "macaque visual pathway",
+    "retinal ganglion cell count",
+    "LGN neuron count",
+    "V1 neuron count",
+    "orientation discrimination",
+    "information content per stage",
+    "efficiency of cortical computation",
+    "anatomy and physiology of primate vision"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "700be067378ea93f86dea6ce93e065fc",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:17:16+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,62 @@
+{
+  "frameworks": [
+    {
+      "name": "predictive coding (next-frame prediction)",
+      "role": "primary_lens",
+      "one_line": "perception adapts to optimally predict the next expected sensory input"
+    },
+    {
+      "name": "efficient sensory representation",
+      "role": "extended",
+      "one_line": "adaptation reallocates encoding accuracy toward expected future stimuli"
+    },
+    {
+      "name": "recurrent neural network (PredNet)",
+      "role": "primary_lens",
+      "one_line": "RNN trained on naturalistic video as a model of predictive adaptation"
+    },
+    {
+      "name": "natural input statistics",
+      "role": "context",
+      "one_line": "retinal orientation statistics of freely behaving humans motivate the prediction"
+    }
+  ],
+  "core_question": "Does perceptual adaptation reflect optimal preparation of sensory encoding for the next expected input?",
+  "key_assumptions": [
+    "adaptation reshapes encoding accuracy across orientation",
+    "natural input statistics constrain what future inputs are expected",
+    "a future-prediction objective alone can produce adaptation-like effects"
+  ],
+  "manipulations": [
+    "stability and orientation of recent stimulus history",
+    "adaptor orientation in psychophysics and in model input",
+    "PredNet vs human as substrate for the same statistics"
+  ],
+  "key_findings": [
+    "after stable visual input, next-frame local-orientation distribution peaks at the recent mean",
+    "PredNet shows increased encoding accuracy at the adaptor orientation, matching humans",
+    "this gain emerges without any local adaptation mechanism in the network"
+  ],
+  "interpretations": [
+    "adaptation optimally prepares sensory representations for the next expected input",
+    "increased encoding accuracy at the adaptor follows from a future-prediction objective plus stimulus history"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "perceptual adaptation",
+    "encoding accuracy",
+    "orientation adaptation",
+    "natural image statistics",
+    "next-frame prediction",
+    "PredNet",
+    "recurrent neural network model of perception",
+    "predictive coding of future input"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "6c6e949d9df3b5e151342b3390fd33f5",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:19:24+09:00",
+  "review_status": "auto_unreviewed"
+}

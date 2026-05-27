@@ -1,0 +1,22 @@
+{
+  "canonical_id": "00ddabf5adf3e0f94689cbe4986f97c9",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "pupil-linked arousal",
+    "decision uncertainty",
+    "serial choice bias",
+    "motion discrimination"
+  ],
+  "out_of_scope_note": "Data record / Figshare deposit accompanying Urai et al. 2017 Nat Comm; no findings of its own.",
+  "generator": "opus-4-7@2026-05-27",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "abstract_coverage": 0.0
+}

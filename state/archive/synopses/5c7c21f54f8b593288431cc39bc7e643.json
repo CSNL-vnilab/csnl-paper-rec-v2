@@ -1,0 +1,54 @@
+{
+  "frameworks": [
+    {
+      "name": "decision criterion updating",
+      "role": "primary_lens",
+      "one_line": "Each new stimulus gradually shifts the subject's decision boundary."
+    },
+    {
+      "name": "sensory history / serial dependence",
+      "role": "extended",
+      "one_line": "Trial-by-trial stimulus history biases the current perceptual judgment."
+    }
+  ],
+  "core_question": "How does recent stimulus history shape judgments of tactile vibration strength on the current trial?",
+  "key_assumptions": [
+    "Judgment can be modeled as comparison of stimulus to a decision criterion",
+    "Sensory history exerts its bias independent of prior choice or reward",
+    "A single mechanism can capture both rat and human history effects"
+  ],
+  "manipulations": [
+    "Stimulus mean speed on trial n-1 (low vs high)",
+    "Trial-back lag of preceding stimuli",
+    "Time interval between trial n-1 and trial n",
+    "Species (rat vibrissal vs human fingertip vibration)"
+  ],
+  "key_findings": [
+    "Low-speed n-1 stimulus biases trial n toward 'strong' (repulsive aftereffect)",
+    "History effect is independent of previous choice and reward outcome",
+    "Effect decays exponentially across multiple preceding trials",
+    "Influence of trial n-1 strengthens with longer inter-trial interval; humans replicate the same pattern"
+  ],
+  "interpretations": [
+    "Each new stimulus incrementally updates the decision criterion",
+    "A single-parameter criterion-update model accounts for the repulsive history effect and its time scale"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "stimulus history effect",
+    "repulsive aftereffect",
+    "decision criterion update",
+    "tactile vibration perception",
+    "trial-by-trial incorporation",
+    "exponential decay of history",
+    "rat vibrissal psychophysics",
+    "cross-species perceptual judgment"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "5c7c21f54f8b593288431cc39bc7e643",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:17:16+09:00",
+  "review_status": "auto_unreviewed"
+}

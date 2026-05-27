@@ -1,0 +1,54 @@
+{
+  "frameworks": [
+    {
+      "name": "sequential evidence accumulation",
+      "role": "primary_lens",
+      "one_line": "Final choice is shaped by stimulus evidence integrated sample-by-sample over time."
+    },
+    {
+      "name": "categorical stimulus representations",
+      "role": "extended",
+      "one_line": "Category-level representations are invoked during accumulation, not just at readout."
+    },
+    {
+      "name": "perceptual inference",
+      "role": "context",
+      "one_line": "Discrimination framed as inference about an unknown source position."
+    }
+  ],
+  "core_question": "Does engaging in a preliminary categorical decision shape sequential evidence accumulation and improve the final perceptual choice?",
+  "key_assumptions": [
+    "Samples are drawn from a Gaussian centered at the source with fixed variance.",
+    "Category-level representations can influence perceptual inference even when not explicitly required.",
+    "Final discrimination uses evidence accumulated across all samples."
+  ],
+  "manipulations": [
+    "Timing of a forced preliminary CW/CCW decision (upfront vs after 2nd, 4th, or 6th sample).",
+    "Presence vs absence of the preliminary-decision task (decision condition vs central-fixation control) on matched sample sequences."
+  ],
+  "key_findings": [
+    "Engaging in a preliminary decision against a reference improves final-decision performance relative to the fixation control.",
+    "The benefit holds across upfront and mid-sequence preliminary-decision timings on identical stimulus sequences."
+  ],
+  "interpretations": [
+    "Forming categorical stimulus representations may be crucial for accurate and robust sequential evidence accumulation."
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "sequential evidence accumulation",
+    "categorical representations",
+    "preliminary decision",
+    "perceptual decision-making",
+    "CW/CCW angular discrimination",
+    "reference-based discrimination",
+    "category-level inference",
+    "partial-evidence commitment"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "ea82dc038481c5dbc7fc5f2d5e4bfefb",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:19:24+09:00",
+  "review_status": "auto_unreviewed"
+}

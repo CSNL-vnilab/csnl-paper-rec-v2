@@ -1,0 +1,56 @@
+{
+  "frameworks": [
+    {
+      "name": "signal detection theory",
+      "role": "primary_lens",
+      "one_line": "uses d' to index objective sensitivity separately from confidence reports"
+    },
+    {
+      "name": "subjective awareness vs objective performance dissociation",
+      "role": "primary_lens",
+      "one_line": "frames confidence as a marker of subjective visibility distinct from sensitivity"
+    },
+    {
+      "name": "blindsight",
+      "role": "context",
+      "one_line": "cited as canonical case of perception-performance dissociation"
+    }
+  ],
+  "core_question": "Can confidence judgments dissociate from objective discrimination performance for matched central versus peripheral stimuli in neurologically intact observers?",
+  "key_assumptions": [
+    "d' indexes objective sensitivity independently of subjective report",
+    "confidence comparison across simultaneous stimuli probes subjective visibility",
+    "matched d' implies equated objective signal strength"
+  ],
+  "manipulations": [
+    "stimulus eccentricity (central vs peripheral dot motion)",
+    "motion coherence to titrate peripheral and central d' to equality"
+  ],
+  "key_findings": [
+    "strong bias toward reporting higher confidence in central stimulus",
+    "central confidence bias persists at the psychometric point of equal d'",
+    "objective discrimination performance can be matched while subjective confidence diverges"
+  ],
+  "interpretations": [
+    "paradigm dissociates subjective visual awareness from objective signal strength in normal observers",
+    "central-peripheral confidence asymmetry offers a psychophysical handle on subjective visibility"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "confidence judgments",
+    "motion direction discrimination",
+    "central versus peripheral",
+    "2AFC",
+    "subjective visibility",
+    "objective-subjective dissociation",
+    "d-prime matching",
+    "metacognition"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "fb367e776afcb178948436edec34b6f2",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:17:16+09:00",
+  "review_status": "auto_unreviewed"
+}

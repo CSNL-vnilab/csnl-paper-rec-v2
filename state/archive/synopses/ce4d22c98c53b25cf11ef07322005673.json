@@ -1,0 +1,43 @@
+{
+  "canonical_id": "ce4d22c98c53b25cf11ef07322005673",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [
+    {"name": "categorical prior / Bayesian feature inference", "role": "primary_lens", "one_line": "categorical judgment supplies a prior used in downstream sensory recall and inference"},
+    {"name": "direct working-memory modification", "role": "compared_against", "one_line": "alternative that categorical judgments rewrite sensory representations in working memory"},
+    {"name": "selective memory recall / sample rejection", "role": "alternative_lens", "one_line": "only memory samples consistent with the categorical judgment are accepted for inference"}
+  ],
+  "core_question": "Do categorical judgments directly modify sensory representations in working memory, or do they bias estimates via downstream inference?",
+  "key_assumptions": [
+    "subjects can revert an incorrect categorical judgment given feedback",
+    "feature estimation combines memory samples with a categorical prior"
+  ],
+  "manipulations": [
+    "forced reversal of the initial categorical judgment after feedback",
+    "comparison of estimates between trials with and without judgment reversal"
+  ],
+  "key_findings": [
+    "no trace of the initial (incorrect) categorical judgment remained in feature estimates after reversal",
+    "subjects flexibly switched to the corrected categorical prior to produce estimates",
+    "cross-validated model comparison favored selective recall of judgment-consistent memory samples"
+  ],
+  "interpretations": [
+    "categorical judgments do not modify working-memory sensory content",
+    "biases arise downstream as top-down expectations shaping recall and inference"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "categorical prior",
+    "working memory representations",
+    "feature inference",
+    "categorical judgment bias",
+    "selective memory recall",
+    "top-down expectation",
+    "psychophysical reversal paradigm",
+    "post-decisional bias"
+  ],
+  "out_of_scope_note": null,
+  "generator": "opus-4-7@2026-05-27",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "abstract_coverage": 1.0
+}

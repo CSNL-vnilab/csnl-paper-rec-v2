@@ -1,0 +1,61 @@
+{
+  "frameworks": [
+    {
+      "name": "grouping-and-segregation",
+      "role": "primary_lens",
+      "one_line": "structural inference over similarity and distinct identity supplements sensory samples in memory."
+    },
+    {
+      "name": "active inference",
+      "role": "primary_lens",
+      "one_line": "retrieval infers feature values from sensory samples plus structural memory."
+    },
+    {
+      "name": "repulsive bias account",
+      "role": "alternative_lens",
+      "one_line": "reported repulsion in working-memory recall as one bias regime."
+    },
+    {
+      "name": "attractive bias account",
+      "role": "alternative_lens",
+      "one_line": "reported attraction in working-memory recall as the opposing regime."
+    }
+  ],
+  "core_question": "Can a single normative framework reconcile both repulsive and attractive biases in visual working memory recall?",
+  "key_assumptions": [
+    "memory stores noisy sensory samples plus discrete structural information",
+    "retrieval performs active inference combining sensory and structural information",
+    "grouping and segregation are fundamental memory operations"
+  ],
+  "manipulations": [
+    "angular distance between two dots varied from 6 to 60 degrees"
+  ],
+  "key_findings": [
+    "recall biases depended systematically on inter-item distance",
+    "small distances produced over-estimation (repulsion)",
+    "larger distances produced under-estimation (attraction)",
+    "framework predicts the bias pattern and observed variance and correlation structure"
+  ],
+  "interpretations": [
+    "grouping and segregation jointly yield efficient, robust memory representations",
+    "repulsive and attractive recall biases arise from a single structural-inference mechanism"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "visual working memory",
+    "recall bias",
+    "repulsion and attraction",
+    "grouping and segregation",
+    "structural inference",
+    "active inference retrieval",
+    "angular position memory",
+    "inter-item distance"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "ec8efb205e8a815bb6fa2a833e3bba91",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:19:24+09:00",
+  "review_status": "auto_unreviewed"
+}

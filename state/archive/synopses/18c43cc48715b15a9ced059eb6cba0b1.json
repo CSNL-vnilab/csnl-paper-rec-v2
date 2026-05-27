@@ -1,0 +1,46 @@
+{
+  "canonical_id": "18c43cc48715b15a9ced059eb6cba0b1",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [
+    {"name": "Bayesian inference of environmental priors", "role": "primary_lens", "one_line": "observer gradually refines an estimate of the environmental prior from experience"},
+    {"name": "neural attractor dynamics", "role": "primary_lens", "one_line": "persistent activity attractors aligned to common stimulus values via learned synaptic connectivity"},
+    {"name": "experience-dependent learning model", "role": "extended", "one_line": "biases emerge from history-shaped circuit modulation rather than fixed parameters"},
+    {"name": "fixed-bias model", "role": "compared_against", "one_line": "alternative in which response biases do not adapt to stimulus history"}
+  ],
+  "core_question": "Do systematic biases in working memory reflect experience-dependent learning of environmental priors implemented in neural circuit connectivity?",
+  "key_assumptions": [
+    "observers infer environmental priors gradually through experience",
+    "synaptic connectivity in a working memory circuit is modulated by stimulus history",
+    "persistent neural activity encodes the stimulus estimate as attractors"
+  ],
+  "manipulations": [
+    "heterogeneous stimulus (color) distributions that did not match reported population biases",
+    "model class: experience-dependent learning vs fixed-bias"
+  ],
+  "key_findings": [
+    "humans show systematic biases toward common feature values when retaining color over short delays",
+    "most subjects' response distributions are better fit by experience-dependent learning models than by fixed-bias models",
+    "biases can be reproduced when synaptic connectivity is shaped by experienced stimulus history",
+    "resulting neural activity attractors align to commonly experienced stimulus values"
+  ],
+  "interpretations": [
+    "systematic limitations in working memory reflect efficient representations of inferred environmental structure",
+    "history-dependent synaptic modulation provides a circuit basis for prior-driven memory biases"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "working memory bias",
+    "delayed estimation",
+    "color working memory",
+    "environmental prior learning",
+    "attractor network",
+    "synaptic connectivity modulation",
+    "stimulus history",
+    "experience-dependent bias"
+  ],
+  "out_of_scope_note": null,
+  "generator": "opus-4-7@2026-05-27",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "abstract_coverage": 1.0
+}

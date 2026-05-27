@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "Bayesian observer",
+      "role": "compared_against",
+      "one_line": "Full Bayesian inference serves as the optimal accuracy benchmark."
+    },
+    {
+      "name": "self-consistent conditioning (confirmation bias)",
+      "role": "primary_lens",
+      "one_line": "Estimation conditioned on a self-generated categorical commitment about the stimulus."
+    },
+    {
+      "name": "hierarchical perceptual inference",
+      "role": "extended",
+      "one_line": "Two-stage categorical-then-feature inference under overlapping category distributions."
+    }
+  ],
+  "core_question": "Why do observers condition feature estimates on their own categorical interpretation when doing so double-counts sensory evidence?",
+  "key_assumptions": [
+    "Stimulus feature belongs to one of two categories with overlapping distributions",
+    "Observer first commits to a category, then estimates the feature",
+    "Prior expectations reflect statistical structure of the world"
+  ],
+  "manipulations": [
+    "Inference strategy (self-consistent conditioning vs full Bayesian)",
+    "Feature value across the stimulus range",
+    "Additional sensory noise injected after categorical commitment"
+  ],
+  "key_findings": [
+    "Self-consistent conditioning is globally suboptimal compared to full Bayesian observer",
+    "Accuracy loss is non-uniform across the feature range",
+    "Conditioning yields higher accuracy where categorical-assignment uncertainty is low",
+    "Benefits of conditioning grow when sensory information degrades after the categorical commitment"
+  ],
+  "interpretations": [
+    "Confirmation-bias-like conditioning can be locally adaptive despite global suboptimality",
+    "Self-generated priors trade global accuracy for robustness under post-decision noise"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "confirmation bias",
+    "self-consistent conditioning",
+    "categorical commitment",
+    "overlapping category distributions",
+    "self-generated prior",
+    "Bayesian observer comparison",
+    "post-decision sensory noise",
+    "feature estimation"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "82d6635ca2630b22765fff04d2a582b9",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:19:24+09:00",
+  "review_status": "auto_unreviewed"
+}
