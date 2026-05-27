@@ -1,0 +1,56 @@
+{
+  "frameworks": [
+    {
+      "name": "event segmentation",
+      "role": "primary_lens",
+      "one_line": "continuous experience is parsed into discrete events at perceived boundaries"
+    },
+    {
+      "name": "hippocampal-prefrontal memory integration-separation",
+      "role": "primary_lens",
+      "one_line": "HPC-PFC interplay binds or separates sequential representations across event boundaries"
+    },
+    {
+      "name": "episodic memory reactivation",
+      "role": "extended",
+      "one_line": "retroactive integration via reactivation links past content into present context"
+    }
+  ],
+  "core_question": "How do event boundaries shape hippocampal and prefrontal mechanisms that organize continuous experience into discrete episodic memories?",
+  "key_assumptions": [
+    "perceived boundaries arise from change in thoughts, goals, or surroundings",
+    "temporal stability and change together scaffold mnemonic structure",
+    "long-term episodic memory depends on hippocampal-prefrontal interaction"
+  ],
+  "manipulations": [
+    "novel versus familiar sequences of information",
+    "presence versus absence of contextual shifts at boundaries"
+  ],
+  "key_findings": [
+    "event boundaries modulate hippocampal and prefrontal mechanisms supporting episodic memory",
+    "hippocampus integrates and separates sequential information around boundaries",
+    "hippocampal processes operate both independently and jointly with other regions to bind sequences"
+  ],
+  "interpretations": [
+    "discrete episodic memories form proactively as experience unfolds and retroactively via context shifts or reactivation",
+    "temporal stability and change provide scaffolding for HPC-PFC processes that link and separate memories"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "event boundaries",
+    "event segmentation",
+    "episodic memory",
+    "hippocampus",
+    "prefrontal cortex",
+    "temporal context",
+    "sequence binding",
+    "memory reactivation"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "20742332fb87984c8bf57f022af40923",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:36:27+09:00",
+  "review_status": "auto_unreviewed"
+}

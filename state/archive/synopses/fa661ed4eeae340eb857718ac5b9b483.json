@@ -1,0 +1,45 @@
+{
+  "frameworks": [
+    {
+      "name": "fMRI repetition suppression",
+      "role": "primary_lens",
+      "one_line": "Reduced BOLD on repeated stimuli used to index neural population coding."
+    },
+    {
+      "name": "multivariate pattern analysis",
+      "role": "compared_against",
+      "one_line": "Alternative fMRI meso-scale technique briefly contrasted with repetition suppression."
+    }
+  ],
+  "core_question": "Can fMRI repetition suppression validly index neural representations at the population (meso-scale) level?",
+  "key_assumptions": [
+    "BOLD signal can be refined to reflect sub-voxel neural population activity",
+    "Repetition of a stimulus attribute reveals the neural code for that attribute"
+  ],
+  "manipulations": [],
+  "key_findings": [
+    "Repetition suppression and MVPA have emerged as the main tools to probe meso-scale neural coding in human fMRI"
+  ],
+  "interpretations": [
+    "Repetition suppression can investigate how representations are encoded across populations and transformed by computations, but has physiological limitations"
+  ],
+  "limitations_noted": [
+    "Physiological basis and limitations of fMRI repetition suppression constrain its interpretation"
+  ],
+  "connecting_signals": [
+    "repetition suppression",
+    "fMRI adaptation",
+    "BOLD signal",
+    "multivariate pattern analysis",
+    "neural population coding",
+    "meso-scale representation",
+    "human neuroscience methodology"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "fa661ed4eeae340eb857718ac5b9b483",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:36:27+09:00",
+  "review_status": "auto_unreviewed"
+}

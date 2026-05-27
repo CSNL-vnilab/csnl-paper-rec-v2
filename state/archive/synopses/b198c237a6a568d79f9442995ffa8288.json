@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "disinhibition-based circuit motif",
+      "role": "primary_lens",
+      "one_line": "local disinhibition gates a hybrid circuit between normalization and WTA regimes"
+    },
+    {
+      "name": "divisive normalization",
+      "role": "extended",
+      "one_line": "recurrent gain control implementing relative value coding within the hybrid motif"
+    },
+    {
+      "name": "winner-take-all attractor dynamics",
+      "role": "extended",
+      "one_line": "recurrent excitation with pooled inhibition yielding categorical selection"
+    },
+    {
+      "name": "working memory persistent activity",
+      "role": "context",
+      "one_line": "circuit produces sustained activity consistent with mnemonic maintenance"
+    }
+  ],
+  "core_question": "Can a single biologically plausible circuit unify normalized value coding and winner-take-all selection under flexible top-down control?",
+  "key_assumptions": [
+    "normalization and WTA reflect distinct but coexisting circuit motifs",
+    "local disinhibition can flexibly gate recurrent dynamics",
+    "psychometric and chronometric data constrain decision-circuit models"
+  ],
+  "manipulations": [
+    "circuit state varied via local disinhibition",
+    "task context varied to elicit diverse neural dynamics",
+    "comparison of normalization-only vs WTA-only vs hybrid architectures"
+  ],
+  "key_findings": [
+    "hybrid motif unifies normalized representation and WTA competition",
+    "disinhibition dynamically controls circuit state",
+    "model captures empirical psychometric and chronometric data",
+    "produces persistent activity consistent with working memory"
+  ],
+  "interpretations": [
+    "local disinhibition is a key mechanism for flexible top-down control of decision circuits",
+    "disinhibition offers a biologically plausible substrate for task-dependent neural dynamics"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "disinhibition",
+    "divisive normalization",
+    "winner-take-all dynamics",
+    "decision making circuit",
+    "value coding",
+    "persistent activity",
+    "working memory",
+    "top-down control"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "b198c237a6a568d79f9442995ffa8288",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

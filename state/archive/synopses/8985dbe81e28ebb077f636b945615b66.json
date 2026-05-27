@@ -1,0 +1,64 @@
+{
+  "frameworks": [
+    {
+      "name": "serial dependence in working memory",
+      "role": "primary_lens",
+      "one_line": "influence of previous stimuli on current working memory contents"
+    },
+    {
+      "name": "biophysical prefrontal microcircuit model",
+      "role": "primary_lens",
+      "one_line": "NMDAR-dependent attractor circuit simulating delayed-response working memory"
+    },
+    {
+      "name": "short-term synaptic potentiation",
+      "role": "extended",
+      "one_line": "NMDAR-mediated longer-timescale plasticity proposed to carry trial-to-trial bias"
+    },
+    {
+      "name": "cortical excitation-inhibition imbalance",
+      "role": "compared_against",
+      "one_line": "within-trial E/I changes alone cannot explain reduced serial dependence"
+    }
+  ],
+  "core_question": "Can NMDAR hypofunction in schizophrenia and anti-NMDAR encephalitis explain shared working memory alterations through a common synaptic mechanism?",
+  "key_assumptions": [
+    "schizophrenia and anti-NMDAR encephalitis share NMDAR hypofunction",
+    "delayed-response task isolates working memory contents",
+    "serial dependence indexes a longer-timescale memory mechanism",
+    "microcircuit model captures relevant prefrontal dynamics"
+  ],
+  "manipulations": [
+    "patient group (schizophrenia, anti-NMDAR encephalitis) vs controls",
+    "NMDAR-dependent synaptic parameters in microcircuit model",
+    "within-trial excitation vs longer-timescale potentiation in simulations"
+  ],
+  "key_findings": [
+    "both patient groups show markedly reduced influence of previous stimuli on working memory",
+    "memory precision within trials is preserved in both patient groups",
+    "within-trial excitation changes destabilize maintenance but do not explain disrupted serial dependence",
+    "quantitative model-data fit supports alteration of an NMDAR-dependent longer-timescale mechanism"
+  ],
+  "interpretations": [
+    "reduced serial dependence reflects deficits in short-term potentiation rather than within-trial dynamics",
+    "schizophrenia and anti-NMDAR encephalitis share an NMDAR-dependent synaptic alteration operating across trials"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "serial dependence",
+    "working memory",
+    "NMDAR hypofunction",
+    "anti-NMDAR encephalitis",
+    "schizophrenia",
+    "short-term potentiation",
+    "prefrontal microcircuit model",
+    "delayed-response task"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "8985dbe81e28ebb077f636b945615b66",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

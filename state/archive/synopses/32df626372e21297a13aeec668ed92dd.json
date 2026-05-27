@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "transcranial direct current stimulation (tDCS)",
+      "role": "primary_lens",
+      "one_line": "non-invasive neuromodulation whose induced fields and BOLD response are imaged concurrently"
+    },
+    {
+      "name": "dual-echo echo-planar imaging (DE-EPI)",
+      "role": "extended",
+      "one_line": "phase encodes tDCS magnetic field while magnitude encodes BOLD contrast"
+    },
+    {
+      "name": "BOLD resting-state functional MRI",
+      "role": "alternative_lens",
+      "one_line": "used to read out brain's network-level response to applied current"
+    }
+  ],
+  "core_question": "Can MRI concurrently map tDCS-induced electromagnetic fields and the brain's BOLD response during stimulation?",
+  "key_assumptions": [
+    "tDCS current produces a detectable magnetic-field perturbation in MRI phase",
+    "magnitude and phase of DE-EPI can be dissociated into BOLD and field maps",
+    "test-retest reliability is sufficient to detect group-level effects"
+  ],
+  "manipulations": [
+    "applied tDCS current under cathodal vs anodal electrodes",
+    "phantom vs in-vivo human acquisition",
+    "current on vs off during DE-EPI scanning"
+  ],
+  "key_findings": [
+    "technique validated in custom phantom",
+    "tDCS-induced magnetic fields reliably detected in-vivo across test-retest",
+    "concurrent BOLD revealed canonical resting-state networks plus cathodal and anodal components under each electrode",
+    "cathodal BOLD signal significantly decreased with applied current at group level"
+  ],
+  "interpretations": [
+    "DE-EPI provides a joint readout of tDCS current markers and neurophysiological response",
+    "concurrent imaging can help explain inter-subject variability that hampers tDCS clinical translation"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "transcranial direct current stimulation",
+    "concurrent MRI tDCS",
+    "dual-echo echo-planar imaging",
+    "MRI phase magnetic field mapping",
+    "BOLD resting-state networks",
+    "cathodal anodal electrode response",
+    "neuromodulation variability",
+    "current flow imaging"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "32df626372e21297a13aeec668ed92dd",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:36:27+09:00",
+  "review_status": "auto_unreviewed"
+}

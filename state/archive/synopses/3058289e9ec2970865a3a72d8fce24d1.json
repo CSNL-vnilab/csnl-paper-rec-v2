@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "world model induction",
+      "role": "primary_lens",
+      "one_line": "rapid construction and refinement of internal environment representations via interaction"
+    },
+    {
+      "name": "static world models in AI",
+      "role": "compared_against",
+      "one_line": "representations learned passively from massive training corpora rather than adaptive interaction"
+    },
+    {
+      "name": "cognitive science of human adaptation",
+      "role": "context",
+      "one_line": "decades of work on how humans learn and adapt efficiently in novel contexts"
+    },
+    {
+      "name": "novel-game benchmark paradigm",
+      "role": "extended",
+      "one_line": "suites of games with deep continually refreshing structural novelty to test adaptive agents"
+    }
+  ],
+  "core_question": "How should we evaluate AI agents' capacity for rapid, adaptive world model induction in genuinely novel environments?",
+  "key_assumptions": [
+    "human adaptability stems from efficient construction and refinement of internal world models",
+    "world models are best assessed through interactive exploration, not static training",
+    "deep structural novelty exposes induction ability that pretraining cannot mask"
+  ],
+  "manipulations": [
+    "depth and continual refreshing of novelty in game structures",
+    "agent interaction and exploration vs static-corpus evaluation"
+  ],
+  "key_findings": [],
+  "interpretations": [
+    "current AI evaluations of world models conflate static representation with adaptive induction",
+    "novel games with refreshing structure offer an explicit test of rapid world model induction"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "world model induction",
+    "adaptive world models",
+    "novel games benchmark",
+    "rapid adaptation",
+    "internal environment representation",
+    "interaction and exploration",
+    "AI evaluation framework",
+    "human-like learning efficiency"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "3058289e9ec2970865a3a72d8fce24d1",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

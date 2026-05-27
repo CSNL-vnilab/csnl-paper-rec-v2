@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "subjective inflation",
+      "role": "primary_lens",
+      "one_line": "unattended peripheral stimuli appear stronger than attended ones at equated performance"
+    },
+    {
+      "name": "theories rejecting sensory sufficiency for consciousness",
+      "role": "compared_against",
+      "one_line": "frameworks claiming conscious perception requires more than sensory signals"
+    },
+    {
+      "name": "psychometric function analysis",
+      "role": "extended",
+      "one_line": "new analytic approach quantifying inflation across full functions, not single matched points"
+    }
+  ],
+  "core_question": "Does subjective inflation under inattention robustly occur, and under what conditions?",
+  "key_assumptions": [
+    "visibility and performance thresholds can be dissociated",
+    "matched-performance comparisons isolate experiential differences",
+    "attention modulates visibility and performance thresholds independently"
+  ],
+  "manipulations": [
+    "attended vs unattended peripheral locations",
+    "contrast-dependent vs texture-based perception",
+    "threshold vs suprathreshold stimulus levels",
+    "overall stimulus vs performance-relevant feature"
+  ],
+  "key_findings": [
+    "robust inattentional inflation for contrast-dependent and texture-based perception at and above threshold",
+    "at suprathreshold, inflation occurs for overall stimulus but not the performance-relevant feature",
+    "inflation occurs if and only if attention reduces performance thresholds more than visibility thresholds"
+  ],
+  "interpretations": [
+    "subjective experience can systematically exceed visual discrimination capacity",
+    "results constrain theories of conscious perception by specifying when inflation arises"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "subjective inflation",
+    "inattention",
+    "psychometric function",
+    "visibility threshold",
+    "performance threshold",
+    "consciousness",
+    "peripheral perception",
+    "adversarial collaboration"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "ab899b9039f664c269587b2b5e374c40",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

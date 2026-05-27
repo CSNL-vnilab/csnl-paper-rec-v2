@@ -1,0 +1,61 @@
+{
+  "frameworks": [
+    {
+      "name": "good-based model of economic choice",
+      "role": "primary_lens",
+      "one_line": "values computed per good and compared in goods space, independent of sensorimotor contingencies"
+    },
+    {
+      "name": "subjective value integration",
+      "role": "extended",
+      "one_line": "multi-dimensional option attributes integrated into a single subjective value at choice time"
+    },
+    {
+      "name": "transitivity of preference",
+      "role": "context",
+      "one_line": "independent good-by-good value computation implies transitive choice"
+    },
+    {
+      "name": "action-based / sensorimotor decision models",
+      "role": "compared_against",
+      "one_line": "alternative view where value computation is tied to motor planning"
+    }
+  ],
+  "core_question": "At what level of representation and in which brain regions does the neural comparison of values underlying economic choice take place?",
+  "key_assumptions": [
+    "options vary along multiple dimensions integrated into a single subjective value",
+    "values are computed at the time of choice rather than learned as such",
+    "values of different goods are computed independently of one another",
+    "decisions reduce to comparisons of these subjective values"
+  ],
+  "manipulations": [
+    "review across neurophysiology, imaging, and lesion paradigms"
+  ],
+  "key_findings": [
+    "abstract value representations exist in orbitofrontal cortex",
+    "abstract value representations exist in ventromedial prefrontal cortex",
+    "value signals are framed independently of the sensorimotor contingencies of choice"
+  ],
+  "interpretations": [
+    "value computation and comparison plausibly take place within orbitofrontal and ventromedial prefrontal cortices",
+    "economic choice is best understood as comparison within the space of goods rather than within motor space"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "economic choice",
+    "subjective value",
+    "good-based model",
+    "value comparison",
+    "orbitofrontal cortex",
+    "ventromedial prefrontal cortex",
+    "transitivity of preference",
+    "neuroeconomics"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "99de7f759383e4b86dadf1bcfd91792e",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}
