@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "signal-detection theory",
+      "role": "primary_lens",
+      "one_line": "decision bias and sensitivity dissociated for fearful-face perception"
+    },
+    {
+      "name": "perceptual confidence / metacognition",
+      "role": "primary_lens",
+      "one_line": "subjective confidence indexes privileged access of fear to awareness"
+    },
+    {
+      "name": "low-level visual feature account",
+      "role": "compared_against",
+      "one_line": "fear prioritization explained solely by low-level facial features"
+    },
+    {
+      "name": "prefrontal contribution to perceptual decision-making",
+      "role": "context",
+      "one_line": "dlPFC density linked to magnitude of fear-related decision bias"
+    }
+  ],
+  "core_question": "Is the perceptual prioritization of fearful faces driven only by low-level features, or do higher-level decision and confidence mechanisms also contribute?",
+  "key_assumptions": [
+    "low-level visual processing can be equated via masking and contrast titration",
+    "emotional intensity of faces can be matched across categories",
+    "decision bias and confidence index higher-level perceptual mechanisms"
+  ],
+  "manipulations": [
+    "facial emotion category (fearful vs angry vs happy)",
+    "luminance contrast of backward masks",
+    "emotional intensity of face stimuli",
+    "task (detection vs discrimination)"
+  ],
+  "key_findings": [
+    "liberal decision bias toward perceiving fearful faces in detection and discrimination",
+    "bias is stronger in individuals with reduced dorsolateral prefrontal cortex density",
+    "confidence is higher when fearful faces are accurately perceived"
+  ],
+  "interpretations": [
+    "fear prioritization involves higher-level decision and confidence mechanisms, not only low-level features",
+    "fearful faces may have privileged access to consciousness"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "fearful face perception",
+    "perceptual decision bias",
+    "subjective confidence",
+    "metacognition",
+    "backward masking",
+    "dorsolateral prefrontal cortex",
+    "access to consciousness",
+    "signal detection"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "05f8b6e6f153aac9ba7083db0d607658",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,51 @@
+{
+  "frameworks": [
+    {
+      "name": "reinforcement learning",
+      "role": "primary_lens",
+      "one_line": "RPE-driven value learning via midbrain dopamine signals"
+    },
+    {
+      "name": "belief state",
+      "role": "extended",
+      "one_line": "probability distribution over hidden states under sensory ambiguity"
+    }
+  ],
+  "core_question": "How are dopamine reward prediction errors and subsequent learning regulated under state uncertainty?",
+  "key_assumptions": [
+    "midbrain dopamine neurons signal reward prediction errors",
+    "ambiguous sensory data are integrated as a probability distribution over hypothetical states",
+    "RL operates on belief states rather than observed states"
+  ],
+  "manipulations": [
+    "two trained states defined by different reward amounts",
+    "intermediate-sized rewards delivered in rare test trials"
+  ],
+  "key_findings": [
+    "dopamine activity is a non-monotonic function of reward size",
+    "dopamine response pattern matches RL models operating on belief states",
+    "dopamine response magnitude quantitatively predicts behavioral changes"
+  ],
+  "interpretations": [
+    "state inference plays a critical role in reinforcement learning",
+    "dopamine system represents belief states, not only observed states"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "belief state",
+    "reward prediction error",
+    "midbrain dopamine",
+    "state uncertainty",
+    "state inference",
+    "reinforcement learning",
+    "non-monotonic dopamine response",
+    "partial observability"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "46aeaf755808625cfcf0d1792b00b3aa",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}

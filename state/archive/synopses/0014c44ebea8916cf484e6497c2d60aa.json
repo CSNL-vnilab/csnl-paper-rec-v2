@@ -1,0 +1,61 @@
+{
+  "frameworks": [
+    {
+      "name": "latent group structure inference",
+      "role": "primary_lens",
+      "one_line": "learners infer unobservable social groups from choice patterns to guide imitation"
+    },
+    {
+      "name": "dyadic similarity heuristic",
+      "role": "compared_against",
+      "one_line": "influence driven only by pairwise overlap in past choices"
+    },
+    {
+      "name": "computational model of social learning",
+      "role": "extended",
+      "one_line": "formal model grouping individuals by choices to weight social influence"
+    },
+    {
+      "name": "infant preference understanding",
+      "role": "context",
+      "one_line": "developmental social cognition reinterpreted via latent group inference"
+    }
+  ],
+  "core_question": "How do people decide whose choices to follow when dyadic similarity alone cannot distinguish informants?",
+  "key_assumptions": [
+    "learners group individuals (including self) by choice patterns",
+    "latent social structure is inferable from observable choices",
+    "group membership modulates the weight of social influence"
+  ],
+  "manipulations": [
+    "degree of choice overlap between self and others",
+    "configurations equating dyadic overlap while differing in latent group structure",
+    "comparison across five behavioral experiments"
+  ],
+  "key_findings": [
+    "choices are more influenced by others whose past choices overlap more with one's own",
+    "influence diverges from dyadic overlap when latent group structure differs",
+    "model predicts behavior in cases where pairwise similarity is equated"
+  ],
+  "interpretations": [
+    "social influence reflects inferred group structure, not just dyadic similarity",
+    "infant developmental changes can be reframed as latent group inference"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "social influence",
+    "latent group structure",
+    "choice imitation",
+    "social learning model",
+    "dyadic similarity",
+    "infant preference inference",
+    "group-based social cognition"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "0014c44ebea8916cf484e6497c2d60aa",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,62 @@
+{
+  "frameworks": [
+    {
+      "name": "model-based reinforcement learning",
+      "role": "primary_lens",
+      "one_line": "planning over a causal world model to compute action values"
+    },
+    {
+      "name": "model-free reinforcement learning",
+      "role": "compared_against",
+      "one_line": "cached cheap action values from trial-and-error look-up"
+    },
+    {
+      "name": "dual-system decision making",
+      "role": "context",
+      "one_line": "fast automatic vs slow deliberative control as competing systems"
+    },
+    {
+      "name": "accuracy-demand trade-off arbitration",
+      "role": "extended",
+      "one_line": "task redesigned to make the trade-off actually govern strategy choice"
+    }
+  ],
+  "core_question": "Do canonical two-step tasks actually embody an accuracy-versus-computation trade-off between model-free and model-based control?",
+  "key_assumptions": [
+    "arbitration between strategies depends on an accuracy-demand trade-off",
+    "model-based control is more accurate but cognitively costlier",
+    "model-free control relies on cached, trial-and-error values"
+  ],
+  "manipulations": [
+    "task structure variants of the standard two-step paradigm",
+    "five factors that erode model-based effectiveness",
+    "a redesigned task that enforces an accuracy-demand trade-off"
+  ],
+  "key_findings": [
+    "the hallmark two-step task and variants do not impose an accuracy-demand trade-off",
+    "five identified factors reduce model-based estimation accuracy and choice impact",
+    "the redesigned task yields a genuine accuracy-demand trade-off",
+    "humans spontaneously increase model-based reliance on the redesigned task"
+  ],
+  "interpretations": [
+    "standard paradigms underestimate when model-based control pays off",
+    "arbitration toward model-based control emerges when accuracy gains matter"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "model-based control",
+    "model-free control",
+    "two-step task",
+    "reinforcement learning arbitration",
+    "accuracy-demand trade-off",
+    "planning in causal models",
+    "dual-system decision making"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "bfcd3f5550d2b61bac94878bb72cef01",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,53 @@
+{
+  "frameworks": [
+    {
+      "name": "reinforcement learning",
+      "role": "primary_lens",
+      "one_line": "value of self-protection updated by discrepancy between current and previously estimated feedback"
+    },
+    {
+      "name": "developmental cognitive neuroscience",
+      "role": "context",
+      "one_line": "age-related shift in how social feedback is integrated into self-protective decisions"
+    }
+  ],
+  "core_question": "How does the medial prefrontal cortex develop to support self-protective shifts driven by accumulated versus current negative social feedback?",
+  "key_assumptions": [
+    "self-protective bias is quantifiable in a reciprocal evaluation task",
+    "VMPFC and RMPFC support dissociable feedback-integration timescales",
+    "value of self-protection can be tracked with a reinforcement-learning update"
+  ],
+  "manipulations": [
+    "age group (youths vs. early adults)",
+    "current negative social evaluation",
+    "accumulated history of negative social evaluation"
+  ],
+  "key_findings": [
+    "youths bias self-protectively to current negative feedback",
+    "adults bias self-protectively to accumulated negative feedback",
+    "VMPFC tracks both current and accumulated feedback effects",
+    "RMPFC exclusively tracks longer feedback history"
+  ],
+  "interpretations": [
+    "RMPFC-VMPFC with PPC drive developmental increase in deep-history self-protection bias",
+    "feedback integration depth reflects PFC maturation computing prediction-error-like discrepancies"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "self-protective bias",
+    "social feedback integration",
+    "ventromedial prefrontal cortex",
+    "rostromedial prefrontal cortex",
+    "posterior parietal cortex",
+    "reinforcement learning model",
+    "developmental shift",
+    "reciprocal artwork evaluation"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "7f43c7760ab7b0c95c5a9208ab63747f",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}

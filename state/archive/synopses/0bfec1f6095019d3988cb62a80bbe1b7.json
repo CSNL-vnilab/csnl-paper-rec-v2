@@ -1,0 +1,60 @@
+{
+  "frameworks": [
+    {
+      "name": "drift-diffusion model",
+      "role": "extended",
+      "one_line": "DDM extended with a learning rule over input weights from feedback"
+    },
+    {
+      "name": "Bayesian learning",
+      "role": "primary_lens",
+      "one_line": "trial-by-trial update of weight mean and covariance"
+    },
+    {
+      "name": "confidence-modulated learning",
+      "role": "primary_lens",
+      "one_line": "learning rate scales with decision confidence and correctness"
+    }
+  ],
+  "core_question": "How can a DDM learn near-optimal input weights from trial-by-trial feedback?",
+  "key_assumptions": [
+    "sensory inputs encoded by large neuronal populations, not antineuron pairs",
+    "decision read out as a linear combination of population activity",
+    "feedback available trial by trial",
+    "weights treated as Bayesian variables with mean and covariance"
+  ],
+  "manipulations": [
+    "decision correctness (correct vs incorrect trials)",
+    "environment volatility",
+    "prior probability of each choice (asymmetric priors)",
+    "previous-choice difficulty"
+  ],
+  "key_findings": [
+    "derived a Bayesian learning rule for DDM input weights",
+    "learning rate proportional to confidence after errors, inversely after correct",
+    "in volatile environments rule predicts post-correct choice repetition bias",
+    "repetition-bias strength modulated by previous trial's difficulty"
+  ],
+  "interpretations": [
+    "confidence acts as a normative gain on weight updates during decision learning",
+    "history biases can emerge from optimal learning, not just heuristics"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "drift-diffusion model learning",
+    "confidence-weighted weight updates",
+    "Bayesian learning rule",
+    "perceptual decision making",
+    "population-coded inputs",
+    "choice history bias",
+    "volatile environment",
+    "asymmetric priors"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "0bfec1f6095019d3988cb62a80bbe1b7",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,64 @@
+{
+  "frameworks": [
+    {
+      "name": "bounded evidence accumulation",
+      "role": "primary_lens",
+      "one_line": "decisions arise when accumulated evidence reaches a terminating threshold"
+    },
+    {
+      "name": "drift-diffusion model",
+      "role": "primary_lens",
+      "one_line": "noisy accumulation of momentary evidence to a bound governs choice and timing"
+    },
+    {
+      "name": "threshold-crossing account of conscious awareness",
+      "role": "extended",
+      "one_line": "subjective 'aha' moment indexes the moment evidence first hits the bound"
+    },
+    {
+      "name": "post hoc inference account",
+      "role": "compared_against",
+      "one_line": "alternative that subjective decision reports are reconstructed rather than registered"
+    }
+  ],
+  "core_question": "Do subjective reports of when one decided correspond to an evidence accumulation reaching a termination threshold?",
+  "key_assumptions": [
+    "perceptual decisions reflect noisy accumulation of evidence",
+    "a terminating bound exists and its crossing is psychologically registrable",
+    "subjective decision time can be measured by a clock-setting report"
+  ],
+  "manipulations": [
+    "motion strength (difficulty) of random-dot stimulus",
+    "experimenter-controlled viewing duration",
+    "decoupling of overt response time from subjective decision time"
+  ],
+  "key_findings": [
+    "subjective decision times were faster on easier (stronger motion) trials",
+    "subjective decision time distributions were well fit by a bounded drift-diffusion model",
+    "parameters fit to subjective decision times alone predicted choice accuracy in four of five participants"
+  ],
+  "interpretations": [
+    "subjective reports of deciding index the terminating step of evidence accumulation",
+    "conscious awareness of having decided arises when accumulated evidence reaches a threshold"
+  ],
+  "limitations_noted": [
+    "predictive match held for four of five participants"
+  ],
+  "connecting_signals": [
+    "bounded evidence accumulation",
+    "drift-diffusion model",
+    "subjective decision time",
+    "random dot motion",
+    "perceptual decision-making",
+    "threshold crossing",
+    "conscious access",
+    "metacognition of timing"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "6790aab2b1c1a9af1ddb84881f02d531",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}
