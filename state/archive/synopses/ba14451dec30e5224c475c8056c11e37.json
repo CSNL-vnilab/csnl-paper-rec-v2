@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "online hierarchical Bayesian inference",
+      "role": "primary_lens",
+      "one_line": "structured motion relations inferred online from volatile visual input"
+    },
+    {
+      "name": "Expectation-Maximization (online EM)",
+      "role": "extended",
+      "one_line": "derived as the algorithmic implementation of hierarchical motion inference"
+    },
+    {
+      "name": "neural network implementation",
+      "role": "extended",
+      "one_line": "model mapped onto motion-sensitive cortical area properties"
+    }
+  ],
+  "core_question": "How does the visual system online infer the hierarchical structure of motion relations from a volatile stream of input?",
+  "key_assumptions": [
+    "motion structure can be represented hierarchically",
+    "the brain performs Bayesian inference over latent motion relations",
+    "inference must operate online on a streaming input"
+  ],
+  "manipulations": [
+    "classical motion psychophysics stimuli",
+    "ambiguous motion scenes",
+    "illusory motion displays"
+  ],
+  "key_findings": [
+    "online EM model reproduces human percepts qualitatively and quantitatively across stimulus classes",
+    "single framework spans classical, ambiguous, and illusory motion regimes",
+    "model affords a neural network implementation sharing properties with motion-sensitive cortical areas"
+  ],
+  "interpretations": [
+    "online hierarchical Bayesian inference is a normative origin for human motion structure perception",
+    "the framework yields testable predictions for future psychophysics"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "motion structure perception",
+    "hierarchical Bayesian inference",
+    "online Expectation-Maximization",
+    "ambiguous motion",
+    "illusory motion",
+    "motion-sensitive cortex",
+    "visual motion psychophysics",
+    "normative perceptual model"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "ba14451dec30e5224c475c8056c11e37",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:14:20+09:00",
+  "review_status": "auto_unreviewed"
+}

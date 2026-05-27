@@ -1,0 +1,55 @@
+{
+  "frameworks": [
+    {
+      "name": "evidence accumulation",
+      "role": "primary_lens",
+      "one_line": "persistent neural activity tracks evolving sensory evidence toward a decision"
+    },
+    {
+      "name": "intentional / motor-preparatory account of decision making",
+      "role": "primary_lens",
+      "one_line": "decision variables are carried by activity tied to prospective actions"
+    },
+    {
+      "name": "sensory categorical representation in LIP",
+      "role": "compared_against",
+      "one_line": "stimulus-driven categorical responses as an alternative locus for the decision variable"
+    }
+  ],
+  "core_question": "Do LIP sensory responses, like motor-preparatory responses, also track the evolving evidence during perceptual decision making?",
+  "key_assumptions": [
+    "LIP neurons have distinguishable sensory and oculomotor-preparatory response components",
+    "direction discrimination of random-dot motion engages evidence accumulation",
+    "placing motion stimulus vs choice target in the response field isolates sensory vs motor signals"
+  ],
+  "manipulations": [
+    "whether the random-dot motion patch was in the neuron's response field",
+    "whether the saccade choice target was in the neuron's response field"
+  ],
+  "key_findings": [
+    "both stimulus-in-RF and target-in-RF configurations produced task-related LIP activity",
+    "only motor-preparatory responses reflected evidence accumulation",
+    "sensory responses did not track the evolving decision variable"
+  ],
+  "interpretations": [
+    "evolving decision processes are supported by persistent activity tied to actions/intentions rather than to higher-order stimulus representations"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "lateral intraparietal area (LIP)",
+    "perceptual decision making",
+    "evidence accumulation",
+    "motor preparatory activity",
+    "sensory response in parietal cortex",
+    "random dot motion direction discrimination",
+    "decision variable",
+    "persistent neural activity"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "6d029fba0014fb179651bb082151bdcd",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:14:20+09:00",
+  "review_status": "auto_unreviewed"
+}

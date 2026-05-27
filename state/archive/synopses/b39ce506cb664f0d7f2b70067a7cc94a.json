@@ -1,0 +1,55 @@
+{
+  "frameworks": [
+    {
+      "name": "grey-box linear modeling",
+      "role": "primary_lens",
+      "one_line": "data-driven linearization of a physiological model fit to fNIRS signals"
+    },
+    {
+      "name": "multi-compartmental neurovascular unit model",
+      "role": "extended",
+      "one_line": "nonlinear physiological model linearized to identify tDCS pathway"
+    },
+    {
+      "name": "Akaike information criterion",
+      "role": "context",
+      "one_line": "model selection criterion for choosing appropriate linear complexity"
+    }
+  ],
+  "core_question": "Through which neurovascular pathway does anodal HD-tDCS evoke the cerebrovascular reactivity observed by fNIRS?",
+  "key_assumptions": [
+    "neurovascular unit can be decomposed into vascular smooth muscle, perivascular space, synaptic space, and astrocyte compartments",
+    "nonlinear NVU dynamics admit a linear approximation adequate for fNIRS CVR fitting",
+    "early (first 150 s) anodal HD-tDCS response reflects pathway-specific perturbation"
+  ],
+  "manipulations": [
+    "candidate tDCS perturbation pathway (including perivascular potassium / Pathway 3)",
+    "linear model complexity selected by AIC",
+    "anodal HD-tDCS applied at targeted region in healthy humans"
+  ],
+  "key_findings": [
+    "grey-box linear model fits fNIRS CVR to first 150 s of anodal HD-tDCS across eleven participants",
+    "Pathway 3 (perivascular potassium concentration) yields the lowest mean square error and lowest AIC"
+  ],
+  "interpretations": [
+    "anodal HD-tDCS evoked hemodynamic response is best explained by perturbation via perivascular potassium"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "transcranial direct current stimulation",
+    "high-definition tDCS",
+    "cerebrovascular reactivity",
+    "functional near-infrared spectroscopy",
+    "neurovascular unit model",
+    "grey-box linear model",
+    "perivascular potassium",
+    "hemodynamic response"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "b39ce506cb664f0d7f2b70067a7cc94a",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:14:20+09:00",
+  "review_status": "auto_unreviewed"
+}

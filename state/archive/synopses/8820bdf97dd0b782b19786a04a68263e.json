@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "excitation-inhibition (E/I) balance",
+      "role": "primary_lens",
+      "one_line": "neuromodulators reshape cortical variability via E/I ratio in sensory cortex"
+    },
+    {
+      "name": "scale-free / 1/f cortical population dynamics",
+      "role": "primary_lens",
+      "one_line": "temporal structure of spontaneous activity indexes intrinsic variability"
+    },
+    {
+      "name": "ascending neuromodulatory systems (catecholaminergic vs cholinergic)",
+      "role": "compared_against",
+      "one_line": "dissociates catecholamine effect from cholinergic baseline"
+    },
+    {
+      "name": "perceptual inference under ambiguity",
+      "role": "context",
+      "one_line": "ambiguous bistable visual input as readout of inferential variability"
+    }
+  ],
+  "core_question": "Do catecholaminergic and cholinergic neuromodulators alter cortical intrinsic variability and the rate of perceptual fluctuations in humans?",
+  "key_assumptions": [
+    "scale-free temporal structure of MEG activity indexes intrinsic cortical variability",
+    "spontaneous switches under ambiguous input reflect cortical inferential state",
+    "low-dose pharmacological manipulation selectively engages one modulatory system",
+    "shifts in temporal structure can be mapped to changes in E/I ratio"
+  ],
+  "manipulations": [
+    "placebo-controlled catecholaminergic vs cholinergic drug administration",
+    "ambiguous visual input eliciting spontaneous perceptual fluctuations",
+    "MEG recording of cortical population activity across visual/parietal cortex"
+  ],
+  "key_findings": [
+    "catecholaminergic, but not cholinergic, manipulation increased the rate of spontaneous perceptual switches",
+    "catecholaminergic manipulation altered temporal structure of scale-free activity in visual and parietal cortices",
+    "computational analysis linked both effects to an increase in excitatory relative to inhibitory activity"
+  ],
+  "interpretations": [
+    "catecholamines regulate perceptual and cognitive variability by dynamically modulating cortical E/I ratio",
+    "intrinsic cortical variability is a tractable bridge between global brain state and specific computations"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "catecholaminergic modulation",
+    "cortical excitation-inhibition ratio",
+    "scale-free population activity",
+    "spontaneous perceptual switching",
+    "ambiguous visual perception",
+    "MEG cortical variability",
+    "neuromodulator pharmacology in humans",
+    "intrinsic cortical variability"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "8820bdf97dd0b782b19786a04a68263e",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:14:20+09:00",
+  "review_status": "auto_unreviewed"
+}

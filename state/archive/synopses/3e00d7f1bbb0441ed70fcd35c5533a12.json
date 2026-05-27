@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "functional connectomics",
+      "role": "primary_lens",
+      "one_line": "individual differences indexed by whole-brain functional connectivity profiles"
+    },
+    {
+      "name": "transdiagnostic psychiatric dimensions",
+      "role": "extended",
+      "one_line": "symptom spectra cross diagnostic boundaries and map onto network function"
+    },
+    {
+      "name": "categorical psychiatric nosology",
+      "role": "compared_against",
+      "one_line": "discrete diagnostic categories assumed to reflect distinct neurobiology"
+    }
+  ],
+  "core_question": "Do functional connectome disruptions track transdiagnostic affective and psychotic symptom dimensions rather than discrete diagnoses?",
+  "key_assumptions": [
+    "psychiatric diagnoses lack sharp neurobiological boundaries",
+    "behavioral variability maps onto functional connectome variation",
+    "illness severity scales graded network disruption"
+  ],
+  "manipulations": [
+    "diagnostic group (primary psychotic, affective without psychosis, healthy)",
+    "presence vs absence of psychotic symptoms",
+    "illness severity gradient across patients"
+  ],
+  "key_findings": [
+    "shared connectomic fingerprints disrupted across distinct pathologies",
+    "frontoparietal network connectivity disrupted in graded fashion with illness",
+    "default network integrity preferentially disrupted in psychotic illness only"
+  ],
+  "interpretations": [
+    "transdiagnostic symptom spectra correspond to detectable network-function patterns",
+    "some network disruptions are general while others are psychosis-specific"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "functional connectome",
+    "transdiagnostic psychiatry",
+    "frontoparietal network",
+    "default mode network",
+    "psychotic disorder",
+    "affective disorder",
+    "individual differences fMRI",
+    "network connectivity disruption"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "3e00d7f1bbb0441ed70fcd35c5533a12",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}

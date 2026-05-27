@@ -1,0 +1,61 @@
+{
+  "frameworks": [
+    {
+      "name": "sensory prediction error",
+      "role": "primary_lens",
+      "one_line": "dopamine signals errors about identity of sensory events, not just value"
+    },
+    {
+      "name": "associative learning",
+      "role": "context",
+      "one_line": "dopamine transients are taken to support stimulus-stimulus learning"
+    },
+    {
+      "name": "population coding",
+      "role": "extended",
+      "one_line": "content of error is read out from across-neuron firing pattern"
+    },
+    {
+      "name": "scalar reward prediction error",
+      "role": "compared_against",
+      "one_line": "single-neuron/population-average view cannot carry identity information"
+    }
+  ],
+  "core_question": "Does the dopamine system signal not just that a sensory prediction was violated but what was mis-predicted?",
+  "key_assumptions": [
+    "dopamine transients can support value-neutral, sensory-based associative learning",
+    "downstream learners need content-specific teaching signals",
+    "information not visible in averages may live in ensemble patterns"
+  ],
+  "manipulations": [
+    "violations of expected sensory event identity (value-neutral)",
+    "rat single-unit recording vs human midbrain BOLD comparison"
+  ],
+  "key_findings": [
+    "individual dopamine neurons and population averages do not show identity-specific responses",
+    "across-cell firing pattern in rat dopamine neurons discriminates which sensory event was mis-predicted",
+    "human midbrain BOLD response to sensory prediction errors carries analogous identity information"
+  ],
+  "interpretations": [
+    "dopamine ensembles carry multidimensional, content-specific teaching signals",
+    "downstream regions can read identity of prediction error from the dopamine population code"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "sensory prediction error",
+    "dopamine ensemble coding",
+    "identity prediction error",
+    "value-neutral associative learning",
+    "midbrain BOLD",
+    "teaching signal",
+    "population pattern readout",
+    "multidimensional prediction error"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "cf2f21061b48631b35b67f12a789b799",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:14:20+09:00",
+  "review_status": "auto_unreviewed"
+}

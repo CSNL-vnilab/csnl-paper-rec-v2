@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "AI-mediated deliberation",
+      "role": "primary_lens",
+      "one_line": "an AI iteratively drafts and refines group statements expressing common ground"
+    },
+    {
+      "name": "text embedding analysis",
+      "role": "extended",
+      "one_line": "embeddings characterize how successful statements integrate dissent with majority view"
+    },
+    {
+      "name": "human mediation baseline",
+      "role": "compared_against",
+      "one_line": "human-written mediator statements serve as comparison for AI outputs"
+    },
+    {
+      "name": "citizens' assembly deliberation",
+      "role": "context",
+      "one_line": "demographically representative collective decision-making setting"
+    }
+  ],
+  "core_question": "Can an AI mediator help groups of people find common ground in deliberation over social and political issues?",
+  "key_assumptions": [
+    "personal opinions and critiques can be aggregated into a group statement",
+    "common ground can be expressed as a single refined statement",
+    "iterative refinement improves agreement quality"
+  ],
+  "manipulations": [
+    "AI-generated versus human-written mediator statements",
+    "iterative refinement using participant critiques",
+    "deployment in lab participants versus a representative virtual citizens' assembly"
+  ],
+  "key_findings": [
+    "participants preferred AI-generated statements over human-written ones on informativeness, clarity, and lack of bias",
+    "discussants frequently updated views after deliberation and converged on a shared perspective",
+    "successful statements incorporated dissenting voices while respecting the majority position",
+    "results replicated in a representative UK citizens' assembly"
+  ],
+  "interpretations": [
+    "AI mediation can scale collective deliberation while balancing majority and minority voices",
+    "embedding-level structure of statements predicts deliberative success"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "AI mediation",
+    "collective deliberation",
+    "common ground",
+    "text embeddings",
+    "citizens' assembly",
+    "opinion convergence",
+    "minority voice representation",
+    "group statement generation"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "7da8e7703f3bfabbad01563acb9c6578",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "multivariate pattern analysis of fMRI",
+      "role": "primary_lens",
+      "one_line": "decoding stimulus content from hemodynamic activity patterns during WM delay"
+    },
+    {
+      "name": "sensory-recruitment of working memory",
+      "role": "context",
+      "one_line": "WM content represented in sensory cortex extended here to auditory features"
+    },
+    {
+      "name": "feature-selective WM representation",
+      "role": "extended",
+      "one_line": "two concurrent features of one object can each be decoded separately"
+    }
+  ],
+  "core_question": "Can two separate features (pitch and perceived location) of a single auditory object be concurrently decoded from delay-period brain activity?",
+  "key_assumptions": [
+    "stimulus-specific WM content elicits feature-selective patterns decodable by MVPA",
+    "ROI-based decoding indexes content-specific maintenance",
+    "pitch and location are dissociable features of a single sound"
+  ],
+  "manipulations": [
+    "feature to be reproduced at recall (pitch vs location)",
+    "memorized sound's pitch and perceived location",
+    "selection of one of two sample sounds for maintenance"
+  ],
+  "key_findings": [
+    "both pitch and location showed comparable discriminability at recall",
+    "feature-selective delay activity for both features in auditory cortex and superior parietal lobule",
+    "location decodable from angular and supramarginal gyrus and both superior and inferior frontal gyrus",
+    "no region exclusively coded pitch memory information"
+  ],
+  "interpretations": [
+    "two features of a single auditory object are concurrently maintained with shared and feature-specific neural substrates",
+    "superior parietal lobule preferentially represents auditory spatial WM"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "auditory working memory",
+    "pitch decoding",
+    "sound localization",
+    "fMRI MVPA",
+    "feature-selective representation",
+    "superior parietal lobule",
+    "delay-period activity",
+    "concurrent feature maintenance"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "d02aad6d77882a3f62d788278e27fc9e",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}
