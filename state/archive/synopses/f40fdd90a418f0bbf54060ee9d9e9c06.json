@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "reward prediction error",
+      "role": "compared_against",
+      "one_line": "dopamine encodes scalar discrepancy between predicted and obtained reward"
+    },
+    {
+      "name": "mediated devaluation",
+      "role": "primary_lens",
+      "one_line": "value of a sensory cue is updated via reactivated associative memory"
+    },
+    {
+      "name": "dopaminergic memory encoding",
+      "role": "extended",
+      "one_line": "dopamine encodes predictive representations of specific sensory reward features"
+    }
+  ],
+  "core_question": "Does midbrain dopamine encode sensory features of reward beyond a scalar reward prediction error?",
+  "key_assumptions": [
+    "dopamine cell ensembles can be tagged during a learning phase and reactivated later",
+    "hedonic evaluation of sucrose indexes the cached value of reward memories",
+    "nucleus accumbens dopamine release indexes retrieval of reward representations"
+  ],
+  "manipulations": [
+    "chemogenetic reactivation of dopamine cells active during mediated devaluation",
+    "optogenetic and chemogenetic gain- and loss-of-function over dopamine cells",
+    "measurement of dopamine release in the nucleus accumbens during retrieval"
+  ],
+  "key_findings": [
+    "reactivating devaluation-active dopamine cells reduces hedonic evaluation of sucrose",
+    "dopamine cells are both sufficient and necessary for mediated devaluation",
+    "retrieval of devalued memories is accompanied by accumbens dopamine release"
+  ],
+  "interpretations": [
+    "dopamine carries predictive representations of specific sensory features of reinforcement",
+    "reward prediction error alone is insufficient to capture dopamine function"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "mediated devaluation",
+    "midbrain dopamine cells",
+    "reward prediction error",
+    "sensory features of reward",
+    "nucleus accumbens dopamine release",
+    "chemogenetic reactivation",
+    "memory retrieval",
+    "hedonic evaluation"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "f40fdd90a418f0bbf54060ee9d9e9c06",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

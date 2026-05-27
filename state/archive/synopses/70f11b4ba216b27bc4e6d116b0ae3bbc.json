@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "theory-based reinforcement learning",
+      "role": "primary_lens",
+      "one_line": "model-based RL where the internal model is an intuitive causal theory of objects, agents, and goals"
+    },
+    {
+      "name": "model-based reinforcement learning",
+      "role": "extended",
+      "one_line": "extends model-based RL with structured ontological priors over the world"
+    },
+    {
+      "name": "alternative learning models",
+      "role": "compared_against",
+      "one_line": "competing computational accounts of value and state representation in PFC"
+    },
+    {
+      "name": "intuitive theories of physics and psychology",
+      "role": "context",
+      "one_line": "cognitive ontology of objects, agents, relations, and goals as scaffolding"
+    }
+  ],
+  "core_question": "How does the brain represent and learn the internal models that support planning and generalization in complex environments?",
+  "key_assumptions": [
+    "internal models take the form of structured, causal intuitive theories",
+    "theories are built on an ontology of objects, agents, relations, and goals",
+    "theory components can be updated separately during learning"
+  ],
+  "manipulations": [
+    "playing different Atari-style video games during fMRI",
+    "modeling brain activity with theory-based vs alternative learning models",
+    "tracking events identified as theory-update moments"
+  ],
+  "key_findings": [
+    "inferred theories explain inferior frontal gyrus and other prefrontal signals better than alternatives",
+    "theory-update events evoke increased activity in IFG, occipital, and fusiform cortex",
+    "separable learning signals are observed for different theory components",
+    "effective connectivity flows top-down from prefrontal theory regions to occipito-temporal update regions"
+  ],
+  "interpretations": [
+    "prefrontal cortex encodes and dispatches abstract intuitive theories used for planning",
+    "theory updating is implemented as top-down signaling that revises perceptual/object representations"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "theory-based reinforcement learning",
+    "model-based RL",
+    "intuitive theories",
+    "prefrontal cortex",
+    "inferior frontal gyrus",
+    "effective connectivity",
+    "theory update signals",
+    "Atari fMRI"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "70f11b4ba216b27bc4e6d116b0ae3bbc",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}

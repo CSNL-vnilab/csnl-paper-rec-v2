@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "partially observable Markov decision process (POMDP)",
+      "role": "primary_lens",
+      "one_line": "action selection over posterior belief states under sensory uncertainty"
+    },
+    {
+      "name": "Bayesian inference in perception",
+      "role": "extended",
+      "one_line": "probabilistic perceptual representations extended to drive action selection"
+    },
+    {
+      "name": "temporal difference (TD) reinforcement learning",
+      "role": "primary_lens",
+      "one_line": "value learning over belief states to maximize expected reward"
+    },
+    {
+      "name": "cortico-basal-ganglia decision architecture",
+      "role": "extended",
+      "one_line": "neocortex computes belief; basal ganglia handle value and action selection"
+    }
+  ],
+  "core_question": "How are probabilistic perceptual representations used by the brain to select actions under uncertainty?",
+  "key_assumptions": [
+    "brain performs Bayesian inference during perception",
+    "actions depend on the full posterior belief state, not a point estimate",
+    "expected reward is maximized via TD learning",
+    "neocortex represents beliefs while basal ganglia evaluate and select actions"
+  ],
+  "manipulations": [
+    "application to random dots motion discrimination task",
+    "tasks with versus without a decision deadline",
+    "trading off information gathering against overt action"
+  ],
+  "key_findings": [
+    "model neurons coding belief resemble primate LIP responses on motion discrimination",
+    "an appropriate threshold for switching from sampling to action emerges from reward maximization",
+    "with a deadline, the learned decision strategy yields a collapsing threshold over elapsed time"
+  ],
+  "interpretations": [
+    "POMDP + TD provides a unified account of perceptual decision making with information gathering and overt actions",
+    "cortex-basal ganglia division of labor implements belief-based action selection"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "POMDP",
+    "belief state",
+    "perceptual decision making",
+    "random dots motion discrimination",
+    "LIP neurons",
+    "temporal difference learning",
+    "collapsing decision threshold",
+    "basal ganglia action selection"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "16d7e86ff0228f204fcbf5b667e5e433",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

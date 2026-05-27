@@ -1,0 +1,49 @@
+{
+  "frameworks": [
+    {
+      "name": "predictive processing",
+      "role": "primary_lens",
+      "one_line": "deep cortical layers carry perceptual hypotheses combined with sensory input"
+    },
+    {
+      "name": "laminar cortical computation",
+      "role": "extended",
+      "one_line": "different V1 layers carry distinct expectation vs feedforward signals"
+    }
+  ],
+  "core_question": "Which cortical layers of V1 carry stimulus-specific activity evoked by prior expectations?",
+  "key_assumptions": [
+    "prior expectations modulate early sensory processing",
+    "cortical layers have distinct intra- and interregional connectivity",
+    "laminar BOLD at 7T can dissociate deep vs superficial V1 signals"
+  ],
+  "manipulations": [
+    "presence vs absence of stimulus-specific prior expectation",
+    "readout across V1 cortical depth (deep vs superficial layers)"
+  ],
+  "key_findings": [
+    "prior expectations evoke stimulus-specific activity in V1",
+    "this expectation-driven activity is selective to deep V1 layers"
+  ],
+  "interpretations": [
+    "deep-layer neurons represent perceptual hypotheses, consistent with predictive processing"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "prior expectations",
+    "stimulus-specific activity",
+    "deep cortical layers",
+    "primary visual cortex",
+    "laminar fMRI",
+    "7T fMRI",
+    "predictive processing",
+    "perceptual hypotheses"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "2ee9a6bb91072b137bc681b68dd416de",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:36:29+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,54 @@
+{
+  "frameworks": [
+    {
+      "name": "level of mechanism",
+      "role": "primary_lens",
+      "one_line": "Components of a mechanism are themselves decomposable into nested mechanisms."
+    },
+    {
+      "name": "reductionism",
+      "role": "compared_against",
+      "one_line": "Reducing higher-level theory to lower-level substrate is premature given undeveloped theory."
+    },
+    {
+      "name": "emergence (metaphysical)",
+      "role": "compared_against",
+      "one_line": "Strong emergence claims conflict with physicalism and are unhelpful for practice."
+    },
+    {
+      "name": "model selection",
+      "role": "alternative_lens",
+      "one_line": "Adjudicating competing accounts against specified findings replaces vague plausibility appeals."
+    }
+  ],
+  "core_question": "How should neuroscience handle levels of analysis, and what does 'biological plausibility' actually require?",
+  "key_assumptions": [
+    "Mechanisms are hierarchically decomposable rather than tied to fixed ontological levels",
+    "Scientific goals are pragmatic, not metaphysical",
+    "Measures (behaviour, BOLD, single-unit) are not themselves levels of analysis"
+  ],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [
+    "Claims of 'biological plausibility' are incoherent under a level-of-mechanism view and largely vacuous",
+    "Model selection over explicit findings should replace reduction- and emergence-style framing"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "levels of analysis",
+    "level of mechanism",
+    "biological plausibility",
+    "reduction and emergence",
+    "model selection in neuroscience",
+    "BOLD and single-unit measures",
+    "philosophy of neuroscience",
+    "mechanistic explanation"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "cce21ee5dbdab58b61ea3cd6f1a2342a",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:36:29+09:00",
+  "review_status": "auto_unreviewed"
+}

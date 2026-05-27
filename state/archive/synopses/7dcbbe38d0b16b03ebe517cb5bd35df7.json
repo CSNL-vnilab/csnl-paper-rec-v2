@@ -1,0 +1,62 @@
+{
+  "frameworks": [
+    {
+      "name": "cognitive map",
+      "role": "primary_lens",
+      "one_line": "map-like neural representation of allocentric space in hippocampus and cortex"
+    },
+    {
+      "name": "neural state-space geometry",
+      "role": "primary_lens",
+      "one_line": "analysing how task variables structure fMRI representational geometry"
+    },
+    {
+      "name": "joint current-and-prospective place code",
+      "role": "extended",
+      "one_line": "computational model jointly encoding present and goal locations"
+    },
+    {
+      "name": "goal-directed navigation",
+      "role": "context",
+      "one_line": "flexible behaviour as the source of representational distortion"
+    }
+  ],
+  "core_question": "How does goal-directed behaviour distort the neural representation of allocentric space?",
+  "key_assumptions": [
+    "allocentric space is represented as a cognitive map in hippocampus and neocortex",
+    "fMRI representational geometry reflects how task variables are encoded",
+    "contextual cues can make one goal conditionally dependent on another"
+  ],
+  "manipulations": [
+    "successive goal locations in a four-room grid world",
+    "contextual cue setting conditional dependence between goals",
+    "room identity versus context as encoded task variables"
+  ],
+  "key_findings": [
+    "map-like representations of the environment emerged in hippocampus and neocortex",
+    "cognitive maps in hippocampus and orbitofrontal cortex were compressed so goal-cued locations clustered in neural state space",
+    "the degree of compression predicted successful learning"
+  ],
+  "interpretations": [
+    "goal-seeking compresses spatial codes by jointly encoding current and prospective locations",
+    "this distortion of the cognitive map supports flexible goal-directed behaviour"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "cognitive map",
+    "hippocampus",
+    "orbitofrontal cortex",
+    "allocentric space",
+    "goal-directed navigation",
+    "representational geometry",
+    "neural state space",
+    "place code"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "7dcbbe38d0b16b03ebe517cb5bd35df7",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:36:29+09:00",
+  "review_status": "auto_unreviewed"
+}

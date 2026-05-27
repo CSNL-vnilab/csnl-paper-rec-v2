@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "value-based decision making",
+      "role": "primary_lens",
+      "one_line": "Expected reward representations guide choice and learning in cortex."
+    },
+    {
+      "name": "reinforcement learning",
+      "role": "primary_lens",
+      "one_line": "Value signals support reward prediction-error updating of choice policy."
+    },
+    {
+      "name": "actor-critic dissociation",
+      "role": "alternative_lens",
+      "one_line": "Separable neural substrates for evaluating versus selecting actions."
+    }
+  ],
+  "core_question": "Do orbitofrontal value representations directly drive choice, or instead support learning?",
+  "key_assumptions": [
+    "Value representations can serve both choice and learning roles",
+    "A multi-step task can computationally separate learning from choosing",
+    "Orbitofrontal cortex is central to value-based cognition"
+  ],
+  "manipulations": [
+    "Multi-step rodent task dissociating learning from choice",
+    "Electrophysiological recording in orbitofrontal cortex",
+    "Optogenetic perturbation of OFC value representations"
+  ],
+  "key_findings": [
+    "OFC value representations do not directly drive choice",
+    "OFC value signals carry expected-reward information for a learning process",
+    "Perturbing OFC affects updating rather than action selection"
+  ],
+  "interpretations": [
+    "OFC supplies expected-reward signals to a downstream learner that updates choice mechanisms",
+    "Choice-driving and learning-supporting value representations are functionally dissociable"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "orbitofrontal cortex",
+    "value representation",
+    "reward prediction",
+    "multi-step decision task",
+    "optogenetic perturbation",
+    "rodent electrophysiology",
+    "learning vs choice dissociation",
+    "expected reward signal"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "b69f65f62e90981696becdf3ba400b83",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:36:29+09:00",
+  "review_status": "auto_unreviewed"
+}

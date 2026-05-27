@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "dynamic Bayesian inference",
+      "role": "primary_lens",
+      "one_line": "agent infers hidden environmental state by combining prediction with new sensory evidence"
+    },
+    {
+      "name": "internal state transition model",
+      "role": "extended",
+      "one_line": "action-dependent forward model used to predict hidden states across time"
+    },
+    {
+      "name": "probabilistic population decoding",
+      "role": "context",
+      "one_line": "decoding method used to read goal-distance representations from cortical populations"
+    }
+  ],
+  "core_question": "Does posterior parietal cortex implement the prediction-and-update steps of dynamic Bayesian inference during a goal-reaching task?",
+  "key_assumptions": [
+    "dynamic Bayesian inference decomposes into prediction via a transition model and update with sensory evidence",
+    "PPC and adjacent PM jointly support inference of hidden environmental state",
+    "anticipatory licking reflects internal estimates of goal distance"
+  ],
+  "manipulations": [
+    "intermittent omission of acoustic cue sounds during virtual navigation",
+    "optogenetic-style silencing of PPC during the goal-reaching task",
+    "imaging across PPC and PM layers 2, 3 and 5"
+  ],
+  "key_findings": [
+    "anticipatory licking increased near reward even when sound cues were intermittently omitted",
+    "PPC silencing disrupted the cue-omission anticipatory licking",
+    "PPC and PM neurons represented goal distance during sound omission, especially in PPC layers 3 and 5",
+    "goal-distance prediction improved when cue sounds were observed"
+  ],
+  "interpretations": [
+    "PPC and PM implement the two fundamental operations of dynamic Bayesian inference: prediction and updating",
+    "cerebral cortex realizes mental simulation through an action-dependent dynamic model"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "dynamic Bayesian inference",
+    "posterior parietal cortex",
+    "hidden state prediction",
+    "sensory evidence updating",
+    "internal state transition model",
+    "probabilistic population decoding",
+    "goal-distance representation",
+    "acoustic virtual reality"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "fbab97226ed9aacc4ddeaf9971cd33af",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}
