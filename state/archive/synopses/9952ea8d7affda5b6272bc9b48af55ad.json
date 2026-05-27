@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "intrinsic gain modulation",
+      "role": "primary_lens",
+      "one_line": "single-cell input-output gain sets the timescale of cortical circuit dynamics"
+    },
+    {
+      "name": "cell-type-specific top-down perturbation theory",
+      "role": "extended",
+      "one_line": "classifying how cell-type-targeted projections reshape stimulus processing speed"
+    },
+    {
+      "name": "recurrent cortical circuit dynamics",
+      "role": "context",
+      "one_line": "circuit-level computations underlying state-dependent information processing"
+    },
+    {
+      "name": "neuromodulation and corticocortical top-down control",
+      "role": "context",
+      "one_line": "candidate pathways that implement state- and context-dependent modulation"
+    }
+  ],
+  "core_question": "How do cell-type-specific top-down perturbations control the speed of cortical stimulus processing?",
+  "key_assumptions": [
+    "behavioral flexibility reflects state-dependent modulation early in the cortical hierarchy",
+    "top-down projections act on identified cortical cell types",
+    "circuit timescale is governed by intrinsic single-cell gain"
+  ],
+  "manipulations": [
+    "cell-type-specific top-down perturbations in a theoretical circuit model",
+    "input variance to the circuit",
+    "behavioral state (locomotion vs stationary) in freely running mice"
+  ],
+  "key_findings": [
+    "perturbation effects on processing speed are predicted by intrinsic gain modulation",
+    "increased input variance can counterintuitively improve performance",
+    "locomotion decreases single-cell intrinsic gain in visual cortex",
+    "lower intrinsic gain accelerates visual stimulus processing during locomotion"
+  ],
+  "interpretations": [
+    "intrinsic gain is a unifying mechanism linking top-down perturbations to processing-speed changes",
+    "state-dependent cortical acceleration arises from gain-controlled circuit timescales"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "intrinsic gain modulation",
+    "cortical processing speed",
+    "circuit timescale",
+    "state-dependent modulation",
+    "locomotion and visual cortex",
+    "cell-type-specific top-down perturbation",
+    "input variance and performance",
+    "visual hierarchy electrophysiology"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "9952ea8d7affda5b6272bc9b48af55ad",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

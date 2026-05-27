@@ -1,0 +1,61 @@
+{
+  "frameworks": [
+    {
+      "name": "Memoised Wake-Sleep (MWS)",
+      "role": "extended",
+      "one_line": "memoises discrete latents to avoid repeated inner-loop discrete inference"
+    },
+    {
+      "name": "wake-sleep approximate inference",
+      "role": "primary_lens",
+      "one_line": "amortized inference algorithm for learning generative models with latent variables"
+    },
+    {
+      "name": "importance sampling",
+      "role": "extended",
+      "one_line": "learned recognition model proposes continuous variables for marginalization"
+    },
+    {
+      "name": "hybrid discrete-continuous generative models",
+      "role": "context",
+      "one_line": "models combining symbolic structure with continuous parameters for perception"
+    }
+  ],
+  "core_question": "How can approximate inference be made effective in generative models mixing discrete and continuous latent variables?",
+  "key_assumptions": [
+    "discrete and continuous latents jointly underlie observed data",
+    "memoising discrete latents reduces inner-loop inference cost",
+    "a separate recognition network can amortize continuous-variable inference"
+  ],
+  "manipulations": [
+    "discrete-only memoisation vs hybrid discrete+continuous handling",
+    "evaluation across GP-kernel learning and 3D scene understanding domains"
+  ],
+  "key_findings": [
+    "HMWS outperforms current state-of-the-art inference methods on tested tasks",
+    "learned recognition model enables importance-sampled marginalization over continuous variables",
+    "memoisation of discrete variables alleviates the repeated inner-loop inference burden"
+  ],
+  "interpretations": [
+    "a principled hybrid scheme handles discrete-continuous interfaces more effectively than prior approaches",
+    "combining memoisation with learned continuous proposals is a viable inference strategy"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "wake-sleep algorithm",
+    "amortized inference",
+    "discrete-continuous latent variables",
+    "importance sampling",
+    "GP kernel learning",
+    "3D scene understanding",
+    "compositional generative models",
+    "approximate Bayesian inference"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "76e45f094a26dc433655ad0ee230fbe9",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

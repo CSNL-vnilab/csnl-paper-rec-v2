@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "sensory evidence accumulation",
+      "role": "primary_lens",
+      "one_line": "gradual integration of noisy sensory evidence over seconds to support decisions"
+    },
+    {
+      "name": "intrinsic cortical timescale hierarchy",
+      "role": "primary_lens",
+      "one_line": "cortical areas span a hierarchy of intrinsic integration windows"
+    },
+    {
+      "name": "distributed cortical computation",
+      "role": "extended",
+      "one_line": "evidence-accumulation is supported by many areas with distinct temporal windows"
+    }
+  ],
+  "core_question": "Are the cortical areas recruited during evidence accumulation organized by their intrinsic integration timescales?",
+  "key_assumptions": [
+    "cortical areas have stable intrinsic integration timescales",
+    "decisions in this task require gradual accrual of sensory evidence",
+    "brief optogenetic inactivation reveals causal contributions"
+  ],
+  "manipulations": [
+    "optogenetic silencing of many cortical areas",
+    "timing of inactivation across distinct trial epochs",
+    "virtual-reality navigation task requiring seconds-long accumulation"
+  ],
+  "key_findings": [
+    "inactivation of all tested areas affected the evidence-accumulation computation",
+    "frontal inactivations produced stronger deficits on long timescales than posterior ones",
+    "some frontal areas also moderately affected behavior beyond accumulation",
+    "large-scale cortical Ca2+ activity showed different temporal integration windows"
+  ],
+  "interpretations": [
+    "the intrinsic timescale hierarchy is an important component of evidence-accumulation mechanisms",
+    "distinct cortical areas contribute to accumulation at distinct timescales"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "evidence accumulation",
+    "intrinsic timescales",
+    "cortical hierarchy",
+    "optogenetic inactivation",
+    "virtual reality navigation",
+    "frontal cortex",
+    "widefield calcium imaging",
+    "temporal integration windows"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "6c20aba1cd3149d62b2dd6b92c6945d3",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,52 @@
+{
+  "frameworks": [
+    {
+      "name": "Bayesian internal model of sensory cortex",
+      "role": "primary_lens",
+      "one_line": "Cortex maintains a probabilistic model whose prior is reflected in spontaneous activity."
+    },
+    {
+      "name": "natural scene statistics adaptation",
+      "role": "extended",
+      "one_line": "Internal model becomes statistically optimal for natural stimulus distributions during development."
+    }
+  ],
+  "core_question": "Does spontaneous cortical activity reflect a statistically optimal internal model of natural environmental statistics?",
+  "key_assumptions": [
+    "stimulus-evoked activity encodes posterior inferences",
+    "spontaneous activity encodes prior expectations of an internal model",
+    "an optimal model implies prior matches the marginal distribution of inferences",
+    "natural scenes approximate the relevant environmental statistics"
+  ],
+  "manipulations": [
+    "developmental age of awake ferrets",
+    "stimulus class (natural scenes vs. other stimuli)"
+  ],
+  "key_findings": [
+    "similarity between spontaneous and evoked visual cortical activity increased with age",
+    "this similarity was specific to activity evoked by natural scenes",
+    "developmental convergence held in awake ferret visual cortex"
+  ],
+  "interpretations": [
+    "spontaneous activity reflects a prior in a Bayesian internal model of the environment",
+    "visual cortical internal models progressively adapt to natural-scene statistics during development"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "spontaneous cortical activity",
+    "evoked activity",
+    "internal model",
+    "Bayesian inference in cortex",
+    "natural scene statistics",
+    "prior expectations",
+    "visual cortex development",
+    "ferret V1"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "ae6481e6c5984d5a25d80a3afcef9b74",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:43:52+09:00",
+  "review_status": "auto_unreviewed"
+}

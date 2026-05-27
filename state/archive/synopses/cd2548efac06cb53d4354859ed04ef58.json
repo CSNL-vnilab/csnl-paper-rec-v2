@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "decision under risk vs ambiguity",
+      "role": "primary_lens",
+      "one_line": "Distinguishes known-probability risk from missing-information ambiguity in choice."
+    },
+    {
+      "name": "expected utility / decision theory",
+      "role": "compared_against",
+      "one_line": "Predicts ambiguity should not affect choices — paper shows it does."
+    },
+    {
+      "name": "lesion-deficit neuropsychology",
+      "role": "alternative_lens",
+      "one_line": "Tests causal role of orbitofrontal cortex via lesion patients."
+    }
+  ],
+  "core_question": "Does the brain treat ambiguity differently from risk during human decision-making?",
+  "key_assumptions": [
+    "Ambiguity is operationalised as missing information about probabilities",
+    "Decision theory predicts no ambiguity effect on choice",
+    "fMRI BOLD indexes valuation-related neural activity"
+  ],
+  "manipulations": [
+    "Level of ambiguity in choice options",
+    "Level of risk (known probability) in choice options",
+    "Patient group (orbitofrontal lesion vs control)"
+  ],
+  "key_findings": [
+    "Ambiguity level correlates positively with amygdala and orbitofrontal cortex activity",
+    "Ambiguity correlates negatively with a striatal system",
+    "Striatal activity correlates positively with expected reward",
+    "Orbitofrontal-lesion patients show insensitivity to ambiguity and risk level"
+  ],
+  "interpretations": [
+    "A general neural circuit responds to degrees of uncertainty across risk and ambiguity",
+    "Findings run contrary to decision-theoretic indifference to ambiguity"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "decision under ambiguity",
+    "risk vs ambiguity",
+    "orbitofrontal cortex",
+    "amygdala uncertainty",
+    "striatum expected reward",
+    "lesion behavior",
+    "neuroeconomics",
+    "uncertainty signaling"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "cd2548efac06cb53d4354859ed04ef58",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:43:52+09:00",
+  "review_status": "auto_unreviewed"
+}

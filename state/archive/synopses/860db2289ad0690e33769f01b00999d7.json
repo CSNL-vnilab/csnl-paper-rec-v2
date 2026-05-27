@@ -1,0 +1,51 @@
+{
+  "frameworks": [
+    {
+      "name": "category-selective cortex / functional specialization",
+      "role": "compared_against",
+      "one_line": "view that category-selective neurons code intrinsic features of isolated categories"
+    },
+    {
+      "name": "contextual / statistical regularity coding",
+      "role": "primary_lens",
+      "one_line": "neurons are sensitive to object relationships reflecting environmental statistics"
+    }
+  ],
+  "core_question": "Do category-selective neurons in primate object pathway code categories in isolation, or are they modulated by contextual cues from statistical regularities?",
+  "key_assumptions": [
+    "category-selective regions exist for faces, bodies, hands, objects, scenes",
+    "experienced environment imparts statistical regularities about object co-occurrence",
+    "direct single-neuron recording reveals stimulus selectivity"
+  ],
+  "manipulations": [
+    "presence vs absence of contextual cues (e.g. body) indicating expected face location",
+    "actual face vs non-face content at the contextually-cued location"
+  ],
+  "key_findings": [
+    "face-selective neurons respond to images of faces",
+    "face-selective neurons also respond to image parts where context (body) implies a face should be",
+    "this response occurs even when no face is actually present at that location"
+  ],
+  "interpretations": [
+    "category-selective neurons do not code categories in isolation",
+    "they are sensitive to object relationships reflecting statistical regularities of the environment"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "face-selective neurons",
+    "category selectivity",
+    "contextual modulation",
+    "object relationships",
+    "statistical regularities",
+    "primate inferotemporal cortex",
+    "visual object recognition",
+    "expectation-driven responses"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "860db2289ad0690e33769f01b00999d7",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:43:52+09:00",
+  "review_status": "auto_unreviewed"
+}

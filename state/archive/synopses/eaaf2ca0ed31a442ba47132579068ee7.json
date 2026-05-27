@@ -1,0 +1,56 @@
+{
+  "frameworks": [
+    {
+      "name": "neuronal circuit / attractor network model",
+      "role": "primary_lens",
+      "one_line": "distributed spiking network whose dynamics produce uncertainty signals and change-of-mind"
+    },
+    {
+      "name": "decision confidence",
+      "role": "extended",
+      "one_line": "confidence is read out from circuit dynamics rather than imposed by a separate module"
+    },
+    {
+      "name": "noise-driven multistable dynamical systems",
+      "role": "primary_lens",
+      "one_line": "transient choice-neutral stable steady state plus noise triggers reversal"
+    }
+  ],
+  "core_question": "Can a single neural circuit jointly compute decision uncertainty and produce change-of-mind, unifying their behavioural and neural signatures?",
+  "key_assumptions": [
+    "decision-making is implemented by recurrent neuronal network dynamics",
+    "decision uncertainty is the complement of confidence and can be read from circuit state",
+    "change-of-mind arises from internal dynamics rather than new external evidence"
+  ],
+  "manipulations": [
+    "varied evidence / task conditions known to elicit confidence and change-of-mind",
+    "compared sensory-based vs motor-based neuronal populations in the distributed network"
+  ],
+  "key_findings": [
+    "a neuronal circuit model reproduces a variety of behavioural and neural data on confidence and change-of-mind",
+    "change-of-mind emerges from a transient uncertainty-induced choice-neutral stable steady state with noisy fluctuations",
+    "the neural signature of change-of-mind is more distinctively identifiable in motor-based neurons"
+  ],
+  "interpretations": [
+    "decision confidence and change-of-mind can be unified within one circuit framework",
+    "motor-stage representations carry the clearest correlate of reversal of choice"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "decision uncertainty",
+    "change-of-mind",
+    "decision confidence",
+    "neural circuit model",
+    "attractor dynamics",
+    "choice-neutral stable steady state",
+    "motor-based neurons",
+    "noisy fluctuations"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "eaaf2ca0ed31a442ba47132579068ee7",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:43:52+09:00",
+  "review_status": "auto_unreviewed"
+}
