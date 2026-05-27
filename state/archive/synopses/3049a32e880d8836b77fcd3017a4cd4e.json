@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "sensorimotor mapping in sensory cortex",
+      "role": "primary_lens",
+      "one_line": "V4 delay activity encodes stimulus-response mapping rule rather than pure spatial memory"
+    },
+    {
+      "name": "top-down modulation of sensory cortex",
+      "role": "extended",
+      "one_line": "behavioral and cognitive factors modulate sensory representations beyond stimulus selection"
+    },
+    {
+      "name": "spatial working memory in visual cortex",
+      "role": "compared_against",
+      "one_line": "view that V4 delay activity reflects only remembered cue location"
+    },
+    {
+      "name": "frontal-to-sensory feedback",
+      "role": "context",
+      "one_line": "FEF as upstream source of motor-related modulation in visual cortex"
+    }
+  ],
+  "core_question": "Does primate visual cortex encode abstract stimulus-response mapping rules, not just sensory or working-memory content?",
+  "key_assumptions": [
+    "abstract task variables are usually attributed to areas outside sensory cortex",
+    "delay-period activity can be decomposed into sensory vs motor-related components",
+    "FEF provides motor-related signals to V4"
+  ],
+  "manipulations": [
+    "task rule alternation between two stimulus-response mappings",
+    "cue location across trials",
+    "local pharmacological inactivation of FEF"
+  ],
+  "key_findings": [
+    "V4 neurons reliably signal remembered cue location under both mapping rules",
+    "V4 cue-location encoding depends critically on the stimulus-response mapping rule",
+    "V4 delay activity reflects preparation of the appropriate motor response, not pure spatial memory",
+    "motor-related delay activity in V4 is reduced when FEF is inactivated"
+  ],
+  "interpretations": [
+    "sensory cortex carries abstract stimulus-response mapping information, not only sensory selection",
+    "FEF is a source of motor-related delay signals in V4"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "stimulus-response mapping",
+    "V4 delay activity",
+    "frontal eye field inactivation",
+    "spatial working memory",
+    "motor preparation",
+    "top-down modulation",
+    "visual cortex cognitive signals",
+    "memory-guided saccade"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "3049a32e880d8836b77fcd3017a4cd4e",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

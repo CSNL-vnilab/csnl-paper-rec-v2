@@ -1,0 +1,60 @@
+{
+  "frameworks": [
+    {
+      "name": "Bayes factor",
+      "role": "primary_lens",
+      "one_line": "ratio of marginal likelihoods used to quantify evidence between competing hypotheses"
+    },
+    {
+      "name": "significance testing",
+      "role": "compared_against",
+      "one_line": "frequentist p-value framework lacking interface with belief"
+    },
+    {
+      "name": "confidence intervals",
+      "role": "compared_against",
+      "one_line": "frequentist interval estimate disconnected from credibility of claims"
+    },
+    {
+      "name": "Bayesian philosophy of evidence",
+      "role": "context",
+      "one_line": "evidence as that which rationally changes credibility of a claim"
+    }
+  ],
+  "core_question": "How should statistical evidence for competing claims be conceptualized and quantified?",
+  "key_assumptions": [
+    "evidence must change the credibility of a claim in a reasonable mind",
+    "quantifying evidence requires an interface with degrees of belief",
+    "competing hypotheses can be assigned marginal likelihoods"
+  ],
+  "manipulations": [],
+  "key_findings": [
+    "common frequentist statistics have no interface with belief and unclear evidential meaning",
+    "the Bayes factor provides a coherent quantification of statistical evidence",
+    "philosophical issues attend the use of the Bayes factor in practice"
+  ],
+  "interpretations": [
+    "statistical evidence is best framed via the Bayes factor between competing claims",
+    "use of Bayes factors carries philosophical commitments that must be acknowledged"
+  ],
+  "limitations_noted": [
+    "philosophical issues inherent in Bayes factor use"
+  ],
+  "connecting_signals": [
+    "Bayes factor",
+    "statistical evidence",
+    "model comparison",
+    "significance testing critique",
+    "confidence intervals",
+    "philosophy of statistics",
+    "belief quantification",
+    "competing hypotheses"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "84aba3b4e108e70a3e54d70b7161c444",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

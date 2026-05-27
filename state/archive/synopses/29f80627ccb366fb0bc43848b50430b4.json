@@ -1,0 +1,60 @@
+{
+  "frameworks": [
+    {
+      "name": "multicomponent working memory model",
+      "role": "primary_lens",
+      "one_line": "four interacting components fractionate short-term storage and attentional control"
+    },
+    {
+      "name": "phonological loop",
+      "role": "extended",
+      "one_line": "modality-specific verbal-acoustic store maintained by subvocal rehearsal"
+    },
+    {
+      "name": "visuospatial sketchpad",
+      "role": "extended",
+      "one_line": "modality-specific visuospatial short-term store"
+    },
+    {
+      "name": "episodic buffer",
+      "role": "extended",
+      "one_line": "multimodal limited-capacity store binding subsystems with long-term memory"
+    }
+  ],
+  "core_question": "How can working memory be fractionated into interacting components that account for storage, attention, and binding across modalities?",
+  "key_assumptions": [
+    "working memory is decomposable into separable subsystems",
+    "storage is modality-specific (verbal vs visuospatial)",
+    "central executive has limited attentional resources",
+    "episodic buffer is passive and accessible to conscious awareness"
+  ],
+  "manipulations": [],
+  "key_findings": [
+    "framework comprises four interacting components: phonological loop, sketchpad, central executive, episodic buffer",
+    "focused attention ('refreshing') can maintain information in both modality-specific stores",
+    "phonological loop additionally supports subvocal or overt rehearsal of verbalizable material",
+    "episodic buffer holds roughly four episodic chunks and integrates perception with long-term memory"
+  ],
+  "interpretations": [
+    "the multicomponent architecture supports both detailed fractionation and applications beyond the laboratory",
+    "central executive coordinates subsystems and selects perceptual information"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "working memory",
+    "phonological loop",
+    "visuospatial sketchpad",
+    "central executive",
+    "episodic buffer",
+    "attentional refreshing",
+    "subvocal rehearsal",
+    "chunk capacity"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "29f80627ccb366fb0bc43848b50430b4",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:48:00+09:00",
+  "review_status": "auto_unreviewed"
+}

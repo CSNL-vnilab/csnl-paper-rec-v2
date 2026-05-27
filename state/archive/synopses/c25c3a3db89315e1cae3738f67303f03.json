@@ -1,0 +1,62 @@
+{
+  "frameworks": [
+    {
+      "name": "adaptive evidence accumulation",
+      "role": "primary_lens",
+      "one_line": "non-linear integration of evidence tuned to hidden change-points in the environment"
+    },
+    {
+      "name": "recurrent cortical microcircuit",
+      "role": "extended",
+      "one_line": "circuit-level implementation of normative non-linear accumulation"
+    },
+    {
+      "name": "pupil-linked arousal modulation",
+      "role": "alternative_lens",
+      "one_line": "arousal gates frequency-specific feedback to sensory cortex"
+    },
+    {
+      "name": "normative decision computation",
+      "role": "context",
+      "one_line": "optimal accumulation under non-stationary state as motivation"
+    }
+  ],
+  "core_question": "How does the human brain implement adaptive, non-linear evidence accumulation when the environment can change state?",
+  "key_assumptions": [
+    "maximizing accuracy in changing environments requires non-linear accumulation",
+    "MEG indexes decision-related cortical population activity",
+    "action-encoding regions reflect the accumulated decision variable"
+  ],
+  "manipulations": [
+    "visual evidence accumulation in a changing environment",
+    "expected probability of environmental change",
+    "pupil-linked arousal state"
+  ],
+  "key_findings": [
+    "behavior and action-planning cortical activity show hallmarks of adaptive accumulation",
+    "parietal and frontal decision dynamics are mirrored in visual cortex state",
+    "this sensory-cortex modulation is frequency-specific and depends on arousal and expected change probability"
+  ],
+  "interpretations": [
+    "adaptive accumulation can be realized by recurrent cortical circuit dynamics",
+    "decision-related feedback to sensory cortex is itself adaptive to environmental statistics"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "evidence accumulation",
+    "changing environment",
+    "non-linear accumulation",
+    "magnetoencephalography",
+    "action-encoding parietal frontal cortex",
+    "recurrent cortical microcircuit",
+    "pupil-linked arousal",
+    "decision feedback to visual cortex"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "c25c3a3db89315e1cae3738f67303f03",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

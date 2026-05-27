@@ -1,0 +1,54 @@
+{
+  "frameworks": [
+    {
+      "name": "dual-store theory",
+      "role": "compared_against",
+      "one_line": "separate short-term and long-term stores drive recall behavior"
+    },
+    {
+      "name": "retrieved context theory",
+      "role": "compared_against",
+      "one_line": "memory search uses an evolving contextual cue bound to studied items"
+    },
+    {
+      "name": "computational models of memory search",
+      "role": "primary_lens",
+      "one_line": "formal models explaining how the brain searches memory for context-bound events"
+    }
+  ],
+  "core_question": "How is memory search for events learned in a particular context computationally accomplished?",
+  "key_assumptions": [
+    "memory search can be formalized via computational models",
+    "context plays a central role in episodic retrieval",
+    "benchmark recall phenomena constrain candidate theories"
+  ],
+  "manipulations": [],
+  "key_findings": [
+    "dual-store theory accounts for a set of benchmark memory-search findings",
+    "retrieved context theory accounts for memory-search benchmarks through evolving context",
+    "the two influential approaches differ in their core theoretical commitments"
+  ],
+  "interpretations": [
+    "comparing dual-store and retrieved context models clarifies key theoretical ideas about memory search",
+    "open questions remain about the mechanisms underlying memory search"
+  ],
+  "limitations_noted": [
+    "important open questions remain to be addressed by future research"
+  ],
+  "connecting_signals": [
+    "memory search",
+    "dual-store theory",
+    "retrieved context theory",
+    "episodic recall",
+    "computational models of memory",
+    "context reinstatement",
+    "free recall benchmarks"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "d0f2bb10fd6a2db438847a6abd7eb65b",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

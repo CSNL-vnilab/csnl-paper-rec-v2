@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "structure learning",
+      "role": "primary_lens",
+      "one_line": "learning relations among objects/categories in a visual scene"
+    },
+    {
+      "name": "low-dimensional manifold coding",
+      "role": "extended",
+      "one_line": "PPC embeds high-dim inputs on a low-dim relational manifold"
+    },
+    {
+      "name": "deep learning (feedforward vision models)",
+      "role": "compared_against",
+      "one_line": "lacks relational inference of the primate dorsal stream"
+    },
+    {
+      "name": "embodied/action-grounded cognition",
+      "role": "alternative_lens",
+      "one_line": "structure learning grounded in reaching and eye fixations"
+    }
+  ],
+  "core_question": "How does the primate posterior parietal cortex support learning of relational structure among objects and abstract entities?",
+  "key_assumptions": [
+    "PPC encodes spatial and abstract relations on a shared low-dim code",
+    "relational inference is central to global scene understanding",
+    "actions (reach, gaze) ground relational learning"
+  ],
+  "manipulations": [],
+  "key_findings": [
+    "PPC neural codes project high-dim inputs onto a low-dim manifold",
+    "the manifold encodes relative positions of objects and abstract entity relations",
+    "current deep vision models fail at relational inferences performed in dorsal stream"
+  ],
+  "interpretations": [
+    "low-dim PPC code supports generalisation of relational information beyond spatial domains",
+    "structure learning is grounded in primate reaching and fixating actions"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "structure learning",
+    "posterior parietal cortex",
+    "relational inference",
+    "low-dimensional manifold",
+    "dorsal stream",
+    "abstract conceptual space",
+    "scene understanding",
+    "action-grounded cognition"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "dde3f42bbd42199669c788f81865e0eb",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:48:00+09:00",
+  "review_status": "auto_unreviewed"
+}

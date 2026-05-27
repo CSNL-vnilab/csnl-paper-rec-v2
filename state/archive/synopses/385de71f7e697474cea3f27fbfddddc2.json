@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "flexible-stable synaptic coding",
+      "role": "primary_lens",
+      "one_line": "stable synapses retain memory; flexible synapses update with new inputs"
+    },
+    {
+      "name": "neural network model of working memory",
+      "role": "extended",
+      "one_line": "RNN with mixed flexible/stable synapses simulates serial-position effects"
+    },
+    {
+      "name": "serial-position effect (primacy/recency)",
+      "role": "context",
+      "one_line": "classical behavioural signature of sequential working memory"
+    }
+  ],
+  "core_question": "Do distinct stable and flexible neural codings jointly produce primacy and recency effects in sequential working memory?",
+  "key_assumptions": [
+    "primacy and recency reflect dissociable encoding mechanisms",
+    "working memory uses a fixed resource that can be re-allocated across stable and flexible codes",
+    "human psychophysics constrains plausible synaptic-level models"
+  ],
+  "manipulations": [
+    "serial position within remembered sequences",
+    "pre-cued vs un-cued memory probes",
+    "balance between flexible and stable synapses in the model"
+  ],
+  "key_findings": [
+    "stable encoding accounts for the primacy effect",
+    "flexible encoding accounts for the recency effect, supporting learning of new inputs",
+    "an RNN with both synapse types reproduces major serial-position signatures",
+    "pre-cued memory performance is modulated in a sequence-specific manner"
+  ],
+  "interpretations": [
+    "serial-position effects emerge spontaneously from the combination of stable and flexible codes",
+    "the flexible-stable balance controls resource allocation for sequence-specific memory performance"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "sequential working memory",
+    "serial-position effect",
+    "primacy and recency",
+    "flexible vs stable synapses",
+    "recurrent neural network model",
+    "resource allocation in memory",
+    "pre-cued memory performance"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "385de71f7e697474cea3f27fbfddddc2",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:48:00+09:00",
+  "review_status": "auto_unreviewed"
+}
