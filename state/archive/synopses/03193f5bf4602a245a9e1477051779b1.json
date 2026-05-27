@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "deep neural network connectionist model",
+      "role": "primary_lens",
+      "one_line": "neural networks as a model system for human continual learning"
+    },
+    {
+      "name": "continual / sequential task learning",
+      "role": "primary_lens",
+      "one_line": "learner acquires Task A, then B, then is re-tested on A"
+    },
+    {
+      "name": "transfer and interference in learning",
+      "role": "extended",
+      "one_line": "task similarity modulates positive transfer and retroactive interference"
+    },
+    {
+      "name": "rich vs lazy training regime",
+      "role": "alternative_lens",
+      "one_line": "training regime shapes representation dimensionality and individual strategy"
+    }
+  ],
+  "core_question": "Do humans and neural networks show similar transfer and interference patterns when learning successive rule tasks?",
+  "key_assumptions": [
+    "task similarity can be parametrically varied",
+    "hidden-layer representations index how knowledge is reused",
+    "individual strategies map to representation geometry"
+  ],
+  "manipulations": [
+    "similarity between successive Tasks A and B",
+    "training regime in networks (rich vs lazy)",
+    "sequence order A then B then retest A"
+  ],
+  "key_findings": [
+    "similar successive tasks yield greater transfer to Task B and greater interference on retested Task A in both humans and networks",
+    "networks reuse existing solutions to accelerate similar tasks while corrupting prior solutions",
+    "human 'lumpers' show interference, 'splitters' avoid it",
+    "lumpers generalise shared structure better; splitters remember unique features better"
+  ],
+  "interpretations": [
+    "shared structure use produces a transfer-interference trade-off in both learners",
+    "rich vs lazy training reproduces lumper/splitter individual differences via representation dimensionality"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "continual learning",
+    "catastrophic interference",
+    "transfer learning",
+    "task similarity",
+    "hidden representations",
+    "rich versus lazy training",
+    "individual differences",
+    "representation dimensionality"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "03193f5bf4602a245a9e1477051779b1",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

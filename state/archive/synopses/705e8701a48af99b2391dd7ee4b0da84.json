@@ -1,0 +1,52 @@
+{
+  "frameworks": [
+    {
+      "name": "fast periodic visual stimulation (FPVS) frequency-tagging",
+      "role": "primary_lens",
+      "one_line": "Periodic oddball changes elicit objective EEG response at predicted frequency."
+    },
+    {
+      "name": "face inversion effect",
+      "role": "context",
+      "one_line": "Inversion reduces response, indexing high-level face processing."
+    }
+  ],
+  "core_question": "How reliably, how fast, and over what duration does the human brain detect brief changes in facial expression?",
+  "key_assumptions": [
+    "Periodic oddball expression changes produce a tagged response at the predicted base-frequency harmonic",
+    "Reduction under inversion implies high-level (face-specific) processing"
+  ],
+  "manipulations": [
+    "Expression of oddball face (fear, disgust, happiness) vs neutral base",
+    "Face orientation (upright vs inverted)",
+    "Base stimulation rate (5.88 Hz vs 12 Hz) and ratio of expression change"
+  ],
+  "key_findings": [
+    "A 1.18 Hz response and harmonics indexed expression-change detection in every participant within minutes",
+    "Response was largely reduced for inverted faces",
+    "Different expression changes evoked reliably distinct topographical maps over occipito-temporal sites",
+    "Time-domain responses to expression change occurred between 100 and 310 ms post-change"
+  ],
+  "interpretations": [
+    "Brief facial expression changes are detected rapidly and then integrated over a sustained period",
+    "Partly distinct neural generators support discrimination among expression categories"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "fast periodic visual stimulation",
+    "frequency-tagging EEG",
+    "facial expression change detection",
+    "occipito-temporal response",
+    "face inversion effect",
+    "steady-state visual evoked potential",
+    "high-density EEG",
+    "topographical map discrimination"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "705e8701a48af99b2391dd7ee4b0da84",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:29:37+09:00",
+  "review_status": "auto_unreviewed"
+}

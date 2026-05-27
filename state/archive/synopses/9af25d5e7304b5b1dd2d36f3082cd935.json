@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "hybrid marginal-joint credit assignment",
+      "role": "primary_lens",
+      "one_line": "arbitration between cue-independent marginal updating and cue-coupled joint updating"
+    },
+    {
+      "name": "probabilistic cue combination",
+      "role": "extended",
+      "one_line": "classic multi-cue task reframed through curriculum-shaped learning trajectories"
+    },
+    {
+      "name": "curriculum learning",
+      "role": "context",
+      "one_line": "divide-and-conquer training schedules that decompose problems into parts"
+    }
+  ],
+  "core_question": "How do different training curricula shape human learning in a probabilistic cue combination task?",
+  "key_assumptions": [
+    "learners can deploy either marginal or joint credit-assignment strategies",
+    "an arbitration process selects between the two updating processes",
+    "curriculum order modulates which strategy dominates"
+  ],
+  "manipulations": [
+    "curriculum structure (single-cue vs multi-cue presentation order)",
+    "skewed-distribution multi-cue curricula predicted to help or hinder",
+    "test trials involving multiple cues after differing training"
+  ],
+  "key_findings": [
+    "curricula presenting one cue at a time improve later multi-cue test performance",
+    "a hybrid arbitration model captures the curriculum-dependent learning effect",
+    "model-predicted skewed curricula succeed or fail to promote learning as forecast"
+  ],
+  "interpretations": [
+    "human curriculum benefit reflects arbitration between marginal and joint credit assignment",
+    "computational theory can be used to design curricula that accelerate probabilistic learning"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "curriculum learning",
+    "cue combination",
+    "credit assignment",
+    "marginal vs joint updating",
+    "probabilistic learning",
+    "divide and conquer training",
+    "skewed-distribution curricula",
+    "human learning model"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "9af25d5e7304b5b1dd2d36f3082cd935",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

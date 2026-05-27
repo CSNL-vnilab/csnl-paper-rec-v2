@@ -1,0 +1,52 @@
+{
+  "frameworks": [
+    {
+      "name": "fMRI-Decoded Neurofeedback (DecNef)",
+      "role": "primary_lens",
+      "one_line": "real-time fMRI feedback induces threat-related neural patterns without conscious cue awareness"
+    },
+    {
+      "name": "exposure-based therapy",
+      "role": "compared_against",
+      "one_line": "conventional therapy that requires conscious confrontation with feared cues"
+    },
+    {
+      "name": "nonconscious threat processing",
+      "role": "extended",
+      "one_line": "trauma-related neural activity decoded and modulated below awareness threshold"
+    }
+  ],
+  "core_question": "Can fMRI-decoded neurofeedback reduce PTSD symptoms by inducing threat-related neural patterns without conscious exposure?",
+  "key_assumptions": [
+    "neural activation patterns for feared cues can be decoded and re-induced",
+    "therapeutic effect does not require conscious awareness of trauma cues",
+    "DecNef is compatible with within-subject crossover designs"
+  ],
+  "manipulations": [
+    "active DecNef vs placebo neurofeedback assignment",
+    "crossover order across a six-month interval",
+    "improved decoding procedure for nonconscious trauma-cue activity"
+  ],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [
+    "prior DecNef evidence limited to laboratory settings and small patient samples"
+  ],
+  "connecting_signals": [
+    "decoded neurofeedback",
+    "real-time fMRI",
+    "PTSD treatment",
+    "nonconscious exposure",
+    "trauma-related neural patterns",
+    "double-blind placebo-controlled trial",
+    "crossover design",
+    "implicit threat processing"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "5ce6ea7bb8ab3fea3373b50156e8afaf",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

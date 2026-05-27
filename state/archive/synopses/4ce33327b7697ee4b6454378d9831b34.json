@@ -1,0 +1,62 @@
+{
+  "frameworks": [
+    {
+      "name": "activity flow modeling",
+      "role": "primary_lens",
+      "one_line": "simulate neural activity propagating over empirically-estimated functional connectivity"
+    },
+    {
+      "name": "conjunction hubs",
+      "role": "extended",
+      "one_line": "brain regions selectively integrating sensory, cognitive, and motor activations"
+    },
+    {
+      "name": "empirically-constrained neural network model",
+      "role": "primary_lens",
+      "one_line": "task-performing network built from fMRI functional connectivity during cognitive control"
+    },
+    {
+      "name": "dynamic cognitive information transformation",
+      "role": "context",
+      "one_line": "adaptive task behavior arising from flexible transformation of cognitive representations"
+    }
+  ],
+  "core_question": "Can empirically-estimated functional connectivity networks simulate task performance and reveal how conjunction hubs integrate information for adaptive behavior?",
+  "key_assumptions": [
+    "functional connectivity maps the flow of activity between brain regions",
+    "conjunction hubs selectively integrate sensory, cognitive, and motor signals",
+    "adaptive task behavior emerges from dynamic transformations of cognitive information"
+  ],
+  "manipulations": [
+    "cognitive control task with sensory and task rule inputs",
+    "simulated activity flow over an empirically-estimated connectivity model",
+    "comparison of simulated motor outputs against chance task performance"
+  ],
+  "key_findings": [
+    "empirically-specified simulations produced above-chance task performance",
+    "simulations integrated sensory and task rule activations within conjunction hubs",
+    "task-performing model could be constructed directly from fMRI connectivity data"
+  ],
+  "interpretations": [
+    "conjunction hubs support flexible cognitive computations via representational integration",
+    "empirically-estimated neural network models are a feasible tool for studying human cognitive computations"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "activity flow modeling",
+    "functional connectivity",
+    "conjunction hubs",
+    "cognitive control",
+    "representational transformation",
+    "fMRI-based neural network model",
+    "sensory-motor integration",
+    "task rule encoding"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "4ce33327b7697ee4b6454378d9831b34",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

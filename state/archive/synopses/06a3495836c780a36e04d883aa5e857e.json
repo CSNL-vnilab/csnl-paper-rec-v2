@@ -1,0 +1,50 @@
+{
+  "frameworks": [
+    {
+      "name": "computational phenotyping",
+      "role": "primary_lens",
+      "one_line": "Represent individuals as parameter vectors from models fit to behavior and neural data."
+    },
+    {
+      "name": "mechanistic cognitive modeling",
+      "role": "extended",
+      "one_line": "Model parameters carry interpretation in terms of cognitive processes."
+    }
+  ],
+  "core_question": "How can parameters from computational models fit to individual data characterize differences in personality, development, and psychopathology?",
+  "key_assumptions": [
+    "model parameters have meaningful cognitive-process interpretations",
+    "individuals are continuous points in a parameter space",
+    "computational phenotypes complement rather than replace trait and symptom measures"
+  ],
+  "manipulations": [],
+  "key_findings": [
+    "computational phenotyping has yielded new insights into individual differences",
+    "approach has been applied to developmental trajectories",
+    "approach has been applied to psychopathology"
+  ],
+  "interpretations": [
+    "mechanistic parameter-space representation supports quantitative predictions of future behavior and brain activity",
+    "computational phenotypes complement traditional trait and symptom measures"
+  ],
+  "limitations_noted": [
+    "challenges remain that the authors survey at the end"
+  ],
+  "connecting_signals": [
+    "computational phenotype",
+    "individual differences",
+    "personality neuroscience",
+    "developmental trajectories",
+    "psychopathology",
+    "mechanistic model parameters",
+    "parameter space",
+    "model-based neuroscience"
+  ],
+  "abstract_coverage": 1.0,
+  "out_of_scope_note": null,
+  "canonical_id": "06a3495836c780a36e04d883aa5e857e",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:29:37+09:00",
+  "review_status": "auto_unreviewed"
+}
