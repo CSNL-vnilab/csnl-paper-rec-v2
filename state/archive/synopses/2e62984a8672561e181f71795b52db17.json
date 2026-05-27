@@ -1,0 +1,61 @@
+{
+  "frameworks": [
+    {
+      "name": "phasic pupil-linked arousal",
+      "role": "primary_lens",
+      "one_line": "pupil dilation indexes brainstem (LC-NE) arousal transients during decisions"
+    },
+    {
+      "name": "locus coeruleus-noradrenaline system",
+      "role": "context",
+      "one_line": "central neuromodulatory source presumed to drive phasic arousal events"
+    },
+    {
+      "name": "decision formation / choice bias",
+      "role": "compared_against",
+      "one_line": "tests whether task-irrelevant arousal modulates perceptual decision bias"
+    }
+  ],
+  "core_question": "Can task-irrelevant auditory stimuli noninvasively manipulate phasic pupil-linked arousal in a temporally precise way and thereby alter perceptual decision formation?",
+  "key_assumptions": [
+    "pupil size tracks phasic LC-NE arousal transients",
+    "task-evoked and externally-evoked pupil responses can superimpose linearly",
+    "challenging visual discrimination provides a sensitive testbed for arousal-bias coupling"
+  ],
+  "manipulations": [
+    "presence of task-irrelevant auditory sounds during visual decisions",
+    "onset latency of the sounds relative to stimulus/response",
+    "duration of the auditory stimuli",
+    "three separate experiments varying these parameters"
+  ],
+  "key_findings": [
+    "task-irrelevant sounds reliably elicited well-controlled pupil dilations",
+    "sound-evoked pupil responses superimposed onto task-evoked responses",
+    "previously reported negative correlation between task-evoked pupil and choice bias replicated",
+    "sound-driven pupil changes had no detectable effect on decision behavior"
+  ],
+  "interpretations": [
+    "cognitive task engagement and task-irrelevant sounds recruit dissociable neural systems controlling pupil size",
+    "pupil-linked arousal is not a single unitary signal causally driving decision bias"
+  ],
+  "limitations_noted": [
+    "task-irrelevant sounds did not produce the behavioral leverage needed for a clean causal manipulation"
+  ],
+  "connecting_signals": [
+    "phasic pupil-linked arousal",
+    "locus coeruleus noradrenaline",
+    "task-evoked pupil response",
+    "task-irrelevant auditory stimuli",
+    "perceptual decision bias",
+    "noninvasive arousal manipulation",
+    "decision formation",
+    "pupil dilation latency"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "2e62984a8672561e181f71795b52db17",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:27:43+09:00",
+  "review_status": "auto_unreviewed"
+}

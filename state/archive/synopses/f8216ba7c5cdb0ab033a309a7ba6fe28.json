@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "computational cognitive process models",
+      "role": "primary_lens",
+      "one_line": "model families accounting for multi-alternative multi-attribute choice probabilities"
+    },
+    {
+      "name": "utility-based rational choice theory",
+      "role": "compared_against",
+      "one_line": "invariance assumptions violated by observed preference reversals"
+    },
+    {
+      "name": "context effects (similarity, attraction, compromise)",
+      "role": "extended",
+      "one_line": "benchmark phenomena used to differentiate competing process models"
+    }
+  ],
+  "core_question": "How can paradigms producing similarity, attraction, and compromise effects be presented coherently so computational process models of multi-alternative choice can be compared?",
+  "key_assumptions": [
+    "choice probabilities depend on local context (the set under consideration)",
+    "preference reversals reveal violations of invariance in rational choice",
+    "the three context effects index theoretically important phenomena"
+  ],
+  "manipulations": [
+    "addition of a third decoy option to a two-alternative set",
+    "varying stimulus arrangement across similarity, attraction, compromise paradigms"
+  ],
+  "key_findings": [
+    "adding a decoy systematically shifts relative choice probabilities between two alternatives",
+    "stimulus arrangements producing the three effects vary substantially across studies"
+  ],
+  "interpretations": [
+    "context effects demonstrate that multi-alternative choice is contingent on the choice set, not invariant",
+    "varying paradigms make cross-study comparison of process model accounts challenging without a unified framing"
+  ],
+  "limitations_noted": [
+    "heterogeneity of stimulus arrangements complicates direct model comparison"
+  ],
+  "connecting_signals": [
+    "similarity effect",
+    "attraction effect",
+    "compromise effect",
+    "multi-alternative multi-attribute decision making",
+    "preference reversals",
+    "context effects",
+    "decoy options",
+    "computational cognitive process models"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "f8216ba7c5cdb0ab033a309a7ba6fe28",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:27:43+09:00",
+  "review_status": "auto_unreviewed"
+}

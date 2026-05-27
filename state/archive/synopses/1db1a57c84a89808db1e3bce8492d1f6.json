@@ -1,0 +1,61 @@
+{
+  "frameworks": [
+    {
+      "name": "neural population coding of working memory",
+      "role": "primary_lens",
+      "one_line": "visual features held in sustained spiking activity of feature-tuned populations"
+    },
+    {
+      "name": "drift in recurrent population activity",
+      "role": "alternative_lens",
+      "one_line": "random noise in recurrent connections causes memory representations to wander without losing spikes"
+    },
+    {
+      "name": "spiking-decay account of memory loss",
+      "role": "compared_against",
+      "one_line": "the same activity-reduction explains both set-size and retention-interval effects"
+    },
+    {
+      "name": "integrator / drift-diffusion model of decision making",
+      "role": "context",
+      "one_line": "used to predict a fixed latency-precision coupling under the decay hypothesis"
+    }
+  ],
+  "core_question": "Does the precision loss of visual working memory over time reflect decay of population spiking activity or drift in that activity?",
+  "key_assumptions": [
+    "visual features are stored in sustained population spiking",
+    "set-size effects arise from normalization of total spiking",
+    "an integrator decision model links spike rate to response latency and precision"
+  ],
+  "manipulations": [
+    "memory set size (1 to 4 colored discs)",
+    "retention interval (variable delay before cue)"
+  ],
+  "key_findings": [
+    "response latency increased with set size",
+    "recall precision decreased with longer retention delays",
+    "latency did not systematically change with retention delay"
+  ],
+  "interpretations": [
+    "retention-interval forgetting is driven by drift in population activity, not by decay of overall spiking",
+    "set-size and delay effects arise from distinct mechanisms within the population code"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "visual working memory",
+    "recall precision",
+    "retention interval",
+    "set size effect",
+    "neural population drift",
+    "sustained spiking activity",
+    "delayed saccade to remembered location",
+    "integrator decision model"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "1db1a57c84a89808db1e3bce8492d1f6",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:27:43+09:00",
+  "review_status": "auto_unreviewed"
+}

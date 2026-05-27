@@ -1,0 +1,55 @@
+{
+  "frameworks": [
+    {
+      "name": "Bayesian structure learning",
+      "role": "primary_lens",
+      "one_line": "Observers partition outcomes into latent contexts, each with its own expected outcome."
+    },
+    {
+      "name": "reference-dependent preferences",
+      "role": "extended",
+      "one_line": "Reference points derived from context-specific expectations rather than a single global one."
+    },
+    {
+      "name": "prospect theory",
+      "role": "context",
+      "one_line": "Risk-aversion above and risk-seeking below a reference point motivates the question."
+    }
+  ],
+  "core_question": "Where do the reference points used in reference-dependent risky choice come from?",
+  "key_assumptions": [
+    "Reference points correspond to expected outcomes",
+    "Observers can infer latent contexts that partition outcome distributions",
+    "Context inference follows Bayesian structure learning"
+  ],
+  "manipulations": [
+    "Abrupt versus gradual change in the distribution of outcomes",
+    "Distribution shifts across blocks of a risky-choice task"
+  ],
+  "key_findings": [
+    "Dramatic distribution change induces discovery of a new reference point",
+    "New reference points produce systematic shifts in risk preferences",
+    "Gradual changes update a single reference point continuously without partitioning"
+  ],
+  "interpretations": [
+    "Reference points are emergent products of Bayesian context inference, not fixed or single global expectations"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "reference-dependent preferences",
+    "Bayesian structure learning",
+    "context inference",
+    "risk preferences",
+    "expected outcome",
+    "distributional change",
+    "latent context partitioning",
+    "decision making under risk"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "e4edf6393f46ddf3537d464c9bcac19b",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:25:18+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,43 @@
+{
+  "canonical_id": "078cfd70dc24a2be550e2f9ef683e380",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [
+    {"name": "motion-form integration", "role": "primary_lens", "one_line": "motion and orientation signals interact within motion-integrating receptive fields"},
+    {"name": "global optic flow processing", "role": "extended", "one_line": "extends motion-form interaction to the higher stage where optic flow is extracted"},
+    {"name": "motion aftereffect adaptation", "role": "primary_lens", "one_line": "MAE duration used as a psychophysical probe of motion-processing stage"}
+  ],
+  "core_question": "Do motion-form interactions occur beyond motion integration, at the level where optic flow components are extracted?",
+  "key_assumptions": [
+    "MAE duration indexes the adapted motion-processing stage",
+    "phantom MAE isolates global motion / optic flow processing",
+    "radial vs concentric pedestals selectively probe parallel vs orthogonal orientation relative to flow"
+  ],
+  "manipulations": [
+    "expanding vs contracting dot-field adaptation",
+    "radial (parallel) vs concentric (orthogonal) counterphase pedestal gratings",
+    "phantom MAE: orientation signals in adapting vs nonadapting sectors"
+  ],
+  "key_findings": [
+    "motion adaptation was suppressed most by orientation signals orthogonal to optic flow direction",
+    "the suppression pattern was obtained also for the phantom MAE across separate visual-field sectors"
+  ],
+  "interpretations": [
+    "motion-form interactions take place at the global motion level where optic flow is extracted, not only at motion integration"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "motion aftereffect",
+    "phantom MAE",
+    "optic flow",
+    "radial and concentric gratings",
+    "motion-form interaction",
+    "global motion processing",
+    "extrastriate cortex",
+    "orientation-selective adaptation"
+  ],
+  "out_of_scope_note": null,
+  "generator": "opus-4-7@2026-05-27",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "abstract_coverage": 1.0
+}

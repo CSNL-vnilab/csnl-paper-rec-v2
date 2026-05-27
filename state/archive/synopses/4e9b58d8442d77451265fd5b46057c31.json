@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "information theoretic encoding capacity",
+      "role": "primary_lens",
+      "one_line": "Sensory encoding accuracy quantified as bounded information capacity from psychophysics."
+    },
+    {
+      "name": "sensory-prior weighting imbalance account of ASD",
+      "role": "compared_against",
+      "one_line": "Existing view that ASD reflects altered prior/likelihood balance in inference."
+    },
+    {
+      "name": "efficient coding / adaptation to stimulus statistics",
+      "role": "context",
+      "one_line": "Neural representations should track environmental orientation statistics."
+    }
+  ],
+  "core_question": "Do individuals with ASD differ from neurotypicals in sensory encoding capacity and its adaptation to changing stimulus statistics?",
+  "key_assumptions": [
+    "Encoding accuracy is recoverable from psychophysical performance via an information-theoretic measure",
+    "Neurotypical sensory representations initially reflect natural-scene orientation statistics",
+    "Feedback under altered statistics can reshape sensory encoding"
+  ],
+  "manipulations": [
+    "Group: ASD vs neurotypical participants",
+    "Stimulus distribution: natural-scene orientation prior vs uniform artificial distribution",
+    "Performance feedback during exposure to the artificial distribution"
+  ],
+  "key_findings": [
+    "Initial encoding in both groups reflected natural-scene orientation statistics but capacity was lower in ASD",
+    "Neurotypicals shifted sensory representations toward the new uniform statistics and increased total encoding capacity",
+    "ASD group showed no significant change in total capacity or its allocation",
+    "Degree of adaptation correlated with initial encoding capacity across both groups"
+  ],
+  "interpretations": [
+    "ASD involves not only altered prior/likelihood weighting but also reduced and less adaptive sensory encoding capacity",
+    "Adaptive reallocation of encoding resources to current stimulus statistics is impaired in ASD"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "encoding capacity",
+    "orientation estimation",
+    "natural scene statistics",
+    "autism spectrum disorder",
+    "perceptual adaptation",
+    "information theoretic psychophysics",
+    "prior likelihood weighting",
+    "feedback-driven recalibration"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "4e9b58d8442d77451265fd5b46057c31",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:25:18+09:00",
+  "review_status": "auto_unreviewed"
+}

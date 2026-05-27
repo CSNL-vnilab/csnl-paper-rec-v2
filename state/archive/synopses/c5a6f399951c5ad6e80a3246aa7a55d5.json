@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "serial dependence",
+      "role": "primary_lens",
+      "one_line": "current responses biased by previous trial features"
+    },
+    {
+      "name": "short-term memory trace",
+      "role": "extended",
+      "one_line": "intertrial neural trace mediates the across-trial bias"
+    },
+    {
+      "name": "causal TMS perturbation",
+      "role": "primary_lens",
+      "one_line": "TMS-injected noise degrades putative memory traces"
+    }
+  ],
+  "core_question": "Which cortical region carries the across-trial neural trace that produces serial dependence in a visuomotor interception task?",
+  "key_assumptions": [
+    "previous-trial information leaves a neural trace in task-relevant regions",
+    "TMS bursts inject noise that degrades local memory traces",
+    "interception speed bias indexes serial dependence"
+  ],
+  "manipulations": [
+    "TMS site: PMd vs hV5/MT+ vs Vertex control",
+    "TMS bursts applied during intertrial intervals",
+    "coincident timing task with varied target speed"
+  ],
+  "key_findings": [
+    "without TMS, interception was biased toward previous trial's target speed",
+    "TMS over left dorsal premotor cortex reduced serial dependence",
+    "TMS over right hV5/MT+ did not reduce serial dependence"
+  ],
+  "interpretations": [
+    "premotor cortex hosts an implicit short-term memory mechanism that carries information across trials",
+    "visual motion region hV5/MT+ is not the locus of this across-trial trace"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "serial dependence",
+    "visuomotor integration",
+    "coincident timing task",
+    "dorsal premotor cortex",
+    "hV5/MT+",
+    "transcranial magnetic stimulation",
+    "intertrial memory trace",
+    "speed bias"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "c5a6f399951c5ad6e80a3246aa7a55d5",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:25:18+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,52 @@
+{
+  "frameworks": [
+    {
+      "name": "evidence accumulation",
+      "role": "primary_lens",
+      "one_line": "Protracted decision evidence integrated across time toward a final judgment."
+    },
+    {
+      "name": "confirmation bias",
+      "role": "extended",
+      "one_line": "Selective down-weighting of post-choice evidence inconsistent with the prior choice."
+    }
+  ],
+  "core_question": "How does making an intermittent binary choice mid-stream alter the temporal weighting of subsequent decision evidence?",
+  "key_assumptions": [
+    "Decisions arise from accumulation of evidence over an extended stream",
+    "A motor-only response can serve as a choice-free control",
+    "Temporal weighting profiles can be recovered from final continuous estimates"
+  ],
+  "manipulations": [
+    "Intermittent response type: binary choice vs choice-independent motor response",
+    "Evidence modality: perceptual vs numerical",
+    "Timing of intermittent response within the evidence stream"
+  ],
+  "key_findings": [
+    "Intermittent choice reduced sensitivity of subsequent evidence",
+    "Intermittent choice flipped the relative weighting of early vs late evidence in the final estimate",
+    "Individual non-selective sensitivity reduction predicted selective down-weighting of choice-inconsistent evidence"
+  ],
+  "interpretations": [
+    "Committing to an intermittent choice reshapes downstream evidence integration",
+    "Choice-induced overall sensitivity loss is linked to a confirmation-bias-like selective filter"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "temporal weighting of evidence",
+    "intermittent choice",
+    "evidence accumulation",
+    "confirmation bias",
+    "perceptual decision-making",
+    "numerical decision-making",
+    "post-decision evidence",
+    "sensitivity reduction"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "8d809c710dbc78c4db2b78041da4179d",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:27:43+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,47 @@
+{
+  "canonical_id": "b9ec04fe5a56403caee3ef6388bee15d",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [
+    {"name": "attractor network dynamics", "role": "primary_lens", "one_line": "decision-making mediated by neural networks with attractor dynamics"},
+    {"name": "evidence accumulation", "role": "context", "one_line": "pulsatile auditory evidence is integrated toward a perceptual choice"},
+    {"name": "unsupervised deep-learning dynamics discovery", "role": "extended", "one_line": "data-driven method extracts latent decision-related dynamics from neural populations"},
+    {"name": "ramping vs stepping single-neuron models", "role": "compared_against", "one_line": "diverse single-neuron temporal profiles reconciled by one population-level model"}
+  ],
+  "core_question": "What dynamical regimes underlie neuronal activity during perceptual decision-making, and when is the decision committed?",
+  "key_assumptions": [
+    "perceptual decisions are mediated by neural networks with attractor dynamics",
+    "population-level trajectories reveal sensory-driven vs autonomous regimes",
+    "a neurally inferred time of commitment (nTc) can be estimated per trial"
+  ],
+  "manipulations": [
+    "pulsatile auditory evidence accumulation task in rats",
+    "simultaneous recording of hundreds of neurons in frontal cortex and striatum",
+    "trial-by-trial alignment to estimated nTc vs stimulus/response timing"
+  ],
+  "key_findings": [
+    "neural trajectories evolve in two sequential regimes: sensory-driven then autonomous",
+    "the autonomous flow direction is largely orthogonal to the sensory-driven mode",
+    "estimated nTc varies broadly across trials and is not locked to stimulus or response",
+    "evidence before nTc influenced choice while evidence after did not"
+  ],
+  "interpretations": [
+    "the regime transition marks the moment of decision commitment",
+    "a simple dynamical model can capture diverse ramping and stepping single-neuron profiles"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "attractor dynamics",
+    "decision commitment",
+    "evidence accumulation",
+    "frontal cortex and striatum",
+    "neural population trajectories",
+    "ramping and stepping neurons",
+    "perceptual decision-making",
+    "autonomous dynamics"
+  ],
+  "out_of_scope_note": null,
+  "generator": "opus-4-7@2026-05-27",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "abstract_coverage": 1.0
+}

@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "multivariate pattern decoding",
+      "role": "primary_lens",
+      "one_line": "decoding models trained/tested across rules to probe representational structure"
+    },
+    {
+      "name": "category learning / prototype model",
+      "role": "context",
+      "one_line": "category membership organized around a known prototype with typicality gradient"
+    },
+    {
+      "name": "rule-based cognitive control",
+      "role": "alternative_lens",
+      "one_line": "frontoparietal control modulates categorization rule (strict vs lax)"
+    }
+  ],
+  "core_question": "Do occipitotemporal category representations reorganize when generalization demands change rules?",
+  "key_assumptions": [
+    "category membership is graded by typicality relative to a prototype",
+    "neural patterns can carry rule-dependent category information",
+    "strict vs lax rules impose different generalization tolerances"
+  ],
+  "manipulations": [
+    "categorization rule (strict vs lax) determining required generalization",
+    "stimulus typicality relative to a known category prototype"
+  ],
+  "key_findings": [
+    "frontoparietal regions tracked decisional demands across rules",
+    "occipitotemporal cortex represented stimulus typicality",
+    "occipitotemporal typicality representations differed between rules",
+    "cross-rule decoders failed to generalize despite within-rule success"
+  ],
+  "interpretations": [
+    "category representations in occipitotemporal cortex are shaped by abstract generalization demands, not stimuli alone",
+    "category structure is rule-flexible rather than fixed perceptually"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "category learning",
+    "generalization demands",
+    "occipitotemporal cortex",
+    "stimulus typicality",
+    "prototype categorization",
+    "rule-dependent representations",
+    "multivariate decoding",
+    "frontoparietal control"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "09bf6c79cde0ea68947d25681019942c",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:25:18+09:00",
+  "review_status": "auto_unreviewed"
+}

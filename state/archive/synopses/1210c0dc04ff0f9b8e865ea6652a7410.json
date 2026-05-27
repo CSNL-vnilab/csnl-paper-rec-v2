@@ -1,0 +1,42 @@
+{
+  "canonical_id": "1210c0dc04ff0f9b8e865ea6652a7410",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [
+    {"name": "manifold capacity analysis (mean-field theoretic)", "role": "primary_lens", "one_line": "neural population responses as class manifolds whose linear separability is quantified."},
+    {"name": "category learning / perceptual learning", "role": "context", "one_line": "behavioral improvement framed via feedback-driven categorization."}
+  ],
+  "core_question": "How does the geometry of V4 and IT population activity reshape as a monkey learns to categorize visual stimuli?",
+  "key_assumptions": [
+    "population responses to stimuli in a category form a manifold-like representation",
+    "manifold capacity indexes category separability relevant to behavior",
+    "chronic recordings track the same population across learning days"
+  ],
+  "manipulations": [
+    "training day across the course of learning a category boundary",
+    "stimulus attributes varied along two independent dimensions",
+    "ventral-stream area (V4 vs IT)"
+  ],
+  "key_findings": [
+    "manifold capacity for the two category classes increased in both V4 and IT as learning progressed",
+    "representations of the two categories became more linearly separable over training"
+  ],
+  "interpretations": [
+    "behavioral improvement during category learning is supported by geometric reshaping of ventral-stream population codes toward greater class separability"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "manifold capacity",
+    "neural population geometry",
+    "category learning",
+    "macaque V4",
+    "inferotemporal cortex",
+    "representational geometry",
+    "linear separability",
+    "chronic population recordings"
+  ],
+  "out_of_scope_note": null,
+  "generator": "opus-4-7@2026-05-27",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "abstract_coverage": 1.0
+}

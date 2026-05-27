@@ -1,0 +1,48 @@
+{
+  "frameworks": [
+    {
+      "name": "self-consistent Bayesian observer",
+      "role": "primary_lens",
+      "one_line": "decoder that jointly recovers ordinal and absolute stimulus features under one posterior"
+    },
+    {
+      "name": "hierarchical high-to-low decoding",
+      "role": "compared_against",
+      "one_line": "ordinal category constrains subsequent absolute-orientation recall"
+    }
+  ],
+  "core_question": "Does decoding high-level ordinal information before low-level absolute features actually improve perceptual performance?",
+  "key_assumptions": [
+    "observer follows a self-consistent Bayesian posterior across feature levels",
+    "ordinal and absolute orientation are encoded from a shared noisy sensory signal"
+  ],
+  "manipulations": [
+    "noise level on the encoded sensory signal",
+    "signal conditions defining the ordinal relation between two lines"
+  ],
+  "key_findings": [
+    "high-to-low decoding does not generally outperform direct decoding of absolute orientation",
+    "any performance benefit depends narrowly on specific noise and signal regimes"
+  ],
+  "interpretations": [
+    "Ding et al.'s claim that the brain adopts this strategy because it improves performance is misleading",
+    "the proposed scheme is consistent with a self-consistent Bayesian observer but not justified by accuracy gains"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "self-consistent Bayesian observer",
+    "ordinal versus absolute orientation",
+    "hierarchical decoding",
+    "line orientation recall",
+    "perceptual performance",
+    "sensory noise",
+    "high-level to low-level constraint"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "ba5d1b882b529d3c2d4cf0879839442b",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:27:43+09:00",
+  "review_status": "auto_unreviewed"
+}

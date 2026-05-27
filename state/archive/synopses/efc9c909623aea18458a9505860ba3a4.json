@@ -1,0 +1,56 @@
+{
+  "frameworks": [
+    {
+      "name": "robust averaging",
+      "role": "primary_lens",
+      "one_line": "decision weights downweight extreme evidence relative to inlying items"
+    },
+    {
+      "name": "active sensing / saccadic information sampling",
+      "role": "primary_lens",
+      "one_line": "gaze policy selects which spatial items to fixate during evidence accumulation"
+    },
+    {
+      "name": "salience-driven gaze in visual search and scene viewing",
+      "role": "compared_against",
+      "one_line": "literature predicts preferential fixation of deviant, diagnostic items"
+    }
+  ],
+  "core_question": "How do humans direct their eyes to sample evidence when a perceptual decision must integrate information across multiple spatial locations?",
+  "key_assumptions": [
+    "averaging task requires combining evidence from many spatial elements",
+    "fixation choice reflects an internal sampling policy",
+    "diagnosticity of an element is its distance from the reference value"
+  ],
+  "manipulations": [
+    "spatial array of numbers with varying distance from a reference value",
+    "judgment of whether the mean exceeds or falls below the reference"
+  ],
+  "key_findings": [
+    "participants preferentially fixated inlying (less diagnostic) elements",
+    "this inlier-sampling bias predicted decision weighting",
+    "inlying items received greater weight in the final choice (robust averaging)"
+  ],
+  "interpretations": [
+    "humans adopt a robust sampling policy that downweights deviant evidence in perceptual decision-making",
+    "this contrasts with deviance-seeking gaze observed in search and natural-scene viewing"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "robust averaging",
+    "saccadic information sampling",
+    "perceptual decision-making",
+    "evidence integration across space",
+    "inlier weighting",
+    "gaze policy",
+    "decision weights",
+    "spatial averaging task"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "efc9c909623aea18458a9505860ba3a4",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:25:18+09:00",
+  "review_status": "auto_unreviewed"
+}

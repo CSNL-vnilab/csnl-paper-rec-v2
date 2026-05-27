@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "Bayesian perceptual inference",
+      "role": "primary_lens",
+      "one_line": "Observer combines longer-term priors with immediate context to infer scene orientation."
+    },
+    {
+      "name": "natural image statistics prior",
+      "role": "primary_lens",
+      "one_line": "Prior over low-level image statistics aggregated across many natural scenes."
+    },
+    {
+      "name": "context-dependent prior re-weighting",
+      "role": "extended",
+      "one_line": "Prior weight is rapidly adjusted by immediate contextual information, even when misleading."
+    }
+  ],
+  "core_question": "How do observers trade off long-term natural-image-statistic priors against immediate contextual information when judging upright orientation of naturalistic scenes?",
+  "key_assumptions": [
+    "Perceptual priors arise from statistical regularities of natural environments",
+    "Priors operate in conjunction with context-specific information",
+    "Observers can be modeled as Bayesian inference machines over low-level image statistics"
+  ],
+  "manipulations": [
+    "Naturalistic scene images requiring upright-orientation judgement",
+    "Immediate contextual information (including misleading context)",
+    "Perceptual inference using internal criteria rather than comparative judgement"
+  ],
+  "key_findings": [
+    "Observer performance is well approximated by a model using a prior over aggregated low-level image statistics",
+    "Dependence on the long-term prior is rapidly re-weighted by immediate contextual information",
+    "Re-weighting occurs even when the contextual information is misleading"
+  ],
+  "interpretations": [
+    "Visuo-cognitive function tolerates frequent prior violations by flexibly combining priors with context-specific evidence",
+    "Low-level image statistics form a usable prior for inference on naturalistic stimuli without explicit comparison"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "natural image statistics",
+    "scene priors",
+    "upright orientation judgement",
+    "perceptual inference",
+    "naturalistic stimuli",
+    "context-dependent prior re-weighting",
+    "low-level image statistics prior",
+    "internal criteria perceptual task"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "27c47717a2cf518d690755d7056f4615",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:25:18+09:00",
+  "review_status": "auto_unreviewed"
+}
