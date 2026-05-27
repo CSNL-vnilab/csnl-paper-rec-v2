@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "sequential sampling / evidence integration",
+      "role": "primary_lens",
+      "one_line": "decision formed by accumulating samples of evidence until commitment"
+    },
+    {
+      "name": "short-term memory retrieval",
+      "role": "extended",
+      "one_line": "evidence samples retrieved from memory when stimulus is gone"
+    },
+    {
+      "name": "embodied / motor-yoked decision-making",
+      "role": "compared_against",
+      "one_line": "standard view where evidence integration occurs in action-selection circuits"
+    }
+  ],
+  "core_question": "How do monkeys form perceptual decisions when the motor actions required to report the choice are not yet known?",
+  "key_assumptions": [
+    "LIP activity reflects evidence accumulation toward a choice",
+    "decision can be temporally decoupled from motor planning",
+    "samples of evidence are retainable in short-term memory"
+  ],
+  "manipulations": [
+    "targets revealed at unpredictable locations after motion stimulus offset",
+    "abstract color-direction association vs direct action mapping",
+    "delay between motion offset and target onset"
+  ],
+  "key_findings": [
+    "monkeys postponed decision formation until targets appeared",
+    "LIP neurons represented evidence integration after stimulus offset",
+    "evidence samples must be retrieved from short-term memory when stimulus is no longer visible"
+  ],
+  "interpretations": [
+    "decision formation is protracted until the choice can be framed in motor terms",
+    "abstract decisions recruit memory-based sampling rather than concurrent motor-yoked integration"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "sequential sampling",
+    "evidence integration",
+    "abstract decision-making",
+    "lateral intraparietal area LIP",
+    "short-term memory",
+    "random-dot motion",
+    "action selection",
+    "decision formation delay"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "81f5ff0eebd7c6f5d2e0cef51f761a25",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:05:39+09:00",
+  "review_status": "auto_unreviewed"
+}

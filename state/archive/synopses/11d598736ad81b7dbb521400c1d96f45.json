@@ -1,0 +1,59 @@
+{
+  "frameworks": [
+    {
+      "name": "information-seeking behavior",
+      "role": "primary_lens",
+      "one_line": "users querying AI vs search engines to acquire political knowledge"
+    },
+    {
+      "name": "randomised controlled trial",
+      "role": "primary_lens",
+      "one_line": "experimental comparison of conversational AI against self-directed Google search"
+    },
+    {
+      "name": "misinformation and belief updating",
+      "role": "context",
+      "one_line": "political knowledge framed as belief in true vs false claims"
+    }
+  ],
+  "core_question": "Does using conversational AI for political information-seeking change voters' political knowledge compared to traditional internet search?",
+  "key_assumptions": [
+    "political knowledge can be operationalised as belief in true vs false claims",
+    "chatbot use during elections is a meaningful and measurable behaviour",
+    "task-directed conversations are comparable to self-directed search as an information channel"
+  ],
+  "manipulations": [
+    "information source (conversational AI vs self-directed Google search)",
+    "across multiple political issues",
+    "across multiple AI models",
+    "across multiple prompting strategies"
+  ],
+  "key_findings": [
+    "32% of chatbot users and 13% of UK voters used conversational AI for political info before the 2024 election",
+    "task-directed AI conversations increased belief in true information and decreased belief in misinformation",
+    "knowledge gains from AI were comparable to those from self-directed Google search",
+    "results held across issues, models, and prompting strategies"
+  ],
+  "interpretations": [
+    "conversational AI is already a non-trivial channel for political information-seeking",
+    "for task-directed political queries, AI is at least as informative as conventional search"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "conversational AI",
+    "political information-seeking",
+    "misinformation",
+    "voter knowledge",
+    "randomised controlled trial",
+    "self-directed search",
+    "chatbot use",
+    "belief updating"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "11d598736ad81b7dbb521400c1d96f45",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}

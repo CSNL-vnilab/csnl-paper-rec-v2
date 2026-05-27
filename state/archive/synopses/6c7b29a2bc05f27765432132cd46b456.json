@@ -1,0 +1,61 @@
+{
+  "frameworks": [
+    {
+      "name": "sequential sampling / evidence integration",
+      "role": "primary_lens",
+      "one_line": "decision arises from accumulated samples of noisy evidence over time"
+    },
+    {
+      "name": "parietal (LIP) decision representation",
+      "role": "primary_lens",
+      "one_line": "LIP neurons instantiate the accumulating decision variable during choice"
+    },
+    {
+      "name": "short-term / working memory readout",
+      "role": "extended",
+      "one_line": "evidence samples drawn from memory once the sensory stimulus is gone"
+    },
+    {
+      "name": "action-based perceptual decision making",
+      "role": "compared_against",
+      "one_line": "standard view that integration unfolds in action-selection circuits"
+    }
+  ],
+  "core_question": "How do monkeys form a perceptual decision when the motor action that will report it is not yet known?",
+  "key_assumptions": [
+    "decisions involve integration of noisy sensory evidence toward a bound",
+    "LIP can represent a decision variable independent of a specific motor plan",
+    "task-relevant evidence can be held in and retrieved from short-term memory"
+  ],
+  "manipulations": [
+    "decoupled motion-direction evidence from the motor report via a color-to-target mapping",
+    "targets revealed at unpredictable locations only after motion stimulus was extinguished"
+  ],
+  "key_findings": [
+    "monkeys postponed decision formation until choice targets appeared",
+    "LIP neurons represented integration of evidence leading to the choice",
+    "because the stimulus was absent during integration, evidence samples were drawn from short-term memory"
+  ],
+  "interpretations": [
+    "abstract decisions are formed by sampling evidence from memory, instantiated in parietal association cortex",
+    "evidence integration need not be tied to a known action; it can operate over mnemonic samples"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "abstract decision-making",
+    "evidence accumulation",
+    "area LIP",
+    "short-term memory readout",
+    "random-dot motion discrimination",
+    "color-to-target mapping",
+    "decoupled stimulus and motor report",
+    "sequential sampling from memory"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "6c7b29a2bc05f27765432132cd46b456",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:05:39+09:00",
+  "review_status": "auto_unreviewed"
+}

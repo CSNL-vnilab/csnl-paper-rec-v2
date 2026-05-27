@@ -1,0 +1,60 @@
+{
+  "frameworks": [
+    {
+      "name": "Crick's enzyme-based error correction",
+      "role": "primary_lens",
+      "one_line": "enzymatic re-marking proofreads protein modification state to extend memory"
+    },
+    {
+      "name": "molecular memory switch",
+      "role": "extended",
+      "one_line": "protein post-translational mark as bistable memory storage element"
+    },
+    {
+      "name": "noise averaging over protein populations",
+      "role": "compared_against",
+      "one_line": "redundancy across many proteins as alternative noise-mitigation route"
+    }
+  ],
+  "core_question": "How can protein-mark-based molecular memories persist despite intrinsic noise and limited component lifetimes?",
+  "key_assumptions": [
+    "memory is encoded in a post-translational mark state",
+    "proteins and marks have finite biophysical lifetimes",
+    "marking/demarking is a stochastic molecular process",
+    "models tractable enough to solve mostly exactly"
+  ],
+  "manipulations": [
+    "presence vs absence of enzymatic error correction",
+    "number of proteins storing the memory",
+    "strength/rate of the correction mechanism"
+  ],
+  "key_findings": [
+    "error correction effectively extends memory lifetime",
+    "large protein populations only marginally improve lifetime",
+    "excess error correction inflates false-positive probability"
+  ],
+  "interpretations": [
+    "Crick-style enzymatic proofreading is a viable principle for long-lived molecular memory",
+    "there is a trade-off where over-correction degrades fidelity"
+  ],
+  "limitations_noted": [
+    "analysis restricted to minimal/simplified switch models"
+  ],
+  "connecting_signals": [
+    "molecular memory",
+    "protein post-translational mark",
+    "Crick memory switch",
+    "enzymatic error correction",
+    "stochastic biochemical noise",
+    "bistable molecular switch",
+    "memory lifetime",
+    "false-positive trade-off"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "14af7387048b4f579b047d8c6490aa06",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:05:39+09:00",
+  "review_status": "auto_unreviewed"
+}

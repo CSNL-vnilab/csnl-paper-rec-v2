@@ -1,0 +1,60 @@
+{
+  "frameworks": [
+    {
+      "name": "Bayesian learning for singular learning machines",
+      "role": "primary_lens",
+      "one_line": "posterior inference over models with non-identifiable / degenerate parameter structure"
+    },
+    {
+      "name": "exchange Monte Carlo (parallel tempering)",
+      "role": "extended",
+      "one_line": "replica-exchange MCMC variant applied to singular posteriors"
+    },
+    {
+      "name": "Markov chain Monte Carlo (Metropolis)",
+      "role": "compared_against",
+      "one_line": "conventional MCMC baseline that struggles with singularities"
+    },
+    {
+      "name": "maximum-likelihood estimation",
+      "role": "compared_against",
+      "one_line": "point-estimation baseline outperformed by Bayesian learning here"
+    }
+  ],
+  "core_question": "Does exchange Monte Carlo sampling improve Bayesian posterior estimation more for singular learning machines than for regular ones?",
+  "key_assumptions": [
+    "neural nets, mixtures, Bayesian networks, HMMs share singular parameter geometry",
+    "Bayesian learning outperforms ML estimation for these models",
+    "stochastic complexity has a known theoretical value to compare against"
+  ],
+  "manipulations": [
+    "sampler choice (exchange MC vs conventional MCMC)",
+    "model class (singular vs regular learning machines)"
+  ],
+  "key_findings": [
+    "exchange MC yields better Bayesian posterior sampling on singular machines than on regular ones",
+    "numerical stochastic complexity from exchange MC tracks the theoretical value"
+  ],
+  "interpretations": [
+    "singularity structure is precisely where exchange MC's tempering benefit is largest",
+    "exchange MC is an effective practical tool for Bayesian inference in singular models"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "exchange Monte Carlo",
+    "parallel tempering",
+    "singular learning machines",
+    "Bayesian posterior sampling",
+    "stochastic complexity",
+    "MCMC for neural networks",
+    "normal mixtures",
+    "hidden Markov models"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "664346e8952106734cf8fdab3b9ea378",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:05:39+09:00",
+  "review_status": "auto_unreviewed"
+}

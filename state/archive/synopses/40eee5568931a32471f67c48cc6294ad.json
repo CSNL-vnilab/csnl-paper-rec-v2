@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "signal-detection theory",
+      "role": "primary_lens",
+      "one_line": "sensitivity (d_a) in Y/N detection indexes subjective perception"
+    },
+    {
+      "name": "blindsight dissociation",
+      "role": "context",
+      "one_line": "subjective perception dissociable from general perceptual capacity"
+    },
+    {
+      "name": "working-memory-perception interaction",
+      "role": "primary_lens",
+      "one_line": "WM content modulates perceptual processing via congruency"
+    }
+  ],
+  "core_question": "Does the content of working memory selectively modulate subjective perception when general perceptual processing capacity is held constant?",
+  "key_assumptions": [
+    "Y/N detection indexes subjective perception",
+    "2-IFC titration equates general perceptual processing capacity across conditions",
+    "Subjective perception and perceptual capacity are dissociable (blindsight motivation)"
+  ],
+  "manipulations": [
+    "Congruency between working-memory content and perceptual content (categorically congruent vs incongruent)",
+    "Task type: Y/N detection vs 2-IFC",
+    "Stimulus contrast titrated to match 2-IFC performance"
+  ],
+  "key_findings": [
+    "No evidence that WM congruency selectively modulated Y/N sensitivity (d_a) when 2-IFC capacity was matched",
+    "Result contradicts a prior n=8 pilot trend of selective impairment under incongruent WM"
+  ],
+  "interpretations": [
+    "Discrepancy with the pilot motivates a pre-registered replication on the original pilot design"
+  ],
+  "limitations_noted": [
+    "Discrepancy between current (n=16) result and earlier pilot (n=8) is unresolved"
+  ],
+  "connecting_signals": [
+    "working memory and perception",
+    "subjective perception",
+    "Y/N detection task",
+    "two-interval forced choice",
+    "sensitivity d_a",
+    "blindsight",
+    "congruency manipulation",
+    "perceptual capacity"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "40eee5568931a32471f67c48cc6294ad",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:05:39+09:00",
+  "review_status": "auto_unreviewed"
+}

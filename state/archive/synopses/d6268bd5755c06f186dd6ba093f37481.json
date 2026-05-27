@@ -1,0 +1,56 @@
+{
+  "frameworks": [
+    {
+      "name": "Pavlovian control",
+      "role": "primary_lens",
+      "one_line": "hardwired stereotyped responses to stimulus classes minimising computational cost"
+    },
+    {
+      "name": "reinforcement learning",
+      "role": "extended",
+      "one_line": "combined with drift-diffusion to capture invigoration/inhibition in choice and RT"
+    },
+    {
+      "name": "drift-diffusion model",
+      "role": "extended",
+      "one_line": "captures RT-level effects of Pavlovian bias under aversive cues"
+    }
+  ],
+  "core_question": "How do aversive Pavlovian responses differ between escape and avoidance depending on proximity to an aversive state?",
+  "key_assumptions": [
+    "Pavlovian control hardwires stereotyped responses to stimulus classes",
+    "Aversive proximity (escape vs avoidance) modulates activation vs inhibition",
+    "Choice and RT jointly index Pavlovian bias"
+  ],
+  "manipulations": [
+    "Proximity of aversive state (escape vs avoidance)",
+    "Primary aversive (noise) stimuli exposure"
+  ],
+  "key_findings": [
+    "Escape is associated with a bias toward vigorous action",
+    "Avoidance is associated with behavioral inhibition",
+    "Effects appear in both explicit choice and RT"
+  ],
+  "interpretations": [
+    "Aversive Pavlovian bias is activation vs inhibition depending on proximity",
+    "A combined RL + drift-diffusion model captures these invigoration/inhibition effects"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "Pavlovian control",
+    "active avoidance",
+    "aversive cues",
+    "escape vs avoidance",
+    "drift-diffusion model",
+    "reinforcement learning",
+    "behavioral inhibition",
+    "response invigoration"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "d6268bd5755c06f186dd6ba093f37481",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:05:39+09:00",
+  "review_status": "auto_unreviewed"
+}
