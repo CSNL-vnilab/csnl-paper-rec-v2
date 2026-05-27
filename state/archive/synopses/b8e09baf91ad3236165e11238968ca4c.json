@@ -1,0 +1,62 @@
+{
+  "frameworks": [
+    {
+      "name": "predictive coding",
+      "role": "primary_lens",
+      "one_line": "visual cortex codes prediction error between expected and observed object features"
+    },
+    {
+      "name": "object-based prediction error mixing",
+      "role": "extended",
+      "one_line": "surprise on one feature spreads to expected features within the same object"
+    },
+    {
+      "name": "feature-independent prediction",
+      "role": "compared_against",
+      "one_line": "each feature's expectation processed independently of other features"
+    },
+    {
+      "name": "object segmentation by surprise",
+      "role": "compared_against",
+      "one_line": "mismatched features inferred to belong to different objects"
+    }
+  ],
+  "core_question": "How does an unexpected feature of an object affect concurrent processing of another, expected feature within the same object?",
+  "key_assumptions": [
+    "visual cognition relies on contextual expectations",
+    "expected and unexpected stimuli yield distinct neural signatures",
+    "features of a familiar object can carry separable expectations"
+  ],
+  "manipulations": [
+    "independent expectations for color of moving-dot stimuli",
+    "independent expectations for motion direction of moving-dot stimuli",
+    "factorial pairing of expected/unexpected feature combinations"
+  ],
+  "key_findings": [
+    "behavior and visual cortex signals showed mixing of prediction error across features",
+    "surprise in one feature spread to the concurrently expected feature",
+    "results favored object-wide unexpectedness over feature-independent or object-splitting accounts"
+  ],
+  "interpretations": [
+    "prediction error is shared across features of a single object",
+    "an unexpected feature renders the whole object unexpected at the neural level"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "prediction error",
+    "visual expectation",
+    "object-based attention",
+    "feature binding",
+    "color and motion processing",
+    "human visual cortex fMRI",
+    "contextual expectation",
+    "moving-dot stimuli"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "b8e09baf91ad3236165e11238968ca4c",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}

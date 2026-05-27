@@ -1,0 +1,59 @@
+{
+  "frameworks": [
+    {
+      "name": "online psychophysics methodology",
+      "role": "primary_lens",
+      "one_line": "browser-based method to estimate viewing distance for stimulus-size control"
+    },
+    {
+      "name": "blind-spot localization",
+      "role": "extended",
+      "one_line": "physiological landmark used to compute viewing distance in-browser"
+    },
+    {
+      "name": "visual crowding",
+      "role": "context",
+      "one_line": "validation task requiring precise visual-angle calculation"
+    }
+  ],
+  "core_question": "Can a browser-based virtual chinrest enable controlled psychophysics in uncontrolled online environments?",
+  "key_assumptions": [
+    "blind-spot location provides a reliable geometric anchor for viewing distance",
+    "stimulus size in visual angle can be derived from estimated viewing distance",
+    "participants can comply with simple browser-based calibration steps"
+  ],
+  "manipulations": [
+    "viewing distance varied in laboratory validation",
+    "display size varied in laboratory validation",
+    "eccentricity of crowded targets",
+    "participant population (young children, older adults, dyslexic readers)"
+  ],
+  "key_findings": [
+    "average viewing-distance estimation error of about 3.25 cm",
+    "online crowding measures replicated laboratory crowding effects",
+    "crowding increases with eccentricity online as in the lab",
+    "young children, older adults, and dyslexics show elevated crowding"
+  ],
+  "interpretations": [
+    "the virtual chinrest enables visual-angle-dependent psychophysics on the web",
+    "large-scale online psychophysics can recover classical lab effects across populations"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "virtual chinrest",
+    "online psychophysics",
+    "viewing distance estimation",
+    "visual angle calibration",
+    "visual crowding",
+    "eccentricity",
+    "web-based experiments",
+    "blind spot localization"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "33c4b76d77c9b76ec883cf5d0eb419a1",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}

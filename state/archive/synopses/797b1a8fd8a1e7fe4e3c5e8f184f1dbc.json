@@ -1,0 +1,61 @@
+{
+  "frameworks": [
+    {
+      "name": "Bayesian decoding",
+      "role": "primary_lens",
+      "one_line": "Reconstruct posterior over stimulus from population activity using Bayes' rule."
+    },
+    {
+      "name": "correlational approach",
+      "role": "compared_against",
+      "one_line": "Identify tuning features (width, max rate) that covary with uncertainty."
+    },
+    {
+      "name": "normative model of ITD-based sound localization",
+      "role": "extended",
+      "one_line": "New normative ITD model used as testbed reproducing behavior and neural data."
+    },
+    {
+      "name": "Bayesian inference (behavior)",
+      "role": "context",
+      "one_line": "Skilled behavior shows signatures consistent with Bayesian inference."
+    }
+  ],
+  "core_question": "How do neuronal populations represent the uncertainty of sensory inputs, and which analytic approach reliably identifies that representation?",
+  "key_assumptions": [
+    "Brain computations underlying Bayesian behavior require accurate neural information about input uncertainty.",
+    "A normative ITD model can serve as ground truth for testing uncertainty readout methods.",
+    "Trial-by-trial uncertainty is the relevant target, not just average correlations."
+  ],
+  "manipulations": [
+    "Compared two analytic frameworks (Bayesian decoding vs. correlational) on the same model.",
+    "Examined multiple candidate neural features (tuning-curve width, maximum firing rate)."
+  ],
+  "key_findings": [
+    "Several neural features correlated with uncertainty on average.",
+    "No single feature provided an accurate trial-by-trial uncertainty estimate.",
+    "Full population activity pattern was required to reconstruct the trial-to-trial posterior via Bayes' rule."
+  ],
+  "interpretations": [
+    "Correlational approach may not reliably identify which neural aspects encode uncertainty.",
+    "Bayesian decoding of whole-population activity is the more faithful method for recovering uncertainty representations."
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "neural representation of uncertainty",
+    "Bayesian decoding from population activity",
+    "tuning-curve width and maximum firing rate",
+    "interaural time difference (ITD)",
+    "sound source localization",
+    "trial-by-trial posterior distribution",
+    "normative model of sensory inference",
+    "population coding"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "797b1a8fd8a1e7fe4e3c5e8f184f1dbc",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:16:45+09:00",
+  "review_status": "auto_unreviewed"
+}

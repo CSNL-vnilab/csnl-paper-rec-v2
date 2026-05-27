@@ -1,0 +1,55 @@
+{
+  "frameworks": [
+    {
+      "name": "Bayesian belief updating",
+      "role": "primary_lens",
+      "one_line": "Reward predictions conditioned on probabilistic beliefs about hidden environmental state"
+    },
+    {
+      "name": "reinforcement learning (reward prediction error)",
+      "role": "extended",
+      "one_line": "RPE framework extended so predictions depend on inferred hidden-state beliefs"
+    },
+    {
+      "name": "non-Bayesian cognitive models",
+      "role": "compared_against",
+      "one_line": "Alternative learning models without explicit posterior over hidden states"
+    }
+  ],
+  "core_question": "Does nucleus accumbens dopamine release reflect Bayesian inference over hidden states during an instrumental two-armed bandit task?",
+  "key_assumptions": [
+    "Dopamine release encodes a reward prediction error signal",
+    "Animals maintain probabilistic beliefs over the latent state of the environment",
+    "Reward predictions are formed conditional on those beliefs"
+  ],
+  "manipulations": [
+    "Stochastic switching of hidden state in a two-armed bandit task",
+    "Comparison across a wide family of cognitive learning models"
+  ],
+  "key_findings": [
+    "Behavioral model comparison favored models using Bayesian updating of hidden-state beliefs",
+    "Bayesian-belief models quantitatively matched mesolimbic dLight dopamine signals better than non-Bayesian alternatives"
+  ],
+  "interpretations": [
+    "Nucleus accumbens dopamine implicitly reflects probabilistic beliefs about the latent state",
+    "Bayesian inference over hidden states underlies reward prediction during instrumental learning"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "nucleus accumbens dopamine",
+    "dLight imaging",
+    "reward prediction error",
+    "Bayesian belief updating",
+    "hidden state inference",
+    "two-armed bandit",
+    "instrumental learning",
+    "mesolimbic dopamine"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "f4d141e3533bcf13a86d6045ff2346bb",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:16:45+09:00",
+  "review_status": "auto_unreviewed"
+}

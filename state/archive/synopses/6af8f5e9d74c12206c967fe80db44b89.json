@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "classical serial basal ganglia model",
+      "role": "compared_against",
+      "one_line": "striatal action selection precedes a pallidothalamic motor gate in serial architecture"
+    },
+    {
+      "name": "cognition-to-action binding",
+      "role": "primary_lens",
+      "one_line": "actions are bound to underlying cognitive variables across pallidothalamic circuit"
+    },
+    {
+      "name": "population decoding of neural representations",
+      "role": "primary_lens",
+      "one_line": "decoding choice and confidence from single-neuron populations along the circuit"
+    },
+    {
+      "name": "unsigned reward prediction error",
+      "role": "extended",
+      "one_line": "motor thalamus converges confidence and outcome into unsigned RPE-like signal"
+    }
+  ],
+  "core_question": "How does the human pallidothalamic circuit bind cognitive variables (choice, confidence, outcome) to action?",
+  "key_assumptions": [
+    "single-neuron recordings in human basal ganglia-thalamic nuclei index circuit-level computation",
+    "confidence-weighted reaching reports both perceptual decision and confidence",
+    "population-level decoding reveals representational transformations along the circuit"
+  ],
+  "manipulations": [
+    "perceptual decision task with confidence-weighted reaching",
+    "recording across globus pallidus externus, internus, subthalamic nucleus, and motor thalamus",
+    "alignment of activity to movement onset, execution, and feedback"
+  ],
+  "key_findings": [
+    "neurons across the pallidothalamic circuit show sharp activity increases at movement onset persisting through execution and feedback",
+    "choice and confidence are continuously encoded before, during, and after movement",
+    "representations transform from dynamic upstream to stable low-dimensional downstream, especially in motor thalamus",
+    "outcome signals emerge selectively in subthalamic nucleus and motor thalamus after feedback"
+  ],
+  "interpretations": [
+    "the circuit binds cognition to action rather than implementing a serial action-selection-then-gate architecture",
+    "motor thalamus converges confidence and outcome into an unsigned reward prediction error representation"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "basal ganglia-thalamic circuit",
+    "globus pallidus",
+    "subthalamic nucleus",
+    "motor thalamus",
+    "perceptual decision making",
+    "confidence encoding",
+    "population decoding",
+    "unsigned reward prediction error"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "6af8f5e9d74c12206c967fe80db44b89",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}

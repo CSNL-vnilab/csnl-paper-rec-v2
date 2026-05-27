@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "fear conditioning",
+      "role": "primary_lens",
+      "one_line": "associative learning pairing neutral cues with aversive shock to drive conditioned fear"
+    },
+    {
+      "name": "semantic generalisation",
+      "role": "extended",
+      "one_line": "conditioned fear spreads via meaning-based representations across translation equivalents"
+    },
+    {
+      "name": "higher-order cognitive theories of emotion",
+      "role": "context",
+      "one_line": "emotion shaped by semantic and conceptual processes beyond perceptual features"
+    },
+    {
+      "name": "perceptual feature generalisation",
+      "role": "compared_against",
+      "one_line": "spread of fear driven by shared sensory or surface attributes of cues"
+    }
+  ],
+  "core_question": "Does fear conditioning to a word generalise across languages in bilinguals via shared semantic representation independent of perceptual features?",
+  "key_assumptions": [
+    "translation equivalents share semantic but not perceptual content",
+    "self-reported fear and electrodermal activity index conditioned fear",
+    "bilingual lexical-semantic mappings allow cross-language transfer"
+  ],
+  "manipulations": [
+    "which language carries the shock-reinforced word across two sessions",
+    "reinforced vs non-reinforced translation equivalent within each session",
+    "language of the conditioned stimulus (English vs Spanish)"
+  ],
+  "key_findings": [
+    "fear conditioning transferred to the non-reinforced translation equivalent",
+    "transfer was replicable across both sessions in the sample",
+    "transfer occurred regardless of which language was reinforced",
+    "transfer observed in both self-reported fear and electrodermal activity"
+  ],
+  "interpretations": [
+    "emotional learning modifies semantic word representations beyond perceptual features",
+    "semantic similarity supports cross-language generalisation of conditioned fear"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "fear conditioning",
+    "semantic generalisation",
+    "bilingual language processing",
+    "translation equivalents",
+    "electrodermal activity",
+    "emotional learning",
+    "cross-language transfer",
+    "conditioned stimulus"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "c44a16b19fee921d43edd5bcda4fca9a",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}
