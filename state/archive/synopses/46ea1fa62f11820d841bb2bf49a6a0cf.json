@@ -1,0 +1,48 @@
+{
+  "frameworks": [
+    {
+      "name": "scene structure / spatial regularity",
+      "role": "primary_lens",
+      "one_line": "visual brain exploits typical spatial layouts to analyze natural scene content efficiently"
+    },
+    {
+      "name": "EEG multivariate decoding",
+      "role": "primary_lens",
+      "one_line": "category information read out from time-resolved EEG via classification"
+    }
+  ],
+  "core_question": "Does adherence to typical scene structure facilitate the emergence of scene category information in early visual brain signals?",
+  "key_assumptions": [
+    "natural scenes have predictable spatial structure across categories",
+    "EEG signals carry decodable scene category information",
+    "the visual system can exploit spatial regularities during early processing"
+  ],
+  "manipulations": [
+    "scenes presented in typical spatial structure vs disrupted structure",
+    "scene category (e.g., church vs supermarket)"
+  ],
+  "key_findings": [
+    "scene category was more accurately decoded from EEG when scenes adhered to typical spatial structure",
+    "the advantage arose during early visual processing"
+  ],
+  "interpretations": [
+    "the visual brain leverages real-world spatial structure to efficiently analyze scene content"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "scene categorization",
+    "natural scene structure",
+    "EEG decoding",
+    "early visual processing",
+    "spatial regularities",
+    "real-world structure",
+    "visual category emergence"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "46ea1fa62f11820d841bb2bf49a6a0cf",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,66 @@
+{
+  "frameworks": [
+    {
+      "name": "Bayesian Brain",
+      "role": "extended",
+      "one_line": "cognition as inference over internal generative models of the world"
+    },
+    {
+      "name": "modular neural state-space models",
+      "role": "primary_lens",
+      "one_line": "learned, recombinable world-model components with amortized neural updates"
+    },
+    {
+      "name": "amortized inference",
+      "role": "primary_lens",
+      "one_line": "neural networks replace iterative inference with learned updates"
+    },
+    {
+      "name": "compositional generalization",
+      "role": "context",
+      "one_line": "stacking reusable components enables zero-shot transfer across tasks"
+    }
+  ],
+  "core_question": "Can learned, reusable world-model components implement the Bayesian Brain and support flexible cognition across tasks?",
+  "key_assumptions": [
+    "cognition explains observations through hidden causes",
+    "generative structure can be learned rather than pre-specified",
+    "tasks share recombinable latent dynamics",
+    "inference can be amortized via neural updates"
+  ],
+  "manipulations": [
+    "fixed vs learned generative structure",
+    "task pairs sharing similar latent dynamics",
+    "recombination and stacking of trained components",
+    "zero-shot transfer to novel tasks"
+  ],
+  "key_findings": [
+    "modular components recombine across superficially different tasks",
+    "framework supports zero-shot generalization to new tasks",
+    "predicts selective correlations of inference parameters between tasks",
+    "predictions confirmed in human behavior"
+  ],
+  "interpretations": [
+    "learned reusable world-model components are a candidate principle for flexible cognition",
+    "scalable realization of Bayesian Brain without task-specific hand-crafting"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "Bayesian Brain",
+    "generative model",
+    "world model",
+    "amortized inference",
+    "neural state-space model",
+    "compositional reuse",
+    "zero-shot generalization",
+    "flexible cognition",
+    "latent dynamics"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "cb1c7f4e5b14b699de8349dc4c1c2896",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

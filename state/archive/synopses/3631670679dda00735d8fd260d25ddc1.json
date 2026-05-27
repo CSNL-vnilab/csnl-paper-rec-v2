@@ -1,0 +1,64 @@
+{
+  "frameworks": [
+    {
+      "name": "intrinsic neural timescales",
+      "role": "primary_lens",
+      "one_line": "autocorrelation magnitude of intrinsic signals indexes how long information persists locally"
+    },
+    {
+      "name": "resting-state fMRI functional dynamics",
+      "role": "primary_lens",
+      "one_line": "local temporal autocorrelation of resting BOLD characterises regional information storage"
+    },
+    {
+      "name": "structure-function coupling",
+      "role": "extended",
+      "one_line": "intrinsic timescale linked to local grey matter volume across regions"
+    },
+    {
+      "name": "neurodevelopmental account of autism",
+      "role": "context",
+      "one_line": "atypical local dynamics framed within developmental trajectory of autism"
+    }
+  ],
+  "core_question": "Do intrinsic neural timescales differ in autism and relate to its behavioural and cognitive symptoms?",
+  "key_assumptions": [
+    "autocorrelation of resting signals indexes local information storage duration",
+    "local intrinsic dynamics reflect region-specific function",
+    "atypical regional dynamics can map onto higher-order cognitive symptoms"
+  ],
+  "manipulations": [
+    "group comparison: high-functioning autistic adults vs controls",
+    "across-region contrast of intrinsic timescales",
+    "replication across two independent cross-sectional datasets",
+    "neurodevelopmental cross-sectional perspective"
+  ],
+  "key_findings": [
+    "shorter intrinsic timescales in sensory/visual cortices in autism",
+    "longer intrinsic timescale in the right caudate in autism",
+    "sensory/visual timescale shortening correlates with autism severity; caudate lengthening correlates with cognitive rigidity",
+    "intrinsic timescale correlates with local grey matter volume"
+  ],
+  "interpretations": [
+    "local functional and structural atypicality links to higher-order cognitive symptoms in autism",
+    "regionally specific intrinsic dynamics underlie distinct symptom dimensions"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "intrinsic neural timescale",
+    "autocorrelation of resting-state signals",
+    "resting-state fMRI",
+    "sensory and visual cortex dynamics",
+    "caudate",
+    "autism spectrum",
+    "cognitive rigidity",
+    "grey matter volume"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "3631670679dda00735d8fd260d25ddc1",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,52 @@
+{
+  "frameworks": [
+    {
+      "name": "perceptual decision-making",
+      "role": "primary_lens",
+      "one_line": "challenging visual motion decisions with monetary rewards probe evoked fMRI responses"
+    },
+    {
+      "name": "reward expectation",
+      "role": "context",
+      "one_line": "dopaminergic midbrain responses interpreted via reward expectation for easier decisions"
+    }
+  ],
+  "core_question": "Does 7 T fMRI provide a region-specific sensitivity benefit over 3 T for perceptual decision-making responses in cortex, striatum, and brainstem?",
+  "key_assumptions": [
+    "evoked fMRI amplitudes index task-related neural activity",
+    "same participants and same task at both field strengths control inter-subject and task variance",
+    "decision and post-feedback intervals are separable epochs of interest"
+  ],
+  "manipulations": [
+    "magnetic field strength (3 T vs 7 T)",
+    "decision difficulty (easier vs harder)",
+    "task interval (decision vs post-feedback)"
+  ],
+  "key_findings": [
+    "7 vs 3 T benefit during decision interval differed across cortical, striatal, and brainstem regions",
+    "generally larger 7 vs 3 T benefit in subcortical structures",
+    "stronger 7 T responses for easier than harder decisions in dopaminergic midbrain nuclei"
+  ],
+  "interpretations": [
+    "ultra-high field gain is region-specific, with subcortical structures benefiting most",
+    "midbrain easy-versus-hard modulation is consistent with reward expectation signals"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "ultra-high field fMRI",
+    "7 T versus 3 T comparison",
+    "perceptual decision-making",
+    "visual motion discrimination",
+    "dopaminergic midbrain",
+    "striatum",
+    "brainstem imaging",
+    "reward expectation"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "2cc1f2e8d55fad728bd9808de414c5d9",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:18:13+09:00",
+  "review_status": "auto_unreviewed"
+}

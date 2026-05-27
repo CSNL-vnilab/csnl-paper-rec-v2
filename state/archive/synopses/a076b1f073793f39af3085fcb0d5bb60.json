@@ -1,0 +1,52 @@
+{
+  "frameworks": [
+    {
+      "name": "exploration-exploitation dilemma",
+      "role": "primary_lens",
+      "one_line": "Choice between sampling information and exploiting known value."
+    },
+    {
+      "name": "reinforcement learning",
+      "role": "context",
+      "one_line": "Framework in which exploration-exploitation is a core problem."
+    },
+    {
+      "name": "evidence accumulation",
+      "role": "extended",
+      "one_line": "Subjects observe until a critical evidence threshold triggers betting."
+    }
+  ],
+  "core_question": "Can neural correlates of pure exploration be disentangled from those of pure exploitation in the human brain?",
+  "key_assumptions": [
+    "Observing trials index pure exploration, betting trials index pure exploitation",
+    "Subjects accumulate evidence to a threshold before switching to exploit"
+  ],
+  "manipulations": [
+    "Trial type: observe (information sampling) vs bet (value exploitation)"
+  ],
+  "key_findings": [
+    "Insula and dorsal anterior cingulate cortex more active on observe than bet trials",
+    "Ventromedial prefrontal cortex tracks model-derived evidence accumulation"
+  ],
+  "interpretations": [
+    "Insula and dACC drive exploratory behaviour, vmPFC supports the evidence-to-threshold readout"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "exploration-exploitation tradeoff",
+    "pure exploration",
+    "anterior cingulate cortex",
+    "insula",
+    "ventromedial prefrontal cortex",
+    "evidence accumulation",
+    "fMRI decision-making",
+    "observe versus bet task"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "a076b1f073793f39af3085fcb0d5bb60",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:18:13+09:00",
+  "review_status": "auto_unreviewed"
+}

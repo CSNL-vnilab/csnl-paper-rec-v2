@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "Bayesian probabilistic modeling",
+      "role": "primary_lens",
+      "one_line": "Computational theories act as constrained prior distributions on neural data."
+    },
+    {
+      "name": "bottom-up statistical pattern search",
+      "role": "context",
+      "one_line": "Data-driven analysis of large-scale neural recordings."
+    },
+    {
+      "name": "top-down computational theory",
+      "role": "context",
+      "one_line": "Theory-first approach considering plausible neural implementations."
+    },
+    {
+      "name": "temporal difference learning",
+      "role": "extended",
+      "one_line": "Worked example linking dopamine theory to neural data via probabilistic model."
+    }
+  ],
+  "core_question": "How can computational theory and statistical analysis of neural recordings be more intimately linked for data-driven theory revision?",
+  "key_assumptions": [
+    "Computational theories impose prior structure on plausible neural data",
+    "Bottom-up and top-down approaches are complementary, not opposed",
+    "Probabilistic models can mediate theory-observation linkage"
+  ],
+  "manipulations": [],
+  "key_findings": [
+    "Recent literature exemplifies a theory-driven pipeline for neural data analysis",
+    "TD learning model of dopamine illustrates the theory-constrained statistical approach"
+  ],
+  "interpretations": [
+    "Probabilistic models that embed computational theory enable rigorous, data-driven theory testing and revision",
+    "Bayesian framing reconciles bottom-up and top-down computational neuroscience"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "theory-constrained statistical models",
+    "computational theory as prior",
+    "Bayesian neural data analysis",
+    "top-down vs bottom-up neuroscience",
+    "temporal difference learning",
+    "dopamine TD model",
+    "probabilistic model fitting",
+    "theory-driven pipeline"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "ebdc3b94b26a1bd7899c4dc3df48754e",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:18:13+09:00",
+  "review_status": "auto_unreviewed"
+}
