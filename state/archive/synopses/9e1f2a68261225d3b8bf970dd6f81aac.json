@@ -1,0 +1,50 @@
+{
+  "frameworks": [
+    {
+      "name": "linear threshold heuristic",
+      "role": "primary_lens",
+      "one_line": "Position-dependent linear threshold governs accept/reject in sequential search."
+    },
+    {
+      "name": "optimal stopping theory",
+      "role": "compared_against",
+      "one_line": "Normative position-dependent threshold strategy that humans diverge from."
+    }
+  ],
+  "core_question": "Why do human stopping decisions in sequential search diverge from the optimal strategy, and can a linear threshold heuristic explain them?",
+  "key_assumptions": [
+    "options are encountered sequentially without return to rejected ones",
+    "stopping decisions depend on current position in the sequence",
+    "heuristic threshold is a linear function of position"
+  ],
+  "manipulations": [
+    "task environment / option distribution across studies",
+    "real-world vs laboratory sequential decision setting"
+  ],
+  "key_findings": [
+    "linear threshold model fits human stopping behavior better than existing models",
+    "model accurately predicts search behavior across different environments",
+    "model generalizes to a real-world sequential decision problem"
+  ],
+  "interpretations": [
+    "humans implement a linear threshold heuristic rather than the optimal nonlinear rule",
+    "this heuristic captures the systematic divergence from optimality in sequential search"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "sequential decision making",
+    "optimal stopping",
+    "linear threshold heuristic",
+    "secretary problem",
+    "search behavior",
+    "stopping decisions",
+    "heuristic decision strategy"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "9e1f2a68261225d3b8bf970dd6f81aac",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:23:25+09:00",
+  "review_status": "auto_unreviewed"
+}

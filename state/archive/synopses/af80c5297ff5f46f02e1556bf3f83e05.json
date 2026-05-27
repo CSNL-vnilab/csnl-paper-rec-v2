@@ -1,0 +1,55 @@
+{
+  "frameworks": [
+    {
+      "name": "causal chain of effects in NIBS",
+      "role": "primary_lens",
+      "one_line": "stimulation generates E-field, modulates local and network activity, then cognition"
+    },
+    {
+      "name": "correlative neuroimaging",
+      "role": "compared_against",
+      "one_line": "purely observational measures lacking causal inferential power"
+    },
+    {
+      "name": "experimental sensory stimulation",
+      "role": "compared_against",
+      "one_line": "input-side manipulation cannot localize causation in brain tissue"
+    }
+  ],
+  "core_question": "Under what conditions do noninvasive brain stimulation experiments warrant genuinely causal claims about cognition?",
+  "key_assumptions": [
+    "NIBS effects propagate through a multi-step causal chain (E-field, neural activity, network spread, cognition)",
+    "each link in the chain can be confounded if not explicitly tested",
+    "appropriate control conditions can isolate intended causal effects"
+  ],
+  "manipulations": [
+    "review-level discussion of stimulation modality (TMS, tDCS, tACS) and target region",
+    "consideration of control conditions for each link in the causal chain"
+  ],
+  "key_findings": [
+    "research hypotheses in NIBS studies often oversimplify the underlying causal chain",
+    "each link (field generation, local activity, network propagation, cognitive effect) carries distinct confounds requiring tailored controls"
+  ],
+  "interpretations": [
+    "NIBS can establish cause-effect relationships only when assumptions and confounds at every link are explicitly tested and controlled",
+    "without such controls, causal language in NIBS findings is unwarranted"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "noninvasive brain stimulation",
+    "transcranial magnetic stimulation",
+    "transcranial direct current stimulation",
+    "transcranial alternating current stimulation",
+    "causal inference",
+    "confound control",
+    "network effects of stimulation",
+    "cognitive neuroscience methodology"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "af80c5297ff5f46f02e1556bf3f83e05",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:23:25+09:00",
+  "review_status": "auto_unreviewed"
+}

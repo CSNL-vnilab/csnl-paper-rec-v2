@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "deep RNN / connectionist sensorimotor model",
+      "role": "primary_lens",
+      "one_line": "RNN trained on psychophysical tasks with language-embedded instruction inputs"
+    },
+    {
+      "name": "pre-trained language model embeddings",
+      "role": "extended",
+      "one_line": "NLP embeddings used to scaffold task representations for zero-shot generalization"
+    },
+    {
+      "name": "compositional generalization",
+      "role": "context",
+      "one_line": "framework for combining practiced skills into novel task performance"
+    }
+  ],
+  "core_question": "How can a neural model use linguistic instructions to perform novel sensorimotor tasks with zero prior experience?",
+  "key_assumptions": [
+    "language embeddings carry task-relevant semantic structure",
+    "sensorimotor tasks share compositional sub-skills",
+    "pre-trained LM provides instruction representations without task-specific tuning"
+  ],
+  "manipulations": [
+    "instruction embedding source (pre-trained language model variants)",
+    "held-out novel tasks for 0-shot evaluation",
+    "presence/absence of linguistic instruction input"
+  ],
+  "key_findings": [
+    "best models reach 83% correct on unseen tasks from instructions alone (0-shot)",
+    "neural activity for related tasks shares geometry with instruction semantic embeddings",
+    "model can generate linguistic descriptions of novel tasks from motor feedback",
+    "generated descriptions guide a partner model to perform the same task"
+  ],
+  "interpretations": [
+    "language scaffolds sensorimotor representations so instructions cue composition of practiced skills",
+    "shared geometry between semantic and neural task spaces enables linguistic communication of novel tasks"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "instructed task generalization",
+    "zero-shot learning",
+    "sensorimotor RNN",
+    "language-conditioned neural model",
+    "compositional task representation",
+    "psychophysical task battery",
+    "shared neural-semantic geometry",
+    "model-to-model linguistic communication"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "e456bb5c6a7b59aa17106729fec74be6",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:23:25+09:00",
+  "review_status": "auto_unreviewed"
+}

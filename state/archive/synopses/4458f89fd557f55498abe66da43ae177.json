@@ -1,0 +1,56 @@
+{
+  "frameworks": [
+    {
+      "name": "psychophysical threshold estimation",
+      "role": "primary_lens",
+      "one_line": "discrimination thresholds index timing precision in auditory tasks"
+    },
+    {
+      "name": "dissociable timing mechanisms (milliseconds vs seconds)",
+      "role": "extended",
+      "one_line": "separate substrates posited for sub- and supra-second interval timing"
+    },
+    {
+      "name": "pure timing deficit hypothesis",
+      "role": "alternative_lens",
+      "one_line": "ADHD impairment localized to timing rather than cognitive control"
+    }
+  ],
+  "core_question": "Are auditory time thresholds in the millisecond and second ranges differentially impaired in ADHD?",
+  "key_assumptions": [
+    "millisecond timing loads less on cognitive control and working memory than seconds-range timing",
+    "millisecond and seconds-range timing rely on partially separate mechanisms",
+    "non-verbal IQ can be regressed out as a covariate"
+  ],
+  "manipulations": [
+    "diagnostic group (ADHD vs neurotypical children/adolescents)",
+    "duration range (milliseconds 0.25-1 s vs seconds 0.75-3 s)"
+  ],
+  "key_findings": [
+    "severe ADHD impairment for millisecond thresholds",
+    "no group difference for seconds-range thresholds",
+    "millisecond deficit persists after regressing out non-verbal IQ",
+    "millisecond and seconds thresholds are uncorrelated"
+  ],
+  "interpretations": [
+    "partially separate mechanisms for millisecond and seconds timing",
+    "ADHD shows a pure timing deficit at short intervals, independent of cognitive control load"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "auditory time perception",
+    "millisecond interval discrimination",
+    "ADHD timing deficit",
+    "psychophysical thresholds",
+    "developmental delay in timing",
+    "sub-second vs supra-second timing",
+    "duration discrimination"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "4458f89fd557f55498abe66da43ae177",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:23:25+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "Emmert's law (size-distance scaling)",
+      "role": "primary_lens",
+      "one_line": "Perceived afterimage size scales with perceived distance of the projection plane."
+    },
+    {
+      "name": "Ponzo illusion (linear perspective)",
+      "role": "extended",
+      "one_line": "Pictorial depth cues induce illusory distance that biases perceived size."
+    },
+    {
+      "name": "Top-down feedback from higher-level visual cortex",
+      "role": "alternative_lens",
+      "one_line": "Depth markers persist via feedback even when retinal depth cues vanish."
+    }
+  ],
+  "core_question": "Does illusory distance from pictorial depth cues modulate afterimage size even after the depth cues disappear?",
+  "key_assumptions": [
+    "Afterimages reflect retinal-level adaptation but are subject to perceived-distance scaling",
+    "Linear perspective converging lines induce reliable illusory depth",
+    "A depth marker can be bound to an object across cue offsets"
+  ],
+  "manipulations": [
+    "Static vs flickering perspective cues during adaptation/test",
+    "Position of horizontal bar (upper farther vs lower nearer in Ponzo layout)",
+    "Presence vs absence of depth cues at the moment of size judgment"
+  ],
+  "key_findings": [
+    "Static perspective cues produced standard Ponzo size-distance illusion on afterimages",
+    "Flickering perspective cues left only the bar afterimage visible, yet substantial illusory size bias persisted",
+    "Illusory size modulation outlasted the retinal availability of the depth cues"
+  ],
+  "interpretations": [
+    "Co-occurrence of depth cues and object binds a depth marker to the object",
+    "Perceived size is modulated by feedback of depth information from higher-level visual cortex"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "afterimage size perception",
+    "Emmert's law",
+    "Ponzo illusion",
+    "illusory distance",
+    "size-distance scaling",
+    "linear perspective depth cues",
+    "top-down feedback visual cortex",
+    "depth marker binding"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "03f251d123911e28ef40165d66c40137",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:23:25+09:00",
+  "review_status": "auto_unreviewed"
+}

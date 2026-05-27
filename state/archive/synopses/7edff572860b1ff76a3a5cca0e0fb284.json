@@ -1,0 +1,62 @@
+{
+  "frameworks": [
+    {
+      "name": "fitness-maximizing encoding",
+      "role": "primary_lens",
+      "one_line": "sensory codes shaped to maximize survival-relevant outcomes rather than reconstruction accuracy"
+    },
+    {
+      "name": "information capacity-constrained deep neural networks",
+      "role": "extended",
+      "one_line": "capacity-limited DNNs trained on the same task as humans reproduce fitness-maximizing codes"
+    },
+    {
+      "name": "efficient coding",
+      "role": "compared_against",
+      "one_line": "accuracy-maximizing sensory representation as default expectation that the paper contrasts with"
+    },
+    {
+      "name": "normative cross-disciplinary framework",
+      "role": "context",
+      "one_line": "unified account combining neuroscience, computer science, and economics"
+    }
+  ],
+  "core_question": "Are early sensory representations adapted to maximize fitness rather than to maximize encoding accuracy?",
+  "key_assumptions": [
+    "sensory encoding has biological capacity limits",
+    "behavioural goals can shape the optimization criterion for sensory codes",
+    "fitness consequences can be operationalized in a controlled task"
+  ],
+  "manipulations": [
+    "behavioural goals tied to differing fitness payoffs",
+    "training capacity-constrained DNNs on the same task as humans",
+    "novel object-perception goals probed with fMRI"
+  ],
+  "key_findings": [
+    "humans flexibly adapt sensory encoding strategies to promote fitness maximization",
+    "capacity-constrained DNNs trained on the same task reproduce this pattern",
+    "novel behavioural goals induce efficient stimulus representations in early sensory areas in fMRI"
+  ],
+  "interpretations": [
+    "fitness-maximizing rules imposed by the environment apply at early stages of sensory processing in humans and machines",
+    "accurate sensory representation is not necessarily what biological systems optimize"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "fitness-maximizing codes",
+    "sensory encoding under capacity constraints",
+    "efficient coding alternatives",
+    "goal-dependent sensory representation",
+    "capacity-constrained deep neural networks",
+    "early sensory cortex fMRI",
+    "normative encoding framework",
+    "behavioural goal shaping perception"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "7edff572860b1ff76a3a5cca0e0fb284",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

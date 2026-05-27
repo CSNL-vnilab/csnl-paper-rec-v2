@@ -1,0 +1,60 @@
+{
+  "frameworks": [
+    {
+      "name": "functional ultrasound imaging (fUS)",
+      "role": "primary_lens",
+      "one_line": "neural activity inferred indirectly from cerebral blood volume changes"
+    },
+    {
+      "name": "hemodynamic response model",
+      "role": "context",
+      "one_line": "behavior timed to slow vascular dynamics rather than spiking timescale"
+    },
+    {
+      "name": "neural decoding from brain-wide imaging",
+      "role": "extended",
+      "one_line": "task variables decoded from fUS signals across multiple cortical/subcortical regions"
+    }
+  ],
+  "core_question": "Can functional ultrasound imaging chronically record brain-wide hemodynamics in freely moving rodents performing cognitive tasks?",
+  "key_assumptions": [
+    "cerebral blood volume changes index local neural activity",
+    "cognitive behavior can be paced to match hemodynamic timescales",
+    "tethered freely-moving animals can still perform cognitive tasks reliably"
+  ],
+  "manipulations": [
+    "chronic implant design and craniotomy approach",
+    "probe stabilization strategies for freely moving behavior",
+    "task difficulty during a decision-making task"
+  ],
+  "key_findings": [
+    "stable fUS recordings sustained across multiple months",
+    "task variables robustly decoded from fUS signals over time",
+    "brain-wide hemodynamic response relates nonlinearly to cognitive variables such as task difficulty"
+  ],
+  "interpretations": [
+    "fUS is a viable chronic brain-wide imaging modality for cognition in freely moving rodents",
+    "hemodynamic coupling to cognition differs from sensory-response regimes previously characterized"
+  ],
+  "limitations_noted": [
+    "fUS measures neural activity only indirectly via blood volume",
+    "behavioral design must respect the slow hemodynamic timescale"
+  ],
+  "connecting_signals": [
+    "functional ultrasound imaging",
+    "freely moving rodent",
+    "chronic recording",
+    "decision making task",
+    "neural decoding",
+    "hemodynamic response",
+    "brain-wide imaging",
+    "motion artifacts"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "a0d2ea27c4aee373a112c51fedc37b46",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

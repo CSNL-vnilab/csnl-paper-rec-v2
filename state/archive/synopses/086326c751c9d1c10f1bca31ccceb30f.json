@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "linear ballistic accumulator",
+      "role": "primary_lens",
+      "one_line": "evidence-accumulation decision model fitted to behavioral training data"
+    },
+    {
+      "name": "perceptual learning plasticity",
+      "role": "extended",
+      "one_line": "training effects extended from early visual cortex to decision regions"
+    },
+    {
+      "name": "early visual cortex plasticity",
+      "role": "compared_against",
+      "one_line": "classical view localizing learning to early sensory areas"
+    },
+    {
+      "name": "model-based fMRI",
+      "role": "context",
+      "one_line": "links model parameters to BOLD responses across networks"
+    }
+  ],
+  "core_question": "How does perceptual learning modulate decision-related brain regions in the human brain?",
+  "key_assumptions": [
+    "behavioral improvement decomposes into model parameters such as drift rate",
+    "drift rate indexes sensory information accumulation",
+    "spatial independent components isolate functional networks"
+  ],
+  "manipulations": [
+    "training on a motion direction discrimination task",
+    "trained vs untrained motion directions",
+    "psychophysics combined with fMRI measurement"
+  ],
+  "key_findings": [
+    "behavioral improvement explained by improved sensory information accumulation (drift rate)",
+    "drift rate correlated with fMRI signals in PMv, SEF, and fronto-parietal network",
+    "direction-specific signal enhancement in PMv and FEF, reduction in V3A and MT+",
+    "strengthened effective connectivity from V3A to PMv and from IPS to FEF"
+  ],
+  "interpretations": [
+    "perceptual learning induces decision refinement in decision-related regions",
+    "training reshapes sensory-to-decision routing across cortical hierarchy"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "perceptual learning",
+    "linear ballistic accumulator",
+    "drift rate",
+    "motion direction discrimination",
+    "model-based fMRI",
+    "ventral premotor cortex",
+    "fronto-parietal network",
+    "effective connectivity"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "086326c751c9d1c10f1bca31ccceb30f",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}
