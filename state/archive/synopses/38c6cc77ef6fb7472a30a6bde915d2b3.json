@@ -1,0 +1,46 @@
+{
+  "frameworks": [
+    {
+      "name": "efficient coding",
+      "role": "primary_lens",
+      "one_line": "Information processing minimizes perceptual error under capacity constraints."
+    },
+    {
+      "name": "universal law of generalization",
+      "role": "extended",
+      "one_line": "Exponential decay of generalization over psychological-space distance."
+    }
+  ],
+  "core_question": "Why does perceptual generalization follow an exponential function of psychological distance?",
+  "key_assumptions": [
+    "Perceptual systems face information-processing/transmission constraints.",
+    "Systems minimize cost of perceptual error.",
+    "Generalization can be formulated in a 'psychological space'."
+  ],
+  "manipulations": [],
+  "key_findings": [
+    "The exponential universal law emerges from any system minimizing perceptual error under information constraints.",
+    "Result holds for both biological and artificial information-processing systems."
+  ],
+  "interpretations": [
+    "Universal law of generalization is a consequence of efficient coding, not prior theoretical accounts.",
+    "Generalization behavior reflects information-theoretic optimization rather than associative or geometric assumptions."
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "universal law of generalization",
+    "efficient coding",
+    "psychological space",
+    "perceptual error",
+    "information processing constraints",
+    "exponential generalization gradient",
+    "discrimination and generalization"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "38c6cc77ef6fb7472a30a6bde915d2b3",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:56:16+09:00",
+  "review_status": "auto_unreviewed"
+}

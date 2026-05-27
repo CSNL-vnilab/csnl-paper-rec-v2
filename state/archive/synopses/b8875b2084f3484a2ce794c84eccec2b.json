@@ -1,0 +1,61 @@
+{
+  "frameworks": [
+    {
+      "name": "reinforcement learning",
+      "role": "primary_lens",
+      "one_line": "trial-and-error policy learning over latent neural states defined in real-time by fMRI"
+    },
+    {
+      "name": "metacognition / decision confidence",
+      "role": "extended",
+      "one_line": "confidence meaningfulness gates exploration of high-dimensional latent task representations"
+    },
+    {
+      "name": "frontostriatal reward prediction error",
+      "role": "primary_lens",
+      "one_line": "prefrontal confidence synchronizes with basal-ganglia RPE to support latent-state learning"
+    },
+    {
+      "name": "curse of dimensionality",
+      "role": "context",
+      "one_line": "framed as the computational challenge the brain must overcome during unconscious learning"
+    }
+  ],
+  "core_question": "Can humans learn reward-maximizing policies defined over unconscious, high-dimensional latent neural states?",
+  "key_assumptions": [
+    "reward contingencies can be tied to multivoxel fMRI patterns in real time",
+    "the relevant brain states remain below conscious threshold by design",
+    "decision confidence carries computationally meaningful information about latent states"
+  ],
+  "manipulations": [
+    "real-time fMRI multivoxel pattern–contingent reward",
+    "trial-by-trial choices yielding reinforcement signals over hidden states"
+  ],
+  "key_findings": [
+    "subjects solve the hidden-state task within ~200 trials",
+    "RL processes interact with metacognitive confidence meaningfulness",
+    "prefrontal confidence representations synchronize with striatal reward prediction errors"
+  ],
+  "interpretations": [
+    "frontostriatal confidence–RPE coupling lets the brain explore latent task structure despite high dimensionality",
+    "metacognition provides a route to unconscious learning of hidden representations"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "unconscious reinforcement learning",
+    "real-time fMRI neurofeedback",
+    "multivoxel pattern decoding",
+    "decision confidence",
+    "metacognition",
+    "reward prediction error",
+    "frontostriatal circuit",
+    "latent state exploration"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "b8875b2084f3484a2ce794c84eccec2b",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:56:16+09:00",
+  "review_status": "auto_unreviewed"
+}

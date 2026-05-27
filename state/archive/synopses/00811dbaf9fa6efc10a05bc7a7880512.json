@@ -1,0 +1,62 @@
+{
+  "frameworks": [
+    {
+      "name": "Bayesian reinforcement learning",
+      "role": "primary_lens",
+      "one_line": "Prediction errors modulated by probabilistic beliefs over cue-outcome relations"
+    },
+    {
+      "name": "reward prediction error hypothesis",
+      "role": "extended",
+      "one_line": "Phasic dopamine as RPE, extended to accommodate Bayesian belief updating"
+    },
+    {
+      "name": "adaptive coding",
+      "role": "alternative_lens",
+      "one_line": "Dopamine prediction errors rescale with the range of reward magnitudes"
+    },
+    {
+      "name": "recurrent cortical dynamics",
+      "role": "context",
+      "one_line": "Orbitofrontal cortex transforms stimulus representations via recurrent dynamics"
+    }
+  ],
+  "core_question": "Can dopamine response anomalies be explained by Bayesian inference over cue-outcome relationships?",
+  "key_assumptions": [
+    "Phasic dopamine reports a prediction error signal",
+    "Probabilistic beliefs about cue-outcome contingencies are updated by Bayes rule",
+    "Orbitofrontal cortex provides the transformed state representation"
+  ],
+  "manipulations": [
+    "Sensory preconditioning paradigms inferring value from cue chains",
+    "Cue pre-exposure inducing latent inhibition",
+    "Reward magnitudes varied across orders of magnitude"
+  ],
+  "key_findings": [
+    "Dopamine responses track inferred value in sensory preconditioning",
+    "Cue pre-exposure produces latent inhibition effects in dopamine signaling",
+    "Prediction errors are adaptively coded across reward magnitudes"
+  ],
+  "interpretations": [
+    "Phasic dopamine implements a Bayesian RL update over inferred states, not raw RPE",
+    "OFC recurrent dynamics transform inputs so a simple error rule realizes Bayesian RL"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "phasic dopamine",
+    "reward prediction error",
+    "Bayesian reinforcement learning",
+    "sensory preconditioning",
+    "latent inhibition",
+    "adaptive coding of prediction errors",
+    "orbitofrontal cortex",
+    "inferred value"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "00811dbaf9fa6efc10a05bc7a7880512",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

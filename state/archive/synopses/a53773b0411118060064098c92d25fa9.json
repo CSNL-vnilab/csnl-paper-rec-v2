@@ -1,0 +1,52 @@
+{
+  "frameworks": [
+    {
+      "name": "categorical perception",
+      "role": "primary_lens",
+      "one_line": "perceptual system commits to one interpretation, discarding rival hypotheses' probabilities"
+    },
+    {
+      "name": "normative decision theory",
+      "role": "compared_against",
+      "one_line": "optimal action weighting requires probabilities over all possible world states"
+    }
+  ],
+  "core_question": "Does categorical perception cause humans to deviate from normative integration of perceptual and action uncertainty?",
+  "key_assumptions": [
+    "optimal choice requires utility weighted by full posterior over states",
+    "categorization collapses the posterior to a single interpretation",
+    "perceptual and motor uncertainty can be jointly manipulated in a pointing task"
+  ],
+  "manipulations": [
+    "modality of perceptual evidence (visual vs auditory)",
+    "perceptual uncertainty vs action/motor uncertainty trade-off",
+    "reward contingencies tied to combined uncertainties"
+  ],
+  "key_findings": [
+    "observers overweighted perceptual uncertainty relative to motor uncertainty",
+    "the suboptimality held across both visual and auditory tasks",
+    "deviations are quantitatively explained by a categorical-perception model"
+  ],
+  "interpretations": [
+    "categorization discards probability information needed for normative action selection",
+    "perceptual architecture imposes a structural limit on normative decision making"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "categorical perception",
+    "perceptual uncertainty",
+    "motor uncertainty",
+    "rapid pointing movements",
+    "reward-based decision making",
+    "normative decision theory",
+    "suboptimal cue combination",
+    "visual and auditory categorization"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "a53773b0411118060064098c92d25fa9",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:56:16+09:00",
+  "review_status": "auto_unreviewed"
+}

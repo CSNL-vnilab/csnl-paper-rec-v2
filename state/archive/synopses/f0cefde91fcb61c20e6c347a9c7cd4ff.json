@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "hidden Markov model",
+      "role": "primary_lens",
+      "one_line": "Latent discrete states segment trial-by-trial choice behavior"
+    },
+    {
+      "name": "single-strategy psychometric model",
+      "role": "compared_against",
+      "one_line": "Classical view assuming one consistent decision rule per session"
+    },
+    {
+      "name": "lapse-rate model",
+      "role": "compared_against",
+      "one_line": "Reframes attributed lapses as transitions into biased states"
+    },
+    {
+      "name": "perceptual decision-making",
+      "role": "context",
+      "one_line": "Sensory-evidence-driven choice as the behavioral domain"
+    }
+  ],
+  "core_question": "Do subjects use a single consistent decision strategy, or alternate between discrete strategies within a session?",
+  "key_assumptions": [
+    "Choice strategies can be captured as discrete latent states",
+    "State transitions are Markovian across trials",
+    "Strategy states are shared structure across individuals"
+  ],
+  "manipulations": [
+    "Fit hidden Markov models to mouse and human choice data",
+    "Compared multi-state HMM against single-strategy baselines",
+    "Examined within-session state alternations"
+  ],
+  "key_findings": [
+    "Choice behavior reflects multiple interleaved strategies rather than one",
+    "Identified states persist tens to hundreds of trials before switching",
+    "Mouse strategies were highly consistent across individuals",
+    "One 'engaged' stimulus-driven state plus several biased error-prone states"
+  ],
+  "interpretations": [
+    "Apparent lapses reflect transitions into biased strategy states, not noise",
+    "Standard performance measures mask dramatic within-session strategy changes"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "hidden Markov model",
+    "discrete decision strategies",
+    "perceptual decision-making",
+    "lapse rate",
+    "engaged state",
+    "biased states",
+    "mouse psychophysics",
+    "within-session strategy switching"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "f0cefde91fcb61c20e6c347a9c7cd4ff",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

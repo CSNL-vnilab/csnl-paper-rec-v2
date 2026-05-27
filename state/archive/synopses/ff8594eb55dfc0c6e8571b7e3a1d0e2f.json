@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "probabilistic inference",
+      "role": "primary_lens",
+      "one_line": "Larvae combine noisy sensory signals via probabilistic computation"
+    },
+    {
+      "name": "reliability-weighted multisensory combination",
+      "role": "primary_lens",
+      "one_line": "Cues weighted by reliability to reduce combined-signal variance"
+    },
+    {
+      "name": "data-driven agent-based model",
+      "role": "extended",
+      "one_line": "Behavioral agent fit to navigation tracks under varied noise"
+    }
+  ],
+  "core_question": "How does the Drosophila larva combine information across sensory modalities under varying reliability?",
+  "key_assumptions": [
+    "Navigation behavior reflects underlying probabilistic inference",
+    "Optogenetically injected noise effectively manipulates signal reliability",
+    "Agent-based modeling can recover combination rules from tracks"
+  ],
+  "manipulations": [
+    "Configurations of odor and temperature gradients",
+    "Optogenetically-controlled sensory noise to vary signal reliability",
+    "Single-modality vs multimodal gradient conditions"
+  ],
+  "key_findings": [
+    "Larvae adapt navigation behavior to the reliability of individual sensory signals",
+    "In some configurations larvae minimize the variance of the combined signal",
+    "Exact combination mechanism appears to depend on the sensory modality involved"
+  ],
+  "interpretations": [
+    "Probabilistic inference directs natural orientation behaviors even in a small nervous system",
+    "Multisensory combination rules are not universal but modality-dependent"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "multisensory integration",
+    "reliability-weighted cue combination",
+    "probabilistic inference in invertebrates",
+    "Drosophila larva navigation",
+    "odor and temperature gradients",
+    "optogenetic noise injection",
+    "agent-based behavioral model",
+    "variance minimization"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "ff8594eb55dfc0c6e8571b7e3a1d0e2f",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}
