@@ -1,0 +1,60 @@
+{
+  "frameworks": [
+    {
+      "name": "Causal Functional Connectivity (CFC)",
+      "role": "primary_lens",
+      "one_line": "Directed, causal interactions between brain regions inferred from fMRI time series."
+    },
+    {
+      "name": "Time-aware PC (TPC) algorithm",
+      "role": "extended",
+      "one_line": "Causal-discovery method used to infer directed CFC from resting-state fMRI."
+    },
+    {
+      "name": "Correlation-based Functional Connectivity (sparse partial correlation)",
+      "role": "compared_against",
+      "one_line": "Conventional undirected FC baseline contrasted with the directed CFC view."
+    },
+    {
+      "name": "Network-Based Statistics (directed)",
+      "role": "alternative_lens",
+      "one_line": "Network-level inferential framework used to localise altered directed sub-networks."
+    }
+  ],
+  "core_question": "Which directed (causal) resting-state brain sub-networks are disrupted in Alzheimer's disease compared to cognitively normal individuals?",
+  "key_assumptions": [
+    "Directional, causal interactions can be inferred from resting-state fMRI",
+    "Alterations in connectivity precede clinical AD symptoms",
+    "Network-level statistics are more informative than single-edge tests"
+  ],
+  "manipulations": [
+    "Group contrast: AD vs cognitively normal (CN)",
+    "Connectivity method: TPC-derived CFC vs sparse partial correlation FC"
+  ],
+  "key_findings": [
+    "Reduced directed CFC strength in AD involving inferior frontal gyrus, superior and middle temporal gyri, and cerebellum",
+    "Network-level (sub-network) alterations detected rather than isolated edge differences"
+  ],
+  "interpretations": [
+    "AD involves systemic, network-wide disruption of directed brain connectivity",
+    "Directed CFC offers diagnostic insight beyond conventional correlation-based FC"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "causal functional connectivity",
+    "directed brain networks",
+    "Time-aware PC algorithm",
+    "resting-state fMRI",
+    "Alzheimer's disease biomarkers",
+    "network-based statistics",
+    "sparse partial correlation",
+    "temporal and frontal gyri"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "9bb06ddaa6cb46fc16b7efeab7a1529b",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:38:41+09:00",
+  "review_status": "auto_unreviewed"
+}

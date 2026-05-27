@@ -1,0 +1,59 @@
+{
+  "frameworks": [
+    {
+      "name": "multiple-systems theory of category learning",
+      "role": "primary_lens",
+      "one_line": "qualitatively distinct neural and cognitive systems mediate different category-learning tasks"
+    },
+    {
+      "name": "explicit rule-based reasoning",
+      "role": "context",
+      "one_line": "frontal-striatal circuits using working memory and executive attention"
+    },
+    {
+      "name": "procedural learning",
+      "role": "context",
+      "one_line": "feedback-driven implicit learning for information-integration categories"
+    },
+    {
+      "name": "perceptual learning",
+      "role": "context",
+      "one_line": "visual cortical plasticity engaged by prototype distortion tasks"
+    }
+  ],
+  "core_question": "Do different category-learning tasks recruit qualitatively distinct cognitive and neural systems?",
+  "key_assumptions": [
+    "category structure determines which learning system is engaged",
+    "cognitive, neuropsychological, and neuroimaging evidence can dissociate systems"
+  ],
+  "manipulations": [
+    "type of category-learning task (rule-based vs information-integration vs prototype distortion vs weather prediction)"
+  ],
+  "key_findings": [
+    "rule-based tasks recruit frontal-striatal circuits, working memory, executive attention",
+    "information-integration tasks rely on procedural learning sensitive to feedback nature and timing",
+    "prototype distortion tasks induce visual cortical perceptual learning",
+    "multiple strategies can succeed on the weather prediction task"
+  ],
+  "interpretations": [
+    "human category learning is mediated by multiple qualitatively distinct systems"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "category learning",
+    "rule-based tasks",
+    "information-integration tasks",
+    "prototype distortion",
+    "weather prediction task",
+    "frontal-striatal circuits",
+    "procedural learning",
+    "perceptual learning"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "fb5de41c2f7ebf061facf7d37aa5471c",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:38:41+09:00",
+  "review_status": "auto_unreviewed"
+}

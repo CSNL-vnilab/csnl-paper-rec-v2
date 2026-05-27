@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "dynamic circuit reconfiguration",
+      "role": "primary_lens",
+      "one_line": "local cortical circuits transiently rewire to route sensory input to context-appropriate motor output"
+    },
+    {
+      "name": "mixed selectivity / conjunctive coding",
+      "role": "extended",
+      "one_line": "contingency neurons jointly code context and choice to implement flexible stimulus-response mapping"
+    },
+    {
+      "name": "abstraction over context",
+      "role": "compared_against",
+      "one_line": "alternative in which ALM would represent same-mapping contexts via a shared abstract code"
+    },
+    {
+      "name": "population coding in premotor cortex",
+      "role": "context",
+      "one_line": "ALM as a site for sensorimotor decision representations"
+    }
+  ],
+  "core_question": "How does anterior lateral motor cortex implement context-dependent stimulus-response contingencies during flexible decision-making?",
+  "key_assumptions": [
+    "two-photon imaging samples decision-relevant ALM populations",
+    "optogenetic silencing causally probes ALM's role per task epoch",
+    "context and test odors are drawn from separable odor sets"
+  ],
+  "manipulations": [
+    "context odor identity preceding the test odor",
+    "test odor identity paired with directional lick contingency",
+    "optogenetic silencing of ALM during context vs delay vs choice periods"
+  ],
+  "key_findings": [
+    "distinct ALM populations encode context, test odors, and choice",
+    "silencing ALM during context and delay impairs contingent performance",
+    "same-mapping context odors are represented by separate populations but converge at choice-selective neurons",
+    "a subpopulation of choice-selective neurons shows dual context-and-choice selectivity"
+  ],
+  "interpretations": [
+    "ALM configures the appropriate stimulus-response contingency rather than abstracting over context",
+    "flexible behavior arises from dynamic reconfiguration of local circuits forming contingency neurons"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "anterior lateral motor cortex",
+    "context-dependent decision-making",
+    "stimulus-response contingency",
+    "contingency neurons",
+    "mixed selectivity",
+    "optogenetic silencing",
+    "two-photon calcium imaging",
+    "olfactory delayed-response task"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "52ae5cf2e2ad591ac3211375366a3c0f",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

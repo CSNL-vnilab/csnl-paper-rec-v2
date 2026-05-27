@@ -1,0 +1,64 @@
+{
+  "frameworks": [
+    {
+      "name": "compressive temporal summation",
+      "role": "primary_lens",
+      "one_line": "subadditive integration of visual responses over time across cortical areas"
+    },
+    {
+      "name": "population receptive field modeling",
+      "role": "extended",
+      "one_line": "spatial pRF approach extended to characterize temporal encoding"
+    },
+    {
+      "name": "compressive spatial summation",
+      "role": "context",
+      "one_line": "earlier spatial-domain finding paralleled by the present temporal result"
+    },
+    {
+      "name": "linear systems prediction",
+      "role": "compared_against",
+      "one_line": "linear additive baseline that responses to longer stimuli fail to match"
+    }
+  ],
+  "core_question": "How do human visual cortical areas integrate visual information distributed over time?",
+  "key_assumptions": [
+    "fMRI signal amplitudes can index temporal processing despite coarse temporal resolution",
+    "two simple operations (summation then compressive nonlinearity) suffice across the hierarchy",
+    "carefully controlled temporally modulated stimuli can isolate temporal computation"
+  ],
+  "manipulations": [
+    "stimulus duration (briefer vs longer presentations)",
+    "interstimulus interval between paired stimuli",
+    "visual area along the cortical hierarchy"
+  ],
+  "key_findings": [
+    "all visual areas show subadditive summation: longer-stimulus responses fall below linear prediction",
+    "fMRI responses to two stimuli are reduced for brief interstimulus intervals (adaptation)",
+    "these effects are more pronounced in areas anterior to V1-V3"
+  ],
+  "interpretations": [
+    "temporal encoding across visual cortex is captured by summation followed by a compressive nonlinearity",
+    "compressive temporal summation directly parallels compressive spatial summation"
+  ],
+  "limitations_noted": [
+    "fMRI has coarse temporal resolution relative to neural dynamics"
+  ],
+  "connecting_signals": [
+    "compressive temporal summation",
+    "subadditive summation",
+    "population receptive field",
+    "temporal adaptation",
+    "interstimulus interval",
+    "visual hierarchy",
+    "fMRI temporal encoding",
+    "compressive nonlinearity"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "677e5f52073b926279a1a8c804bcf898",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

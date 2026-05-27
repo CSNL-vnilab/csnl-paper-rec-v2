@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "neural gain neuromodulation",
+      "role": "primary_lens",
+      "one_line": "phasic ascending neuromodulator bursts transiently raise neural gain to enable perceptual updating"
+    },
+    {
+      "name": "recurrent neural network dynamical systems",
+      "role": "extended",
+      "one_line": "RNN trained on perceptual categorisation with uncertainty-driven dynamic gain"
+    },
+    {
+      "name": "low-dimensional brain state dynamics",
+      "role": "extended",
+      "one_line": "macroscale predictions cast as state velocity peaks and flattened energy landscapes"
+    },
+    {
+      "name": "network reset hypothesis",
+      "role": "context",
+      "one_line": "perceptual updating relies on neuromodulatory reset of cortical susceptibility"
+    }
+  ],
+  "core_question": "Does gain neuromodulation driven by stimulus ambiguity cause task-relevant perceptual switches?",
+  "key_assumptions": [
+    "pupil diameter indirectly indexes phasic neuromodulatory tone",
+    "stimulus ambiguity drives neuromodulatory tone and neural gain",
+    "RNN dynamics are an analogue for cortical perceptual categorisation"
+  ],
+  "manipulations": [
+    "ambiguous figures perceptual task with subjective switches",
+    "RNN gain allowed to scale dynamically with classification uncertainty",
+    "low-dimensional projection of RNN and brain dynamics"
+  ],
+  "key_findings": [
+    "perceptual switches coincide with peaks in pupil diameter",
+    "higher RNN gain accelerates perceptual switches by destabilising dynamics under uncertainty",
+    "fMRI switches align with peaks in low-dimensional brain state velocity",
+    "fMRI switches align with a flattened egocentric energy landscape"
+  ],
+  "interpretations": [
+    "task-relevant perceptual switches are mediated by uncertainty-driven gain neuromodulation",
+    "macroscale dynamical signatures (velocity, landscape) index neuromodulatory reset"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "neural gain",
+    "noradrenaline",
+    "pupillometry",
+    "perceptual switches",
+    "ambiguous figures",
+    "RNN modelling",
+    "low-dimensional brain state",
+    "energy landscape"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "8a12610be38d67fe643c64c0c318f8cf",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,62 @@
+{
+  "frameworks": [
+    {
+      "name": "flexible working-memory recoding",
+      "role": "primary_lens",
+      "one_line": "remembered information is recoded into the format best suited to upcoming behavior"
+    },
+    {
+      "name": "fixed-locus sustained-activity model of working memory",
+      "role": "compared_against",
+      "one_line": "visual information held by sustained spiking in fixed parietal and prefrontal stores"
+    },
+    {
+      "name": "sensory recruitment hypothesis",
+      "role": "alternative_lens",
+      "one_line": "visual memories maintained in early sensory cortex for comparison to future inputs"
+    },
+    {
+      "name": "multivariate fMRI decoding",
+      "role": "context",
+      "one_line": "pattern-based readout of remembered content across cortical regions"
+    }
+  ],
+  "core_question": "Does the cortical format of visuo-spatial working memory change with whether the upcoming motor response is known?",
+  "key_assumptions": [
+    "memory content is decodable from multivariate fMRI patterns",
+    "behavioral goals can reconfigure which cortical areas store the memory",
+    "spatial position and planned action are dissociable codes"
+  ],
+  "manipulations": [
+    "whether the required behavioral response was known or unknown during the delay",
+    "decoded region (early visual, parietal, somatosensory, motor, premotor)",
+    "content type decoded (remembered spatial position vs planned motor action)"
+  ],
+  "key_findings": [
+    "less spatial-position information in early visual and parietal regions when response was known",
+    "planned motor-action representations emerged in S1, M1, and premotor cortex when response was known",
+    "the trade-off between sensory and motor codes tracked the task condition"
+  ],
+  "interpretations": [
+    "working-memory networks are strategically reconfigured by upcoming behavioral demands",
+    "remembered visuo-spatial content can be recoded into an action-oriented motor format"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "visuo-spatial working memory",
+    "delay-period maintenance",
+    "multivariate fMRI decoding",
+    "sensory recruitment",
+    "motor recoding of memory",
+    "premotor and primary motor cortex",
+    "flexible memory format",
+    "action-oriented representation"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "8bc736d978a143dd5d665712c3194452",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

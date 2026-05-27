@@ -1,0 +1,54 @@
+{
+  "frameworks": [
+    {
+      "name": "higher-order theory of consciousness",
+      "role": "primary_lens",
+      "one_line": "consciousness arises from higher-order representations tied to subjective belief"
+    },
+    {
+      "name": "perceptual reality monitoring",
+      "role": "extended",
+      "one_line": "mechanism distinguishing percepts from internally generated representations"
+    },
+    {
+      "name": "global availability theories",
+      "role": "compared_against",
+      "one_line": "consciousness as global broadcasting of information across the brain"
+    },
+    {
+      "name": "biological / representational primitivism",
+      "role": "compared_against",
+      "one_line": "treats conscious phenomenology as a brute biological or representational fact"
+    }
+  ],
+  "core_question": "What characterizes conscious perception if not global availability or brute biological/representational properties?",
+  "key_assumptions": [
+    "consciousness must connect to belief formation and epistemic justification",
+    "metacognition is integral to characterizing conscious perception",
+    "higher-order accounts can be made empirically grounded"
+  ],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [
+    "characterizing consciousness requires linking it to subjective belief and epistemic justification",
+    "an empirically-grounded higher-order theory can supplant global-availability and primitivist accounts"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "higher-order theory",
+    "metacognition",
+    "perceptual reality monitoring",
+    "conscious perception",
+    "global availability",
+    "epistemic justification",
+    "subjective belief formation",
+    "consciousness theory"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "3a73469e03c5a407a44683c3da1d530b",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

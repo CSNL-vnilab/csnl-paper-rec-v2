@@ -1,0 +1,59 @@
+{
+  "frameworks": [
+    {
+      "name": "evidence accumulation",
+      "role": "primary_lens",
+      "one_line": "downstream processes integrate sensory pulses to drive perceptual choices"
+    },
+    {
+      "name": "sensory-cognitive interaction in cortex",
+      "role": "extended",
+      "one_line": "even early sensory cortex carries choice and accumulated-evidence signals"
+    },
+    {
+      "name": "veridical sensory encoding",
+      "role": "compared_against",
+      "one_line": "view that sensory cortices pass noisy but unmodulated inputs forward"
+    }
+  ],
+  "core_question": "How does posterior cortex internally represent sequential sensory pulses that jointly drive an accumulation-based decision?",
+  "key_assumptions": [
+    "decision is built from temporally sparse, randomly timed sensory pulses",
+    "cue-locked single units in posterior cortex index the per-pulse sensory response",
+    "amplitude of cue-locked responses can be modulated by task variables"
+  ],
+  "manipulations": [
+    "randomly timed pulses of visual evidence during navigation",
+    "varied accumulated-evidence state across trials",
+    "varied upcoming behavioral choice across trials",
+    "recording across multiple posterior cortical areas including V1"
+  ],
+  "key_findings": [
+    "only a small fraction of active neurons in V1 had sensory-like cue-locked responses",
+    "cue-locked neurons showed amplitude modulations ranging from sensory to cognitive",
+    "amplitudes were modulated by choice and by accumulated evidence",
+    "task-related modulations spanned a large fraction of cue-locked neurons across posterior cortex"
+  ],
+  "interpretations": [
+    "early sensory cortices do not provide purely veridical inputs to accumulation",
+    "future models of accumulation behavior should incorporate sensory-cortical task modulations"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "pulsatile evidence accumulation",
+    "cue-locked neurons",
+    "amplitude modulation",
+    "choice-related activity",
+    "accumulated evidence signals",
+    "posterior cortex populations",
+    "V1 task modulation",
+    "navigational decision-making"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "4c0e1c3e2b2b500ca0bf27d769ca8163",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}
