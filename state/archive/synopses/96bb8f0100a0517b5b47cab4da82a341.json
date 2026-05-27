@@ -1,0 +1,45 @@
+{
+  "canonical_id": "96bb8f0100a0517b5b47cab4da82a341",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "real-time fMRI neurofeedback", "role": "primary_lens", "one_line": "closed-loop brain imaging that lets patients modulate targeted neural activity therapeutically"},
+    {"name": "closed-loop brain modulation", "role": "context", "one_line": "broader paradigm of direct activity regulation for mental disorder treatment"},
+    {"name": "machine learning pattern decoding", "role": "extended", "one_line": "advances enable targeting precise multivariate activity patterns for therapy"}
+  ],
+  "core_question": "Can real-time fMRI neurofeedback serve as a rigorous, targeted therapeutic intervention for mental health disorders?",
+  "key_assumptions": [
+    "mental disorders involve dysregulation of specific brain processes",
+    "direct modulation of neural activity can produce clinical benefit",
+    "double-blind placebo-controlled designs are feasible for neurofeedback"
+  ],
+  "manipulations": [
+    "neurofeedback target specification via machine learning",
+    "methodological design (placebo control, blinding)"
+  ],
+  "key_findings": [
+    "neurofeedback historically lacked mainstream acceptance due to methodological issues",
+    "contemporary guidelines permit double-blind placebo-controlled neurofeedback trials",
+    "ML and statistics now allow targeting precise activity patterns therapeutically"
+  ],
+  "interpretations": [
+    "rt-fMRI neurofeedback is a viable rigorous treatment avenue for mental disorders",
+    "neurofeedback uniquely supports double-blind placebo control among psychological interventions"
+  ],
+  "limitations_noted": [
+    "past methodological weaknesses limited acceptance"
+  ],
+  "connecting_signals": [
+    "real-time fMRI",
+    "neurofeedback",
+    "closed-loop intervention",
+    "mental health treatment",
+    "double-blind placebo-controlled",
+    "machine learning decoding",
+    "brain activity modulation"
+  ],
+  "out_of_scope_note": null
+}

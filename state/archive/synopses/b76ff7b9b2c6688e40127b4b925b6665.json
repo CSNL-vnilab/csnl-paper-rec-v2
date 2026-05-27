@@ -1,0 +1,44 @@
+{
+  "canonical_id": "b76ff7b9b2c6688e40127b4b925b6665",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "compositional Bayesian regression with Gaussian process kernel grammar", "role": "primary_lens", "one_line": "complex functions decomposed into simpler kernel building blocks via grammar"},
+    {"name": "non-compositional structure learning", "role": "compared_against", "one_line": "alternative function-learning accounts without grammar-based decomposition"}
+  ],
+  "core_question": "Do people learn complex functions by compositionally decomposing them into simpler building blocks?",
+  "key_assumptions": [
+    "function learning can be formalized as Bayesian regression",
+    "Gaussian process kernels can be composed via a grammar",
+    "inductive biases are recoverable from human extrapolation and interpolation choices"
+  ],
+  "manipulations": [
+    "compositional vs non-compositional functions in extrapolation/interpolation tasks",
+    "prior elicitation over functional patterns",
+    "predictability, memorability, and numerosity judgments of functions"
+  ],
+  "key_findings": [
+    "participants preferred compositional over non-compositional extrapolations and interpolations",
+    "prior-elicitation revealed inductive bias for compositional structure",
+    "compositional functions judged more predictable, more memorable, and lower in perceived numerosity"
+  ],
+  "interpretations": [
+    "human intuitive theory of functions is inherently compositional",
+    "compositionality is a domain-general inductive bias supporting function learning"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "compositional inductive bias",
+    "function learning",
+    "Gaussian process kernel grammar",
+    "Bayesian regression",
+    "extrapolation and interpolation",
+    "subjective predictability",
+    "structure learning",
+    "intuitive theory of functions"
+  ],
+  "out_of_scope_note": null
+}

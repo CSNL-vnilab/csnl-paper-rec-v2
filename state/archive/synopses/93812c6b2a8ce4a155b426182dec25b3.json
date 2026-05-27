@@ -1,0 +1,47 @@
+{
+  "canonical_id": "93812c6b2a8ce4a155b426182dec25b3",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "mnemonic metacognition", "role": "primary_lens", "one_line": "evaluation of one's own memory performance as a metacognitive process"},
+    {"name": "virtual-lesion rTMS", "role": "primary_lens", "one_line": "inhibitory repetitive TMS used to perturb a target region causally"},
+    {"name": "individual-differences neuroimaging", "role": "extended", "one_line": "MRI neuro-profiles modulate susceptibility to a causal perturbation"}
+  ],
+  "core_question": "How do TMS-induced neuromodulatory effects on precuneal meta-memory function depend on individual anatomical and functional brain profiles?",
+  "key_assumptions": [
+    "precuneus is causally involved in mnemonic metacognition",
+    "BOLD signal magnitude indexes regional engagement during meta-memory",
+    "vertex serves as a valid control stimulation site",
+    "individual MRI profiles capture stable inter-subject variation"
+  ],
+  "manipulations": [
+    "rTMS target (precuneus vs vertex)",
+    "task domain (memory vs perceptual)",
+    "three MRI neuro-profiles across subjects"
+  ],
+  "key_findings": [
+    "precuneal BOLD magnitude correlates with individual meta-memory efficiency",
+    "this correlation diminishes after precuneal rTMS",
+    "higher precuneus-hippocampus resting-state connectivity predicts greater TMS susceptibility",
+    "smaller grey-matter volume in stimulated precuneus predicts greater TMS susceptibility"
+  ],
+  "interpretations": [
+    "precuneal role in meta-memory is causally affirmed and modulated by individual anatomy and connectivity",
+    "effects are domain-specific — absent in the perceptual task"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "precuneus",
+    "metacognition",
+    "meta-memory efficiency",
+    "repetitive transcranial magnetic stimulation",
+    "virtual lesion",
+    "resting-state functional connectivity",
+    "grey matter volume",
+    "individual differences"
+  ],
+  "out_of_scope_note": null
+}

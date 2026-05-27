@@ -1,0 +1,46 @@
+{
+  "canonical_id": "f67e8c3a202e5b9819f8c263bee00d65",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "population coding", "role": "primary_lens", "one_line": "characterising dlPFC population activity across behavioural contexts."},
+    {"name": "prospective/retrospective neural coding", "role": "primary_lens", "one_line": "neurons represent past saccades and planned future saccades."}
+  ],
+  "core_question": "How does primate dlPFC population activity represent past and upcoming saccadic movements across diverse behavioural contexts?",
+  "key_assumptions": [
+    "dlPFC supports flexible goal-directed behaviour",
+    "saccades provide a common motor event across tasks",
+    "population recordings reveal cognitive correlates beyond single-neuron analyses"
+  ],
+  "manipulations": [
+    "free vs instructed saccades",
+    "different training stages across multiple tasks",
+    "perceptual discrimination vs reward-based decision tasks",
+    "delayed reward-eligible saccades vs other saccades"
+  ],
+  "key_findings": [
+    "reliable strong modulation tied to retrospective representation of most recent saccade across all contexts",
+    "prospective planning-like activity restricted to task-related delayed saccades eligible for reward",
+    "highly structured link between prospective and retrospective representations",
+    "only prospective representations modulated by recent behavioural context"
+  ],
+  "interpretations": [
+    "structured prospective-retrospective link may reflect a hard-wired feature of saccade responses in dlPFC",
+    "retrospective saccade coding is context-invariant while prospective coding is context-sensitive"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "dorso-lateral prefrontal cortex",
+    "saccadic eye movements",
+    "population recordings",
+    "prospective representation",
+    "retrospective representation",
+    "primate dlPFC",
+    "reward-based decisions",
+    "perceptual discrimination"
+  ],
+  "out_of_scope_note": null
+}

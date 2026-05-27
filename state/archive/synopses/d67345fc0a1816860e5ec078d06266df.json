@@ -1,0 +1,46 @@
+{
+  "canonical_id": "d67345fc0a1816860e5ec078d06266df",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "structured multi-armed bandits", "role": "primary_lens", "one_line": "bandits whose options share a latent functional structure across positions"},
+    {"name": "function learning", "role": "extended", "one_line": "learning the latent reward function that ties options together"},
+    {"name": "clustering of reward distributions", "role": "extended", "one_line": "grouping rounds by similar reward distributions to reuse knowledge"},
+    {"name": "uncertainty-guided exploration", "role": "extended", "one_line": "exploration directed by posterior uncertainty over options"}
+  ],
+  "core_question": "How do humans use latent structure across options to guide exploration in multi-armed bandits?",
+  "key_assumptions": [
+    "options can share an underlying latent function (e.g., linear in spatial position)",
+    "humans can generalize learned structure across rounds",
+    "exploration and exploitation must be traded off"
+  ],
+  "manipulations": [
+    "presence vs. absence of latent functional structure across options",
+    "linear vs. non-linear reward functions",
+    "repeated rounds to probe learning-to-learn"
+  ],
+  "key_findings": [
+    "participants use functional structure to guide exploration",
+    "learning-to-learn effect: faster identification of the latent function across rounds",
+    "results replicate with non-linear functions and rule out heuristic accounts"
+  ],
+  "interpretations": [
+    "best-fitting model combines function learning, clustering across rounds, and uncertainty-guided exploration",
+    "human reinforcement learning exploits latent structure to improve efficiency"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "structured multi-armed bandits",
+    "exploration-exploitation tradeoff",
+    "function learning",
+    "generalization across options",
+    "learning-to-learn",
+    "uncertainty-guided exploration",
+    "clustering of reward distributions",
+    "latent structure in reinforcement learning"
+  ],
+  "out_of_scope_note": null
+}
