@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "what-where-when episodic memory",
+      "role": "primary_lens",
+      "one_line": "episodes decomposed into joint WWW components retrieved with distinct fidelities"
+    },
+    {
+      "name": "reconstructive memory",
+      "role": "extended",
+      "one_line": "remembering coherent episodes as active reconstruction from semi-independent components"
+    },
+    {
+      "name": "serial position effects",
+      "role": "context",
+      "one_line": "primacy and recency shape recall accuracy of temporal information"
+    }
+  ],
+  "core_question": "Are the what, where, and when components of recent episodes retrieved with equal mnemonic fidelity?",
+  "key_assumptions": [
+    "episodic memory can be decomposed into separable WWW components",
+    "synthetic movie stimuli expose component-wise recall on demand",
+    "mnemonic accuracy is comparable across WWW components"
+  ],
+  "manipulations": [
+    "probed component (what vs where vs when)",
+    "memory load across trials",
+    "serial position of probed item within the episode"
+  ],
+  "key_findings": [
+    "memory for 'when' had the lowest accuracy across components",
+    "'when' recall was most affected by primacy and recency",
+    "'when' and 'where' were most susceptible to memory-load interference",
+    "'what' was relatively more robust than 'when' and 'where'"
+  ],
+  "interpretations": [
+    "episodes are not stored or retrieved as a coherent whole",
+    "WWW components preserve partial independence requiring active reconstruction"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "episodic memory",
+    "what where when",
+    "temporal order memory",
+    "spatial memory",
+    "primacy and recency",
+    "memory load interference",
+    "mnemonic accuracy",
+    "active reconstruction"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "3ef9ed809e893cf16f68dc6a52283142",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

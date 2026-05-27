@@ -1,0 +1,17 @@
+{
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "Operations-research paper applying a Markov decision process to allocate scarce emergency medical resources across multi-priority injuries during large-scale disasters — disaster logistics modeling, unrelated to cognitive/perceptual/computational neuroscience.",
+  "canonical_id": "318ca49bd884ca09e85a9decd3960575",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.0
+}

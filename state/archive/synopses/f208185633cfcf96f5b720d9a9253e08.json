@@ -1,0 +1,52 @@
+{
+  "frameworks": [
+    {
+      "name": "inter-subject correlation (ISC) analysis",
+      "role": "primary_lens",
+      "one_line": "shared time-locked fMRI response across viewers indexes naturalistic stimulus processing"
+    },
+    {
+      "name": "naturalistic stimulus neuroimaging",
+      "role": "context",
+      "one_line": "free viewing of movies replaces standard controlled task paradigms"
+    }
+  ],
+  "core_question": "Do schizophrenia patients show reduced inter-subject neural synchronization during naturalistic humor processing compared to healthy controls?",
+  "key_assumptions": [
+    "ISC indexes stimulus-locked shared cortical processing",
+    "comedy clips evoke comparable humor-related responses across viewers",
+    "patient and control groups are matchable on age and sex"
+  ],
+  "manipulations": [
+    "group (schizophrenia vs healthy control)",
+    "comedy movie clip (three distinct clips)",
+    "repeated viewing (two viewings per clip)"
+  ],
+  "key_findings": [
+    "patients showed significant ISC in bilateral lateral occipital, superior frontal, left supramarginal, and right lateral orbitofrontal cortices",
+    "patients had lower ISC than controls in left superior temporal sulcus, bilateral supramarginal, and bilateral inferior parietal cortices",
+    "higher PANSS total severity correlated with lower ISC in middle frontal and middle temporal regions"
+  ],
+  "interpretations": [
+    "schizophrenia involves reduced synchronization of higher-order social and language cortex during naturalistic stimulus processing",
+    "clinical symptom severity tracks the magnitude of desynchronization in associative cortex"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "inter-subject correlation",
+    "naturalistic fMRI",
+    "schizophrenia",
+    "humor processing",
+    "superior temporal sulcus",
+    "inferior parietal cortex",
+    "PANSS symptom severity",
+    "movie viewing paradigm"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "f208185633cfcf96f5b720d9a9253e08",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:49:58+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,56 @@
+{
+  "frameworks": [
+    {
+      "name": "signaling theory",
+      "role": "primary_lens",
+      "one_line": "self-handicapping as a costly signal of competence to observers"
+    },
+    {
+      "name": "formal optimal-choice model",
+      "role": "extended",
+      "one_line": "chooses degree of self-handicapping balancing performance and signaling effects"
+    },
+    {
+      "name": "naive vs sophisticated observer inference",
+      "role": "alternative_lens",
+      "one_line": "observer type modulates how handicap is interpreted"
+    }
+  ],
+  "core_question": "Why, when, and how do people self-handicap to manage perceived competence?",
+  "key_assumptions": [
+    "agents choose handicap degree to maximize a competence-signaling payoff",
+    "observers update beliefs about competence given visible handicap",
+    "naive and sophisticated observers infer differently from the same handicap"
+  ],
+  "manipulations": [
+    "likelihood that handicapping affects task outcome",
+    "observer sophistication (naive vs sophisticated)",
+    "outcome valence (success vs failure) following handicap"
+  ],
+  "key_findings": [
+    "self-handicapping is more frequent when unlikely to affect the outcome",
+    "self-handicapping raises perceived competence in naive observers",
+    "with sophisticated observers, handicapping is less effective after failure"
+  ],
+  "interpretations": [
+    "self-handicapping is a strategic competence signal whose value depends on observer inference",
+    "the formal theory also accounts for several prior self-handicapping findings"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "self-handicapping",
+    "signaling theory",
+    "perceived competence",
+    "strategic impression management",
+    "naive vs sophisticated observer",
+    "optimal handicap choice",
+    "competence inference"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "093b0e8fa71a89825e243bc5be89eaac",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:49:58+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,50 @@
+{
+  "frameworks": [
+    {
+      "name": "intuitive theories of physics, psychology, and causality",
+      "role": "primary_lens",
+      "one_line": "Moral judgment grounded in mental simulation over intuitive physics and causal reasoning."
+    },
+    {
+      "name": "psychophysical / qualitative moral judgment models",
+      "role": "compared_against",
+      "one_line": "Prior models that fit data but miss underlying inferential concepts."
+    }
+  ],
+  "core_question": "Can a quantitative computational model based on intuitive physics, psychology, and causality predict moral judgments of harm and help?",
+  "key_assumptions": [
+    "people infer agent desire and intent from physical scene dynamics",
+    "moral judgment can be reduced to inferences over intuitive theories",
+    "causal structure mediates attribution of harm or help"
+  ],
+  "manipulations": [
+    "scenarios where an agent brings about or prevents harm",
+    "scenarios involving helping versus harming another agent"
+  ],
+  "key_findings": [
+    "model qualitatively reproduces empirical findings of prior moral-judgment work",
+    "model quantitatively predicts judgments in new harm/help scenarios"
+  ],
+  "interpretations": [
+    "moral judgment is a generative inference over intuitive physics, psychology, and causality",
+    "underlying inferential concepts, not stimulus features, drive moral evaluations"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "moral judgment",
+    "intuitive physics",
+    "intuitive psychology",
+    "causal inference",
+    "desire and intent attribution",
+    "computational model of cognition",
+    "harm and help scenarios",
+    "mental simulation"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "f06df014a19f86d3f3ad8d7bbb9cc9af",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:49:58+09:00",
+  "review_status": "auto_unreviewed"
+}

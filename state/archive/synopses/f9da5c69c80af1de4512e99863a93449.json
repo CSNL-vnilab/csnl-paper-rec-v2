@@ -1,0 +1,52 @@
+{
+  "frameworks": [
+    {
+      "name": "transcranial direct current stimulation (tDCS) neuromodulation",
+      "role": "primary_lens",
+      "one_line": "anodal/cathodal polarity shifts cortical excitability to probe causal role in learning"
+    },
+    {
+      "name": "visuo-motor coordination learning",
+      "role": "context",
+      "one_line": "visually guided tracking task as the behavioural learning substrate"
+    }
+  ],
+  "core_question": "Are human MT+/V5 and primary motor cortex causally involved in learning a visually guided tracking task?",
+  "key_assumptions": [
+    "anodal tDCS increases and cathodal tDCS decreases underlying cortical excitability",
+    "MT+/V5 mediates visual motion processing relevant to tracking",
+    "early-phase tracking accuracy indexes visuo-motor learning"
+  ],
+  "manipulations": [
+    "stimulation polarity (anodal vs cathodal vs sham)",
+    "stimulation site (left MT+/V5 vs contralateral M1 vs primary visual cortex)",
+    "learning phase timing during the tracking task"
+  ],
+  "key_findings": [
+    "anodal tDCS over left V5 increased correct tracking in the early learning phase",
+    "anodal tDCS over contralateral M1 also increased correct tracking in the early learning phase",
+    "cathodal stimulation produced no significant effect",
+    "anodal stimulation of primary visual cortex was not effective for this task"
+  ],
+  "interpretations": [
+    "MT+/V5 and M1 are causally engaged in early visuo-motor learning, whereas V1 is not"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "transcranial direct current stimulation",
+    "MT+/V5 extrastriate cortex",
+    "primary motor cortex M1",
+    "visuo-motor learning",
+    "visually guided tracking",
+    "anodal stimulation",
+    "cortical excitability",
+    "motion processing"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "f9da5c69c80af1de4512e99863a93449",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:49:58+09:00",
+  "review_status": "auto_unreviewed"
+}
