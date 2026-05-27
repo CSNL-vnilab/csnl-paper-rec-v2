@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "causal perturbation of cortical decision circuits",
+      "role": "primary_lens",
+      "one_line": "Reversible inactivation tests whether PPC activity is necessary for decisions."
+    },
+    {
+      "name": "sensorimotor decomposition of decision-making",
+      "role": "extended",
+      "one_line": "Dissociates sensory-evaluation and motor-planning contributions of PPC."
+    },
+    {
+      "name": "perceptual decision-making / visual categorization",
+      "role": "context",
+      "one_line": "Behavioural setting in which PPC activity is probed."
+    }
+  ],
+  "core_question": "Does posterior parietal cortex play a causal role in sensory-evaluation aspects of perceptual and categorical decisions, beyond motor planning?",
+  "key_assumptions": [
+    "Reversible inactivation localises causal contribution to the inactivated region.",
+    "Decision behaviour can be decomposed into sensory-evaluation and motor-planning components.",
+    "Stimulus vs response-target placement in the inactivated visual field separates these components."
+  ],
+  "manipulations": [
+    "PPC inactivated vs intact (reversible).",
+    "Visual stimuli placed inside vs outside inactivated visual field.",
+    "Motor response targets placed inside vs outside inactivated visual field.",
+    "Task type: perceptual visual discrimination and visual categorization."
+  ],
+  "key_findings": [
+    "PPC inactivation impaired both sensory-evaluation and motor aspects of decisions.",
+    "Impairment was preferentially larger when stimuli rather than response targets were in the inactivated field."
+  ],
+  "interpretations": [
+    "PPC plays a causal role in decision-making, not merely a correlative one.",
+    "PPC is preferentially involved in evaluating attended task-relevant sensory stimuli rather than motor planning."
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "posterior parietal cortex",
+    "reversible inactivation",
+    "perceptual decision-making",
+    "visual categorization",
+    "sensory evaluation vs motor planning",
+    "causal role in decisions",
+    "attended task-relevant stimuli",
+    "monkey visual discrimination"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "ac4280d43ee10dd59e1aac51101f8a65",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:27:43+09:00",
+  "review_status": "auto_unreviewed"
+}

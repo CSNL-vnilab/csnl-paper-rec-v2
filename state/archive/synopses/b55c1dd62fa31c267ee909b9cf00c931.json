@@ -1,0 +1,62 @@
+{
+  "frameworks": [
+    {
+      "name": "hidden Markov model",
+      "role": "extended",
+      "one_line": "States parameterized as PCA decompositions to capture time-varying FC"
+    },
+    {
+      "name": "principal component analysis",
+      "role": "compared_against",
+      "one_line": "Two-step PCA pre-reduction shown to bias FC state estimation"
+    },
+    {
+      "name": "Gaussian mixture model",
+      "role": "alternative_lens",
+      "one_line": "Conventional mixture of Gaussians on PCA scores used as baseline"
+    },
+    {
+      "name": "time-varying functional connectivity",
+      "role": "primary_lens",
+      "one_line": "Spontaneous between-region covariance patterns interpreted as dynamic states"
+    }
+  ],
+  "core_question": "Can time-varying functional connectivity in fMRI be estimated reliably without two-step PCA-then-HMM biases?",
+  "key_assumptions": [
+    "FC reflects dynamic between-region communication",
+    "State-specific covariance structures capture distinct FC patterns",
+    "Data are high-dimensional with few time points"
+  ],
+  "manipulations": [
+    "Replaced PCA-then-HMM pipeline with joint HMM-PCA estimation",
+    "Compared against PCA + HMM and PCA + Gaussian mixture baselines",
+    "Theoretical and empirical evaluation"
+  ],
+  "key_findings": [
+    "Two-step PCA suffers systematic biases and loss of sensitivity for FC state recovery",
+    "Joint HMM-PCA recovers distinct FC patterns and switching dynamics",
+    "HMM-PCA outperforms PCA-based alternatives empirically and theoretically"
+  ],
+  "interpretations": [
+    "Fusing dimensionality reduction with FC state estimation in one step avoids two-step pitfalls",
+    "State-specific PCA decompositions provide a flexible description of time-varying FC"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "hidden Markov model",
+    "time-varying functional connectivity",
+    "dynamic functional connectivity",
+    "state-specific PCA",
+    "high-dimensional fMRI",
+    "covariance state estimation",
+    "joint dimensionality reduction",
+    "FC states"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "b55c1dd62fa31c267ee909b9cf00c931",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

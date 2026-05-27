@@ -1,0 +1,54 @@
+{
+  "frameworks": [
+    {
+      "name": "computational electric field modeling (SimNIBS)",
+      "role": "primary_lens",
+      "one_line": "Finite-element simulation of tES-induced electric fields in individual head models"
+    },
+    {
+      "name": "linear mixed-effects modeling",
+      "role": "primary_lens",
+      "one_line": "Statistical attribution of E-field variability to anatomical predictors"
+    }
+  ],
+  "core_question": "Which head and brain anatomical features drive inter-individual variability of tES-induced electric fields, and does their impact differ between young and older adults?",
+  "key_assumptions": [
+    "SimNIBS-modelled fields approximate true in-brain E-fields",
+    "Extra- and intra-cranial tissue volumes index anatomical variability",
+    "Conventional electrode montages are representative of tES practice"
+  ],
+  "manipulations": [
+    "Age group (young 20-35 vs older 64-79)",
+    "Six conventional electrode montages",
+    "Tissue compartment volumes (head, skin, skull, CSF, brain)"
+  ],
+  "key_findings": [
+    "Mixed models explained most inter-individual variability in overall E-field strength but not in focality",
+    "Higher head volume and relative skin, skull, and CSF volumes were associated with lower E-field strength",
+    "Age group interacted with head volume and CSF, with the volume-field relationship mitigated in older adults"
+  ],
+  "interpretations": [
+    "Global head anatomy is a major source of tES dose variability, and its influence is age-dependent",
+    "Anatomical variability contributes to inconsistent tES behavioral and neurophysiological outcomes"
+  ],
+  "limitations_noted": [
+    "Focality variance remained largely unexplained by the modeled anatomical predictors"
+  ],
+  "connecting_signals": [
+    "transcranial electrical stimulation",
+    "tES dose variability",
+    "SimNIBS electric field modeling",
+    "inter-individual variability",
+    "head and brain anatomy",
+    "cerebrospinal fluid volume",
+    "aging brain",
+    "electrode montage"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "ff8e2cc9008ca8ec4758b4b1dd8b11cb",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:27:43+09:00",
+  "review_status": "auto_unreviewed"
+}

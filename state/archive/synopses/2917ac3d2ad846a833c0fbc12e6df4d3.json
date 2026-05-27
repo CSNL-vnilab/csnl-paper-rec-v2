@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "Fisher information",
+      "role": "primary_lens",
+      "one_line": "Quantifies how precisely a stimulus can be estimated from neural activity."
+    },
+    {
+      "name": "mutual information / information theory",
+      "role": "primary_lens",
+      "one_line": "Information-theoretic measure linking neural activity and stimulus."
+    },
+    {
+      "name": "population coding",
+      "role": "primary_lens",
+      "one_line": "Stimulus represented by activity of a large array of tuned neurons."
+    },
+    {
+      "name": "parameter estimation and model selection",
+      "role": "context",
+      "one_line": "Setting in which the Fisher-information link was originally exhibited."
+    }
+  ],
+  "core_question": "How is the mutual information between a population's activity and a tuned stimulus related to Fisher information, and what does this imply for optimizing tuning curves?",
+  "key_assumptions": [
+    "Large array of neurons tuned to the stimulus",
+    "Stimulus represented by an angular variable",
+    "Standard information-theoretic framework applies"
+  ],
+  "manipulations": [
+    "Parameters of the tuning curves"
+  ],
+  "key_findings": [
+    "A direct link between Fisher information and information-theoretic quantities can be given a standard information-theoretic interpretation",
+    "For population coding, mutual information between population activity and stimulus is naturally related to Fisher information"
+  ],
+  "interpretations": [
+    "This relation provides a principled basis for optimizing tuning-curve parameters in neurons coding an angular stimulus"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "Fisher information",
+    "mutual information",
+    "population coding",
+    "tuning curves",
+    "angular stimulus",
+    "neural coding optimization",
+    "parameter estimation"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "2917ac3d2ad846a833c0fbc12e6df4d3",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:27:43+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "deep linear networks",
+      "role": "primary_lens",
+      "one_line": "Tractable linear connectionist model used to derive exact early-learning dynamics."
+    },
+    {
+      "name": "optimal constant solution (OCS)",
+      "role": "extended",
+      "one_line": "Input-independent label-marginal response identified as an early-learning attractor."
+    },
+    {
+      "name": "hierarchical category learning",
+      "role": "context",
+      "one_line": "Task framework used to probe both networks and human learners."
+    }
+  ],
+  "core_question": "Do deep networks and humans pass through an early phase of producing the optimal constant (input-independent label-marginal) solution before learning the target function?",
+  "key_assumptions": [
+    "Bias terms are present even when initialized to zero",
+    "Target label distribution is non-uniform and informative",
+    "Linear-network dynamics generalize qualitatively to nonlinear CNNs and humans"
+  ],
+  "manipulations": [
+    "Architecture: deep linear vs nonlinear CNN",
+    "Dataset: hierarchical MNIST and CIFAR10 category structures",
+    "Learner type: artificial network vs human across three days"
+  ],
+  "key_findings": [
+    "Early in training, network outputs mirror the target label distribution while ignoring inputs",
+    "Deep linear networks with bias provably converge first to the OCS",
+    "OCS hallmarks appear in nonlinear CNNs on hierarchical MNIST/CIFAR10",
+    "Human learners show the same early OCS signature in true-negative rate dynamics"
+  ],
+  "interpretations": [
+    "Early OCS reliance is a generic feature of gradient-based hierarchical learning",
+    "Shared learning signature suggests a common dynamical motif across networks and humans"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "optimal constant solution",
+    "early learning dynamics",
+    "deep linear networks",
+    "bias terms",
+    "hierarchical category learning",
+    "true negative rate dynamics",
+    "human category learning",
+    "label marginal"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "df7d89044748445e3b2408940744ce73",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:27:43+09:00",
+  "review_status": "auto_unreviewed"
+}

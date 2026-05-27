@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "default mode network",
+      "role": "primary_lens",
+      "one_line": "Network whose activation typically decreases during externally focused tasks"
+    },
+    {
+      "name": "internally-directed / self-referential cognition account",
+      "role": "compared_against",
+      "one_line": "Views DMN activity as reflecting inward, self-relevant thought"
+    },
+    {
+      "name": "context / scene representation account",
+      "role": "extended",
+      "one_line": "Proposes DMN integrates spatial, self-referential, and temporal information into context"
+    }
+  ],
+  "core_question": "What role does the default mode network play during cognitive transitions such as task switches and rests?",
+  "key_assumptions": [
+    "DMN activity is meaningfully reflected by fMRI BOLD changes",
+    "Task switches, rests, and restarts can be operationalized within one paradigm",
+    "DMN activity is dissociable from purely externally focused task engagement"
+  ],
+  "manipulations": [
+    "Task switch versus task maintenance trials",
+    "Brief rest periods inserted between task blocks",
+    "Task restarts following rest"
+  ],
+  "key_findings": [
+    "Replicated DMN task switch effects",
+    "Large DMN increases for brief rests",
+    "Large DMN increases for task restarts after rest"
+  ],
+  "interpretations": [
+    "DMN encodes scene, episode, or context by integrating spatial, self-referential, and temporal information",
+    "Context representations are strong at rest and re-engaged at major cognitive transitions"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "default mode network",
+    "task switching",
+    "cognitive transitions",
+    "rest periods fMRI",
+    "context representation",
+    "scene and episode encoding",
+    "self-referential processing",
+    "task restart"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "e0e71a1f26cbbaf0e618c5733041a351",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}
