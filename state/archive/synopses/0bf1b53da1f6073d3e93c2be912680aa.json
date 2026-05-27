@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "BOLD-fMRI hemodynamic response",
+      "role": "primary_lens",
+      "one_line": "Hemodynamic proxy of neural activity measured as a contrast response function"
+    },
+    {
+      "name": "MR spectroscopy of neurotransmitters",
+      "role": "primary_lens",
+      "one_line": "Single-voxel proton MRS quantifying glutamate and GABA concentrations in V1"
+    },
+    {
+      "name": "natural image statistics",
+      "role": "context",
+      "one_line": "Low-contrast prevalence in natural vision frames the observed neurochemical range"
+    }
+  ],
+  "core_question": "How do neurochemical (glutamate, GABA) and BOLD responses in human V1 scale with image contrast?",
+  "key_assumptions": [
+    "single-voxel MRS in V1 indexes local glutamate and GABA pools",
+    "BOLD contrast response indexes contrast-driven neural activity",
+    "block-design contrast presentations elicit measurable steady-state responses"
+  ],
+  "manipulations": [
+    "image contrast level (3%, 12.5%, 50%, 100%)",
+    "block presentation of stimuli during simultaneous BOLD-fMRI and MRS at 7T"
+  ],
+  "key_findings": [
+    "BOLD signal in V1 scaled linearly with image contrast",
+    "glutamate concentration scaled linearly with contrast but reached significance only at highest contrast",
+    "GABA concentration remained steady across all contrast levels"
+  ],
+  "interpretations": [
+    "neurochemical concentrations are maintained at lower contrast ranges matching natural-vision statistics",
+    "high stimulus intensity is critical to detect visually modulated glutamate via MRS"
+  ],
+  "limitations_noted": [
+    "glutamate change detectable only at the highest contrast suggests limited MRS sensitivity"
+  ],
+  "connecting_signals": [
+    "BOLD contrast response function",
+    "MR spectroscopy glutamate V1",
+    "GABA in primary visual cortex",
+    "7 tesla fMRI-MRS",
+    "neurotransmitter concentration and neural activity",
+    "natural image statistics and visual cortex",
+    "energy metabolism and neurotransmission"
+  ],
+  "abstract_coverage": 1.0,
+  "out_of_scope_note": null,
+  "canonical_id": "0bf1b53da1f6073d3e93c2be912680aa",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:02:35+09:00",
+  "review_status": "auto_unreviewed"
+}

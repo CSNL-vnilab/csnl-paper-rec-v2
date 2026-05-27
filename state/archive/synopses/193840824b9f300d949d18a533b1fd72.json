@@ -1,0 +1,62 @@
+{
+  "frameworks": [
+    {
+      "name": "dimensional models of affect",
+      "role": "primary_lens",
+      "one_line": "affective quality decomposed into multiple dimensions inferred from neural data"
+    },
+    {
+      "name": "valence-arousal 2D model",
+      "role": "compared_against",
+      "one_line": "classical two-dimensional account positing valence and arousal as sufficient"
+    },
+    {
+      "name": "positivity-negativity 2D model",
+      "role": "compared_against",
+      "one_line": "alternative two-dimensional account using bivariate positivity and negativity"
+    },
+    {
+      "name": "representational structure analysis (fMRI)",
+      "role": "extended",
+      "one_line": "neural representation used to adjudicate competing affective dimensionalities"
+    }
+  ],
+  "core_question": "What is the dimensional structure of affective representation in the brain, and is a 2D model sufficient?",
+  "key_assumptions": [
+    "affective experience can be described by a small set of dimensions",
+    "neural activity reflects an underlying affective representational structure",
+    "fMRI patterns can discriminate among candidate dimensional models"
+  ],
+  "manipulations": [
+    "candidate dimensionality of the affective space (2D vs 4D)",
+    "choice of dimensions (valence/arousal vs positivity/negativity vs all four)",
+    "mapping of affective dimensions onto brain regions"
+  ],
+  "key_findings": [
+    "a four-dimensional model is optimal for examining the affective data",
+    "valence is represented as a gradient along the fusiform gyrus",
+    "distinct bilateral amygdala sub-regions track arousal versus negativity"
+  ],
+  "interpretations": [
+    "the standard 2D affective models obscure structure revealed by a 4D analysis",
+    "anatomically organized neural codes support multiple affective dimensions jointly"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "affective representation",
+    "valence and arousal",
+    "positivity and negativity",
+    "fusiform gyrus gradient",
+    "amygdala subregions",
+    "dimensional model of emotion",
+    "fMRI representational structure",
+    "affective neuroscience"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "193840824b9f300d949d18a533b1fd72",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

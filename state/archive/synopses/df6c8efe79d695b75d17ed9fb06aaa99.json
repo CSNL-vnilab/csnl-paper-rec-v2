@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "noradrenergic modulation of memory encoding",
+      "role": "primary_lens",
+      "one_line": "locus coeruleus noradrenaline preferentially enhances encoding of salient negative events"
+    },
+    {
+      "name": "MRI neuromelanin imaging",
+      "role": "primary_lens",
+      "one_line": "neuromelanin MRI contrast indexes structural integrity of the locus coeruleus"
+    },
+    {
+      "name": "pupillometry as LC activation index",
+      "role": "alternative_lens",
+      "one_line": "pupil diameter used as putative readout of phasic LC activation"
+    }
+  ],
+  "core_question": "Does individual variation in locus coeruleus structural integrity in older adults relate to memory for emotionally salient events?",
+  "key_assumptions": [
+    "neuromelanin MRI contrast reflects LC structural integrity",
+    "pupil diameter indexes LC activation during encoding",
+    "noradrenergic modulation preferentially affects salient/aversive event encoding"
+  ],
+  "manipulations": [
+    "age group (younger vs older adults)",
+    "emotional salience / valence of encoded events (negative vs neutral)",
+    "incidental memory encoding task susceptible to noradrenergic modulation"
+  ],
+  "key_findings": [
+    "LC structural integrity varies considerably across healthy older adults",
+    "older adults with reduced LC integrity show poorer subsequent memory",
+    "the integrity-memory effect is more pronounced for emotionally negative events",
+    "salient stimuli elicited greater pupil dilation during encoding"
+  ],
+  "interpretations": [
+    "LC integrity selectively supports memory for salient negative events in aging via noradrenergic modulation",
+    "pupil dilation to salient stimuli is consistent with increased LC activation during encoding"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "locus coeruleus integrity",
+    "noradrenergic modulation",
+    "neuromelanin MRI",
+    "pupillometry",
+    "incidental memory encoding",
+    "emotional salience",
+    "aging and memory",
+    "individual differences in older adults"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "df6c8efe79d695b75d17ed9fb06aaa99",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:02:35+09:00",
+  "review_status": "auto_unreviewed"
+}

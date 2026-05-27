@@ -1,0 +1,64 @@
+{
+  "frameworks": [
+    {
+      "name": "lazy vs rich learning regime",
+      "role": "primary_lens",
+      "one_line": "neural networks trade off learning speed against robustness via random vs structured hidden representations"
+    },
+    {
+      "name": "deep neural network simulation",
+      "role": "primary_lens",
+      "one_line": "computational simulations define coding regimes for multitasking neural populations"
+    },
+    {
+      "name": "low-dimensional orthogonal manifold coding",
+      "role": "extended",
+      "one_line": "rich solution projects task representations onto orthogonal low-dimensional manifolds"
+    },
+    {
+      "name": "neural geometry of task representation",
+      "role": "context",
+      "one_line": "population coding geometry compared between artificial networks and biological brains"
+    }
+  ],
+  "core_question": "How do neural populations code for multiple, potentially conflicting tasks, and which coding regime do biological brains use?",
+  "key_assumptions": [
+    "lazy and rich learning are dissociable coding solutions to multitasking",
+    "random projections expand input dimensionality in lazy regime",
+    "rich learning privileges task-relevant over irrelevant features",
+    "neural geometry in brains can be compared to that in trained networks"
+  ],
+  "manipulations": [
+    "learning regime (lazy random projections vs rich structured representations)",
+    "context-dependent decision-making task structure",
+    "comparison across artificial networks, human behavior/neuroimaging, and macaque PFC"
+  ],
+  "key_findings": [
+    "lazy learning expands input via random projections to hidden layers",
+    "rich learning yields structured representations privileging relevant features",
+    "one rich solution projects task representations onto low-dimensional orthogonal manifolds",
+    "biological brain coding patterns match the rich learning regime in dimensionality and geometry"
+  ],
+  "interpretations": [
+    "biological brains favor rich coding solutions trading learning speed for robustness",
+    "neural geometry of task representations bridges artificial and biological multitasking"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "rich vs lazy learning",
+    "task representations",
+    "neural geometry",
+    "context-dependent decision-making",
+    "low-dimensional orthogonal manifolds",
+    "random projection coding",
+    "prefrontal cortex multitasking",
+    "neural network simulations"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "53edbe992996c6853729f09b4ed0ad2a",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

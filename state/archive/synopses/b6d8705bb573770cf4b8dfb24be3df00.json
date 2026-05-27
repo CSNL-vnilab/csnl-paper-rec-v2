@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "multivariate pattern analysis (MVPA)",
+      "role": "primary_lens",
+      "one_line": "decoding multivariate patterns from functional neuroimaging data"
+    },
+    {
+      "name": "inter-subject pattern analysis",
+      "role": "extended",
+      "one_line": "group-level decoding via leave-one-subject-out cross-validation"
+    },
+    {
+      "name": "hierarchical within-subject decoding",
+      "role": "compared_against",
+      "one_line": "standard two-step group MVPA combining within-subject results"
+    }
+  ],
+  "core_question": "How do hierarchical within-subject and inter-subject group-level MVPA schemes compare in sensitivity and interpretability?",
+  "key_assumptions": [
+    "multivariate effects are statistically detectable at group level",
+    "inter-individual variability can be modelled parametrically",
+    "leave-one-subject-out cross-validation yields valid group inference"
+  ],
+  "manipulations": [
+    "size of the multivariate effect in simulated data",
+    "amount of inter-individual variability in simulated data",
+    "decoding scheme (hierarchical vs inter-subject)",
+    "dataset type (artificial vs real fMRI, 15 and 39 subjects)"
+  ],
+  "key_findings": [
+    "the two schemes uncover distinct significant regions with only partial overlap",
+    "inter-subject pattern analysis detects smaller effects than the hierarchical scheme",
+    "inter-subject analysis facilitates interpretation of group-level results"
+  ],
+  "interpretations": [
+    "inter-subject pattern analysis is a straightforward and more powerful alternative for group-level MVPA"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "multivariate pattern analysis",
+    "MVPA",
+    "group-level decoding",
+    "inter-subject cross-validation",
+    "leave-one-subject-out",
+    "fMRI decoding",
+    "hierarchical decoding",
+    "inter-individual variability"
+  ],
+  "abstract_coverage": 1.0,
+  "out_of_scope_note": null,
+  "canonical_id": "b6d8705bb573770cf4b8dfb24be3df00",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:02:35+09:00",
+  "review_status": "auto_unreviewed"
+}

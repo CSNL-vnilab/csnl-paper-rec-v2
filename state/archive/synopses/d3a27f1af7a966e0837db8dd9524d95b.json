@@ -1,0 +1,59 @@
+{
+  "canonical_id": "d3a27f1af7a966e0837db8dd9524d95b",
+  "frameworks": [
+    {
+      "name": "mnemonic metacognition",
+      "role": "primary_lens",
+      "one_line": "evaluation of one's own memory performance as a measurable cognitive faculty"
+    },
+    {
+      "name": "virtual-lesion rTMS",
+      "role": "primary_lens",
+      "one_line": "inhibitory repetitive TMS as causal probe of precuneal function"
+    },
+    {
+      "name": "individual-differences neuroimaging",
+      "role": "extended",
+      "one_line": "anatomical and rs-fc profiles modulate susceptibility to TMS perturbation"
+    }
+  ],
+  "core_question": "How do TMS-induced neuromodulatory effects on precuneal metamemory relate to neural correlates and individual anatomical profiles?",
+  "key_assumptions": [
+    "precuneus causally supports metamemory upon recollection",
+    "individual MRI neuro-profiles index TMS susceptibility",
+    "vertex stimulation is an adequate control site",
+    "BOLD magnitude indexes underlying metamemory computation"
+  ],
+  "manipulations": [
+    "rTMS site (precuneus vs vertex)",
+    "task domain (memory vs perceptual)",
+    "individual neuro-profiles (rs-fc, grey matter volume, task-fMRI)"
+  ],
+  "key_findings": [
+    "precuneal BOLD magnitude correlates with individual metamemory efficiency",
+    "precuneal TMS significantly diminishes that BOLD-metamemory correlation",
+    "higher precuneus-hippocampus rs-fc predicts greater TMS vulnerability",
+    "smaller grey matter volume in stimulated precuneus predicts greater TMS vulnerability"
+  ],
+  "interpretations": [
+    "precuneal contribution to metamemory is causally affirmed and individually graded",
+    "effect is memory-domain specific, not generic to perceptual judgements"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "metamemory",
+    "precuneus",
+    "repetitive TMS",
+    "virtual lesion",
+    "resting-state functional connectivity",
+    "individual differences",
+    "grey matter volume",
+    "memory versus perceptual task"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:02:35+09:00",
+  "review_status": "auto_unreviewed"
+}
