@@ -1,0 +1,64 @@
+{
+  "frameworks": [
+    {
+      "name": "meta-reinforcement learning",
+      "role": "primary_lens",
+      "one_line": "repeated reversals shift value computation from plasticity-based to dynamics-based inference"
+    },
+    {
+      "name": "synaptic-plasticity-based value learning",
+      "role": "compared_against",
+      "one_line": "incremental value updating via BLA synaptic plasticity under stable contingencies"
+    },
+    {
+      "name": "recurrent neural network model",
+      "role": "extended",
+      "one_line": "RNNs with continuous weight updates recapitulate plasticity-to-dynamics transition"
+    },
+    {
+      "name": "latent task structure inference",
+      "role": "alternative_lens",
+      "one_line": "value inferred from latent contextual structure rather than incrementally accumulated"
+    }
+  ],
+  "core_question": "How does the brain implement and transition between incremental and inference-based modes of value computation?",
+  "key_assumptions": [
+    "value can be updated either incrementally or by inference over latent structure",
+    "basolateral amygdala participates in value computation",
+    "training regime selects which value-computation mode dominates"
+  ],
+  "manipulations": [
+    "stable vs. dynamically reversing odor-outcome contingencies",
+    "disruption of BLA activity before cue delivery",
+    "training RNNs with continuous weight updates",
+    "exposure to distinct correlation structures"
+  ],
+  "key_findings": [
+    "stable training yields BLA-plasticity-dependent long-term value representations",
+    "repeated reversals enable BLA-plasticity-independent value inference with faster learning but rapid decay",
+    "BLA neurons encode value and contextual information for latent-structure-based value",
+    "pre-cue BLA disruption preferentially impairs dynamics-based value updating"
+  ],
+  "interpretations": [
+    "experience with volatility shifts value computation from plasticity-based to dynamics-based mode",
+    "structure-specific value inference can be learned across distinct correlation regimes"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "reversal learning",
+    "meta-reinforcement learning",
+    "basolateral amygdala",
+    "value inference",
+    "latent task structure",
+    "recurrent neural network",
+    "synaptic plasticity",
+    "context-dependent value"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "b9f6261052917b86fe4b48da43e96ba6",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

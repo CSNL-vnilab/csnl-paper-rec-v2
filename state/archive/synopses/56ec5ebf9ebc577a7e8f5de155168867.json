@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "inverse rational control (IRC)",
+      "role": "primary_lens",
+      "one_line": "Infer an agent's internal model and reward by assuming rational action selection."
+    },
+    {
+      "name": "partially observable Markov decision process",
+      "role": "extended",
+      "one_line": "Latent task variables evolve as Markovian dynamics underlying behavior."
+    },
+    {
+      "name": "rational agent / subjective expected utility",
+      "role": "primary_lens",
+      "one_line": "Agent maximizes subjective reward given its understanding of task causal structure."
+    }
+  ],
+  "core_question": "How can behavior and neural activity reveal an agent's internal model and its dynamic latent variables?",
+  "key_assumptions": [
+    "Agent behaves rationally under its own (possibly wrong) task model",
+    "Subjective reward and beliefs together determine action selection",
+    "Relevant task variables follow Markovian dynamics"
+  ],
+  "manipulations": [
+    "Simulated agents performing a naturalistic foraging task",
+    "Agents act suboptimally relative to the true task"
+  ],
+  "key_findings": [
+    "IRC recovers the simulated agents' internal model and reward function from behavior",
+    "Method extracts interpretable latent thoughts driving action",
+    "Markovian computational dynamics within the neural manifold representing task variables are recovered"
+  ],
+  "interpretations": [
+    "Behavior plus neural activity can be jointly explained by a rational agent with a learnable internal model",
+    "Encoding, recoding, and decoding of neural data can be framed relative to this rational behavioral model"
+  ],
+  "limitations_noted": [
+    "Demonstration is on simulated agents rather than empirical neural recordings"
+  ],
+  "connecting_signals": [
+    "inverse rational control",
+    "internal model inference",
+    "latent dynamic variables",
+    "naturalistic foraging task",
+    "subjective reward function",
+    "neural manifold dynamics",
+    "Markovian latent state",
+    "rational agent modeling"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "56ec5ebf9ebc577a7e8f5de155168867",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:15:11+09:00",
+  "review_status": "auto_unreviewed"
+}

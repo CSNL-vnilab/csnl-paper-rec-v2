@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "vector-based navigation",
+      "role": "primary_lens",
+      "one_line": "navigation uses directional vectors between distal landmarks to guide goal-reaching"
+    },
+    {
+      "name": "transition-based navigation",
+      "role": "primary_lens",
+      "one_line": "navigation uses learned associations between adjacent states to choose next moves"
+    },
+    {
+      "name": "deep reinforcement learning",
+      "role": "extended",
+      "one_line": "meta-trained deep RL agents serve as model of human navigation strategies"
+    },
+    {
+      "name": "mammalian navigational systems",
+      "role": "context",
+      "one_line": "spatial cells (e.g., place/grid/head-direction) provide neural reference for comparison"
+    }
+  ],
+  "core_question": "Which strategies do humans use to navigate wholly novel environments toward goals?",
+  "key_assumptions": [
+    "wayfinding combines landmark-vector memory with on-the-fly transition knowledge",
+    "deep RL agents meta-trained to find shortest paths can model human strategy use",
+    "strategy deployment varies systematically across stages of a journey"
+  ],
+  "manipulations": [
+    "navigation in wholly novel (unfamiliar) environments",
+    "varied position along the trajectory (stereotyped journey points)",
+    "comparison between humans and meta-trained deep RL agents"
+  ],
+  "key_findings": [
+    "people adaptively mix vector-based and transition-based strategies at stereotyped journey points",
+    "meta-trained deep RL agents exhibit near-identical strategy mixtures",
+    "RL networks develop units specialized for vector- vs transition-based computations",
+    "specialized units' response patterns resemble mammalian navigational system geometries"
+  ],
+  "interpretations": [
+    "goal-directed navigation in novel settings relies on an adaptive mixture of strategies",
+    "shared computational solutions emerge in brains and deep RL agents facing the same task"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "goal-directed navigation",
+    "novel environments",
+    "vector-based strategy",
+    "state transition strategy",
+    "deep reinforcement learning agents",
+    "meta-learning",
+    "representational geometry",
+    "navigational system units"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "8f01d00b1d37c53027b6a94052526750",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

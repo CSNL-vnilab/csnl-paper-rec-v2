@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "drift-diffusion model",
+      "role": "primary_lens",
+      "one_line": "Fits performance as a drift rate parameter varying across task conditions."
+    },
+    {
+      "name": "frontostriatal circuit motivation",
+      "role": "primary_lens",
+      "one_line": "Frontostriatal connectivity supports valence-oriented effort-cost computation."
+    },
+    {
+      "name": "effort cost computation",
+      "role": "context",
+      "one_line": "Framework for understanding motivational deficits in schizophrenia."
+    }
+  ],
+  "core_question": "Does frontostriatal connectivity during reward anticipation predict motivated performance differently in schizophrenia versus healthy controls?",
+  "key_assumptions": [
+    "Drift rate from DDM indexes motivated performance.",
+    "Cue-phase connectivity reflects anticipatory motivational processing.",
+    "Frontostriatal circuits implement valence-oriented motivation."
+  ],
+  "manipulations": [
+    "Valence condition (rewarded vs neutral).",
+    "Task difficulty (two levels).",
+    "Group (recent-onset schizophrenia vs healthy controls)."
+  ],
+  "key_findings": [
+    "Schizophrenia group showed deficit in drift rate.",
+    "No group difference in overall connectivity or valence-specific connectivity.",
+    "Group x valence x difficulty interaction on right dlPFC-striatal connectivity vs drift rate relationship.",
+    "HCs showed more positive connectivity-DR coupling in difficult-rewarded condition than SZ."
+  ],
+  "interpretations": [
+    "Frontostriatal connectivity is less predictive of performance in SZ when difficulty and reward are combined."
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "drift-diffusion model",
+    "frontostriatal connectivity",
+    "reward anticipation",
+    "effort cost computation",
+    "schizophrenia",
+    "dorsolateral prefrontal cortex",
+    "motivated performance",
+    "fMRI cue phase"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "b8b778873d7b8fa13e97455526b9e24b",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:15:11+09:00",
+  "review_status": "auto_unreviewed"
+}

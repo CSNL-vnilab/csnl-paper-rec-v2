@@ -1,0 +1,59 @@
+{
+  "frameworks": [
+    {
+      "name": "language-instructed deep RNN",
+      "role": "primary_lens",
+      "one_line": "recurrent neural network receives pretrained language embeddings to perform novel tasks"
+    },
+    {
+      "name": "compositional generalization",
+      "role": "extended",
+      "one_line": "shared geometry between language and sensorimotor activity enables zero-shot task composition"
+    },
+    {
+      "name": "pretrained language model embeddings",
+      "role": "context",
+      "one_line": "NLP-derived instruction representations scaffold task-relevant neural codes"
+    }
+  ],
+  "core_question": "How can a network of neurons interpret linguistic instructions to perform novel tasks without explicit task experience?",
+  "key_assumptions": [
+    "linguistic instructions can be embedded via a pretrained language model",
+    "sensorimotor task representations can be structured by language",
+    "shared geometry between semantic and motor codes supports generalization"
+  ],
+  "manipulations": [
+    "presence vs absence of linguistic instructions",
+    "training on a set of common psychophysical tasks",
+    "evaluation on previously unseen tasks (zero-shot)",
+    "communication between partner models via generated descriptions"
+  ],
+  "key_findings": [
+    "best models perform unseen tasks at 83% correct from instructions alone",
+    "language scaffolds sensorimotor activity into a geometry shared with semantic embeddings",
+    "model can generate a linguistic description of a novel task from motor feedback",
+    "the generated description can guide a partner model to perform the task"
+  ],
+  "interpretations": [
+    "language cues the proper composition of practiced skills in unseen settings",
+    "common geometry between instructions and sensorimotor activity supports compositional generalization"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "compositional generalization",
+    "zero-shot learning",
+    "linguistic instructions",
+    "sensorimotor representations",
+    "pretrained language model",
+    "neural network model of cognition",
+    "representational geometry",
+    "psychophysical tasks"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "93b6f3a1e9c0e4f1047cbbe0668e2db7",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

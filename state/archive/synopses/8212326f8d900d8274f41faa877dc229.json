@@ -1,0 +1,54 @@
+{
+  "frameworks": [
+    {
+      "name": "Bayesian inference",
+      "role": "primary_lens",
+      "one_line": "normative framework for decision-making under uncertainty in the brain"
+    },
+    {
+      "name": "modular neural implementation",
+      "role": "extended",
+      "one_line": "probabilistic components independently encoded across neural substrates"
+    },
+    {
+      "name": "transform neural implementation",
+      "role": "extended",
+      "one_line": "uncertain measurements converted to Bayesian estimates via latent processes"
+    }
+  ],
+  "core_question": "How does the brain neurally implement Bayesian inference?",
+  "key_assumptions": [
+    "organisms make decisions under uncertainty following normative Bayesian theories",
+    "neural implementations can be taxonomized by how probabilistic components are represented"
+  ],
+  "manipulations": [],
+  "key_findings": [
+    "recent experiments reveal disparate neural mechanisms producing Bayesian-predicted behavior",
+    "implementations cluster into modular vs transform classes",
+    "many recent probabilistic inference findings fall into these two classes"
+  ],
+  "interpretations": [
+    "distinguishing among implementation hypotheses requires joint theory-experiment work across scales, circuits, tasks, and species",
+    "some disparities between the two classes cannot presently be reconciled"
+  ],
+  "limitations_noted": [
+    "current disparities across implementations cannot yet be reconciled"
+  ],
+  "connecting_signals": [
+    "Bayesian inference",
+    "neural implementation",
+    "probabilistic computation",
+    "decision under uncertainty",
+    "modular encoding",
+    "latent transform",
+    "normative theory",
+    "circuit-level computation"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "8212326f8d900d8274f41faa877dc229",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:15:11+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "hierarchical Bayesian inference",
+      "role": "primary_lens",
+      "one_line": "visual cortex implements probabilistic inference along its hierarchy"
+    },
+    {
+      "name": "particle filtering",
+      "role": "extended",
+      "one_line": "proposed algorithm for cortical interactive computation"
+    },
+    {
+      "name": "Bayesian belief propagation",
+      "role": "extended",
+      "one_line": "proposed algorithm for integrating top-down priors with bottom-up evidence"
+    },
+    {
+      "name": "feedforward static filter view",
+      "role": "compared_against",
+      "one_line": "traditional view of V1/V2 as static spatiotemporal feature extractors"
+    }
+  ],
+  "core_question": "How can recurrent feedforward/feedback loops across visual cortical areas be understood as a probabilistic inference machine?",
+  "key_assumptions": [
+    "cortex integrates top-down contextual priors with bottom-up observations",
+    "long-latency neural responses reflect interactive rather than purely feedforward processing",
+    "visual processing is hierarchically organized across cortical areas"
+  ],
+  "manipulations": [],
+  "key_findings": [
+    "early visual neurons exhibit long-latency responses indicating multi-level information processing",
+    "V1/V2 activity is tightly coupled with higher visual areas rather than purely feedforward"
+  ],
+  "interpretations": [
+    "recurrent cortical loops implement concurrent probabilistic inference along the visual hierarchy",
+    "particle filtering and belief propagation are plausible algorithmic models of these computations"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "hierarchical Bayesian inference",
+    "top-down feedback",
+    "recurrent cortical loops",
+    "particle filtering",
+    "belief propagation",
+    "V1 long-latency responses",
+    "contextual priors",
+    "probabilistic inference in cortex"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "a7711cfda481bafa703de034537c01ff",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:15:11+09:00",
+  "review_status": "auto_unreviewed"
+}
