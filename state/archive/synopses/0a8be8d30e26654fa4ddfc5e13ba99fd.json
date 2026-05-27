@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "successor representation",
+      "role": "primary_lens",
+      "one_line": "temporally abstracted predictive map of future state occupancies guiding choice evaluation"
+    },
+    {
+      "name": "model-based mental simulation",
+      "role": "compared_against",
+      "one_line": "step-by-step trajectory rollout as an alternative to cached predictive summaries"
+    },
+    {
+      "name": "predictive neural representations",
+      "role": "extended",
+      "one_line": "sensory-cortical decoding of upcoming states linked to SR-specific expectancy errors"
+    }
+  ],
+  "core_question": "Do predictive neural representations during choice evaluation support choices in a manner consistent with the successor representation?",
+  "key_assumptions": [
+    "the brain caches multi-step action consequences rather than simulating each step",
+    "SR predicts specific erroneous multi-step expectancies in suitable tasks",
+    "sensory cortex carries decodable representations of predicted upcoming states"
+  ],
+  "manipulations": [
+    "multi-step task structure designed so SR implies specific expectancy errors",
+    "choice-evaluation epochs analyzed during fMRI",
+    "decoding of state predictions from sensory cortex"
+  ],
+  "key_findings": [
+    "behavioral slips of action consistent with SR-predicted errors are observed",
+    "predictive sensory-cortical representations of upcoming states accompany those errors",
+    "decoded neural predictions match SR-implied erroneous multi-step expectancies"
+  ],
+  "interpretations": [
+    "predictive neural representations support choice evaluation in an SR-consistent way",
+    "temporal abstraction via cached successors underlies multi-step value computation"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "successor representation",
+    "choice evaluation",
+    "multi-step decision making",
+    "temporal abstraction",
+    "predictive representations",
+    "slips of action",
+    "sensory cortex decoding",
+    "model-based reinforcement learning"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "0a8be8d30e26654fa4ddfc5e13ba99fd",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}

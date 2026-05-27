@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "model-based planning",
+      "role": "primary_lens",
+      "one_line": "agents use internal transition models to plan sequential actions"
+    },
+    {
+      "name": "state abstraction",
+      "role": "extended",
+      "one_line": "filtering task-irrelevant features yields a shared low-dimensional transition model"
+    },
+    {
+      "name": "reinforcement learning (positive/negative outcome asymmetry)",
+      "role": "context",
+      "one_line": "transition updates depend on outcome valence"
+    }
+  ],
+  "core_question": "How does the human medial temporal lobe represent state-transition models when input features may or may not matter for the task?",
+  "key_assumptions": [
+    "planning requires an internal model of state transitions",
+    "irrelevant input features can be filtered to reduce dimensionality",
+    "BOLD multivariate patterns index the underlying transition representation"
+  ],
+  "manipulations": [
+    "task contexts in which visual input features were either relevant or irrelevant to transition structure",
+    "trials varying input features while holding state associations constant"
+  ],
+  "key_findings": [
+    "participants switched between low-dimensional (cue-independent) and high-dimensional (cue-specific) transition representations",
+    "medial temporal lobe BOLD patterns tracked learned state transitions",
+    "MTL pattern similarity across differing input features was lower in the high-dimensional than the low-dimensional case",
+    "transition models updated more after positive than negative outcomes"
+  ],
+  "interpretations": [
+    "MTL flexibly switches between shared and separable transition models according to task demands",
+    "model updating is asymmetric with respect to outcome valence"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "model-based planning",
+    "state transition learning",
+    "medial temporal lobe",
+    "state abstraction",
+    "shared transition model",
+    "multivariate fMRI patterns",
+    "sequential decision-making",
+    "outcome valence asymmetry"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "1923ef0d77e8ac2ba38e1e97a24231ef",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,56 @@
+{
+  "frameworks": [
+    {
+      "name": "ground-truth validation framework",
+      "role": "primary_lens",
+      "one_line": "synthesizing data from known parameters to test whether software recovers them"
+    },
+    {
+      "name": "population receptive field modeling",
+      "role": "extended",
+      "one_line": "pRF fMRI analysis used as the case-study domain for the framework"
+    },
+    {
+      "name": "computational reproducibility",
+      "role": "compared_against",
+      "one_line": "same-input-same-output guarantees do not ensure scientific correctness"
+    }
+  ],
+  "core_question": "How can neuroimaging software implementations be validated against ground truth rather than only checked for reproducibility?",
+  "key_assumptions": [
+    "ground-truth synthetic data can be generated from known pRF parameters",
+    "computational reproducibility is distinct from computational validity",
+    "comparing multiple implementations on shared inputs reveals errors"
+  ],
+  "manipulations": [
+    "synthesis of fMRI time series from prescribed pRF parameters",
+    "running four public pRF tools on standardized inputs",
+    "varying realistic acquisition and stimulus conditions"
+  ],
+  "key_findings": [
+    "framework standardizes inputs/outputs across four pRF implementations",
+    "automated reports compare recovered parameters to the ground truth",
+    "realistic conditions cause imperfect parameter recovery in all four tools"
+  ],
+  "interpretations": [
+    "ground-truth synthesis exposes failure modes invisible to classic validation",
+    "shared validation frameworks are needed for trustworthy neuroimaging software"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "population receptive field",
+    "fMRI analysis software validation",
+    "ground-truth synthetic data",
+    "parameter recovery",
+    "computational reproducibility vs validity",
+    "pRF implementation comparison",
+    "neuroimaging benchmarking"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "9fb0f75107e6b00dd406fed8048238b3",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}

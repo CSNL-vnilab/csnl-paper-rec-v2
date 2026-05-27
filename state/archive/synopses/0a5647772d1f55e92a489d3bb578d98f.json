@@ -1,0 +1,64 @@
+{
+  "frameworks": [
+    {
+      "name": "neuromodulatory gain control",
+      "role": "compared_against",
+      "one_line": "prior view that catecholamines and acetylcholine share similar single-neuron gain effects"
+    },
+    {
+      "name": "large-scale cortical interaction analysis",
+      "role": "primary_lens",
+      "one_line": "dissociates neuromodulator effects at the level of cortex-wide between-area interactions"
+    },
+    {
+      "name": "excitation-inhibition balance circuit model",
+      "role": "extended",
+      "one_line": "circuit model linking E/I balance and intracortical transmission to interaction changes"
+    },
+    {
+      "name": "decision-making noise model",
+      "role": "alternative_lens",
+      "one_line": "links catecholaminergic E/I shift to increased choice variability"
+    }
+  ],
+  "core_question": "Do catecholamines and acetylcholine play distinct roles in shaping cortex-wide interactions and behavioral variability despite similar single-neuron gain effects?",
+  "key_assumptions": [
+    "single-neuron gain effects do not fully capture neuromodulator function",
+    "cortex-wide interactions reflect circuit properties beyond local response gain",
+    "circuit modeling can map population-level changes to E/I and transmission parameters"
+  ],
+  "manipulations": [
+    "pharmacological boost of catecholamine levels",
+    "pharmacological boost of acetylcholine levels",
+    "behavioral state (visual task vs rest)",
+    "perceptual vs value-based choice task"
+  ],
+  "key_findings": [
+    "catecholamine boost increased cortex-wide interactions during task but not rest",
+    "acetylcholine boost decreased cortex-wide interactions during rest but not task",
+    "circuit model attributes dissociation to differential E/I balance vs intracortical transmission changes",
+    "catecholaminergic mechanism predicted and produced noisier perceptual and value-based decisions"
+  ],
+  "interpretations": [
+    "catecholamines and acetylcholine have a double dissociation in modulating cortical interactions",
+    "altered E/I balance under catecholamines causally links to behavioral variability"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "catecholamines",
+    "acetylcholine",
+    "neuromodulation",
+    "cortex-wide interactions",
+    "excitation-inhibition balance",
+    "intracortical transmission",
+    "behavioral variability",
+    "decision-making noise"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "0a5647772d1f55e92a489d3bb578d98f",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:05:00+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,62 @@
+{
+  "frameworks": [
+    {
+      "name": "corticostriatal loops",
+      "role": "primary_lens",
+      "one_line": "recursive cortex-basal ganglia circuits balance detail acquisition and generalization in category learning"
+    },
+    {
+      "name": "reward-gated plasticity (basal ganglia) vs reward-shaded plasticity (cortex)",
+      "role": "extended",
+      "one_line": "dual-timescale plasticity scheme where fast striatal and slow cortical learning bootstrap each other"
+    },
+    {
+      "name": "basal ganglia vs medial temporal lobe systems",
+      "role": "alternative_lens",
+      "one_line": "two memory systems that interact competitively or cooperatively depending on task demands"
+    },
+    {
+      "name": "midbrain dopaminergic reinforcement learning",
+      "role": "context",
+      "one_line": "dopamine reward signals gate striatal plasticity during category acquisition"
+    }
+  ],
+  "core_question": "How do distributed neural systems interact to support category learning in the brain?",
+  "key_assumptions": [
+    "categorization is supported by plasticity across multiple neural systems",
+    "fast and slow plasticity coexist in different brain regions",
+    "task demands modulate which memory system dominates"
+  ],
+  "manipulations": [
+    "review across category-learning paradigms varying in feedback and task structure",
+    "comparison across novice versus skilled performance stages"
+  ],
+  "key_findings": [
+    "many systems (neocortex, MTL, basal ganglia, midbrain dopamine) show plasticity during category learning",
+    "basal ganglia and MTL interact competitively or cooperatively depending on task demands",
+    "corticostriatal loops integrate perceptual, response, and feedback aspects of the task",
+    "interactions mediate the shift from novice to skilled performance"
+  ],
+  "interpretations": [
+    "recursive striatum-cortex bootstrapping balances acquisition of detail with generalization",
+    "category learning emerges from coordinated multi-system plasticity, not a single locus"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "category learning",
+    "corticostriatal loops",
+    "basal ganglia plasticity",
+    "medial temporal lobe",
+    "reward-gated learning",
+    "dopaminergic plasticity",
+    "novice-to-skilled transition",
+    "multiple memory systems"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "764eee01460926c739db06bd9b574673",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}

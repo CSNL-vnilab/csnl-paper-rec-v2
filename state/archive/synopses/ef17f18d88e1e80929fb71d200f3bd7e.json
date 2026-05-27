@@ -1,0 +1,61 @@
+{
+  "frameworks": [
+    {
+      "name": "representational drift",
+      "role": "primary_lens",
+      "one_line": "sensory neural representations change systematically across time"
+    },
+    {
+      "name": "image-computable encoding model",
+      "role": "extended",
+      "one_line": "voxelwise model fit per session to track cross-session generalization"
+    },
+    {
+      "name": "representational dissimilarity analysis",
+      "role": "alternative_lens",
+      "one_line": "population-level stimulus geometry tested for stability across sessions"
+    },
+    {
+      "name": "stable downstream read-out hypothesis",
+      "role": "context",
+      "one_line": "downstream areas may read stable code despite V1 drift"
+    }
+  ],
+  "core_question": "Do stimulus representations in human primary visual cortex remain stable across months, or do they drift?",
+  "key_assumptions": [
+    "fMRI responses to natural scenes index V1 stimulus representation",
+    "encoding-model fits generalize across sessions if representations are stable",
+    "longitudinal within-subject design isolates drift from inter-subject variance"
+  ],
+  "manipulations": [
+    "session separation (across many months within subject)",
+    "natural-scene image identity across repeated viewings"
+  ],
+  "key_findings": [
+    "encoding-model cross-session generalization degraded cumulatively with time",
+    "neural responsivity changes were the source of the drift",
+    "population-level representational dissimilarities between stimuli were unchanged"
+  ],
+  "interpretations": [
+    "human V1 exhibits drift even though rodent-like stable code was expected",
+    "downstream cortex may read out a stable representation despite drifting V1 responses"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "representational drift",
+    "human V1",
+    "longitudinal fMRI",
+    "natural scenes",
+    "image-computable encoding model",
+    "representational dissimilarity",
+    "neural responsivity",
+    "stable read-out"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "ef17f18d88e1e80929fb71d200f3bd7e",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:18:57+09:00",
+  "review_status": "auto_unreviewed"
+}
