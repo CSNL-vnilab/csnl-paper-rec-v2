@@ -1,0 +1,52 @@
+{
+  "frameworks": [
+    {
+      "name": "visual cortical hierarchy",
+      "role": "primary_lens",
+      "one_line": "Onset latencies should increase along the ventral/dorsal processing hierarchy."
+    },
+    {
+      "name": "fast dorsal-stream routing",
+      "role": "alternative_lens",
+      "one_line": "Parietal cortex may receive visual input via shortcut pathways bypassing strict hierarchy."
+    }
+  ],
+  "core_question": "How early do human posterior parietal regions respond to visual stimuli relative to peristriate visual cortex?",
+  "key_assumptions": [
+    "ECoG onset latencies index local cortical processing",
+    "fMRI-defined visual area boundaries are valid landmarks for ECoG electrodes",
+    "Bootstrapped baseline thresholds yield reliable onset estimates"
+  ],
+  "manipulations": [
+    "Object category of presented images (excluding targets)",
+    "Electrode location across posterior cortical visual and parietal areas"
+  ],
+  "key_findings": [
+    "Onset latencies broadly followed the canonical visual hierarchy",
+    "A focal site on the posterior intraparietal sulcus responded around 60 ms",
+    "IPS onset was nearly simultaneous with peristriate visual responses"
+  ],
+  "interpretations": [
+    "Human posterior parietal cortex can engage as early as peristriate cortex, challenging strict feedforward timing"
+  ],
+  "limitations_noted": [
+    "Single epilepsy patient with right-hemisphere coverage only"
+  ],
+  "connecting_signals": [
+    "electrocorticography",
+    "visual onset latency",
+    "intraparietal sulcus",
+    "posterior parietal cortex",
+    "visual hierarchy timing",
+    "peristriate cortex",
+    "event-related potentials",
+    "dorsal stream"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "de8731b4962b7620c48c123df8c13faa",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:25:27+09:00",
+  "review_status": "auto_unreviewed"
+}

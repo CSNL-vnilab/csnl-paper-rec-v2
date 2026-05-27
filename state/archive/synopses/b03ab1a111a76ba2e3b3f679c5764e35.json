@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "tDCS-induced neuroplasticity",
+      "role": "primary_lens",
+      "one_line": "polarity- and dose-dependent modulation of cortical excitability and activity"
+    },
+    {
+      "name": "neurovascular coupling",
+      "role": "alternative_lens",
+      "one_line": "CBF perfusion as proxy for stimulation-induced cortical activity"
+    },
+    {
+      "name": "finite element electric field modeling",
+      "role": "context",
+      "one_line": "simulated field predicts spatial pattern of perfusion change"
+    }
+  ],
+  "core_question": "How do tDCS polarity and intensity over M1 jointly modulate cerebral blood flow, and do these changes track TMS-indexed cortical excitability?",
+  "key_assumptions": [
+    "ASL-derived CBF indexes stimulation-driven cortical activity",
+    "TMS-evoked excitability and fMRI perfusion share a physiological basis",
+    "fixed 15-min M1 montage produces measurable aftereffects across intensities"
+  ],
+  "manipulations": [
+    "tDCS polarity (anodal vs cathodal vs sham)",
+    "tDCS intensity (0.5, 1.0, 1.5, 2.0 mA)",
+    "within-subject repeated-measures session design"
+  ],
+  "key_findings": [
+    "anodal M1 tDCS linearly increased CBF under the electrode (max 15.3% at 2.0 mA)",
+    "cathodal M1 tDCS decreased left M1 CBF from baseline across intensities",
+    "spatial distribution of perfusion change correlated with simulated electric field",
+    "TMS-indexed excitability changes correlated more with sensorimotor than hand-knob perfusion"
+  ],
+  "interpretations": [
+    "tDCS aftereffects on CBF are polarity- and intensity-dependent and field-localized",
+    "excitability and perfusion indices reflect related but spatially dissociable mechanisms"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "transcranial direct current stimulation",
+    "cerebral blood flow",
+    "arterial spin labeling",
+    "primary motor cortex",
+    "cortical excitability",
+    "polarity-dependent aftereffects",
+    "finite element electric field modeling",
+    "neurovascular coupling"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "b03ab1a111a76ba2e3b3f679c5764e35",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:25:27+09:00",
+  "review_status": "auto_unreviewed"
+}

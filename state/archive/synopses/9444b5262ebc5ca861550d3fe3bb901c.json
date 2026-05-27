@@ -1,0 +1,64 @@
+{
+  "frameworks": [
+    {
+      "name": "neural decoding",
+      "role": "primary_lens",
+      "one_line": "inferring decoding weights of brain areas from population activity"
+    },
+    {
+      "name": "choice probability / neuron-behaviour correlation",
+      "role": "extended",
+      "one_line": "extended to jointly account for inactivation effects"
+    },
+    {
+      "name": "causal inactivation",
+      "role": "compared_against",
+      "one_line": "perturbation-based inference of functional role"
+    },
+    {
+      "name": "interneuronal noise correlations",
+      "role": "context",
+      "one_line": "correlation structure shapes which decoder is consistent"
+    }
+  ],
+  "core_question": "Can decoding weights across multiple correlated neural populations be inferred without precise knowledge of the correlation structure?",
+  "key_assumptions": [
+    "choice-related activity and inactivation effects share a common decoding model",
+    "noise correlations exist between populations but need not be measured precisely",
+    "behaviour reflects a linear readout of population responses"
+  ],
+  "manipulations": [
+    "combining choice-correlation data with inactivation outcomes",
+    "varying assumed structure of correlated noise across scenarios",
+    "applying inference to two different cortical areas during heading discrimination"
+  ],
+  "key_findings": [
+    "decoding weights can be inferred without measuring the full correlation matrix",
+    "two opposing decoding schemes are both consistent with the macaque data",
+    "which scheme holds depends on the nature of correlated noise"
+  ],
+  "interpretations": [
+    "choice-only theories cannot reconcile correlation and causal results without additional constraints",
+    "combining correlation and perturbation data yields testable predictions distinguishing decoding schemes"
+  ],
+  "limitations_noted": [
+    "scheme identification still requires future experiments to disambiguate the correlated-noise scenario"
+  ],
+  "connecting_signals": [
+    "decoding weights",
+    "choice probability",
+    "neuron-behaviour correlation",
+    "causal inactivation",
+    "interneuronal noise correlations",
+    "heading discrimination",
+    "macaque cortex",
+    "population coding"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "9444b5262ebc5ca861550d3fe3bb901c",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:25:27+09:00",
+  "review_status": "auto_unreviewed"
+}

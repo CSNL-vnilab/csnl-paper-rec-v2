@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "Bayesian decision theory",
+      "role": "primary_lens",
+      "one_line": "Mathematical framework for ideal performance benchmarks in visuomotor tasks."
+    },
+    {
+      "name": "process model of visuomotor processing",
+      "role": "extended",
+      "one_line": "Question whether BDT also describes the mechanism, not just the benchmark."
+    },
+    {
+      "name": "cue combination",
+      "role": "alternative_lens",
+      "one_line": "Near-optimal cue combination achievable via process unlike BDT."
+    }
+  ],
+  "core_question": "What experimental criteria meaningfully test whether visuomotor perception is itself Bayesian inference, rather than merely approximating its benchmark?",
+  "key_assumptions": [
+    "Ideal performance in visuomotor tasks is computable from BDT.",
+    "A model can match near-optimal performance without resembling BDT.",
+    "Claims of BDT as process model require stronger criteria than fit to ideal."
+  ],
+  "manipulations": [
+    "Conceptual comparison of human performance to BDT-ideal benchmark.",
+    "Proposed transfer between novel tasks in familiar environments and familiar tasks in novel environments."
+  ],
+  "key_findings": [
+    "Near-optimal cue-combination performance can arise from a process model bearing little resemblance to BDT.",
+    "Comparison to ideal performance, while necessary, is a weak experimental test of BDT-as-process.",
+    "Recent motor-control work can be reinterpreted as tests of BDT transfer properties."
+  ],
+  "interpretations": [
+    "Transfer criteria operationalize what it means to claim perception is Bayesian inference.",
+    "Transfer is especially relevant for natural scenes and rapid adaptation across novel task-environment pairings."
+  ],
+  "limitations_noted": [
+    "Transfer criteria are described as only the beginning of an operationalization."
+  ],
+  "connecting_signals": [
+    "Bayesian decision theory",
+    "process model vs ideal observer",
+    "visuomotor task performance",
+    "cue combination",
+    "transfer criteria",
+    "near-optimal performance",
+    "motor control",
+    "natural scenes adaptation"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "4b82f3b84bbac1ba48aa65a070dbd7ef",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:25:27+09:00",
+  "review_status": "auto_unreviewed"
+}

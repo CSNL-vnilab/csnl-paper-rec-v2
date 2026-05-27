@@ -1,0 +1,67 @@
+{
+  "frameworks": [
+    {
+      "name": "drift-diffusion model",
+      "role": "primary_lens",
+      "one_line": "Accumulator with collapsing boundaries cast as optimal value-based decision policy."
+    },
+    {
+      "name": "normative / optimal decision theory",
+      "role": "primary_lens",
+      "one_line": "Derives the reward-maximising stopping rule given prior over reward contingencies."
+    },
+    {
+      "name": "perceptual decision-making (signal accumulation)",
+      "role": "compared_against",
+      "one_line": "Long-standing analogue whose normative status is here extended to value."
+    },
+    {
+      "name": "expected-utility theory (non-linear utility)",
+      "role": "alternative_lens",
+      "one_line": "Relaxing linear-utility assumption breaks the optimality of diffusion."
+    }
+  ],
+  "core_question": "Why do drift-diffusion-like dynamics describe value-based decisions, and under what assumptions are they actually optimal?",
+  "key_assumptions": [
+    "agent has a priori knowledge of reward contingencies",
+    "utility is linear in reward",
+    "evidence about value accumulates as a diffusion process",
+    "decision is made when accumulated evidence crosses a boundary"
+  ],
+  "manipulations": [
+    "task assumptions varied (linear vs non-linear utility)",
+    "shape of decision boundary (constant vs time-collapsing)",
+    "prior over reward contingencies"
+  ],
+  "key_findings": [
+    "diffusion models implement the optimal value-based decision strategy under stated assumptions",
+    "optimality requires decision boundaries that collapse over time",
+    "optimal boundaries depend on prior over reward contingencies",
+    "diffusion ceases to be optimal once linear-utility assumption is relaxed"
+  ],
+  "interpretations": [
+    "shared diffusion-like dynamics across perceptual and value-based decisions reflect a common normative principle, not coincidence",
+    "framework predicts specific regimes (e.g. non-linear utility) where value and perceptual decisions should diverge"
+  ],
+  "limitations_noted": [
+    "optimality holds only under specific task assumptions",
+    "non-linear utility functions undermine the optimal-diffusion result"
+  ],
+  "connecting_signals": [
+    "value-based decision-making",
+    "drift-diffusion model",
+    "optimal stopping policy",
+    "collapsing decision boundary",
+    "reward contingency prior",
+    "non-linear utility",
+    "perceptual vs value-based decisions",
+    "normative decision theory"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "d2b28301c3731ed7d884a791f1990596",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:25:27+09:00",
+  "review_status": "auto_unreviewed"
+}

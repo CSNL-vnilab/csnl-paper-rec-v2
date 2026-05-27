@@ -1,0 +1,56 @@
+{
+  "frameworks": [
+    {
+      "name": "hybrid neural-cognitive model",
+      "role": "primary_lens",
+      "one_line": "RL algorithms combined with artificial neural networks to fit choice behavior"
+    },
+    {
+      "name": "incremental reinforcement learning",
+      "role": "compared_against",
+      "one_line": "standard account assuming choices depend on incrementally updated summary variables"
+    },
+    {
+      "name": "flexible memory system",
+      "role": "extended",
+      "one_line": "memory that encodes rich past-event representations over multiple timescales"
+    }
+  ],
+  "core_question": "Can human reward-guided learning be explained by purely incremental reinforcement learning, or does it require richer memory representations?",
+  "key_assumptions": [
+    "choices reflect learned value variables",
+    "neural-network components can capture residual structure beyond RL summary variables",
+    "behavior on probabilistic reward tasks indexes underlying learning mechanisms"
+  ],
+  "manipulations": [
+    "probabilistic reward-learning task in a large human dataset",
+    "model class varied between pure incremental RL and hybrid RL+ANN"
+  ],
+  "key_findings": [
+    "no algorithm based solely on incremental updating of choice variables explains the behavior",
+    "hybrid models incorporating neural networks better capture human choices",
+    "behavior is consistent with memory representations spanning multiple timescales"
+  ],
+  "interpretations": [
+    "human reward learning depends on a flexible memory system encoding rich event representations",
+    "reward-guided choices rely on more elaborate memory than previously believed"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "reward learning",
+    "reinforcement learning",
+    "hybrid neural-cognitive model",
+    "artificial neural networks",
+    "episodic memory",
+    "probabilistic reward task",
+    "multi-timescale memory",
+    "incremental value updating"
+  ],
+  "abstract_coverage": 1.0,
+  "out_of_scope_note": null,
+  "canonical_id": "8063fcb4b4d72b55bee9da6038f0dd5a",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:25:27+09:00",
+  "review_status": "auto_unreviewed"
+}

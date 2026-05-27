@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "functional connectivity",
+      "role": "primary_lens",
+      "one_line": "Brain-wide network organization probed via fMRI correlations across states."
+    },
+    {
+      "name": "intrinsic vs state-specific network organization",
+      "role": "context",
+      "one_line": "Stable intrinsic architecture coexists with transient state-dependent FC patterns."
+    },
+    {
+      "name": "predictive multivariate modeling (PrimeNet)",
+      "role": "extended",
+      "one_line": "Multilevel neural-effects model classifies state from FC patterns."
+    }
+  ],
+  "core_question": "To what extent does brain-wide functional connectivity differ between naturalistic movie-watching and rest across development?",
+  "key_assumptions": [
+    "Cognitive states share an intrinsic FC organization stable within individual.",
+    "State-specific transient FC variations are detectable in fMRI.",
+    "Movie-watching is a developmentally appropriate alternative to rest."
+  ],
+  "manipulations": [
+    "Neural state (naturalistic viewing vs resting-state).",
+    "Age across childhood and young adulthood (6-20).",
+    "Movie identity (multiple movies tested for generalization)."
+  ],
+  "key_findings": [
+    "A widespread FC pattern reliably predicts movie-watching vs rest.",
+    "PrimeNet classification generalizes across different movies and ages.",
+    "FC patterns in the most predictive networks vary as a function of development."
+  ],
+  "interpretations": [
+    "Distinct state-specific FC signatures coexist with intrinsic organization.",
+    "Naturalistic vs rest FC differences are developmentally modulated."
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "functional connectivity",
+    "naturalistic viewing",
+    "movie-watching fMRI",
+    "resting-state fMRI",
+    "developmental fMRI",
+    "state classification",
+    "multilevel neural effects",
+    "pediatric neuroimaging"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "24a119b3e9ef12b8f6ac1e5f84313c01",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:25:27+09:00",
+  "review_status": "auto_unreviewed"
+}
