@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "signal-detection theory (unequal-variance)",
+      "role": "extended",
+      "one_line": "UV-SDT extended by using response time instead of confidence to estimate variance asymmetry."
+    },
+    {
+      "name": "signal-detection theory (equal-variance)",
+      "role": "compared_against",
+      "one_line": "Canonical EV-SDT critiqued for overestimating detection sensitivity."
+    },
+    {
+      "name": "confidence-based SDT",
+      "role": "alternative_lens",
+      "one_line": "Traditional confidence-rating method used as a benchmark for RT-based estimates."
+    }
+  ],
+  "core_question": "Can response time data be used to estimate unequal-variance SDT parameters in perceptual detection tasks?",
+  "key_assumptions": [
+    "Type-1 ROC asymmetry reflects greater variability in stimulus-present trials",
+    "RT distributions carry information about underlying signal variance",
+    "Detection tasks involve asymmetry between signal-present and signal-absent trials"
+  ],
+  "manipulations": [
+    "Estimation method: RT-based vs confidence-based",
+    "Multiple datasets compared",
+    "SDT model variant: equal- vs unequal-variance"
+  ],
+  "key_findings": [
+    "RT-based estimates of SD ratio (σ) and mean difference (μ) align closely with confidence-based estimates",
+    "Sensitivity measure dₐ from RT and from confidence shows strong consistency across datasets",
+    "Conventional d′ consistently overestimates detection performance relative to dₐ"
+  ],
+  "interpretations": [
+    "Response time provides a valid alternative route to unequal-variance SDT parameters",
+    "Equal-variance assumption inflates apparent sensitivity in detection tasks"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "unequal-variance signal detection",
+    "response time SDT",
+    "type-1 ROC asymmetry",
+    "perceptual detection task",
+    "d-prime versus d-sub-a",
+    "confidence rating",
+    "sensitivity estimation",
+    "signal variability"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "8ab9c5f4e5d5eb6d6ff002f1820495ec",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:04:03+09:00",
+  "review_status": "auto_unreviewed"
+}

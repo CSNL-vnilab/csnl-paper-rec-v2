@@ -1,0 +1,66 @@
+{
+  "frameworks": [
+    {
+      "name": "hierarchical Bayesian inference",
+      "role": "primary_lens",
+      "one_line": "feature estimate marginalized or conditioned over discrete high-level interpretations"
+    },
+    {
+      "name": "categorical perception",
+      "role": "context",
+      "one_line": "category-based perception treated as a hierarchical inference task"
+    },
+    {
+      "name": "causal cue combination",
+      "role": "context",
+      "one_line": "cue integration cast as inference over a causal latent"
+    },
+    {
+      "name": "full marginalization (model averaging)",
+      "role": "compared_against",
+      "one_line": "baseline that averages estimates across all high-level interpretations"
+    }
+  ],
+  "core_question": "What is the effect on feature-level estimation accuracy of committing to a single high-level interpretation rather than considering all alternatives?",
+  "key_assumptions": [
+    "feature estimation can be conditioned on a single discrete high-level interpretation",
+    "category-based perception and causal cue combination share a common hierarchical inference structure",
+    "estimation accuracy is the relevant criterion for evaluating commitment"
+  ],
+  "manipulations": [
+    "commitment strategy: single high-level interpretation vs full marginalization",
+    "feature value relative to decision boundaries between high-level interpretations",
+    "task type: category-based perception vs causal cue combination"
+  ],
+  "key_findings": [
+    "overall estimation accuracy is reduced when conditioning on a single high-level interpretation",
+    "the reduction is non-uniform across the feature range",
+    "near decision boundaries commitment is worse than full inference",
+    "away from decision boundaries commitment is better than full inference"
+  ],
+  "interpretations": [
+    "commitment to a single interpretation yields local accuracy benefits that can rationalize the strategy",
+    "the apparent short-sightedness of committing is not uniformly irrational at the feature level"
+  ],
+  "limitations_noted": [
+    "analysis restricted to two specific hierarchical inference tasks",
+    "evaluation based on model simulations rather than direct empirical test"
+  ],
+  "connecting_signals": [
+    "hierarchical inference",
+    "commitment to single interpretation",
+    "category-based perception",
+    "causal cue combination",
+    "decision boundary",
+    "feature estimation accuracy",
+    "self-consistent observer",
+    "perceptual bias"
+  ],
+  "abstract_coverage": 1.0,
+  "out_of_scope_note": null,
+  "canonical_id": "e43c7e7a0d3839129e5f2e6813c4b503",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:04:03+09:00",
+  "review_status": "auto_unreviewed"
+}

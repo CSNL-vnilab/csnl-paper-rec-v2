@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "active inference",
+      "role": "primary_lens",
+      "one_line": "Perception combines prior expectations with noisy sensory measurements"
+    },
+    {
+      "name": "sensory coding schemes",
+      "role": "compared_against",
+      "one_line": "Competing encoding proposals tested against measured neural tuning"
+    },
+    {
+      "name": "natural image statistics prior",
+      "role": "extended",
+      "one_line": "Environmental prior embedded into early cortical measurement"
+    }
+  ],
+  "core_question": "How does the human visual system neurally instantiate prior expectations for orientation?",
+  "key_assumptions": [
+    "Perception is active inference combining priors with noisy measurements",
+    "Environmental statistics can be expressed as a prior over orientation",
+    "Neural tuning is recoverable via data-driven extraction"
+  ],
+  "manipulations": [
+    "Data-driven extraction of orientation representation from the visual system",
+    "Comparison of measured tuning with multiple candidate encoding schemes",
+    "Evaluation across stimulus-specific variations"
+  ],
+  "key_findings": [
+    "Tuning of the human visual system is highly conditional on stimulus-specific variations",
+    "Observed tuning is not predicted by previous encoding proposals",
+    "Adopted encoding scheme embeds an environmental prior into the sensory measurement"
+  ],
+  "interpretations": [
+    "Priors for natural image statistics are realised within early cortical encoding itself",
+    "This functional architecture supports optimal inference at the earliest stages of cortical processing"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "active inference",
+    "prior expectations",
+    "orientation tuning",
+    "natural image statistics",
+    "sensory encoding scheme",
+    "human visual cortex",
+    "stimulus-conditional tuning",
+    "early cortical processing"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "82bd2e19cd34b56b7faa693a9e7bbd68",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "evidence accumulation / deliberation",
+      "role": "primary_lens",
+      "one_line": "value-based choice reflects accumulation of internal evidence over time"
+    },
+    {
+      "name": "hippocampal prospection and relational cognition",
+      "role": "extended",
+      "one_line": "hippocampus is recruited to construct value evidence during deliberation"
+    },
+    {
+      "name": "perceptual decision-making",
+      "role": "compared_against",
+      "one_line": "contrasted with value-based decisions to isolate hippocampal contribution"
+    }
+  ],
+  "core_question": "Does the hippocampus support deliberation during value-based decisions?",
+  "key_assumptions": [
+    "choices between similar-value options require more evidence",
+    "deliberation time indexes internal evidence accumulation",
+    "hippocampus contributes to prospection and relational cognition"
+  ],
+  "manipulations": [
+    "value similarity between offered items",
+    "value-based vs perceptual decision type",
+    "group: hippocampal-damaged patients vs healthy controls"
+  ],
+  "key_findings": [
+    "hippocampal BOLD increased with deliberation time in healthy fMRI participants",
+    "patients with hippocampal damage showed more stochastic choices",
+    "hippocampal patients had longer reaction times than controls",
+    "effects were stronger for value-based than perceptual decisions"
+  ],
+  "interpretations": [
+    "hippocampus supports deliberation by constructing value-based internal evidence",
+    "hippocampal damage impairs evidence construction selectively for value choices"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "value-based decision making",
+    "deliberation time",
+    "hippocampal BOLD",
+    "stochastic choice",
+    "reaction time",
+    "evidence accumulation",
+    "hippocampal amnesia patients",
+    "perceptual vs value-based decisions"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "ec8e14a795381cd374da34fbc256938b",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:04:03+09:00",
+  "review_status": "auto_unreviewed"
+}

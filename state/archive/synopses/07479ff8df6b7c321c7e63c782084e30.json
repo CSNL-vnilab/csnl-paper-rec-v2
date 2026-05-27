@@ -1,0 +1,48 @@
+{
+  "frameworks": [
+    {
+      "name": "signal-detection theory (meta-d')",
+      "role": "primary_lens",
+      "one_line": "Metacognitive efficiency measured separately for 2AFC versus yes/no judgments."
+    },
+    {
+      "name": "domain-general vs domain-specific metacognition",
+      "role": "compared_against",
+      "one_line": "Tests whether a shared metacognitive faculty spans perception and memory."
+    }
+  ],
+  "core_question": "Does the apparent domain-generality of metacognition depend on whether perception and memory tasks share the same judgment format (2AFC vs YN)?",
+  "key_assumptions": [
+    "Metacognitive efficiency is comparable across tasks only when judgment format is matched.",
+    "Conflicting prior findings reflect task-format differences rather than true mechanism differences."
+  ],
+  "manipulations": [
+    "Judgment format pairing: 2AFC/2AFC (mirroring McCurdy 2013) vs 2AFC/YN (mirroring Baird 2013) vs YN/YN.",
+    "Domain pairing: visual perception task with memory task."
+  ],
+  "key_findings": [
+    "2AFC/2AFC replication produced a positive perception-memory metacognitive efficiency correlation.",
+    "2AFC/YN replication failed to produce the correlation.",
+    "YN/YN pairing also failed to produce a perception-memory metacognitive correlation."
+  ],
+  "interpretations": [
+    "Cross-domain metacognitive correlations may be an artifact of shared 2AFC format rather than evidence for a domain-general mechanism."
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "metacognitive efficiency",
+    "meta-d'",
+    "domain-general metacognition",
+    "perception versus memory",
+    "2AFC versus yes/no judgments",
+    "confidence judgments",
+    "online replication"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "07479ff8df6b7c321c7e63c782084e30",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:04:03+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,51 @@
+{
+  "frameworks": [
+    {
+      "name": "drift-diffusion",
+      "role": "primary_lens",
+      "one_line": "noisy evidence accumulation to a termination bound on single trials"
+    },
+    {
+      "name": "population coding in LIP",
+      "role": "extended",
+      "one_line": "weighted sum of simultaneously recorded LIP neurons yields a scalar decision variable"
+    }
+  ],
+  "core_question": "Can the stochastic drift-diffusion signal underlying a single perceptual decision be directly observed in cortical population activity?",
+  "key_assumptions": [
+    "LIP population activity reflects accumulating decision evidence",
+    "a single scalar variable captures the decision-relevant signal",
+    "deterministic drift and stochastic diffusion can be linearly decoded"
+  ],
+  "manipulations": [
+    "direction of random dot motion judged by monkeys",
+    "simultaneous recording from hundreds of LIP neurons"
+  ],
+  "key_findings": [
+    "a weighted sum of LIP population activity yields a scalar decision variable on single trials",
+    "this scalar combines a deterministic drift component with a stochastic diffusion component",
+    "the recovered single-trial signal aligns with predictions from drift-diffusion theory"
+  ],
+  "interpretations": [
+    "the long-hypothesized stochastic accumulation underlying choice variability is directly visible in cortex on single decisions",
+    "trial-averaged ramping reflects a true single-trial drift-diffusion process rather than an artifact of averaging"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "drift-diffusion model",
+    "lateral intraparietal cortex (LIP)",
+    "single-trial decision variable",
+    "evidence accumulation",
+    "random dot motion",
+    "population decoding",
+    "perceptual decision-making",
+    "stochastic diffusion"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "6cc8fa05d98f69944f0795b93ddfb04f",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:04:03+09:00",
+  "review_status": "auto_unreviewed"
+}

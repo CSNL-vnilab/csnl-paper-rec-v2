@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "cognitive maps",
+      "role": "primary_lens",
+      "one_line": "hippocampal world-centered low-dimensional representations of knowledge"
+    },
+    {
+      "name": "image spaces",
+      "role": "primary_lens",
+      "one_line": "parietal self-centered spatial relationships organizing knowledge"
+    },
+    {
+      "name": "hippocampal-parietal network",
+      "role": "extended",
+      "one_line": "proposed joint system spanning multiple reference frames"
+    },
+    {
+      "name": "low-dimensional internal models",
+      "role": "context",
+      "one_line": "general propensity of the mind to build geometric structure"
+    }
+  ],
+  "core_question": "How is conceptual knowledge organized across allocentric cognitive maps and egocentric image spaces in the brain?",
+  "key_assumptions": [
+    "Conceptual knowledge inherits geometry from spatial representation",
+    "Spatial reference frames (world- vs self-centered) generalize to non-spatial domains",
+    "Hippocampus and parietal cortex implement distinct reference frames"
+  ],
+  "manipulations": [],
+  "key_findings": [
+    "Cognitive maps map onto hippocampal formation and resemble world-centered codes",
+    "Image spaces map onto parietal cortex and resemble self-centered codes"
+  ],
+  "interpretations": [
+    "A hippocampal-parietal network organizes and retrieves knowledge across multiple reference frames",
+    "Both formats may be manifestations of a broader drive to build low-dimensional internal models"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "cognitive maps",
+    "image spaces",
+    "reference frames",
+    "hippocampal formation",
+    "parietal cortex",
+    "allocentric vs egocentric coding",
+    "low-dimensional internal models",
+    "conceptual knowledge geometry"
+  ],
+  "abstract_coverage": 1.0,
+  "out_of_scope_note": null,
+  "canonical_id": "68ec9890ccafe71593d19121e91ee8aa",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:04:03+09:00",
+  "review_status": "auto_unreviewed"
+}
