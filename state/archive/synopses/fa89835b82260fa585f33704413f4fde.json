@@ -1,0 +1,58 @@
+{
+  "canonical_id": "fa89835b82260fa585f33704413f4fde",
+  "frameworks": [
+    {
+      "name": "dual-stream (ventral/dorsal) architecture",
+      "role": "primary_lens",
+      "one_line": "two parallel pathways encode object identity and relational/numerical structure separately"
+    },
+    {
+      "name": "deep neural network modeling of primate vision",
+      "role": "extended",
+      "one_line": "extends object-recognition CNN modeling to numerosity and scene structure"
+    },
+    {
+      "name": "neural number coding",
+      "role": "context",
+      "one_line": "lognormal tuning to numerosity in posterior parietal cortex"
+    }
+  ],
+  "core_question": "Can a dual-stream deep network count items zero-shot and reproduce primate parietal number codes?",
+  "key_assumptions": [
+    "object recognition and relational/numerical encoding are dissociable across streams",
+    "scene understanding requires both item identity and abstract numerical structure",
+    "deep networks can serve as models of primate visual cortex"
+  ],
+  "manipulations": [
+    "dual-stream vs single-stream architecture",
+    "familiar vs novel (zero-shot) object categories",
+    "numerosity of items in displays"
+  ],
+  "key_findings": [
+    "dual-stream model counts unfamiliar objects zero-shot",
+    "model develops spatial response fields resembling parietal cortex",
+    "model produces lognormal number codes like macaque posterior parietal cortex",
+    "model predicts human counting behavior"
+  ],
+  "interpretations": [
+    "dual processing streams jointly support object recognition and abstract numerical structure encoding",
+    "zero-shot counting can emerge from biologically inspired architecture without item-specific training"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "zero-shot counting",
+    "dual-stream neural network",
+    "numerosity coding",
+    "posterior parietal cortex",
+    "lognormal number code",
+    "spatial response fields",
+    "ventral and dorsal streams",
+    "scene structure encoding"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:49:01+09:00",
+  "review_status": "auto_unreviewed"
+}

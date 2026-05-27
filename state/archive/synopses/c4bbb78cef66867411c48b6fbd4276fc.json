@@ -1,0 +1,51 @@
+{
+  "frameworks": [
+    {
+      "name": "efficient coding",
+      "role": "primary_lens",
+      "one_line": "neural encoding should match the 1/f^2 statistics of natural temporal variation"
+    },
+    {
+      "name": "post-receptoral channels",
+      "role": "context",
+      "one_line": "achromatic and chromatic pathways with distinct temporal sensitivity functions"
+    }
+  ],
+  "core_question": "Does behavioral encoding fidelity for flicker frequency differ by post-receptoral direction or photopic light level?",
+  "key_assumptions": [
+    "1/f^2 temporal statistics are shared across achromatic and chromatic modulations",
+    "efficient coding predicts encoding fidelity follows input statistics, not neural tuning",
+    "memory-based frequency matching reads out perceptual encoding"
+  ],
+  "manipulations": [
+    "post-receptoral direction (luminance LMS vs L-M chromatic)",
+    "photopic background luminance (high vs low)",
+    "reference flicker frequency (1-32 Hz log-uniform)"
+  ],
+  "key_findings": [
+    "encoding fidelity across frequency was similar for achromatic and chromatic modulations",
+    "encoding fidelity did not differ between high and low photopic light levels"
+  ],
+  "interpretations": [
+    "behavioral fidelity reflects shared input statistics rather than differences in neural temporal tuning",
+    "consistent with efficient-coding prediction that encoding follows the 1/f^2 environmental prior"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "flicker frequency encoding",
+    "temporal sensitivity function",
+    "post-receptoral channels",
+    "luminance vs chromatic modulation",
+    "L-M cone-opponent",
+    "photopic light level",
+    "efficient coding of temporal statistics",
+    "delayed estimation task"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "c4bbb78cef66867411c48b6fbd4276fc",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:49:01+09:00",
+  "review_status": "auto_unreviewed"
+}

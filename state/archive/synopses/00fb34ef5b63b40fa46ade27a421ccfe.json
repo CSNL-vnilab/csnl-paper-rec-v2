@@ -1,0 +1,64 @@
+{
+  "frameworks": [
+    {
+      "name": "proactive adaptation / predictive coding allocation",
+      "role": "primary_lens",
+      "one_line": "Adaptation reallocates coding resources to optimize encoding of the next expected input"
+    },
+    {
+      "name": "information-theoretic encoding analysis",
+      "role": "primary_lens",
+      "one_line": "Discrimination thresholds are converted into encoding accuracy via Fisher information"
+    },
+    {
+      "name": "natural-scene statistics of retinal input",
+      "role": "alternative_lens",
+      "one_line": "Temporal statistics of orientations in free-viewing retinal streams predict adapted encoding"
+    },
+    {
+      "name": "PredNet recurrent predictive network",
+      "role": "extended",
+      "one_line": "RNN trained to predict next video frame is used as a model organism for adaptation"
+    }
+  ],
+  "core_question": "Does sensory adaptation proactively optimize encoding for the next expected stimulus rather than merely reacting to recent history?",
+  "key_assumptions": [
+    "Total coding capacity is conserved across adaptation states",
+    "Discrimination thresholds index local encoding accuracy",
+    "Short-window orientation history predicts the next retinal input distribution"
+  ],
+  "manipulations": [
+    "Adaptor orientation in psychophysical discrimination",
+    "Adaptation condition across observers",
+    "Natural retinal input from freely behaving subjects vs lab stimuli",
+    "Training PredNet on natural-scene video to predict next frame"
+  ],
+  "key_findings": [
+    "Adaptation reallocates coding resources so accuracy peaks at the adaptor orientation",
+    "Total coding capacity remains approximately constant across adaptation states",
+    "Local retinal orientation distribution peaks at the mean orientation over recent history",
+    "PredNet trained on next-frame prediction reproduces the adaptation signature"
+  ],
+  "interpretations": [
+    "Adaptation acts proactively, tuning encoding toward the next expected sensory input",
+    "Reactive adaptation history can be reinterpreted as a prediction about upcoming input"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "sensory adaptation",
+    "orientation discrimination threshold",
+    "coding resource reallocation",
+    "Fisher information encoding accuracy",
+    "natural scene temporal statistics",
+    "retinal input stream",
+    "next-frame prediction PredNet",
+    "proactive predictive encoding"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "00fb34ef5b63b40fa46ade27a421ccfe",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "rate-distortion theory",
+      "role": "primary_lens",
+      "one_line": "Normative capacity-limited encoding that trades off rate against task-relevant distortion"
+    },
+    {
+      "name": "capacity-limited visual working memory",
+      "role": "extended",
+      "one_line": "VWM treated as a bounded channel whose allocation adapts to stimulus and task"
+    },
+    {
+      "name": "statistical and categorical learning",
+      "role": "context",
+      "one_line": "Subjects learn stimulus distributions and category structure shaping memory"
+    }
+  ],
+  "core_question": "Do people reallocate limited visual working memory capacity based on stimulus statistics and task demands?",
+  "key_assumptions": [
+    "VWM has a finite, bounded capacity",
+    "Capacity can be dynamically reallocated in a task-dependent manner",
+    "Rate-distortion theory provides a normative account of VWM allocation",
+    "Stimulus regularities (mean, variance) can be tracked by the observer"
+  ],
+  "manipulations": [
+    "Imposed distributions on a stimulus dimension (leaf widths of plants)",
+    "Varied task requirements across experiments",
+    "Used naturalistic but precisely controlled plant images"
+  ],
+  "key_findings": [
+    "Subjects adapted VWM performance to the assigned stimulus distribution",
+    "Memory errors reflected the statistical regularities of to-be-remembered items"
+  ],
+  "interpretations": [
+    "VWM capacity is strategically reallocated based on stimulus statistics and task requirements",
+    "A rate-distortion framework captures flexible, robust allocation under capacity limits"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "rate-distortion theory",
+    "visual working memory capacity",
+    "adaptive capacity allocation",
+    "statistical learning of stimulus distributions",
+    "categorical learning",
+    "naturalistic plant stimuli",
+    "task-dependent memory precision",
+    "normative computational modeling"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "66161c2d7ac9b710c7393764202df36e",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

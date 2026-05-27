@@ -1,0 +1,50 @@
+{
+  "frameworks": [
+    {
+      "name": "model-based fMRI decoding of working memory",
+      "role": "primary_lens",
+      "one_line": "estimate WM contents from visual cortex population activity via encoding models"
+    },
+    {
+      "name": "distributed redundant cortical representation",
+      "role": "extended",
+      "one_line": "WM information is encoded redundantly across visual and frontoparietal maps"
+    }
+  ],
+  "core_question": "Do working memory representations in visual cortex remain robust to distracting visual input?",
+  "key_assumptions": [
+    "WM contents can be read out from visual cortex activity via encoding models",
+    "shared neural populations encode both memorandum and distractor"
+  ],
+  "manipulations": [
+    "presence vs absence of an intervening distracting visual task during the memory delay"
+  ],
+  "key_findings": [
+    "fidelity of WM representations briefly dips when memorandum and distractor are jointly encoded",
+    "distraction induces small biases in behavioral memory errors",
+    "decoding biases in early visual cortex predict behavioral biases, unlike other regions",
+    "WM information is redundantly encoded across multiple visual field maps"
+  ],
+  "interpretations": [
+    "distraction transiently disrupts WM representations but redundancy protects against catastrophic loss",
+    "early visual cortex representations and WM behavior are tightly intertwined"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "working memory representations",
+    "visual cortex decoding",
+    "distraction",
+    "model-based fMRI",
+    "visual field maps",
+    "frontoparietal cortex",
+    "memory fidelity",
+    "neural decoding bias"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "7284c08aa86c28648a6b9c7abc261469",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:49:01+09:00",
+  "review_status": "auto_unreviewed"
+}

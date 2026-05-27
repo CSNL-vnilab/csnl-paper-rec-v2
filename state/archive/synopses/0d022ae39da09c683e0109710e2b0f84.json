@@ -1,0 +1,64 @@
+{
+  "frameworks": [
+    {
+      "name": "history-dependent perceptual bias",
+      "role": "primary_lens",
+      "one_line": "Past stimuli, choices, and outcomes bias current perceptual decisions"
+    },
+    {
+      "name": "synaptic plasticity",
+      "role": "primary_lens",
+      "one_line": "NMDA-dependent plasticity as candidate substrate of across-trial history effects"
+    },
+    {
+      "name": "evidence accumulation",
+      "role": "extended",
+      "one_line": "Within-trial accumulation of fluctuating sensory evidence in a 2AFC task"
+    },
+    {
+      "name": "pharmacological perturbation",
+      "role": "primary_lens",
+      "one_line": "NMDA blockade and GABA-A enhancement in healthy human participants"
+    }
+  ],
+  "core_question": "Do NMDA receptors causally support task-adaptive history-dependent biases in human perceptual decisions?",
+  "key_assumptions": [
+    "History biases reflect a plasticity-based memory mechanism",
+    "Pharmacological agents selectively target NMDA vs GABA-A pathways",
+    "Within- and across-trial integration can be dissociated in behavior"
+  ],
+  "manipulations": [
+    "NMDA receptor blockade vs control",
+    "GABA-A receptor enhancement vs control",
+    "Stimulus statistics changing across blocks",
+    "Two-alternative visual decision-making task"
+  ],
+  "key_findings": [
+    "Choices were biased by within-trial accumulation of fluctuating sensory evidence",
+    "Choices were biased by across-trial accumulation of stimulus sequences, adapting to block statistics",
+    "NMDA receptor blockade reduced task-adaptive across-trial history-dependent biases",
+    "GABA-A enhancement increased transiency of within-trial evidence accumulation dynamics"
+  ],
+  "interpretations": [
+    "NMDA-receptor-dependent plasticity mediates adaptive across-trial history biases",
+    "Within-trial and across-trial integration rely on dissociable neurochemical mechanisms"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "history-dependent bias",
+    "NMDA receptor",
+    "GABA-A receptor",
+    "evidence accumulation",
+    "synaptic plasticity",
+    "two-alternative forced choice",
+    "task-adaptive bias",
+    "stimulus statistics adaptation"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "0d022ae39da09c683e0109710e2b0f84",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

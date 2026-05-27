@@ -1,0 +1,56 @@
+{
+  "frameworks": [
+    {
+      "name": "Bayes least squares estimation",
+      "role": "primary_lens",
+      "one_line": "BLS estimator reformulated without explicit prior, using observed-measurement density."
+    },
+    {
+      "name": "nonparametric density estimation",
+      "role": "extended",
+      "one_line": "Used to approximate the prior-free BLS estimator from observed data."
+    },
+    {
+      "name": "additive Gaussian noise model",
+      "role": "context",
+      "one_line": "Observation model in which a parametric estimator family is derived."
+    }
+  ],
+  "core_question": "Can Bayes least squares estimators be formulated and learned without explicit knowledge of the prior?",
+  "key_assumptions": [
+    "Bayesian estimators depend on the posterior, product of likelihood and prior",
+    "Uncorrupted samples of the latent variable are unavailable",
+    "Observation model (likelihood) is known"
+  ],
+  "manipulations": [
+    "Observation model varied across several noise/measurement processes",
+    "Additive Gaussian noise case treated parametrically"
+  ],
+  "key_findings": [
+    "For many observation models, the BLS estimator can be written directly from the observed-measurement density",
+    "The mean squared estimation error admits a related prior-free expression",
+    "These forms yield practical nonparametric approximations from observed data alone",
+    "A parametric estimator family is derived for additive Gaussian noise"
+  ],
+  "interpretations": [
+    "Bayesian estimation can be learned without supervision when the prior is unknown",
+    "Reformulating in terms of observed-data density makes BLS estimators data-driven and feasible"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "prior-free Bayes least squares",
+    "unsupervised Bayesian estimation",
+    "observed-measurement density",
+    "nonparametric estimator",
+    "additive Gaussian noise denoising",
+    "mean squared error",
+    "likelihood-based inference without prior"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "9000b15999f8b57c9eeb102fe92deee5",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:49:01+09:00",
+  "review_status": "auto_unreviewed"
+}

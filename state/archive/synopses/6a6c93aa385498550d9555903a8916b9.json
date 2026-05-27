@@ -1,0 +1,51 @@
+{
+  "frameworks": [
+    {
+      "name": "optimal sensory encoding and decoding",
+      "role": "primary_lens",
+      "one_line": "Normative encoder-decoder framework from which the law is derived"
+    },
+    {
+      "name": "psychophysical discrimination-bias relation",
+      "role": "extended",
+      "one_line": "Links discrimination threshold and perceptual bias as coupled, not independent"
+    }
+  ],
+  "core_question": "Is there a lawful mathematical relation between discrimination threshold and perceptual bias?",
+  "key_assumptions": [
+    "Sensory encoding is optimal under resource constraints",
+    "Decoding is also optimal given the encoder",
+    "Discrimination threshold and perceptual bias have been treated as independent"
+  ],
+  "manipulations": [
+    "Examined psychophysical data spanning spatial context, temporal context, and attention",
+    "Compared predicted relation against a wide range of reported datasets"
+  ],
+  "key_findings": [
+    "Discrimination threshold and perceptual bias obey a simple, shared mathematical relation",
+    "The relation holds across context- and attention-induced perceptual changes",
+    "Wide empirical support across diverse psychophysical paradigms"
+  ],
+  "interpretations": [
+    "The threshold-bias relation reflects a general law of human perception",
+    "Optimal encoding-decoding principles can predict joint structure of perceptual measures"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "discrimination threshold",
+    "perceptual bias",
+    "optimal sensory encoding",
+    "efficient coding",
+    "psychophysical law",
+    "spatial and temporal context effects",
+    "attention-induced perceptual changes",
+    "encoding-decoding framework"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "6a6c93aa385498550d9555903a8916b9",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}
