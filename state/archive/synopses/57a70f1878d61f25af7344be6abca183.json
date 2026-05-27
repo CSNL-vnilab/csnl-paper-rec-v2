@@ -1,0 +1,50 @@
+{
+  "frameworks": [
+    {
+      "name": "approximate Kalman filter",
+      "role": "primary_lens",
+      "one_line": "tracks trial-by-trial value and estimation uncertainty in a multi-armed bandit"
+    },
+    {
+      "name": "reinforcement learning",
+      "role": "context",
+      "one_line": "framing for how uncertainty shapes learning and choice"
+    }
+  ],
+  "core_question": "How does uncertainty influence value learning, choice, and overt gaze allocation in bandit decisions?",
+  "key_assumptions": [
+    "trial-by-trial belief is captured by a Kalman-filter-style mean and variance",
+    "overt gaze indexes covert processing of value and uncertainty",
+    "absolute prediction error is a momentary uncertainty signal"
+  ],
+  "manipulations": [
+    "multi-armed bandit options with varying value and uncertainty",
+    "concurrent recording of choice and gaze allocation"
+  ],
+  "key_findings": [
+    "estimated value and estimation uncertainty predicted what subjects looked at before choosing",
+    "value, uncertainty, and fixation itself influenced choice",
+    "absolute prediction error governed how long subjects looked at obtained outcomes"
+  ],
+  "interpretations": [
+    "uncertainty affects multiple stages of behavior — pre-choice gaze, choice, and post-outcome looking",
+    "fixation is both shaped by uncertainty and contributes to the decision itself"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "estimation uncertainty",
+    "Kalman filter",
+    "multi-armed bandit",
+    "prediction error",
+    "gaze allocation",
+    "value-based choice",
+    "fixation and decision"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "57a70f1878d61f25af7344be6abca183",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:06:17+09:00",
+  "review_status": "auto_unreviewed"
+}

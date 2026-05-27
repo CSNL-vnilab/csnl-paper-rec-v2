@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "discrete-slot working memory model",
+      "role": "compared_against",
+      "one_line": "Traditional view of CDA as pure index of item load in fixed slots"
+    },
+    {
+      "name": "continuous resource working memory",
+      "role": "primary_lens",
+      "one_line": "Flexible allocation of a graded resource across memoranda"
+    },
+    {
+      "name": "hierarchical working memory systems",
+      "role": "extended",
+      "one_line": "Sensory delay activity reflects multiple layered processes beyond storage"
+    },
+    {
+      "name": "attentional and executive control",
+      "role": "alternative_lens",
+      "one_line": "CDA also indexes attentional selection and executive operations"
+    }
+  ],
+  "core_question": "Does sustained contralateral delay activity reflect only memory item load, or also attentional, executive, and perceptual mechanisms?",
+  "key_assumptions": [
+    "Sustained contralateral delay activity can be measured in visual and tactile modalities",
+    "CDA amplitude can reflect more than one underlying cognitive operation",
+    "Visual and tactile WM share comparable electrophysiological signatures"
+  ],
+  "manipulations": [
+    "Unisensory vs multisensory visual and tactile working memory tasks",
+    "Tasks probing storage vs attention vs executive operations",
+    "Varying cognitive operations during the retention period"
+  ],
+  "key_findings": [
+    "Sensory delay activity is sensitive to cognitive operations beyond discrete item storage",
+    "CDA reflects attentional and executive processes in addition to load",
+    "Components are consistent with flexible continuous resource allocation rather than discrete slots",
+    "Visual and tactile delay activity show analogous sensitivity across operations"
+  ],
+  "interpretations": [
+    "CDA is not a pure measure of item load but indexes hierarchically organized WM systems",
+    "Sensory delay activity reflects executive, attentional, and perceptual mechanisms jointly with storage"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "contralateral delay activity",
+    "sensory delay activity",
+    "working memory load",
+    "tactile working memory",
+    "continuous resource allocation",
+    "attentional selection",
+    "executive processes",
+    "hierarchical working memory"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "6bfc4a48eb29b5721bc60310a892a20e",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

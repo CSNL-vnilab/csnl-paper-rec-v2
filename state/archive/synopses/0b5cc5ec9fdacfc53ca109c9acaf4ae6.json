@@ -1,0 +1,58 @@
+{
+  "canonical_id": "0b5cc5ec9fdacfc53ca109c9acaf4ae6",
+  "frameworks": [
+    {
+      "name": "suppressive/inhibitory processing (GABAergic)",
+      "role": "primary_lens",
+      "one_line": "Learning sharpens perceptual decisions by GABA-mediated suppression in cortex."
+    },
+    {
+      "name": "perceptual learning",
+      "role": "primary_lens",
+      "one_line": "Training-induced improvement in perceptual judgments through noise filtering."
+    },
+    {
+      "name": "functional brain connectivity",
+      "role": "extended",
+      "one_line": "GABA measures combined with connectivity to dissociate local vs inter-cortical mechanisms."
+    }
+  ],
+  "core_question": "Do suppressive (GABAergic) processes in decision-related and visual areas support learning-dependent improvements in perceptual judgments?",
+  "key_assumptions": [
+    "Learning improves perception by filtering external noise and task-irrelevant information",
+    "GABA concentration indexes local suppressive/inhibitory processing",
+    "Different perceptual tasks recruit distinct suppression mechanisms"
+  ],
+  "manipulations": [
+    "Task type: target detection vs feature discrimination",
+    "Training across sessions (learning-dependent change)",
+    "Brain region: parietal vs visual cortex"
+  ],
+  "key_findings": [
+    "Parietal GABA relates to suppression of task-irrelevant information",
+    "Learning-dependent changes in visual GABA relate to enhanced target detection and feature discrimination",
+    "Target detection training involves local connectivity and disinhibition of visual cortex",
+    "Feature discrimination training involves inter-cortical interactions linked to suppressive visual processing"
+  ],
+  "interpretations": [
+    "Suppressive interactions in decision-related and visual areas facilitate perceptual judgments during training",
+    "Distinct suppressive mechanisms (local disinhibition vs inter-cortical suppression) support different perceptual learning tasks"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "perceptual learning",
+    "GABA / ultra-high field MRS",
+    "suppressive interactions",
+    "disinhibition",
+    "target detection",
+    "feature discrimination",
+    "parietal cortex",
+    "visual cortex connectivity"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:06:17+09:00",
+  "review_status": "auto_unreviewed"
+}

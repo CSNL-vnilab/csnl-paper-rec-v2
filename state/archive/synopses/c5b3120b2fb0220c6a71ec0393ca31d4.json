@@ -1,0 +1,55 @@
+{
+  "frameworks": [
+    {
+      "name": "sensory preconditioning",
+      "role": "primary_lens",
+      "one_line": "neutral stimulus paired with another inherits acquired reward value"
+    },
+    {
+      "name": "decoded neurofeedback (DecNef)",
+      "role": "primary_lens",
+      "one_line": "MVPA-driven fMRI feedback induces a non-conscious target representation"
+    },
+    {
+      "name": "model-based learning",
+      "role": "context",
+      "one_line": "framework typically used to explain sensory preconditioning effects"
+    }
+  ],
+  "core_question": "Can sensory preconditioning form an association when one of the paired representations is never consciously perceived?",
+  "key_assumptions": [
+    "MVPA likelihood of a target category reflects a covert visual representation",
+    "neurofeedback can shape BOLD patterns toward a target representation without awareness",
+    "betting choices index acquired value of a stimulus"
+  ],
+  "manipulations": [
+    "viewed dot-motion display paired with a non-conscious DecNef target category",
+    "3 days of decoded neurofeedback training",
+    "later reward reinforcement attached to the dot-motion display"
+  ],
+  "key_findings": [
+    "participants came to value the dot-motion display, which had been linked to an unseen target category via neurofeedback",
+    "sensory preconditioning emerged despite the paired target representation never being consciously seen"
+  ],
+  "interpretations": [
+    "sensory preconditioning, and by extension model-based associative learning, can operate over representations outside conscious awareness"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "sensory preconditioning",
+    "decoded neurofeedback",
+    "non-conscious visual representation",
+    "MVPA classifier fMRI",
+    "dot-motion display",
+    "reward learning",
+    "model-based learning",
+    "unconscious perception"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "c5b3120b2fb0220c6a71ec0393ca31d4",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:06:17+09:00",
+  "review_status": "auto_unreviewed"
+}

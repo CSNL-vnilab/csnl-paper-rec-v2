@@ -1,0 +1,17 @@
+{
+  "canonical_id": "f75e1f64746935c113984394655490dc",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "Clinical neuroimaging preprocessing method paper (Gaussian smoothing + modified histogram normalization for MRI-based dyslexia classification across heterogeneous scanners); not aligned with CSNL computational perceptual-neuroscience scope.",
+  "generator": "opus-4-7@2026-05-27",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "abstract_coverage": 0.0
+}

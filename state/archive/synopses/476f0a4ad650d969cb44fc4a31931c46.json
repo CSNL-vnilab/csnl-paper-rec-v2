@@ -1,0 +1,55 @@
+{
+  "frameworks": [
+    {
+      "name": "Category Adjustment Model (CAM)",
+      "role": "extended",
+      "one_line": "Bayesian account where memory reconstruction biases stimuli toward category center."
+    },
+    {
+      "name": "generalized CAM (g-CAM)",
+      "role": "primary_lens",
+      "one_line": "Proposed Bayesian extension unifying typical and atypical category memory effects."
+    },
+    {
+      "name": "Bayesian reconstructive memory",
+      "role": "context",
+      "one_line": "Prior knowledge combined with noisy memory trace at multiple abstraction levels."
+    }
+  ],
+  "core_question": "Can a generalized Bayesian model unify reconstructive memory effects for both typical and atypical category exemplars?",
+  "key_assumptions": [
+    "Memory reconstruction integrates prior knowledge with noisy traces",
+    "Prior knowledge operates at multiple levels of abstraction",
+    "Category-level prior pulls remembered stimulus toward category center"
+  ],
+  "manipulations": [
+    "Typicality of category exemplars (typical vs atypical)",
+    "Comparison of model variants (CAM vs g-CAM) via simulation"
+  ],
+  "key_findings": [
+    "Atypical exemplars show weaker pull toward category center than typical exemplars",
+    "g-CAM reproduces previously known CAM effects in simulation",
+    "g-CAM additionally captures atypicality-dependent memory bias"
+  ],
+  "interpretations": [
+    "A generalized Bayesian framework unifies typical/atypical reconstructive memory under one model",
+    "Reconstructive memory effects depend on exemplar typicality within category structure"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "reconstructive memory",
+    "category adjustment model",
+    "Bayesian memory",
+    "atypical exemplars",
+    "prior knowledge",
+    "category center bias",
+    "hierarchical prior"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "476f0a4ad650d969cb44fc4a31931c46",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:06:17+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,59 @@
+{
+  "frameworks": [
+    {
+      "name": "Bayesian models of spatial category use",
+      "role": "primary_lens",
+      "one_line": "noisy memory trace combined with imposed prior structure on space"
+    },
+    {
+      "name": "working memory capacity limits",
+      "role": "extended",
+      "one_line": "individual capacity differences predict magnitude of memory bias"
+    },
+    {
+      "name": "category adjustment / prototype bias",
+      "role": "context",
+      "one_line": "systematic location estimate bias toward category prototypes"
+    }
+  ],
+  "core_question": "Does individual working memory capacity predict the degree of bias in single-item spatial location estimates?",
+  "key_assumptions": [
+    "spatial memory bias reflects combining noisy trace with imposed prior",
+    "working memory capacity varies meaningfully across individuals",
+    "individual-level model fits can recover strategy differences"
+  ],
+  "manipulations": [
+    "individual differences in working memory capacity",
+    "single-item location estimation task across participants"
+  ],
+  "key_findings": [
+    "lower working memory capacity predicts greater bias in remembered location",
+    "individual model fits reveal a surprising variety of strategies",
+    "roughly half of participants bias estimates outward, not predicted by current Bayesian models",
+    "some participants appear to combine inward and outward strategies"
+  ],
+  "interpretations": [
+    "current Bayesian spatial-category models do not capture all individual patterns",
+    "working memory capacity is a meaningful source of interindividual variation in spatial bias"
+  ],
+  "limitations_noted": [
+    "existing models fail to account for outward-biasing participants"
+  ],
+  "connecting_signals": [
+    "spatial working memory",
+    "location estimation bias",
+    "Bayesian spatial category",
+    "individual differences",
+    "memory noise and prior",
+    "interindividual variation",
+    "cognitive aging",
+    "outward bias"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "d73489f4055fec012cf9eea8ce8d4ccc",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:06:17+09:00",
+  "review_status": "auto_unreviewed"
+}

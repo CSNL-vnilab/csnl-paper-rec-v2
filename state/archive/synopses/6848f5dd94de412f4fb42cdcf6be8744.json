@@ -1,0 +1,48 @@
+{
+  "frameworks": [
+    {
+      "name": "connectome-based predictive modeling",
+      "role": "primary_lens",
+      "one_line": "whole-brain functional connectivity used to predict individual behavioral variability"
+    },
+    {
+      "name": "mind-wandering / executive control",
+      "role": "context",
+      "one_line": "behavioral variability framed as indirect index of attentional lapses in aging"
+    }
+  ],
+  "core_question": "Can whole-brain task and resting-state functional connectivity predict response time variability, an indirect marker of mind-wandering, in older adults?",
+  "key_assumptions": [
+    "trial-to-trial RT variability indexes mind-wandering / attentional lapses",
+    "individual differences in connectivity generalize to behavioral prediction",
+    "task-embedded thought probes are valid but limited in older adults"
+  ],
+  "manipulations": [
+    "connectivity state (task vs resting-state)",
+    "whole-brain network features vs canonical network subsets"
+  ],
+  "key_findings": [
+    "brain-based predictive models of RT variability can be derived from whole-brain task functional connectivity in aging"
+  ],
+  "interpretations": [
+    "whole-brain functional networks, not just canonical ones, carry information about attentional fluctuations in older adults"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "response time variability",
+    "mind-wandering",
+    "aging brain",
+    "functional connectivity",
+    "resting-state fMRI",
+    "predictive modeling",
+    "attentional control",
+    "executive function"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "6848f5dd94de412f4fb42cdcf6be8744",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:06:17+09:00",
+  "review_status": "auto_unreviewed"
+}
