@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "circular inference",
+      "role": "primary_lens",
+      "one_line": "prior beliefs reverberate through feedback and corrupt sensory evidence"
+    },
+    {
+      "name": "hierarchical Bayesian inference",
+      "role": "extended",
+      "one_line": "hierarchical cortical inference extended with reverberating feedback loops"
+    },
+    {
+      "name": "attractor dynamics",
+      "role": "alternative_lens",
+      "one_line": "integrator becomes bistable attractor under corrupted evidence"
+    },
+    {
+      "name": "adapting populations with lateral inhibition",
+      "role": "compared_against",
+      "one_line": "standard neuromechanistic account of bistability dynamics"
+    }
+  ],
+  "core_question": "Can circular inference in a hierarchical brain explain bistable perception of ambiguous stimuli?",
+  "key_assumptions": [
+    "sensory areas are modulated by feedback from higher-level areas",
+    "ambiguous input has two near-equally supported interpretations",
+    "perceptual inference is hierarchical Bayesian"
+  ],
+  "manipulations": [
+    "presence vs absence of feedback reverberation",
+    "ambiguity of the sensory input",
+    "continuous vs intermittent stimulus presentation"
+  ],
+  "key_findings": [
+    "circular inference turns an input integrator into a bistable attractor",
+    "model switches between two highly trusted interpretations",
+    "model reproduces Levelt's laws of bistability",
+    "intermittent stimulus presentation stabilizes the percept"
+  ],
+  "interpretations": [
+    "bistability reflects prior beliefs corrupting evidence via feedback loops",
+    "bistable perception is a window onto generic hierarchical perceptual inference"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "bistable perception",
+    "circular inference",
+    "hierarchical Bayesian inference",
+    "feedback loops in cortex",
+    "Levelt's laws",
+    "ambiguous stimuli",
+    "attractor dynamics",
+    "intermittent presentation"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "c867d8109b6fd66990e6596613304a6b",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:42:47+09:00",
+  "review_status": "auto_unreviewed"
+}

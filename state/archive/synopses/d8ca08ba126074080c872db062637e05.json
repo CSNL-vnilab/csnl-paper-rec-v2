@@ -1,0 +1,52 @@
+{
+  "frameworks": [
+    {
+      "name": "working memory influence on perception",
+      "role": "primary_lens",
+      "one_line": "WM contents bias subsequent perceptual judgments of moving stimuli"
+    },
+    {
+      "name": "motion repulsion effect",
+      "role": "extended",
+      "one_line": "Classic angular repulsion tested under multi-feature WM load"
+    }
+  ],
+  "core_question": "Does multi-feature information held in working memory influence perceptual decision-making, and does a task-irrelevant feature modulate this interaction?",
+  "key_assumptions": [
+    "WM and perception share representational resources",
+    "RDK orientation, speed, and density can be independently encoded",
+    "Motion repulsion indexes WM-perception interaction"
+  ],
+  "manipulations": [
+    "Shared vs differing features (orientation, speed, density) between RDK1 and RDK3",
+    "RDK2 speed varied across three experiments as task-irrelevant feature",
+    "Angular separation between RDKs"
+  ],
+  "key_findings": [
+    "Motion repulsion effect observed at 30° and 60° angular separations",
+    "Effect persisted despite increased multi-feature cognitive load",
+    "Task-irrelevant motion speed modulated WM representations"
+  ],
+  "interpretations": [
+    "Multi-feature WM content shapes perception even when features are task-irrelevant",
+    "WM-perception interactions extend beyond single-feature memorization"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "working memory",
+    "motion repulsion",
+    "random dot kinematogram",
+    "perceptual decision-making",
+    "task-irrelevant feature",
+    "multi-feature representation",
+    "orientation discrimination",
+    "confidence rating"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 0.8,
+  "canonical_id": "d8ca08ba126074080c872db062637e05",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:40:41+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,59 @@
+{
+  "frameworks": [
+    {
+      "name": "Signal Detection Theory",
+      "role": "primary_lens",
+      "one_line": "Models metacognition via signal and noise distribution variance"
+    },
+    {
+      "name": "type 2 ROC / area under ROC",
+      "role": "primary_lens",
+      "one_line": "Measures metacognitive sensitivity for stimulus presence vs absence"
+    },
+    {
+      "name": "unequal-variance SDT",
+      "role": "extended",
+      "one_line": "Differential signal/noise variance accounts for metacognitive asymmetries"
+    }
+  ],
+  "core_question": "Does the source of detection failure (sensory noise vs limited attention) change metacognitive ability under matched type 1 performance?",
+  "key_assumptions": [
+    "Type 1 performance can be matched across visibility manipulations",
+    "Metacognition is indexable by area under type 2 ROC",
+    "Signal and noise distributions may have unequal variance",
+    "Phase-scrambling and attentional blink probe different visibility limits"
+  ],
+  "manipulations": [
+    "Visibility manipulation: phase-scrambling vs attentional blink",
+    "Trial type: stimulus presence vs absence (correct rejection trials)",
+    "Matched type 1 performance across conditions"
+  ],
+  "key_findings": [
+    "Metacognitive ability for reporting stimulus absence was higher in the attentional blink than phase-scrambling condition",
+    "Asymmetry was mainly driven by metacognitive ability on correct rejection trials",
+    "Type 1 performance was matched across the two visibility manipulations",
+    "SDT modeling showed unequal signal/noise variance can explain the asymmetry"
+  ],
+  "interpretations": [
+    "Metacognitive asymmetries between visibility manipulations arise from differences in relative precision of target encoding",
+    "Unequal variance between signal and noise distributions accounts for metacognitive differences at matched type 1 performance"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "metacognition",
+    "signal detection theory",
+    "attentional blink",
+    "phase-scrambling",
+    "type 2 ROC",
+    "correct rejection trials",
+    "unequal variance SDT",
+    "stimulus absence detection"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "694c24ef29909b00d9169b0c044b7dd4",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

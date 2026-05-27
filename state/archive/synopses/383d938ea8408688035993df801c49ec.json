@@ -1,0 +1,55 @@
+{
+  "frameworks": [
+    {
+      "name": "Bounded Evidence Accumulation",
+      "role": "extended",
+      "one_line": "Noisy evidence samples accumulate to threshold; extended here to value-based choice."
+    },
+    {
+      "name": "value-based decision making",
+      "role": "primary_lens",
+      "one_line": "Preference choices treated as sequential sampling over fluctuating subjective values."
+    },
+    {
+      "name": "perceptual decision making",
+      "role": "compared_against",
+      "one_line": "Contrasted as the case where temporally uncorrelated noise is reasonable."
+    }
+  ],
+  "core_question": "Are subjective values stable over a sequence of value-based decisions, or do internal-state fluctuations leave detectable traces in choices?",
+  "key_assumptions": [
+    "Subjective values depend on the decision maker's internal state",
+    "Internal states (and hence values) may change or undergo revaluation over time",
+    "Choice inconsistencies have been attributed to temporally uncorrelated noise on stable values"
+  ],
+  "manipulations": [
+    "Sequence of value-based decisions over familiar items",
+    "Comparison of value-based vs perceptual decision regimes"
+  ],
+  "key_findings": [
+    "Argues that temporally uncorrelated noise assumption is unreasonable for value-based decisions",
+    "Posits that hypothetical value changes should be detectable in sequential choice patterns"
+  ],
+  "interpretations": [
+    "Value construction via sequential sampling can account for serial dependencies in preference choices",
+    "Choice inconsistencies reflect drifting subjective values rather than only stable-value noise"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "serial dependence in decisions",
+    "value-based decision making",
+    "bounded evidence accumulation",
+    "sequential sampling",
+    "subjective value fluctuation",
+    "internal state dynamics",
+    "preference choice",
+    "temporally correlated noise"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "383d938ea8408688035993df801c49ec",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:42:47+09:00",
+  "review_status": "auto_unreviewed"
+}

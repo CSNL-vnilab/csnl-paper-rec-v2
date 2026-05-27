@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "evidence accumulation / drift-diffusion",
+      "role": "primary_lens",
+      "one_line": "history biases enter via accumulation drift and starting point"
+    },
+    {
+      "name": "choice history bias",
+      "role": "primary_lens",
+      "one_line": "idiosyncratic repetition/alternation tendencies in random sequences"
+    },
+    {
+      "name": "cortical circuit decomposition (sensory/associative/motor)",
+      "role": "context",
+      "one_line": "asks which cortical stage produces history-dependent behavior"
+    }
+  ],
+  "core_question": "Which cortical circuits generate idiosyncratic choice repetition and alternation biases during perceptual decisions?",
+  "key_assumptions": [
+    "previous-trial signals can bias either drift or starting point",
+    "MEG band-limited activity indexes region-specific decision signals",
+    "sensory stimuli are independent across trials"
+  ],
+  "manipulations": [
+    "previous choice content (tracked trial-by-trial)",
+    "previous motor action (tracked trial-by-trial)",
+    "cortical region (parietal vs motor vs sensory)"
+  ],
+  "key_findings": [
+    "sustained gamma-band activity in posterior parietal cortex tracks the previous choice",
+    "sustained beta-band activity in motor cortex inversely reflects the previous motor action",
+    "parietal signal biases evidence accumulation toward repetition; motor signal biases starting point toward alternation",
+    "parietal but not motor signal mediates previous-to-current choice impact and tracks individual repetition bias"
+  ],
+  "interpretations": [
+    "persistent parietal activity is the cortical locus of perceptual choice repetition bias",
+    "motor and parietal history signals dissociate in both band and computational role"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "choice history bias",
+    "perceptual decision making",
+    "evidence accumulation",
+    "drift-diffusion starting point",
+    "posterior parietal cortex",
+    "persistent activity",
+    "gamma-band MEG",
+    "beta-band motor cortex"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "103a96affe7199ad7ec1a73ce6b9551c",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:40:41+09:00",
+  "review_status": "auto_unreviewed"
+}

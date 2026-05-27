@@ -1,0 +1,55 @@
+{
+  "canonical_id": "a9808b913d83bae24fb3281c3f6d2be9",
+  "frameworks": [
+    {
+      "name": "perceptual discrimination as ground truth for similarity",
+      "role": "primary_lens",
+      "one_line": "Subjective similarity tracks an observer's own near-threshold discrimination capacity."
+    },
+    {
+      "name": "ill-posed similarity problem",
+      "role": "compared_against",
+      "one_line": "Prior view that similarity lacks an objective basis is challenged."
+    },
+    {
+      "name": "signal-detection / near-threshold psychophysics",
+      "role": "context",
+      "one_line": "Discrimination capacity is operationalized in near-threshold settings."
+    }
+  ],
+  "core_question": "Do subjective perceptual similarity judgments reflect an individual's own perceptual discrimination capacities?",
+  "key_assumptions": [
+    "Discrimination capacity can serve as a quasi-objective ground truth for similarity",
+    "Similarity reflects feature dimensions on which the observer is themselves limited",
+    "Near-threshold discrimination is the relevant operating regime"
+  ],
+  "manipulations": [
+    "Pairs of face stimuli used in similarity ranking",
+    "Same pairs probed in a separate discrimination task",
+    "Within-subject comparison across stimulus pairs"
+  ],
+  "key_findings": [
+    "Positive association between discrimination capacity and subjective dissimilarity",
+    "Association is specific to each individual observer"
+  ],
+  "interpretations": [
+    "Perceptual similarity judgments reflect and predict one's own discrimination capacities",
+    "An individual's discrimination capacity provides a quasi-objective basis for similarity"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "perceptual similarity",
+    "discrimination capacity",
+    "near-threshold discrimination",
+    "face similarity judgments",
+    "individual differences in perception",
+    "subjective dissimilarity",
+    "ill-posed similarity problem"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:42:47+09:00",
+  "review_status": "auto_unreviewed"
+}

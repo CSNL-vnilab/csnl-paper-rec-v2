@@ -1,0 +1,55 @@
+{
+  "canonical_id": "8010e72e6a62bea9de6d073d5f1054fc",
+  "title": "Testing the generalization of neural representations",
+  "year": 2023,
+  "venue": "NeuroImage",
+  "doi": "10.1016/j.neuroimage.2023.120258",
+  "is_preprint": false,
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "multivariate pattern analysis",
+      "role": "primary_lens",
+      "one_line": "decoder-based pattern generalization across time and contexts in mass neural signals"
+    },
+    {
+      "name": "pattern-based encoding models",
+      "role": "alternative_lens",
+      "one_line": "comparable encoding approach to assess representational similarity"
+    }
+  ],
+  "core_question": "What conclusions about neural representations are valid when pattern generalization is detected in mass signals like LFP, EEG, MEG, or fMRI?",
+  "key_assumptions": [
+    "mass signals reflect mixtures of underlying neural populations",
+    "decoder generalization is the standard probe for representational similarity",
+    "signal mixing and measurement dependencies confound interpretation"
+  ],
+  "manipulations": [
+    "simulated representational similarity (orthogonal vs shared)",
+    "signal mixing structure and measurement dependencies in mass-signal models"
+  ],
+  "key_findings": [
+    "significant cross-context pattern generalization can arise even when true representations are orthogonal",
+    "signal mixing and dependencies between measurements drive spurious generalization"
+  ],
+  "interpretations": [
+    "an accurate estimate of expected generalization under identical representations enables meaningful hypothesis tests",
+    "the authors provide such a baseline to assess similarity and differences across time and contexts"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "pattern generalization",
+    "cross-temporal decoding",
+    "multivariate decoders",
+    "representational similarity",
+    "signal mixing",
+    "mass signals (LFP/EEG/MEG/fMRI)",
+    "encoding models",
+    "orthogonal representations"
+  ],
+  "out_of_scope_note": null,
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:42:47+09:00",
+  "review_status": "auto_unreviewed"
+}

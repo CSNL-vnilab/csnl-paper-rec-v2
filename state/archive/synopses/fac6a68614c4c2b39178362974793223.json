@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "size constancy",
+      "role": "primary_lens",
+      "one_line": "perceptual compensation mapping retinal size to real-world size via recent context"
+    },
+    {
+      "name": "population receptive field modeling",
+      "role": "primary_lens",
+      "one_line": "voxel-wise tuning estimation for topographic object-size maps in parietal cortex"
+    },
+    {
+      "name": "central tendency / serial dependence",
+      "role": "extended",
+      "one_line": "perceptual biases toward stimulus-set mean and previous trial"
+    }
+  ],
+  "core_question": "Does the range of recently viewed object sizes bias both perceived object size and its parietal neural representation?",
+  "key_assumptions": [
+    "size perception integrates context of recent retinal sizes",
+    "parietal object-size maps reflect perceptual rather than purely retinal size",
+    "pRF tuning can index size preference and width"
+  ],
+  "manipulations": [
+    "presented object size range (small 0.05-1.4 deg vs large 0.1-2.8 deg)",
+    "trial history (previous trial size for serial dependence)"
+  ],
+  "key_findings": [
+    "central tendency: perceived sizes attracted toward across-trial mean",
+    "serial dependence: perceived size attracted toward previous trial's size",
+    "parietal size preferences and tuning widths follow presented range",
+    "neural changes are smaller than changes in presented object sizes"
+  ],
+  "interpretations": [
+    "size constancy uses recent context to bias both perception and parietal coding",
+    "parietal object-size maps are perceptual, not strictly retinotopic"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "size constancy",
+    "central tendency bias",
+    "serial dependence",
+    "parietal object size map",
+    "population receptive field",
+    "7T fMRI",
+    "topographic maps",
+    "context-dependent perception"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "fac6a68614c4c2b39178362974793223",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:42:47+09:00",
+  "review_status": "auto_unreviewed"
+}

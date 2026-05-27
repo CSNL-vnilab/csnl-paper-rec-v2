@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "probabilistic inference",
+      "role": "primary_lens",
+      "one_line": "Models history-dependent bias as inference from prior trial observations"
+    },
+    {
+      "name": "recurrent attractor network with short-term facilitation",
+      "role": "extended",
+      "one_line": "Synaptic facilitation reshapes connectivity to encode trial history"
+    },
+    {
+      "name": "static-connectivity recurrent network",
+      "role": "compared_against",
+      "one_line": "Baseline working-memory network without short-term facilitation"
+    }
+  ],
+  "core_question": "How do synaptic facilitation dynamics produce serial-dependence bias in visual working memory across trials?",
+  "key_assumptions": [
+    "Recalled target location can be biased by previous-trial target",
+    "Short-term facilitation can imprint trial history on network connectivity",
+    "Timescale separation justifies a low-dimensional bias description"
+  ],
+  "manipulations": [
+    "Compared network with short-term facilitation vs static connectivity",
+    "Varied target sequence statistics (repetitive vs uncorrelated sequences)",
+    "Linked probabilistic inference model to recurrent network computations"
+  ],
+  "key_findings": [
+    "Recalled target location is biased toward the previous-trial target",
+    "Facilitation-based network retains repetitively presented targets better than uncorrelated sequences",
+    "Low-dimensional description of trial-to-trial bias derived via timescale separation"
+  ],
+  "interpretations": [
+    "Short-term facilitation implements a prediction from prior observations, generating history-dependent bias",
+    "Interference is functionally adaptive when target sequences are correlated"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "working memory interference",
+    "serial dependence",
+    "history-dependent bias",
+    "short-term synaptic facilitation",
+    "recurrent network model",
+    "probabilistic inference",
+    "visual working memory",
+    "trial-to-trial bias"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "0cceb618950776942b7544306dbee4c3",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

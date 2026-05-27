@@ -1,0 +1,52 @@
+{
+  "frameworks": [
+    {
+      "name": "serial dependence",
+      "role": "primary_lens",
+      "one_line": "perceptual decisions biased toward stimuli from recent past trials"
+    },
+    {
+      "name": "visual working memory",
+      "role": "extended",
+      "one_line": "VWM resource availability modulates the strength of serial dependence"
+    }
+  ],
+  "core_question": "Does the availability of visual working memory resources affect serial dependence in perception?",
+  "key_assumptions": [
+    "serial dependence reflects a bias from previously encountered stimuli",
+    "VWM load taxes a shared resource that supports trial-to-trial integration",
+    "orientation reproduction indexes perceptual decision bias"
+  ],
+  "manipulations": [
+    "presence vs absence of an additional VWM task on alternating trials",
+    "level of VWM load (varied randomly)",
+    "load on previous trial vs load on present trial"
+  ],
+  "key_findings": [
+    "an additional VWM task altered serial dependence overall",
+    "high load on the previous trial reduced serial dependence",
+    "high load on the present trial increased serial dependence",
+    "these load effects were independent of effects on reproduction precision"
+  ],
+  "interpretations": [
+    "serial dependence is intimately linked to VWM resources",
+    "previous-trial vs present-trial load have dissociable roles in regulating the bias"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "serial dependence",
+    "visual working memory load",
+    "orientation reproduction",
+    "perceptual decision bias",
+    "trial-to-trial integration",
+    "memory load modulation",
+    "reproduction precision"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "d2cab26444cf80519cfa38d7ece5a672",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:40:41+09:00",
+  "review_status": "auto_unreviewed"
+}

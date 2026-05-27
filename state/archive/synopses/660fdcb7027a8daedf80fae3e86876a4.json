@@ -1,0 +1,61 @@
+{
+  "frameworks": [
+    {
+      "name": "reference-dependent choice",
+      "role": "primary_lens",
+      "one_line": "choice depends on variance in recent history of offers"
+    },
+    {
+      "name": "arousal-driven valuation",
+      "role": "extended",
+      "one_line": "pharmacologically reducing arousal alters reference-dependence in intertemporal choice"
+    },
+    {
+      "name": "temporal discounting",
+      "role": "context",
+      "one_line": "tendency to prefer immediate over delayed rewards"
+    },
+    {
+      "name": "emotional-arousal account of impulsivity",
+      "role": "compared_against",
+      "one_line": "claim that immediate rewards are more arousing than delayed ones"
+    }
+  ],
+  "core_question": "Does pharmacologically reducing arousal change reference-dependence in intertemporal choice?",
+  "key_assumptions": [
+    "propranolol selectively reduces peripheral arousal",
+    "arousal can be indexed by pupil dilation",
+    "reference-dependence reflects recent-history variance in offers"
+  ],
+  "manipulations": [
+    "propranolol vs control (pharmacological arousal reduction)",
+    "variance structure of the more variable reward option (immediate vs delayed)"
+  ],
+  "key_findings": [
+    "propranolol reduces reference-dependence in intertemporal choices",
+    "choices under propranolol are less influenced by recent offer history",
+    "choices under propranolol are more internally consistent"
+  ],
+  "interpretations": [
+    "arousal causally contributes to reference-dependent intertemporal choice",
+    "context-dependence of valuation is at least partly arousal-mediated"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "intertemporal choice",
+    "reference-dependence",
+    "temporal discounting",
+    "propranolol",
+    "arousal",
+    "pupil dilation",
+    "recent offer history",
+    "context-dependent valuation"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "660fdcb7027a8daedf80fae3e86876a4",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:40:41+09:00",
+  "review_status": "auto_unreviewed"
+}

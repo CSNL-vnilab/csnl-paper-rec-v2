@@ -1,0 +1,50 @@
+{
+  "frameworks": [
+    {
+      "name": "preparatory state / population dynamics",
+      "role": "primary_lens",
+      "one_line": "pre-stimulus population state configures rule-appropriate sensory processing"
+    },
+    {
+      "name": "rule-based sensorimotor transformation",
+      "role": "primary_lens",
+      "one_line": "context rule gates mapping from identical stimuli to motor responses"
+    }
+  ],
+  "core_question": "How does activity along a cortical sensorimotor stream encode the current rule and use it to shape rule-dependent responses to identical sensory stimuli?",
+  "key_assumptions": [
+    "rule information must be represented in neural activity before and during stimulus",
+    "preparatory population states can causally shape subsequent stimulus-evoked responses",
+    "S1, S2, MM, ALM form a relevant cortical sensorimotor processing stream"
+  ],
+  "manipulations": [
+    "rule blocks: lick-to-tactile (reject visual) vs lick-to-visual (reject tactile)",
+    "stimulus modality: tactile (whisker) vs visual",
+    "recording site across the stream: S1, S2, MM, ALM"
+  ],
+  "key_findings": [
+    "single-unit activity in S1, S2, MM and ALM distinguished between the two rules both prior to and in response to the tactile stimulus",
+    "rule-dependent activity present on a single-trial basis across the stream"
+  ],
+  "interpretations": [
+    "rule-dependent preparatory population states are configured ahead of stimulus and may shape stimulus-evoked responses according to the current rule"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "cross-modal sensory selection",
+    "rule switching",
+    "preparatory activity",
+    "sensorimotor transformation",
+    "primary and secondary somatosensory cortex",
+    "anterolateral motor cortex (ALM)",
+    "head-fixed mouse single-unit recording",
+    "context-dependent gating"
+  ],
+  "abstract_coverage": 1.0,
+  "out_of_scope_note": null,
+  "canonical_id": "8a324e3d4b5558dc5cb7efbc788b7f6f",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:42:47+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,52 @@
+{
+  "frameworks": [
+    {
+      "name": "combined brain stimulation and cognitive training",
+      "role": "primary_lens",
+      "one_line": "tDCS paired with multitasking practice to induce persistent, transferable gains"
+    },
+    {
+      "name": "frontoparietal-subcortical multitasking network",
+      "role": "context",
+      "one_line": "prefrontal, parietal, and subcortical activity supports multitasking improvement"
+    }
+  ],
+  "core_question": "How does the brain support transfer of multitasking training gains to untrained tasks following prefrontal tDCS?",
+  "key_assumptions": [
+    "prefrontal cortex is a critical site for multitasking control",
+    "tDCS can modulate training-induced plasticity",
+    "transfer reflects shared neural substrates between trained and untrained tasks"
+  ],
+  "manipulations": [
+    "tDCS site (left vs right prefrontal cortex, 1 mA)",
+    "multitasking training vs control",
+    "pre- vs post-training fMRI and 1-month follow-up"
+  ],
+  "key_findings": [
+    "transfer to a visual search task emerged after left or right prefrontal tDCS plus multitasking training",
+    "transfer gains persisted at 1-month post-training",
+    "right-hemisphere stimulation linked visual search improvement to activity changes in right DLPFC, intraparietal sulcus, and cerebellum"
+  ],
+  "interpretations": [
+    "prefrontal tDCS combined with multitasking training produces durable, transferable cognitive gains",
+    "individual differences in transfer are tied to a right-lateralized frontoparietal-cerebellar network"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "transcranial direct current stimulation",
+    "multitasking training",
+    "training transfer",
+    "dorsolateral prefrontal cortex",
+    "intraparietal sulcus",
+    "cerebellum",
+    "visual search",
+    "individual differences"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "a51da69f6fb9b25af7d03e7522219c19",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:42:47+09:00",
+  "review_status": "auto_unreviewed"
+}

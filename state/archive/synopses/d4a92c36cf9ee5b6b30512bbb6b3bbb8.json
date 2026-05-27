@@ -1,0 +1,50 @@
+{
+  "frameworks": [
+    {
+      "name": "Bayesian inference",
+      "role": "primary_lens",
+      "one_line": "Perceptual decisions modeled as weighted combination of prior and likelihood."
+    },
+    {
+      "name": "heuristic combination",
+      "role": "alternative_lens",
+      "one_line": "Simpler non-Bayesian rule invoked when priors are explicitly communicated."
+    }
+  ],
+  "core_question": "Do humans use implicit (learned) and explicit (communicated) priors in the same way during perceptual inference?",
+  "key_assumptions": [
+    "Perception integrates prior knowledge with sensory likelihood",
+    "Priors can be acquired implicitly through observation or delivered explicitly",
+    "Bayesian modeling can quantify the weights given to prior and likelihood"
+  ],
+  "manipulations": [
+    "Source of the prior: implicit (learned from statistics) vs explicit (communicated)",
+    "Tasks designed to probe prior weighting under matched sensory likelihoods"
+  ],
+  "key_findings": [
+    "Sensory likelihood weights were highly correlated across implicit and explicit tasks, slightly stronger for implicit",
+    "Prior weights were poorly correlated across tasks and markedly smaller when priors were explicit",
+    "Model comparison favored different computations for implicit vs explicit priors"
+  ],
+  "interpretations": [
+    "Implicit priors are integrated more closely to Bayesian optimality, whereas explicit priors are handled by a simpler heuristic",
+    "This dissociation may reconcile prior conflicting reports on whether humans use priors appropriately in perception"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "implicit vs explicit priors",
+    "Bayesian perceptual inference",
+    "prior-likelihood integration",
+    "sensory likelihood weighting",
+    "heuristic combination",
+    "model comparison",
+    "prior learning from statistics"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "d4a92c36cf9ee5b6b30512bbb6b3bbb8",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:40:41+09:00",
+  "review_status": "auto_unreviewed"
+}

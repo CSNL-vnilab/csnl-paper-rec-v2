@@ -1,0 +1,62 @@
+{
+  "frameworks": [
+    {
+      "name": "temporal difference learning",
+      "role": "primary_lens",
+      "one_line": "TD learning with ITI state representation explains dopamine and behavior"
+    },
+    {
+      "name": "contingency-based account",
+      "role": "compared_against",
+      "one_line": "Traditional contingency definition fails to fit observed dopamine and licking"
+    },
+    {
+      "name": "ANCCR causal learning model",
+      "role": "compared_against",
+      "one_line": "Novel causal learning model also conflicts with the data"
+    },
+    {
+      "name": "recurrent neural network",
+      "role": "extended",
+      "one_line": "RNNs trained under TD develop state representations matching handcrafted model"
+    }
+  ],
+  "core_question": "How does prospective contingency between stimulus and outcome shape behavior and ventral striatal dopamine signals during Pavlovian learning?",
+  "key_assumptions": [
+    "Ventral striatal dopamine reflects associative learning signals",
+    "Pavlovian contingency degradation is informative about stimulus-outcome prediction",
+    "An appropriate ITI state representation is required for TD models to fit"
+  ],
+  "manipulations": [
+    "Delivery of additional rewards uncued vs cued",
+    "Pavlovian contingency degradation in mice"
+  ],
+  "key_findings": [
+    "Anticipatory licking decreased when extra rewards were uncued but not when cued",
+    "Dopamine responses to the conditioned stimulus decreased only with uncued extra rewards",
+    "Traditional contingency accounts and ANCCR fail to explain the observed pattern",
+    "TD models with suitable ITI state representation reproduce behavior and dopamine"
+  ],
+  "interpretations": [
+    "TD error can simultaneously describe contingency effects and dopaminergic activity",
+    "Learned state representations, including those discovered by RNNs, bridge contingency and TD signals"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "Pavlovian contingency degradation",
+    "ventral striatal dopamine",
+    "temporal difference error",
+    "ITI state representation",
+    "ANCCR",
+    "associative learning",
+    "recurrent neural network state representation",
+    "anticipatory licking"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "af3a6cef611428166876bf74032743f1",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:40:41+09:00",
+  "review_status": "auto_unreviewed"
+}

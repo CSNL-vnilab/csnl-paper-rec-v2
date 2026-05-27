@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "visual working memory prioritization",
+      "role": "primary_lens",
+      "one_line": "Internal attention sets distinct priority states across stored memoranda."
+    },
+    {
+      "name": "bidirectional memory-perception interactions",
+      "role": "extended",
+      "one_line": "Retroactive and proactive biases between memoranda and incoming probes."
+    },
+    {
+      "name": "double-serial retro-cue paradigm",
+      "role": "context",
+      "one_line": "Methodological frame forcing complete prioritization of one memorandum."
+    }
+  ],
+  "core_question": "Does working memory prioritization modulate retroactive and proactive biases between memoranda and new visual inputs?",
+  "key_assumptions": [
+    "Observers can shift internal attention toward task-relevant memoranda",
+    "Priority states map onto susceptibility to bidirectional report biases",
+    "Prior retrodictive cues confound prioritization incentives"
+  ],
+  "manipulations": [
+    "Prioritization state of two shape memoranda via first retro-cue",
+    "Independent second cue selecting report target (memory 1, memory 2, or probe)",
+    "Insertion of a perceptual probe between cues for comparison"
+  ],
+  "key_findings": [
+    "Robust retroactive and proactive report biases were observed",
+    "Only retroactive biases were modulated by prioritization",
+    "Prioritized memories were more precise with smaller attractive bias toward probe",
+    "Probe reports were biased comparably toward prioritized and unprioritized memories"
+  ],
+  "interpretations": [
+    "Prioritization asymmetrically governs memory-to-percept influence but not percept-to-memory influence",
+    "Priority states modulate susceptibility to retroactive interference selectively"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "visual working memory",
+    "memory prioritization",
+    "retro-cue paradigm",
+    "retroactive bias",
+    "proactive bias",
+    "memory precision",
+    "attractive bias",
+    "perceptual probe interference"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "19c1669734e5284814d679a0c84029c6",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:40:41+09:00",
+  "review_status": "auto_unreviewed"
+}
