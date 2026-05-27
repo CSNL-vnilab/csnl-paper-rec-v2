@@ -1,0 +1,52 @@
+{
+  "frameworks": [
+    {
+      "name": "successor representation",
+      "role": "primary_lens",
+      "one_line": "encodes states by their predictive relationships with future states"
+    },
+    {
+      "name": "reinforcement learning",
+      "role": "context",
+      "one_line": "algorithms by which an agent learns long-term future reward"
+    },
+    {
+      "name": "model-free vs model-based tradeoff",
+      "role": "extended",
+      "one_line": "successor representation negotiates efficiency-flexibility tradeoff between the two"
+    }
+  ],
+  "core_question": "What state representation should the brain use to support reinforcement learning given computational constraints?",
+  "key_assumptions": [
+    "RL algorithms operate over learned state and action representations",
+    "brain architecture imposes constraints on representational choice",
+    "efficiency and flexibility are competing demands on RL"
+  ],
+  "manipulations": [],
+  "key_findings": [
+    "behavioral evidence supports use of successor-representation-like predictive codes",
+    "neural evidence supports successor-representation-like predictive codes",
+    "computational extensions broaden the original successor representation idea"
+  ],
+  "interpretations": [
+    "the successor representation organizes RL by balancing efficiency against flexibility",
+    "predictive state encoding is a useful framework for brain RL"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "successor representation",
+    "reinforcement learning",
+    "predictive state representation",
+    "model-free vs model-based",
+    "state representation",
+    "efficiency flexibility tradeoff",
+    "neural substrates of RL"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "799327ebf8994ce67defa1d1db9f3f62",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:05:00+09:00",
+  "review_status": "auto_unreviewed"
+}

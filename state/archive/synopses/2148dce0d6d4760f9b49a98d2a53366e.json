@@ -1,0 +1,60 @@
+{
+  "frameworks": [
+    {
+      "name": "Representational Similarity Analysis (RSA)",
+      "role": "primary_lens",
+      "one_line": "Comparing representational dissimilarity matrices across modalities to assess second-order similarity."
+    },
+    {
+      "name": "Multivariate noise normalization (NNM)",
+      "role": "extended",
+      "one_line": "Preprocessing step proposed to boost RDM reliability across dissimilarity metrics."
+    },
+    {
+      "name": "GLMdenoise",
+      "role": "compared_against",
+      "one_line": "Alternative noise-reduction pipeline benchmarked against NNM for RSA."
+    }
+  ],
+  "core_question": "Does multivariate noise normalization reliably improve the reliability of neural RDMs for RSA in fMRI?",
+  "key_assumptions": [
+    "RDM correlations across modalities are meaningful only if RDMs are reliable",
+    "Within-subject reliability is a valid criterion for evaluating preprocessing choices",
+    "Multiple dissimilarity metrics should respond consistently to a useful preprocessing step"
+  ],
+  "manipulations": [
+    "Presence/absence of multivariate noise normalization",
+    "Choice of dissimilarity metric",
+    "Region of interest within the same dataset",
+    "Interaction with spatial smoothing and with GLMdenoise"
+  ],
+  "key_findings": [
+    "Impact of NNM on within- and between-subject RDM reliability was highly variable across three fMRI datasets",
+    "Variability persisted across dissimilarity metrics, ROIs, and smoothing levels",
+    "NNM did not consistently outperform GLMdenoise"
+  ],
+  "interpretations": [
+    "NNM's benefits for RSA are not robust and resemble the variability seen with other analysis choices",
+    "Authors advise conservatism before adding preprocessing complexity to RSA pipelines"
+  ],
+  "limitations_noted": [
+    "Tested on three fMRI datasets only; generalization beyond these is unclear"
+  ],
+  "connecting_signals": [
+    "representational similarity analysis",
+    "representational dissimilarity matrix",
+    "multivariate noise normalization",
+    "RDM reliability",
+    "fMRI multivariate pattern analysis",
+    "GLMdenoise",
+    "dissimilarity metrics",
+    "spatial smoothing"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "2148dce0d6d4760f9b49a98d2a53366e",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:56:56+09:00",
+  "review_status": "auto_unreviewed"
+}

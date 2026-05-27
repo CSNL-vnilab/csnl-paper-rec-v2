@@ -1,0 +1,56 @@
+{
+  "frameworks": [
+    {
+      "name": "model-based planning",
+      "role": "primary_lens",
+      "one_line": "agents plan over an internal task model to choose actions"
+    },
+    {
+      "name": "representational abstraction",
+      "role": "extended",
+      "one_line": "task representations as propositional rules over objects and relational categories"
+    },
+    {
+      "name": "cross-domain transfer of solutions",
+      "role": "compared_against",
+      "one_line": "prior accounts emphasizing reuse of solutions from previously learned domains"
+    }
+  ],
+  "core_question": "What form of task representation supports flexible within-domain generalization in human problem-solving?",
+  "key_assumptions": [
+    "human flexibility requires representational abstraction",
+    "the same planning framework can yield different behaviors under different task representations",
+    "object- and relation-based propositional rules are candidate representations"
+  ],
+  "manipulations": [
+    "class of task representation provided to the planning agent",
+    "variation of within-domain task structure across novel grid-based video games",
+    "agent vs. human comparison across the task series"
+  ],
+  "key_findings": [
+    "the same model-based planner produces distinct generalization behaviors under different task representations",
+    "agents with object-and-relation propositional rule representations align with human behavior on novel grid tasks"
+  ],
+  "interpretations": [
+    "within-domain flexibility in humans derives from propositional rule representations over objects and relational categories",
+    "representational abstraction, not just planning machinery, is central to human-like generalization"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "model-based planning",
+    "task representation",
+    "within-domain generalization",
+    "propositional rules",
+    "relational categories",
+    "object-based representations",
+    "grid-based video games",
+    "human problem-solving"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "1d57e7974177e81c2c8bb6c399c2f469",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}

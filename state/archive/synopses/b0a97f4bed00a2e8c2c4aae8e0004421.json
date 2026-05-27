@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "model-based planning",
+      "role": "primary_lens",
+      "one_line": "agents use learned state transition functions to plan over sequential decisions"
+    },
+    {
+      "name": "model sharing / generalization across contexts",
+      "role": "extended",
+      "one_line": "transition functions reused across similar contexts to curb exponential memory cost"
+    },
+    {
+      "name": "reinforcement learning",
+      "role": "context",
+      "one_line": "sequential decision making framed in terms of state, action, and outcome"
+    }
+  ],
+  "core_question": "Do humans share learned state transition models across contexts when context structure permits, and where in the brain is this implemented?",
+  "key_assumptions": [
+    "planning depth amplifies memory demand exponentially in rich environments",
+    "state transition functions can be reused across contexts with shared structure",
+    "behavior and BOLD patterns can index model reuse"
+  ],
+  "manipulations": [
+    "context structure designed so transition knowledge could be shared in some contexts but not others",
+    "sign of received outcome (positive vs negative)"
+  ],
+  "key_findings": [
+    "computational modelling showed participants shared a transition model across contexts where appropriate",
+    "medial temporal lobe BOLD tracked learning of state transitions",
+    "BOLD patterns in MTL correlated across contexts that shared transition information",
+    "transition model was updated more strongly after positive than negative outcomes"
+  ],
+  "interpretations": [
+    "the human MTL implements context-sensitive sharing of state transition models for planning",
+    "model updating is asymmetric, weighted toward positive outcomes"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "state transition function",
+    "model sharing across contexts",
+    "sequential decision making",
+    "model-based planning",
+    "medial temporal lobe",
+    "BOLD pattern similarity",
+    "positive outcome learning asymmetry",
+    "generalization in planning"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "b0a97f4bed00a2e8c2c4aae8e0004421",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}

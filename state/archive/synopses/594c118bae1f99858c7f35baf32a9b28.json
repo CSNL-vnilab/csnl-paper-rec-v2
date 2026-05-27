@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "signal detection theory (meta-d')",
+      "role": "primary_lens",
+      "one_line": "Quantifies metacognitive sensitivity separately from type-1 perceptual sensitivity."
+    },
+    {
+      "name": "magnocellular dysfunction in schizophrenia",
+      "role": "context",
+      "one_line": "Motivates hypothesis that low spatial frequency processing differs in patients."
+    },
+    {
+      "name": "multivariate fMRI decoding of confidence in DLPFC",
+      "role": "alternative_lens",
+      "one_line": "Neural readout of perceptual confidence as a function of spatial frequency."
+    }
+  ],
+  "core_question": "Does spatial frequency of visual stimuli atypically modulate metacognitive performance in schizophrenia patients?",
+  "key_assumptions": [
+    "meta-d' validly indexes metacognitive sensitivity",
+    "schizophrenia involves altered magnocellular (low-SF) visual processing",
+    "yes/no detection responses can be analyzed separately for metacognitive asymmetries"
+  ],
+  "manipulations": [
+    "spatial frequency of grating stimuli (high vs low SF)",
+    "response type (yes- vs no-responses) in detection",
+    "group (schizophrenia patients vs controls)"
+  ],
+  "key_findings": [
+    "Controls showed a yes-response metacognitive advantage only for high-SF stimuli",
+    "Patients showed yes-response advantage for both high- and low-SF stimuli",
+    "DLPFC confidence decoding was higher for high-SF than low-SF in controls but SF-independent in patients"
+  ],
+  "interpretations": [
+    "Schizophrenia is associated with atypical spatial-frequency dependence of metacognition",
+    "Altered low-level visual (magnocellular) processing propagates to higher-order metacognitive computations"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "metacognitive sensitivity",
+    "meta-d'",
+    "spatial frequency",
+    "yes-response advantage",
+    "perceptual confidence decoding",
+    "DLPFC",
+    "schizophrenia visual processing",
+    "magnocellular pathway"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "594c118bae1f99858c7f35baf32a9b28",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:56:56+09:00",
+  "review_status": "auto_unreviewed"
+}

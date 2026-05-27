@@ -1,0 +1,64 @@
+{
+  "frameworks": [
+    {
+      "name": "multivoxel neural reinforcement (decoded neurofeedback)",
+      "role": "primary_lens",
+      "one_line": "pairing reward with target multivoxel activation patterns to retrain affective responses"
+    },
+    {
+      "name": "resting-state functional connectivity",
+      "role": "primary_lens",
+      "one_line": "stable inter-region coupling at rest as readout of network reorganization"
+    },
+    {
+      "name": "Hebbian learning",
+      "role": "compared_against",
+      "one_line": "co-activation-driven synaptic strengthening as candidate mechanism"
+    },
+    {
+      "name": "threat regulation network",
+      "role": "context",
+      "one_line": "prefrontal-amygdala-ventral-temporal circuit for fear processing"
+    }
+  ],
+  "core_question": "Does decoded multivoxel neural reinforcement induce lasting functional connectivity changes within the threat regulation network?",
+  "key_assumptions": [
+    "pre-vs-post resting-state connectivity indexes durable network change",
+    "ventral temporal cortex carries visual representations of phobic targets",
+    "prefrontal regions exert regulatory control over amygdala"
+  ],
+  "manipulations": [
+    "pre vs post neural reinforcement resting-state fMRI sessions",
+    "double-blind placebo-controlled neural reinforcement intervention"
+  ],
+  "key_findings": [
+    "increased connectivity between prefrontal regulatory regions and amygdala after reinforcement",
+    "increased connectivity between prefrontal regulatory regions and ventral temporal cortex",
+    "no evidence of Hebbian-like learning during the reinforcement procedure"
+  ],
+  "interpretations": [
+    "decoded multivoxel neurofeedback may engage mechanisms distinct from conventional neurofeedback",
+    "intervention produces stable network-level changes in threat regulation circuitry"
+  ],
+  "limitations_noted": [
+    "mechanisms behind the behavioral effect remain incompletely understood",
+    "clinical utility for treatment remains unclear"
+  ],
+  "connecting_signals": [
+    "decoded neurofeedback",
+    "multivoxel neural reinforcement",
+    "resting-state functional connectivity",
+    "threat regulation network",
+    "amygdala-prefrontal connectivity",
+    "ventral temporal cortex",
+    "phobia intervention",
+    "Hebbian learning"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "ff18d99b1498affadf70b115a4adee32",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:56:56+09:00",
+  "review_status": "auto_unreviewed"
+}
