@@ -1,0 +1,62 @@
+{
+  "frameworks": [
+    {
+      "name": "recurrent neural network (RNN)",
+      "role": "primary_lens",
+      "one_line": "RNN whose temporal dynamics are aligned to human reaction times"
+    },
+    {
+      "name": "Wong-Wang decision-making model",
+      "role": "extended",
+      "one_line": "popular attractor decision model re-implemented as a trainable deep network"
+    },
+    {
+      "name": "ideal observer",
+      "role": "alternative_lens",
+      "one_line": "speed-accuracy optimal RNN trained without human RT data"
+    },
+    {
+      "name": "convolutional neural network (CNN)",
+      "role": "context",
+      "one_line": "feedforward visual front-end fed into the decision RNN"
+    }
+  ],
+  "core_question": "Can the number of recurrent time steps an RNN takes to decide be aligned to human reaction-time distributions?",
+  "key_assumptions": [
+    "perceptual decisions have rich dynamic structure beyond mean accuracy",
+    "an RNN's iteration count can serve as a proxy for decision latency",
+    "a differentiable approximation to step-count allows gradient training against RTs"
+  ],
+  "manipulations": [
+    "training signal: human RTs vs. no human data (ideal-observer objective)",
+    "stimulus type: artificial vs. natural images",
+    "decision architecture: generic RNN vs. Wong-Wang implementation"
+  ],
+  "key_findings": [
+    "the approximation constrains RNN step counts to match human RTs across psychophysics tasks",
+    "an ideal-observer RNN trained for speed-accuracy tradeoff also fits human RTs",
+    "a deep Wong-Wang model coupled with a CNN accounts for behaviour on natural images"
+  ],
+  "interpretations": [
+    "RT-aligned RNNs unify dynamic decision models with deep vision models",
+    "speed-accuracy optimisation alone yields humanlike temporal behaviour"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "reaction time alignment",
+    "recurrent neural network dynamics",
+    "Wong-Wang decision model",
+    "speed-accuracy tradeoff",
+    "ideal observer",
+    "psychophysics behaviour",
+    "CNN perceptual decision-making",
+    "deep learning model of behaviour"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "e55ece64cc3a6a2d791e304d2dc3a7ff",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:47:36+09:00",
+  "review_status": "auto_unreviewed"
+}

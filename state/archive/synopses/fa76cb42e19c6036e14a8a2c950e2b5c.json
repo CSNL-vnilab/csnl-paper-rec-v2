@@ -1,0 +1,50 @@
+{
+  "frameworks": [
+    {
+      "name": "population receptive field (pRF) modeling",
+      "role": "primary_lens",
+      "one_line": "Model-based fit of receptive field position and size from fMRI time series."
+    },
+    {
+      "name": "retinotopic mapping",
+      "role": "context",
+      "one_line": "Mapping visual field position to cortical location via spatially modulated stimuli."
+    }
+  ],
+  "core_question": "What is the large-scale retinotopic organization of human visual cortex measured with ultrahigh-field 7T fMRI across a large healthy adult cohort?",
+  "key_assumptions": [
+    "pRF position and size are stable summaries of voxel response to visual field stimulation",
+    "Time series can be meaningfully averaged across subjects at matched cortical/subcortical locations"
+  ],
+  "manipulations": [
+    "Spatially modulated visual stimuli for retinotopic mapping",
+    "Individual-subject vs. group-average analysis",
+    "Split-half within-subject comparison"
+  ],
+  "key_findings": [
+    "Robust pRF signals across occipital, temporal, parietal, frontal cortex and subcortical areas",
+    "Group-average results agree with previously published visual area parcellations",
+    "Split-half analyses show strong within-subject reliability"
+  ],
+  "interpretations": [
+    "The dataset and analysis provide reliable estimates of pRF position and size at high spatial resolution across a large cohort"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "7 Tesla fMRI",
+    "population receptive field",
+    "retinotopic mapping",
+    "Human Connectome Project",
+    "visual cortex parcellation",
+    "individual-subject retinotopy",
+    "group-average pRF",
+    "split-half reliability"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "fa76cb42e19c6036e14a8a2c950e2b5c",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:47:36+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,52 @@
+{
+  "frameworks": [
+    {
+      "name": "distributed systems view",
+      "role": "primary_lens",
+      "one_line": "WM storage spans multiple interacting brain regions rather than one"
+    },
+    {
+      "name": "sensory recruitment hypothesis",
+      "role": "extended",
+      "one_line": "visual cortex contributes to but does not solely house visual WM"
+    },
+    {
+      "name": "non-sensory (frontoparietal) WM account",
+      "role": "compared_against",
+      "one_line": "claim that visual cortex is non-essential for visual WM storage"
+    }
+  ],
+  "core_question": "Is visual working memory storage localized to a single region, or distributed across multiple brain regions?",
+  "key_assumptions": [
+    "WM storage and its neural substrates can be dissociated from broader WM processes",
+    "evidence from multiple regions can be integrated into a single account",
+    "visual regions can carry storage-related signals, not only sensory ones"
+  ],
+  "manipulations": [],
+  "key_findings": [
+    "inconsistencies identified in claims that visual cortex is non-essential for visual WM",
+    "wide array of brain regions show involvement in visual WM"
+  ],
+  "interpretations": [
+    "visual regions play a critical role in visual WM storage",
+    "WM storage is distributed, so focus should shift to how regional representations complement and interact"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "visual working memory",
+    "distributed systems view",
+    "sensory recruitment",
+    "visual cortex storage",
+    "frontoparietal cortex",
+    "neural substrates of WM",
+    "regional representations",
+    "WM debate"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "514659fd61abd1d7c24763af9fbacd79",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:47:36+09:00",
+  "review_status": "auto_unreviewed"
+}

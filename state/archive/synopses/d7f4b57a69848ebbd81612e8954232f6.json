@@ -1,0 +1,56 @@
+{
+  "frameworks": [
+    {
+      "name": "dynamic belief updating",
+      "role": "primary_lens",
+      "one_line": "evidence accumulation modulated to track hidden state changes"
+    },
+    {
+      "name": "pupil-linked arousal",
+      "role": "extended",
+      "one_line": "phasic pupil responses index dynamic gain on evidence samples"
+    },
+    {
+      "name": "psychosis proneness (continuum)",
+      "role": "context",
+      "one_line": "subclinical psychotic experiences in community sample"
+    }
+  ],
+  "core_question": "Do individual differences in dynamic belief updating and phasic arousal relate to psychosis proneness?",
+  "key_assumptions": [
+    "optimal updating in changing environments requires dynamic modulation of accumulation",
+    "phasic pupil responses index arousal-driven gain on evidence",
+    "psychosis lies on a continuum into the general population"
+  ],
+  "manipulations": [
+    "evidence samples within trials of a changing-environment task",
+    "individual differences in subclinical psychotic experiences"
+  ],
+  "key_findings": [
+    "psychosis-prone individuals show less flexible belief updating",
+    "diminished behavioral impact of late evidence samples in this group",
+    "smaller phasic pupil responses in psychosis-prone individuals",
+    "less reliable pupil encoding of computational updating variables"
+  ],
+  "interpretations": [
+    "arousal-linked gain modulation of evidence accumulation is altered along the psychosis continuum"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "belief updating",
+    "evidence accumulation",
+    "changing environment",
+    "phasic pupil response",
+    "central arousal",
+    "psychosis proneness",
+    "individual differences",
+    "dynamic gain modulation"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "d7f4b57a69848ebbd81612e8954232f6",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:47:36+09:00",
+  "review_status": "auto_unreviewed"
+}

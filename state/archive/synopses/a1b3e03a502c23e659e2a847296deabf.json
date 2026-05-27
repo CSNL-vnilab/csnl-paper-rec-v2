@@ -1,0 +1,61 @@
+{
+  "frameworks": [
+    {
+      "name": "deep recurrent neural network (RNN)",
+      "role": "primary_lens",
+      "one_line": "RNN trained on magnitude comparison serves as model system alongside humans"
+    },
+    {
+      "name": "neural state space / population geometry",
+      "role": "primary_lens",
+      "one_line": "representational geometry of parallel context-specific number lines analyzed in brain and RNN"
+    },
+    {
+      "name": "neural normalisation",
+      "role": "extended",
+      "one_line": "normalisation supports cross-context alignment of magnitude codes"
+    },
+    {
+      "name": "abstract relational generalisation",
+      "role": "context",
+      "one_line": "framework for transferring 'more/less' relations across physical scales"
+    }
+  ],
+  "core_question": "How do humans and recurrent networks represent magnitude so that relational knowledge generalises across contexts on different physical scales?",
+  "key_assumptions": [
+    "magnitude comparison ('more/less') is a simple abstract relation",
+    "human brain signals and RNN hidden unit activity are comparable via multivariate analysis",
+    "contexts can share relational structure while differing in physical scale"
+  ],
+  "manipulations": [
+    "context defining the physical scale of magnitudes to be compared",
+    "comparison of human neural signals vs. trained RNN hidden activity"
+  ],
+  "key_findings": [
+    "both humans and RNNs developed parallel neural 'number lines' for each context",
+    "the per-context number state spaces were aligned across contexts in both systems",
+    "alignment was structured to explicitly facilitate generalisation of 'more' and 'less'"
+  ],
+  "interpretations": [
+    "neural normalisation plays a previously overlooked role in supporting transfer of abstract relational knowledge",
+    "shared geometric alignment is a common mechanism for magnitude generalisation in brains and machine learning systems"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "magnitude comparison",
+    "neural number line",
+    "cross-context generalisation",
+    "neural state space alignment",
+    "recurrent neural network model of cognition",
+    "abstract relational knowledge",
+    "neural normalisation",
+    "human-RNN representational comparison"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "a1b3e03a502c23e659e2a847296deabf",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:47:36+09:00",
+  "review_status": "auto_unreviewed"
+}

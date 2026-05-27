@@ -1,0 +1,64 @@
+{
+  "frameworks": [
+    {
+      "name": "attractor neural network",
+      "role": "primary_lens",
+      "one_line": "recurrent network where memories are basins of attraction subject to consolidation"
+    },
+    {
+      "name": "Hebbian learning with synaptic decay",
+      "role": "extended",
+      "one_line": "classical Hebbian encoding extended by decay and stochastic rehearsal"
+    },
+    {
+      "name": "memory consolidation theory",
+      "role": "extended",
+      "one_line": "novel stochastic-rehearsal mechanism with rates proportional to basin size"
+    },
+    {
+      "name": "catastrophic forgetting in continual learning",
+      "role": "context",
+      "one_line": "computational problem of interference between sequentially encoded memories"
+    }
+  ],
+  "core_question": "How can a recurrent neural network continually store new memories over a lifetime without catastrophic forgetting?",
+  "key_assumptions": [
+    "memories form basins of attraction in a recurrent network",
+    "synaptic weights decay over time",
+    "rehearsal rate scales with basin of attraction size"
+  ],
+  "manipulations": [
+    "stochastic rehearsal rates proportional to basin size",
+    "synaptic decay time relative to memory lifetime",
+    "circuit perturbations to mimic neurological trauma",
+    "number of neurons in the network"
+  ],
+  "key_findings": [
+    "memory lifetimes extend much longer than the synaptic decay time",
+    "retrieval probability gracefully decays with memory age",
+    "number of retrievable memories scales as a power of neuron count",
+    "perturbations produce temporally-graded retrograde and anterograde deficits"
+  ],
+  "interpretations": [
+    "self-amplified stochastic consolidation enables lifelong memory in recurrent circuits",
+    "the model captures empirically observed memory impairments following trauma"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "continual learning",
+    "catastrophic forgetting",
+    "stochastic memory consolidation",
+    "Hebbian learning",
+    "attractor basins",
+    "synaptic decay",
+    "retrograde and anterograde amnesia",
+    "recurrent neural network memory"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "78b35ba3cab04ce7e9140210949be1fb",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

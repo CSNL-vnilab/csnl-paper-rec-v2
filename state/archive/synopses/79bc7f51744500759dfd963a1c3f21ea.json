@@ -1,0 +1,46 @@
+{
+  "frameworks": [
+    {
+      "name": "divisive normalization",
+      "role": "primary_lens",
+      "one_line": "Neuron's activity is scaled by activity of a larger neuronal pool."
+    },
+    {
+      "name": "canonical computation",
+      "role": "context",
+      "one_line": "Shared computational motifs across circuits, regions, and species."
+    }
+  ],
+  "core_question": "Does divisive normalization serve as a canonical computation for neural information coding across brain regions and modalities?",
+  "key_assumptions": [
+    "Common computational motifs recur across neural circuits",
+    "Neural coding can be characterized by input-output transformations",
+    "Contextual modulation arises from pooled neuronal activity"
+  ],
+  "manipulations": [],
+  "key_findings": [
+    "Divisive normalization documented across brain regions, hierarchical levels, and sensory modalities",
+    "Normalization extends beyond sensory processing to attention, multisensory integration, and decision making"
+  ],
+  "interpretations": [
+    "Divisive normalization qualifies as a canonical computation introducing intrinsic contextual modulation into coding"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "divisive normalization",
+    "canonical computation",
+    "contextual modulation",
+    "gain control",
+    "multisensory integration",
+    "attention",
+    "decision making",
+    "neural population coding"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "79bc7f51744500759dfd963a1c3f21ea",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:47:36+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,53 @@
+{
+  "frameworks": [
+    {
+      "name": "Bayesian models of behavior and neural data",
+      "role": "primary_lens",
+      "one_line": "Family of models formalizing how uncertainty shapes behavior and neural computation"
+    },
+    {
+      "name": "graphical models",
+      "role": "extended",
+      "one_line": "Used as a unifying framework to compare assumptions across Bayesian approaches"
+    },
+    {
+      "name": "neural representation of uncertainty",
+      "role": "context",
+      "one_line": "Reviewed theories of how brains encode probability distributions"
+    }
+  ],
+  "core_question": "How do different Bayesian models of behavior and neural data relate to one another under shared assumptions about the world?",
+  "key_assumptions": [
+    "Uncertainty from unreliable or incomplete information affects behavior",
+    "Behavior can be characterized as minimizing the effect of uncertainty",
+    "Different Bayesian models derive from different assumptions about the world",
+    "Graphical models can expose structural commonalities across approaches"
+  ],
+  "manipulations": [],
+  "key_findings": [
+    "Bayesian models of behavior and neural data form a diverse family tied to differing world assumptions",
+    "Graphical-model analysis reveals commonalities and differences across these Bayesian approaches",
+    "Multiple candidate theories exist for how the brain itself represents uncertainty"
+  ],
+  "interpretations": [
+    "A graphical-model lens clarifies how disparate Bayesian behavioral and neural models relate to one another",
+    "Uncertainty representation is a unifying problem that organizes the space of Bayesian theories of the brain"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "Bayesian models of behavior",
+    "graphical models",
+    "uncertainty representation in the brain",
+    "structure of the world",
+    "neural correlates of probabilistic inference",
+    "review of Bayesian approaches",
+    "behavior under uncertainty"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "fd71c60f63d04979e38b59fe345f67f6",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:47:36+09:00",
+  "review_status": "auto_unreviewed"
+}
