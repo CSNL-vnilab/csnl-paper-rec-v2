@@ -1,0 +1,56 @@
+{
+  "frameworks": [
+    {
+      "name": "population coding / neural ensemble representation",
+      "role": "primary_lens",
+      "one_line": "Decision variable is carried by a population whose active members change over time."
+    },
+    {
+      "name": "action-linked decision representation in LIP",
+      "role": "extended",
+      "one_line": "Single-neuron action-locked code is extended to action-invariant ensemble code."
+    },
+    {
+      "name": "receptive field remapping",
+      "role": "context",
+      "one_line": "Perisaccadic RF remapping is generalized from perception to ongoing cognition."
+    }
+  ],
+  "core_question": "Can lateral intraparietal cortex sustain an evolving decision across intervening actions that disrupt the action-target linkage of individual neurons?",
+  "key_assumptions": [
+    "LIP single-neuron decision signals are tied to a specific action / response field",
+    "An action that breaks the response-field linkage should disrupt the single-neuron code",
+    "Simultaneously recorded ensembles can reveal continuity invisible to single units"
+  ],
+  "manipulations": [
+    "Intervening actions inserted during an ongoing decision",
+    "Simultaneous multi-neuron recording in two rhesus monkeys"
+  ],
+  "key_findings": [
+    "Intervening actions disrupt decision representation in individual LIP neurons",
+    "The ensemble preserves the decision by handing off information from currently active to post-action neurons",
+    "Decision representation generalizes across actions and transcends the original frame of reference"
+  ],
+  "interpretations": [
+    "LIP carries an evolving decision via population hand-off rather than fixed single-neuron codes",
+    "Receptive-field remapping logic extends from perceptual stability to continuity of a thought process"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "lateral intraparietal cortex",
+    "decision formation",
+    "frame of reference",
+    "ensemble coding",
+    "receptive field remapping",
+    "perisaccadic remapping",
+    "rhesus monkey electrophysiology",
+    "evidence accumulation across actions"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "fd2b24ee16d4d58a114f5d1f9826895f",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:13:20+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,62 @@
+{
+  "frameworks": [
+    {
+      "name": "cortical excitability and perceptual learning",
+      "role": "primary_lens",
+      "one_line": "Excitability changes index learning-related plasticity in visual cortex"
+    },
+    {
+      "name": "transcranial direct current stimulation (tDCS) neuromodulation",
+      "role": "primary_lens",
+      "one_line": "Anodal vs cathodal vs sham DC polarization modulates V1 activity"
+    },
+    {
+      "name": "motor-cortex stimulation analogy",
+      "role": "context",
+      "one_line": "Motor-learning excitability findings motivate the visual-domain extension"
+    }
+  ],
+  "core_question": "Does anodal tDCS over V1 enhance visual perceptual learning and shift cortical excitability in healthy humans?",
+  "key_assumptions": [
+    "Paired-stimulation VEP ratios index V1 excitability",
+    "Phosphene thresholds index V1 excitability",
+    "Anodal tDCS upregulates and cathodal downregulates cortical excitability",
+    "Orientation-discrimination performance reflects perceptual learning"
+  ],
+  "manipulations": [
+    "tDCS polarity (anodal vs cathodal vs sham) over V1",
+    "Stimulation over four consecutive days",
+    "Orientation-discrimination task during stimulation",
+    "Pre vs post measurement of phosphene threshold and ps-VEP"
+  ],
+  "key_findings": [
+    "Anodal tDCS improved visual discrimination learning relative to sham",
+    "Phosphene thresholds were reduced after anodal tDCS",
+    "Paired-stimulation VEP ratios increased after anodal tDCS",
+    "Cathodal tDCS had minor or no effect on learning"
+  ],
+  "interpretations": [
+    "Anodal tDCS over V1 enhances perceptual learning by increasing cortical excitability",
+    "Excitability shifts in V1 may serve as a marker of visual learning effects"
+  ],
+  "limitations_noted": [
+    "Pilot study design"
+  ],
+  "connecting_signals": [
+    "transcranial direct current stimulation",
+    "primary visual cortex V1",
+    "visual perceptual learning",
+    "orientation-discrimination task",
+    "phosphene threshold",
+    "paired-stimulation visual-evoked potential",
+    "cortical excitability",
+    "anodal vs cathodal stimulation"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "4eaad0118d5f0eeb4cc877478beb4461",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

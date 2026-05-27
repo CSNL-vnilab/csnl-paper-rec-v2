@@ -1,0 +1,53 @@
+{
+  "frameworks": [
+    {
+      "name": "dynamical systems theory",
+      "role": "primary_lens",
+      "one_line": "Mechanistic framework for time-varying neural activity and stability under perturbation"
+    },
+    {
+      "name": "stationary localized statistical analysis",
+      "role": "compared_against",
+      "one_line": "Standard neuroimaging approach that the paper argues is too static and local"
+    },
+    {
+      "name": "forward modeling of neural dynamics",
+      "role": "extended",
+      "one_line": "Maps neural dynamics by generating predicted activity from candidate mechanisms"
+    }
+  ],
+  "core_question": "How can dynamical systems theory reshape interpretation of human neuroimaging to better link it to neural mechanisms and behavior?",
+  "key_assumptions": [
+    "Brain activity is time-varying yet partially stable under perturbation",
+    "Mechanistic interpretation requires moving beyond stationary statistical descriptions",
+    "Global, dynamic, and generative modeling perspectives are complementary"
+  ],
+  "manipulations": [],
+  "key_findings": [
+    "Identifies three shifts: from local to global, from static snapshots to dynamics, and toward forward modeling",
+    "Argues current statistical neuroimaging cannot directly link to underlying neural mechanisms",
+    "Position paper review rather than empirical result set"
+  ],
+  "interpretations": [
+    "Dynamical systems perspective can enrich understanding of brain mechanisms in health and psychopathology",
+    "Embracing dynamics offers a mechanistic bridge between neuroimaging and behavior"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "dynamical systems theory",
+    "human neuroimaging",
+    "forward models of neural dynamics",
+    "time-varying brain activity",
+    "global brain dynamics",
+    "stability and perturbation",
+    "mechanistic interpretation of fMRI",
+    "psychopathology dynamics"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "1cd8e21800eb2173d7289b5689572ba6",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

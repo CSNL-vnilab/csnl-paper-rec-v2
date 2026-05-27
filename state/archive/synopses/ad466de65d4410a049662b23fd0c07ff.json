@@ -1,0 +1,59 @@
+{
+  "frameworks": [
+    {
+      "name": "corticocortical feedback",
+      "role": "primary_lens",
+      "one_line": "Top-down feedback from extrastriate areas modulates V1 responses"
+    },
+    {
+      "name": "surround suppression",
+      "role": "extended",
+      "one_line": "Receptive-field surround reduces center response; feedback contributes to it"
+    },
+    {
+      "name": "reversible cortical inactivation",
+      "role": "primary_lens",
+      "one_line": "Cooling V2/V3 to causally test feedback contribution to V1"
+    }
+  ],
+  "core_question": "Does corticocortical feedback from V2 and V3 contribute to surround suppression and other receptive-field properties in V1 of alert primates?",
+  "key_assumptions": [
+    "Cortical cooling reversibly inactivates feedback without confounding effects",
+    "V1 receptive-field properties reflect contributions from both feedforward and feedback inputs",
+    "Alert-monkey recordings reveal feedback effects masked under anesthesia"
+  ],
+  "manipulations": [
+    "Reversible inactivation of V2 and V3 via cortical cooling",
+    "Stimulus diameter restricted to RF center vs extending beyond center",
+    "Low vs high stimulus contrast",
+    "Extended contours for end-stopping assessment"
+  ],
+  "key_findings": [
+    "Inactivating V2/V3 feedback produced both suppression and facilitation for center stimuli with small reductions in orientation selectivity",
+    "Removing feedback strongly facilitated responses to large stimuli, reducing surround suppression at both low and high contrast",
+    "Eliminating feedback reduced end-stopping for extended contours",
+    "Inactivation effects were largest in neurons with strongest baseline surround suppression and matched the timing of surround suppression"
+  ],
+  "interpretations": [
+    "Corticocortical feedback from V2 and V3 directly contributes to surround suppression in V1",
+    "Feedback influences are stronger and more diverse in alert than in anesthetized animals"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "corticocortical feedback",
+    "surround suppression",
+    "V1 receptive field",
+    "extrastriate cortex inactivation",
+    "cortical cooling",
+    "end-stopping",
+    "orientation selectivity",
+    "alert primate visual cortex"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "ad466de65d4410a049662b23fd0c07ff",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

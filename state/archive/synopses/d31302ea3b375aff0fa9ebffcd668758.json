@@ -1,0 +1,53 @@
+{
+  "frameworks": [
+    {
+      "name": "bounded drift-diffusion",
+      "role": "primary_lens",
+      "one_line": "Evidence accumulated to a time-varying stopping bound that terminates the decision."
+    },
+    {
+      "name": "speed-accuracy tradeoff with time cost",
+      "role": "extended",
+      "one_line": "Optimal policy lowers the bound over elapsed time to balance accuracy against time cost."
+    }
+  ],
+  "core_question": "Does the criterion to terminate a perceptual decision become more lax over time, and is that decline modulated by the cost of time?",
+  "key_assumptions": [
+    "Decisions are made by sequential evidence accumulation to a bound",
+    "Participants aim to maximize reward per unit time",
+    "Time cost can be experimentally induced via a provisional deadline"
+  ],
+  "manipulations": [
+    "Motion difficulty varied across trials in a random-dot direction-discrimination task",
+    "Time pressure increased midway by canceling trials exceeding a provisional deadline (<5% canceled)",
+    "Trial-by-trial points feedback for correct vs erroneous choices"
+  ],
+  "key_findings": [
+    "The deadline manipulation made participants faster and less accurate even though few trials were canceled",
+    "Choices and reaction times were captured by a bounded drift-diffusion model",
+    "Stopping bounds declined as a function of elapsed time within a trial in all phases",
+    "The decline in bounds was exaggerated under the higher time-cost regime"
+  ],
+  "interpretations": [
+    "A time-varying collapsing bound implements the optimal speed-accuracy tradeoff under time costs",
+    "Subjects adjust the urgency of decision termination in response to imposed time pressure"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "drift-diffusion model",
+    "collapsing decision bound",
+    "speed-accuracy tradeoff",
+    "perceptual decision making",
+    "random-dot motion discrimination",
+    "reaction time",
+    "cost of time",
+    "deliberation time"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "d31302ea3b375aff0fa9ebffcd668758",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:13:20+09:00",
+  "review_status": "auto_unreviewed"
+}

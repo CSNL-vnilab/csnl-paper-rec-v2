@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "continuous vs categorical representations in VWM",
+      "role": "primary_lens",
+      "one_line": "Color memory stored as either fine-grained or category-level"
+    },
+    {
+      "name": "pupillometry as proxy for mental effort",
+      "role": "primary_lens",
+      "one_line": "Pupil dilation indexes cognitive effort during VWM maintenance"
+    },
+    {
+      "name": "limited-capacity visual working memory",
+      "role": "context",
+      "one_line": "VWM capacity is bounded so representation format trades off load"
+    }
+  ],
+  "core_question": "Do continuous VWM representations require more mental effort than categorical ones, and does load force a switch?",
+  "key_assumptions": [
+    "Pupil size proxies mental effort during VWM maintenance",
+    "Ambiguous colors encourage continuous representations; prototypical colors encourage categorical ones",
+    "VWM capacity is fixed and limited"
+  ],
+  "manipulations": [
+    "Memory load 1 through 4 items",
+    "Color type: ambiguous (boundary) vs prototypical",
+    "Delayed estimation task with probed location"
+  ],
+  "key_findings": [
+    "At load 1, pupil size was larger for ambiguous than prototypical colors with no precision difference",
+    "At load 4, pupil size was smaller and precision was substantially reduced for ambiguous colors",
+    "Effect of color type on pupil size gradually inverted across increasing memory load"
+  ],
+  "interpretations": [
+    "Continuous representations are more effortful than categorical ones",
+    "Very few continuous representations (perhaps only one) can be maintained simultaneously, forcing categorical fallback at higher load"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "visual working memory",
+    "categorical vs continuous representation",
+    "pupillometry",
+    "mental effort",
+    "delayed estimation task",
+    "color memory",
+    "memory load",
+    "VWM capacity"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "b38766bbfa1e049b7c80fde134199aff",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

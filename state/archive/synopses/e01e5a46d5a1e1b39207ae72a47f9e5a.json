@@ -1,0 +1,64 @@
+{
+  "frameworks": [
+    {
+      "name": "perceptual inflation",
+      "role": "primary_lens",
+      "one_line": "Observers overestimate peripheral perceptual capacity beyond what content supports"
+    },
+    {
+      "name": "filling-in",
+      "role": "compared_against",
+      "one_line": "Endogenous completion of perceptual content; distinguished from inflation"
+    },
+    {
+      "name": "metacognition / confidence-accuracy tracking",
+      "role": "primary_lens",
+      "one_line": "Degree to which confidence judgements track task accuracy"
+    },
+    {
+      "name": "signal-detection style decisional bias",
+      "role": "primary_lens",
+      "one_line": "Biases in detection (false alarms) probe peripheral introspection"
+    }
+  ],
+  "core_question": "Does peripheral phenomenology reflect filling-in of content, or inflated introspection about weak content?",
+  "key_assumptions": [
+    "Subjective perceptual richness can dissociate from objective perceptual content",
+    "Crowding and summary statistics expose unique peripheral processing limits",
+    "Metacognitive sensitivity and decisional bias indexes introspection quality"
+  ],
+  "manipulations": [
+    "Peripheral vs central viewing using crowding paradigm",
+    "Peripheral vs central viewing using summary-statistics paradigm",
+    "Discrimination judgements with confidence ratings",
+    "Detection judgements probing false alarms"
+  ],
+  "key_findings": [
+    "Observers showed overconfidence in peripheral discrimination judgements",
+    "Observers showed high false-alarm rates in peripheral detection judgements",
+    "Metacognitive deficit and decisional bias both present in peripheral vision"
+  ],
+  "interpretations": [
+    "Peripheral phenomenology is characterized by inflation, not just filling-in",
+    "Inflation reflects incorrect introspection rather than endogenous content generation"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "peripheral vision",
+    "perceptual inflation",
+    "filling-in",
+    "metacognition",
+    "confidence-accuracy tracking",
+    "crowding",
+    "summary statistics",
+    "false alarms",
+    "decisional bias"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "e01e5a46d5a1e1b39207ae72a47f9e5a",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}
