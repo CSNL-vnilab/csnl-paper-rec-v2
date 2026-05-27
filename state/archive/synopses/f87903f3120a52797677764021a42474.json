@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "resource-bounded / resource-rational cognition",
+      "role": "primary_lens",
+      "one_line": "Cognition optimized under time, energy, and memory constraints"
+    },
+    {
+      "name": "inductive bias",
+      "role": "primary_lens",
+      "one_line": "Hypothesis-space constraints needed before observing limited data"
+    },
+    {
+      "name": "approximation bias",
+      "role": "primary_lens",
+      "one_line": "Inference and decision approximations under limited resources"
+    },
+    {
+      "name": "bounded rationality",
+      "role": "context",
+      "one_line": "Errors reflect optimization under constraints, not irrationality"
+    }
+  ],
+  "core_question": "How can the brain be both highly capable and systematically error-prone under data and resource limits?",
+  "key_assumptions": [
+    "Brains operate under fixed limits on time, energy, and memory",
+    "Inference requires constraining hypotheses prior to data",
+    "Decision making with limited resources requires approximations",
+    "Errors are consequences of constraint-optimal computation"
+  ],
+  "manipulations": [],
+  "key_findings": [
+    "Human cognitive errors follow systematic, non-haphazard patterns",
+    "Characteristic errors emerge from systems built to meet data and resource constraints"
+  ],
+  "interpretations": [
+    "Inductive bias and approximation bias jointly explain the smart/stupid paradox of cognition",
+    "A unified computational logic links efficient inference to characteristic human errors"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "resource-bounded cognition",
+    "inductive bias",
+    "approximation bias",
+    "bounded rationality",
+    "cognitive errors",
+    "efficient inference",
+    "resource constraints",
+    "computational rationality"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "f87903f3120a52797677764021a42474",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "compositional generalization",
+      "role": "primary_lens",
+      "one_line": "transfer learning formalised as recomposing existing functions to solve unseen problems"
+    },
+    {
+      "name": "Hebbian gating neural network",
+      "role": "extended",
+      "one_line": "model in which gating captures curriculum-dependent generalization"
+    },
+    {
+      "name": "standard neural networks",
+      "role": "compared_against",
+      "one_line": "baseline connectionist models that fail to compositionally generalize like humans"
+    }
+  ],
+  "core_question": "What determines whether humans can compositionally generalize knowledge to unseen problems?",
+  "key_assumptions": [
+    "transfer is recomposition of existing functions",
+    "training curricula shape generalization ability",
+    "human compositional ability differs from standard neural nets"
+  ],
+  "manipulations": [
+    "training regime axis-alignment of items",
+    "temporal correlation of items during training",
+    "curriculum structure across learners"
+  ],
+  "key_findings": [
+    "humans generalize compositionally where standard neural nets fail",
+    "axis-aligned and temporally correlated training improves human generalization",
+    "Hebbian-gating model captures human curriculum effects",
+    "adults learn composable functions asynchronously with developmental-like discontinuities"
+  ],
+  "interpretations": [
+    "compositional generalization in humans depends on training structure, not just architecture",
+    "asynchronous, discontinuous learning of components resembles child development"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "compositional generalization",
+    "transfer learning",
+    "training curriculum",
+    "Hebbian gating",
+    "axis-aligned features",
+    "temporally correlated training",
+    "asynchronous learning",
+    "developmental discontinuities"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "ecdfb05f58b90cba3b640f4ad98a0c2a",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:44:07+09:00",
+  "review_status": "auto_unreviewed"
+}

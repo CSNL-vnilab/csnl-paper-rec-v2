@@ -1,0 +1,62 @@
+{
+  "frameworks": [
+    {
+      "name": "compositional generalization",
+      "role": "primary_lens",
+      "one_line": "recomposing learned functions to solve unseen problems"
+    },
+    {
+      "name": "Hebbian gating neural network",
+      "role": "extended",
+      "one_line": "gating mechanism captures curriculum effects on transfer"
+    },
+    {
+      "name": "standard neural networks",
+      "role": "compared_against",
+      "one_line": "fail at the compositional transfer humans achieve"
+    },
+    {
+      "name": "curriculum learning",
+      "role": "context",
+      "one_line": "training-regime structure shapes generalization outcomes"
+    }
+  ],
+  "core_question": "How do training curricula shape humans' ability to compositionally recompose learned functions for novel problems?",
+  "key_assumptions": [
+    "transfer can be formalized as recomposition of existing functions",
+    "training regime structure (axis alignment, temporal correlation) is a key determinant",
+    "human-style gating can be modelled with Hebbian mechanisms"
+  ],
+  "manipulations": [
+    "training curriculum: axis-aligned vs not",
+    "temporal correlation of items during training",
+    "comparison of human learners against standard neural network baselines"
+  ],
+  "key_findings": [
+    "humans generalize compositionally where standard neural networks fail",
+    "generalization improves when training items are axis-aligned and temporally correlated",
+    "adults learn composable functions asynchronously with developmental-like discontinuities"
+  ],
+  "interpretations": [
+    "a Hebbian gating process can account for how curriculum shapes compositional transfer",
+    "asynchronous, staged acquisition of components parallels child-development learning"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "compositional generalization",
+    "transfer learning",
+    "curriculum learning",
+    "Hebbian gating",
+    "axis-aligned training",
+    "temporally correlated training",
+    "asynchronous function learning",
+    "developmental discontinuities"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "30b529a16866beceba4b0f53e912cf85",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:44:07+09:00",
+  "review_status": "auto_unreviewed"
+}

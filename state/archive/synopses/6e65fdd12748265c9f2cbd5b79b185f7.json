@@ -1,0 +1,53 @@
+{
+  "frameworks": [
+    {
+      "name": "bounded accumulation model",
+      "role": "primary_lens",
+      "one_line": "decision as noisy evidence accumulation to a bound setting speed-accuracy tradeoff"
+    },
+    {
+      "name": "decision confidence",
+      "role": "extended",
+      "one_line": "post-decisional confidence used to update next-trial decision bound"
+    }
+  ],
+  "core_question": "Does post-decisional confidence on one trial adjust the speed-accuracy tradeoff (decision bound) on the next trial?",
+  "key_assumptions": [
+    "no external feedback available, so agents rely on internal confidence",
+    "speed-accuracy tradeoff is set by the height of the decision bound",
+    "lower confidence on trial n motivates more cautious accumulation on trial n+1"
+  ],
+  "manipulations": [
+    "reported confidence about correctness of the previous choice",
+    "three different perceptual binary-choice tasks with subsequent confidence rating",
+    "post-decisional EEG components (error positivity vs error-related negativity)"
+  ],
+  "key_findings": [
+    "fitted decision bounds depended on previous-trial confidence",
+    "bound increase was strongest after high subjective certainty of an error",
+    "centro-parietal error positivity predicted next-trial bound increase",
+    "earlier mid-frontal ERN did not predict bound increase"
+  ],
+  "interpretations": [
+    "confidence serves as an internal teaching signal that continuously regulates the speed-accuracy tradeoff",
+    "error positivity, not ERN, indexes the confidence signal driving policy adjustment"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "speed-accuracy tradeoff",
+    "decision confidence",
+    "post-decisional EEG",
+    "error positivity",
+    "error-related negativity",
+    "bounded accumulation",
+    "trial-by-trial policy update",
+    "perceptual decision-making"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "6e65fdd12748265c9f2cbd5b79b185f7",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:44:07+09:00",
+  "review_status": "auto_unreviewed"
+}

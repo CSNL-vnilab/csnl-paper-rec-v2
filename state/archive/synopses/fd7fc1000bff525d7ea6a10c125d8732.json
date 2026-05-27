@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "context-dependent evidence accumulation",
+      "role": "primary_lens",
+      "one_line": "Context gates selection and accumulation of sensory evidence for decisions"
+    },
+    {
+      "name": "dynamical systems analysis of decision networks",
+      "role": "primary_lens",
+      "one_line": "Three dynamical solutions can support context-dependent computation"
+    },
+    {
+      "name": "individual variability of neural computation",
+      "role": "extended",
+      "one_line": "Different subjects implement different mixtures of the same solutions"
+    }
+  ],
+  "core_question": "How do individual brains implement context-dependent selection and accumulation of evidence, and how does this implementation vary across subjects?",
+  "key_assumptions": [
+    "Assumptions supported by both monkey and rat data constrain the dynamical analysis",
+    "Context-dependent computation can be characterized by a small set of dynamical solutions",
+    "Behavioural performance can be uniformly good despite heterogeneous neural mechanisms"
+  ],
+  "manipulations": [
+    "Designed a novel context-cued evidence-accumulation task in rats",
+    "Trained many rats via automated high-throughput methods to sample variability",
+    "Compared neural and behavioural signatures across individual subjects"
+  ],
+  "key_findings": [
+    "Mathematically identified three dynamical solutions that can support the task",
+    "Existing electrophysiology and modelling data are compatible with all combinations of these solutions",
+    "Substantial neural and behavioural heterogeneity across rats despite uniformly good performance",
+    "A predicted link between behavioural and neural signatures was robustly supported"
+  ],
+  "interpretations": [
+    "Different individuals may use different combinations of the same dynamical solutions",
+    "Individual variability is a structured feature, not noise, of context-dependent computation"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "context-dependent decision-making",
+    "evidence accumulation",
+    "selection and accumulation",
+    "dynamical solutions",
+    "individual variability across subjects",
+    "rat decision-making task",
+    "high-throughput automated training",
+    "behaviour-neural signature link"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "fd7fc1000bff525d7ea6a10c125d8732",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

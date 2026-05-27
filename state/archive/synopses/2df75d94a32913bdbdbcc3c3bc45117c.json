@@ -1,0 +1,65 @@
+{
+  "frameworks": [
+    {
+      "name": "attractor dynamics",
+      "role": "primary_lens",
+      "one_line": "Task-evoked activity increases stability around a stable attractor"
+    },
+    {
+      "name": "noise correlations",
+      "role": "primary_lens",
+      "one_line": "Pairwise neural correlations and shared variability as information-coding constraints"
+    },
+    {
+      "name": "functional connectivity",
+      "role": "compared_against",
+      "one_line": "Large-scale FC view that task states increase inter-region correlations"
+    },
+    {
+      "name": "neural mass / spiking computational models",
+      "role": "extended",
+      "one_line": "Models reproduce task-evoked quenching as attractor stabilization"
+    }
+  ],
+  "core_question": "Do co-active cortical regions during task states increase or decrease their correlations and variability?",
+  "key_assumptions": [
+    "Reduced shared variability enhances information coding",
+    "Spiking and fMRI data probe a comparable correlation phenomenon",
+    "Dimensionality indexes information redundancy across regions",
+    "Stable attractors capture task-state cortical dynamics"
+  ],
+  "manipulations": [
+    "Compared task vs rest/spontaneous states",
+    "Two distinct data modalities: NHP spiking and human fMRI",
+    "Spiking and neural mass computational models contrasted",
+    "Quantified variability, correlations, and dimensionality"
+  ],
+  "key_findings": [
+    "Variability and correlations primarily decrease across cortical regions during task states",
+    "Reduction observed in both NHP spiking and human fMRI data",
+    "Dimensionality increases during task states, indicating less redundancy",
+    "Models show task-evoked activity increases stability around a stable attractor"
+  ],
+  "interpretations": [
+    "Decreased correlations expand information coding capacity during tasks",
+    "Task-evoked input quenches variability by deepening attractor stability globally"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "noise correlations",
+    "variability quenching",
+    "task-evoked activity",
+    "dimensionality of neural activity",
+    "attractor stability",
+    "information coding capacity",
+    "neural mass model",
+    "cross-area cortical coordination"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "2df75d94a32913bdbdbcc3c3bc45117c",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

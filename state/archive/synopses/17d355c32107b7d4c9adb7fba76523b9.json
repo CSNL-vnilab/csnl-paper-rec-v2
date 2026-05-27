@@ -1,0 +1,55 @@
+{
+  "frameworks": [
+    {
+      "name": "Bayesian framework",
+      "role": "primary_lens",
+      "one_line": "Posterior over fixation locations conditioned on global scene context"
+    },
+    {
+      "name": "saliency model (bottom-up)",
+      "role": "compared_against",
+      "one_line": "Local-feature saliency pathway taken alone is insufficient for search"
+    },
+    {
+      "name": "global scene gist",
+      "role": "extended",
+      "one_line": "Scene-centered holistic features bias attention before object analysis"
+    }
+  ],
+  "core_question": "How can global scene context be formally combined with local saliency to predict human fixations during real-world object search?",
+  "key_assumptions": [
+    "Attention reflects a probabilistic estimate of target location",
+    "Global scene features can be computed in parallel with local saliency",
+    "Top-down task knowledge interacts with scene context at an early stage"
+  ],
+  "manipulations": [
+    "Pathway composition: saliency-only vs scene-context vs combined model",
+    "Natural search tasks across varied real-world scene images"
+  ],
+  "key_findings": [
+    "A two-pathway model combining local saliency and global scene features predicts fixated regions",
+    "Scene context constrains likely target locations beyond what saliency alone explains"
+  ],
+  "interpretations": [
+    "Contextual guidance arises early in visual processing through parallel global-feature computation",
+    "Object search is best modeled as Bayesian integration of saliency, context, and top-down goals"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "contextual guidance",
+    "global scene features",
+    "bottom-up saliency",
+    "eye movements in natural scenes",
+    "object search",
+    "Bayesian attention model",
+    "scene gist",
+    "fixation prediction"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "17d355c32107b7d4c9adb7fba76523b9",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:44:07+09:00",
+  "review_status": "auto_unreviewed"
+}
