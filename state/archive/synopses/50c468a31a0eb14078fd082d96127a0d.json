@@ -1,0 +1,62 @@
+{
+  "frameworks": [
+    {
+      "name": "logistic regression of choice history",
+      "role": "primary_lens",
+      "one_line": "dissociates effects of prior stimuli vs prior choices on current decisions"
+    },
+    {
+      "name": "reduced priors account of ASD",
+      "role": "compared_against",
+      "one_line": "theory that ASD reflects diminished influence of prior information on perception"
+    },
+    {
+      "name": "serial dependence / choice history bias",
+      "role": "extended",
+      "one_line": "attractive pull of recent choices reframed as consistency bias elevated in ASD"
+    },
+    {
+      "name": "multisensory cue integration",
+      "role": "context",
+      "one_line": "visual-vestibular heading task used as a second testbed"
+    }
+  ],
+  "core_question": "Does autism spectrum disorder involve reduced priors, or specifically an altered bias from prior perceptual choices?",
+  "key_assumptions": [
+    "effects of prior stimuli and prior choices can be statistically separated",
+    "logistic regression captures the relevant history weights",
+    "two distinct tasks tap a shared decision-history mechanism"
+  ],
+  "manipulations": [
+    "diagnostic group (ASD vs control)",
+    "task domain (visual location discrimination vs visual-vestibular heading)",
+    "trial history of prior stimuli and prior choices"
+  ],
+  "key_findings": [
+    "perceptual decisions were attracted toward recent choices in both tasks",
+    "attractive choice-history bias was significantly larger in ASD across both cohorts",
+    "no group difference in the influence of prior stimuli"
+  ],
+  "interpretations": [
+    "ASD shows an increased consistency bias for perceptual choices rather than reduced priors",
+    "evidence challenges reduced-priors theories of autistic perception"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "choice history bias",
+    "serial dependence",
+    "autism spectrum disorder",
+    "prior choices vs prior stimuli",
+    "visual location discrimination",
+    "visual-vestibular heading discrimination",
+    "logistic regression of perceptual decisions",
+    "reduced priors hypothesis"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "50c468a31a0eb14078fd082d96127a0d",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:37:54+09:00",
+  "review_status": "auto_unreviewed"
+}

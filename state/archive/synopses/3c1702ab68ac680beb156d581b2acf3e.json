@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "rate-distortion theory",
+      "role": "primary_lens",
+      "one_line": "Optimal lossy channel that minimizes perceptual error under fixed information capacity"
+    },
+    {
+      "name": "capacity-limited perception",
+      "role": "extended",
+      "one_line": "Frames perception as information transmission with hard channel constraints"
+    },
+    {
+      "name": "computational-level analysis",
+      "role": "context",
+      "one_line": "Marr-level normative account of what perception optimizes"
+    }
+  ],
+  "core_question": "What constitutes an optimal perceptual system when information must be lost under capacity limits?",
+  "key_assumptions": [
+    "Perception serves behavioral objectives via lossy information transmission",
+    "Biological processing imposes a strong constraint on transmittable information",
+    "Some information must be discarded in the act of perception",
+    "Perceptual error has a cost that can be traded against rate"
+  ],
+  "manipulations": [
+    "Application to discrete categorization (absolute identification)",
+    "Application to visual working memory",
+    "Comparison of capacity-limited regimes across benchmark domains"
+  ],
+  "key_findings": [
+    "Rate-distortion models produce quantitatively precise fits to human perceptual performance",
+    "Framework applies across absolute identification and visual working memory as benchmark capacity-limited domains",
+    "Optimal trade-off between communication cost and distortion explains perceptual behavior"
+  ],
+  "interpretations": [
+    "Rate-distortion theory offers a general, principled computational-level framework for perception",
+    "Modeling perception as optimal lossy coding yields new insights into the nature and goals of perception"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "rate-distortion theory",
+    "capacity-limited perception",
+    "lossy information transmission",
+    "absolute identification",
+    "visual working memory",
+    "computational-level model",
+    "perceptual error cost",
+    "information bottleneck"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "3c1702ab68ac680beb156d581b2acf3e",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

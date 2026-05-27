@@ -1,0 +1,65 @@
+{
+  "frameworks": [
+    {
+      "name": "chain-of-thought reasoning",
+      "role": "primary_lens",
+      "one_line": "extended reasoning as the key driver of human-like decision behaviour in LLMs"
+    },
+    {
+      "name": "active probabilistic reasoning",
+      "role": "extended",
+      "one_line": "task framework separating evidence sampling from belief inference"
+    },
+    {
+      "name": "near-optimal reference policy",
+      "role": "compared_against",
+      "one_line": "Bayes-optimal benchmark for sampling and inference"
+    },
+    {
+      "name": "latent-variable mechanistic model",
+      "role": "alternative_lens",
+      "one_line": "four interpretable latents (memory, strategy, choice bias, occlusion awareness) place agents in shared cognitive space"
+    }
+  ],
+  "core_question": "Do language models decide under uncertainty like humans, and what role does chain-of-thought reasoning play in that process?",
+  "key_assumptions": [
+    "sampling and inference are dissociable sub-processes of decision-making under uncertainty",
+    "deviations from optimal behaviour can be captured by a small set of interpretable latent variables",
+    "humans and LLMs can be embedded in a shared low-dimensional cognitive space"
+  ],
+  "manipulations": [
+    "presence and extent of chain-of-thought reasoning across LLMs",
+    "agent type (humans vs broad set of contemporary LLMs)",
+    "active sampling vs inference phase of the task"
+  ],
+  "key_findings": [
+    "extended reasoning produces large gains in inference but only modest gains in active sampling",
+    "with CoT, LLM belief trajectories become strikingly human-like",
+    "latent-variable model reproduces behavioural signatures across humans and LLMs in a shared space",
+    "a persistent gap between humans and LLMs remains in information acquisition"
+  ],
+  "interpretations": [
+    "chain-of-thought shifts LLMs toward human-like evidence accumulation and belief-to-choice mapping",
+    "alignment to human cognition tightens in inference but not in active sampling"
+  ],
+  "limitations_noted": [
+    "persistent human-LLM gap in active information acquisition not closed by CoT"
+  ],
+  "connecting_signals": [
+    "chain-of-thought reasoning",
+    "decision under uncertainty",
+    "active sampling vs inference",
+    "belief trajectories",
+    "evidence accumulation",
+    "human-LLM alignment",
+    "latent cognitive variables",
+    "near-optimal reference policy"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "d41a4a1397a12ba55eb2a9aa65159f3d",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:37:54+09:00",
+  "review_status": "auto_unreviewed"
+}

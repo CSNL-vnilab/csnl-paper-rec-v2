@@ -1,0 +1,64 @@
+{
+  "frameworks": [
+    {
+      "name": "Veil of Ignorance (Rawlsian)",
+      "role": "primary_lens",
+      "one_line": "Choice procedure that hides one's relative position to elicit fair principles"
+    },
+    {
+      "name": "AI alignment / governance",
+      "role": "extended",
+      "one_line": "Applies a political-philosophy device to selecting principles for AI assistants"
+    },
+    {
+      "name": "risk-attitude and political-preference accounts",
+      "role": "compared_against",
+      "one_line": "Tested as alternative explanations for prioritarian choice and rejected"
+    },
+    {
+      "name": "fairness-based moral reasoning",
+      "role": "alternative_lens",
+      "one_line": "Spontaneous fairness justifications proposed as mediator of the VoI effect"
+    }
+  ],
+  "core_question": "Does reasoning behind the Veil of Ignorance lead people to choose AI-governance principles that prioritize the worst-off?",
+  "key_assumptions": [
+    "Choices in incentive-compatible vignettes proxy real principle endorsement",
+    "Hiding relative position approximates Rawls' veil",
+    "Self-reported justifications index the basis of choice"
+  ],
+  "manipulations": [
+    "Veil of Ignorance vs Control (knowledge of own position)",
+    "Choice of governing principle for an AI assistant",
+    "Preregistered replication across five studies",
+    "Subsequent-round re-endorsement test"
+  ],
+  "key_findings": [
+    "VoI participants more often chose a principle prioritizing the worst-off",
+    "Risk attitudes and political preferences did not adequately explain choices",
+    "VoI participants spontaneously cited fairness more often than Controls",
+    "VoI increased likelihood of re-endorsing the initial choice in a later round"
+  ],
+  "interpretations": [
+    "The Veil of Ignorance shifts AI-governance preferences toward prioritarian fairness",
+    "VoI elicits more robust, fairness-driven preferences rather than mere risk aversion"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "Veil of Ignorance",
+    "Rawlsian justice",
+    "AI alignment with human values",
+    "prioritarian principle",
+    "incentive-compatible moral choice",
+    "fairness reasoning",
+    "preference robustness",
+    "AI governance principles"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "854ae0a9a43d70c2d05b9c375ee808d9",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,64 @@
+{
+  "frameworks": [
+    {
+      "name": "population-level coding",
+      "role": "primary_lens",
+      "one_line": "Decoding stimulus identity from low-dimensional PFC population subspace"
+    },
+    {
+      "name": "stable mnemonic subspace",
+      "role": "extended",
+      "one_line": "Time-invariant subspace within high-dimensional state space supports WM"
+    },
+    {
+      "name": "heterogeneous single-neuron temporal dynamics",
+      "role": "compared_against",
+      "one_line": "Single-cell mixed selectivity contrasted with stable population code"
+    },
+    {
+      "name": "linear recurrent network model",
+      "role": "alternative_lens",
+      "one_line": "Proposed connectivity yielding stable population coding amid dynamics"
+    }
+  ],
+  "core_question": "How do PFC populations maintain stable working-memory representations despite heterogeneous single-neuron dynamics?",
+  "key_assumptions": [
+    "Persistent activity supports parametric WM maintenance in PFC",
+    "Population state space contains task-relevant low-dimensional subspaces",
+    "Cross-temporal decoding indexes representational stability"
+  ],
+  "manipulations": [
+    "Compared stable vs time-optimized decoding subspaces",
+    "Two parametric WM tasks: oculomotor delayed response and vibrotactile delayed discrimination",
+    "Cue vs delay epoch comparisons",
+    "Empirical data vs three candidate circuit models"
+  ],
+  "key_findings": [
+    "Low-dimensional PFC subspace carries stable stimulus code across cue and delay",
+    "Stable subspace decoding generalizes better than time-optimized subspaces",
+    "Single neurons show strong temporal heterogeneity despite stable population code",
+    "Three previously proposed circuit models fail to reproduce the observed population features"
+  ],
+  "interpretations": [
+    "PFC maintains robust WM via a stable population subspace coexisting with heterogeneous dynamics",
+    "Specific recurrent connectivity, captured by a linear network, can produce these stable-yet-dynamic features"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "working memory",
+    "prefrontal cortex population coding",
+    "stable mnemonic subspace",
+    "heterogeneous temporal dynamics",
+    "parametric working memory",
+    "oculomotor delayed response",
+    "vibrotactile delayed discrimination",
+    "linear recurrent network model"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "a0b693ce262c2d55aa3d0a0baf7695cb",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

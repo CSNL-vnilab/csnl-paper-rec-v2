@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "convergent cross-mapping",
+      "role": "primary_lens",
+      "one_line": "nonlinear state-space method to infer directed functional interactions from spontaneous activity"
+    },
+    {
+      "name": "causal flow / causal hierarchy",
+      "role": "extended",
+      "one_line": "directed interaction map summarising each electrode's role in driving ensemble dynamics"
+    },
+    {
+      "name": "recurrent neural network model",
+      "role": "compared_against",
+      "one_line": "ground-truth simulator used to validate causal-flow inference under noise and common inputs"
+    },
+    {
+      "name": "information-theoretic causality",
+      "role": "compared_against",
+      "one_line": "transfer-entropy-style alternatives contrasted with CCM for perturbation prediction"
+    }
+  ],
+  "core_question": "Can the spatiotemporal effects of single-site micro-stimulation in prefrontal cortex be predicted from spontaneous-period circuit dynamics?",
+  "key_assumptions": [
+    "spontaneous ensemble activity carries the directed interaction structure relevant to perturbation",
+    "convergent cross-mapping recovers genuine causal links rather than mere correlation",
+    "RNN simulations capture the causal structure salient for real cortical perturbation"
+  ],
+  "manipulations": [
+    "single-site electrical micro-stimulation across recording sites in alert monkey PFC",
+    "causality-inference method (CCM vs information-theoretic alternatives)",
+    "ground-truth RNN settings varying noise and shared input"
+  ],
+  "key_findings": [
+    "CCM-inferred causal flow uncovers a causal hierarchy among PFC electrodes during rest",
+    "rest-derived causal flow predicts spatiotemporal effects of micro-stimulation",
+    "RNN ground-truth validates that causal flow is robust to noise and common inputs",
+    "CCM outperforms information-theoretic methods at predicting perturbation effects"
+  ],
+  "interpretations": [
+    "spontaneous circuit dynamics encode the directed structure that governs response to targeted perturbation",
+    "causal flow offers a non-invasive map for selecting effective stimulation sites"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "convergent cross-mapping",
+    "causal flow",
+    "directed functional interactions",
+    "spontaneous activity",
+    "micro-stimulation prediction",
+    "macaque prefrontal cortex",
+    "recurrent neural network validation",
+    "perturbation site selection"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "52f574163ff6b68459c9362c648194fa",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:37:54+09:00",
+  "review_status": "auto_unreviewed"
+}

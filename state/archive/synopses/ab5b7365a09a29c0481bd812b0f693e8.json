@@ -1,0 +1,64 @@
+{
+  "frameworks": [
+    {
+      "name": "utility maximization",
+      "role": "primary_lens",
+      "one_line": "Choices reflect maximization of an underlying subjective value representation"
+    },
+    {
+      "name": "Generalized Axiom of Revealed Preference",
+      "role": "primary_lens",
+      "one_line": "Internal-consistency test used to diagnose utility maximization from choice"
+    },
+    {
+      "name": "value-based decision making",
+      "role": "context",
+      "one_line": "Framework in which options are selected by assigned subjective values"
+    },
+    {
+      "name": "dopaminergic reinforcement learning",
+      "role": "extended",
+      "one_line": "Learned value updates require intact dopamine signaling"
+    }
+  ],
+  "core_question": "Can a nervous system as small as C. elegans choose between foods as if maximizing utility?",
+  "key_assumptions": [
+    "GARP is necessary and sufficient to certify utility maximization from choice data",
+    "Subjective values are assigned to food options and can be learned",
+    "Identified chemosensory neurons can implement value assignment"
+  ],
+  "manipulations": [
+    "Offered bacterial food options of distinct growth potentials",
+    "Manipulated prior consumption to test learning of food values",
+    "Perturbed dopamine signaling to test its role in value learning",
+    "Combined microfluidic choice assay with electrophysiology of chemosensory neurons"
+  ],
+  "key_findings": [
+    "C. elegans food choices satisfy necessary and sufficient conditions for utility maximization",
+    "Choices are well-fit by a utility function used to model human consumers",
+    "Value learning in C. elegans requires intact dopamine signaling",
+    "Chemosensory neuron responses to foods are amplified by prior consumption"
+  ],
+  "interpretations": [
+    "Nematodes behave as if they maintain and maximize a representation of subjective value",
+    "Identified chemosensory neurons may form part of a value-assignment system"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "utility maximization",
+    "revealed preference",
+    "value-based decision making",
+    "subjective value",
+    "C. elegans foraging",
+    "dopamine and value learning",
+    "chemosensory neurons",
+    "economic choice in invertebrates"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "ab5b7365a09a29c0481bd812b0f693e8",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,52 @@
+{
+  "frameworks": [
+    {
+      "name": "random utility model",
+      "role": "primary_lens",
+      "one_line": "cardinal neural observable drives stochastic choice probabilities."
+    },
+    {
+      "name": "neuroeconomics",
+      "role": "context",
+      "one_line": "linking neural activity during consumer-good valuation to choice."
+    }
+  ],
+  "core_question": "Can a cardinal model relate neural observables to stochastic choice behavior with quantifiable predictive power?",
+  "key_assumptions": [
+    "neural activity carries a cardinal (not just ordinal) value signal",
+    "stochasticity in choice is tied to the cardinality of the neural measurement"
+  ],
+  "manipulations": [
+    "subjects evaluated consumer goods while neural activity was measured",
+    "neural observable type compared for predictive power"
+  ],
+  "key_findings": [
+    "neural activity predicts subsequent choice behavior",
+    "degree of choice stochasticity tracks cardinality of the neural measurement",
+    "current measurement methods carry substantial measurement error"
+  ],
+  "interpretations": [
+    "cardinal neural observables can in principle support a random-utility account of choice",
+    "measurement error currently limits inferential and predictive performance of this approach"
+  ],
+  "limitations_noted": [
+    "significant measurement error in current neural methods"
+  ],
+  "connecting_signals": [
+    "random utility model",
+    "stochastic choice",
+    "cardinal value signal",
+    "neural decoding of choice",
+    "value-based decision making",
+    "measurement error",
+    "neuroeconomics",
+    "choice prediction benchmark"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "db678c49cc1efd9bf13305837d35823f",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:37:54+09:00",
+  "review_status": "auto_unreviewed"
+}
