@@ -1,0 +1,56 @@
+{
+  "frameworks": [
+    {
+      "name": "signal detection theory / metacognition (type-2 sensitivity)",
+      "role": "primary_lens",
+      "one_line": "Metacognitive awareness operationalised as type-2 detection of one's own perceptual accuracy."
+    },
+    {
+      "name": "Bayesian inference over competing experimental outcomes",
+      "role": "primary_lens",
+      "one_line": "Combines a positive and a negative result to estimate posterior probability of a true TMS effect."
+    },
+    {
+      "name": "Monte Carlo simulation of subject-exclusion criteria",
+      "role": "alternative_lens",
+      "one_line": "Computer simulations test whether exclusion rules reduce false positives as claimed."
+    }
+  ],
+  "core_question": "Does continuous theta-burst TMS to DLPFC genuinely impair visual metacognition, given a failed replication that relied on post-hoc subject exclusion?",
+  "key_assumptions": [
+    "Original Rounis et al. effect on type-2 metacognition is the reference phenomenon.",
+    "Bor et al.'s exclusion criteria were intended to reduce false positives.",
+    "Positive and negative outcomes from the same study can be jointly evaluated in a Bayesian framework."
+  ],
+  "manipulations": [
+    "Re-analysis of Bor et al.'s pre- vs post-exclusion samples.",
+    "Simulated datasets under null and alternative hypotheses to evaluate exclusion rules."
+  ],
+  "key_findings": [
+    "Bor et al. obtained an effect similar to Rounis et al. before applying exclusion.",
+    "Simulations show their exclusion criteria do not actually reduce false-positive rates.",
+    "Combining the positive (pre-exclusion) and negative (post-exclusion) results yields >=75% posterior probability that DLPFC TMS impairs metacognition."
+  ],
+  "interpretations": [
+    "The 'failed' replication is better read as evidence consistent with a real TMS-on-metacognition effect.",
+    "Subject-exclusion practices need formal validation rather than intuitive justification."
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "metacognition",
+    "type-2 sensitivity",
+    "DLPFC TMS",
+    "continuous theta-burst stimulation",
+    "replication failure",
+    "subject exclusion criteria",
+    "false positive rate simulation",
+    "Bayesian evidence combination"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "442a84b0bc0d10d0ad8d2172c3ce1877",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:12:14+09:00",
+  "review_status": "auto_unreviewed"
+}

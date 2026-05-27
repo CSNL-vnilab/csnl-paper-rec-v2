@@ -1,0 +1,56 @@
+{
+  "frameworks": [
+    {
+      "name": "Bayesian inference",
+      "role": "primary_lens",
+      "one_line": "perceptual inference treated as combining sensory likelihood with prior beliefs"
+    },
+    {
+      "name": "feedback-based perceptual learning",
+      "role": "extended",
+      "one_line": "feedback reliability shapes the weighting of sensory evidence versus priors"
+    }
+  ],
+  "core_question": "How does corrupted (unreliable) feedback during a perceptual task alter the balance between sensory evidence and prior beliefs in subsequent inference?",
+  "key_assumptions": [
+    "observer combines sensory likelihood with priors via Bayes rule",
+    "feedback reliability modulates trust in sensory information",
+    "predictive auditory cues can induce task-relevant priors"
+  ],
+  "manipulations": [
+    "feedback type during intervention runs (corrupted vs uncorrupted)",
+    "task type (visual detection vs discrimination)",
+    "presence of predictive auditory cues inducing priors in tests",
+    "pre- vs post-intervention testing"
+  ],
+  "key_findings": [
+    "corrupted feedback reduced perceptual performance whereas uncorrupted did not",
+    "reliance on prior beliefs increased after corrupted feedback",
+    "simulation reproduced the empirical decrease in performance and prior reliance shift",
+    "exploratory analyses showed reduced perceptual confidence during corrupted feedback"
+  ],
+  "interpretations": [
+    "unreliable feedback compromises sensory processing and biases inference toward priors",
+    "feedback reliability has sustained downstream effects on the prior-likelihood balance"
+  ],
+  "limitations_noted": [
+    "confidence results based on exploratory analyses"
+  ],
+  "connecting_signals": [
+    "corrupted feedback",
+    "perceptual inference",
+    "Bayesian inference",
+    "prior beliefs",
+    "sensory evidence weighting",
+    "perceptual confidence",
+    "predictive auditory cues",
+    "visual detection and discrimination"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "1a3a5b17b23dca68197896182af92164",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}

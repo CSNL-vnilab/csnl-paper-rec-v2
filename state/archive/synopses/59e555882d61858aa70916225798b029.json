@@ -1,0 +1,60 @@
+{
+  "frameworks": [
+    {
+      "name": "decoded fMRI neurofeedback (DecNef)",
+      "role": "primary_lens",
+      "one_line": "MVPA-driven reward of multivariate brain patterns to induce specific neural states"
+    },
+    {
+      "name": "frontoparietal network theory of consciousness",
+      "role": "extended",
+      "one_line": "frontoparietal high-confidence patterns proposed as gating mechanism for awareness"
+    },
+    {
+      "name": "multivariate pattern analysis (MVPA)",
+      "role": "primary_lens",
+      "one_line": "voxel-pattern decoding of confidence and color used as neurofeedback target"
+    },
+    {
+      "name": "prestimulus spontaneous activity accounts of perception",
+      "role": "context",
+      "one_line": "trial-by-trial fluctuations in baseline activity predict perceptual reports"
+    }
+  ],
+  "core_question": "Can spontaneous neural activity be made consciously perceived by co-inducing visual and frontoparietal patterns via decoded neurofeedback?",
+  "key_assumptions": [
+    "conscious perception requires conjoint visual and frontoparietal pattern activation",
+    "MVPA-decoded patterns causally manipulable through reward feedback",
+    "prestimulus activity alone is insufficient for awareness in forced-choice tasks"
+  ],
+  "manipulations": [
+    "rewarded simultaneous induction of frontoparietal high-confidence patterns and visual color patterns",
+    "presence vs. absence of veridical color stimuli during induced states"
+  ],
+  "key_findings": [
+    "false color perception co-occurred with activation of frontoparietal high-confidence patterns",
+    "false color perception was not associated with activation of color-specific patterns in visual cortex"
+  ],
+  "interpretations": [
+    "frontoparietal networks may uniquely promote spontaneous representations from unconscious to conscious states",
+    "visual cortex pattern activation is not sufficient on its own for illusory color awareness"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "decoded neurofeedback",
+    "DecNef",
+    "MVPA",
+    "illusory color perception",
+    "perceptual confidence",
+    "frontoparietal cortex",
+    "consciousness and awareness",
+    "spontaneous prestimulus activity"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "59e555882d61858aa70916225798b029",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}

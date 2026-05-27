@@ -1,0 +1,62 @@
+{
+  "frameworks": [
+    {
+      "name": "Bayesian reinforcement learning",
+      "role": "primary_lens",
+      "one_line": "causal beliefs modulate reward prediction errors during action value updating"
+    },
+    {
+      "name": "reward prediction error",
+      "role": "extended",
+      "one_line": "standard RPE signal gated by inferred causal structure of environment"
+    },
+    {
+      "name": "Bayesian causal inference",
+      "role": "primary_lens",
+      "one_line": "beliefs about whether outcomes are self- or externally-caused shape learning"
+    },
+    {
+      "name": "credit assignment",
+      "role": "context",
+      "one_line": "attributing outcomes to own actions versus external causes during learning"
+    }
+  ],
+  "core_question": "Which neural circuits represent causal-belief-modulated reward prediction errors during reinforcement learning?",
+  "key_assumptions": [
+    "beliefs about causal structure modulate RPEs during action value updating",
+    "credit assignment is best explained by Bayesian RL",
+    "causal beliefs are inferable from observable task structure"
+  ],
+  "manipulations": [
+    "task manipulates beliefs about causal structure of the environment",
+    "fMRI during behavioral task in human participants"
+  ],
+  "key_findings": [
+    "causal-belief-modulated RPEs represented in posterior putamen",
+    "standard unmodulated RPEs represented in ventral striatum",
+    "causal-structure beliefs represented in anterior insula and inferior frontal gyrus",
+    "effective connectivity from anterior insula to posterior putamen"
+  ],
+  "interpretations": [
+    "causal beliefs in anterior insula integrate with prediction errors in posterior putamen to update action values",
+    "corticostriatal learning is gated by causal inference"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "reward prediction error",
+    "causal inference",
+    "corticostriatal learning",
+    "posterior putamen",
+    "ventral striatum",
+    "anterior insula",
+    "Bayesian reinforcement learning",
+    "credit assignment"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "9808464271a6dae3f1a3b56d2f41de49",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}

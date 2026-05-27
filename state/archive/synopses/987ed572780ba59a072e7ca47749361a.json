@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "temporal causal learning",
+      "role": "primary_lens",
+      "one_line": "hierarchical generative model infers a singular cause from inter-stimulus interval structure"
+    },
+    {
+      "name": "prediction error theories",
+      "role": "compared_against",
+      "one_line": "associative learning driven by mismatches between expected and obtained outcomes"
+    },
+    {
+      "name": "timing theories",
+      "role": "compared_against",
+      "one_line": "learning shaped by the measured passage of time between events"
+    },
+    {
+      "name": "timescale invariance",
+      "role": "extended",
+      "one_line": "single assumption used to derive power-law and scale-invariant phenomena"
+    }
+  ],
+  "core_question": "Can a single timescale-invariant generative model reconcile timing and prediction error accounts of associative learning?",
+  "key_assumptions": [
+    "timescale invariance of the learning process",
+    "a singular cause underlies a rewarding stimulus",
+    "inter-stimulus interval structure carries causal information",
+    "inference can be implemented by a biologically plausible algorithm"
+  ],
+  "manipulations": [
+    "inter-trial interval structure",
+    "temporal arrangement of stimulus-reward intervals"
+  ],
+  "key_findings": [
+    "model explains power-law dependence of acquisition on inter-trial intervals",
+    "model reproduces timescale invariance in response profiles",
+    "biologically plausible inference algorithm recapitulates timing and prediction error phenomena",
+    "theory predicts neural signals with distinct dynamics for causal associations and temporal structure"
+  ],
+  "interpretations": [
+    "timing and prediction error accounts can be unified under temporal causal inference",
+    "timescale invariance is a sufficient principle for diverse learning phenomena"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "associative learning",
+    "prediction error",
+    "interval timing",
+    "timescale invariance",
+    "hierarchical generative model",
+    "causal inference",
+    "inter-trial interval",
+    "power-law acquisition"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "987ed572780ba59a072e7ca47749361a",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}

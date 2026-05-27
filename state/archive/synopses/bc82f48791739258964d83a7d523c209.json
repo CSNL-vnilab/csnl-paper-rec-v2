@@ -1,0 +1,45 @@
+{
+  "frameworks": [
+    {
+      "name": "rational analysis of memory",
+      "role": "primary_lens",
+      "one_line": "memory optimized to store information needed in the future under precision constraints"
+    },
+    {
+      "name": "rate-distortion theory",
+      "role": "primary_lens",
+      "one_line": "formalizes trade-off between memory precision and task performance"
+    }
+  ],
+  "core_question": "Can regularities of memory be explained as the solution to a rational optimization problem balancing precision against future utility?",
+  "key_assumptions": [
+    "memory is optimized for future information demands",
+    "information can only be stored with limited precision",
+    "memory regularities reflect rational design principles"
+  ],
+  "manipulations": [],
+  "key_findings": [
+    "diverse memory regularities can be derived from rate-distortion design principles",
+    "cognitive and environmental factors shape these regularities in predictable ways"
+  ],
+  "interpretations": [
+    "memory's design follows rational principles of constrained optimization for anticipated future use"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "rational analysis of memory",
+    "rate-distortion theory",
+    "memory precision constraints",
+    "memory-performance trade-off",
+    "optimal information storage",
+    "memory regularities",
+    "constrained optimization in cognition"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "bc82f48791739258964d83a7d523c209",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:12:14+09:00",
+  "review_status": "auto_unreviewed"
+}

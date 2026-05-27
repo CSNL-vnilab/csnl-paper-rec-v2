@@ -1,0 +1,59 @@
+{
+  "frameworks": [
+    {
+      "name": "high-definition transcranial direct current stimulation (HD-tDCS)",
+      "role": "primary_lens",
+      "one_line": "focal non-invasive cortical stimulation via small HD electrodes over V5"
+    },
+    {
+      "name": "noise-reduction account of cathodal stimulation",
+      "role": "alternative_lens",
+      "one_line": "cathodal decreases global excitation, suppressing sub-threshold noise"
+    },
+    {
+      "name": "lesion-based visual associative cortex framework",
+      "role": "context",
+      "one_line": "associative-cortex lesions impair visual perception, motivating V5 targeting"
+    }
+  ],
+  "core_question": "Does cathodal or anodal HD-tDCS over right V5 modulate motion and shape perception in healthy adults?",
+  "key_assumptions": [
+    "HD electrodes deliver more focal cortical current than sponge electrodes",
+    "right V5 is a causal node for contralateral motion perception",
+    "sham stimulation provides a valid perceptual baseline"
+  ],
+  "manipulations": [
+    "stimulation polarity (cathodal vs anodal vs sham)",
+    "perceptual task domain (motion vs shape)",
+    "visual hemifield tested (left vs right)"
+  ],
+  "key_findings": [
+    "cathodal HD-tDCS improved motion perception in the left hemifield",
+    "shape perception was unaffected by cathodal stimulation",
+    "anodal and sham HD-tDCS did not change performance"
+  ],
+  "interpretations": [
+    "cathodal HD-tDCS may sharpen perception by lowering sub-threshold cortical noise",
+    "polarity-specific, domain-specific effect localised to right V5"
+  ],
+  "limitations_noted": [
+    "single-blind within-subject design with a small healthy sample"
+  ],
+  "connecting_signals": [
+    "HD-tDCS",
+    "cathodal stimulation",
+    "area V5/MT",
+    "motion perception",
+    "visual hemifield asymmetry",
+    "non-invasive brain stimulation",
+    "cortical excitability",
+    "sub-threshold noise reduction"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "db743c446d8340c439947772e3e8e915",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:12:14+09:00",
+  "review_status": "auto_unreviewed"
+}
