@@ -1,0 +1,59 @@
+{
+  "frameworks": [
+    {
+      "name": "fronto-parietal vs MTL memory-systems dichotomy",
+      "role": "compared_against",
+      "one_line": "Traditional view separating STM from LTM is challenged by hippocampal STM deficits"
+    },
+    {
+      "name": "thalamo-cortical connectivity",
+      "role": "primary_lens",
+      "one_line": "Thalamic nuclei regulate cortico-cortical interactions supporting memory"
+    },
+    {
+      "name": "hippocampal contribution to working memory",
+      "role": "extended",
+      "one_line": "Direct hippocampal-thalamic anatomy mediates STM beyond LTM"
+    }
+  ],
+  "core_question": "Does thalamic damage linked to hippocampal dysfunction contribute to short-term memory deficits in MTL epilepsy patients?",
+  "key_assumptions": [
+    "Hippocampus has direct anatomical thalamic connections",
+    "Thalamic subdivisions can be identified via diffusion-weighted tractography",
+    "Resting-state functional connectivity reflects functionally relevant circuits"
+  ],
+  "manipulations": [
+    "Patient group vs control (MTL epilepsy patients with hippocampal dysfunction)",
+    "Thalamic subdivision (tractography-defined nuclei, including pulvinar)",
+    "Cortical target region (frontal, temporal, parietal divisions)",
+    "STM vs LTM behavioural measures"
+  ],
+  "key_findings": [
+    "Thalamo-temporal functional connectivity tracked LTM performance",
+    "Thalamo-prefrontal functional connectivity specifically predicted STM performance",
+    "Patients with hippocampal volume loss also showed thalamic volume loss, prominent in pulvinar",
+    "Behavioural association with STM was lost in the epileptic hemisphere"
+  ],
+  "interpretations": [
+    "Thalamic disruption secondary to hippocampal damage contributes to STM deficits",
+    "STM and LTM rely on dissociable thalamo-cortical loops rather than purely separate cortical systems"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "thalamo-cortical connectivity",
+    "medial temporal lobe epilepsy",
+    "short-term memory",
+    "pulvinar",
+    "diffusion-weighted tractography",
+    "resting-state functional connectivity",
+    "hippocampal-thalamic circuit",
+    "working memory deficits"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "480df2c5aaa0df6a9b01ed338844f2f5",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:43:11+09:00",
+  "review_status": "auto_unreviewed"
+}

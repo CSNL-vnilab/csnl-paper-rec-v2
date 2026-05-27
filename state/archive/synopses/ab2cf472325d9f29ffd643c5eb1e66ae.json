@@ -1,0 +1,62 @@
+{
+  "frameworks": [
+    {
+      "name": "bidimensional signal detection theory",
+      "role": "primary_lens",
+      "one_line": "two-dimensional SDT representation of decision and confidence evidence"
+    },
+    {
+      "name": "decision-congruent heuristic",
+      "role": "extended",
+      "one_line": "ignores response-incongruent dimension when constructing confidence"
+    },
+    {
+      "name": "unequal-variance signal detection",
+      "role": "alternative_lens",
+      "one_line": "internal evidence distributions have unequal variance-covariance structure"
+    },
+    {
+      "name": "blindsight account",
+      "role": "context",
+      "one_line": "dissociation of objective decision from subjective metacognition"
+    }
+  ],
+  "core_question": "Can a decision-congruent heuristic that ignores response-incongruent information yield superior metacognitive sensitivity under realistic internal variance structures?",
+  "key_assumptions": [
+    "confidence draws on a bidimensional internal evidence representation",
+    "internal evidence has unequal variance and may be statistically dependent",
+    "metacognitive accuracy reflects mapping from internal evidence to confidence"
+  ],
+  "manipulations": [
+    "variance-equality vs unequal-variance bidimensional structure",
+    "statistical independence vs dependence between dimensions",
+    "heuristic strategies for combining or ignoring an evidence dimension"
+  ],
+  "key_findings": [
+    "ignoring the response-incongruent dimension yields superior metacognitive accuracy",
+    "this advantage emerges specifically under unequal-variance structures",
+    "the heuristic predicts dissociations between objective decision and subjective metacognition"
+  ],
+  "interpretations": [
+    "a simple decision-congruent heuristic exploits variance asymmetries hidden to joint readouts",
+    "observed metacognition-decision dissociations and blindsight features may reflect this heuristic"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "metacognitive sensitivity",
+    "confidence construction",
+    "bidimensional signal detection theory",
+    "unequal-variance SDT",
+    "decision-congruent heuristic",
+    "metacognition-decision dissociation",
+    "blindsight",
+    "2-alternative forced choice confidence"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "ab2cf472325d9f29ffd643c5eb1e66ae",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "serial dependence",
+      "role": "primary_lens",
+      "one_line": "current percepts are biased toward features remembered from prior episodes"
+    },
+    {
+      "name": "feature binding",
+      "role": "extended",
+      "one_line": "content and context features remain bound and carry over across memory episodes"
+    },
+    {
+      "name": "perceptual stability via temporal smoothing",
+      "role": "context",
+      "one_line": "serial dependence framed as compensation for small cross-episode appearance changes"
+    }
+  ],
+  "core_question": "Do congruent context features, beyond content similarity, support serial dependence between objects across memory episodes?",
+  "key_assumptions": [
+    "serial dependence promotes perceptual stability across episodes",
+    "objects can be differentiated by to-be-memorized content and discriminative context features",
+    "memory representations preserve content-context bindings"
+  ],
+  "manipulations": [
+    "congruence of context features across successive trials",
+    "content similarity between objects across trials",
+    "multi-object memory configurations across four experiments"
+  ],
+  "key_findings": [
+    "stronger serial dependence between objects sharing the same context features across trials",
+    "context congruence supports serial dependence in addition to content similarity",
+    "effect observed consistently across four experiments"
+  ],
+  "interpretations": [
+    "content-context binding is not erased but carried over to the next memory episode",
+    "selective temporal stability of multiple objects is supported by contextual feature congruence"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "serial dependence",
+    "visual working memory",
+    "feature binding",
+    "context congruence",
+    "perceptual stability",
+    "multiple object memory",
+    "content-context association",
+    "memory episodes"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "0cd750432a2548f482d366568d3a050f",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}

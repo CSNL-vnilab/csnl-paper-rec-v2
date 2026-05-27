@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "recurrent neural network (RNN)",
+      "role": "primary_lens",
+      "one_line": "trained RNNs as mechanistic models of value learning and choice"
+    },
+    {
+      "name": "reinforcement learning over feature and conjunction values",
+      "role": "primary_lens",
+      "one_line": "value estimated by combining feature-level and conjunction-level reward probabilities"
+    },
+    {
+      "name": "distributed neural coding",
+      "role": "extended",
+      "one_line": "value and strategy emerge from distributed population activity in RNN"
+    },
+    {
+      "name": "excitatory/inhibitory circuit dynamics",
+      "role": "context",
+      "one_line": "distinct roles of E and I units support the mixed learning strategy"
+    }
+  ],
+  "core_question": "How do neural circuits represent value and adopt learning strategies in multi-dimensional probabilistic environments with many options and features?",
+  "key_assumptions": [
+    "value of a stimulus can be decomposed into informative features and their conjunctions",
+    "RNN dynamics can capture human learning and choice behavior",
+    "learning strategy is shaped by structure of the reward environment"
+  ],
+  "manipulations": [
+    "multi-dimensional probabilistic learning task with feature-level reward structure",
+    "lesioning of RNN units (including E vs I populations)",
+    "analysis of RNN representations and connectivity"
+  ],
+  "key_findings": [
+    "participants combined informative-feature reward estimates with informative-conjunction estimates",
+    "RNNs trained on the task reproduced this mixed learning strategy",
+    "mixed strategy relied on distributed value codes in the RNN",
+    "inhibitory and excitatory units made distinct contributions to value learning"
+  ],
+  "interpretations": [
+    "value representations and learning strategies emerge from distributed circuits with specialized E/I roles",
+    "feature-plus-conjunction decomposition is a viable solution to high-dimensional credit assignment"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "multi-dimensional probabilistic learning",
+    "feature-based reinforcement learning",
+    "conjunction value learning",
+    "recurrent neural network model of choice",
+    "distributed value representation",
+    "excitatory inhibitory contributions",
+    "credit assignment in high-dimensional environments",
+    "lesion analysis of RNNs"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "c866ca8188d6e4fbc097d37131684f39",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:43:11+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,41 @@
+{
+  "frameworks": [
+    {
+      "name": "efficient coding",
+      "role": "primary_lens",
+      "one_line": "Perceptual distortions arise from efficient encoding under biological constraints."
+    },
+    {
+      "name": "normative perceptual decision-making",
+      "role": "context",
+      "one_line": "Frames suboptimality debate that the commentary responds to."
+    }
+  ],
+  "core_question": "Why do humans make suboptimal perceptual decisions, and can those suboptimalities be normatively explained?",
+  "key_assumptions": [
+    "Biological information processing operates under capacity constraints",
+    "Apparent suboptimality may reflect a different objective rather than failure"
+  ],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [
+    "Whether observers are 'optimal' or 'suboptimal' is not a well-posed question",
+    "Perceptual distortions have a normative explanation as efficient coding for biological systems"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "perceptual suboptimality",
+    "efficient coding",
+    "normative explanation",
+    "perceptual distortions",
+    "biological information processing",
+    "optimality debate"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "ebcfce0240ff3a162fec6474a095cd8c",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:43:11+09:00",
+  "review_status": "auto_unreviewed"
+}

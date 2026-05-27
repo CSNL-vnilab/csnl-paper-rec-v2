@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "information-flow account of prefrontal function",
+      "role": "primary_lens",
+      "one_line": "describe PF subregions by input-to-output transformations rather than psychological labels"
+    },
+    {
+      "name": "psychological-labelling of PF areas",
+      "role": "compared_against",
+      "one_line": "traditional approach assigning cognitive constructs to PF subregions"
+    },
+    {
+      "name": "abstract rule / transformation encoding",
+      "role": "extended",
+      "one_line": "mid-dorsal and ventral PF encode action- and object-invariant transformations"
+    }
+  ],
+  "core_question": "What is the right level of description for the functions of the prefrontal cortex subregions?",
+  "key_assumptions": [
+    "PF function is best understood by characterising input-output transformations",
+    "PF subregions are functionally specialised by the kind of transformation they implement",
+    "abstract transformations generalise across specific actions or objects"
+  ],
+  "manipulations": [
+    "contrast across caudal, mid-dorsal, and ventral PF subregions",
+    "contrast between attention/short-term memory, sequence-order, and object/sound inputs"
+  ],
+  "key_findings": [
+    "caudal PF maps attended or remembered input to eye-movement targets",
+    "mid-dorsal PF maps order of objects or actions to sequential eye and hand movement targets",
+    "ventral PF maps object or sound input to prospective associated object or sound activity",
+    "mid-dorsal and ventral PF encode abstract transformations invariant to specific actions or objects"
+  ],
+  "interpretations": [
+    "PF function should be described by flow of information rather than psychological labels",
+    "abstract transformation coding supports generalisation to novel problems sharing logic"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "prefrontal cortex",
+    "information flow",
+    "caudal prefrontal",
+    "mid-dorsal prefrontal",
+    "ventral prefrontal",
+    "abstract transformation",
+    "sequence of actions",
+    "generalisation across problems"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "287460ae58970e43c572bb80d1fab182",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}

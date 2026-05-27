@@ -1,0 +1,61 @@
+{
+  "frameworks": [
+    {
+      "name": "numerosity tuning",
+      "role": "primary_lens",
+      "one_line": "neural populations tuned to numerical magnitude in frontoparietal cortex"
+    },
+    {
+      "name": "absolute vs relative coding",
+      "role": "compared_against",
+      "one_line": "fixed magnitude tuning contrasted with context-rescaled tuning"
+    },
+    {
+      "name": "context-dependent neural rescaling",
+      "role": "extended",
+      "one_line": "tuning dynamically adapts to the range of numerosities relevant to context"
+    },
+    {
+      "name": "hierarchical sensory-to-association processing",
+      "role": "context",
+      "one_line": "relative coding emerges as processing advances from sensory to frontoparietal areas"
+    }
+  ],
+  "core_question": "Do frontoparietal numerosity representations use absolute or context-relative codes, and how does this organize across the visual hierarchy?",
+  "key_assumptions": [
+    "frontoparietal populations carry numerosity-tuned responses",
+    "multivariate fMRI patterns reflect underlying tuning properties",
+    "neural resources are finite, motivating context-dependent rescaling"
+  ],
+  "manipulations": [
+    "range of numerosities defining the task context",
+    "comparison of representations across early sensory vs frontoparietal regions"
+  ],
+  "key_findings": [
+    "relative numerosity coding emerges gradually along the processing hierarchy",
+    "early sensory areas predominantly exhibit absolute numerosity coding",
+    "frontoparietal regions show context-dependent rescaled tuning"
+  ],
+  "interpretations": [
+    "numerosity representations are organized hierarchically with context-dependent optimization",
+    "rescaling enables efficient processing of infinite magnitudes with finite neural resources"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "numerosity representation",
+    "relative vs absolute coding",
+    "frontoparietal cortex",
+    "context-dependent rescaling",
+    "multivariate pattern analysis",
+    "magnitude estimation",
+    "hierarchical visual processing",
+    "efficient coding of magnitude"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "f2c38e12dd505dd40ee272796f948c09",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}
