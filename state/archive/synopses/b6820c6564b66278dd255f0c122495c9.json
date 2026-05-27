@@ -1,0 +1,36 @@
+{
+  "canonical_id": "b6820c6564b66278dd255f0c122495c9",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T10:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "NeuroAI", "role": "primary_lens", "one_line": "neuroscience-grounded research programme positioned to catalyze next-generation AI."},
+    {"name": "embodied Turing test", "role": "extended", "one_line": "benchmark proposal: AI animal models must match living counterparts in sensorimotor interaction."},
+    {"name": "classical Turing test", "role": "compared_against", "one_line": "language- and game-centric evaluation deprecated in favor of embodied skills."}
+  ],
+  "core_question": "How should AI be evaluated and advanced so that it captures evolutionarily shared animal capabilities rather than uniquely human ones?",
+  "key_assumptions": [
+    "neuroscience has historically driven progress in AI",
+    "sensorimotor capabilities shared across animals reflect 500M years of evolution",
+    "embodied animal-level skills are a meaningful benchmark for AI"
+  ],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [
+    "investing in NeuroAI fundamentals will accelerate AI progress",
+    "passing the embodied Turing test provides a roadmap for next-generation AI"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "NeuroAI",
+    "embodied Turing test",
+    "AI animal models",
+    "sensorimotor interaction",
+    "evolutionarily shared capabilities",
+    "next-generation artificial intelligence",
+    "neuroscience-AI interface"
+  ],
+  "out_of_scope_note": null
+}

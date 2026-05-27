@@ -1,0 +1,45 @@
+{
+  "canonical_id": "20bce289fc61d828ecc21825d6b4e485",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T10:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "spike-timing-dependent plasticity", "role": "primary_lens", "one_line": "STDP rules applied to inhibitory synapses from distinct GABAergic subtypes"},
+    {"name": "perceptual decision-making network model", "role": "extended", "one_line": "network simulation links inhibitory plasticity to decision accuracy"},
+    {"name": "cell-type-specific inhibitory circuit", "role": "context", "one_line": "four GABAergic interneuron subtypes targeting L2/3 pyramidal cells"}
+  ],
+  "core_question": "Does spike-timing-dependent plasticity differ across inhibitory interneuron subtypes, and what role does such differential plasticity play in sensory decision-making?",
+  "key_assumptions": [
+    "inhibitory synapses are plastic and modifiable by activity",
+    "interneuron subtypes form functionally distinct input classes",
+    "L2/3 pyramidal cells in auditory cortex are a representative target"
+  ],
+  "manipulations": [
+    "presynaptic interneuron subtype (four major GABAergic classes)",
+    "spike-timing protocol at inhibitory synapses",
+    "input noise level in the decision-making network simulation"
+  ],
+  "key_findings": [
+    "likelihood of inhibitory potentiation varied across interneuron subtypes",
+    "SST+ interneuron inputs showed the most potentiation on average",
+    "simulating SST+-like plasticity preserved decision accuracy under higher input noise"
+  ],
+  "interpretations": [
+    "differential plasticity across inhibitory inputs supports network function",
+    "input-specific inhibitory plasticity contributes to robust sensory perception"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "inhibitory plasticity",
+    "spike-timing-dependent plasticity",
+    "SST+ interneurons",
+    "GABAergic cell types",
+    "auditory cortex layer 2/3",
+    "perceptual decision-making",
+    "decision accuracy under noise",
+    "input-specific plasticity"
+  ],
+  "out_of_scope_note": null
+}

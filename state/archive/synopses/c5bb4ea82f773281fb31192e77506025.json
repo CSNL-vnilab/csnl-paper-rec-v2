@@ -1,0 +1,43 @@
+{
+  "canonical_id": "c5bb4ea82f773281fb31192e77506025",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T02:03:32+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "noise correlations in population coding", "role": "primary_lens", "one_line": "correlated variability shaping cortical population codes across timescales"},
+    {"name": "cortical laminar circuitry", "role": "primary_lens", "one_line": "layer-specific input sources and local connectivity as a structural probe"}
+  ],
+  "core_question": "Do cortical layers with distinct input sources and local circuitry generate different patterns of neuronal correlations?",
+  "key_assumptions": [
+    "laminar variation in inputs and microcircuitry maps onto functionally distinct subnetworks",
+    "correlations on different timescales reflect different underlying mechanisms"
+  ],
+  "manipulations": [
+    "recording depth across cortical layers",
+    "cortical area (V1 vs V2)",
+    "correlation timescale (slow vs brief synchrony)"
+  ],
+  "key_findings": [
+    "slow timescale correlations prominent in superficial and deep V1 layers, near zero in middle layers",
+    "brief timescale synchrony slightly stronger in middle V1 layers but present at most depths",
+    "LFP power shows complementary laminar pattern for low frequency (<10 Hz) vs gamma (30-50 Hz)",
+    "V2 shows similar laminar synchrony pattern as V1 but slow correlations do not differ between input and nearby layers"
+  ],
+  "interpretations": [
+    "cortical circuits in different laminae can produce remarkably different correlation patterns despite tight interconnection"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "noise correlations",
+    "neuronal synchrony",
+    "cortical laminar organization",
+    "primary visual cortex V1",
+    "area V2",
+    "local field potential",
+    "gamma oscillations",
+    "macaque visual cortex"
+  ],
+  "out_of_scope_note": null
+}

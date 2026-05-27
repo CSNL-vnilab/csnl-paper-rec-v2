@@ -1,0 +1,33 @@
+{
+  "canonical_id": "736d0577e2e3d62140d13ed2c9813089",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.0,
+  "frameworks": [
+    {"name": "higher-order thought theory", "role": "primary_lens", "one_line": "Mental state consciousness arises when a state is represented by a higher-order thought."},
+    {"name": "quality-space theory", "role": "primary_lens", "one_line": "Sensory qualities are positions within a structured similarity space of discriminable properties."},
+    {"name": "confidence-based metacognition", "role": "extended", "one_line": "Subjective confidence is proposed to track the presence of qualitative consciousness."}
+  ],
+  "core_question": "Does subjective confidence reliably track the presence of qualitative conscious experience?",
+  "key_assumptions": [
+    "Qualitative consciousness can be decomposed into mental-state consciousness and sensory quality",
+    "Sensory qualities have a relational structure expressible as a quality space",
+    "Higher-order representations are constitutive of state consciousness"
+  ],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "higher-order thought theory",
+    "quality-space theory",
+    "qualitative consciousness",
+    "sensory qualities",
+    "metacognitive confidence",
+    "David Rosenthal",
+    "philosophy of mind"
+  ],
+  "out_of_scope_note": "Edited-volume book chapter on Rosenthal's higher-order thought and quality-space theories; theoretical/philosophical rather than empirical, so manipulations and findings are empty."
+}

@@ -1,0 +1,17 @@
+{
+  "canonical_id": "9601f30e1eb01868c703ddc074ad355e",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.0,
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "Not a research paper — this is the Oxford University Press copyright/imprint page (publisher address, copyright notice, ISBN, printing information). Pure publisher boilerplate with no scientific content, framework, question, or findings to extract."
+}

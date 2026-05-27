@@ -1,0 +1,47 @@
+{
+  "canonical_id": "4f7d771aca3a373965003bf3aa7aa48b",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T10:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "affective computing", "role": "primary_lens", "one_line": "Sensing computer user's affective state from physiological signals."},
+    {"name": "pupillometry as arousal index", "role": "primary_lens", "one_line": "Pupil diameter treated as readout of affective/arousal state."},
+    {"name": "physiological signal classification", "role": "primary_lens", "one_line": "ML classifiers discriminate stress vs relaxation from preprocessed signals."},
+    {"name": "galvanic skin response", "role": "compared_against", "one_line": "GSR features serve as comparative baseline for PD-based sensing."}
+  ],
+  "core_question": "Can processed pupil diameter signals reliably classify a computer user's transition from relaxation to stress?",
+  "key_assumptions": [
+    "Pupil diameter indexes affective state",
+    "Wavelet denoising plus Kalman filtering recovers a usable PD signal",
+    "Stress vs relaxation is a binary affective contrast",
+    "GSR provides a fair comparative physiological baseline"
+  ],
+  "manipulations": [
+    "Affective state induced as relaxation vs stress",
+    "Three engineered features extracted from PD signal",
+    "Five classification algorithms compared",
+    "PD pipeline contrasted against GSR-derived features"
+  ],
+  "key_findings": [
+    "Average classification accuracy of 83.16% for stress identification",
+    "Highest accuracy 84.21% with Multilayer Perceptron and Naive Bayes",
+    "PD-derived features show stronger ROC discrimination than GSR features"
+  ],
+  "interpretations": [
+    "Pupil diameter is a powerful physiological factor for automated affective classification in HCI"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "pupil diameter",
+    "affective state classification",
+    "stress detection",
+    "wavelet denoising",
+    "Kalman filtering",
+    "galvanic skin response",
+    "ROC comparison",
+    "human-computer interaction"
+  ],
+  "out_of_scope_note": null
+}
