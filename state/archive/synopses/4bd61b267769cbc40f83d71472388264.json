@@ -1,0 +1,37 @@
+{
+  "canonical_id": "4bd61b267769cbc40f83d71472388264",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:59:36+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "metacognition", "role": "primary_lens", "one_line": "Confidence ratings used to operationalize access to subjective experience."},
+    {"name": "science of consciousness", "role": "context", "one_line": "Methodological inspiration for measuring hard-to-pin-down subjective states."}
+  ],
+  "core_question": "Can metacognition and confidence ratings be used as scientific tools to study subjective affective experience in mental disorders?",
+  "key_assumptions": [
+    "Subjective affective experiences are central to psychiatric symptomatology",
+    "Confidence and metacognition can be rigorously measured in humans and animals",
+    "Methods from consciousness science transfer to affective phenomena"
+  ],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [
+    "Operationalizing affect via metacognition could open new scientific routes for studying affective processes",
+    "This approach may inform efforts to promote psychological resilience against debilitating emotions"
+  ],
+  "limitations_noted": [
+    "Scientific tools for studying subjective affective states are currently limited"
+  ],
+  "connecting_signals": [
+    "metacognition",
+    "confidence ratings",
+    "subjective affective experience",
+    "science of consciousness",
+    "psychiatric symptomatology",
+    "psychological resilience",
+    "animal models of confidence"
+  ],
+  "out_of_scope_note": null
+}

@@ -1,0 +1,44 @@
+{
+  "canonical_id": "3813bba93cf7ff365dcb5daa28a5da74",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "statistical physics neuron particle model", "role": "primary_lens", "one_line": "particle-based model capturing causal information flow in spike trains"},
+    {"name": "fractional-order dynamics", "role": "extended", "one_line": "fractional operators governing spiking dynamics encode memory and scale"}
+  ],
+  "core_question": "How can neuronal spike trains decode underlying network topology and predict behavior despite scarce and partial observation?",
+  "key_assumptions": [
+    "spike trains carry causal fractal memory tied to network topology",
+    "fractional-order operators capture spiking memory and scale",
+    "single-unit spiking suffices to infer network-level structure"
+  ],
+  "manipulations": [
+    "synthetic simulations of neuronal networks",
+    "analysis applied to real-world neuronal spiking recordings",
+    "evaluation across multiple cognitive tasks"
+  ],
+  "key_findings": [
+    "fractional-order operators recover memory and scale of spike trains",
+    "model exposes topological properties of the underlying neuronal network",
+    "model yields superior predictions of animal behavior across cognitive tasks"
+  ],
+  "interpretations": [
+    "neuron particle model links spike-train causal memory to network topology",
+    "fractional-order dynamics provide a unifying decoder of behavior from scarce spikes"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "neuron particle model",
+    "fractional-order operators",
+    "spike train memory",
+    "network topology inference",
+    "causal information flow",
+    "single-unit recordings",
+    "behavior prediction from spikes",
+    "statistical physics of neurons"
+  ],
+  "out_of_scope_note": null
+}

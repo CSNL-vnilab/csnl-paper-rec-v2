@@ -1,0 +1,45 @@
+{
+  "canonical_id": "4a605a3b7b6fb1003fdf3aa4bfd50e76",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:59:54+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "non-instrumental information-seeking", "role": "primary_lens", "one_line": "Effort exerted to obtain information that cannot change the outcome."},
+    {"name": "risk vs ambiguity distinction", "role": "primary_lens", "one_line": "Separates known-probability uncertainty from unknown-probability uncertainty."},
+    {"name": "valence-uncertainty account of information demand", "role": "extended", "one_line": "Valence and uncertainty as drivers of curiosity, tested in effort domain."}
+  ],
+  "core_question": "Does physical effort exerted for non-instrumental information depend on valence and on the type of uncertainty (risk vs ambiguity)?",
+  "key_assumptions": [
+    "Incentive-compatible physical effort indexes the subjective value of information",
+    "Risk and ambiguity are dissociable forms of uncertainty",
+    "Information has value even when non-instrumental for the decision"
+  ],
+  "manipulations": [
+    "Outcome valence (expected value of prospect)",
+    "Type of uncertainty: risk vs ambiguity",
+    "Magnitude of outcome distribution uncertainty within each type"
+  ],
+  "key_findings": [
+    "Willingness to exert effort positively correlates with expected value under both risk and ambiguity",
+    "More effort exerted as outcome distribution uncertainty increases under risk",
+    "Insensitivity to ambiguity level, except at extreme ambiguity"
+  ],
+  "interpretations": [
+    "Effort-based information demand for non-instrumental information dissociates between risk and ambiguity",
+    "Humans engage effortful information-seeking under risk but largely not to resolve ambiguity"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "non-instrumental information-seeking",
+    "physical effort",
+    "risk vs ambiguity",
+    "outcome valence",
+    "expected value",
+    "curiosity",
+    "effort-based decision-making",
+    "information demand"
+  ],
+  "out_of_scope_note": null
+}

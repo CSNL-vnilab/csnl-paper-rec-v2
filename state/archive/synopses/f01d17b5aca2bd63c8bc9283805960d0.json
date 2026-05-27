@@ -1,0 +1,46 @@
+{
+  "canonical_id": "f01d17b5aca2bd63c8bc9283805960d0",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T10:30:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "non-instrumental information-seeking", "role": "primary_lens", "one_line": "people value information beyond its instrumental decision utility"},
+    {"name": "risk vs ambiguity distinction", "role": "primary_lens", "one_line": "outcome distribution known (risk) vs unknown (ambiguity)"},
+    {"name": "effort-based decision-making", "role": "extended", "one_line": "physical effort as incentive-compatible measure of information value"}
+  ],
+  "core_question": "Do desirability and uncertainty drive willingness to exert physical effort for non-instrumental information, and does risk differ from ambiguity?",
+  "key_assumptions": [
+    "physical effort is incentive-compatible measure of subjective information value",
+    "non-instrumental information has no bearing on the decision outcome",
+    "risk and ambiguity are distinct forms of uncertainty"
+  ],
+  "manipulations": [
+    "outcome expected value (desirability)",
+    "outcome distribution uncertainty under risk",
+    "ambiguity level (including extreme ambiguity)"
+  ],
+  "key_findings": [
+    "willingness to exert effort positively associated with outcome expected value under both risk and ambiguity",
+    "people exert more effort as outcome distribution uncertainty increases under risk",
+    "people are insensitive to ambiguity except at extreme levels",
+    "dissociation between risk and ambiguity in effort-based information-seeking"
+  ],
+  "interpretations": [
+    "humans engage in effort-based information-seeking for non-instrumental information under risk but not ambiguity",
+    "risk and ambiguity differentially drive the value of non-instrumental information"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "non-instrumental information",
+    "information-seeking",
+    "physical effort",
+    "risk and ambiguity",
+    "desirability",
+    "outcome expected value",
+    "incentive-compatible task",
+    "uncertainty"
+  ],
+  "out_of_scope_note": null
+}

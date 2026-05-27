@@ -1,0 +1,41 @@
+{
+  "canonical_id": "6edde2b640756c4707a01af8b09ae1ab",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T10:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "sensory recruitment framework", "role": "primary_lens", "one_line": "Visual working memory storage recruits sensory cortex representations."},
+    {"name": "Xu (2020) critique of sensory recruitment", "role": "compared_against", "one_line": "Verbal-model critique arguing parietal cortex is central to VWM."},
+    {"name": "formal quantitative models of VWM", "role": "alternative_lens", "one_line": "Quantitative model-based accounts contrasted with verbal/intuitive accounts."}
+  ],
+  "core_question": "Does Xu's (2020) commentary pose a serious challenge to the sensory recruitment framework of visual working memory?",
+  "key_assumptions": [
+    "Both behavioural and neural evidence must constrain VWM theories",
+    "Formal quantitative models should be preferred over verbal/intuitive ones",
+    "Critiques must accurately characterise the framework they target"
+  ],
+  "manipulations": [],
+  "key_findings": [
+    "Xu's commentary mischaracterises the sensory recruitment framework",
+    "Xu's commentary favours verbal models and intuition over formal quantitative models",
+    "Xu's interpretation of the cited literature is not even-handed"
+  ],
+  "interpretations": [
+    "Xu (2020) does not pose a serious challenge to the sensory recruitment framework",
+    "Sensory recruitment can be incorporated into a broader working model of VWM spanning occipital and parietal contributions"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "visual working memory",
+    "sensory recruitment",
+    "occipital cortex",
+    "parietal cortex",
+    "neural evidence for VWM",
+    "formal quantitative models",
+    "verbal vs quantitative models",
+    "VWM theoretical framework"
+  ],
+  "out_of_scope_note": null
+}

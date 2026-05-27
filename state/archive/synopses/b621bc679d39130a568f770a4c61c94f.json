@@ -1,0 +1,45 @@
+{
+  "canonical_id": "b621bc679d39130a568f770a4c61c94f",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T10:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "multifractal analysis", "role": "primary_lens", "one_line": "characterizes non-linear non-stationary non-Markovian spike interval dynamics"},
+    {"name": "spiking neural networks", "role": "extended", "one_line": "trained to generate goal-directed architectures for task differentiation"}
+  ],
+  "core_question": "How does individual neuronal spiking behavior reflect the structure and function of the underlying network?",
+  "key_assumptions": [
+    "interspike intervals carry non-Markovian temporal structure",
+    "network architecture shapes individual spiking dynamics",
+    "multifractal measures capture features beyond conventional spike statistics"
+  ],
+  "manipulations": [
+    "network connectivity topology",
+    "stimulus presented to network",
+    "task objective during SNN training"
+  ],
+  "key_findings": [
+    "multifractal spike-interval profile is sensitive to network structure",
+    "multifractal profile is relatively consistent across stimuli",
+    "profile is not influenced by unobserved neuronal ensembles",
+    "trained SNNs with different tasks show distinguishable multifractal signatures"
+  ],
+  "interpretations": [
+    "multifractal spike analysis decodes underlying circuit connectivity from sparse spike data",
+    "individual spike dynamics provide a window onto goal-directed network architecture"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "multifractal analysis",
+    "interspike intervals",
+    "spike train dynamics",
+    "neuronal network connectivity",
+    "spiking neural networks",
+    "network topology inference",
+    "non-Markovian dynamics",
+    "goal-directed architecture"
+  ],
+  "out_of_scope_note": null
+}
