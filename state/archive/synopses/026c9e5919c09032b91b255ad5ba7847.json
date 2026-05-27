@@ -1,0 +1,59 @@
+{
+  "frameworks": [
+    {
+      "name": "Occam's razor",
+      "role": "compared_against",
+      "one_line": "Normative principle balancing fit and simplicity in model selection"
+    },
+    {
+      "name": "predictive model selection",
+      "role": "primary_lens",
+      "one_line": "How humans choose between competing predictive models given data"
+    },
+    {
+      "name": "statistically optimal benchmark",
+      "role": "compared_against",
+      "one_line": "Normative complexity-penalized benchmark against which human choices are compared"
+    }
+  ],
+  "core_question": "Do humans follow Occam's razor when selecting between competing predictive models?",
+  "key_assumptions": [
+    "Participants can inspect underlying data used to fit each model",
+    "A statistically optimal benchmark exists for model selection",
+    "Model complexity and fit can be dissociated in choice tasks"
+  ],
+  "manipulations": [
+    "Choices between competing predictive models of varying complexity",
+    "Visibility of the underlying data used to fit the models",
+    "Decision thresholds across experimental conditions",
+    "Noise level and amount of data available for fitting"
+  ],
+  "key_findings": [
+    "Participants systematically neglected model complexity relative to the optimal benchmark",
+    "Participants often preferred models that overfit the data",
+    "Participants partially compensated by adjusting decision thresholds",
+    "Threshold adjustment failed to fully account for simpler misspecified models outperforming complex ones"
+  ],
+  "interpretations": [
+    "Simplicity is not a general cognitive preference in predictive model selection",
+    "When predicting, people prefer a good fit over appropriate complexity penalization"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "model selection",
+    "Occam's razor",
+    "complexity neglect",
+    "overfitting",
+    "predictive models",
+    "decision thresholds",
+    "fit versus simplicity",
+    "model misspecification"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "026c9e5919c09032b91b255ad5ba7847",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

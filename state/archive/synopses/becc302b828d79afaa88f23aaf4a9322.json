@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "individual differences in functional connectivity",
+      "role": "primary_lens",
+      "one_line": "Brain state as a moderator of within- vs between-subject FC variability."
+    },
+    {
+      "name": "resting-state functional connectivity",
+      "role": "compared_against",
+      "one_line": "Rest treated as default but possibly suboptimal baseline for individual differences."
+    },
+    {
+      "name": "task-evoked functional connectivity",
+      "role": "alternative_lens",
+      "one_line": "Task states may amplify trait-relevant idiosyncrasies in targeted networks."
+    }
+  ],
+  "core_question": "Can brain state be manipulated to enhance individual differences in functional connectivity for biomarker discovery?",
+  "key_assumptions": [
+    "Within- to between-subject variability ratio indexes individual-differences signal quality",
+    "Functional organization varies meaningfully between individuals",
+    "Rest is a neutral but not necessarily optimal baseline"
+  ],
+  "manipulations": [
+    "Brain state (rest vs various task conditions)",
+    "Network of interest tied to trait or behavior under study"
+  ],
+  "key_findings": [
+    "Preliminary HCP analyses suggest within- vs between-subject variability differs across conditions",
+    "Some task states appear to improve the individual-difference signal over rest"
+  ],
+  "interpretations": [
+    "State manipulation can sharpen FC-based biomarker discovery beyond resting baseline",
+    "Optimal state depends on the targeted trait and network"
+  ],
+  "limitations_noted": [
+    "Assumption that rest is optimal is largely untested",
+    "Preliminary analyses; open questions remain for future study"
+  ],
+  "connecting_signals": [
+    "individual differences",
+    "functional connectivity",
+    "brain state",
+    "resting state",
+    "task-evoked connectivity",
+    "within- vs between-subject variability",
+    "biomarker discovery",
+    "Human Connectome Project"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "becc302b828d79afaa88f23aaf4a9322",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:33:55+09:00",
+  "review_status": "auto_unreviewed"
+}

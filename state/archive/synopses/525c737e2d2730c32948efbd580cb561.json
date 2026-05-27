@@ -1,0 +1,56 @@
+{
+  "frameworks": [
+    {
+      "name": "finite computational precision",
+      "role": "primary_lens",
+      "one_line": "Internal representations of value and probability corrupted by irreducible noise"
+    },
+    {
+      "name": "expected utility theory",
+      "role": "extended",
+      "one_line": "Utility and probability weighting functions derived as noise-optimal distortions"
+    },
+    {
+      "name": "reward-maximising rational choice",
+      "role": "compared_against",
+      "one_line": "Apparent irrationality reframed as optimal adaptation to noisy precision"
+    }
+  ],
+  "core_question": "Why do humans distort value and probability when making economic choices, given selection for reward maximisation?",
+  "key_assumptions": [
+    "Decisions are irreducibly corrupted by internal noise",
+    "Computational precision is finite",
+    "Distortion shape can be optimised to maximise reward and minimise uncertainty"
+  ],
+  "manipulations": [
+    "Factors that change the reward-maximising form of distortion",
+    "Two empirical studies probing adaptive distortion shape"
+  ],
+  "key_findings": [
+    "Human distortions of value and probability are approximately optimal under finite precision",
+    "Humans adapt the form of distortion when reward-maximising shape is manipulated",
+    "Apparent failures to maximise reward and preference reversals emerge from this optimal coding"
+  ],
+  "interpretations": [
+    "Distorted economic choices are optimal adaptations to noisy finite-precision computation rather than irrationality",
+    "Provides a normative account of why utility and probability weighting deviate from true values"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "finite computational precision",
+    "probability weighting function",
+    "utility distortion",
+    "economic choice",
+    "reward maximisation under noise",
+    "preference reversal",
+    "value representation",
+    "optimal noisy coding"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "525c737e2d2730c32948efbd580cb561",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

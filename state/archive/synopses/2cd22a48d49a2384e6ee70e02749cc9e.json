@@ -1,0 +1,53 @@
+{
+  "frameworks": [
+    {
+      "name": "prefrontal cortex basal ganglia working memory model (PBWM)",
+      "role": "primary_lens",
+      "one_line": "gating in basal ganglia regulates updating vs maintenance of WM contents"
+    },
+    {
+      "name": "phasic striatal dopamine signalling",
+      "role": "extended",
+      "one_line": "ebEBR is used as a behavioural proxy for phasic striatal dopamine activity"
+    }
+  ],
+  "core_question": "Can event-based eye-blink rate dissociate working-memory updating from gate switching in real time?",
+  "key_assumptions": [
+    "event-based eye-blink rate reflects phasic striatal dopamine activity",
+    "gating and updating are separable cognitive processes",
+    "the reference-back task independently manipulates updating and gate switching"
+  ],
+  "manipulations": [
+    "trial-by-trial demands on WM updating vs maintenance",
+    "trial-by-trial demands on gate switching vs gate repetition",
+    "what triggers gate switching (Experiment 3)"
+  ],
+  "key_findings": [
+    "ebEBR increases on trials requiring WM updating",
+    "ebEBR increases on trials requiring gate switching",
+    "the updating and gate-switching effects replicate across three experiments",
+    "gate opening appears more stimulus-driven and retroactive than gate closing"
+  ],
+  "interpretations": [
+    "results support PBWM by linking updating and gating to striatal dopaminergic activity",
+    "switching to maintenance mode is more context-driven than switching to updating mode"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "working memory gating",
+    "event-based eye-blink rate",
+    "phasic striatal dopamine",
+    "reference-back task",
+    "PBWM model",
+    "updating versus maintenance",
+    "prefrontal-basal ganglia loop",
+    "real-time cognitive control"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "2cd22a48d49a2384e6ee70e02749cc9e",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:33:55+09:00",
+  "review_status": "auto_unreviewed"
+}

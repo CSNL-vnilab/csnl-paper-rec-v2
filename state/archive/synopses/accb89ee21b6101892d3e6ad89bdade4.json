@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "cortical feedback / top-down modulation",
+      "role": "primary_lens",
+      "one_line": "Motor planning areas feed back to early visual cortex to bias perception"
+    },
+    {
+      "name": "multivoxel pattern analysis",
+      "role": "primary_lens",
+      "one_line": "Decoding intended action category from spatial fMRI patterns"
+    },
+    {
+      "name": "action-perception coupling",
+      "role": "extended",
+      "one_line": "Action preparation enhances perception of action-relevant object features"
+    }
+  ],
+  "core_question": "Does preparing an action, even without executing it, modulate activity in early human visual cortex?",
+  "key_assumptions": [
+    "MVPA patterns reflect action-specific neural state",
+    "Grasping vs pointing recruit dissociable preparatory representations",
+    "Early visual cortex can receive non-sensory motor-related signals"
+  ],
+  "manipulations": [
+    "Action type: grasping vs pointing toward oriented objects",
+    "Execution state: action prepared only vs action executed",
+    "Region of interest: early visual cortex (V1) vs anterior parietal cortex"
+  ],
+  "key_findings": [
+    "Grasping vs pointing decodable with >70% accuracy from signals as early as V1",
+    "These early visual cortex signals were present even when actions were prepared but not executed",
+    "Anterior parietal cortex showed clearest modulation for actually executed movements"
+  ],
+  "interpretations": [
+    "Action preparation modulates relevant neuronal populations in early visual areas",
+    "Cortical feedback from motor planning regions can shape processing in early visual cortex"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "action preparation",
+    "early visual cortex",
+    "multivoxel pattern analysis",
+    "grasping vs pointing",
+    "cortical feedback",
+    "motor planning",
+    "object orientation",
+    "high-resolution fMRI"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "accb89ee21b6101892d3e6ad89bdade4",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}
