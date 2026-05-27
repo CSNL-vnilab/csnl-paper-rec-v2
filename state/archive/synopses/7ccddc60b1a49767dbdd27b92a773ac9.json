@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "tiny recurrent neural networks",
+      "role": "primary_lens",
+      "one_line": "1-4 unit RNNs discover cognitive algorithms underlying reward-learning decisions"
+    },
+    {
+      "name": "dynamical systems analysis",
+      "role": "extended",
+      "one_line": "trained RNN dynamics interpreted as cognitive mechanisms via dynamical systems concepts"
+    },
+    {
+      "name": "Bayesian inference",
+      "role": "compared_against",
+      "one_line": "normative framework whose handcrafted simplicity limits realistic behaviour capture"
+    },
+    {
+      "name": "reinforcement learning",
+      "role": "compared_against",
+      "one_line": "classical normative reward-learning models outperformed by tiny RNNs on choice prediction"
+    }
+  ],
+  "core_question": "Can small recurrent neural networks discover and reveal the cognitive algorithms governing biological reward-learning decisions?",
+  "key_assumptions": [
+    "individual choices reflect a low-dimensional cognitive algorithm",
+    "small RNNs can express the relevant computations without overfitting",
+    "trained network dynamics are interpretable as cognitive mechanisms"
+  ],
+  "manipulations": [
+    "network size (1 to 4 hidden units vs larger networks)",
+    "model class (tiny RNN vs classical cognitive models)",
+    "task domain across six reward-learning tasks in animals and humans"
+  ],
+  "key_findings": [
+    "1-4 unit RNNs often outperform classical cognitive models in predicting individual choices",
+    "tiny RNNs match the predictive accuracy of much larger networks",
+    "dynamical systems analysis of trained RNNs reveals choice-behaviour mechanisms",
+    "approach estimates the dimensionality of behaviour and characterises meta-RL agents"
+  ],
+  "interpretations": [
+    "tiny RNNs discover cognitive algorithms while remaining interpretable, bypassing handcrafted model cycles",
+    "a unified comparison of cognitive models becomes possible via shared dynamical-systems language"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "tiny recurrent neural networks",
+    "cognitive algorithm discovery",
+    "dynamical systems interpretation",
+    "reward-learning tasks",
+    "individual choice prediction",
+    "behavioural dimensionality",
+    "meta-reinforcement learning agents",
+    "model comparison in decision-making"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "7ccddc60b1a49767dbdd27b92a773ac9",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

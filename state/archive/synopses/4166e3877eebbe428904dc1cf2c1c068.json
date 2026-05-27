@@ -1,0 +1,50 @@
+{
+  "frameworks": [
+    {
+      "name": "motivation-performance link",
+      "role": "primary_lens",
+      "one_line": "Negative evaluation as a motivational signal that boosts subsequent task performance."
+    },
+    {
+      "name": "goal-directed behavior and attention orienting",
+      "role": "context",
+      "one_line": "Insula-striatum signals couple with goal/attention regions to facilitate performance."
+    }
+  ],
+  "core_question": "Does receiving negative evaluation, beyond motivating people, actually enhance their performance on a subsequent risky challenge?",
+  "key_assumptions": [
+    "Participants believe evaluations reflect their prior performance",
+    "Risky-challenge acceptance indexes motivational engagement",
+    "fMRI BOLD connectivity reflects task-relevant coupling"
+  ],
+  "manipulations": [
+    "Valence of evaluation feedback (positive vs negative) from independent judges",
+    "Decision to take up a risky challenge after feedback"
+  ],
+  "key_findings": [
+    "Negative evaluation facilitated performance on the risky challenge",
+    "Insula and striatum represented the motivating effect of negative evaluation",
+    "Performance boost tracked functional connectivity between insula and goal-directed / attention-orienting regions"
+  ],
+  "interpretations": [
+    "Negative evaluation converts into performance facilitation via insula-striatum motivational coding plus insula coupling to goal and attention networks"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "negative evaluation",
+    "performance facilitation",
+    "motivation",
+    "insula",
+    "striatum",
+    "functional connectivity",
+    "goal-directed behavior",
+    "attention orienting"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "4166e3877eebbe428904dc1cf2c1c068",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:45:19+09:00",
+  "review_status": "auto_unreviewed"
+}

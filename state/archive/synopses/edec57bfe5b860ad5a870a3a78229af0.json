@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "normative evidence accumulation",
+      "role": "primary_lens",
+      "one_line": "decisions follow normative principles for weighing and accumulating sensory observations"
+    },
+    {
+      "name": "evidence weighting under correlated observations",
+      "role": "extended",
+      "one_line": "extends normative accumulation to account for pairwise correlations among observations"
+    },
+    {
+      "name": "perceptual decision-making",
+      "role": "context",
+      "one_line": "visual-discrimination task framework for deliberative choice"
+    }
+  ],
+  "core_question": "Do people adapt evidence weighting and accumulation to correlations among sensory observations in a normative way?",
+  "key_assumptions": [
+    "deliberative decisions follow normative weighting and accumulation principles",
+    "correlations among observations alter the evidence each observation provides",
+    "adaptation can occur without explicit cues about correlation"
+  ],
+  "manipulations": [
+    "trial-by-trial changes in pairwise correlations between observations",
+    "uncued shifts in the correlation structure",
+    "visual-discrimination task with pairwise-correlated observations"
+  ],
+  "key_findings": [
+    "participants adapted to uncued, trial-by-trial changes in correlations",
+    "decisions reflected approximately normative weighting and accumulation of evidence",
+    "minimal training sufficed for adaptation to correlated observations"
+  ],
+  "interpretations": [
+    "normative principles of evidence weighting extend to correlated sensory environments",
+    "human deliberation flexibly accounts for the dependence structure of observations"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "evidence accumulation",
+    "normative weighting",
+    "correlated observations",
+    "perceptual decision-making",
+    "visual discrimination",
+    "trial-by-trial adaptation",
+    "deliberative decisions",
+    "sensory correlations"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "edec57bfe5b860ad5a870a3a78229af0",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}

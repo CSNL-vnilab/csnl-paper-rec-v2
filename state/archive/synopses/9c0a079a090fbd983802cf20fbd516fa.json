@@ -1,0 +1,60 @@
+{
+  "frameworks": [
+    {
+      "name": "event segmentation theory",
+      "role": "primary_lens",
+      "one_line": "sequences of event models gate switching of active representations during activity comprehension"
+    },
+    {
+      "name": "Bayesian inference over event types",
+      "role": "primary_lens",
+      "one_line": "posterior over event schemas governs event-to-event transitions"
+    },
+    {
+      "name": "recurrent neural network dynamics",
+      "role": "extended",
+      "one_line": "RNN captures short-term within-event perceptual dynamics under each schema"
+    },
+    {
+      "name": "prediction-error gating",
+      "role": "compared_against",
+      "one_line": "alternative hypothesis that large prediction error triggers event boundaries"
+    }
+  ],
+  "core_question": "Does prediction uncertainty or prediction error better gate switching between event models during human activity comprehension?",
+  "key_assumptions": [
+    "comprehension proceeds via sequences of discrete event models",
+    "event schemas can be learned from naturalistic activity",
+    "either uncertainty or error can serve as a gating signal for model updating"
+  ],
+  "manipulations": [
+    "gating signal variant: prediction uncertainty vs prediction error",
+    "training on naturalistic 18-hour activity corpus, tested on 3.5 hours held-out"
+  ],
+  "key_findings": [
+    "the uncertainty-gated variant best matched human segmentation",
+    "the uncertainty-gated variant formed event categories most like humans"
+  ],
+  "interpretations": [
+    "prediction uncertainty is a more plausible gating mechanism for event-model updating than prediction error",
+    "combining RNN dynamics with Bayesian schema inference scales event comprehension to naturalistic timescales"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "event segmentation",
+    "event models",
+    "prediction uncertainty",
+    "prediction error",
+    "event schemas",
+    "Bayesian inference over events",
+    "naturalistic activity comprehension",
+    "recurrent neural network"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "9c0a079a090fbd983802cf20fbd516fa",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}

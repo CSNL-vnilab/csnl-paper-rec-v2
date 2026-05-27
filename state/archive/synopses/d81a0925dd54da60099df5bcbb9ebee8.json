@@ -1,0 +1,61 @@
+{
+  "frameworks": [
+    {
+      "name": "difference-between-best-and-next-best posterior",
+      "role": "primary_lens",
+      "one_line": "confidence reflects gap between top two posterior probabilities"
+    },
+    {
+      "name": "Bayesian confidence hypothesis",
+      "role": "compared_against",
+      "one_line": "confidence equals posterior probability of chosen option"
+    },
+    {
+      "name": "posterior entropy account",
+      "role": "alternative_lens",
+      "one_line": "confidence reflects overall uncertainty across alternatives"
+    },
+    {
+      "name": "signal-detection / multi-alternative decision theory",
+      "role": "context",
+      "one_line": "extends two-alternative confidence theory to >2 options"
+    }
+  ],
+  "core_question": "In multi-alternative decisions, what computational quantity does confidence track?",
+  "key_assumptions": [
+    "observers compute posterior probabilities over alternatives",
+    "two-alternative confidence theories reduce to a special case",
+    "confidence is a graded report tied to decision quality"
+  ],
+  "manipulations": [
+    "number of alternatives expanded to three",
+    "visual categorization task with varying posterior probability profiles"
+  ],
+  "key_findings": [
+    "confidence best explained by difference between best and next-best posterior",
+    "posterior probability of chosen option alone fits worse",
+    "overall posterior entropy fits worse"
+  ],
+  "interpretations": [
+    "confidence indexes subjective probability of having made the best possible decision",
+    "leading Bayesian confidence hypothesis is overturned in multi-alternative settings"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "decision confidence",
+    "multi-alternative decision-making",
+    "Bayesian confidence hypothesis",
+    "posterior probability difference",
+    "three-alternative visual categorization",
+    "metacognition",
+    "posterior entropy",
+    "best versus next-best option"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "d81a0925dd54da60099df5bcbb9ebee8",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:45:19+09:00",
+  "review_status": "auto_unreviewed"
+}

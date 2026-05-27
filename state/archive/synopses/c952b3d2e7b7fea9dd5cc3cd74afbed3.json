@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "successor representation",
+      "role": "extended",
+      "one_line": "encoding of states by predicted future state occupancy"
+    },
+    {
+      "name": "model-based reinforcement learning",
+      "role": "compared_against",
+      "one_line": "explicit simulation of future for decision making"
+    },
+    {
+      "name": "model-free reinforcement learning",
+      "role": "compared_against",
+      "one_line": "stimulus-reward associations learned by trial and error"
+    },
+    {
+      "name": "Bayesian inference under uncertainty",
+      "role": "primary_lens",
+      "one_line": "balancing new observations against existing knowledge"
+    }
+  ],
+  "core_question": "How should successor representations be learned to handle uncertainty and switches of context?",
+  "key_assumptions": [
+    "hippocampus encodes a successor representation",
+    "learning should optimally weight new evidence vs prior knowledge",
+    "multiple task-specific SRs can coexist and be selected"
+  ],
+  "manipulations": [
+    "context switches across tasks",
+    "uncertainty in new observations vs existing knowledge",
+    "tasks requiring contextual memory and generalisation"
+  ],
+  "key_findings": [
+    "prediction-error learning rule for SRs that balances uncertainty optimally",
+    "multi-context extension maintains several task-specific SRs",
+    "context inferred online from prediction accuracy",
+    "model captures animal behaviour on contextual memory tasks"
+  ],
+  "interpretations": [
+    "probabilistic SR provides an intermediate RL strategy adaptive to context",
+    "uncertainty-weighted SR learning explains hippocampal-supported flexible prediction"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "successor representation",
+    "context-dependent prediction",
+    "hippocampus",
+    "prediction error learning",
+    "uncertainty",
+    "multi-context inference",
+    "reinforcement learning",
+    "contextual memory"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "c952b3d2e7b7fea9dd5cc3cd74afbed3",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:45:19+09:00",
+  "review_status": "auto_unreviewed"
+}

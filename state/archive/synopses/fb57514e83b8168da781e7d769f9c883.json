@@ -1,0 +1,55 @@
+{
+  "frameworks": [
+    {
+      "name": "natural input statistics",
+      "role": "primary_lens",
+      "one_line": "Weber scaling emerges from correlations among naturally-scaled sensory measurements."
+    },
+    {
+      "name": "noisy neural coding",
+      "role": "compared_against",
+      "one_line": "Standard account attributing Weber's law to neuronal noise is challenged."
+    },
+    {
+      "name": "Bayesian inference",
+      "role": "context",
+      "one_line": "Discrimination framed as inference over scaled sensory inputs."
+    }
+  ],
+  "core_question": "Can Weber's law arise from natural input statistics without invoking neural noise?",
+  "key_assumptions": [
+    "Sensory measurements are scaled by global variables (contrast, loudness).",
+    "Global scaling induces positive correlations among measurements.",
+    "Discrimination reflects inference over these correlated inputs."
+  ],
+  "manipulations": [
+    "Theoretical variation of global scaling parameters across natural inputs."
+  ],
+  "key_findings": [
+    "Global scaling parameters induce positive correlations among sensory measurements.",
+    "These correlations produce Weber scaling of discrimination thresholds.",
+    "Predicts approximately log-normal tuning curves for speed and numerosity."
+  ],
+  "interpretations": [
+    "Weber's law is an unavoidable consequence of natural sensory statistics, not neural noise.",
+    "Noisy neurons are not required to explain Weber's scaling."
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "Weber's law",
+    "discrimination thresholds",
+    "natural sensory statistics",
+    "global scaling parameters",
+    "log-normal tuning curves",
+    "speed perception",
+    "numerosity",
+    "contrast scaling"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "fb57514e83b8168da781e7d769f9c883",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:45:19+09:00",
+  "review_status": "auto_unreviewed"
+}
