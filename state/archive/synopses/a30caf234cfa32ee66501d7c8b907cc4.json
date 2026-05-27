@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "subjective value coding in OFC",
+      "role": "primary_lens",
+      "one_line": "OFC high-frequency activity tracks current and previous trial subjective values"
+    },
+    {
+      "name": "temporal context dependency",
+      "role": "extended",
+      "one_line": "value coding modulated by recent past offers, extended from monkey to human"
+    },
+    {
+      "name": "population trajectory / dimensionality reduction",
+      "role": "alternative_lens",
+      "one_line": "dynamic low-dimensional OFC trajectories reveal when past influences current"
+    }
+  ],
+  "core_question": "Do human OFC and related regions encode subjective value in a context-dependent manner influenced by recent past offers?",
+  "key_assumptions": [
+    "willingness-to-pay (BDM auction) indexes subjective value",
+    "high-frequency (gamma / high-gamma) power reflects local population activity",
+    "monkey context-dependent OFC findings can generalize to humans"
+  ],
+  "manipulations": [
+    "current-trial vs previous-trial subjective value as regressors on neural signals",
+    "snack food items with varying willingness-to-pay across trials",
+    "recording across OFC, insula, cingulate, parietal, amygdala, hippocampus, striatum"
+  ],
+  "key_findings": [
+    "OFC high-frequency power positively correlates with current subjective value",
+    "OFC high-frequency power negatively correlates with previous trial subjective value",
+    "most significant contacts encoded either present or past value, not both",
+    "population trajectories show past-trial influence emerging early after current offer onset"
+  ],
+  "interpretations": [
+    "human OFC exhibits temporal context dependency in value coding analogous to monkey OFC",
+    "past and present value are represented largely by separate sub-populations within OFC"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "orbitofrontal cortex",
+    "subjective value",
+    "temporal context dependency",
+    "BDM auction",
+    "stereo EEG",
+    "high-gamma activity",
+    "population trajectory",
+    "value adaptation"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "a30caf234cfa32ee66501d7c8b907cc4",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:25:22+09:00",
+  "review_status": "auto_unreviewed"
+}

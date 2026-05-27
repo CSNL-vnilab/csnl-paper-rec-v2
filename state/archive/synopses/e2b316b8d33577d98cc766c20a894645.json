@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "ethological neuroscience",
+      "role": "primary_lens",
+      "one_line": "studying neural computations through species-typical, evolutionarily shaped behaviours"
+    },
+    {
+      "name": "naturalistic behaviour platform",
+      "role": "extended",
+      "one_line": "open-source habitat integrating navigation, nesting, escape, foraging, and social modules"
+    },
+    {
+      "name": "continuous long-term behavioural monitoring",
+      "role": "context",
+      "one_line": "multi-mouse tracking from sub-millisecond to month-long timescales"
+    }
+  ],
+  "core_question": "How can self-guided ethological behaviours and neural activity be captured continuously in customizable multi-mouse habitats?",
+  "key_assumptions": [
+    "ethological behaviours reveal robust evolved neural computations",
+    "transitory naturalistic behaviours require long-term, large-arena observation",
+    "experimental control is compatible with naturalistic settings"
+  ],
+  "manipulations": [
+    "environmental conditions in a changing habitat",
+    "presence of conspecifics during foraging",
+    "task assays such as digging-to-threshold and social foraging"
+  ],
+  "key_findings": [
+    "platform enables multi-dimensional quantification across sub-ms to month timescales",
+    "mice adapt strategies to changing environments",
+    "mice adjust behaviour in response to conspecifics during social foraging"
+  ],
+  "interpretations": [
+    "naturalistic, continuous assays expose ethological behaviours inaccessible to standard tasks",
+    "modular open-source habitats can combine experimental control with ethological richness"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "ethological behaviour",
+    "naturalistic timescales",
+    "long-term continuous recording",
+    "multi-mouse habitat",
+    "social foraging",
+    "digging-to-threshold assay",
+    "open-source neuroscience platform",
+    "navigation nesting escape foraging modules"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "e2b316b8d33577d98cc766c20a894645",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}

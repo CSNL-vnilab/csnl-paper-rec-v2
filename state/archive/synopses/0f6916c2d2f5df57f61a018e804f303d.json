@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "recurrent gain control",
+      "role": "primary_lens",
+      "one_line": "intracortical recurrent normalization shapes V1 dynamics into a suppressive traveling wave"
+    },
+    {
+      "name": "apparent motion correspondence problem",
+      "role": "extended",
+      "one_line": "V1 cortical dynamics provide a mechanism to resolve ambiguous motion correspondence"
+    },
+    {
+      "name": "intracortical lateral propagation",
+      "role": "primary_lens",
+      "one_line": "horizontal V1 connections generate traveling waves linking stimuli across space and time"
+    }
+  ],
+  "core_question": "How does primary visual cortex link spatiotemporally separated stimuli to represent illusory apparent motion?",
+  "key_assumptions": [
+    "V1 intracortical connections can shape cortical dynamics across retinotopy",
+    "voltage-sensitive dye imaging reflects population subthreshold activity",
+    "apparent motion poses a correspondence problem the visual system must solve"
+  ],
+  "manipulations": [
+    "two stationary dots flashed in close spatial and temporal succession",
+    "varying spatiotemporal separation between flashes",
+    "computational model of recurrent gain control compared to imaging"
+  ],
+  "key_findings": [
+    "the second stimulus elicits a suppressive wave traveling toward the first's retinotopic locus",
+    "the suppressive wave emerges from a recurrent gain control fed by intracortical network",
+    "wave dynamics encode the expected motion velocity on the V1 surface"
+  ],
+  "interpretations": [
+    "suppressive traveling waves explain away ambiguous motion correspondence in V1",
+    "illusory motion is represented through emergent recurrent cortical dynamics"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "apparent motion illusion",
+    "primary visual cortex V1",
+    "voltage-sensitive dye imaging",
+    "traveling waves",
+    "intracortical horizontal connections",
+    "recurrent gain control",
+    "correspondence problem",
+    "awake primate cortex"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "0f6916c2d2f5df57f61a018e804f303d",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}

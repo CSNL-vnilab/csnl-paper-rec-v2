@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "multivariate encoding modeling",
+      "role": "primary_lens",
+      "one_line": "fMRI voxel patterns analyzed via encoding models to read out feature codes"
+    },
+    {
+      "name": "hierarchical division-of-labor of cortical representation",
+      "role": "compared_against",
+      "one_line": "anterior regions hold abstract codes while primary sensory cortex holds detailed codes"
+    },
+    {
+      "name": "categorical coding of visual working memory",
+      "role": "extended",
+      "one_line": "extends categorical representation framework down into extrastriate cortex during WM"
+    }
+  ],
+  "core_question": "Are working memory representations of color categorical already at the level of extrastriate visual cortex, and do they differ from perception?",
+  "key_assumptions": [
+    "voxel patterns reflect feature-selective neural representations",
+    "encoding models can dissociate categorical from continuous codes",
+    "subjects need not be cued to categorize for categorical codes to emerge"
+  ],
+  "manipulations": [
+    "task state (working memory delay vs perception)",
+    "color stimuli spanning categorical boundaries",
+    "regions of interest across the visual hierarchy (V4, VO1)"
+  ],
+  "key_findings": [
+    "categorical color codes present in extrastriate visual cortex (V4, VO1)",
+    "categorical coding observed during working memory but not during perception",
+    "categorical structure emerges without explicit or implicit categorization instructions"
+  ],
+  "interpretations": [
+    "visual working memory relies at least in part on categorical representations",
+    "abstract categorical codes are not exclusive to anterior cortex"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "visual working memory",
+    "categorical representation",
+    "color coding",
+    "extrastriate visual cortex",
+    "V4",
+    "VO1",
+    "multivariate encoding model",
+    "perception versus memory"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "5eda6d01bdb10a6f21b392adc2cddda5",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}

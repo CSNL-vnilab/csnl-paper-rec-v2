@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "population-response manifold geometry",
+      "role": "primary_lens",
+      "one_line": "decisions form along curved manifolds in neural state space"
+    },
+    {
+      "name": "competing-accumulator circuit model",
+      "role": "compared_against",
+      "one_line": "action-encoding ensembles compete with monotonic rate increases for preferred actions"
+    },
+    {
+      "name": "decision variable as partially potentiated action plan",
+      "role": "compared_against",
+      "one_line": "DV represented as graded action preparation in LIP"
+    },
+    {
+      "name": "context-dependent state-space readout",
+      "role": "extended",
+      "one_line": "manifolds rotate with task context, requiring task-specific readouts"
+    }
+  ],
+  "core_question": "Does LIP encode decision variables identically across tasks with the same competing actions, or does representational geometry change with task context?",
+  "key_assumptions": [
+    "DVs in standard circuit models are partially potentiated action plans",
+    "ensembles encoding actions compete to form decisions",
+    "readout for identical competing actions should be task-invariant"
+  ],
+  "manipulations": [
+    "task context: face-discrimination vs motion-discrimination",
+    "strength of supporting evidence within each task",
+    "comparison across LIP, lateral and medial prefrontal cortex"
+  ],
+  "key_findings": [
+    "LIP firing rates decrease with supporting evidence in face task, opposite to motion task",
+    "decisions lie on curved population manifolds misaligned with action representations",
+    "manifolds rotate in state space across task contexts",
+    "similar manifold geometry observed in lateral and medial prefrontal cortices"
+  ],
+  "interpretations": [
+    "DV representation geometry is task-context dependent, requiring distinct readouts",
+    "curved misaligned manifolds may be a ubiquitous motif across decision-making circuits"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "lateral intraparietal cortex",
+    "face discrimination",
+    "motion discrimination",
+    "decision variable representation",
+    "population manifold geometry",
+    "state-space rotation",
+    "context-dependent readout",
+    "prefrontal decision circuits"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "add9ee7d38f09bc84cda02969c7a1e14",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}
