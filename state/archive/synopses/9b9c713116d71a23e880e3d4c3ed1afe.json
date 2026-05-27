@@ -1,0 +1,62 @@
+{
+  "frameworks": [
+    {
+      "name": "intuitive physics",
+      "role": "primary_lens",
+      "one_line": "mental simulation of physical dynamics underlying observed agent actions"
+    },
+    {
+      "name": "intuitive psychology / theory of mind",
+      "role": "primary_lens",
+      "one_line": "inference of mental states and causal role from observed action"
+    },
+    {
+      "name": "feature-based theory of moral judgment",
+      "role": "compared_against",
+      "one_line": "direct mapping from low-level visual features to moral judgments"
+    },
+    {
+      "name": "vignette-based moral psychology",
+      "role": "context",
+      "one_line": "traditional approach using verbally described protagonists and intentions"
+    }
+  ],
+  "core_question": "Are moral judgments from dynamic visual scenes mediated by inferences over intuitive physics and intuitive psychology rather than direct visual features?",
+  "key_assumptions": [
+    "observers infer mental states from observed actions",
+    "observers reason about causal contribution of agent's action to the outcome",
+    "moral judgment combines physical and mental-state inference"
+  ],
+  "manipulations": [
+    "dynamic visual interactions varying agent action and outcome",
+    "scene configurations distinguishing feature-based from inference-based accounts",
+    "three experiments spanning a range of dynamic interactions"
+  ],
+  "key_findings": [
+    "model integrating intuitive physics and intuitive psychology predicts moral judgments across diverse dynamic scenes",
+    "moral judgments are not fully explained by direct visual features",
+    "quantitative predictions match human judgments in three experiments"
+  ],
+  "interpretations": [
+    "visual features influence moral judgment via inferred mental states and causal role, not directly",
+    "moral judgment is mediated computation over intuitive theories of physics and mind"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "intuitive physics",
+    "intuitive psychology",
+    "theory of mind",
+    "moral judgment",
+    "dynamic visual stimuli",
+    "causal inference",
+    "mental state attribution",
+    "computational model of cognition"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "9b9c713116d71a23e880e3d4c3ed1afe",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

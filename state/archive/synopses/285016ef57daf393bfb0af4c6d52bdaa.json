@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "theory-based reinforcement learning",
+      "role": "primary_lens",
+      "one_line": "strong model-based RL where the model is an intuitive causal theory of the environment"
+    },
+    {
+      "name": "model-based reinforcement learning",
+      "role": "extended",
+      "one_line": "generalized by replacing the internal model with a structured causal theory"
+    },
+    {
+      "name": "intuitive theory / object-based causal model",
+      "role": "primary_lens",
+      "one_line": "ontology of physical objects, intentional agents, relations, and goals"
+    },
+    {
+      "name": "alternative learning models",
+      "role": "compared_against",
+      "one_line": "non-theory-based baselines compared on fit to prefrontal activity"
+    }
+  ],
+  "core_question": "How are intuitive theories of the environment represented and updated in the human brain during reinforcement learning?",
+  "key_assumptions": [
+    "internal models are structured as intuitive causal theories",
+    "theories decompose into separable components (objects, agents, relations, goals)",
+    "theory updating produces distinct neural signatures across components"
+  ],
+  "manipulations": [
+    "participants learned multiple Atari-style video games during fMRI",
+    "theory-based RL model contrasted against alternative learning models",
+    "theory update events identified across learning"
+  ],
+  "key_findings": [
+    "inferred theories explained inferior frontal gyrus and prefrontal signal better than alternatives",
+    "theory update events elicited activity in IFG, occipital, and fusiform cortex",
+    "separate learning signals indexed different theory components",
+    "transient strengthening of theory representations during updating"
+  ],
+  "interpretations": [
+    "intuitive theories are neurally represented across prefrontal and posterior regions",
+    "effective connectivity flows top-down from prefrontal theory-coding regions to occipital/temporal updating regions"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "theory-based reinforcement learning",
+    "model-based RL",
+    "intuitive theories",
+    "inferior frontal gyrus",
+    "theory updating",
+    "effective connectivity",
+    "Atari video games fMRI",
+    "object-based causal model"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "285016ef57daf393bfb0af4c6d52bdaa",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

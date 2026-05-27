@@ -1,0 +1,60 @@
+{
+  "frameworks": [
+    {
+      "name": "Gaussian Process regression with diffusion kernel",
+      "role": "primary_lens",
+      "one_line": "GP model with graph diffusion kernel captures generalization over connected reward structures"
+    },
+    {
+      "name": "function learning",
+      "role": "extended",
+      "one_line": "psychological function-learning models extended to graph-structured input spaces"
+    },
+    {
+      "name": "Successor Representation",
+      "role": "extended",
+      "one_line": "reinforcement-learning SR linked to GP-diffusion generalization in graphs"
+    },
+    {
+      "name": "multi-armed bandit",
+      "role": "context",
+      "one_line": "exploration-exploitation paradigm extended onto a graph topology"
+    }
+  ],
+  "core_question": "How do people generalize and explore reward structures defined over graph-connected spaces?",
+  "key_assumptions": [
+    "rewards covary with graph connectivity",
+    "generalization can be modeled with a kernel over the graph",
+    "human choices reflect learned value plus uncertainty"
+  ],
+  "manipulations": [
+    "connectivity structure of the underlying reward graph",
+    "bandit choice options embedded in graph nodes"
+  ],
+  "key_findings": [
+    "a GP with diffusion kernel best describes participant choices among compared models",
+    "the same model predicts expected-reward judgments and confidence ratings"
+  ],
+  "interpretations": [
+    "graph-diffusion GP unifies function learning with Successor Representation",
+    "human generalization in structured spaces leverages connectivity-based similarity"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "graph-structured reward",
+    "Gaussian Process regression",
+    "diffusion kernel",
+    "function learning",
+    "Successor Representation",
+    "generalization",
+    "exploration-exploitation",
+    "multi-armed bandit"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "a728288f28ca1506b3ac7644d26839e0",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

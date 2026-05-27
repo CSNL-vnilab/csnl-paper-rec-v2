@@ -1,0 +1,56 @@
+{
+  "frameworks": [
+    {
+      "name": "reinforcement learning",
+      "role": "primary_lens",
+      "one_line": "standard RL update rules suffice to learn log-likelihood ratios."
+    },
+    {
+      "name": "log-likelihood ratio accumulation",
+      "role": "extended",
+      "one_line": "evidence integration mechanism shown to emerge from RL value learning."
+    },
+    {
+      "name": "dedicated synaptic plasticity rules",
+      "role": "compared_against",
+      "one_line": "prior models requiring bespoke plasticity are argued unnecessary."
+    }
+  ],
+  "core_question": "Can neural circuits learn to accumulate probabilistic evidence using only standard reinforcement learning rules rather than dedicated plasticity?",
+  "key_assumptions": [
+    "binary-choice decisions integrate log-likelihood ratios of sensory inputs",
+    "for a wide task class, log-likelihood ratios are approximately linear in expected reward",
+    "synaptic updates follow standard RL value-learning dynamics"
+  ],
+  "manipulations": [
+    "task class with probabilistic sensory cues",
+    "comparison of standard RL plasticity vs. specialized log-likelihood plasticity rules"
+  ],
+  "key_findings": [
+    "RL-trained circuits estimate log-likelihood ratios from experience",
+    "trial-by-trial accumulation of cue-associated log-likelihood ratios emerges during action selection",
+    "model replicates behavioral and neural data from probabilistic-cue tasks"
+  ],
+  "interpretations": [
+    "dedicated plasticity rules for probabilistic inference are not required",
+    "standard RL mechanisms suffice for efficient probabilistic inference in neural circuits"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "evidence accumulation",
+    "log-likelihood ratio",
+    "reinforcement learning",
+    "synaptic plasticity",
+    "probabilistic inference",
+    "perceptual decision making",
+    "neural circuit model",
+    "expected reward"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "4abdfc86fade78b2f3d0843eb758627b",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:34:21+09:00",
+  "review_status": "auto_unreviewed"
+}

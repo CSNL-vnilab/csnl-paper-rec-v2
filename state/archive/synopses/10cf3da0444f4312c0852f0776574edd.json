@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "frequency-tuned gain control",
+      "role": "primary_lens",
+      "one_line": "recurrent tuned gain control shapes V1 contrast-dependent spatial-frequency tuning"
+    },
+    {
+      "name": "feed-forward linear filter pooling",
+      "role": "alternative_lens",
+      "one_line": "changes in feed-forward filter pooling as alternative mechanism for tuning shifts"
+    },
+    {
+      "name": "linear summation prediction",
+      "role": "compared_against",
+      "one_line": "linear prediction baseline against which sublinear cortical summation is contrasted"
+    }
+  ],
+  "core_question": "Are V1 contrast-dependent spatial-frequency tuning shifts inherited from LGN inputs or computed de novo in cortex?",
+  "key_assumptions": [
+    "optimally-oriented gratings probe the relevant tuning axis",
+    "sum-of-gratings mixtures isolate cross-frequency interactions",
+    "single-unit recordings in anesthetized macaque reflect cell mechanisms"
+  ],
+  "manipulations": [
+    "stimulus contrast across a range",
+    "number of component gratings (3, 5, 7) in mixtures",
+    "logarithmically-spaced spatial frequencies in mixtures",
+    "recording site (LGN vs V1)"
+  ],
+  "key_findings": [
+    "most V1 cells and magnocellular LGN cells summed sublinearly across frequencies",
+    "V1 summation was more linear at-or-above peak frequency than below it",
+    "LGN cells, including those with tuning shifts, showed little frequency-dependent summation"
+  ],
+  "interpretations": [
+    "V1 contrast-dependent spatial-frequency tuning is not inherited from LGN afferents",
+    "a frequency-tuned gain-control model captures the cortical summation pattern"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "contrast-dependent spatial frequency tuning",
+    "tuned gain control",
+    "grating mixture summation",
+    "macaque LGN",
+    "macaque V1",
+    "magnocellular LGN",
+    "sublinear summation",
+    "feed-forward vs recurrent mechanisms"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "10cf3da0444f4312c0852f0776574edd",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:34:21+09:00",
+  "review_status": "auto_unreviewed"
+}

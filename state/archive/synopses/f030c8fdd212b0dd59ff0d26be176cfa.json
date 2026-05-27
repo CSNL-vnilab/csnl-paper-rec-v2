@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "activity flow mapping",
+      "role": "primary_lens",
+      "one_line": "empirically derived network model predicting regional activations from connectivity-weighted activity"
+    },
+    {
+      "name": "resting-state functional connectivity",
+      "role": "compared_against",
+      "one_line": "intrinsic baseline network organization used as prediction reference"
+    },
+    {
+      "name": "task-state functional connectivity",
+      "role": "extended",
+      "one_line": "task-induced reconfiguration of inter-regional relationships added on top of intrinsic networks"
+    }
+  ],
+  "core_question": "Do small task-related changes in functional connectivity carry functional relevance for shaping cognitive task activations beyond resting-state connectivity?",
+  "key_assumptions": [
+    "activity flow mapping links connectivity to activations",
+    "resting-state FC indexes intrinsic network organization",
+    "task activations across 360 cortical regions are valid prediction targets"
+  ],
+  "manipulations": [
+    "connectivity source: resting-state vs task-state vs task-general",
+    "individual-specific vs group-level connectivity patterns",
+    "24 cognitive task conditions across 360 cortical regions"
+  ],
+  "key_findings": [
+    "task-state FC improved prediction of independent task activations across all 24 conditions and 360 regions",
+    "individual-specific FC patterns strongly drove prediction accuracy",
+    "task-general FC from other tasks still improved predictions beyond resting-state FC"
+  ],
+  "interpretations": [
+    "task-related FC changes dynamically reshape brain network organization",
+    "small task-induced connectivity shifts redirect the flow of neural activity during task performance"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "activity flow mapping",
+    "task-state functional connectivity",
+    "resting-state functional connectivity",
+    "individual-specific connectivity",
+    "cognitive task activations",
+    "brain network reconfiguration",
+    "cortical parcellation",
+    "fMRI connectivity prediction"
+  ],
+  "abstract_coverage": 1.0,
+  "out_of_scope_note": null,
+  "canonical_id": "f030c8fdd212b0dd59ff0d26be176cfa",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:34:21+09:00",
+  "review_status": "auto_unreviewed"
+}

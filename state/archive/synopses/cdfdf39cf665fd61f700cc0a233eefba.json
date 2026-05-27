@@ -1,0 +1,50 @@
+{
+  "frameworks": [
+    {
+      "name": "hierarchical Bayesian model of pedagogy",
+      "role": "primary_lens",
+      "one_line": "teacher and learner jointly infer each other's beliefs across nested levels"
+    },
+    {
+      "name": "computational accounts of pedagogy",
+      "role": "extended",
+      "one_line": "extends pedagogical sampling to interactive teacher-learner feedback loops"
+    }
+  ],
+  "core_question": "How do teachers infer learners' background knowledge, and how does learner feedback shape this collaborative teaching process?",
+  "key_assumptions": [
+    "teaching and learning are collaborative inference over latent beliefs",
+    "learners can signal confusion and background knowledge to teachers",
+    "examples are selected to be informative given a model of the learner"
+  ],
+  "manipulations": [
+    "learner's background knowledge",
+    "presence and content of learner feedback to the teacher"
+  ],
+  "key_findings": [
+    "teachers select examples conditioned on learner's background knowledge",
+    "teachers adjust subsequent examples in response to learner feedback",
+    "learners provide more feedback when examples mismatch their background knowledge"
+  ],
+  "interpretations": [
+    "pedagogy is a bidirectional inference process between teacher and learner",
+    "interactive feedback supports computational models of collaborative teaching"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "hierarchical Bayesian model",
+    "pedagogical sampling",
+    "teacher-learner interaction",
+    "background knowledge inference",
+    "example selection",
+    "collaborative reasoning",
+    "interactive teaching"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "cdfdf39cf665fd61f700cc0a233eefba",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:34:21+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,62 @@
+{
+  "frameworks": [
+    {
+      "name": "Theory-Based Reinforcement Learning",
+      "role": "primary_lens",
+      "one_line": "Model-based RL using intuitive theories of objects, agents, and interactions"
+    },
+    {
+      "name": "Bayesian program learning",
+      "role": "extended",
+      "one_line": "Probabilistic inference over programs for a game-engine simulator"
+    },
+    {
+      "name": "Model-based reinforcement learning",
+      "role": "extended",
+      "one_line": "Strong form of model-based RL with internal simulation for planning"
+    },
+    {
+      "name": "Model-free reinforcement learning",
+      "role": "compared_against",
+      "one_line": "Standard machine RL requiring vast experience, contrasted with human learning"
+    }
+  ],
+  "core_question": "How can an artificial agent learn many video games with human-like efficiency and generalization?",
+  "key_assumptions": [
+    "Humans rely on rich abstract causal models of objects and intentional agents",
+    "Environments can be represented as probabilistic generative programs over a game-engine simulator",
+    "Object-based relational structure supports efficient exploration and planning"
+  ],
+  "manipulations": [
+    "Compared agent performance across 90 Atari-style video games",
+    "Evaluated generalization to new game situations and new levels"
+  ],
+  "key_findings": [
+    "EMPA closely matches human learning efficiency on 90 Atari-style games",
+    "Agent learns new games in minutes of game play",
+    "Robust generalization to new game situations and new levels",
+    "Captures fine-grained structure in human exploration trajectories and learning dynamics"
+  ],
+  "interpretations": [
+    "Intuitive-theory-based generative models enable human-level rapid learning and planning",
+    "Object-based, relational exploration with internal simulation bridges human and machine RL"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "theory-based reinforcement learning",
+    "intuitive theories",
+    "model-based RL",
+    "Bayesian program induction",
+    "game-engine simulator",
+    "object-based exploration",
+    "human learning efficiency",
+    "heuristic planning"
+  ],
+  "abstract_coverage": 1.0,
+  "out_of_scope_note": null,
+  "canonical_id": "cfa76bdf92a18e23594bb4e457f4a065",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:34:21+09:00",
+  "review_status": "auto_unreviewed"
+}
