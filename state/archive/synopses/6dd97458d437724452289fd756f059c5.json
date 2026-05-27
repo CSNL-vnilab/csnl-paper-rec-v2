@@ -1,0 +1,17 @@
+{
+  "canonical_id": "6dd97458d437724452289fd756f059c5",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T02:13:46+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.0,
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "Battery charging engineering patent disclosure (RF/MHz signal modulation); not computational/systems neuroscience."
+}

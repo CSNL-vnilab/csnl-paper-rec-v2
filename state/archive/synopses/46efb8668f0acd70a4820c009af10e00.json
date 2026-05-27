@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "Hodgkin-Huxley single-compartment conductance model",
+      "role": "primary_lens",
+      "one_line": "single-compartment DA neuron with voltage- and Ca2+-dependent currents"
+    },
+    {
+      "name": "homeostatic vs hedonic regulation of feeding",
+      "role": "context",
+      "one_line": "feeding controlled by two systems; hedonic role of midbrain DA examined"
+    },
+    {
+      "name": "pacemaker firing of midbrain dopaminergic neurons",
+      "role": "extended",
+      "one_line": "model extended to capture irregular firing seen after high-fat diet"
+    }
+  ],
+  "core_question": "Does diet-induced obesity alter the spontaneous firing patterns of midbrain dopaminergic neurons, and what biophysical mechanisms underlie this change?",
+  "key_assumptions": [
+    "DA firing patterns in vitro reflect intrinsic biophysical mechanisms",
+    "voltage- and Ca2+-dependent currents suffice to capture firing patterns",
+    "high-fat diet feeding can modify DA neuron membrane properties"
+  ],
+  "manipulations": [
+    "diet condition (high-fat vs normal chow) in mice",
+    "voltage-clamp-derived current parameters in the model",
+    "model parameters distinguishing regular vs irregular firing"
+  ],
+  "key_findings": [
+    "DA neurons usually show regular pacemaker-like firing in slices",
+    "high-fat-diet mice show increased proportion of irregularly firing DA neurons",
+    "new voltage-clamp data from HFD and NCD slices constrain the model"
+  ],
+  "interpretations": [
+    "hedonic-system DA activity, not only homeostatic circuits, is altered by diet-induced obesity",
+    "biophysical model can account for diet-related shifts in DA firing patterns"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "midbrain dopaminergic neurons",
+    "high-fat diet",
+    "diet-induced obesity",
+    "pacemaker firing",
+    "irregular firing patterns",
+    "Hodgkin-Huxley model",
+    "voltage-clamp",
+    "hedonic feeding system"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "46efb8668f0acd70a4820c009af10e00",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T02:13:32+09:00",
+  "review_status": "auto_unreviewed"
+}

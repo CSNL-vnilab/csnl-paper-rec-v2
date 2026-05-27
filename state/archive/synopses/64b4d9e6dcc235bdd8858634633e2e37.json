@@ -1,0 +1,40 @@
+{
+  "canonical_id": "64b4d9e6dcc235bdd8858634633e2e37",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "global theories of consciousness", "role": "compared_against", "one_line": "broad-function accounts the chapter argues overstate consciousness's utility"},
+    {"name": "metacognition", "role": "primary_lens", "one_line": "candidate specific function the author thinks consciousness genuinely contributes to"},
+    {"name": "subliminal priming paradigm", "role": "alternative_lens", "one_line": "standard nonconscious-processing method whose small effects motivate new tools"},
+    {"name": "evolutionary functionalism of consciousness", "role": "context", "one_line": "framing that consciousness arose recently and may be byproduct or specific adaptation"}
+  ],
+  "core_question": "What, if any, specific cognitive function is consciousness genuinely useful for?",
+  "key_assumptions": [
+    "consciousness emerged at some point in evolutionary history",
+    "simple organisms (e.g., bacteria) are not conscious",
+    "subliminal priming yields only small, often unreplicable nonconscious effects",
+    "stronger nonconscious signals are needed to test consciousness's added value"
+  ],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [
+    "current evidence suggests consciousness may be less broadly useful than global theories claim",
+    "metacognition may be one of the few specific functions to which consciousness contributes"
+  ],
+  "limitations_noted": [
+    "subliminal-priming effects are small and hard to replicate"
+  ],
+  "connecting_signals": [
+    "function of consciousness",
+    "metacognition",
+    "global theories of consciousness",
+    "subliminal priming",
+    "nonconscious processing",
+    "evolution of consciousness",
+    "consciousness as byproduct"
+  ],
+  "out_of_scope_note": null
+}

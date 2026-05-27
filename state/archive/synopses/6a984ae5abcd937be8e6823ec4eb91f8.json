@@ -1,0 +1,43 @@
+{
+  "canonical_id": "6a984ae5abcd937be8e6823ec4eb91f8",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "Default Mode Network", "role": "primary_lens", "one_line": "intrinsic network classically deactivated by demanding tasks but here probed for activation"},
+    {"name": "Working Memory Network", "role": "primary_lens", "one_line": "task-positive network engaged during verbal working memory operations"},
+    {"name": "task-negative vs task-positive anticorrelation", "role": "context", "one_line": "prior framing of DMN-WMN as competing networks"}
+  ],
+  "core_question": "Do DMN regions activate during the preparation phase of a working memory task, alongside the WMN?",
+  "key_assumptions": [
+    "task preparation and execution phases recruit dissociable network states",
+    "DMN and WMN can be identified by canonical core regions (mPFC, PCC vs lateral PFC/parietal)",
+    "BOLD activation/deactivation indexes attentional resource allocation"
+  ],
+  "manipulations": [
+    "task phase (preparation vs execution)",
+    "verbal working memory task vs baseline"
+  ],
+  "key_findings": [
+    "core DMN regions (mPFC, PCC) and WMN regions coactivated during preparation phase",
+    "WMN activated and DMN deactivated during execution phase"
+  ],
+  "interpretations": [
+    "DMN-WMN coupling reflects allocation of attentional resources driven by task demands rather than a fixed antagonism",
+    "DMN can play an active role in task preparation, not only mind-wandering or rest"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "default mode network",
+    "working memory network",
+    "task preparation",
+    "medial prefrontal cortex",
+    "posterior cingulate cortex",
+    "task-induced deactivation",
+    "attentional resource allocation",
+    "verbal working memory"
+  ],
+  "out_of_scope_note": null
+}

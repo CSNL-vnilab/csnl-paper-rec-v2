@@ -1,0 +1,45 @@
+{
+  "canonical_id": "908bd8b657616bc149456fe30c574a53",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "fast-scan cyclic voltammetry (FSCV)", "role": "primary_lens", "one_line": "electrochemical method exploiting redox chemistry for subsecond neurotransmitter detection"},
+    {"name": "hybrid CMOS-graphene sensor integration", "role": "extended", "one_line": "monolithic integration of graphene sensing electrodes above CMOS readout channels"}
+  ],
+  "core_question": "Can a hybrid CMOS-graphene array enable scalable subsecond in-vivo dopamine recording with adequate sensitivity?",
+  "key_assumptions": [
+    "planar multilayer graphene is biologically compatible as sensing surface",
+    "background FSCV current can be subtracted by a programmable constant current at redox potentials",
+    "dual-slope integrating ADC suffices once background is removed"
+  ],
+  "manipulations": [
+    "scan rate varied across three settings",
+    "region-of-interest background-subtraction current programmed at redox potentials",
+    "ADC dynamic range constrained after background subtraction"
+  ],
+  "key_findings": [
+    "four-channel 65-nm CMOS prototype with graphene electrodes fabricated",
+    "ROI background subtraction enhanced sensitivity at known dopamine concentration in vitro",
+    "dual-slope ADC at 5-10 kHz reached ~60 pA effective resolution",
+    "theoretical dopamine detection limit ~6 nM achieved"
+  ],
+  "interpretations": [
+    "background-subtraction relaxes ADC dynamic range without losing measurement accuracy",
+    "platform is suitable for next-generation large-scale in-vivo FSCV dopamine recording"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "fast-scan cyclic voltammetry",
+    "dopamine detection",
+    "CMOS sensor array",
+    "graphene electrode",
+    "FSCV readout circuit",
+    "background-subtraction ADC",
+    "in-vivo neurochemical recording",
+    "subsecond neurotransmitter sensing"
+  ],
+  "out_of_scope_note": null
+}
