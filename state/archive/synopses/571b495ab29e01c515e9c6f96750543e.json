@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "revealed preference theory",
+      "role": "primary_lens",
+      "one_line": "Generalized Axiom of Revealed Preference quantifies economic rationality"
+    },
+    {
+      "name": "voxel-based morphometry",
+      "role": "primary_lens",
+      "one_line": "Whole-brain gray matter density correlated with behavioral measure"
+    },
+    {
+      "name": "value-based decision making",
+      "role": "context",
+      "one_line": "Economic choice as a window into neural valuation circuits"
+    },
+    {
+      "name": "Neurosynth meta-analytic coactivation",
+      "role": "extended",
+      "one_line": "Large-sample fMRI coactivation maps VLPFC to value regions"
+    }
+  ],
+  "core_question": "Which neuroanatomical changes in aging brains underlie loss of economic rationality?",
+  "key_assumptions": [
+    "GARP violations are a valid index of economic irrationality",
+    "Gray matter density tracks functionally relevant tissue integrity",
+    "Cognitively normal elders (MMSE 26-30) reflect healthy aging"
+  ],
+  "manipulations": [
+    "Compared elders (>65y) versus younger adults on rationality",
+    "Regressed gray matter volume against GARP violation scores",
+    "Tested chronological age as a within-elder predictor"
+  ],
+  "key_findings": [
+    "Elders showed greater irrationality than younger subjects",
+    "Chronological age did not correlate with rationality within elders",
+    "VLPFC gray matter density correlated tightly with irrational behavior",
+    "VLPFC coactivates with nearly all value-associated regions in Neurosynth"
+  ],
+  "interpretations": [
+    "VLPFC integrity is a neuroanatomic locus for economic rationality in aging",
+    "Tissue loss rather than age per se drives decision-making decline"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "ventrolateral prefrontal cortex",
+    "economic rationality",
+    "Generalized Axiom of Revealed Preference",
+    "voxel-based morphometry",
+    "healthy aging",
+    "value-based decision making",
+    "Neurosynth coactivation",
+    "gray matter volume"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "571b495ab29e01c515e9c6f96750543e",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

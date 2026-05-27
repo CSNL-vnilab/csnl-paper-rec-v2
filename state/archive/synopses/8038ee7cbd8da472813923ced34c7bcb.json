@@ -1,0 +1,52 @@
+{
+  "frameworks": [
+    {
+      "name": "deep learning",
+      "role": "primary_lens",
+      "one_line": "End-to-end neural network pipeline applied to raw video frames for behavior classification."
+    },
+    {
+      "name": "computer vision pose estimation",
+      "role": "extended",
+      "one_line": "Segmentation, identification and pose estimation modules combined into one pipeline."
+    }
+  ],
+  "core_question": "Can a single deep-learning pipeline segment, identify, pose-estimate, and classify individual and social animal behavior in complex home-cage environments from raw monocular video?",
+  "key_assumptions": [
+    "Raw video frames contain sufficient signal for behavior classification without hand-crafted features",
+    "Initial human supervision suffices; no further intervention needed at inference",
+    "Mono-vision cameras in home cages capture enough of 3D social interaction"
+  ],
+  "manipulations": [
+    "Species (individual mice vs socially interacting non-human primates)",
+    "Setting (single-animal vs multi-animal social complex environment)"
+  ],
+  "key_findings": [
+    "SIPEC pipeline performs segmentation, identification, pose estimation, and behavior classification end-to-end",
+    "Outperforms prior state of the art on these tasks",
+    "Recognizes multiple behaviors of freely moving mice and of socially interacting primates in 3D using only mono-vision home-cage video"
+  ],
+  "interpretations": [
+    "Group and social animal behavior in complex environments is tractable with a single deep architecture trained on raw frames",
+    "Minimal human supervision is enough for the pipeline to generalize across species and settings"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "animal behavior classification",
+    "social behavior quantification",
+    "pose estimation",
+    "individual identification",
+    "instance segmentation",
+    "freely moving mice",
+    "non-human primates",
+    "home-cage monitoring",
+    "deep learning video analysis"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "8038ee7cbd8da472813923ced34c7bcb",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:29:55+09:00",
+  "review_status": "auto_unreviewed"
+}

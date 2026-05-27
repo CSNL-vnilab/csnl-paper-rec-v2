@@ -1,0 +1,57 @@
+{
+  "canonical_id": "44efed4ba94cdec10d3db38020d464a2",
+  "title": "Model-Based fMRI and Its Application to Reward Learning and Decision Making",
+  "year": 2007,
+  "venue": "Annals of the New York Academy of Sciences",
+  "doi": "10.1196/annals.1390.022",
+  "is_preprint": false,
+  "frameworks": [
+    {
+      "name": "model-based fMRI",
+      "role": "primary_lens",
+      "one_line": "Correlate signals from a computational cognitive model against fMRI to localize implementation."
+    },
+    {
+      "name": "reward learning and decision making",
+      "role": "context",
+      "one_line": "Domain where computational models probe learning of reward associations and value encoding."
+    }
+  ],
+  "core_question": "How can model-based fMRI reveal the neural implementation of cognitive processes underlying reward learning and decision making?",
+  "key_assumptions": [
+    "A computational model of the cognitive process is available",
+    "Model-derived signals can be correlated against measured fMRI time-series",
+    "Brain regions tracking model signals implement the modeled process"
+  ],
+  "manipulations": [
+    "Task designed to engage reward learning or decision making",
+    "Model-derived regressors (e.g., learning signals, expected value) entered into fMRI analysis"
+  ],
+  "key_findings": [
+    "Model-based fMRI identifies brain regions whose response profile matches model predictions",
+    "Approach has been applied to reward associations, action selection for reward, and expected-value signals reflecting abstract decision structure"
+  ],
+  "interpretations": [
+    "Model-based fMRI reveals how, not merely where, a cognitive process is implemented in the brain",
+    "The approach provides mechanistic insight beyond conventional localization neuroimaging"
+  ],
+  "limitations_noted": [
+    "The review discusses limitations of the model-based fMRI approach"
+  ],
+  "connecting_signals": [
+    "model-based fMRI",
+    "reward learning",
+    "decision making",
+    "computational model regressors",
+    "expected value signals",
+    "action selection",
+    "reward associations",
+    "neural implementation of cognition"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:29:55+09:00",
+  "review_status": "auto_unreviewed"
+}

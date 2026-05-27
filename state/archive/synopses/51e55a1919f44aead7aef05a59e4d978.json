@@ -1,0 +1,59 @@
+{
+  "frameworks": [
+    {
+      "name": "category prototype vs boundary encoding",
+      "role": "primary_lens",
+      "one_line": "Within-category variability indexed by distance from category boundary"
+    },
+    {
+      "name": "representational similarity analysis",
+      "role": "primary_lens",
+      "one_line": "RSA used to test for cross-category information in cortical regions"
+    },
+    {
+      "name": "hierarchical cortical categorization network",
+      "role": "extended",
+      "one_line": "Visual and frontal regions form a hierarchy for active color categorization"
+    }
+  ],
+  "core_question": "How is fine-grained color perception mapped onto discrete categories across the cortical hierarchy?",
+  "key_assumptions": [
+    "Color stimuli can be parameterized by distance from the category boundary",
+    "Active categorization task engages category-relevant neural processes",
+    "fMRI BOLD modulation reflects category-specific encoding"
+  ],
+  "manipulations": [
+    "Varied stimulus distance from category boundary (near vs far)",
+    "Contrasted within-category (prototype vs boundary) and cross-category differences",
+    "Active color categorization task"
+  ],
+  "key_findings": [
+    "Frontal areas (IFG, MFG, medial SFG, insula) responded more to near-boundary colors",
+    "Left V1 in calcarine showed greater responses for category-center colors than far-from-boundary",
+    "Bilateral V4 enhanced for both category-center and around-boundary colors",
+    "RSA showed bilateral insulae and V4a carry cross-category information"
+  ],
+  "interpretations": [
+    "Color categorization is supported by a hierarchically organized cortical network",
+    "Frontal and visual cortices play complementary roles in boundary vs prototype encoding"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "color categorization",
+    "category boundary encoding",
+    "category prototype",
+    "fMRI representational similarity analysis",
+    "V4 color processing",
+    "inferior and middle frontal gyrus",
+    "insular cortex",
+    "active categorization task",
+    "within-category variability"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "51e55a1919f44aead7aef05a59e4d978",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

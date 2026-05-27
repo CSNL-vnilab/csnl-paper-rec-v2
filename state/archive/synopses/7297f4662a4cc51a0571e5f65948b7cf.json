@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "reentrant / feedback processing",
+      "role": "primary_lens",
+      "one_line": "Top-down PPC feedback recruits V1 for fine-scale category readout."
+    },
+    {
+      "name": "multivariate fMRI decoding",
+      "role": "primary_lens",
+      "one_line": "Category information read out from voxel patterns across visual and parietal cortex."
+    },
+    {
+      "name": "causal influence analysis",
+      "role": "primary_lens",
+      "one_line": "Directed inter-area influence quantified to test PPC-to-V1 feedback role."
+    },
+    {
+      "name": "perceptual category learning",
+      "role": "context",
+      "one_line": "Flexible categorisation as a plastic cortical process."
+    }
+  ],
+  "core_question": "How does feedback from posterior parietal cortex enable flexible, fine-scale visuospatial category representations in early visual cortex?",
+  "key_assumptions": [
+    "Higher-order areas lack fine spatial detail needed for fine discriminations",
+    "Category readout can be decoded from BOLD multivoxel patterns",
+    "Inter-area causal influence indexes feedback recruitment"
+  ],
+  "manipulations": [
+    "Coarse- vs fine-scale spatial categorisation",
+    "Trial stage (early / intermediate / late) for time-resolved decoding",
+    "Retraining the same stimuli into two new category groups"
+  ],
+  "key_findings": [
+    "Coarse-category information decoded early in IPS1/2 (PPC)",
+    "Fine-category information emerged at intermediate stage in V1 and again late in IPS1/2",
+    "Categorisation performance scaled with strength of IPS1/2-to-V1 causal influence",
+    "IPS1/2 and V1 selectivity shifted markedly after retraining to new categories"
+  ],
+  "interpretations": [
+    "Reentrant PPC-visual cortex interactions enable flexible abstraction of category information",
+    "Fine-scale categorisation is supported by feedback that reuses early-visual fine spatial detail"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "posterior parietal cortex feedback",
+    "intraparietal sulcus IPS1/2",
+    "primary visual cortex V1 decoding",
+    "visuospatial categorisation",
+    "coarse vs fine discrimination",
+    "reentrant processing",
+    "causal influence fMRI",
+    "category learning plasticity"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "7297f4662a4cc51a0571e5f65948b7cf",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:29:55+09:00",
+  "review_status": "auto_unreviewed"
+}

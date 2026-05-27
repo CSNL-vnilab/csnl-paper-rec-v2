@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "evidence accumulation / race model",
+      "role": "primary_lens",
+      "one_line": "decisions arise from competing accumulators racing to a bound"
+    },
+    {
+      "name": "neural population decoding",
+      "role": "primary_lens",
+      "one_line": "logistic decoder reads choice accuracy from across-neuron variability"
+    },
+    {
+      "name": "decision confidence",
+      "role": "extended",
+      "one_line": "links pre-feedback belief in correctness to LIP accumulator population"
+    }
+  ],
+  "core_question": "Do neurons that represent evidence accumulation also carry information about choice accuracy (confidence)?",
+  "key_assumptions": [
+    "decisions are implemented as races between competing evidence-accumulation processes",
+    "Tin neurons (response field on contralateral target) represent accumulation toward that target",
+    "confidence is the pre-feedback belief that one's choice is correct"
+  ],
+  "manipulations": [
+    "reaction-time random dot motion task with varying motion strength",
+    "Neuropixels recordings of LIP Tin-neuron population during contralateral choices"
+  ],
+  "key_findings": [
+    "shortly before a contralateral choice, the Tin population carries information about choice accuracy",
+    "average Tin pre-report activity is independent of reaction time and evidence strength",
+    "individual Tin neurons depart from the population mean in a consistent way",
+    "a simple logistic decoder on this variability predicts accuracy with the hallmarks of confidence"
+  ],
+  "interpretations": [
+    "across-neuron variability in the accumulator population, not the mean, encodes decision confidence",
+    "evidence-accumulation neurons jointly support choice and confidence representations"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "decision confidence",
+    "evidence accumulation",
+    "lateral intraparietal area (LIP)",
+    "Tin neurons",
+    "random dot motion task",
+    "Neuropixels population recording",
+    "logistic decoder",
+    "across-neuron variability"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "16b64553ffded40eee152304c76e4762",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:29:55+09:00",
+  "review_status": "auto_unreviewed"
+}

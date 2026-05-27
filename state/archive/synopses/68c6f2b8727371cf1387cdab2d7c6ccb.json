@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "decision variable encoding in parietal cortex",
+      "role": "primary_lens",
+      "one_line": "LIP firing rates represent the accumulated decision variable for saccade-reported decisions"
+    },
+    {
+      "name": "competing-ensembles action-selection circuit",
+      "role": "compared_against",
+      "one_line": "Action-encoding ensembles compete with higher rates for stronger preferred-target evidence"
+    },
+    {
+      "name": "population state-space manifold",
+      "role": "extended",
+      "one_line": "DV is encoded along a curved population manifold that rotates and shifts by task"
+    }
+  ],
+  "core_question": "Do parietal decision-variable representations generalize across perceptual tasks reported via the same saccadic actions?",
+  "key_assumptions": [
+    "Decisions are reported through saccadic eye movements",
+    "DV can be inferred from neural responses to graded sensory evidence",
+    "Same readout applies when actions are matched across tasks"
+  ],
+  "manipulations": [
+    "Task type: random-dot motion vs novel face discrimination",
+    "Stimulus strength supporting the preferred saccade target",
+    "Recording across LIP, lateral frontal, and medial frontal regions"
+  ],
+  "key_findings": [
+    "In face task, average LIP firing rates were lower for stronger preferred-target evidence",
+    "This contradicted the action-competition prediction of monotonic rate increase",
+    "Population responses in both tasks monotonically encoded the DV on a curved manifold",
+    "The curved manifold rotated and shifted in a task-dependent manner across LIP and frontal cortex"
+  ],
+  "interpretations": [
+    "Apparent average-rate differences reflect task-dependent geometry, not different computations",
+    "DV integration generalizes across tasks at the population manifold level"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "lateral intraparietal area LIP",
+    "decision variable",
+    "perceptual decision-making",
+    "face discrimination task",
+    "motion discrimination task",
+    "population state space",
+    "curved neural manifold",
+    "saccadic action selection"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "68c6f2b8727371cf1387cdab2d7c6ccb",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}
