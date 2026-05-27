@@ -1,0 +1,46 @@
+{
+  "canonical_id": "b4e975457b677e6fe0d1cdcad936e55c",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [
+    {"name": "feedforward / feedback synaptic balance", "role": "primary_lens", "one_line": "gamma indexes feedforward and alpha indexes feedback synaptic activity"},
+    {"name": "contrast-invariant orientation tuning", "role": "compared_against", "one_line": "classical neurophysiology result the BOLD finding appears to violate"},
+    {"name": "neurovascular coupling of BOLD signal", "role": "context", "one_line": "BOLD reflects mixture of feedforward and feedback synaptic input"}
+  ],
+  "core_question": "Why does BOLD orientation tuning in early visual cortex depend on stimulus contrast when single-unit tuning is contrast-invariant?",
+  "key_assumptions": [
+    "gamma-band power indexes feedforward synaptic activity",
+    "alpha-band power indexes feedback synaptic activity",
+    "BOLD signal reflects a mixture of feedforward and feedback input"
+  ],
+  "manipulations": [
+    "stimulus contrast (high vs low)",
+    "stimulus orientation across cardinal vs oblique axes",
+    "neural readout (BOLD vs EEG across frequency bands)"
+  ],
+  "key_findings": [
+    "V1 BOLD showed inverse-oblique tuning at high contrast and horizontal effect at low contrast",
+    "EEG orientation tuning was contrast-invariant but frequency-specific",
+    "gamma-band tuning showed inverse-oblique effect; alpha-band tuning showed horizontal effect",
+    "high-contrast BOLD matched gamma (FF) tuning; low-contrast BOLD matched alpha (FB) tuning"
+  ],
+  "interpretations": [
+    "contrast-dependent BOLD orientation tuning arises from reduced feedforward contribution at low contrast",
+    "BOLD shifts toward feedback orientation preferences when feedforward drive weakens"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "BOLD orientation tuning",
+    "contrast-dependent fMRI response",
+    "oblique effect",
+    "gamma-band activity",
+    "alpha-band activity",
+    "feedforward feedback balance",
+    "simultaneous EEG-fMRI",
+    "primary visual cortex V1"
+  ],
+  "out_of_scope_note": null,
+  "generator": "opus-4-7@2026-05-27",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-27",
+  "abstract_coverage": 1.0
+}

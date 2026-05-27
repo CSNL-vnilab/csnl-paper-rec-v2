@@ -1,0 +1,48 @@
+{
+  "canonical_id": "1f81e669a2dee9cdac57e5b5af46be32",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T09:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.9,
+  "frameworks": [
+    {"name": "drift-diffusion model", "role": "primary_lens", "one_line": "characterizes evidence accumulation dynamics underlying trans-saccadic perceptual choices"},
+    {"name": "Bayesian observer model", "role": "compared_against", "one_line": "captures choices but is insensitive to reaction times"},
+    {"name": "trans-saccadic memory", "role": "context", "one_line": "pre-saccadic stimulus held and compared with post-saccadic input"}
+  ],
+  "core_question": "How is perceptual decision-making implemented when evidence must be integrated across saccadic eye movements?",
+  "key_assumptions": [
+    "trans-saccadic perception relies on a memory of the pre-saccadic stimulus compared to post-saccadic input",
+    "sensory evidence accumulates continuously across discrete saccadic views",
+    "perceptual choices can be modeled as either Bayesian inference or bounded evidence accumulation"
+  ],
+  "manipulations": [
+    "fixation strategy: maintain fixation vs. transient re-fixation on the first target",
+    "orientation difference between sequentially presented Gabor patches",
+    "spatial location of the two Gabor targets in a fast sequence"
+  ],
+  "key_findings": [
+    "Bayesian observer fit choices but not reaction times",
+    "drift-diffusion model captured both choices and choice times",
+    "trans-saccadic perception did not slow decisions or reduce accuracy",
+    "evidence accumulation rate was lower under trans-saccadic perception and correlated trial-by-trial with accuracy and choice time"
+  ],
+  "interpretations": [
+    "perception across saccades reflects an active, dynamic integration of sensory evidence rather than passive memory comparison",
+    "drift-diffusion provides a more complete account of trans-saccadic decisions than a static Bayesian observer"
+  ],
+  "limitations_noted": [
+    "Bayesian observer model is insensitive to choice reaction times"
+  ],
+  "connecting_signals": [
+    "trans-saccadic perception",
+    "drift-diffusion model",
+    "Bayesian observer model",
+    "evidence accumulation rate",
+    "delayed-match-to-sample",
+    "Gabor orientation discrimination",
+    "saccadic eye movements",
+    "perceptual decision-making"
+  ],
+  "out_of_scope_note": null
+}

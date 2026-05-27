@@ -1,0 +1,45 @@
+{
+  "canonical_id": "c64a00093f2b4b437653cb16fc8b6a7d",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [
+    {"name": "operant conditioning", "role": "primary_lens", "one_line": "shaping center-port fixation by progressive reinforcement of hold duration"},
+    {"name": "reinforcement learning", "role": "primary_lens", "one_line": "curriculum design rationalized by RL-style reward-driven skill acquisition"}
+  ],
+  "core_question": "Can a standardized training curriculum efficiently shape robust center-port fixation behavior in rodents while minimizing motor violation errors?",
+  "key_assumptions": [
+    "longer initial fixation requirement aids learning",
+    "per-animal performance-adapted thresholds improve shaping",
+    "delaying violation penalties protects early learning"
+  ],
+  "manipulations": [
+    "initial required fixation duration (long vs short)",
+    "session-boundary increments of required fixation duration",
+    "timing of violation penalty introduction",
+    "rodent species and task difficulty"
+  ],
+  "key_findings": [
+    "FixGrower reduced training time by 61%",
+    "low violation rates were achieved at the end of training",
+    "the curriculum generalized across rodent species and across task difficulties"
+  ],
+  "interpretations": [
+    "a standardized curriculum can replace ad-hoc shaping for fixation tasks",
+    "curriculum design is well supported by operant conditioning and reinforcement learning principles"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "center-port fixation",
+    "rodent behavioral training",
+    "shaping curriculum",
+    "violation trials",
+    "operant conditioning",
+    "reinforcement learning",
+    "training time reduction",
+    "behavioral protocol standardization"
+  ],
+  "out_of_scope_note": null,
+  "generator": "opus-4-7@2026-05-27",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-27T20:54:48+0900",
+  "abstract_coverage": 1.0
+}

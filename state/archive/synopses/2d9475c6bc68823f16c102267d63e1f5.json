@@ -1,0 +1,46 @@
+{
+  "canonical_id": "2d9475c6bc68823f16c102267d63e1f5",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [
+    {"name": "perceptual learning", "role": "primary_lens", "one_line": "training-induced plasticity for complex object discrimination, contrasted with simple-feature learning"},
+    {"name": "face-selective high-level visual processing", "role": "extended", "one_line": "size-, location-, and identity-invariant face-view representation refined by training"}
+  ],
+  "core_question": "How does training to discriminate in-depth face-view orientation reshape behavior and neural representations of complex objects?",
+  "key_assumptions": [
+    "face views can be discriminated along an in-depth orientation axis",
+    "perceptual learning operates differently for complex objects than for simple features",
+    "N170 and induced gamma index face-specific processing stages"
+  ],
+  "manipulations": [
+    "eight daily training sessions around a 30 deg face view",
+    "transfer tests across size, visual field, and face identity",
+    "transfer tests across partial face images, inversion, and a paperclip object",
+    "trained vs untrained face view (EEG and fMRI)"
+  ],
+  "key_findings": [
+    "training improved sensitivity to the trained face-view orientation, persisting up to six months",
+    "learning transferred across size, visual field, identity, and complementary partial-face images",
+    "very weak transfer to inverted faces or to a paperclip object",
+    "trained view yielded shorter N170 latency, reduced induced gamma, and more reliable left-FFA spatial pattern without BOLD amplitude change"
+  ],
+  "interpretations": [
+    "the visual system learned to compute face orientation from configural information more accurately",
+    "plastic changes occurred at a high-level stage representing size-, location-, and identity-invariant face views"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "face view discrimination",
+    "perceptual learning of complex objects",
+    "configural face processing",
+    "N170 latency",
+    "induced gamma activity",
+    "FFA spatial pattern (MVPA)",
+    "transfer of learning",
+    "view-invariant face representation"
+  ],
+  "out_of_scope_note": null,
+  "generator": "opus-4-7@2026-05-27",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-27",
+  "abstract_coverage": 1.0
+}

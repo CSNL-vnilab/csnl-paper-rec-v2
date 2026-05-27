@@ -1,0 +1,51 @@
+{
+  "canonical_id": "369d3121b1d8ec54809f03acd968b2c7",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [
+    {
+      "name": "sensorimotor transformation",
+      "role": "primary_lens",
+      "one_line": "Dorsolateral prefrontal cortex converts visual cue location into saccade direction during delay."
+    },
+    {
+      "name": "spatial working memory",
+      "role": "context",
+      "one_line": "Delay-period activity holds spatial information across a memory interval."
+    }
+  ],
+  "core_question": "Does prefrontal task-related activity during spatial working memory encode the visual cue location or the upcoming saccade direction?",
+  "key_assumptions": [
+    "Single-neuron directional tuning can be dissociated by rotating the cue-to-saccade mapping",
+    "Cue and saccade direction can be decoupled by a 90-degree rotation rule"
+  ],
+  "manipulations": [
+    "Task rule: standard ODR vs 90-degree clockwise rotatory ODR",
+    "Task epoch: cue, delay, response periods"
+  ],
+  "key_findings": [
+    "Cue-period directional activity predominantly encoded visual cue location",
+    "Most delay-period directional activity encoded cue location; a minority encoded saccade direction",
+    "Response-period activity more often encoded saccade direction, with a substantial fraction postsaccadic",
+    "Population delay activity for cue location was tonic, while saccade-direction population activity ramped up gradually"
+  ],
+  "interpretations": [
+    "Visual-to-motor transformation occurs gradually within dorsolateral prefrontal cortex across the delay",
+    "Postsaccadic cue-location activity may serve to terminate no-longer-needed delay activity"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "oculomotor delayed-response task",
+    "dorsolateral prefrontal cortex",
+    "delay-period activity",
+    "saccade direction coding",
+    "visual cue location coding",
+    "sensorimotor transformation",
+    "postsaccadic activity",
+    "spatial working memory"
+  ],
+  "out_of_scope_note": null,
+  "generator": "opus-4-7@2026-05-27",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "abstract_coverage": 0.8
+}

@@ -1,0 +1,48 @@
+{
+  "canonical_id": "55356faaa86def97e51fc9d4811c2cee",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [
+    {"name": "confirmation bias", "role": "primary_lens", "one_line": "Internal beliefs bias subsequent sensory sampling toward belief-consistent evidence."},
+    {"name": "active sensing", "role": "primary_lens", "one_line": "Eye-movements treated as belief-driven information-sampling actions."},
+    {"name": "covert spatial attention", "role": "extended", "one_line": "Attention modeled as belief-conditioned weighting of spatial locations."},
+    {"name": "model-based psychophysics", "role": "primary_lens", "one_line": "Quantitative model links internal beliefs to fixations and saccades."}
+  ],
+  "core_question": "Do confirmation biases observed in explicit decisions also shape eye-movements during active sensing?",
+  "key_assumptions": [
+    "Eye-movements reflect belief-driven sampling rather than purely stimulus-driven capture.",
+    "Attention and saccades share an underlying belief representation.",
+    "A 2AFC orientation discrimination task can isolate belief influences on sampling."
+  ],
+  "manipulations": [
+    "Explicit attentional cue to upper vs. lower hemifield.",
+    "Free eye-movements allowed during the discrimination task (active sensing).",
+    "Spatially separated elementary stimuli (removing perceptual fusion confounds)."
+  ],
+  "key_findings": [
+    "Internal beliefs measurably bias covert spatial attention.",
+    "Subjects fixated and saccaded preferentially to belief-consistent locations.",
+    "Confirmation biases in eye-movements resemble those previously seen in explicit decisions and overt attention."
+  ],
+  "interpretations": [
+    "Eye-movements during active sensing inherit the same confirmation bias seen in explicit decisions.",
+    "Results support a tight link between attention and saccadic sampling under belief-driven decision-making."
+  ],
+  "limitations_noted": [
+    "Previous setup confounded attentional and early-sensory effects due to perceptual fusion — addressed here by spatial separation."
+  ],
+  "connecting_signals": [
+    "confirmation bias",
+    "active sensing",
+    "eye-movements",
+    "covert spatial attention",
+    "saccades",
+    "2AFC orientation discrimination",
+    "internal beliefs",
+    "perceptual decision-making"
+  ],
+  "out_of_scope_note": null,
+  "generator": "opus-4-7@2026-05-27",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "abstract_coverage": 0.85
+}

@@ -1,0 +1,45 @@
+{
+  "canonical_id": "19946ca8a8093728263400865ba6bbf8",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [
+    {"name": "serial dependence", "role": "primary_lens", "one_line": "current perception biased by recently seen stimuli toward positive temporal correlations"},
+    {"name": "perceptual decision-making", "role": "context", "one_line": "orientation discrimination task at threshold contrast as decision frame"},
+    {"name": "natural image statistics", "role": "context", "one_line": "slow temporal regularities cited as ecological motivation for serial bias"}
+  ],
+  "core_question": "Why do individuals differ in serial dependence — attractive, repulsive, or none — in perceptual decision-making?",
+  "key_assumptions": [
+    "physical stimulus, percept, and motor response are dissociable sources of serial bias",
+    "stimulus-response mapping can be manipulated to isolate motor contribution",
+    "orientation at threshold yields measurable trial-to-trial bias"
+  ],
+  "manipulations": [
+    "stimulus-response mapping: consistent vs random across experiments",
+    "two near-threshold orientations (45° vs -45°)",
+    "within-subject task with vs without choice-response coupling"
+  ],
+  "key_findings": [
+    "stimulus percept (not the physical stimulus per se) attracts subsequent perceptual choices",
+    "motor responses induce a repulsive serial effect",
+    "with consistent choice-response mapping, individuals show positive, repulsive, or no overall bias"
+  ],
+  "interpretations": [
+    "individual differences in serial dependence arise from opposing influences of perceptual choices (attractive) and motor responses (repulsive)",
+    "typical mixed mapping in past studies confounds these two opposing sources"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "serial dependence",
+    "individual differences",
+    "perceptual choice history",
+    "motor response bias",
+    "orientation discrimination",
+    "stimulus-response mapping",
+    "history effects",
+    "attractive vs repulsive bias"
+  ],
+  "out_of_scope_note": null,
+  "generator": "opus-4-7@2026-05-27",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-27",
+  "abstract_coverage": 1.0
+}

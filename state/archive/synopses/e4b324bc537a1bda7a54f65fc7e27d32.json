@@ -1,0 +1,43 @@
+{
+  "canonical_id": "e4b324bc537a1bda7a54f65fc7e27d32",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [
+    {"name": "normative perceptual decision-making", "role": "compared_against", "one_line": "tying subjective confidence directly to internal signal quality"},
+    {"name": "serial dependence", "role": "primary_lens", "one_line": "current estimate is biased toward the previous trial's stimulus"},
+    {"name": "metacognition / subjective confidence", "role": "extended", "one_line": "confidence as a driver of trial-to-trial perceptual bias independent of signal"}
+  ],
+  "core_question": "Does subjective confidence, dissociated from objective performance, modulate serial dependence in visual estimation?",
+  "key_assumptions": [
+    "no external feedback during estimation",
+    "confidence and signal quality can be experimentally dissociated",
+    "serial dependence indexes carry-over from prior trials"
+  ],
+  "manipulations": [
+    "stimuli engineered to dissociate task performance from confidence",
+    "trial-level confidence reports on a visual orientation estimation task"
+  ],
+  "key_findings": [
+    "high-confidence decisions produced stronger biases on the following trial",
+    "the confidence boost of serial dependence persisted when confidence was dissociated from performance"
+  ],
+  "interpretations": [
+    "subjective confidence, independent of signal quality, amplifies serial dependence",
+    "challenges normative accounts that conflate confidence with internal signal quality"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "serial dependence",
+    "orientation estimation",
+    "subjective confidence",
+    "metacognition",
+    "perceptual decision-making",
+    "confidence-performance dissociation",
+    "trial-history bias",
+    "visual estimation"
+  ],
+  "out_of_scope_note": null,
+  "generator": "opus-4-7@2026-05-27",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-27",
+  "abstract_coverage": 1.0
+}

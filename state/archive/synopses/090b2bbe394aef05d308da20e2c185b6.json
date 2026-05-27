@@ -1,0 +1,44 @@
+{
+  "canonical_id": "090b2bbe394aef05d308da20e2c185b6",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [
+    {"name": "sensory recruitment model", "role": "primary_lens", "one_line": "precise visual details maintained in stimulus-selective regions that perceive them"},
+    {"name": "inverted encoding model", "role": "primary_lens", "one_line": "quantitative channel-based reconstruction of VWM contents from fMRI activity"}
+  ],
+  "core_question": "How do visual working memory representations persist through distracting visual input across visual cortex and IPS?",
+  "key_assumptions": [
+    "VWM contents can be read out as channel-tuned reconstructions from fMRI",
+    "early visual cortex and IPS both encode item-specific orientation",
+    "distractors share representational format with maintained items"
+  ],
+  "manipulations": [
+    "presence vs absence of distractors during VWM delay",
+    "ROI: early visual cortex vs intraparietal sulcus"
+  ],
+  "key_findings": [
+    "orientation information held simultaneously in early visual cortex and IPS in anticipation of distraction",
+    "representations persisted in both regions when no distractor appeared",
+    "visual-cortex reconstructions were biased toward the distractor; IPS reconstructions were not",
+    "behavioral reports showed a small attractive bias toward distractors"
+  ],
+  "interpretations": [
+    "early visual representations are susceptible to interference while IPS is robust",
+    "a dynamic visual-parietal tradeoff supports flexible adaptation to task demands"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "visual working memory",
+    "sensory recruitment",
+    "inverted encoding model",
+    "intraparietal sulcus",
+    "distractor interference",
+    "orientation representation",
+    "attractive bias",
+    "delay-period maintenance"
+  ],
+  "out_of_scope_note": null,
+  "generator": "opus-4-7@2026-05-27",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-27T00:00:00Z",
+  "abstract_coverage": 1.0
+}

@@ -1,0 +1,44 @@
+{
+  "canonical_id": "c2ff9413da7b35479705623d68499b45",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [
+    {"name": "feature binding in visual working memory", "role": "primary_lens", "one_line": "spatial location as binding anchor between visual features in VWM"},
+    {"name": "encoding interference account", "role": "alternative_lens", "one_line": "same-location sequential presentation disrupts perceptual encoding, not binding"}
+  ],
+  "core_question": "Is recall of feature bindings in visual working memory selectively impaired when items are presented sequentially at the same spatial location?",
+  "key_assumptions": [
+    "spatial location may serve a privileged binding role in VWM",
+    "color and orientation are independently encodable visual features",
+    "binding memory can be probed by cued reproduction"
+  ],
+  "manipulations": [
+    "same-location vs different-location sequential presentation",
+    "inter-stimulus interval (ISI) duration",
+    "feature pairing (color-orientation vs shape-color)"
+  ],
+  "key_findings": [
+    "reproduced original impairment of binding memory in same-location condition with original timing",
+    "impairment was modulated by ISI and disappeared at longer inter-stimulus delays",
+    "with shape-cued color report, same-location deficits did not selectively affect binding"
+  ],
+  "interpretations": [
+    "observed deficits are best explained by encoding interference, not a binding-specific mechanism",
+    "feature binding in VWM is not necessarily impaired when items share spatial location"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "visual working memory",
+    "feature binding",
+    "spatial location",
+    "sequential presentation",
+    "inter-stimulus interval",
+    "encoding interference",
+    "cued recall",
+    "orientation and color memory"
+  ],
+  "out_of_scope_note": null,
+  "generator": "opus-4-7@2026-05-27",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "abstract_coverage": 1.0
+}

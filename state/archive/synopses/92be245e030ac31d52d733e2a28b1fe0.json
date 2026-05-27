@@ -1,0 +1,46 @@
+{
+  "canonical_id": "92be245e030ac31d52d733e2a28b1fe0",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [
+    {"name": "efficient coding / neural coding precision", "role": "primary_lens", "one_line": "Surround context dynamically reallocates sensory encoding precision around the inducer orientation."},
+    {"name": "Bayesian observer model", "role": "extended", "one_line": "Local encoding change is fed into a Bayesian decoder to predict the perceptual bias."},
+    {"name": "natural scene statistics of orientation", "role": "context", "one_line": "Baseline (no-surround) encoding mirrors the natural prior over orientation."}
+  ],
+  "core_question": "What neural mechanism produces the orientation tilt illusion induced by an oriented surround?",
+  "key_assumptions": [
+    "Sensory encoding precision can be read out from combined psychophysical and fMRI data",
+    "A Bayesian observer linking encoding to behavior is appropriate",
+    "Cortical receptive-field geometry constrains where surround modulation acts"
+  ],
+  "manipulations": [
+    "Presence vs absence of an oriented surround around a center grating",
+    "Orientation of the center stimulus relative to the surround",
+    "Visual area along the ventral stream (early vs higher)"
+  ],
+  "key_findings": [
+    "Without surround, encoding precision tracks natural orientation statistics",
+    "With surround, precision is selectively boosted for orientations near the surround",
+    "Local encoding change predicts the tilt illusion via a Bayesian observer model",
+    "Surround modulation grows along the ventral stream and localizes to center-surround boundary RFs"
+  ],
+  "interpretations": [
+    "The tilt illusion arises from context-driven reallocation of coding resources at the contextual boundary",
+    "Behavioral and neural signatures of the illusion share a common encoding-precision origin"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "tilt illusion",
+    "orientation encoding precision",
+    "surround modulation",
+    "natural scene statistics of orientation",
+    "Bayesian observer model",
+    "ventral stream hierarchy",
+    "center-surround receptive fields",
+    "contextual boundary coding"
+  ],
+  "out_of_scope_note": null,
+  "generator": "opus-4-7@2026-05-27",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-27",
+  "abstract_coverage": 1.0
+}

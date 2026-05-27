@@ -1,0 +1,47 @@
+{
+  "canonical_id": "66fac127bed315812ecea97dd6be7c2d",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [
+    {"name": "continuous attractor network", "role": "extended", "one_line": "memory module sustains representation via continuous attractor dynamics"},
+    {"name": "efficient sensory coding", "role": "primary_lens", "one_line": "sensory module encodes orientation matched to natural statistics"},
+    {"name": "discrete attractor dynamics", "role": "primary_lens", "one_line": "two-module coupling yields discrete attractors with drift and nonuniform diffusion"},
+    {"name": "single-module memory model", "role": "compared_against", "one_line": "fails to capture jointly evolving bias and variance patterns"}
+  ],
+  "core_question": "What network architecture can simultaneously produce evolving repulsive bias and minimum variance near cardinal orientations during visual working memory?",
+  "key_assumptions": [
+    "orientation tuning in the sensory module reflects natural-image statistics",
+    "inhibitory modulation shapes heterogeneous sensory representation",
+    "memory maintenance and efficient encoding cannot coexist in one module"
+  ],
+  "manipulations": [
+    "module connectivity (sensory-only vs memory-only vs fully connected)",
+    "orientation stimulus relative to cardinal vs oblique axes",
+    "delay duration during working memory"
+  ],
+  "key_findings": [
+    "repulsive bias and minimum-variance patterns near cardinal axes continuously evolve over the delay",
+    "single-module networks cannot reproduce these evolving error patterns",
+    "two-module sensory-memory network forms discrete attractors with moderate drift and nonuniform diffusion",
+    "sensory module shows heterogeneous tuning with strong inhibitory modulation"
+  ],
+  "interpretations": [
+    "sensory-memory interaction is required to continuously shape stimulus representation during working memory",
+    "modular separation lets a network satisfy efficient encoding and stable maintenance simultaneously"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "visual working memory",
+    "orientation estimation errors",
+    "repulsive bias",
+    "minimum variance at cardinal axes",
+    "continuous attractor dynamics",
+    "discrete attractors",
+    "efficient sensory coding",
+    "heterogeneous tuning"
+  ],
+  "out_of_scope_note": null,
+  "generator": "opus-4-7@2026-05-27",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "abstract_coverage": 1.0
+}

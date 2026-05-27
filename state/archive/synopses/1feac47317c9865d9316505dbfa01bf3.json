@@ -1,0 +1,60 @@
+{
+  "frameworks": [
+    {
+      "name": "working memory averaging",
+      "role": "primary_lens",
+      "one_line": "memory reports reflect reliability-weighted integration across simultaneously held items"
+    },
+    {
+      "name": "optimal cue integration",
+      "role": "extended",
+      "one_line": "multisensory-style reliability weighting extended to unimodal working memory"
+    },
+    {
+      "name": "serial dependence",
+      "role": "alternative_lens",
+      "one_line": "treated as one instance of a broader memory-averaging mechanism"
+    }
+  ],
+  "core_question": "Do reports of a cued working-memory item get biased by other simultaneously held, relevant items in a reliability-weighted way?",
+  "key_assumptions": [
+    "sensory input is noisy but the world is predictable",
+    "integrating multiple observations increases estimate reliability",
+    "items are weighted by their signal-to-noise ratio",
+    "only attended, task-relevant items enter integration"
+  ],
+  "manipulations": [
+    "similarity of non-target items to the target orientation",
+    "task-relevance/attention status of memorized items",
+    "temporal position of items (before vs after target)",
+    "reliability (signal-to-noise) of memorized items"
+  ],
+  "key_findings": [
+    "reports were biased by simultaneously memorized similar, relevant items",
+    "bias scaled with item reliability (signal-to-noise weighting)",
+    "items both before and after the target biased the report",
+    "only attended, task-relevant items produced bias"
+  ],
+  "interpretations": [
+    "bias arises in working memory, not solely at perception/encoding",
+    "serial dependence may be a special case of a general working-memory averaging mechanism"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "working memory averaging",
+    "serial dependence",
+    "reliability weighting",
+    "signal-to-noise integration",
+    "orientation working memory",
+    "attentional gating of integration",
+    "perceptual stability",
+    "post-target bias"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "1feac47317c9865d9316505dbfa01bf3",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:01:53+09:00",
+  "review_status": "auto_unreviewed"
+}

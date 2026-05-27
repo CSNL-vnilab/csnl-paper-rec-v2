@@ -1,0 +1,44 @@
+{
+  "canonical_id": "173cc627ddcc3637cbb5899efd59c7a9",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [
+    {"name": "brainstem arousal systems", "role": "primary_lens", "one_line": "neuromodulatory arousal centers drive flexible sensorimotor mapping"},
+    {"name": "cortical correlated variability", "role": "primary_lens", "one_line": "shared fluctuations between stimulus and action population codes index flexibility"},
+    {"name": "computational latent-variable model", "role": "extended", "one_line": "model-inferred latent states track hidden rule switches and pupil"}
+  ],
+  "core_question": "Do brainstem arousal systems mediate flexible stimulus-response mapping by reorganizing cortical correlations between sensory and motor codes?",
+  "key_assumptions": [
+    "pupil size indexes brainstem arousal state",
+    "correlated variability between cortical population codes reflects task-relevant routing",
+    "hidden rule changes can be tracked by a latent-variable inference model"
+  ],
+  "manipulations": [
+    "hidden, unpredictable changes in the stimulus-response mapping rule",
+    "orientation reports via button press across rule regimes"
+  ],
+  "key_findings": [
+    "rule switches evoked brainstem fMRI and pupil-dilation responses",
+    "model-inferred latent variables tracked rule-switching behavior and pupil",
+    "brainstem activity and pupil dilation preceded increases in cortical stimulus-action code correlations"
+  ],
+  "interpretations": [
+    "brainstem arousal systems are implicated in flexible input-output mapping",
+    "arousal-linked signals promote reorganization of sensorimotor cortical pathways for adaptive decisions"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "brainstem arousal",
+    "pupil dilation",
+    "cortical correlated variability",
+    "flexible stimulus-response mapping",
+    "rule switching",
+    "sensorimotor routing",
+    "latent-variable decision model",
+    "perceptual decision-making"
+  ],
+  "out_of_scope_note": null,
+  "generator": "opus-4-7@2026-05-27",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-27",
+  "abstract_coverage": 1.0
+}

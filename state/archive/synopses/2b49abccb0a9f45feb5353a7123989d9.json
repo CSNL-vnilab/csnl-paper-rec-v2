@@ -1,0 +1,46 @@
+{
+  "canonical_id": "2b49abccb0a9f45feb5353a7123989d9",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [
+    {"name": "self-consistent Bayesian observer", "role": "primary_lens", "one_line": "perceptual inference causally conditioned on the preceding categorical choice"},
+    {"name": "late memory-noise Bayesian observer", "role": "compared_against", "one_line": "alternative attributing post-decision bias to memory noise alone"},
+    {"name": "cognitive dissonance", "role": "context", "one_line": "analogy to subjective preference shifts after a commitment"}
+  ],
+  "core_question": "How does making a categorical judgment systematically bias subsequent perceptual estimates of the same stimulus?",
+  "key_assumptions": [
+    "perceptual inference can be causally conditioned on a prior choice",
+    "the observer enforces consistency between categorical judgment and estimate",
+    "biases reflect inference rather than purely late memory noise"
+  ],
+  "manipulations": [
+    "task sequence: categorical orientation judgment followed by orientation estimate",
+    "stimulus orientation relative to category boundary",
+    "three targeted psychophysical experiment variants"
+  ],
+  "key_findings": [
+    "post-decision estimates are systematically biased away from the category boundary",
+    "high consistency between categorical judgment and subsequent estimate",
+    "bias pattern is hard to reconcile with late memory-noise accounts",
+    "self-consistent Bayesian model quantitatively captures the observed biases"
+  ],
+  "interpretations": [
+    "perceptual inference is causally conditioned on preceding choices",
+    "a universal self-consistency constraint may govern brain inference, paralleling cognitive dissonance"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "post-decision bias",
+    "self-consistency",
+    "categorical judgment",
+    "orientation estimation",
+    "conditioned Bayesian inference",
+    "cognitive dissonance",
+    "psychophysics",
+    "choice-induced bias"
+  ],
+  "out_of_scope_note": null,
+  "generator": "opus-4-7@2026-05-27",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-27",
+  "abstract_coverage": 1.0
+}

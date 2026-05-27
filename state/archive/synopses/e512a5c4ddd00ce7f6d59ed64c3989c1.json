@@ -1,0 +1,41 @@
+{
+  "canonical_id": "e512a5c4ddd00ce7f6d59ed64c3989c1",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.9,
+  "frameworks": [
+    {"name": "active vision / fixational eye movements", "role": "primary_lens", "one_line": "Gaze shifts during fixation actively shape retinal input for acuity."}
+  ],
+  "core_question": "Do fixational eye movements contribute to human visual acuity by tailoring retinal input to the stimulus?",
+  "key_assumptions": [
+    "Eyes are never still even during attempted fixation",
+    "Luminance flow on the retina carries usable discriminative information"
+  ],
+  "manipulations": [
+    "High-acuity task requiring fine spatial discrimination",
+    "Varying spatial layout of the stimulus"
+  ],
+  "key_findings": [
+    "Humans precisely shift gaze to compensate for stimulus spatial layout",
+    "Resulting retinal luminance modulations carry discriminative information at scales finer than the stimulus",
+    "Subjects with better control of fixational eye movements achieve higher acuity"
+  ],
+  "interpretations": [
+    "Fixational eye movements are a critical component of human visual acuity",
+    "Acuity emerges from a coupling of oculomotor control with stimulus structure, not optics alone"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "fixational eye movements",
+    "visual acuity",
+    "retinal image motion",
+    "luminance flow",
+    "active vision",
+    "oculomotor control",
+    "spatial resolution",
+    "gaze precision"
+  ],
+  "out_of_scope_note": null
+}

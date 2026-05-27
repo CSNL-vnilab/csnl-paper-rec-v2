@@ -1,0 +1,44 @@
+{
+  "canonical_id": "a4ff8c82b114ead1909f4ed007a6e895",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [
+    {"name": "Bayesian inference", "role": "context", "one_line": "Perception widely framed as Bayesian feature inference."},
+    {"name": "Holistic inference", "role": "primary_lens", "one_line": "Inference operates across all levels of the representational hierarchy."},
+    {"name": "Holistic matching model", "role": "extended", "one_line": "Optimal match across feature and higher-level category representations."},
+    {"name": "Bayesian observer models", "role": "compared_against", "one_line": "Prior single-level Bayesian models fail on some response patterns."}
+  ],
+  "core_question": "Does orientation perception reflect inference across multiple levels of the representational hierarchy rather than only at the feature level?",
+  "key_assumptions": [
+    "Perception is a probabilistic inference process",
+    "Stimuli have both feature-level (orientation) and higher-level (category) representations",
+    "Subjects' adjustment responses reflect an optimal joint match"
+  ],
+  "manipulations": [
+    "Test stimulus orientation in method-of-adjustment matching tasks",
+    "Reanalysis across multiple existing psychophysical datasets"
+  ],
+  "key_findings": [
+    "Holistic matching model quantitatively fits subjects' response behavior",
+    "Model accounts for response patterns previous Bayesian models fail to capture even qualitatively"
+  ],
+  "interpretations": [
+    "Orientation perception is a holistic inference across feature and category levels",
+    "Single-level Bayesian feature inference is insufficient to explain perceptual matching behavior"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "orientation perception",
+    "holistic inference",
+    "method-of-adjustment",
+    "Bayesian observer model",
+    "category representation",
+    "psychophysical matching",
+    "hierarchical representation",
+    "probe-test matching"
+  ],
+  "out_of_scope_note": null,
+  "generator": "opus-4-7@2026-05-27",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-27",
+  "abstract_coverage": 1.0
+}

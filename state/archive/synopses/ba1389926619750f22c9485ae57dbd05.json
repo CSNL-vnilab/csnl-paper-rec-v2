@@ -1,0 +1,60 @@
+{
+  "frameworks": [
+    {
+      "name": "orientation tuning / functional cortical maps",
+      "role": "primary_lens",
+      "one_line": "V1 neurons selective for stimulus orientation organized into cellular maps."
+    },
+    {
+      "name": "end-stopping / length tuning",
+      "role": "extended",
+      "one_line": "Receptive-field length suppression characterized across cortical depth."
+    },
+    {
+      "name": "two-photon calcium imaging at single-neuron resolution",
+      "role": "context",
+      "one_line": "Population-scale imaging in awake macaque cortex over long durations."
+    }
+  ],
+  "core_question": "What are the microstructural and population orientation-tuning properties of awake macaque V1 superficial layers revealed by long-term two-photon calcium imaging?",
+  "key_assumptions": [
+    "Calcium signal amplitude reflects orientation-selective spiking response",
+    "Awake macaque V1 superficial layers are accessible to chronic 2P imaging",
+    "Orientation preference and bandwidth are stable enough for cellular mapping"
+  ],
+  "manipulations": [
+    "Stimulus orientation across grating directions",
+    "Cortical depth (including ~150 micron superficial)",
+    "Stimulus length (for end-stopping / length tuning estimation)"
+  ],
+  "key_findings": [
+    "Cellular orientation maps show horizontal and vertical clustering by preference, not by bandwidth",
+    "Pinwheel centers occurred less frequently than previous estimates",
+    "Orientation tuning bandwidths were narrower than prior layer-specific single-unit estimates",
+    "Cardinal and oblique orientations were similarly represented in count and bandwidth; more end-stopped cells at 150 micron depth without bandwidth change"
+  ],
+  "interpretations": [
+    "V1 orientation selectivity is more precise than prior recordings suggested",
+    "Minimal V1 representation of the oblique effect; end-stopping varies with depth independent of orientation bandwidth"
+  ],
+  "limitations_noted": [
+    "Length-tuning estimates are described as rough"
+  ],
+  "connecting_signals": [
+    "macaque V1",
+    "orientation tuning bandwidth",
+    "two-photon calcium imaging",
+    "functional cortical maps",
+    "pinwheels",
+    "end-stopping",
+    "length tuning",
+    "oblique effect"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "ba1389926619750f22c9485ae57dbd05",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:01:53+09:00",
+  "review_status": "auto_unreviewed"
+}

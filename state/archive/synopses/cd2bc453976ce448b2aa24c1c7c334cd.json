@@ -1,0 +1,46 @@
+{
+  "canonical_id": "cd2bc453976ce448b2aa24c1c7c334cd",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [
+    {"name": "peripheral-foveal integration", "role": "primary_lens", "one_line": "Peripheral and foveal vision interact rather than processing independently across the visual field."},
+    {"name": "transsaccadic integration", "role": "extended", "one_line": "Signals are stitched and averaged across saccades to reduce perceptual uncertainty."},
+    {"name": "retinotopic cortical processing", "role": "context", "one_line": "Foveal retinotopic areas host processing of peripheral signals for object recognition."}
+  ],
+  "core_question": "How do peripheral and foveal vision interact to yield a stable, continuous perceptual experience despite dramatic processing differences across the visual field?",
+  "key_assumptions": [
+    "Visual processing differs systematically from retina to cortex across eccentricity",
+    "Perceptual experience is subjectively stable and continuous",
+    "Peripheral and foveal streams are not independent"
+  ],
+  "manipulations": [
+    "Comparison of peripheral vs foveal processing during fixation",
+    "Transsaccadic changes in object features",
+    "Integration across saccadic eye movements"
+  ],
+  "key_findings": [
+    "Peripheral signals are processed in foveal retinotopic areas to support peripheral object recognition",
+    "Foveal information is extrapolated toward the periphery to homogenize the representation",
+    "Transsaccadic feature changes reduce peripheral-foveal appearance discrepancy",
+    "Peripheral and foveal signals are integrated across saccades to average percepts and reduce uncertainty"
+  ],
+  "interpretations": [
+    "Peripheral and foveal processing are closely connected, balancing wide field coverage with foveal high resolution",
+    "Cross-eccentricity interactions support perceptual stability and continuity"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "peripheral vision",
+    "foveal vision",
+    "transsaccadic integration",
+    "retinotopic cortex",
+    "saccadic eye movements",
+    "object recognition",
+    "perceptual stability",
+    "visual field eccentricity"
+  ],
+  "out_of_scope_note": null,
+  "generator": "opus-4-7@2026-05-27",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "abstract_coverage": 0.95
+}

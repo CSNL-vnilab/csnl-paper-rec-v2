@@ -1,0 +1,46 @@
+{
+  "canonical_id": "575e475208da6738d1f0e322d8f606e7",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [
+    {"name": "correlated variability / noise correlations", "role": "primary_lens", "one_line": "shared fluctuations between sensory and motor regions encode task state"},
+    {"name": "flexible sensory-motor mapping", "role": "primary_lens", "one_line": "arbitrary stimulus-response rules switched within a session"},
+    {"name": "belief-state inference", "role": "extended", "one_line": "behavioral model reconstructs participants' belief about the active rule"}
+  ],
+  "core_question": "How does the brain implement flexible mappings between sensory input and motor action across changing task rules?",
+  "key_assumptions": [
+    "participants maintain a latent belief about the currently active rule",
+    "stimulus- and action-selective activity can be isolated in visual and action-related cortex",
+    "correlated variability across regions reflects task-relevant coupling"
+  ],
+  "manipulations": [
+    "two arbitrary rules mapping visual orientation to a motor report",
+    "rule-switch signaling: explicit cue vs ambiguous cue requiring inference",
+    "trials with correct vs erroneous behavioral responses"
+  ],
+  "key_findings": [
+    "correlation patterns between stimulus- and action-selective signals reconfigured by active rule",
+    "these correlation patterns tracked participants' belief about the active rule",
+    "rule-specific correlation structure broke down around behavioral errors",
+    "effect held under both explicit and inferred rule-switch contexts"
+  ],
+  "interpretations": [
+    "internal beliefs about task state are instantiated in brain-wide patterns of correlated variability",
+    "flexible sensory-motor mapping is implemented through dynamic reconfiguration of cross-region coupling"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "correlated variability",
+    "sensory-motor mapping",
+    "rule switching",
+    "belief about task state",
+    "orientation judgment",
+    "visual to action coupling",
+    "fMRI cross-region correlations",
+    "behavioral errors and neural coupling"
+  ],
+  "out_of_scope_note": null,
+  "generator": "opus-4-7@2026-05-27",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-27T11:57:28+09:00",
+  "abstract_coverage": 1.0
+}

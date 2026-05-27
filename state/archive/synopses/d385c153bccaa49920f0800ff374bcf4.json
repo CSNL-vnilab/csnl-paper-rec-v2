@@ -1,0 +1,46 @@
+{
+  "canonical_id": "d385c153bccaa49920f0800ff374bcf4",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [
+    {"name": "inverse decision theory", "role": "primary_lens", "one_line": "Estimate the implicit loss function behind visual memory errors from behavior."},
+    {"name": "optimal/efficient memory under capacity constraint", "role": "extended", "one_line": "Memory minimizes expected loss subject to a capacity bound."},
+    {"name": "additive noise / noise-corrupted encoding models", "role": "compared_against", "one_line": "Standard view that memories are perceptual signals plus noise is rejected."},
+    {"name": "gaze correction following saccadic error (natural task)", "role": "context", "one_line": "Used as benchmark task whose loss function predicts memory behavior."}
+  ],
+  "core_question": "Can the structure of visual working memory errors be explained by an implicit loss function rather than additive perceptual noise?",
+  "key_assumptions": [
+    "Visual working memory has a fixed capacity constraint.",
+    "Errors carry differential costs depending on the task.",
+    "An optimally efficient memory minimizes expected loss under that constraint."
+  ],
+  "manipulations": [
+    "Delayed recall visual memory experiment varying stimulus features.",
+    "Comparison across multiple empirical VWM datasets.",
+    "Loss function inferred from behavior vs. predicted from gaze-correction task."
+  ],
+  "key_findings": [
+    "An empirical loss function can be recovered from delayed recall data via inverse decision theory.",
+    "Inferred loss aligns with the loss expected from a natural saccadic-error correction task.",
+    "The loss-function account fits memory data better than additive-noise models across datasets."
+  ],
+  "interpretations": [
+    "Visual working memory errors reflect cost-weighted optimization, not just noisy encoding.",
+    "Capacity-limited memory is shaped by ecologically relevant task costs."
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "visual working memory",
+    "loss function",
+    "inverse decision theory",
+    "delayed recall",
+    "memory capacity constraint",
+    "optimal efficient memory",
+    "gaze correction saccadic error",
+    "rate-distortion-like memory"
+  ],
+  "out_of_scope_note": null,
+  "generator": "opus-4-7@2026-05-27",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-27T20:59:50+09:00",
+  "abstract_coverage": 1.0
+}

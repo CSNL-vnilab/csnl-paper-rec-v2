@@ -1,0 +1,48 @@
+{
+  "canonical_id": "dbf3240b1af4c92f355efeebb9688ee9",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [
+    {"name": "efficient coding", "role": "primary_lens", "one_line": "neural tuning optimized to environmental stimulus frequency, with cardinal-orientation prior"},
+    {"name": "neural population model of working memory", "role": "extended", "one_line": "memory neurons' tuning functions made stimulus-frequency dependent"},
+    {"name": "slot-based working memory model", "role": "compared_against", "one_line": "discrete-slot competitor unable to capture stimulus-specific recall variation"}
+  ],
+  "core_question": "Can stimulus-specific biases and variations in orientation working-memory recall be explained by efficient coding of neural tuning to natural stimulus statistics?",
+  "key_assumptions": [
+    "neural tuning functions adapt to environmental stimulus frequencies",
+    "natural orientation statistics favor cardinal over oblique orientations",
+    "working memory recall errors reflect underlying neural population coding",
+    "prior expectations shape encoding precision and bias"
+  ],
+  "manipulations": [
+    "target orientation across the full circular range",
+    "memory set size",
+    "nontarget distribution shape (bimodal congruent vs incongruent with cardinal axes)",
+    "pre- vs post-adaptation blocks"
+  ],
+  "key_findings": [
+    "efficient-coding model captures set-size effects and stimulus-specific recall variations better than slot-based competitor",
+    "pre-adaptation responses were repulsed away from cardinal axes",
+    "exposure to incongruent (oblique-peaked) distribution produced systematic decreases in cardinal repulsion",
+    "adaptation-induced shifts persisted after the adaptation blocks"
+  ],
+  "interpretations": [
+    "stimulus-specific recall effects arise from efficient-coding tuning shaped by environmental priors",
+    "prior expectation about stimulus distribution causally generates the repulsive bias pattern"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "visual working memory",
+    "orientation recall",
+    "efficient coding",
+    "cardinal bias",
+    "repulsive bias",
+    "stimulus prior",
+    "neural population coding",
+    "adaptation to stimulus distribution"
+  ],
+  "out_of_scope_note": null,
+  "generator": "opus-4-7@2026-05-27",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "abstract_coverage": 1.0
+}

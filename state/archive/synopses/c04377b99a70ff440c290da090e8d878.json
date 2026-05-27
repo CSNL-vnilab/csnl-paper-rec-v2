@@ -1,0 +1,47 @@
+{
+  "canonical_id": "c04377b99a70ff440c290da090e8d878",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [
+    {"name": "visual working memory distortions", "role": "primary_lens", "one_line": "item representations in VWM can attract toward or repel from each other"},
+    {"name": "ensemble / summary statistics encoding", "role": "alternative_lens", "one_line": "attraction biases exploit group-level information to stabilize memory"},
+    {"name": "discriminability / repulsion account", "role": "extended", "one_line": "repulsion reflects a tradeoff for distinct representations and grows with delay"}
+  ],
+  "core_question": "Under what conditions does visual working memory produce attractive versus repulsive distortions between item representations?",
+  "key_assumptions": [
+    "memory capacity constrains accuracy when many items must be held",
+    "attractive and repulsive biases reflect genuine memory representation changes, not response bias",
+    "memory representations can evolve dynamically during the delay"
+  ],
+  "manipulations": [
+    "set size (many items vs. few items)",
+    "similarity of remembered items (highly similar but discernible)",
+    "memory delay duration",
+    "tasks designed to mitigate response bias"
+  ],
+  "key_findings": [
+    "high set sizes (near capacity) yield attraction between item memories",
+    "small sets of similar items yield repulsion between item memories",
+    "repulsion strengthens with longer memory delays",
+    "both biases persist under response-bias-controlled designs"
+  ],
+  "interpretations": [
+    "attraction stabilizes memory by leveraging ensemble information across items",
+    "repulsion reflects a tradeoff favoring distinct, discriminable representations"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "visual working memory",
+    "memory distortion",
+    "attraction bias",
+    "repulsion bias",
+    "set size",
+    "delay-dependent memory drift",
+    "ensemble representation",
+    "discriminability tradeoff"
+  ],
+  "out_of_scope_note": null,
+  "generator": "opus-4-7@2026-05-27",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-27",
+  "abstract_coverage": 1.0
+}

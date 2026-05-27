@@ -1,0 +1,44 @@
+{
+  "canonical_id": "aff673a95afed4f00aeddfd39d700b1a",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [
+    {"name": "Bayesian decision model constrained by efficient coding", "role": "primary_lens", "one_line": "rapid efficient representations of ensemble stimuli relative to a dynamic reference"},
+    {"name": "robust averaging", "role": "extended", "one_line": "overweighting ensemble items whose features resemble the reference"}
+  ],
+  "core_question": "Do two key predictions of an efficient-coding Bayesian model of ensemble discrimination hold — exposure-dependent growth and uniform-distribution attenuation of robust averaging?",
+  "key_assumptions": [
+    "visual system rapidly forms efficient representations of ensemble statistics",
+    "encoding is shaped relative to a dynamic reference",
+    "average-discrimination decisions follow a Bayesian readout"
+  ],
+  "manipulations": [
+    "exposure duration to ensemble statistics across three sessions",
+    "shape of ensemble orientation distribution (Gaussian vs uniform from oppositely skewed linear components)",
+    "ensemble mean offset relative to a variable reference orientation"
+  ],
+  "key_findings": [
+    "discrimination accuracy improved continuously across sessions",
+    "weighting kernel became progressively more non-uniform with prolonged exposure",
+    "robust averaging was largely absent under the uniform ensemble distribution despite similar accuracy"
+  ],
+  "interpretations": [
+    "ensemble representations adapt to recent stimulus statistics in line with efficient coding",
+    "robust averaging reflects efficient-coding-shaped priors, not a fixed perceptual heuristic"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "robust averaging",
+    "ensemble perception",
+    "efficient coding",
+    "Bayesian decision model",
+    "dynamic reference",
+    "orientation averaging",
+    "weighting kernel",
+    "prior distribution shape"
+  ],
+  "out_of_scope_note": null,
+  "generator": "opus-4-7@2026-05-27",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-27T00:00:00Z",
+  "abstract_coverage": 1.0
+}

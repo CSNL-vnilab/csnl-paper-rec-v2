@@ -1,0 +1,49 @@
+{
+  "canonical_id": "0ba387347b8bdc2461663a3ea01f9f5e",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [
+    {"name": "signal detection theory", "role": "primary_lens", "one_line": "priming shifts sensitivity, serial dependence shifts criterion as orthogonal dimensions"},
+    {"name": "visual priming (priming of pop-out)", "role": "extended", "one_line": "facilitation from repeated stimulus features measured concurrently with serial dependence"},
+    {"name": "serial dependence", "role": "extended", "one_line": "systematic bias of current report toward prior stimuli, here orientation"},
+    {"name": "attention", "role": "alternative_lens", "one_line": "proposed mechanism by which priming modulates perceptual sensitivity"}
+  ],
+  "core_question": "Do visual priming and serial dependence share a common perceptual mechanism, or are they mediated by separate processes?",
+  "key_assumptions": [
+    "reaction time and accuracy index sensitivity changes",
+    "orientation reproduction biases index criterion shifts",
+    "priming and serial dependence can be dissociated within a single paradigm",
+    "signal detection theory's sensitivity/criterion distinction applies"
+  ],
+  "manipulations": [
+    "repetition vs. change of singleton color across trials",
+    "repetition vs. change of singleton position across trials",
+    "run length of priming features",
+    "previous-trial orientation (for serial dependence)"
+  ],
+  "key_findings": [
+    "strong priming effects on reaction time and accuracy accumulated over runs",
+    "serial dependence on orientation was strong but did not depend on previous color or run length",
+    "reaction times correlated with orientation reproduction imprecision",
+    "reaction times were uncorrelated with magnitude of serial dependence"
+  ],
+  "interpretations": [
+    "priming and serial dependence are mediated by different neural mechanisms",
+    "priming affects sensitivity (attention-like), serial dependence affects criteria — orthogonal SDT dimensions"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "serial dependence",
+    "visual priming",
+    "priming of pop-out",
+    "orientation reproduction",
+    "perceptual history",
+    "signal detection theory",
+    "sensitivity vs criterion",
+    "attention"
+  ],
+  "out_of_scope_note": null,
+  "generator": "opus-4-7@2026-05-27",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-27",
+  "abstract_coverage": 1.0
+}

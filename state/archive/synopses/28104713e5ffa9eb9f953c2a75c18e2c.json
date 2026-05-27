@@ -1,0 +1,44 @@
+{
+  "canonical_id": "28104713e5ffa9eb9f953c2a75c18e2c",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [
+    {"name": "predictive coding", "role": "primary_lens", "one_line": "Perception integrates feedforward sensory signals with internally generated feedback expectation signals."},
+    {"name": "layer-specific fMRI", "role": "context", "one_line": "Cortical-layer fMRI dissociates feedforward (middle) from feedback (deep/superficial) signals in V2."}
+  ],
+  "core_question": "Do high-confidence false percepts arise from top-down feedback signals or from spontaneous feedforward input activity in early visual cortex?",
+  "key_assumptions": [
+    "Feedback signals target deep and superficial cortical layers",
+    "Feedforward sensory input targets middle (input) cortical layers",
+    "Auditory cues can implicitly induce orientation expectations"
+  ],
+  "manipulations": [
+    "Auditory cues signaling most likely upcoming orientation (expectation)",
+    "Trial-by-trial perceptual orientation discrimination with confidence rating",
+    "Comparison across V2 cortical layers (deep, middle, superficial)"
+  ],
+  "key_findings": [
+    "Expectations induced orientation-specific templates in deep and superficial layers of V2 without affecting perception",
+    "Orientation of high-confidence false percepts was reflected in middle input layers of V2",
+    "Prevalence of high-confidence false percepts correlated with everyday hallucination severity in a separate online sample"
+  ],
+  "interpretations": [
+    "False percepts may arise from a feedforward mechanism reflected by spontaneous stimulus-like activity in input layers, independent of top-down expectation signals",
+    "Abnormal perceptual experiences (hallucinations) may share this feedforward false-percept mechanism"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "false percepts",
+    "expectation cues",
+    "layer-specific fMRI",
+    "V2 cortical layers",
+    "orientation-specific templates",
+    "feedforward versus feedback",
+    "hallucination severity",
+    "perceptual confidence"
+  ],
+  "out_of_scope_note": null,
+  "generator": "opus-4-7@2026-05-27",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "abstract_coverage": 1.0
+}

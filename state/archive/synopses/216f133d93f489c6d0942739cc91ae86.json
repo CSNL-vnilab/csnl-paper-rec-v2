@@ -1,0 +1,43 @@
+{
+  "canonical_id": "216f133d93f489c6d0942739cc91ae86",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [
+    {"name": "incremental Bayesian inference", "role": "primary_lens", "one_line": "observer updates beliefs sequentially over orientation estimates across trials"},
+    {"name": "mixture model of past states", "role": "extended", "one_line": "internal representation as weighted mixture of previously encountered states"},
+    {"name": "visual short-term memory", "role": "context", "one_line": "recency bias attributed to representations held in VSTM"}
+  ],
+  "core_question": "What internal model explains why human observers exhibit visual recency bias even when past events are uninformative about the future?",
+  "key_assumptions": [
+    "human estimation can be framed as incremental Bayesian inference",
+    "internal representations of past trials carry forward into current estimate",
+    "recency bias persists despite past events being uninformative"
+  ],
+  "manipulations": [
+    "orientation estimation task across sequential trials",
+    "candidate Bayesian models compared in their ability to reproduce recency bias"
+  ],
+  "key_findings": [
+    "recency bias persists in orientation estimation even when past events are uninformative",
+    "only a Bayesian model that weights a mixture of past states reproduces the observed recency bias"
+  ],
+  "interpretations": [
+    "the mixture-over-past-states structure reflects participants' failure to infer a generative model for VSTM contents",
+    "recency bias reveals the nature of internal representations used during the task"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "recency bias",
+    "orientation estimation",
+    "incremental Bayesian inference",
+    "mixture model of internal representations",
+    "visual short-term memory",
+    "serial dependence",
+    "suboptimal perceptual inference",
+    "weighted mixture of past states"
+  ],
+  "out_of_scope_note": null,
+  "generator": "opus-4-7@2026-05-27",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-27",
+  "abstract_coverage": 1.0
+}

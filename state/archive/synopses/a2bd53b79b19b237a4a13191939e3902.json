@@ -1,0 +1,47 @@
+{
+  "canonical_id": "a2bd53b79b19b237a4a13191939e3902",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [
+    {"name": "statistical regularities / stimulus expectation", "role": "primary_lens", "one_line": "Predictability of repetitions implicitly cues target or distractor processing."},
+    {"name": "ERP / oscillatory neural markers", "role": "primary_lens", "one_line": "P1 amplitude and frontocentral theta index different expectation levels."},
+    {"name": "multivariate stimulus decoding", "role": "alternative_lens", "one_line": "Decoding tests representation of distractor location and features."}
+  ],
+  "core_question": "Do immediate repetitions and higher-order expectations share neural mechanisms, and are target vs distractor expectations supported by the same processes?",
+  "key_assumptions": [
+    "Statistical regularities in scenes can be implicitly learned",
+    "EEG/MEG signals can dissociate stimulus relevance from expectation order",
+    "Repetition manipulations index expectation"
+  ],
+  "manipulations": [
+    "Predictability cued to target vs distractor location",
+    "Immediate stimulus repetition vs non-repetition",
+    "Higher-order probability of repetition",
+    "Recording modality (EEG and MEG, separate studies)"
+  ],
+  "key_findings": [
+    "Reaction times decreased with expectation, driven by repetitions for both targets and distractors",
+    "P1 amplitude reduced for repeated distractors, increased for repeated targets",
+    "Higher-order expectations modulated frontocentral ERP amplitude and theta power, not P1",
+    "A single distractor repetition reduced decodability of its location and feature representation"
+  ],
+  "interpretations": [
+    "Target and distractor expectations share behavioral benefits but recruit distinct neural mechanisms",
+    "Immediate repetitions and higher-order expectations are dissociable in neural signatures"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "stimulus expectation",
+    "distractor suppression",
+    "repetition suppression",
+    "P1 component",
+    "frontocentral theta",
+    "implicit statistical learning",
+    "stimulus decoding",
+    "target vs distractor processing"
+  ],
+  "out_of_scope_note": null,
+  "generator": "opus-4-7@2026-05-27",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-27",
+  "abstract_coverage": 1.0
+}

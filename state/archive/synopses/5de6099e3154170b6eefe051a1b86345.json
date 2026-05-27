@@ -1,0 +1,43 @@
+{
+  "canonical_id": "5de6099e3154170b6eefe051a1b86345",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [
+    {"name": "holistic matching model", "role": "primary_lens", "one_line": "perceptual inference and matching jointly operate across representational hierarchy"},
+    {"name": "perceptual matching interpretation", "role": "compared_against", "one_line": "method-of-adjustment bias reflects relative perceptual difference between probe and test"}
+  ],
+  "core_question": "Does the method of adjustment yield unbiased matches when test and probe are identical, as the perceptual matching interpretation predicts?",
+  "key_assumptions": [
+    "matching identical stimuli should cancel perceptual distortions",
+    "broadband orientation-filtered noise drives orientation estimation",
+    "matches reflect inference plus a matching process across hierarchy levels"
+  ],
+  "manipulations": [
+    "noise level of test and probe (low vs high)",
+    "same-noise vs cross-noise pairings",
+    "test orientation sampled across 0-180 deg"
+  ],
+  "key_findings": [
+    "robust repulsive biases away from cardinal orientations in same-noise (identical) conditions",
+    "cross-noise biases did not invert when test and probe were switched"
+  ],
+  "interpretations": [
+    "matches cannot be purely perceptual since identical stimuli still yield biases",
+    "a holistic matching model jointly fits present and prior method-of-adjustment data"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "method of adjustment",
+    "orientation matching",
+    "cardinal repulsion",
+    "perceptual bias",
+    "orientation-filtered noise",
+    "holistic matching model",
+    "cross-noise asymmetry",
+    "psychophysics"
+  ],
+  "out_of_scope_note": null,
+  "generator": "opus-4-7@2026-05-27",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-27T12:00:01Z",
+  "abstract_coverage": 1.0
+}

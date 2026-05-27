@@ -1,0 +1,46 @@
+{
+  "canonical_id": "44e641346a8bca420bdc0fd90fe55a8b",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [
+    {"name": "continuous-time recurrent neural network", "role": "primary_lens", "one_line": "dynamical-systems model of biological visual circuits with recurrent dynamics"},
+    {"name": "convolutional neural network", "role": "extended", "one_line": "CNN spatial processing combined with RNN continuous-time dynamics in hybrid architecture"},
+    {"name": "multi-area neural network", "role": "extended", "one_line": "stacked RNN areas trained end-to-end on cognitive tasks"}
+  ],
+  "core_question": "Can a hybrid RNN-CNN architecture preserve biological recurrent dynamics while matching CNN visual performance?",
+  "key_assumptions": [
+    "continuous-time recurrent dynamics better reflect biological circuit dynamics than feedforward CNNs",
+    "spatial convolution remains useful for efficient visual feature processing",
+    "RNN-style recurrent dynamics confer noise-suppression"
+  ],
+  "manipulations": [
+    "architecture: hybrid RNN-CNN vs conventional CNN",
+    "input noise level on visual benchmarks",
+    "single-area vs multi-area RNN front-end for cognitive tasks"
+  ],
+  "key_findings": [
+    "hybrid models match conventional CNN performance on ImageNet",
+    "hybrid models are more robust to input noise than conventional CNNs",
+    "multi-area RNNs perform complex cognitive tasks with the hybrid front-end",
+    "models capture time-dependent neural activity variations in higher-order visual areas of monkeys"
+  ],
+  "interpretations": [
+    "recurrent dynamics provide intrinsic noise-suppression while retaining vision-task performance",
+    "hybrid architectures bridge biological realism and large-scale visual processing"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "continuous-time RNN",
+    "dynamical systems",
+    "biological vision",
+    "convolutional neural network",
+    "noise robustness",
+    "multi-area RNN",
+    "higher visual cortex dynamics",
+    "monkey neural recordings"
+  ],
+  "out_of_scope_note": null,
+  "generator": "opus-4-7@2026-05-27",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-27T00:00:00Z",
+  "abstract_coverage": 1.0
+}

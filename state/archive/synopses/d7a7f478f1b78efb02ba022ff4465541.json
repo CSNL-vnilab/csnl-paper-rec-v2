@@ -1,0 +1,49 @@
+{
+  "canonical_id": "d7a7f478f1b78efb02ba022ff4465541",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [
+    {"name": "continuous attractor networks", "role": "primary_lens", "one_line": "one-dimensional bump-attractor model storing continuous-valued working memory"},
+    {"name": "short-term synaptic plasticity", "role": "extended", "one_line": "short-term facilitation and depression of recurrent synapses modulate bump stability"},
+    {"name": "diffusion-drift decomposition", "role": "primary_lens", "one_line": "slow bump dynamics decomposed into spike-noise diffusion plus heterogeneity-driven drift"},
+    {"name": "mutual information", "role": "context", "one_line": "used to quantify retained working-memory content"}
+  ],
+  "core_question": "How do short-term facilitation and depression of recurrent synapses jointly shape noise-induced degradation of continuous working memory in attractor networks?",
+  "key_assumptions": [
+    "memory states live on a continuous one-dimensional manifold",
+    "network operates close to a stationary state where slow dynamics are tractable",
+    "noise arises from spiking variability plus quenched connectivity/neuronal heterogeneity",
+    "theory applies to both rate models and spiking networks"
+  ],
+  "manipulations": [
+    "presence and strength of short-term facilitation",
+    "presence and strength of short-term depression",
+    "level of spiking variability and connectivity heterogeneity",
+    "distractor input to the attractor"
+  ],
+  "key_findings": [
+    "slow bump dynamics decompose into spike-driven diffusion and heterogeneity-driven directed drift",
+    "short-term facilitation reduces both diffusion and directed drift",
+    "short-term depression tends to increase both diffusion and drift",
+    "theory predicts attractor sensitivity to distractor inputs and conditions for stable retention"
+  ],
+  "interpretations": [
+    "the combined balance of facilitation and depression controls how reliably continuous attractors store working memory",
+    "mutual information across the facilitation/depression regime indexes the network's working-memory capacity"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "continuous attractor network",
+    "working memory stability",
+    "short-term facilitation",
+    "short-term depression",
+    "bump diffusion and drift",
+    "neuronal heterogeneity",
+    "distractor robustness",
+    "mutual information retention"
+  ],
+  "out_of_scope_note": null,
+  "generator": "opus-4-7@2026-05-27",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-27T00:00:00Z",
+  "abstract_coverage": 1.0
+}

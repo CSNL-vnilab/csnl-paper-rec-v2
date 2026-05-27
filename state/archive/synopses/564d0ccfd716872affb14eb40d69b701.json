@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "GABAergic inhibition in orientation selectivity",
+      "role": "primary_lens",
+      "one_line": "Cortical orientation tuning depends on GABA-mediated inhibitory network cooperation."
+    },
+    {
+      "name": "gamma oscillations as a marker of inhibitory circuit function",
+      "role": "primary_lens",
+      "one_line": "Stimulus-induced gamma frequency reflects inhibitory dynamics relevant to perception."
+    },
+    {
+      "name": "individual differences psychophysics",
+      "role": "context",
+      "one_line": "Links interindividual neurophysiological variability to behavioral thresholds."
+    }
+  ],
+  "core_question": "Does individual variability in visual cortex GABA concentration and gamma oscillation frequency predict orientation discrimination performance in humans?",
+  "key_assumptions": [
+    "MRS-measured resting GABA indexes functional inhibitory tone in V1",
+    "MEG stimulus-induced gamma frequency reflects local inhibitory circuit dynamics",
+    "Orientation discrimination thresholds index V1 orientation selectivity"
+  ],
+  "manipulations": [
+    "Stimulus orientation: vertical vs oblique",
+    "Across-subject measurement of V1 GABA (MRS) and gamma frequency (MEG)"
+  ],
+  "key_findings": [
+    "Behavioral oblique effect: oblique thresholds ~5x higher than vertical",
+    "Oblique thresholds negatively correlate with V1 GABA concentration",
+    "Oblique thresholds negatively correlate with gamma oscillation frequency",
+    "Gamma frequency positively correlates with V1 GABA concentration"
+  ],
+  "interpretations": [
+    "GABAergic inhibition is critical for orientation selectivity and behavior",
+    "GABAergic gamma oscillations play a key role in visual discrimination"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "orientation discrimination",
+    "oblique effect",
+    "GABA concentration",
+    "gamma oscillations",
+    "primary visual cortex V1",
+    "magnetic resonance spectroscopy",
+    "magnetoencephalography",
+    "individual differences in perception"
+  ],
+  "out_of_scope_note": null,
+  "canonical_id": "564d0ccfd716872affb14eb40d69b701",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T20:49:27+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.8
+}

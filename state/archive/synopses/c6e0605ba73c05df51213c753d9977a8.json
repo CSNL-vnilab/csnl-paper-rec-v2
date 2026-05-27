@@ -1,0 +1,46 @@
+{
+  "canonical_id": "c6e0605ba73c05df51213c753d9977a8",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [
+    {"name": "serial dependence", "role": "primary_lens", "one_line": "current orientation report biased toward previously seen stimuli"},
+    {"name": "post-perceptual / decisional account of serial dependence", "role": "extended", "one_line": "bias arises at decision/memory stages, not low-level visual encoding"},
+    {"name": "perceptual / low-level account of serial dependence", "role": "compared_against", "one_line": "claim that SD originates within early visual processing"}
+  ],
+  "core_question": "Does serial dependence in orientation reports originate at low-level perceptual stages or at post-perceptual (e.g., decisional) stages?",
+  "key_assumptions": [
+    "perceived similarity gates low-level perceptual carryover between trials",
+    "Gabors of different spatial frequencies and Gabor-vs-dot patterns are perceptually clearly dissimilar",
+    "robust SD across dissimilar stimuli implicates non-perceptual stages",
+    "SD is typically strongest for orientation differences below ~45° over a few past trials"
+  ],
+  "manipulations": [
+    "spatial frequency of successive Gabor patches",
+    "stimulus type intermixed across trials (Gabor vs. dot patterns)",
+    "orientation difference between current and previous trial"
+  ],
+  "key_findings": [
+    "robust serial dependence persisted across Gabors with different spatial frequencies",
+    "robust serial dependence persisted when Gabors were intermingled with dot patterns",
+    "SD effects emerged even though successive stimuli were perceptually clearly dissimilar"
+  ],
+  "interpretations": [
+    "serial dependence does not originate from low-level visual processing",
+    "current models and theoretical accounts of SD should be re-evaluated in favor of post-perceptual loci"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "serial dependence",
+    "orientation reproduction",
+    "Gabor patches",
+    "spatial frequency",
+    "perceptual vs decisional bias",
+    "post-perceptual processing",
+    "history effects",
+    "low-level visual processing"
+  ],
+  "out_of_scope_note": null,
+  "generator": "opus-4-7@2026-05-27",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-27",
+  "abstract_coverage": 1.0
+}

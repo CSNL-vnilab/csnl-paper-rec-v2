@@ -1,0 +1,43 @@
+{
+  "canonical_id": "a32f21361f05521c217c43dd50d3d860",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [
+    {"name": "visual working memory", "role": "primary_lens", "one_line": "delay-period storage of orientation under sensory noise and distraction"},
+    {"name": "memory attraction / adaptive distortion", "role": "context", "one_line": "remembered orientation drifts toward distractor orientation during delay"}
+  ],
+  "core_question": "Does sensory uncertainty at encoding modulate susceptibility of working memory to distractor interference?",
+  "key_assumptions": [
+    "bandpass filter width titrates orientation information in stimulus",
+    "delay-period distractors can interfere with stored memory",
+    "single-feature orientation report indexes memory fidelity"
+  ],
+  "manipulations": [
+    "sensory noise level at encoding (high vs low bandpass width)",
+    "distractor condition during delay (none, ignored, attended)"
+  ],
+  "key_findings": [
+    "higher encoding noise reduced working memory accuracy",
+    "oriented distractors interfered with memory and biased reports toward distractor orientation",
+    "no interaction between encoding noise and distractor presence"
+  ],
+  "interpretations": [
+    "working memory representations are vulnerable to adaptive distortions during delay",
+    "these delay-period distortions are not modulated by encoding sensory noise"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "visual working memory",
+    "delay-period distraction",
+    "sensory noise at encoding",
+    "orientation memory",
+    "memory attraction",
+    "bandpass orientation noise",
+    "attended vs ignored distractor",
+    "adaptive distortion"
+  ],
+  "out_of_scope_note": null,
+  "generator": "opus-4-7@2026-05-27",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-27",
+  "abstract_coverage": 1.0
+}

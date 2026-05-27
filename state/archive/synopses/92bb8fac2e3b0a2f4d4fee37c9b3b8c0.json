@@ -1,0 +1,45 @@
+{
+  "canonical_id": "92bb8fac2e3b0a2f4d4fee37c9b3b8c0",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.9,
+  "frameworks": [
+    {"name": "shared topology of spatial vision", "role": "primary_lens", "one_line": "crowding, localization, and saccades indexed by a common position-signal precision map"},
+    {"name": "retinal/cortical resource heterogeneity", "role": "compared_against", "one_line": "covariation argued to exceed what nonuniform sampling alone explains"},
+    {"name": "position signal precision", "role": "extended", "one_line": "extends a unified precision mechanism from crowding/saccades to spatial localization"}
+  ],
+  "core_question": "Do crowding, spatial localization, and saccadic precision share a common underlying mechanism across the visual field?",
+  "key_assumptions": [
+    "visual sensitivity varies systematically with eccentricity and upper-lower visual field",
+    "covariation across tasks indicates a shared mechanism rather than independent processes",
+    "adaptation can probe whether tasks tap the same population of position signals"
+  ],
+  "manipulations": [
+    "visual field location (foveal vs peripheral; upper vs lower)",
+    "task type (localization, crowding, saccadic precision)",
+    "motion adaptation in matched direction"
+  ],
+  "key_findings": [
+    "all three measures decline with eccentricity and show upper-lower asymmetry",
+    "across subjects, worst crowding co-occurred with worst localization and least precise saccades",
+    "motion adaptation reduced precision in all three abilities similarly"
+  ],
+  "interpretations": [
+    "crowding, localization, and saccadic precision share a common mechanism",
+    "this mechanism reflects the precision of position signals throughout the visual system"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "crowding",
+    "spatial localization",
+    "saccadic precision",
+    "visual field topology",
+    "upper-lower asymmetry",
+    "eccentricity",
+    "motion adaptation",
+    "position signals"
+  ],
+  "out_of_scope_note": null
+}

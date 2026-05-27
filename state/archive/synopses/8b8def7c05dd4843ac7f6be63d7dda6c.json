@@ -1,0 +1,61 @@
+{
+  "frameworks": [
+    {
+      "name": "neural adaptation",
+      "role": "primary_lens",
+      "one_line": "history-dependent reduction of neural responses in visual cortex"
+    },
+    {
+      "name": "serial dependence",
+      "role": "primary_lens",
+      "one_line": "attractive bias of perceptual reports toward previously viewed stimuli"
+    },
+    {
+      "name": "efficient coding",
+      "role": "context",
+      "one_line": "adaptation reduces encoding redundancy across successive stimuli"
+    },
+    {
+      "name": "readout / decoding model",
+      "role": "extended",
+      "one_line": "readout compensates for adaptation in encoding population"
+    }
+  ],
+  "core_question": "Where do attractive perceptual serial dependencies arise when visual cortex shows repulsive adaptation to prior stimuli?",
+  "key_assumptions": [
+    "behavioral biases and neural biases can be jointly modeled across encoding and readout stages",
+    "fMRI response patterns in visual cortex reflect stimulus-specific encoding",
+    "natural stimulus statistics exhibit temporal autocorrelation"
+  ],
+  "manipulations": [
+    "previous-trial orientation relative to current-trial orientation",
+    "delayed orientation discrimination task in fMRI"
+  ],
+  "key_findings": [
+    "behavioral reports were attracted toward the previous stimulus",
+    "visual-cortex response patterns were repelled away from the previous stimulus",
+    "a two-stage encoding-plus-readout model reconciled the opposing neural and behavioral biases"
+  ],
+  "interpretations": [
+    "neural adaptation reduces redundancy at encoding while readout induces attractive serial dependence",
+    "the visual system simultaneously gains coding efficiency and exploits temporal stimulus structure for behavior"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "serial dependence",
+    "neural adaptation",
+    "orientation discrimination",
+    "fMRI visual cortex",
+    "repulsive neural bias",
+    "attractive perceptual bias",
+    "encoding and readout",
+    "temporal stimulus structure"
+  ],
+  "out_of_scope_note": null,
+  "canonical_id": "8b8def7c05dd4843ac7f6be63d7dda6c",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T20:49:27+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.9
+}

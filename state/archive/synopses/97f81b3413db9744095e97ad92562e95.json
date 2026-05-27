@@ -1,0 +1,45 @@
+{
+  "canonical_id": "97f81b3413db9744095e97ad92562e95",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [
+    {"name": "efficient coding", "role": "primary_lens", "one_line": "Contextual modulation aligns encoding with natural-scene orientation statistics."},
+    {"name": "Fisher information encoding-decoding", "role": "primary_lens", "one_line": "Links behavioral bias/variance and neural population FI to a shared encoding accuracy."},
+    {"name": "voxel-wise probabilistic encoding model", "role": "extended", "one_line": "Used to estimate population Fisher information from fMRI in retinotopic areas."}
+  ],
+  "core_question": "Does surround context shape orientation encoding behaviorally and neurally in a way consistent with efficient coding of natural scene statistics?",
+  "key_assumptions": [
+    "Bias and variance in orientation reports lawfully relate to Fisher information.",
+    "Voxel responses can be modeled with probabilistic orientation encoders.",
+    "Natural-scene orientation statistics (marginal and surround-conditional) are the relevant prior."
+  ],
+  "manipulations": [
+    "Surround type: unoriented noise vs oriented gratings.",
+    "Surround orientation: two fixed oriented surrounds (±30° from vertical).",
+    "Visual area along the ventral hierarchy."
+  ],
+  "key_findings": [
+    "With unoriented surround, behavioral and neural FI track marginal natural-scene orientation statistics.",
+    "Oriented surrounds increase encoding accuracy at the surround orientation, matching conditional scene statistics.",
+    "Surround modulation of FI grows progressively along the ventral visual hierarchy."
+  ],
+  "interpretations": [
+    "Contextual surround modulation implements a form of efficient sensory coding.",
+    "Behavior and neural population activity reflect a common context-dependent encoding scheme."
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "tilt illusion",
+    "surround modulation",
+    "orientation encoding",
+    "Fisher information",
+    "natural scene statistics",
+    "efficient coding",
+    "voxel-wise encoding model",
+    "ventral visual hierarchy"
+  ],
+  "out_of_scope_note": null,
+  "generator": "opus-4-7@2026-05-27",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "abstract_coverage": 1.0
+}

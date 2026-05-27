@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "task-related response (TRR) framework",
+      "role": "primary_lens",
+      "one_line": "fMRI-BOLD entrained to task timing absent local spiking explanation"
+    },
+    {
+      "name": "arousal modulation",
+      "role": "primary_lens",
+      "one_line": "trial-to-trial arousal indexed by pupil and hemodynamics"
+    },
+    {
+      "name": "signal-detection / orientation discrimination",
+      "role": "context",
+      "one_line": "psychophysical task used to probe early visual cortex responses"
+    }
+  ],
+  "core_question": "Do task-related hemodynamic responses in early visual cortex vary trial-to-trial with task difficulty and behavioral performance?",
+  "key_assumptions": [
+    "TRRs are decoupled from local spiking and LFP",
+    "Ipsilateral cortex (away from stimulus rep) isolates non-stimulus-driven signals",
+    "Pupil size indexes arousal comparable to BOLD TRR"
+  ],
+  "manipulations": [
+    "Task difficulty (easy vs hard runs)",
+    "Trial-by-trial behavioral accuracy and reaction time",
+    "Measurement hemisphere ipsilateral to stimulus"
+  ],
+  "key_findings": [
+    "TRR amplitude scales with task difficulty",
+    "TRR amplitude tracks accuracy, RT, and lapses across trials",
+    "Modulations not explained by respiration, cardiac, or head motion",
+    "Pupil size shows similar difficulty/behavior modulation"
+  ],
+  "interpretations": [
+    "TRRs reflect arousal at single-trial timescale",
+    "TRRs covary with task and behavioral state variables beyond stimulus drive"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "task-related hemodynamic response",
+    "early visual cortex BOLD",
+    "trial-to-trial arousal",
+    "pupil size modulation",
+    "ipsilateral fMRI response",
+    "orientation discrimination",
+    "task difficulty modulation",
+    "behavioral performance covariation"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "17e3dc727a66f6c7629cd3af060b38b5",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:01:53+09:00",
+  "review_status": "auto_unreviewed"
+}

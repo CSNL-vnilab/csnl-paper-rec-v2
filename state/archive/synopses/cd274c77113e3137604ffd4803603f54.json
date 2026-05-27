@@ -1,0 +1,48 @@
+{
+  "canonical_id": "cd274c77113e3137604ffd4803603f54",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [
+    {"name": "channel encoding model", "role": "primary_lens", "one_line": "population BOLD response as linear sum of orientation-tuned channels"},
+    {"name": "inverted encoding model (IEM)", "role": "compared_against", "one_line": "inversion used to claim inferences about single-unit tuning width"},
+    {"name": "signal-detection / SNR framework", "role": "alternative_lens", "one_line": "channel function shape is driven by population SNR rather than tuning width"}
+  ],
+  "core_question": "Can inverted encoding models recover single-neuron tuning width from human BOLD population responses?",
+  "key_assumptions": [
+    "population response is linear sum of channel responses",
+    "orientation tuning of single units is contrast-invariant in V1",
+    "BOLD measurements reflect aggregated channel activity with noise"
+  ],
+  "manipulations": [
+    "stimulus contrast (high vs low)",
+    "simulated single-unit tuning bandwidth",
+    "simulated signal-to-noise ratio of population response"
+  ],
+  "key_findings": [
+    "inverted channel response functions broadened at lower contrast in human V1",
+    "broadening reproduced in simulations with contrast-invariant single-unit tuning plus reduced amplitude",
+    "higher SNR makes recovered channel functions insensitive to true neural tuning width",
+    "in zero-noise limit, IEM returns the assumed channel function regardless of single-unit bandwidth"
+  ],
+  "interpretations": [
+    "V1 data are consistent with contrast-invariant orientation tuning despite apparent IEM broadening",
+    "IEM-derived population selectivity conflates neural tuning width with noise and is better used to index decoding uncertainty"
+  ],
+  "limitations_noted": [
+    "inferences about tuning width from IEMs are confounded by SNR"
+  ],
+  "connecting_signals": [
+    "inverted encoding model",
+    "channel response function",
+    "orientation tuning",
+    "contrast invariance",
+    "human V1 BOLD",
+    "population decoding",
+    "neural tuning width",
+    "signal-to-noise ratio"
+  ],
+  "out_of_scope_note": null,
+  "generator": "opus-4-7@2026-05-27",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-27T00:00:00Z",
+  "abstract_coverage": 1.0
+}

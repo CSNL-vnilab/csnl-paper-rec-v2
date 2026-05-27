@@ -246,6 +246,42 @@ COMMENT ON VIEW __SCHEMA__.archive_paper_status IS
   'Plain-Korean terms: read / to_read / not_interested / maybe_interested / skipped.';
 
 -- =========================================================================
+-- P21 — paper synopsis layer (skeletal, framework-agnostic, sub-agent
+-- generated). One row per canonical paper. Generated offline by a fan-out
+-- of context-isolated Opus sub-agents (scripts/archive/build_synopses.py).
+-- All free-text fields are deliberately SHORT — the goal is a skeleton
+-- the interview can weave with the researcher's project context, not a
+-- self-contained literature review. No equations, no method recipes.
+-- =========================================================================
+CREATE TABLE IF NOT EXISTS __SCHEMA__.archive_paper_synopses(
+  canonical_id       TEXT PRIMARY KEY,
+  synopsis_version   TEXT NOT NULL,                    -- 'v1.2026-05-27'
+  frameworks         JSONB NOT NULL,                   -- [{"name":"...","role":"primary|alt|compared|extended","one_line":"..."}]
+  core_question      TEXT,                             -- one sentence
+  key_assumptions    JSONB,                            -- ["...", "..."]   ≤ 4 short bullets
+  manipulations      JSONB,                            -- ["...", "..."]   ≤ 4 short bullets (no method recipe)
+  key_findings       JSONB,                            -- ["...", "..."]   ≤ 4 short bullets
+  interpretations    JSONB,                            -- ["...", "..."]   ≤ 2 short bullets
+  limitations_noted  JSONB,                            -- ["...", "..."]   ≤ 2 bullets
+  connecting_signals JSONB,                            -- ["granularity effect","prior skew",...] short phrases for downstream matching
+  out_of_scope_note  TEXT,                             -- null normally; populated when abstract is too thin to extract
+  generator          TEXT NOT NULL,                    -- e.g. 'opus-4-7@2026-05-27'
+  review_status      TEXT NOT NULL DEFAULT 'auto_unreviewed'
+    CHECK (review_status IN ('auto_unreviewed','meta_reviewed','human_approved','needs_rework')),
+  generated_at       TEXT NOT NULL,
+  meta_reviewed_at   TEXT,
+  abstract_coverage  REAL                              -- fraction of findings + interpretations grounded in abstract tokens
+);
+CREATE INDEX IF NOT EXISTS ix_archive_synopses_review
+  ON __SCHEMA__.archive_paper_synopses(review_status);
+CREATE INDEX IF NOT EXISTS ix_archive_synopses_version
+  ON __SCHEMA__.archive_paper_synopses(synopsis_version);
+
+COMMENT ON TABLE __SCHEMA__.archive_paper_synopses IS
+  'P21: per-paper skeletal synopsis (framework-agnostic, sub-agent generated). '
+  'Read by pick_next.py and rendered by SKILL.md Stage 2 Block 2.';
+
+-- =========================================================================
 -- P19b — evolution-workflow foundation (3 new tables, schema only).
 -- See docs/HARNESS-ALGORITHM-DESIGN.md "evolution workflow" + Opus reviewer's
 -- Part 2 design. These tables HOLD the signals that the future

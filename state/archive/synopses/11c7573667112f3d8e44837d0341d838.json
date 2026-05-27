@@ -1,0 +1,46 @@
+{
+  "canonical_id": "11c7573667112f3d8e44837d0341d838",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [
+    {"name": "Bayesian observer", "role": "primary_lens", "one_line": "ideal observer combines prior with likelihood to infer average orientation"},
+    {"name": "signal-detection / noise decomposition", "role": "extended", "one_line": "separates encoding noise from later cognitive integration noise"},
+    {"name": "near-optimal sensorimotor inference", "role": "compared_against", "one_line": "contrasts intact sensory optimality with suboptimal cognitive judgments"}
+  ],
+  "core_question": "Why are humans near-optimal in sensory judgments but systematically biased in cognitive ones?",
+  "key_assumptions": [
+    "observers should weight evidence by its reliability under Bayes",
+    "two distinct noise sources affect perceptual decisions: encoding and integration",
+    "confidence and opt-out behaviour reflect internal uncertainty estimates"
+  ],
+  "manipulations": [
+    "stimulus contrast (encoding noise) across array of gratings",
+    "orientation variability across the array (integration noise)",
+    "task demands including base-rate priors, confidence reports, and opt-out option"
+  ],
+  "key_findings": [
+    "observers adapted near-optimally to changes in encoding noise",
+    "under higher integration noise, participants ignored stimulus base rates",
+    "they reported excessive confidence and avoided opting out of difficult trials",
+    "behaviour was captured by a Bayesian model blind to integration noise"
+  ],
+  "interpretations": [
+    "the cognitive optimality gap stems from blindness to later integration noise",
+    "noise blindness offers a computational account of suboptimal cognitive inference"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "noise blindness",
+    "integration noise",
+    "encoding noise",
+    "orientation averaging",
+    "confidence calibration",
+    "opt-out behaviour",
+    "base-rate neglect",
+    "suboptimal cognitive inference"
+  ],
+  "out_of_scope_note": null,
+  "generator": "opus-4-7@2026-05-27",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-27",
+  "abstract_coverage": 1.0
+}

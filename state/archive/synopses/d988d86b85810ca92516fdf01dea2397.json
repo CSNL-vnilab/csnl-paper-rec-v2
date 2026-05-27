@@ -1,0 +1,49 @@
+{
+  "canonical_id": "d988d86b85810ca92516fdf01dea2397",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [
+    {"name": "grid cell vector coding", "role": "primary_lens", "one_line": "entorhinal grid cells encode translation vectors between salient stimulus features"},
+    {"name": "evidence accumulation", "role": "extended", "one_line": "saccade-by-saccade evidence accrual confirms or rejects a stimulus-identity hypothesis"},
+    {"name": "hypothesis-driven constructive perception", "role": "context", "one_line": "directed saccades test predicted next-feature locations"},
+    {"name": "holistic face processing", "role": "compared_against", "one_line": "model accommodates relational/holistic recognition beyond feature parts"}
+  ],
+  "core_question": "Can grid cells implement recognition memory for faces, objects, and scenes by encoding inter-feature saccade vectors?",
+  "key_assumptions": [
+    "grid cells fire in visual (eye-movement) space, not only physical space",
+    "salient stimulus features serve as anchor landmarks between saccades",
+    "an initial identity hypothesis seeds expected next-feature locations",
+    "recognition emerges from relative feature layout, not parts alone"
+  ],
+  "manipulations": [
+    "presence vs absence of grid-cell to occipitotemporal connectivity",
+    "partial visual occlusion of stimuli",
+    "stimulus size and retinal position",
+    "saccade trajectories used to traverse feature layouts"
+  ],
+  "key_findings": [
+    "grid-cell activity variance shows 6-fold symmetry across 360 degrees along saccade trajectories",
+    "model recognises familiar faces, objects, and scenes via inter-feature vector sequences",
+    "robustness to partial occlusion and to size/position changes",
+    "disconnecting grid cells from occipitotemporal inputs produces prosopagnosia-like deficits"
+  ],
+  "interpretations": [
+    "grid cells provide a neural mechanism for hypothesis-driven, constructive visual recognition",
+    "medial temporal lobe contributes to visual memory for relational layout and memory-guided attention"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "grid cells in visual space",
+    "saccadic eye movements",
+    "recognition memory",
+    "holistic face processing",
+    "hexagonal 6-fold symmetry",
+    "entorhinal cortex",
+    "memory-guided attention",
+    "prosopagnosia"
+  ],
+  "out_of_scope_note": null,
+  "generator": "opus-4-7@2026-05-27",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "abstract_coverage": 0.95
+}

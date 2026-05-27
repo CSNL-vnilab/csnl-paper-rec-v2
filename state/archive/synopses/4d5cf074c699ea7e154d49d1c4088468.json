@@ -1,0 +1,49 @@
+{
+  "frameworks": [
+    {
+      "name": "dorsal/ventral two-stream visual processing",
+      "role": "primary_lens",
+      "one_line": "Where vs what pathways dissociate during saccade-time cognitive suppression."
+    },
+    {
+      "name": "dual-task interference",
+      "role": "extended",
+      "one_line": "Saccade generation and dorsal-stream cognition compete within one subsystem."
+    }
+  ],
+  "core_question": "Which cognitive processes are suppressed during saccadic eye movements, and where in the visual system does the interference occur?",
+  "key_assumptions": [
+    "Object recognition is mediated by the ventral stream",
+    "Spatial/orientation judgments engage the dorsal stream",
+    "Saccade programming relies on dorsal-stream resources"
+  ],
+  "manipulations": [
+    "Saccade distance varied across trials",
+    "Task type: object/nonobject decision vs. left/right facing judgment"
+  ],
+  "key_findings": [
+    "Saccade distance did not affect response time for object-vs-nonobject decisions",
+    "Response time increased with saccade distance for left/right facing judgments"
+  ],
+  "interpretations": [
+    "Dorsal-stream (where) processes are suppressed during saccades while ventral-stream (what) processes are not",
+    "Cognitive saccadic suppression reflects dual-task interference within the dorsal stream"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "saccadic suppression",
+    "dorsal stream",
+    "ventral stream",
+    "object recognition",
+    "spatial processing",
+    "dual-task interference",
+    "eye movements and cognition"
+  ],
+  "out_of_scope_note": null,
+  "canonical_id": "4d5cf074c699ea7e154d49d1c4088468",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T20:49:27+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.8
+}

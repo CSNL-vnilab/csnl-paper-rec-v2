@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "explicit conditioning observer model",
+      "role": "primary_lens",
+      "one_line": "decision outcome stored as extra bit and combined with intact stimulus representation in downstream inference"
+    },
+    {
+      "name": "implicit conditioning",
+      "role": "compared_against",
+      "one_line": "decision directly modifies working-memory representation, erasing decision-inconsistent information"
+    },
+    {
+      "name": "self-consistent Bayesian post-decision inference",
+      "role": "context",
+      "one_line": "biases arise from conditioning percepts on preceding categorical decisions"
+    }
+  ],
+  "core_question": "Does a categorical decision modify the stimulus representation in working memory, or does it act as an additional explicit cue at the inference stage?",
+  "key_assumptions": [
+    "subjects maintain consistency between categorical decision and subsequent estimate",
+    "stimulus uncertainty differentially predicts implicit vs explicit conditioning signatures",
+    "incorrect-decision trials are diagnostic of the conditioning mechanism"
+  ],
+  "manipulations": [
+    "stimulus orientation uncertainty",
+    "categorical decision correctness (incorrect-decision trials isolated)",
+    "two-stage task: categorical CW/CCW judgment then orientation reconstruction"
+  ],
+  "key_findings": [
+    "estimation biases on incorrect-decision trials scale with stimulus uncertainty",
+    "implicit-conditioning model predicts insensitivity to uncertainty, inconsistent with data",
+    "explicit-conditioning observer model closely predicts the measured biases"
+  ],
+  "interpretations": [
+    "categorical decisions do not overwrite the working-memory stimulus representation",
+    "decision outcome is retained as a separate bit and integrated downstream during estimation"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "post-decision bias",
+    "categorical decision and estimation",
+    "working memory representation",
+    "self-consistent inference",
+    "stimulus uncertainty",
+    "orientation reconstruction",
+    "explicit vs implicit conditioning",
+    "sequential perceptual decision"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "e73239628d3bdcd66f857b8e0939f7cb",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T21:01:53+09:00",
+  "review_status": "auto_unreviewed"
+}

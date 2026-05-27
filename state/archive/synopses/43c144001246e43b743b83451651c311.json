@@ -1,0 +1,44 @@
+{
+  "canonical_id": "43c144001246e43b743b83451651c311",
+  "synopsis_version": "v1.2026-05-27",
+  "frameworks": [
+    {"name": "continuity field / serial dependence", "role": "primary_lens", "one_line": "temporal averaging of recent percepts stabilizes current perception"},
+    {"name": "motion priming", "role": "context", "one_line": "prior motion biases subsequent motion perception positively"}
+  ],
+  "core_question": "Does the perception-stabilizing continuity field also apply to dynamic attributes like motion direction, or does it reverse to enhance change sensitivity?",
+  "key_assumptions": [
+    "serial dependence reflects exploitation of short-term scene correlations",
+    "stable vs dynamic attributes might recruit opposite dependency signs",
+    "separable feature dependencies combine linearly"
+  ],
+  "manipulations": [
+    "interleaved stimulus combinations mixing motion and orientation history",
+    "motion direction discrimination task with varying preceding feature"
+  ],
+  "key_findings": [
+    "observed a cubic-like pattern of dependencies with positive and negative components",
+    "isolated a positive (attractive) perceptual dependency for motion direction",
+    "isolated a negative (repulsive) perceptual dependency for orientation",
+    "weighted linear sum of separate dependencies reproduced the cubic pattern"
+  ],
+  "interpretations": [
+    "attractive and repulsive serial dependencies sum linearly across features",
+    "the stabilizing continuity field operates pervasively, even on dynamic motion stimuli"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "serial dependence",
+    "continuity field",
+    "motion direction discrimination",
+    "orientation repulsion",
+    "motion priming",
+    "attractive vs repulsive bias",
+    "linear summation of perceptual dependencies",
+    "temporal averaging in perception"
+  ],
+  "out_of_scope_note": null,
+  "generator": "opus-4-7@2026-05-27",
+  "review_status": "auto_unreviewed",
+  "generated_at": "2026-05-27",
+  "abstract_coverage": 1.0
+}
