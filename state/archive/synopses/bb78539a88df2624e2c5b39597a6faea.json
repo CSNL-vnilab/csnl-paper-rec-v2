@@ -1,0 +1,56 @@
+{
+  "frameworks": [
+    {
+      "name": "Drift-Diffusion Model (DDM)",
+      "role": "compared_against",
+      "one_line": "Prevalent speed-accuracy model whose prediction the paper challenges in value-based choice."
+    },
+    {
+      "name": "cost-of-delay optimization framework",
+      "role": "primary_lens",
+      "one_line": "Algorithmic balancing of delay cost against obtained reward utility."
+    },
+    {
+      "name": "value-based decision making",
+      "role": "context",
+      "one_line": "Domain in which reaction time depends on absolute utility magnitude."
+    }
+  ],
+  "core_question": "Can an optimal decision policy explain why reaction times decrease with higher utility magnitude, contrary to DDM predictions?",
+  "key_assumptions": [
+    "Decision policy trades off cost of delaying rewards against obtained utility",
+    "Functional form of delay cost is the critical degree of freedom",
+    "Subjects' utilities need not be specified parametrically"
+  ],
+  "manipulations": [
+    "Magnitude of rewards across choice options",
+    "Functional form of the cost-of-delay (additive vs multiplicative discounting)"
+  ],
+  "key_findings": [
+    "Reaction times decrease with higher absolute utility magnitude, contradicting standard DDM",
+    "Empirically observed RT-magnitude pattern becomes optimal under multiplicative discounting of delay",
+    "Form-free methodology confirms utility magnitude affects RT without assumptions on utility shape"
+  ],
+  "interpretations": [
+    "Cost structure of time, specifically multiplicative discounting, rationalizes RT sensitivity to reward magnitude",
+    "DDM needs augmentation with an explicit time-cost term to capture value-based RT data"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "drift-diffusion model",
+    "value-based decision making",
+    "reaction time",
+    "reward magnitude",
+    "speed-accuracy trade-off",
+    "cost of delay",
+    "multiplicative discounting",
+    "optimal stopping"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "bb78539a88df2624e2c5b39597a6faea",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:31:59+09:00",
+  "review_status": "auto_unreviewed"
+}

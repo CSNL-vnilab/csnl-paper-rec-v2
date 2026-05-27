@@ -1,0 +1,65 @@
+{
+  "frameworks": [
+    {
+      "name": "Bayesian optimal observer",
+      "role": "primary_lens",
+      "one_line": "well-defined complex optimal rule for a perceptual decision with sensory uncertainty"
+    },
+    {
+      "name": "simple heuristic rules",
+      "role": "compared_against",
+      "one_line": "rule-based suboptimal strategies hypothesized as cognitively cheaper substitutes"
+    },
+    {
+      "name": "complex suboptimal rules",
+      "role": "alternative_lens",
+      "one_line": "non-optimal rules that closely mimic the optimal rule's predictions"
+    },
+    {
+      "name": "signal-detection / perceptual decision making",
+      "role": "context",
+      "one_line": "task framework with sensory noise driving categorical choice"
+    }
+  ],
+  "core_question": "Within a single perceptual decision task, do humans behave near-optimally or follow simple heuristic rules?",
+  "key_assumptions": [
+    "optimal decision rule is well-defined and complex in this task",
+    "simple suboptimal rules make qualitatively distinct predictions from the optimal rule",
+    "sensory uncertainty can be implicitly represented by observers"
+  ],
+  "manipulations": [
+    "comparison of optimal vs multiple simple suboptimal rules within one task",
+    "presence vs absence of trial-by-trial feedback",
+    "inclusion of complex suboptimal rules that approximate the optimal rule"
+  ],
+  "key_findings": [
+    "all tested simple rules fail to describe human behavior",
+    "the optimal rule accounts well for the data",
+    "several complex suboptimal rules are indistinguishable from the optimal one",
+    "the optimal model still describes behavior best without feedback"
+  ],
+  "interpretations": [
+    "observers behave near-optimally and implicitly represent sensory uncertainty",
+    "the optimal model is close to the true model in this perceptual task"
+  ],
+  "limitations_noted": [
+    "complex suboptimal rules cannot be distinguished from the optimal rule"
+  ],
+  "connecting_signals": [
+    "optimality in perceptual decision making",
+    "simple heuristic rules",
+    "complex suboptimal rules",
+    "sensory uncertainty representation",
+    "Bayesian observer model",
+    "model comparison",
+    "feedback vs no-feedback decisions",
+    "rule-based decision making"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "092909bae884fc559982124ee95eae0e",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}

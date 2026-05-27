@@ -1,0 +1,53 @@
+{
+  "frameworks": [
+    {
+      "name": "multivoxel pattern analysis (MVPA) / representational similarity analysis",
+      "role": "primary_lens",
+      "one_line": "decoding feature-specific neural codes from distributed fMRI activity patterns"
+    },
+    {
+      "name": "univariate fMRI activation analysis",
+      "role": "compared_against",
+      "one_line": "voxel-wise mean-activation contrast that missed feature-specific encoding"
+    }
+  ],
+  "core_question": "Does human auditory cortex encode the direction and rate of rapid frequency modulation, and at what level (mean activation vs. distributed pattern)?",
+  "key_assumptions": [
+    "iterated rippled noise carries phoneme-like FM features without being perceived as speech",
+    "distributed activity patterns can carry information invisible to mean-activation contrasts",
+    "passive listening engages auditory feature coding"
+  ],
+  "manipulations": [
+    "direction of frequency modulation (rising vs. falling sweeps)",
+    "rate of frequency modulation (fast vs. slow)",
+    "FM sweeps vs. steady-state sounds"
+  ],
+  "key_findings": [
+    "univariate analysis: stronger and more extensive bilateral auditory-cortex activation for FM sweeps than steady sounds, left-lateralized",
+    "no univariate region showed selectivity for FM rate or direction",
+    "MVPA decoded direction of modulation bilaterally in auditory cortex",
+    "direction-decoding was strongest in regions outside Heschl's gyrus; no evidence for rate decoding"
+  ],
+  "interpretations": [
+    "FM direction is represented in fine-grained distributed patterns rather than overall activation level",
+    "non-primary auditory cortex carries the feature-specific code for FM direction"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "frequency modulation",
+    "iterated rippled noise",
+    "auditory cortex",
+    "multivoxel pattern analysis",
+    "representational similarity analysis",
+    "Heschl's gyrus",
+    "feature-specific encoding",
+    "phoneme-like acoustic features"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "9082331691eb2f82851b2bc16ef7504b",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:31:59+09:00",
+  "review_status": "auto_unreviewed"
+}

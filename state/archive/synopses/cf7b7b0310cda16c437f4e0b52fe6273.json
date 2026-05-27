@@ -1,0 +1,60 @@
+{
+  "frameworks": [
+    {
+      "name": "sample, simulate, update (SSUP)",
+      "role": "primary_lens",
+      "one_line": "agent samples actions from priors, mentally simulates outcomes, updates beliefs from observations"
+    },
+    {
+      "name": "mental simulation / intuitive physics",
+      "role": "extended",
+      "one_line": "imagined outcomes of hypothesized actions support flexible physical problem solving"
+    },
+    {
+      "name": "action priors with Bayesian updating",
+      "role": "primary_lens",
+      "one_line": "rich priors over actions are revised via observed effects to focus search"
+    },
+    {
+      "name": "creative tool use",
+      "role": "context",
+      "one_line": "distinctive human capacity to use objects in novel ways to achieve goals"
+    }
+  ],
+  "core_question": "How do people solve novel physical puzzles with creative tool use in only a handful of attempts?",
+  "key_assumptions": [
+    "people can imagine the effects of hypothesized actions before acting",
+    "action search is guided by rich priors over plausible actions",
+    "priors are updated from observed outcomes during the task"
+  ],
+  "manipulations": [
+    "puzzle configuration across 30 levels of the Virtual Tools game",
+    "choice of tool object available for placement"
+  ],
+  "key_findings": [
+    "humans solve a wide range of challenging physical puzzles within a handful of attempts",
+    "the SSUP model captures human performance across all 30 puzzle levels"
+  ],
+  "interpretations": [
+    "flexibility of physical problem solving rests on imagining hypothesized action effects",
+    "efficiency of search arises from rich action priors updated by observations"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "tool use",
+    "intuitive physics",
+    "mental simulation",
+    "action priors",
+    "trial-and-error learning",
+    "physical problem solving",
+    "Virtual Tools game",
+    "sample simulate update"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "cf7b7b0310cda16c437f4e0b52fe6273",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:05:00+09:00",
+  "review_status": "auto_unreviewed"
+}

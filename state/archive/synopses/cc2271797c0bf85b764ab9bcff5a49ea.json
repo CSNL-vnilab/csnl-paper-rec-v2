@@ -1,0 +1,56 @@
+{
+  "frameworks": [
+    {
+      "name": "multivoxel pattern analysis",
+      "role": "primary_lens",
+      "one_line": "decoding distributed fMRI patterns to read out working-memory contents across brain regions"
+    },
+    {
+      "name": "inverted encoding model",
+      "role": "primary_lens",
+      "one_line": "computational reconstruction of feature-specific channel responses from voxel patterns"
+    },
+    {
+      "name": "visual working memory",
+      "role": "extended",
+      "one_line": "dissociating neural substrates for attended, prospectively-relevant, and discarded items"
+    }
+  ],
+  "core_question": "What neural mechanisms distinguish currently-attended, future-relevant, and discarded items in visual working memory?",
+  "key_assumptions": [
+    "feature-specific WM contents are decodable from BOLD patterns",
+    "inverted encoding models recover channel-tuned representations",
+    "attended, prospective, and discarded items occupy distinct functional states"
+  ],
+  "manipulations": [
+    "relevance status of held items (current vs future vs discarded)",
+    "instructed forgetting vs prospective retention cues"
+  ],
+  "key_findings": [
+    "currently-relevant items decodable in visual, parietal, and posterior frontal cortex",
+    "deliberate forgetting suppresses discarded representations in early visual cortex",
+    "future-relevant information is neither actively maintained nor inhibited in those regions"
+  ],
+  "interpretations": [
+    "distinct neural mechanisms support attended versus prospectively-held WM contents",
+    "discarding is implemented via active suppression in early visual cortex"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "visual working memory",
+    "multivoxel pattern analysis",
+    "inverted encoding model",
+    "directed forgetting",
+    "prospective memory",
+    "early visual cortex",
+    "parietal cortex",
+    "feature representation"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "cc2271797c0bf85b764ab9bcff5a49ea",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T23:01:00+09:00",
+  "review_status": "auto_unreviewed"
+}
