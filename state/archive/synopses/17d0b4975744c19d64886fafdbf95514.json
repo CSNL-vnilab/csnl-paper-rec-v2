@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "EEG coherence",
+      "role": "primary_lens",
+      "one_line": "Inter-electrode coherence indexes large-scale brain network connectivity during sleep."
+    },
+    {
+      "name": "twin-design structural equation modeling (ACE)",
+      "role": "primary_lens",
+      "one_line": "Decomposes coherence variance into additive genetic, shared- and unique-environment factors."
+    },
+    {
+      "name": "thalamocortical sleep-spindle network",
+      "role": "context",
+      "one_line": "Spindle activity treated as a marker of thalamocortical circuit organization."
+    }
+  ],
+  "core_question": "How much do genetic versus environmental factors shape sleep EEG coherence in early adolescence?",
+  "key_assumptions": [
+    "MZ vs DZ twin contrast isolates additive genetic variance",
+    "Sleep coherence is a stable trait-like marker of network connectivity",
+    "Spindle-band coherence indexes thalamocortical circuitry"
+  ],
+  "manipulations": [
+    "Twin zygosity (monozygotic vs dizygotic)",
+    "Sleep state and EEG frequency band",
+    "Two consecutive recording nights"
+  ],
+  "key_findings": [
+    "Unique environmental factors explain ~66% of coherence variance",
+    "Genetic factors contribute ~19% on average across frequencies/states",
+    "Sleep spindle coherence is an exception, with ~48% genetic contribution",
+    "Coherence shows high night-to-night intraindividual stability"
+  ],
+  "interpretations": [
+    "Sleep EEG coherence behaves as a trait-like phenotype despite modest heritability",
+    "Thalamocortical spindle networks are more genetically constrained than broader cortical coherence"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "sleep EEG coherence",
+    "high-density EEG",
+    "monozygotic and dizygotic twins",
+    "heritability of brain networks",
+    "sleep spindles",
+    "thalamocortical connectivity",
+    "early adolescence brain development",
+    "structural equation modeling"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "17d0b4975744c19d64886fafdbf95514",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:49:44+09:00",
+  "review_status": "auto_unreviewed"
+}

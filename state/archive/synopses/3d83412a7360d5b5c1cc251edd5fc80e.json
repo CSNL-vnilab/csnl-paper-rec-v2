@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "moral dilemma paradigm",
+      "role": "extended",
+      "one_line": "Classic single-decision moral dilemmas extended to two-stage sequential decisions."
+    },
+    {
+      "name": "utilitarian vs deontological choice",
+      "role": "primary_lens",
+      "one_line": "Choice between harming one to save many versus refusing harm."
+    },
+    {
+      "name": "consistency in sequential choice",
+      "role": "context",
+      "one_line": "Tendency to stay consistent with one's prior decision within a narrative."
+    }
+  ],
+  "core_question": "How does a prior moral decision within the same narrative influence a subsequent moral decision?",
+  "key_assumptions": [
+    "Moral dilemmas can be operationalized as utilitarian vs deontological choices",
+    "Two-stage scenarios reveal effects unobservable in single-decision paradigms",
+    "Choice consistency reflects internal commitment to one's first decision"
+  ],
+  "manipulations": [
+    "One-stage vs two-stage scenario structure",
+    "Type of first action (utilitarian vs deontological)",
+    "Presence of a prior decision within the same narrative"
+  ],
+  "key_findings": [
+    "Second decisions were mostly consistent with first decisions",
+    "About 29% of cases showed switching (inconsistent responding)",
+    "Having made a prior decision decreased utilitarian responding overall"
+  ],
+  "interpretations": [
+    "Prior choices within the same setting significantly shape later moral decisions",
+    "Sequential narrative context modulates the utilitarian/deontological balance"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "moral decision-making",
+    "two-stage moral dilemmas",
+    "utilitarian responding",
+    "deontological choice",
+    "choice consistency",
+    "sequential decision-making",
+    "switching behavior",
+    "narrative context"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "3d83412a7360d5b5c1cc251edd5fc80e",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:49:44+09:00",
+  "review_status": "auto_unreviewed"
+}

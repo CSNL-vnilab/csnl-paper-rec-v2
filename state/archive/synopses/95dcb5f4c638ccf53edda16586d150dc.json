@@ -1,0 +1,56 @@
+{
+  "frameworks": [
+    {
+      "name": "neural manifold representation",
+      "role": "primary_lens",
+      "one_line": "objects encoded as points on a low-dimensional neural manifold rearranged by new relational information"
+    },
+    {
+      "name": "connectionist neural network with stochastic gradient descent",
+      "role": "extended",
+      "one_line": "online SGD adapted to permit few-shot knowledge assembly in a NN model"
+    },
+    {
+      "name": "transitive inference",
+      "role": "context",
+      "one_line": "novel objects learned within an ordered relation across two contexts"
+    }
+  ],
+  "core_question": "How does the brain rapidly reorganize neural codes for object relations when minimal new linking information reveals how previously separate sets connect?",
+  "key_assumptions": [
+    "object relations can be read out from population-level neural geometry",
+    "knowledge assembly requires few-shot reorganization, not slow re-learning",
+    "BOLD signal geometry in frontoparietal cortex reflects relational structure"
+  ],
+  "manipulations": [
+    "two distinct learning contexts each containing a transitive order over novel objects",
+    "minimal exposure to linking information bridging the two contexts"
+  ],
+  "key_findings": [
+    "BOLD signals in dorsal frontoparietal cortex rearranged objects on the neural manifold after minimal linking exposure",
+    "the rearrangement was rapid and dramatic, consistent with few-shot assembly",
+    "an online-SGD-adapted neural network reproduced similar rapid knowledge assembly"
+  ],
+  "interpretations": [
+    "neural codes for relations can be reorganized in a few-shot manner once linking information arrives",
+    "standard learning theories under-specify this rapid assembly; an SGD variant is one mechanism that can support it"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "knowledge assembly",
+    "transitive inference",
+    "neural manifold reorganization",
+    "few-shot learning",
+    "dorsal frontoparietal cortex",
+    "relational representation",
+    "online stochastic gradient descent",
+    "BOLD fMRI representational geometry"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "95dcb5f4c638ccf53edda16586d150dc",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:49:44+09:00",
+  "review_status": "auto_unreviewed"
+}

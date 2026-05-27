@@ -1,0 +1,63 @@
+{
+  "frameworks": [
+    {
+      "name": "subjective value computation under uncertainty",
+      "role": "primary_lens",
+      "one_line": "arousal modulates the mapping from value to choice differently for risk versus ambiguity"
+    },
+    {
+      "name": "risk-ambiguity decomposition of uncertainty",
+      "role": "extended",
+      "one_line": "uncertainty is fractionated into known (risk) and unknown (ambiguity) probabilities"
+    },
+    {
+      "name": "somatic marker / arousal account of decision-making",
+      "role": "alternative_lens",
+      "one_line": "skin conductance indexes sympathetic arousal shaping economic choice"
+    },
+    {
+      "name": "economic choice modeling",
+      "role": "context",
+      "one_line": "parametric estimation of risk and ambiguity sensitivity from gambling choices"
+    }
+  ],
+  "core_question": "Does physiological arousal influence choice under risk and ambiguity in the same way?",
+  "key_assumptions": [
+    "risk and ambiguity are dissociable forms of uncertainty",
+    "skin conductance response reflects sympathetic arousal during choice",
+    "subjective value and uncertainty sensitivity can be estimated from gambling behavior"
+  ],
+  "manipulations": [
+    "type of uncertainty (risk vs ambiguity) in lottery choices",
+    "fluctuating probability of winning",
+    "magnitude of potential monetary gain"
+  ],
+  "key_findings": [
+    "arousal tracks subjective lottery value regardless of uncertainty type",
+    "enhanced arousal decreases risk-taking under high risk",
+    "enhanced arousal increases risk-taking under ambiguity",
+    "arousal effect on choice persists after controlling for subjective value"
+  ],
+  "interpretations": [
+    "arousal contributes differentially to value-to-choice computation across uncertainty types",
+    "asymmetric arousal effects may explain heightened aversion to ambiguity"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "ambiguity aversion",
+    "risk and ambiguity",
+    "skin conductance response",
+    "sympathetic arousal",
+    "subjective value",
+    "gambling choice",
+    "decision under uncertainty",
+    "emotion and decision-making"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "b862f3dde10e5d59257bda5613cd08dd",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

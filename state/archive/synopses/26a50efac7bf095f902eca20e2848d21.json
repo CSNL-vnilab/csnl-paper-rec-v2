@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "decoded neurofeedback (DecNef)",
+      "role": "primary_lens",
+      "one_line": "rt-fMRI multi-voxel pattern manipulation drives targeted neural state shifts"
+    },
+    {
+      "name": "multi-voxel pattern decoding",
+      "role": "extended",
+      "one_line": "voxel-pattern decoder used as an online feedback signal to participants"
+    },
+    {
+      "name": "nonlinear mathematical modeling of learning",
+      "role": "primary_lens",
+      "one_line": "parametrizes magnitude, directional asymmetry, retention, and interference of DecNef"
+    }
+  ],
+  "core_question": "Can the same participants learn to induce opposing neural patterns and bidirectional changes in perceptual confidence across two DecNef sessions?",
+  "key_assumptions": [
+    "fine-grained voxel patterns can be modulated by reinforcement-based neurofeedback",
+    "perceptual confidence is supported by decodable voxel-pattern states",
+    "within-subjects directional training is order-counterbalanceable"
+  ],
+  "manipulations": [
+    "direction of DecNef training (up- vs down-regulation of confidence)",
+    "order of the two directional sessions (counterbalanced)",
+    "retention interval (~one week between assessments)"
+  ],
+  "key_findings": [
+    "DecNef induced bidirectional confidence changes within the same participants",
+    "up-regulation effects were more prominent than down-regulation",
+    "induced changes persisted after a week-long interval",
+    "second-session effects were markedly diminished, indicating anterograde learning interference"
+  ],
+  "interpretations": [
+    "decoded neurofeedback can causally and bidirectionally shift a metacognitive variable within an individual",
+    "training order and directionality interact, with strong carry-over interference across sessions"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "decoded neurofeedback",
+    "DecNef",
+    "real-time fMRI",
+    "multi-voxel pattern decoding",
+    "perceptual confidence",
+    "visual discrimination",
+    "anterograde learning interference",
+    "bidirectional regulation"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "26a50efac7bf095f902eca20e2848d21",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T00:49:44+09:00",
+  "review_status": "auto_unreviewed"
+}

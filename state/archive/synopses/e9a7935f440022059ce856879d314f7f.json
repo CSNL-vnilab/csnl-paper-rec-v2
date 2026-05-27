@@ -1,0 +1,62 @@
+{
+  "frameworks": [
+    {
+      "name": "Bayesian causal inference",
+      "role": "primary_lens",
+      "one_line": "brain infers common vs separate causes of multisensory cues to guide integration"
+    },
+    {
+      "name": "hierarchical multisensory processing",
+      "role": "extended",
+      "one_line": "fused estimate computed first, then filtered by inferred causal structure"
+    },
+    {
+      "name": "forced sensory fusion",
+      "role": "compared_against",
+      "one_line": "obligatory cue combination irrespective of common source"
+    },
+    {
+      "name": "prefrontal adaptive behaviour control",
+      "role": "context",
+      "one_line": "frontal cortex selects behaviour from candidate sensory representations"
+    }
+  ],
+  "core_question": "When and where in the human brain does multisensory causal inference emerge along the processing hierarchy?",
+  "key_assumptions": [
+    "multisensory perception requires deciding whether cues share an origin",
+    "computations can be localised in time and source from MEG",
+    "fused and segregated estimates coexist as candidate representations"
+  ],
+  "manipulations": [
+    "multisensory cues varying in their inferred common vs separate cause",
+    "time-resolved and source-resolved MEG analysis stages"
+  ],
+  "key_findings": [
+    "early segregated unisensory representations precede integration",
+    "sensory fusion arises in parietal-temporal regions",
+    "causal inference computations culminate in frontal lobe",
+    "systematic spatio-temporal cascade across the hierarchy"
+  ],
+  "interpretations": [
+    "prefrontal cortex guides flexible integrative behaviour from sensory/association candidates",
+    "multisensory integration is an instance of generalised adaptive behaviour"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "Bayesian causal inference",
+    "multisensory integration",
+    "cue combination",
+    "MEG source reconstruction",
+    "prefrontal cortex",
+    "parietal-temporal fusion",
+    "hierarchical sensory processing",
+    "common cause inference"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "e9a7935f440022059ce856879d314f7f",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}
