@@ -1,0 +1,62 @@
+{
+  "frameworks": [
+    {
+      "name": "reinforcement learning pretraining",
+      "role": "primary_lens",
+      "one_line": "RL from scratch as pretraining objective to learn reasoning."
+    },
+    {
+      "name": "next-token prediction pretraining",
+      "role": "compared_against",
+      "one_line": "Standard LLM pretraining argued to entangle reasoning with knowledge."
+    },
+    {
+      "name": "curriculum learning",
+      "role": "extended",
+      "one_line": "Synthetic-task curriculum bootstraps a transferable reasoning prior."
+    },
+    {
+      "name": "artificial general intelligence",
+      "role": "context",
+      "one_line": "Target capability contrasted with artificial useful intelligence (AUI)."
+    }
+  ],
+  "core_question": "How can large models acquire transferable reasoning rather than knowledge-coupled pattern matching?",
+  "key_assumptions": [
+    "Reasoning and knowledge are separable capacities",
+    "RL objectives can shape reasoning priors absent linguistic supervision",
+    "Small context windows reduce spurious token correlations"
+  ],
+  "manipulations": [
+    "Algorithmic tasks expressed in esoteric programming languages",
+    "Pretraining objective: RL-from-scratch vs next-token prediction",
+    "Curriculum of synthetic reasoning tasks",
+    "Context window size"
+  ],
+  "key_findings": [
+    "LLMs succeed on familiar reasoning but fail to transfer algorithmic understanding to novel esoteric languages",
+    "Observed reasoning overfits training-data surface form rather than generalizing"
+  ],
+  "interpretations": [
+    "Coupling of reasoning and knowledge in LLMs underlies fragile transfer",
+    "Disentangling via RL pretraining, synthetic curricula, and small contexts is a path from AUI to AGI"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "reasoning generalization",
+    "RL pretraining",
+    "next-token prediction",
+    "esoteric programming languages",
+    "synthetic task curriculum",
+    "AGI vs AUI",
+    "context window",
+    "knowledge-reasoning disentanglement"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "fd04157b7743ca83f28603fcf7cbfff4",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:37:30+09:00",
+  "review_status": "auto_unreviewed"
+}

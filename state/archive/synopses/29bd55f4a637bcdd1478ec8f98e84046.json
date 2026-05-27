@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "slot model",
+      "role": "compared_against",
+      "one_line": "visual working memory holds a fixed small number of discrete item slots"
+    },
+    {
+      "name": "flexible resource model",
+      "role": "compared_against",
+      "one_line": "a continuous memory resource is shared across all items"
+    },
+    {
+      "name": "slot-plus-resource hybrid model",
+      "role": "primary_lens",
+      "one_line": "discrete slots each hold a divisible resource that sets per-item precision"
+    },
+    {
+      "name": "cognitive neuroscience of working memory load",
+      "role": "context",
+      "one_line": "physiological load indices used to adjudicate capacity allocation accounts"
+    }
+  ],
+  "core_question": "How is visual working memory capacity allocated across items — via discrete slots, a flexible resource, or a hybrid?",
+  "key_assumptions": [
+    "capacity for visual working memory is limited",
+    "allocation patterns can be inferred from behavior plus physiological load indices",
+    "competing models make dissociable predictions about per-item precision"
+  ],
+  "manipulations": [],
+  "key_findings": [
+    "evidence is reviewed in favor of both slot and flexible resource accounts",
+    "a hybrid slot-plus-resource model better fits the existing literature",
+    "cognitive-neuroscience load measures help adjudicate between accounts"
+  ],
+  "interpretations": [
+    "neither pure slot nor pure resource models suffice; a hybrid account is preferred",
+    "physiological load indices give more direct access to allocation patterns than behavior alone"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "visual working memory",
+    "capacity limits",
+    "slot model",
+    "flexible resource model",
+    "slot-plus-resource hybrid",
+    "resource allocation",
+    "working memory load",
+    "cognitive neuroscience indices"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "29bd55f4a637bcdd1478ec8f98e84046",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

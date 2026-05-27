@@ -1,0 +1,51 @@
+{
+  "frameworks": [
+    {
+      "name": "Wiener-Granger causality",
+      "role": "extended",
+      "one_line": "Directional information flow between regions, extended to be feature-specific."
+    },
+    {
+      "name": "Information theory",
+      "role": "primary_lens",
+      "one_line": "Quantifies feature-specific content of inter-region communication."
+    }
+  ],
+  "core_question": "How can one quantify the amount, content, and direction of information about a specific feature transmitted between brain regions?",
+  "key_assumptions": [
+    "Information flow can be decomposed into feature-specific components",
+    "Simultaneously recorded signals from two regions support directed inference",
+    "Wiener-Granger causality principle applies to neural activity"
+  ],
+  "manipulations": [
+    "Simulated neural activity with controlled feature transmission",
+    "Applied measure across MEG, EEG, and spiking datasets",
+    "Compared FIT against traditional Granger-style measures"
+  ],
+  "key_findings": [
+    "FIT isolates feature-specific information within total inter-region flow in simulations",
+    "FIT recovers content and direction of communication in MEG, EEG, and spiking data",
+    "Analytical proofs establish key properties of the measure"
+  ],
+  "interpretations": [
+    "Merging Wiener-Granger causality with information-content specificity reveals what feature is communicated, not just whether",
+    "FIT exposes flows invisible to traditional analytical methods"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "feature-specific information transfer",
+    "Wiener-Granger causality",
+    "information theory",
+    "inter-region communication",
+    "directed information flow",
+    "MEG EEG spiking",
+    "neural information content"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "a975acbecf7e80ccb3d5be5267968beb",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:37:30+09:00",
+  "review_status": "auto_unreviewed"
+}

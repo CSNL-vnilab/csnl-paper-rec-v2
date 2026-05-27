@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "low-rank recurrent neural networks",
+      "role": "primary_lens",
+      "one_line": "connectivity decomposed into low-rank structure shapes emergent low-dimensional population dynamics"
+    },
+    {
+      "name": "neural population dynamics on low-dimensional manifolds",
+      "role": "context",
+      "one_line": "task computations as trajectories through low-dimensional neural subspaces"
+    },
+    {
+      "name": "random matrix theory of connectivity spectra",
+      "role": "extended",
+      "one_line": "eigenvalue analysis extended to mixed low-rank-plus-sparse-random connectivity"
+    }
+  ],
+  "core_question": "How does randomly sparsifying connections affect the low-dimensional dynamics of low-rank recurrent neural networks?",
+  "key_assumptions": [
+    "low-rank connectivity generates structured low-dimensional dynamics",
+    "cortical connectivity is sparse rather than all-to-all",
+    "sparsified low-rank matrices behave like low-rank plus full-rank random component"
+  ],
+  "manipulations": [
+    "level of random sparsification of connections",
+    "rank of the underlying connectivity structure",
+    "comparison to all-to-all low-rank baseline"
+  ],
+  "key_findings": [
+    "sparsification makes the connectivity matrix formally full-rank",
+    "eigenspectra split into a continuous bulk and isolated outliers",
+    "spectral form mirrors that of low-rank plus full-rank random matrices",
+    "low-dimensional dynamics are preserved even at high sparsity"
+  ],
+  "interpretations": [
+    "structured low-dimensional computation is robust to biologically realistic sparsity",
+    "low-rank RNN framework remains applicable to sparse cortical networks"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "low-rank recurrent neural network",
+    "sparse connectivity",
+    "eigenvalue spectrum",
+    "low-dimensional neural dynamics",
+    "random matrix theory",
+    "cortical network connectivity",
+    "population dynamics",
+    "network structure-dynamics link"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "338973a68e7e826612349f448b999e61",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

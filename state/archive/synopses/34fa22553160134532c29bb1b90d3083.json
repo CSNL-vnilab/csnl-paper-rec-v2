@@ -1,0 +1,52 @@
+{
+  "frameworks": [
+    {
+      "name": "cortical oscillations / cross-frequency coordination",
+      "role": "primary_lens",
+      "one_line": "low- and high-frequency rhythms jointly organize neural activity into whole-brain functional networks"
+    },
+    {
+      "name": "BOLD-based functional connectivity",
+      "role": "alternative_lens",
+      "one_line": "fMRI networks reinterpreted as summed neural activity of transient oscillation-defined configurations"
+    },
+    {
+      "name": "local-vs-distant frequency-scale mapping",
+      "role": "compared_against",
+      "one_line": "the simple assignment of high frequencies to local and low frequencies to long-range coordination is treated as oversimplified"
+    }
+  ],
+  "core_question": "How do patterns of cortical oscillations across frequencies relate to whole-brain functional networks observed in the fMRI BOLD signal?",
+  "key_assumptions": [
+    "EEG/MEG oscillations and BOLD networks index a common underlying neural organization",
+    "cognitive/network states change on sub-second timescales",
+    "BOLD temporally integrates faster neural events"
+  ],
+  "manipulations": [],
+  "key_findings": [
+    "high- and low-frequency oscillations operate in concert across spatial scales rather than in a strict local/distant dichotomy",
+    "cortical oscillation patterns reconfigure on cognitive timescales (often under one second)"
+  ],
+  "interpretations": [
+    "BOLD functional networks likely reflect the temporal summation of multiple transient oscillation-defined network configurations",
+    "joint analysis of fast oscillations and slow BOLD is needed to characterize whole-brain functional networks"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "cortical oscillations",
+    "EEG/MEG and BOLD integration",
+    "whole-brain functional networks",
+    "cross-frequency coordination",
+    "transient network configurations",
+    "multimodal neuroimaging",
+    "sub-second cognitive states",
+    "resting-state / functional connectivity"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "34fa22553160134532c29bb1b90d3083",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:37:30+09:00",
+  "review_status": "auto_unreviewed"
+}

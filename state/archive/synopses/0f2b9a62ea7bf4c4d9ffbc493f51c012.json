@@ -1,0 +1,52 @@
+{
+  "frameworks": [
+    {
+      "name": "cortical feedback processing",
+      "role": "primary_lens",
+      "one_line": "top-down signals to V1 carry non-physical sensory content"
+    },
+    {
+      "name": "laminar cortical microcircuit",
+      "role": "primary_lens",
+      "one_line": "deep vs superficial V1 layers index distinct feedback streams"
+    }
+  ],
+  "core_question": "Do mental imagery and visual illusions recruit dissociable laminar microcircuits in primary visual cortex?",
+  "key_assumptions": [
+    "feedback content is readable from V1 activation patterns",
+    "laminar fMRI can separate deep- and superficial-layer signals",
+    "imagery and illusion are both non-physical visual experiences"
+  ],
+  "manipulations": [
+    "type of internal experience (imagery vs illusion vs perception)",
+    "cortical depth (deep vs middle vs superficial V1 layers)"
+  ],
+  "key_findings": [
+    "imagery content decodable mainly from deep V1 layers",
+    "illusory content decodable mainly from superficial V1 layers",
+    "illusory and perceptual content share decodable information",
+    "imagery does not generalise to illusory or perceptual codes"
+  ],
+  "interpretations": [
+    "illusions and imagery rely on partially distinct early visual microcircuits",
+    "overlapping recruitment may still emerge from nuances of subjective experience"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "laminar fMRI",
+    "primary visual cortex V1",
+    "cortical depth profiles",
+    "mental imagery",
+    "visual illusions",
+    "cortical feedback",
+    "superficial vs deep layers",
+    "cross-decoding generalisation"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "0f2b9a62ea7bf4c4d9ffbc493f51c012",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:37:30+09:00",
+  "review_status": "auto_unreviewed"
+}

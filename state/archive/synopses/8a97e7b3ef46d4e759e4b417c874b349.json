@@ -1,0 +1,55 @@
+{
+  "frameworks": [
+    {
+      "name": "optimal evidence accumulation",
+      "role": "primary_lens",
+      "one_line": "exact computation of optimal inference from discrete evidence pulses"
+    },
+    {
+      "name": "leaky integration / evidence discounting",
+      "role": "extended",
+      "one_line": "timescale of evidence integration adapted to environmental volatility"
+    },
+    {
+      "name": "signal-detection with sensory noise",
+      "role": "context",
+      "one_line": "sensory noise enters as a component of optimal timescale"
+    }
+  ],
+  "core_question": "Do rats adopt the optimal timescale for discounting old evidence in a dynamic environment?",
+  "key_assumptions": [
+    "discrete evidence pulses permit exact computation of optimal inference",
+    "optimal timescale depends jointly on stimulus statistics and sensory noise",
+    "world state can change within a trial, making old evidence non-informative"
+  ],
+  "manipulations": [
+    "environmental volatility (rate of state changes)",
+    "stimulus statistics governing evidence reliability"
+  ],
+  "key_findings": [
+    "rats discount old evidence at the optimal timescale when both stimulus statistics and sensory noise are considered",
+    "experimentally manipulating volatility shifts rats' accumulation timescale as predicted"
+  ],
+  "interpretations": [
+    "rats perform near-optimal inference in dynamic environments, unlike previously studied humans",
+    "controlling accumulation timescale via volatility opens new mechanistic investigation avenues"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "evidence accumulation",
+    "dynamic environment",
+    "optimal inference",
+    "evidence discounting timescale",
+    "volatility manipulation",
+    "discrete evidence pulses",
+    "sensory noise",
+    "rodent perceptual decision-making"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "8a97e7b3ef46d4e759e4b417c874b349",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:37:30+09:00",
+  "review_status": "auto_unreviewed"
+}

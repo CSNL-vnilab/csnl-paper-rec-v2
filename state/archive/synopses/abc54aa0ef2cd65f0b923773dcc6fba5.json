@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "reduced-rank regression",
+      "role": "primary_lens",
+      "one_line": "multi-session linear decoder sharing behaviorally-relevant low-rank structure across sessions"
+    },
+    {
+      "name": "state-space model",
+      "role": "primary_lens",
+      "one_line": "multi-session latent dynamics sharing behavioral statistical structure across trials and sessions"
+    },
+    {
+      "name": "deep learning decoders",
+      "role": "compared_against",
+      "one_line": "black-box neural decoders contrasted as less interpretable and efficient"
+    }
+  ],
+  "core_question": "Can sharing statistical structure across trials and sessions improve neural decoding of behavior from population activity?",
+  "key_assumptions": [
+    "animals exhibit similar neural activity when performing the same task",
+    "behavior is influenced by past trials",
+    "behaviorally-relevant neural structure is low-dimensional and partially shared across sessions"
+  ],
+  "manipulations": [
+    "single-session vs multi-session decoder",
+    "four distinct behaviors decoded",
+    "across 270 brain regions"
+  ],
+  "key_findings": [
+    "multi-session decoders outperform traditional single-session approaches on IBL Neuropixels data",
+    "results generalize across additional datasets, species, and behavioral tasks",
+    "models recover low-dimensional representations predictive of animal decisions",
+    "different activation timescales identified across brain regions"
+  ],
+  "interpretations": [
+    "exploiting cross-trial and cross-session correlations yields more accurate and interpretable decoding",
+    "single-neuron contributions to behavioral decoding can be quantified within these models"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "neural decoding",
+    "multi-session decoder",
+    "reduced-rank regression",
+    "state-space model",
+    "International Brain Laboratory",
+    "Neuropixels",
+    "trial-history effects",
+    "low-dimensional neural representations"
+  ],
+  "abstract_coverage": 1.0,
+  "out_of_scope_note": null,
+  "canonical_id": "abc54aa0ef2cd65f0b923773dcc6fba5",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:37:30+09:00",
+  "review_status": "auto_unreviewed"
+}
