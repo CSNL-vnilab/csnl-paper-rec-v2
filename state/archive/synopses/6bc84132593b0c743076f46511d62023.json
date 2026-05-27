@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "E/I balance",
+      "role": "primary_lens",
+      "one_line": "cortical dynamics indexing excitatory/inhibitory synaptic alterations"
+    },
+    {
+      "name": "pharmacological challenge mapping",
+      "role": "extended",
+      "one_line": "compare patient maps to NMDA and GABA-A manipulations in healthy subjects"
+    },
+    {
+      "name": "MEG cortical dynamics",
+      "role": "primary_lens",
+      "one_line": "whole-cortex MEG signatures of local population activity"
+    }
+  ],
+  "core_question": "Can large-scale MEG dynamics reveal distributed synaptic alterations underlying early-stage psychosis?",
+  "key_assumptions": [
+    "local cortical population dynamics reflect underlying E/I synaptic state",
+    "psychosis pathology is spatially distributed rather than focal",
+    "pharmacological NMDA/GABA-A manipulation produces dynamics signatures comparable to disease"
+  ],
+  "manipulations": [
+    "clinical group (first-episode psychosis vs clinical high risk vs controls)",
+    "pharmacological NMDA receptor manipulation in healthy participants",
+    "pharmacological GABA-A receptor manipulation in healthy participants"
+  ],
+  "key_findings": [
+    "spatial patterns of altered cortical dynamics similar in first-episode and clinical high-risk groups",
+    "patient dynamics maps resemble those induced by NMDA and GABA-A pharmacological manipulations",
+    "individual symptom variation tracks individual differences in cortical dynamics maps"
+  ],
+  "interpretations": [
+    "distributed E/I synaptic alterations underlie early psychosis and are visible as MEG dynamics fingerprints",
+    "MEG-based dynamical fingerprints offer a candidate biomarker for early detection and individualized assessment"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "magnetoencephalography",
+    "excitation-inhibition balance",
+    "early psychosis biomarker",
+    "clinical high risk",
+    "NMDA receptor",
+    "GABA-A receptor",
+    "cortical population dynamics",
+    "distributed synaptic alterations"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "6bc84132593b0c743076f46511d62023",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:30:51+09:00",
+  "review_status": "auto_unreviewed"
+}

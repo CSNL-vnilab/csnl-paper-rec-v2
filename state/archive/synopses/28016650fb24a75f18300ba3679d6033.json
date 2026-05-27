@@ -1,0 +1,57 @@
+{
+  "frameworks": [
+    {
+      "name": "real-time fMRI neurofeedback",
+      "role": "primary_lens",
+      "one_line": "voluntary self-regulation of brain activity via closed-loop neural signal feedback"
+    },
+    {
+      "name": "brain-computer interface",
+      "role": "extended",
+      "one_line": "virtual environment serves as BCI to deliver feedback during emotion induction"
+    },
+    {
+      "name": "support vector machine classifier",
+      "role": "alternative_lens",
+      "one_line": "multivariate pattern decoding compared against ROI-based feedback signal"
+    }
+  ],
+  "core_question": "Can rtfMRI neurofeedback combined with VR and music sustain voluntary regulation of complex emotional states?",
+  "key_assumptions": [
+    "neural correlates of complex emotion can be measured in real time",
+    "personalized strategies enhance induced emotion intensity",
+    "ROI and SVM signals both index the target emotional state"
+  ],
+  "manipulations": [
+    "feedback signal type (ROI vs SVM classifier) across two days",
+    "induced emotion category (tenderness vs anguish)",
+    "counterbalanced day order across two experimental sites"
+  ],
+  "key_findings": [
+    "participants voluntarily enhanced neural activity while experiencing complex emotions",
+    "multimodal VR/NFB approach was technically feasible and robust across sites"
+  ],
+  "interpretations": [
+    "rtfMRI-NFB with VR/music can measure and modulate complex emotional states with ecological validity"
+  ],
+  "limitations_noted": [
+    "small sample (eight participants) framed as technical proof of concept"
+  ],
+  "connecting_signals": [
+    "real-time fMRI neurofeedback",
+    "virtual reality brain-computer interface",
+    "emotion regulation",
+    "FRIEND Engine",
+    "support vector machine decoding",
+    "complex emotion induction",
+    "ecological validity",
+    "multimodal closed-loop"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "28016650fb24a75f18300ba3679d6033",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:30:51+09:00",
+  "review_status": "auto_unreviewed"
+}

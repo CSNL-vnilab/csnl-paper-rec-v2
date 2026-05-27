@@ -1,0 +1,61 @@
+{
+  "frameworks": [
+    {
+      "name": "random exploration",
+      "role": "primary_lens",
+      "one_line": "choice stochasticity scales with total uncertainty across action values"
+    },
+    {
+      "name": "directed exploration",
+      "role": "primary_lens",
+      "one_line": "uncertainty bonus added to action values to favor uncertain options"
+    },
+    {
+      "name": "explore-exploit dilemma",
+      "role": "context",
+      "one_line": "agents trade off information gathering against immediate reward"
+    },
+    {
+      "name": "multi-armed bandit",
+      "role": "extended",
+      "one_line": "bandit task with orthogonal manipulation of total vs relative uncertainty"
+    }
+  ],
+  "core_question": "Do humans use random and directed exploration strategies, and are they driven by distinct uncertainty signals?",
+  "key_assumptions": [
+    "random exploration is sensitive to total uncertainty across actions",
+    "directed exploration is sensitive to relative uncertainty between actions",
+    "uncertainty about action values can be tracked by the agent"
+  ],
+  "manipulations": [
+    "total uncertainty across actions",
+    "relative uncertainty between actions",
+    "orthogonal factorial design over the two uncertainty types"
+  ],
+  "key_findings": [
+    "humans employ both random and directed exploration",
+    "the two strategies are independently controlled by different uncertainty computations"
+  ],
+  "interpretations": [
+    "random and directed exploration are dissociable strategies driven by distinct uncertainty signals",
+    "behavior reflects principled algorithmic approximations to the explore-exploit problem"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "explore-exploit dilemma",
+    "random exploration",
+    "directed exploration",
+    "uncertainty bonus",
+    "multi-armed bandit",
+    "total vs relative uncertainty",
+    "choice stochasticity",
+    "value-based decision making"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "4e42867916276a0505ed47419a9d6608",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

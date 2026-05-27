@@ -1,0 +1,55 @@
+{
+  "frameworks": [
+    {
+      "name": "gambler's fallacy",
+      "role": "primary_lens",
+      "one_line": "false belief that recent random outcomes alter future independent-trial probabilities"
+    },
+    {
+      "name": "probabilistic vs point predictions",
+      "role": "compared_against",
+      "one_line": "contrasts probability judgments with categorical choice responses"
+    },
+    {
+      "name": "decision-stage account",
+      "role": "extended",
+      "one_line": "locates the fallacy in response selection rather than belief formation"
+    }
+  ],
+  "core_question": "Does the gambler's fallacy arise in probabilistic belief, or only at the decision stage?",
+  "key_assumptions": [
+    "truly independent random sequences are required to test the fallacy",
+    "probabilistic and point predictions tap distinct cognitive processes"
+  ],
+  "manipulations": [
+    "response format (probabilistic judgment vs point prediction)",
+    "use of provably independent sequences across high-powered preregistered studies"
+  ],
+  "key_findings": [
+    "point predictions show a significant gambler's fallacy",
+    "probabilistic predictions show no gambler's fallacy on independent sequences",
+    "point predictions cannot be reconstructed by sampling from probability judgments"
+  ],
+  "interpretations": [
+    "the fallacy originates at the decision stage, not in probabilistic reasoning",
+    "challenges leading theories that locate the bias in belief formation"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "gambler's fallacy",
+    "probabilistic prediction",
+    "point prediction",
+    "independent random sequences",
+    "decision stage bias",
+    "preregistered behavioral study",
+    "probability judgment",
+    "sequential dependence"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "c80b19bc12bbe4967d283a1a787b9298",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-28T01:30:51+09:00",
+  "review_status": "auto_unreviewed"
+}
