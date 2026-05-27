@@ -1,0 +1,64 @@
+{
+  "frameworks": [
+    {
+      "name": "representational geometry",
+      "role": "primary_lens",
+      "one_line": "Formalises how task information is structured and trades off generalisation versus flexibility"
+    },
+    {
+      "name": "representational compression",
+      "role": "extended",
+      "one_line": "Compression of task representations across learning underlies flexibility impairment"
+    },
+    {
+      "name": "artificial neural network modelling",
+      "role": "primary_lens",
+      "one_line": "Networks parallel human task learning to expose representational dynamics"
+    },
+    {
+      "name": "auxiliary reconstruction loss",
+      "role": "extended",
+      "one_line": "Added objective maintains higher dimensionality to mitigate flexibility loss"
+    }
+  ],
+  "core_question": "Does representational compression of task representations across learning explain reduced cognitive flexibility?",
+  "key_assumptions": [
+    "Abstraction involves a generalisation-flexibility trade-off",
+    "Pretraining length controls the degree of representational compression",
+    "Humans and artificial neural networks share comparable representational dynamics",
+    "Extra-dimensional shifting indexes cognitive flexibility"
+  ],
+  "manipulations": [
+    "Pretraining length varied to control compression",
+    "Extra-dimensional shifting task across humans and ANNs",
+    "Added auxiliary reconstruction loss to network training"
+  ],
+  "key_findings": [
+    "Longer pretraining was associated with decreased flexibility in both humans and ANNs",
+    "Greater compression incurred a higher representational reorganisation cost",
+    "Reorganisation cost limited flexibility in network dynamics",
+    "Auxiliary reconstruction loss maintained higher dimensionality and mitigated flexibility impairment"
+  ],
+  "interpretations": [
+    "Representational compression across learning is the mechanism behind the flexibility impairment",
+    "Maintaining representational dimensionality preserves flexible adaptation to new contexts"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "representational geometry",
+    "representational compression",
+    "generalisation-flexibility trade-off",
+    "extra-dimensional shifting",
+    "pretraining length",
+    "representational reorganisation cost",
+    "auxiliary reconstruction loss",
+    "task representation dimensionality"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "e64040ae786636c502b60a6f88932d11",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T00:00:00+09:00",
+  "review_status": "auto_unreviewed"
+}

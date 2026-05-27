@@ -1,0 +1,64 @@
+{
+  "frameworks": [
+    {
+      "name": "divisive normalization",
+      "role": "primary_lens",
+      "one_line": "value coding circuit normalizes options against recent reward context"
+    },
+    {
+      "name": "efficient coding",
+      "role": "primary_lens",
+      "one_line": "decision sensitivity adapts to reward distribution statistics"
+    },
+    {
+      "name": "multiple timescale dynamical model",
+      "role": "extended",
+      "one_line": "novel value representation across several adaptation timescales"
+    },
+    {
+      "name": "adaptive value coding",
+      "role": "context",
+      "one_line": "neural value signals rescale to recent reward history"
+    }
+  ],
+  "core_question": "How does adaptive normalization of value representations across multiple timescales shape choice behavior under varying reward statistics?",
+  "key_assumptions": [
+    "value coding adapts like sensory coding",
+    "divisive normalization governs option comparison",
+    "reward history is integrated over multiple timescales",
+    "no explicit knowledge of environmental statistics needed"
+  ],
+  "manipulations": [
+    "variance of recent reward environment",
+    "reward statistics across sessions",
+    "choice context across trials"
+  ],
+  "key_findings": [
+    "nonhuman primate choice behavior varies with recent reward statistics",
+    "lower variance reward environments yield higher choice sensitivity",
+    "multiple timescale normalization model captures average adaptation",
+    "model also explains across-session behavioral variability"
+  ],
+  "interpretations": [
+    "value coding follows efficient coding principles via divisive normalization",
+    "dynamic architectures capture environmental statistics implicitly"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "divisive normalization",
+    "value coding adaptation",
+    "multiple timescales",
+    "efficient coding in decision-making",
+    "reward variance",
+    "choice sensitivity",
+    "adaptive choice behavior",
+    "nonhuman primate decision-making"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "aee9d263cb596e4b99ba202e9300bfe1",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:10:34+09:00",
+  "review_status": "auto_unreviewed"
+}

@@ -1,0 +1,56 @@
+{
+  "frameworks": [
+    {
+      "name": "ambiguity aversion",
+      "role": "primary_lens",
+      "one_line": "preference distinguishing known-probability risk from unknown-probability ambiguity"
+    },
+    {
+      "name": "incidental affect",
+      "role": "primary_lens",
+      "one_line": "affect from a task-irrelevant stimulus biases concurrent uncertainty choices"
+    },
+    {
+      "name": "computational choice model",
+      "role": "alternative_lens",
+      "one_line": "parametric model fit to lottery choices to estimate ambiguity attitudes"
+    }
+  ],
+  "core_question": "Does inducing incidental negative affect during ambiguous lotteries shift ambiguity preferences?",
+  "key_assumptions": [
+    "risk and ambiguity are distinct uncertainty types with separable attitudes",
+    "an emotionally evocative image paired with a lottery induces incidental affect",
+    "ambiguity attitudes can be recovered from raw choices and a computational model"
+  ],
+  "manipulations": [
+    "uncertainty type per trial: risky vs ambiguous lottery",
+    "pairing of ambiguous lotteries with neutral vs emotionally evocative images",
+    "winning probability and amount across lotteries"
+  ],
+  "key_findings": [
+    "participants were more averse to ambiguity when paired with evocative images",
+    "effect appears in both raw choice data and the computational model"
+  ],
+  "interpretations": [
+    "changing one's affective response can change choices under ambiguity",
+    "incidental affect is a causal lever on ambiguity aversion, not just risk"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "ambiguity aversion",
+    "risk vs ambiguity",
+    "incidental affect",
+    "emotional images",
+    "lottery choice task",
+    "computational model of choice",
+    "decision under uncertainty",
+    "online Prolific study"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "82a9ed8e13d00ac41fa97e78d4f88e57",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:10:34+09:00",
+  "review_status": "auto_unreviewed"
+}

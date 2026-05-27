@@ -1,0 +1,52 @@
+{
+  "frameworks": [
+    {
+      "name": "Kalman-filter ideal observer",
+      "role": "primary_lens",
+      "one_line": "Optimal recursive integration of current input with prior estimate."
+    },
+    {
+      "name": "serial dependence",
+      "role": "extended",
+      "one_line": "Perceptual judgments biased toward recently viewed stimuli."
+    }
+  ],
+  "core_question": "Do judgments of female body size show serial dependence consistent with optimal Bayesian-like integration of recent visual history?",
+  "key_assumptions": [
+    "Body size is a perceptual magnitude judgeable on a continuous scale",
+    "An ideal observer integrates current input with a prior derived from recent stimuli",
+    "Bodyline (analogous to numberline) yields reliable magnitude estimates"
+  ],
+  "manipulations": [
+    "Sequentially presented female body images of varying size",
+    "Position along a bodyline anchored by extreme sizes",
+    "Trial-to-trial sequence relationships between prior and current body"
+  ],
+  "key_findings": [
+    "Participants performed the bodyline task with low variability (<6% of scale)",
+    "Size judgments were systematically biased toward the previously viewed body",
+    "Magnitude of serial dependence was well predicted by a simple Kalman-filter ideal-observer model"
+  ],
+  "interpretations": [
+    "Serial dependence in body size judgment reflects an optimal, adaptive integration that improves performance",
+    "Past visual experiences contribute mechanistically to perception of body size"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "serial dependence",
+    "body size perception",
+    "Kalman filter ideal observer",
+    "bodyline technique",
+    "numberline magnitude estimation",
+    "perceptual prior",
+    "adaptive integration",
+    "sequential effects"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "53f0a7e6400fb87e542c432908034a27",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:10:34+09:00",
+  "review_status": "auto_unreviewed"
+}

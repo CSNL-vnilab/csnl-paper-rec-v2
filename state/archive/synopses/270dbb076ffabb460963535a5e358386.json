@@ -1,0 +1,58 @@
+{
+  "frameworks": [
+    {
+      "name": "Bayesian posterior inference",
+      "role": "primary_lens",
+      "one_line": "Perceptual judgment as posterior combining noisy likelihood with prior over stimulus distribution."
+    },
+    {
+      "name": "noisy cognition",
+      "role": "primary_lens",
+      "one_line": "Sensory noise drives both bias toward distribution mean and response variability."
+    },
+    {
+      "name": "subjective confidence as posterior uncertainty",
+      "role": "extended",
+      "one_line": "Confidence reports operationalized as a readout of posterior precision."
+    }
+  ],
+  "core_question": "How does subjective confidence relate to the central tendency bias and response variability in perceptual magnitude estimation?",
+  "key_assumptions": [
+    "Observer combines prior over stimulus distribution with noisy likelihood via Bayes rule.",
+    "Subjective confidence reflects posterior uncertainty about the judgment.",
+    "Sensory noise can be exogenously manipulated to shift posterior precision."
+  ],
+  "manipulations": [
+    "Magnitude of sensory noise (exogenously manipulated).",
+    "Objective stimulus magnitude across the distribution.",
+    "Multiple data sets / perceptual magnitude tasks."
+  ],
+  "key_findings": [
+    "Lower confidence predicts reduced sensitivity of estimates to objective stimuli.",
+    "Lower confidence predicts higher sensitivity to the stimulus distribution mean.",
+    "Central tendency effect strengthens at higher stimulus magnitudes when confidence is lower.",
+    "Lower confidence predicts higher response variability."
+  ],
+  "interpretations": [
+    "Subjective confidence functions as a behavioral signature of posterior uncertainty driving central tendency.",
+    "Noisy-cognition Bayesian account unifies bias and variability via a single uncertainty variable."
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "central tendency effect",
+    "subjective confidence",
+    "perceptual magnitude estimation",
+    "posterior uncertainty",
+    "Bayesian prior integration",
+    "response variability",
+    "sensory noise manipulation",
+    "noisy cognition"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "270dbb076ffabb460963535a5e358386",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:10:34+09:00",
+  "review_status": "auto_unreviewed"
+}

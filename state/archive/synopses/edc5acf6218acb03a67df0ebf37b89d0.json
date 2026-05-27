@@ -1,0 +1,59 @@
+{
+  "frameworks": [
+    {
+      "name": "decision confidence",
+      "role": "primary_lens",
+      "one_line": "subjective certainty in ambiguous cues modulates feedback interpretation and learning"
+    },
+    {
+      "name": "reversal learning under uncertainty",
+      "role": "primary_lens",
+      "one_line": "confidence enhances updating when reward contingencies change"
+    },
+    {
+      "name": "chemogenetic circuit dissociation",
+      "role": "primary_lens",
+      "one_line": "ACC vs BLA inhibition reveals separable roles in confidence and learning"
+    }
+  ],
+  "core_question": "Do anterior cingulate cortex and basolateral amygdala play dissociable roles in decision confidence and confidence-driven learning under uncertainty?",
+  "key_assumptions": [
+    "post-choice waiting time is a valid proxy for decision confidence",
+    "ambiguous visual orientations parametrically modulate confidence",
+    "chemogenetic silencing causally isolates regional contributions"
+  ],
+  "manipulations": [
+    "visual stimulus orientation ambiguity (confidence-modulating attribute)",
+    "chemogenetic inhibition of ACC",
+    "chemogenetic inhibition of BLA",
+    "reward contingency reversal"
+  ],
+  "key_findings": [
+    "waiting times scaled with discrimination accuracy, validating the confidence proxy",
+    "BLA silencing shortened waiting times overall without disrupting confidence sensitivity",
+    "ACC silencing made waiting times insensitive to confidence-modulating stimulus attributes",
+    "both ACC and BLA inhibition blocked confidence-driven enhancement of reversal learning"
+  ],
+  "interpretations": [
+    "ACC contributes to confidence computations whereas BLA contributes to overall waiting/persistence",
+    "ACC and BLA modulate distinct components of confidence-guided learning — strategy and rule consistency"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "decision confidence",
+    "metacognition",
+    "post-decision waiting time",
+    "reversal learning",
+    "anterior cingulate cortex",
+    "basolateral amygdala",
+    "chemogenetic inhibition",
+    "perceptual uncertainty"
+  ],
+  "out_of_scope_note": null,
+  "abstract_coverage": 1.0,
+  "canonical_id": "edc5acf6218acb03a67df0ebf37b89d0",
+  "synopsis_version": "v1.2026-05-27",
+  "generator": "opus-4-7@2026-05-27",
+  "generated_at": "2026-05-27T22:10:34+09:00",
+  "review_status": "auto_unreviewed"
+}
