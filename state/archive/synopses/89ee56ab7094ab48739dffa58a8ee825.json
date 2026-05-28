@@ -1,0 +1,17 @@
+{
+  "canonical_id": "89ee56ab7094ab48739dffa58a8ee825",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T14:30:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "Methods paper extending canonical correlation analysis (CCA) with sparse regularization and simultaneous dimensionality reduction for fusing fMRI and structural-MRI data. The paper presents a statistical/multivariate data-fusion technique applied to neuroimaging and validates it on simulated and real datasets; it engages no theoretical framework of brain function (no perceptual, decision-making, encoding, or cognitive claim). Per prompt rules, statistical procedures (CCA, sparse regularization, dimensionality reduction) are not theoretical frameworks, and neuroimaging-pipeline / data-fusion tool papers without computational-neuroscience claims are out of scope."
+}

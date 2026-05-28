@@ -1,0 +1,40 @@
+{
+  "canonical_id": "5ac5c1aa35066d92b7ebdd9052cdea03",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:30:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "signal-detection theory", "role": "context", "one_line": "MEP amplitude as noisy readout of corticospinal excitability state"}
+  ],
+  "core_question": "Are individual MEP changes following anodal-tDCS reproducible enough within a single session to serve as a biomarker of tDCS responsiveness?",
+  "key_assumptions": [
+    "MEP amplitude is a valid index of corticospinal excitability in M1",
+    "anodal-tDCS exerts a directional effect on CSE that should manifest across sessions"
+  ],
+  "manipulations": [
+    "anodal-tDCS vs baseline within session",
+    "two repeated sessions one week apart"
+  ],
+  "key_findings": [
+    "within-session MEP variance is too large for single-session tDCS-induced CSE change to be a reliable individual biomarker",
+    "the across-session direction of CSE change replicates above chance"
+  ],
+  "interpretations": [
+    "individual tDCS responsiveness requires pooled multi-session MEP measurement to be characterized"
+  ],
+  "limitations_noted": [
+    "single-session MEP measurement is insufficient for individual-level inference"
+  ],
+  "connecting_signals": [
+    "motor evoked potentials",
+    "transcranial direct current stimulation",
+    "corticospinal excitability",
+    "primary motor cortex",
+    "test-retest reliability",
+    "individual variability",
+    "biomarker reproducibility"
+  ],
+  "out_of_scope_note": null
+}

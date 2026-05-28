@@ -1,0 +1,44 @@
+{
+  "canonical_id": "78eb7c6526c11588cd931385fd84217b",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "theory of mind", "role": "primary_lens", "one_line": "attribution of mental states to self and others"},
+    {"name": "simulation theory of mindreading", "role": "extended", "one_line": "self-experience as route to inferring others' beliefs"},
+    {"name": "false-belief understanding", "role": "context", "one_line": "signature test of representing others' divergent views"}
+  ],
+  "core_question": "Do great apes draw on their own prior experience to anticipate an agent acting under a false belief?",
+  "key_assumptions": [
+    "anticipatory looking indexes belief attribution",
+    "non-verbal paradigm is valid across great-ape species",
+    "prior self-deception shapes mental-state simulation"
+  ],
+  "manipulations": [
+    "prior pretest experience: deceived vs. naive apes",
+    "species: chimpanzees, bonobos, orangutans",
+    "agent's belief state in the test scene (false vs. true)"
+  ],
+  "key_findings": [
+    "first looks were predicted by apes' own prior experience with the stimulus",
+    "previously-deceived apes anticipated the agent's false-belief-guided action",
+    "naive apes did not anticipate the false-belief-driven action"
+  ],
+  "interpretations": [
+    "great-ape false-belief understanding uses self-experience as a simulation route",
+    "nonhuman primates can leverage personal experience to track others' mental states"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "theory of mind",
+    "false-belief test",
+    "anticipatory looking",
+    "great apes",
+    "mental-state simulation",
+    "self-experience",
+    "non-verbal paradigm"
+  ],
+  "out_of_scope_note": null
+}

@@ -1,0 +1,45 @@
+{
+  "canonical_id": "6c8b9e78e54f3e060752b186132f3a92",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T14:30:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "resource-rational analysis", "role": "primary_lens", "one_line": "algorithm choice optimizing expected-accuracy vs computational-cost trade-off"},
+    {"name": "bounded rationality", "role": "extended", "one_line": "classical bounded-rational accounts unified under resource-rational frame"},
+    {"name": "ecological rationality", "role": "extended", "one_line": "heuristics-as-adaptations view subsumed by resource-rational principle"},
+    {"name": "computational-level analysis", "role": "extended", "one_line": "Marr-style optimality reinterpreted with explicit compute cost"}
+  ],
+  "core_question": "Can human cognition be understood as the optimal use of limited computational resources?",
+  "key_assumptions": [
+    "rationality operationalizable as accuracy-vs-cost trade-off",
+    "the mind selects algorithms, not just behaviors",
+    "computational cost is a constraint comparable to data limits"
+  ],
+  "manipulations": [
+    "review-level comparison across bounded / ecological / computational frames",
+    "application of resource-rational frame to heuristics, attention, decision under uncertainty"
+  ],
+  "key_findings": [
+    "rationality principle operationalizes as near-optimal accuracy-cost trade-off",
+    "resource-rational frame unifies bounded-rational, ecological-rational, and computational-level accounts",
+    "frame yields predictions about heuristics, attention allocation, and decision under uncertainty"
+  ],
+  "interpretations": [
+    "cognitive heuristics are rational solutions to bounded compute, not failures",
+    "a single optimization principle can integrate three previously separate rationality traditions"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "resource-rational analysis",
+    "bounded rationality",
+    "ecological rationality",
+    "computational-level analysis",
+    "cognitive heuristics",
+    "attention allocation",
+    "decision under uncertainty",
+    "accuracy-cost trade-off"
+  ],
+  "out_of_scope_note": null
+}

@@ -1,0 +1,40 @@
+{
+  "canonical_id": "5ff5cd94e179b51f751bade0ae8debf6",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "Hebbian / NMDA-dependent synaptic plasticity", "role": "primary_lens", "one_line": "Structural spine plasticity follows NMDA-receptor-gated activity-dependent rules"},
+    {"name": "structure-follows-function (activity-dependent rewiring)", "role": "extended", "one_line": "Functional plasticity from DCS extended to dendritic-spine structural correlate"}
+  ],
+  "core_question": "Does anodal direct-current stimulation paired with motor training drive NMDA-receptor-dependent structural synaptic plasticity in sensorimotor cortex?",
+  "key_assumptions": [
+    "Dendritic spine formation indexes structural synaptic plasticity",
+    "NMDA receptors gate activity-dependent plasticity in M1 pyramidal neurons",
+    "Anodal DCS produces functional plasticity that can have a structural correlate"
+  ],
+  "manipulations": [
+    "Anodal DCS alone vs motor training alone vs paired DCS+training",
+    "NMDA-receptor knockout vs wild-type mice"
+  ],
+  "key_findings": [
+    "Paired anodal DCS + motor training increased spine formation in M1 layer 2/3 pyramidal neurons beyond either intervention alone",
+    "Spine formation gain was abolished in NMDA-receptor knockouts"
+  ],
+  "interpretations": [
+    "DCS-paired motor learning induces structural plasticity that follows the same NMDA-dependent rules as DCS-induced functional plasticity"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "anodal direct-current stimulation",
+    "motor learning",
+    "dendritic spine formation",
+    "NMDA-receptor-dependent plasticity",
+    "M1 layer 2/3 pyramidal neurons",
+    "structural synaptic plasticity",
+    "sensorimotor cortex"
+  ],
+  "out_of_scope_note": null
+}
