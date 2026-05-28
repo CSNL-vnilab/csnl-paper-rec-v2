@@ -1,0 +1,44 @@
+{
+  "canonical_id": "245b5237e92d07b577be8ded4162b243",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T12:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "linear decomposition of pupil signals", "role": "primary_lens", "one_line": "Statistical decomposition separating cognitive vs ocular contributions to pupil variance."},
+    {"name": "central neuromodulation of pupil", "role": "context", "one_line": "Pupil as readout of high-level cognitive state via central neuromodulatory mechanisms."}
+  ],
+  "core_question": "Do ocular factors such as accommodation and microsaccades contaminate pupil measures even under careful equiluminance control in a cognitive task?",
+  "key_assumptions": [
+    "Pupil diameter reflects central neuromodulatory cognitive signals",
+    "Equiluminance can be enforced via display photometry and gaze-contingent matching",
+    "Cognitive and ocular contributions to pupil variance are linearly separable"
+  ],
+  "manipulations": [
+    "Oddball vs standard auditory stimuli",
+    "Task engagement state (tonic level)",
+    "Equiluminance enforcement (display photometry + gaze-contingent matching)"
+  ],
+  "key_findings": [
+    "Phasic oddball-evoked pupil responses were modulated by stimulus accommodation and microsaccade rate",
+    "Tonic task-engagement pupil signals were also modulated by ocular factors",
+    "Ocular factors accounted for a substantial fraction of pupil variance under equiluminance"
+  ],
+  "interpretations": [
+    "Pupil signals in cognitive paradigms jointly reflect cognitive and ocular contributions even under equiluminance",
+    "Ocular nuisance variables must be modeled rather than assumed eliminated by equiluminance"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "pupillometry",
+    "equiluminance control",
+    "microsaccade rate",
+    "stimulus accommodation",
+    "auditory oddball",
+    "tonic vs phasic pupil",
+    "gaze-contingent matching",
+    "ocular nuisance variables"
+  ],
+  "out_of_scope_note": null
+}

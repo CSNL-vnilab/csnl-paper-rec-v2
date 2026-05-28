@@ -1,0 +1,42 @@
+{
+  "canonical_id": "16d1199508ed043496c4f60862fd1572",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T12:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "cognitive map", "role": "primary_lens", "one_line": "Brain organizes concepts into a navigable map analogous to space."},
+    {"name": "grid cell coding", "role": "extended", "one_line": "Hexagonally symmetric spatial code extended to non-spatial conceptual dimensions."}
+  ],
+  "core_question": "Do humans use a hexagonally symmetric grid-like code to navigate conceptual relations between objects defined by two continuous dimensions?",
+  "key_assumptions": [
+    "Concepts can be represented in a 2-D continuous space",
+    "Grid-like hexagonal symmetry in fMRI signal indexes grid-cell-like coding",
+    "Conceptual navigation engages mechanisms analogous to spatial navigation"
+  ],
+  "manipulations": [
+    "Trajectory angle through a 2-D conceptual space defined by two continuous object dimensions",
+    "Similarity judgments along these conceptual trajectories"
+  ],
+  "key_findings": [
+    "Entorhinal cortex showed hexagonal-symmetry signature modulated by trajectory angle",
+    "Ventromedial prefrontal cortex also exhibited the predicted hexagonal symmetry"
+  ],
+  "interpretations": [
+    "Humans deploy a grid-like code for non-spatial, conceptual cognition",
+    "The same hexagonal coding mechanism supports both spatial and conceptual navigation"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "grid-like code",
+    "conceptual space",
+    "entorhinal cortex",
+    "ventromedial prefrontal cortex",
+    "hexagonal symmetry fMRI",
+    "cognitive map",
+    "non-spatial navigation",
+    "2-D continuous dimensions"
+  ],
+  "out_of_scope_note": null
+}

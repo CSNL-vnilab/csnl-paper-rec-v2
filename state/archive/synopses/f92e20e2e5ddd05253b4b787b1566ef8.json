@@ -1,0 +1,43 @@
+{
+  "canonical_id": "f92e20e2e5ddd05253b4b787b1566ef8",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:30:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "feature-pool account", "role": "primary_lens", "one_line": "VSTM stores features in independent pools rather than bound objects"},
+    {"name": "object-binding account", "role": "compared_against", "one_line": "obligatory binding of features into unified object representations in VSTM"},
+    {"name": "signal-detection theory", "role": "context", "one_line": "continuous-report recovers precision and probability components of recall noise"}
+  ],
+  "core_question": "Are the basic units of visual short-term memory objects or features?",
+  "key_assumptions": [
+    "memory noise is non-negligible and must be recovered, not assumed away",
+    "recall can be decomposed into precision and probability of remembering",
+    "orientation and color of a single object can be probed independently"
+  ],
+  "manipulations": [
+    "feature probed at test (orientation vs color of the same object)",
+    "continuous-report task replacing discrete change-detection"
+  ],
+  "key_findings": [
+    "recall precision for one feature is independent of recall precision for another feature of the same object",
+    "recall failures occur independently across features of the same object"
+  ],
+  "interpretations": [
+    "results argue against an obligatory object-binding step in VSTM",
+    "results support a feature-pool account of VSTM storage"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "visual short-term memory",
+    "continuous-report task",
+    "feature-pool account",
+    "object-binding",
+    "precision and probability of recall",
+    "orientation and color",
+    "change detection",
+    "multi-feature objects"
+  ],
+  "out_of_scope_note": null
+}

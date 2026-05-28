@@ -1,0 +1,41 @@
+{
+  "canonical_id": "fb4be0f47e7fbe8e79415b6963ed07f2",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "efficient coding", "role": "primary_lens", "one_line": "Early visual system shaped by adaptation to natural scene statistics."},
+    {"name": "natural scene statistics", "role": "extended", "one_line": "Directional image regularities predict perceptual anisotropies at the blind spot."}
+  ],
+  "core_question": "Do directional asymmetries in natural scene statistics around the blind spot predict the observed anisotropies in perceptual filling-in?",
+  "key_assumptions": [
+    "Early visual function reflects innate specification plus experience-driven adaptation to natural input",
+    "Image statistics sampled at the blind-spot region are informative about cortical filling-in mechanisms"
+  ],
+  "manipulations": [
+    "Orientation of filling-in test stimuli (horizontal vs vertical)",
+    "Measurement of perceptual filling-in vs tolerance to disruption"
+  ],
+  "key_findings": [
+    "Perceptual filling-in shows a horizontal preference",
+    "Tolerance in filling-in shows a vertical preference",
+    "Natural-image statistics around the human blind-spot location exhibit stronger horizontal than vertical coherence",
+    "Filling-in pattern aligns with the directional asymmetry of these image statistics"
+  ],
+  "interpretations": [
+    "The perceptual anisotropy at the blind spot is consistent with efficient coding of natural scene statistics"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "blind spot filling-in",
+    "perceptual anisotropy",
+    "natural scene statistics",
+    "horizontal coherence",
+    "efficient coding",
+    "directional asymmetry",
+    "early visual system adaptation"
+  ],
+  "out_of_scope_note": null
+}

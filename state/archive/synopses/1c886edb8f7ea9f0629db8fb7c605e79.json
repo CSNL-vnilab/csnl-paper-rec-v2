@@ -1,0 +1,44 @@
+{
+  "canonical_id": "1c886edb8f7ea9f0629db8fb7c605e79",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "serial dependence", "role": "primary_lens", "one_line": "positive temporal integration biasing current percept toward prior stimulus"},
+    {"name": "adaptation aftereffects", "role": "primary_lens", "one_line": "negative repulsion of current percept away from recent stimulus history"},
+    {"name": "efficient coding", "role": "context", "one_line": "coding strategy calibrated to temporal statistics of attribute stability"}
+  ],
+  "core_question": "Does the visual system deploy different temporal coding strategies (integration vs differentiation) for stable versus changeable facial attributes?",
+  "key_assumptions": [
+    "perceptual systems trade off signal integration against change sensitivity",
+    "facial identity is temporally stable whereas expression and gaze are changeable",
+    "priming/serial dependence and adaptation reflect distinct coding strategies"
+  ],
+  "manipulations": [
+    "facial attribute type judged (identity vs expression vs gaze)",
+    "prior-stimulus history preceding the judged face"
+  ],
+  "key_findings": [
+    "identity judgments showed positive (attractive) serial dependence toward prior identity",
+    "expression judgments showed negative adaptation aftereffects (repulsion from prior expression)",
+    "the dissociation held across five experiments"
+  ],
+  "interpretations": [
+    "the visual system uses different coding strategies calibrated to each attribute's temporal statistics",
+    "stable attributes recruit integration while changeable attributes recruit differentiation"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "serial dependence",
+    "adaptation aftereffects",
+    "face perception",
+    "facial identity",
+    "facial expression",
+    "temporal statistics of stimuli",
+    "integration vs differentiation",
+    "positive sequential effects"
+  ],
+  "out_of_scope_note": null
+}

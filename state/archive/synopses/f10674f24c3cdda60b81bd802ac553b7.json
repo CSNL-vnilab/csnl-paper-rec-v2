@@ -1,0 +1,40 @@
+{
+  "canonical_id": "f10674f24c3cdda60b81bd802ac553b7",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "geometric morphometrics", "role": "primary_lens", "one_line": "shape-space decomposition of facial form into globally vs locally structured components"},
+    {"name": "signal-detection theory", "role": "context", "one_line": "frames whether trait inferences track veridical physiological cues"}
+  ],
+  "core_question": "Are facial features linked to physiological measurements encoded more globally than facial features driving social-trait attributions?",
+  "key_assumptions": [
+    "facial shape variation can be partitioned into structured (integrated) vs unstructured components",
+    "physiological measurements and trait ratings each define a meaningful axis in shape space"
+  ],
+  "manipulations": [
+    "type of external variable correlated with shape (hormones, BMI, age vs perceived dominance, trustworthiness)",
+    "partitioning of covariance matrix into structured vs unstructured parts"
+  ],
+  "key_findings": [
+    "physiological correlates (hormones, BMI, age) align with globally integrated facial features",
+    "attributed traits (dominance, trustworthiness) rely on more locally encoded facial features"
+  ],
+  "interpretations": [
+    "face-based trait inferences need not be calibrated against true physiology",
+    "global vs local encoding dissociates veridical-cue and social-perception channels"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "geometric morphometrics",
+    "facial shape",
+    "global vs local encoding",
+    "trait attribution",
+    "dominance and trustworthiness",
+    "covariance partitioning",
+    "physiological correlates of face"
+  ],
+  "out_of_scope_note": null
+}
