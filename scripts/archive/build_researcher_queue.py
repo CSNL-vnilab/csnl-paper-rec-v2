@@ -238,9 +238,32 @@ def _load_filter_decisions() -> dict[str, dict]:
     return {d["canonical_id"]: d for d in _iter_jsonl(jl)}
 
 
+_MIN_ABSTRACT_CHARS = 100  # P22b: abstract gate — papers without usable
+                           # text cannot ground the interview Block 2 and
+                           # cannot be synopsized by the P21 layer. Excluding
+                           # them at queue build time keeps the researcher's
+                           # 200-paper queue entirely grounded.
+
+
+def _has_usable_abstract(paper: dict) -> bool:
+    abs_text = (paper.get("abstract") or "").strip()
+    return len(abs_text) >= _MIN_ABSTRACT_CHARS
+
+
 def _load_papers() -> dict[str, dict]:
     jl = _REPO_ROOT / "state" / "archive" / "merged_papers.jsonl"
-    return {p["canonical_id"]: p for p in _iter_jsonl(jl)}
+    raw = {p["canonical_id"]: p for p in _iter_jsonl(jl)}
+    # P22b: drop papers with missing / thin abstracts. They cannot anchor
+    # the interview's Block 2 recommendation, and the synopsis builder cannot
+    # produce a grounded synopsis for them either. Around 76% of the
+    # archive currently has no usable abstract (mostly classics_smb source);
+    # those will resurface only after a separate abstract re-fetch pass.
+    kept = {cid: p for cid, p in raw.items() if _has_usable_abstract(p)}
+    dropped = len(raw) - len(kept)
+    if dropped:
+        print(f"[queue] _load_papers: kept {len(kept)} / {len(raw)} "
+              f"(dropped {dropped} with missing/thin abstract)")
+    return kept
 
 
 def _cosine(a: list[float], b: list[float]) -> float:

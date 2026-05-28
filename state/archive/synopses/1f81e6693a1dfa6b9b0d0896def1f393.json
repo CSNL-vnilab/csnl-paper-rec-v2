@@ -1,0 +1,46 @@
+{
+  "canonical_id": "1f81e6693a1dfa6b9b0d0896def1f393",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:30:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "synopsis": {
+    "frameworks": [
+      {"name": "drift diffusion model", "role": "primary_lens", "one_line": "evidence accumulation framework capturing both choices and reaction times in trans-saccadic perception"},
+      {"name": "Bayesian observer", "role": "compared_against", "one_line": "alternative model that captured choices but failed to account for reaction-time signature"},
+      {"name": "saccadic suppression of displacement", "role": "context", "one_line": "classical phenomenon motivating the study of trans-saccadic perceptual stability"}
+    ],
+    "core_question": "How and when do external sensory signals bias perceptual judgments about object displacement following saccadic eye movements?",
+    "key_assumptions": [
+      "perceptual stability requires integration of external sensory information with internal monitoring signals",
+      "choices and reaction times reflect a common underlying decision process amenable to sequential sampling models"
+    ],
+    "manipulations": [
+      "saccade amplitude (4° vs 8°)",
+      "target displacement magnitude (up to ±2.5° along saccade trajectory)"
+    ],
+    "key_findings": [
+      "choices were attracted toward physically present sensory information",
+      "reaction times reflected an active, ongoing evidence accumulation process",
+      "Bayesian observer model captured choices but not reaction-time signature",
+      "drift rate scaled with sensory displacement magnitude"
+    ],
+    "interpretations": [
+      "only the DDM jointly accommodates choice bias and reaction-time dynamics in trans-saccadic perception",
+      "evidence accumulation actively continues across the saccadic eye movement"
+    ],
+    "limitations_noted": [],
+    "connecting_signals": [
+      "drift diffusion model",
+      "trans-saccadic perception",
+      "saccadic suppression of displacement",
+      "evidence accumulation",
+      "perceptual decision making",
+      "Bayesian observer model",
+      "reaction time modeling",
+      "visual stability"
+    ],
+    "out_of_scope_note": null
+  }
+}
