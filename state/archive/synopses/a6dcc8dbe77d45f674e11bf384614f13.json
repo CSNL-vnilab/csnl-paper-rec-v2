@@ -1,0 +1,17 @@
+{
+  "canonical_id": "a6dcc8dbe77d45f674e11bf384614f13",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7-bypass@2026-05-28",
+  "generated_at": "2026-05-28T21:58:13+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.0,
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "Battery materials: phase-field study of Li-diffusion-accelerated grain growth in intercalation electrodes; battery materials simulation, not computational neuroscience."
+}

@@ -1,0 +1,60 @@
+{
+  "canonical_id": "cb1216b1c93c43afb643601ae2195432",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "signal-detection theory",
+      "role": "primary_lens",
+      "one_line": "perceptual choice plus confidence read out from MT direction-tuned population"
+    },
+    {
+      "name": "causal perturbation of sensory cortex",
+      "role": "primary_lens",
+      "one_line": "focal optogenetic inactivation of direction-tuned MT neurons during decision"
+    },
+    {
+      "name": "downstream readout adaptation",
+      "role": "extended",
+      "one_line": "compensation in MT-to-decision readout over tens of minutes and sub-second windows"
+    }
+  ],
+  "core_question": "Does focal, reversible optogenetic suppression of direction-tuned MT neurons causally bias choice and confidence on a perceptual decision task in monkeys?",
+  "key_assumptions": [
+    "MT neurons with shared direction tuning carry the evidence used for direction discrimination",
+    "choice and confidence can share a common evidence-readout mechanism",
+    "hyperpolarizing opsins provide a sufficiently focal and reversible inactivation"
+  ],
+  "manipulations": [
+    "randomly-interleaved trials with versus without MT inactivation",
+    "stimulus (and concurrent suppression) duration spanning below and above ~350 ms",
+    "exposure across the session to probe time-dependent compensation"
+  ],
+  "key_findings": [
+    "inactivating direction-tuned MT neurons systematically biased choice and confidence",
+    "behavioral effects attenuated over the course of each session",
+    "behavior was largely unaffected on trials longer than ~350 ms",
+    "choice and confidence showed parallel effects across conditions"
+  ],
+  "interpretations": [
+    "the downstream readout of MT compensates for perturbations on tens-of-minutes and sub-second timescales",
+    "parallel effects on choice and confidence are consistent with a common readout mechanism"
+  ],
+  "limitations_noted": [
+    "effects are transient, limiting the temporal window over which causal inferences hold"
+  ],
+  "connecting_signals": [
+    "area MT",
+    "direction discrimination",
+    "decision confidence",
+    "optogenetic inactivation",
+    "hyperpolarizing opsins",
+    "causal perturbation",
+    "downstream readout compensation",
+    "perceptual decision-making"
+  ],
+  "out_of_scope_note": null
+}

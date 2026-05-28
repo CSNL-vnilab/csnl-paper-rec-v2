@@ -1,0 +1,40 @@
+{
+  "canonical_id": "ba90d87408d75e73762f199a92d4b5f7",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "Bayesian confirmation theory",
+      "role": "primary_lens",
+      "one_line": "Quantitative framework for updating belief in a hypothesis given evidence."
+    }
+  ],
+  "core_question": "How should differences between an original experiment and its replication be taken into account when updating belief in the original finding?",
+  "key_assumptions": [
+    "Belief change should follow Bayesian updating rather than dichotomous replicated/failed verdicts.",
+    "Differences between replication and original are inevitable and informative, not nuisance."
+  ],
+  "manipulations": [],
+  "key_findings": [
+    "Existing discussions of replication differences lack a principled quantitative framework.",
+    "Bayesian confirmation theory supplies such a framework, though it does not fully resolve the problem."
+  ],
+  "interpretations": [
+    "Applying Bayesian confirmation to replication differences yields new insights even if it is not a complete solution."
+  ],
+  "limitations_noted": [
+    "Authors acknowledge the framework will not entirely solve the replication-difference problem."
+  ],
+  "connecting_signals": [
+    "Bayesian confirmation theory",
+    "replication experiment",
+    "belief updating",
+    "quantitative framework for evidence",
+    "differences between replication and original",
+    "meta-science"
+  ],
+  "out_of_scope_note": null
+}

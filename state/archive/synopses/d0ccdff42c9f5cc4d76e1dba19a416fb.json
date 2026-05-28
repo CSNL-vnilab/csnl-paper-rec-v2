@@ -1,0 +1,17 @@
+{
+  "canonical_id": "d0ccdff42c9f5cc4d76e1dba19a416fb",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7-bypass@2026-05-28",
+  "generated_at": "2026-05-28T21:58:13+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.0,
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "Climate / energy policy: net-zero emissions energy systems; environmental engineering / policy, not computational neuroscience."
+}
