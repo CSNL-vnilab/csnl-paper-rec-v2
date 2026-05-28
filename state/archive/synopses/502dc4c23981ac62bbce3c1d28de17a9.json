@@ -1,0 +1,60 @@
+{
+  "canonical_id": "502dc4c23981ac62bbce3c1d28de17a9",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "reinforcement learning",
+      "role": "extended",
+      "one_line": "RPE account broadened to include sensory prediction errors beyond reward."
+    },
+    {
+      "name": "reward prediction error",
+      "role": "primary_lens",
+      "one_line": "Canonical dopamine-as-RPE hypothesis taken as the starting point."
+    },
+    {
+      "name": "model-based reinforcement learning",
+      "role": "alternative_lens",
+      "one_line": "Knowledge of sensory structure invoked to explain non-reward dopamine signals."
+    },
+    {
+      "name": "model-free reinforcement learning",
+      "role": "compared_against",
+      "one_line": "Pure cached-value account argued to be insufficient for new findings."
+    }
+  ],
+  "core_question": "Can dopamine signals be reconceived as a generalized prediction error covering both sensory and reward predictions?",
+  "key_assumptions": [
+    "Dopamine transients reflect prediction errors of some kind",
+    "RL provides the right computational vocabulary for dopamine function",
+    "Sensory and reward predictions can share a common error signal"
+  ],
+  "manipulations": [
+    "Theoretical broadening of the prediction-error definition (sensory vs reward)",
+    "Algorithmic positioning between model-based and model-free RL"
+  ],
+  "key_findings": [
+    "Existing evidence shows dopamine activity also tracks sensory prediction errors unrelated to reward",
+    "A generalized-PE account remains consistent with classic dopamine-RPE correspondence",
+    "The account explains sensory preconditioning and identity unblocking"
+  ],
+  "interpretations": [
+    "Dopamine supports a hybrid RL regime sitting between model-based and model-free algorithms",
+    "Treating dopamine as a generalized PE unifies reward and non-reward phenomena under one signal"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "dopamine prediction error",
+    "generalized prediction error",
+    "sensory prediction error",
+    "model-based reinforcement learning",
+    "sensory preconditioning",
+    "identity unblocking",
+    "midbrain dopamine neurons"
+  ],
+  "out_of_scope_note": null
+}

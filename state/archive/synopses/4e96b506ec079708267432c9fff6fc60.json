@@ -1,0 +1,56 @@
+{
+  "canonical_id": "4e96b506ec079708267432c9fff6fc60",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "hyperbolic temporal discounting",
+      "role": "compared_against",
+      "one_line": "Standard discount-rate model that ignores risk attitude in intertemporal choice."
+    },
+    {
+      "name": "expected-utility risk preferences",
+      "role": "extended",
+      "one_line": "Risk-attitude utility curvature folded into the discounting estimator."
+    },
+    {
+      "name": "behavioral economics of intertemporal choice",
+      "role": "context",
+      "one_line": "Joint measurement of time and risk preferences in individual differences."
+    }
+  ],
+  "core_question": "Does ignoring individual risk preferences systematically bias estimates of temporal-discounting impulsivity in standard intertemporal choice tasks?",
+  "key_assumptions": [
+    "Delayed rewards are implicitly risky and evaluated under a utility function",
+    "Risk attitude and discount rate are separable but jointly identifiable from choice data",
+    "Standard hyperbolic discounting omits a utility-curvature term"
+  ],
+  "manipulations": [
+    "Model specification: hyperbolic discounting vs. risk-augmented discounting",
+    "Comparison across individuals differing in risk attitude"
+  ],
+  "key_findings": [
+    "Standard hyperbolic discounting produces large, systematic bias in estimated discount rates",
+    "Apparent impulsivity differences across individuals can be driven by risk-attitude differences instead",
+    "Risk-augmented model fits choice data better and de-correlates risk and impulsivity parameters"
+  ],
+  "interpretations": [
+    "Choice impulsivity measures must jointly estimate risk preferences to be valid for individual-differences research",
+    "Reported links between impulsivity and clinical or addictive phenotypes may be confounded by risk attitude"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "temporal discounting",
+    "intertemporal choice",
+    "choice impulsivity",
+    "risk preferences",
+    "hyperbolic discounting bias",
+    "individual differences",
+    "computational psychiatry",
+    "discount rate estimation"
+  ],
+  "out_of_scope_note": null
+}

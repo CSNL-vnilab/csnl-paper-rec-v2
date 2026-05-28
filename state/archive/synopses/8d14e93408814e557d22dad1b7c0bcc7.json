@@ -1,0 +1,57 @@
+{
+  "canonical_id": "8d14e93408814e557d22dad1b7c0bcc7",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T21:55:40+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "signal-detection theory",
+      "role": "primary_lens",
+      "one_line": "decomposes perceptual decision into target selection, evidence accumulation, and motor output stages"
+    },
+    {
+      "name": "drift-diffusion",
+      "role": "extended",
+      "one_line": "centro-parietal positivity treated as build-up of evidence accumulation toward bound"
+    },
+    {
+      "name": "neuromodulatory arousal",
+      "role": "context",
+      "one_line": "tonic and phasic pupil diameter index distinct timescales of neuromodulator action"
+    }
+  ],
+  "core_question": "How do tonic and phasic pupil-linked arousal modulate distinct EEG stages of perceptual decision-making and behaviour?",
+  "key_assumptions": [
+    "baseline pupil indexes tonic arousal; task-evoked pupil indexes phasic arousal",
+    "CPP reflects evidence accumulation; N2c/N2i reflect early target selection",
+    "neuromodulators act on multiple timescales to gate decision processing"
+  ],
+  "manipulations": [
+    "binning trials by baseline (tonic) pupil diameter",
+    "binning trials by task-evoked (phasic) pupil response",
+    "linear mixed-effects modelling of EEG signatures against RT and RT variability"
+  ],
+  "key_findings": [
+    "lower tonic and higher phasic arousal both shorten reaction times",
+    "tonic and phasic pupil predict dissociable sets of EEG signatures across decision stages",
+    "phasic arousal did not modulate motor build-up rate or N2c/N2i target-selection signals",
+    "CPP onset and build-up rate uniquely improved fit to behavioural RT and variability"
+  ],
+  "interpretations": [
+    "arousal-linked behavioural variability is mediated by attentional engagement, sensory processing, and decision-process variability rather than motor output"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "pupil-linked arousal",
+    "centro-parietal positivity",
+    "perceptual decision-making",
+    "tonic versus phasic arousal",
+    "evidence accumulation",
+    "target selection N2c N2i",
+    "EEG decision signatures",
+    "reaction time variability"
+  ],
+  "out_of_scope_note": null
+}

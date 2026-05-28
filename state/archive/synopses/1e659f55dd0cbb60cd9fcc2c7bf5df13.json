@@ -1,0 +1,52 @@
+{
+  "canonical_id": "1e659f55dd0cbb60cd9fcc2c7bf5df13",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "decoded neural reinforcement",
+      "role": "primary_lens",
+      "one_line": "real-time fMRI multivoxel decoding paired with reward to retrain target representations"
+    },
+    {
+      "name": "implicit/unconscious learning",
+      "role": "context",
+      "one_line": "treatment effect produced without conscious access to the targeted representation"
+    }
+  ],
+  "core_question": "Can modern neural-decoding methods manipulate unconscious representations to treat fear and related physiological survival processes without engaging conscious awareness?",
+  "key_assumptions": [
+    "unconscious neural representations can be targeted independently of conscious processing",
+    "reinforcing decoded neural states changes the underlying representation",
+    "fear and other survival circuits share features amenable to the same approach"
+  ],
+  "manipulations": [
+    "whether the targeted representation is made consciously accessible or not",
+    "use of decoded neural-reinforcement vs conventional exposure-based treatment"
+  ],
+  "key_findings": [
+    "cognitive neuroscience methods including Decoded Neural-Reinforcement can manipulate implicit processes without engaging consciousness",
+    "this approach supports double-blind placebo-controlled designs in psychological treatment",
+    "the approach can reduce premature patient dropout in fear treatment"
+  ],
+  "interpretations": [
+    "targeting unconscious representations sidesteps avoidance and dropout that limit exposure-based therapies",
+    "the framework may generalize from fear to other physiological survival processes"
+  ],
+  "limitations_noted": [
+    "generalization beyond fear to other survival processes remains speculative"
+  ],
+  "connecting_signals": [
+    "decoded neural reinforcement",
+    "unconscious representations",
+    "fear treatment",
+    "physiological survival circuits",
+    "implicit processing",
+    "real-time fMRI neurofeedback",
+    "double-blind placebo control"
+  ],
+  "out_of_scope_note": null
+}

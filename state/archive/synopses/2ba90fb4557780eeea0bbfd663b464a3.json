@@ -1,0 +1,58 @@
+{
+  "canonical_id": "2ba90fb4557780eeea0bbfd663b464a3",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "motion energy model",
+      "role": "primary_lens",
+      "one_line": "Directional motion-energy filtering as the front-end summary of dot motion."
+    },
+    {
+      "name": "statistical moment representation",
+      "role": "compared_against",
+      "one_line": "Tests whether vision encodes mean, variance, skewness, kurtosis of motion distributions."
+    },
+    {
+      "name": "ensemble / summary statistics perception",
+      "role": "context",
+      "one_line": "Prior claim that higher-order moments shape static texture and surface perception."
+    }
+  ],
+  "core_question": "Does the visual system represent higher-order statistical moments (skewness, kurtosis) of dynamic random-dot motion distributions, or only low-order moments?",
+  "key_assumptions": [
+    "Random-dot kinematograms can independently manipulate moments of the dot-direction distribution.",
+    "Motion-energy filtering provides a sufficient front-end account of coherent motion percepts.",
+    "Discrimination behavior reflects the moments actually encoded by early motion processing."
+  ],
+  "manipulations": [
+    "Mean direction of the dot-direction distribution.",
+    "Variance of individual dot displacement angles.",
+    "Skewness of the dot-direction distribution.",
+    "Kurtosis of the dot-direction distribution."
+  ],
+  "key_findings": [
+    "Observers discriminated changes in mean direction of coherent motion.",
+    "Observers were sensitive to variance of dot displacement angles.",
+    "Observers were insensitive to skewness of the motion distribution.",
+    "Observers were insensitive to kurtosis of the motion distribution."
+  ],
+  "interpretations": [
+    "Behavior is consistent with a directional motion-energy model that discards higher-order moments early in the visual hierarchy.",
+    "Use of higher-order distributional moments is not a general property of visual perception across static and dynamic stimuli."
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "random dot kinematograms",
+    "higher-order statistical moments",
+    "skewness and kurtosis",
+    "motion energy model",
+    "coherent motion perception",
+    "ensemble statistics",
+    "variance of motion direction"
+  ],
+  "out_of_scope_note": null
+}

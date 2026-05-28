@@ -1,0 +1,62 @@
+{
+  "canonical_id": "2e82e6deda2e8236ec5634c1605aa0bd",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "decoded neurofeedback (DecNef)",
+      "role": "primary_lens",
+      "one_line": "reward-pair decoded fMRI representations of feared animals without conscious exposure"
+    },
+    {
+      "name": "hyperalignment",
+      "role": "extended",
+      "one_line": "infer target representations from surrogate participants to bypass conscious encounter"
+    },
+    {
+      "name": "associative reinforcement learning",
+      "role": "context",
+      "one_line": "monetary reward paired with covert neural states to reprogram fear responses"
+    },
+    {
+      "name": "exposure-based fear extinction",
+      "role": "compared_against",
+      "one_line": "conventional conscious exposure therapy, here bypassed to reduce aversion-driven dropout"
+    }
+  ],
+  "core_question": "Can physiological fear responses to naturally feared animals be reduced by pairing reward with unconscious occurrences of their decoded neural representations?",
+  "key_assumptions": [
+    "fMRI multivariate patterns can index category-specific fear representations",
+    "hyperalignment transfers representational geometry across participants",
+    "unconscious reinforcement of a neural state can alter the downstream physiological response it indexes"
+  ],
+  "manipulations": [
+    "pairing of monetary reward with decoded feared-animal representations vs control",
+    "use of surrogate-derived (hyperaligned) decoder rather than participant's own conscious exposure",
+    "double-blind, placebo-controlled assignment"
+  ],
+  "key_findings": [
+    "reliable reductions in skin conductance responses to feared animals",
+    "reductions in amygdala hemodynamic activity to feared animals",
+    "effects obtained without conscious encounter with the feared category"
+  ],
+  "interpretations": [
+    "naturally occurring fear responses can be reprogrammed outside conscious awareness",
+    "enables rigorous double-blind, placebo-controlled testing of a psychological intervention"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "decoded neurofeedback",
+    "unconscious reinforcement",
+    "fear extinction",
+    "hyperalignment",
+    "fMRI multivariate decoding",
+    "amygdala response",
+    "skin conductance",
+    "exposure therapy alternative"
+  ],
+  "out_of_scope_note": null
+}

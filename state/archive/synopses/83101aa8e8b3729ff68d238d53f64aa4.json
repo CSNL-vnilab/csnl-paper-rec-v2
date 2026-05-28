@@ -1,0 +1,54 @@
+{
+  "canonical_id": "83101aa8e8b3729ff68d238d53f64aa4",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "evidence accumulation",
+      "role": "primary_lens",
+      "one_line": "gradual integration of sensory evidence toward a decision bound"
+    },
+    {
+      "name": "circuit causal-contribution framework",
+      "role": "extended",
+      "one_line": "regions must causally influence behavior, encode graded evidence, and contribute throughout accumulation"
+    }
+  ],
+  "core_question": "Which brain region directly implements gradual evidence accumulation during perceptual decision-making?",
+  "key_assumptions": [
+    "an accumulator region must causally affect choice behavior",
+    "an accumulator region should show graded neural encoding of accumulated evidence",
+    "such a region must contribute throughout the accumulation epoch, not only at onset or end"
+  ],
+  "manipulations": [
+    "rodent auditory evidence accumulation task",
+    "pharmacological inactivation of anterior dorsal striatum (ADS)",
+    "optogenetic perturbation timed within the accumulation epoch",
+    "electrophysiological recording during accumulation"
+  ],
+  "key_findings": [
+    "ADS perturbation alters accumulation-based choice behavior",
+    "ADS neurons show graded encoding of accumulated evidence",
+    "ADS contributes throughout the accumulation process, not just at one phase",
+    "previously implicated cortical regions (PPC, frontal orienting fields) appear not to be directly involved"
+  ],
+  "interpretations": [
+    "ADS is the first identified brain region to satisfy all three criteria for direct involvement in evidence accumulation",
+    "ADS may be a primary node in the network responsible for accumulation"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "anterior dorsal striatum",
+    "evidence accumulation",
+    "perceptual decision-making",
+    "optogenetic inactivation",
+    "graded neural encoding",
+    "rodent auditory task",
+    "posterior parietal cortex",
+    "frontal orienting fields"
+  ],
+  "out_of_scope_note": null
+}

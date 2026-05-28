@@ -1,0 +1,57 @@
+{
+  "canonical_id": "5af4b6554c899a92c9756efed564fc75",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:30:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "signal-detection theory",
+      "role": "primary_lens",
+      "one_line": "criterion and sensitivity formalize liberal vs conservative peripheral detection"
+    },
+    {
+      "name": "subjective inflation",
+      "role": "context",
+      "one_line": "observers overestimate perceptual content in unattended periphery"
+    },
+    {
+      "name": "higher-order theory",
+      "role": "context",
+      "one_line": "motivates why peripheral percepts may feel richer than they are"
+    }
+  ],
+  "core_question": "Do observers use liberal detection criteria for peripheral items in a naturalistic driving environment as they do in artificial tasks?",
+  "key_assumptions": [
+    "criterion and sensitivity are separable via SDT",
+    "naturalistic driving task preserves peripheral attention demands",
+    "false alarms index criterion shifts rather than sensitivity loss"
+  ],
+  "manipulations": [
+    "fixed vs trial-varying target color for peripheral detection",
+    "naturalistic vs artificial stimulus environment (driving game vs lab task)",
+    "peripheral location of pedestrian clothing attribute"
+  ],
+  "key_findings": [
+    "fixed-color peripheral detection yielded liberal criteria and high false alarms, replicating prior lab findings",
+    "trial-varying target color shifted observers to conservative criteria with few false alarms but more misses",
+    "criterion shifts were quantitatively captured by a detection-theoretic model"
+  ],
+  "interpretations": [
+    "task demands interact with the criterion observers adopt for peripheral judgments",
+    "liberal peripheral detection generalizes from artificial to naturalistic settings only when target identity is predictable"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "subjective inflation",
+    "unattended periphery",
+    "liberal detection criterion",
+    "false alarms",
+    "naturalistic perception",
+    "signal-detection theory",
+    "peripheral vision",
+    "task demands"
+  ],
+  "out_of_scope_note": null
+}

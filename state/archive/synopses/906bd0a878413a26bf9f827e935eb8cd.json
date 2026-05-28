@@ -1,0 +1,58 @@
+{
+  "canonical_id": "906bd0a878413a26bf9f827e935eb8cd",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "dynamic logistic regression (time-varying psychophysical GLM)",
+      "role": "primary_lens",
+      "one_line": "Trial-by-trial weights on stimulus and task-history covariates that drift smoothly across training."
+    },
+    {
+      "name": "signal-detection / psychophysical observer",
+      "role": "extended",
+      "one_line": "Static psychometric weights are extended to time-varying weights tracking learning."
+    },
+    {
+      "name": "Laplace approximation / empirical Bayes",
+      "role": "context",
+      "one_line": "Decoupled Laplace approximation maximizes marginal likelihood over evolution-rate hyperparameters."
+    }
+  ],
+  "core_question": "How can we efficiently infer trial-to-trial changes in an animal's psychophysical policy as it learns a sensory discrimination task?",
+  "key_assumptions": [
+    "Behavior is captured by a logistic mapping from stimulus and task-history covariates to choice.",
+    "Each weight evolves smoothly over trials with its own evolution rate.",
+    "Marginal-likelihood hyperparameter optimization is tractable via decoupled Laplace approximation."
+  ],
+  "manipulations": [
+    "Time horizon: trial-to-trial vs day-to-day weight dynamics.",
+    "Covariate set: sensory stimulus plus task-irrelevant history (stimulus, choice, answer).",
+    "Species: rats vs human subjects on a delayed sensory discrimination task."
+  ],
+  "key_findings": [
+    "Method scales to ~500K parameters (10 weights × 50K trials) in minutes on a desktop.",
+    "Recovers day-to-day and trial-to-trial fluctuations in rat psychophysical weights during training.",
+    "Tracks evolving choice bias and task-history dependencies underlying performance changes.",
+    "Lapses on easy trials are explained by sub-optimal weighting of known task covariates rather than random inattention."
+  ],
+  "interpretations": [
+    "Time-varying GLMs give finer insight into learning than fixed psychometric fits or coarse accuracy summaries.",
+    "Apparent lapse rates partly reflect mis-weighted covariates, not irreducible noise."
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "time-varying psychophysical weights",
+    "dynamic logistic regression",
+    "trial-by-trial learning dynamics",
+    "decoupled Laplace approximation",
+    "marginal likelihood hyperparameter optimization",
+    "choice and answer history covariates",
+    "lapse rate decomposition",
+    "rat sensory discrimination training"
+  ],
+  "out_of_scope_note": null
+}
