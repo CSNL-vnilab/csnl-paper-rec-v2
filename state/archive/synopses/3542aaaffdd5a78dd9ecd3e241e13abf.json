@@ -1,0 +1,58 @@
+{
+  "canonical_id": "3542aaaffdd5a78dd9ecd3e241e13abf",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "resource-rational choice",
+      "role": "primary_lens",
+      "one_line": "choice optimizes precision-cost vs benefit trade-off rather than logical consistency"
+    },
+    {
+      "name": "bounded rationality",
+      "role": "extended",
+      "one_line": "extends bounded rationality with explicit cost-benefit optimization of precision"
+    },
+    {
+      "name": "rational analysis",
+      "role": "alternative_lens",
+      "one_line": "evaluates whether observed irrationalities are adaptive under constraints"
+    }
+  ],
+  "core_question": "Are the apparent irrationalities of human choice an inefficient patchwork, or an optimal solution to a precision-cost trade-off?",
+  "key_assumptions": [
+    "increasing choice-mechanism precision incurs a cost",
+    "marginal benefits of precision decline with increasing precision",
+    "biological choosers face a precision-cost vs benefit trade-off",
+    "observed choice behavior reflects an optimization, not a malfunction"
+  ],
+  "manipulations": [
+    "interdisciplinary synthesis review — no experimental manipulation"
+  ],
+  "key_findings": [
+    "logically inconsistent choices are consistent across disciplines and decades",
+    "many puzzling inconsistencies fit a single precision-cost optimization account",
+    "a rationally imprecise strategy emerges under cost-benefit constraints"
+  ],
+  "interpretations": [
+    "human choice is efficiently irrational — optimal for efficiency, not rationality",
+    "inconsistencies are adaptive consequences of biological optimization, not failures"
+  ],
+  "limitations_noted": [
+    "synthesis-level argument rather than a new empirical test"
+  ],
+  "connecting_signals": [
+    "efficiently irrational",
+    "precision-cost trade-off",
+    "rationally imprecise strategy",
+    "bounded rationality",
+    "resource-rational choice",
+    "choice inconsistencies",
+    "optimal efficiency vs optimal rationality",
+    "biological choosers"
+  ],
+  "out_of_scope_note": null
+}

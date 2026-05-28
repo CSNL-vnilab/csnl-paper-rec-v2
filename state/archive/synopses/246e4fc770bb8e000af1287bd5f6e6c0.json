@@ -1,0 +1,17 @@
+{
+  "canonical_id": "246e4fc770bb8e000af1287bd5f6e6c0",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.0,
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "Pure multi-agent reinforcement learning / AI mechanism design paper. Constructs an outer-loop 'mechanism' agent that shepherds adaptive learning co-players (artificial agents and humans) toward institution-favorable outcomes. No neural recordings, no computational model of brain function, no perceptual/decision-making/encoding claim — economics/AI institutional-design content only. Out of lab scope per synopsis_prompt rules (social science / public-goods / collective-intelligence without neural data; pure-ML without biological neural content)."
+}

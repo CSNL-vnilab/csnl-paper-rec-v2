@@ -1,0 +1,51 @@
+{
+  "canonical_id": "49d7b8a897c234af66f1823cb4a6366a",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:30:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "higher-order theory of consciousness",
+      "role": "primary_lens",
+      "one_line": "subjective experience treated as a measurable cognitive-neuroscience target in psychopathology"
+    },
+    {
+      "name": "computational psychiatry",
+      "role": "context",
+      "one_line": "framing of mental disorders as quantifiable disturbances of mental processes"
+    },
+    {
+      "name": "behaviorist symptom-marker model",
+      "role": "compared_against",
+      "one_line": "treats objective behavioral/physiological responses as primary marker, sidelining subjective report"
+    }
+  ],
+  "core_question": "Should the subjective experience of fear and anxiety, rather than objective behavioral and physiological responses, be the primary target in defining and treating mental disorders?",
+  "key_assumptions": [
+    "subjective conscious experience is a distinct symptom dimension separable from behavioral/physiological response",
+    "mental disorders are defined by, and named for, their subjective mental qualities",
+    "cognitive neuroscience of consciousness has matured into a scientifically tractable approach"
+  ],
+  "manipulations": [],
+  "key_findings": [
+    "behavioral and physiological symptoms of anxiety correlate weakly with subjective experience, contrary to common assumption",
+    "treatments developed using objective symptoms as marker of psychopathology have largely shown disappointing effectiveness"
+  ],
+  "interpretations": [
+    "sidelining mental qualities has plausibly contributed to limited efficacy of current anxiety-disorder treatments",
+    "consciousness-focused cognitive neuroscience offers a viable novel approach to understanding and treating mental disorders"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "subjective experience of fear",
+    "anxiety disorders",
+    "consciousness in psychiatry",
+    "behavioral-subjective dissociation",
+    "treatment outcome in anxiety",
+    "higher-order awareness",
+    "computational psychiatry"
+  ],
+  "out_of_scope_note": null
+}

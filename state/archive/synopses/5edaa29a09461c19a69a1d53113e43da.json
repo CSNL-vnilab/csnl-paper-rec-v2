@@ -1,0 +1,17 @@
+{
+  "canonical_id": "5edaa29a09461c19a69a1d53113e43da",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.0,
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "Figshare dataset deposit (HDF5 file with behavioral trial arrays from the accumulating-towers task with optogenetic inactivation across 9 cortical regions and 6 trial epochs). The supplied abstract is purely a data-dictionary listing of array field names (choice, cueOnset_L/R, laserEpoch, loclbl, viewAngle_byYpos, etc.) with no research question, manipulations beyond field labels, findings, interpretations, or theoretical framework. Although the underlying experimental paradigm (mouse evidence accumulation with cortical optogenetic inactivation) is in-scope for the lab, the deposit itself carries no synopsis-grounding narrative content and would surface as a non-readable item in a recommendation queue. The referenced primary paper, if separately indexed, should be synopsized instead."
+}
