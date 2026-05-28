@@ -1,0 +1,46 @@
+{
+  "canonical_id": "173af1c419ffe07239a2368be87c36fb",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "synopsis": {
+    "frameworks": [
+      {"name": "hippocampal place coding", "role": "primary_lens", "one_line": "single hippocampal neurons fire selectively as a function of spatial location"},
+      {"name": "context representation", "role": "extended", "one_line": "spatial firing patterns interpreted as encoding the behavioral/environmental context"},
+      {"name": "remapping", "role": "extended", "one_line": "place-field reorganization across environmental or behavioral changes"}
+    ],
+    "core_question": "How did the concepts of context coding and remapping in hippocampal place cells originate from cross-chamber single-unit recordings?",
+    "key_assumptions": [
+      "single hippocampal neurons carry spatial information",
+      "behavior across distinct chambers can be compared at the single-neuron level",
+      "firing-pattern differences across chambers reflect a representational variable rather than noise"
+    ],
+    "manipulations": [
+      "behavioral task (radial-arm pellet retrieval vs. operant bar-pressing vs. maternal pup-retrieval)",
+      "recording chamber (radial-arm maze vs. operant chamber vs. large home box)",
+      "later systematic environmental/behavioral changes within the Muller collaboration"
+    ],
+    "key_findings": [
+      "spatial firing was observed in all three behavioral chambers",
+      "a single neuron's firing pattern in one chamber did not predict its pattern in another"
+    ],
+    "interpretations": [
+      "cross-chamber unpredictability of spatial firing reflects a neural representation of context",
+      "systematic exploration of these effects became the empirical basis for what is now called remapping"
+    ],
+    "limitations_noted": [],
+    "connecting_signals": [
+      "hippocampal place cells",
+      "remapping",
+      "context coding",
+      "spatial firing",
+      "cross-environment recording",
+      "Brooklyn / Ranck / Muller lineage",
+      "radial-arm maze",
+      "single-unit recording"
+    ],
+    "out_of_scope_note": null
+  }
+}

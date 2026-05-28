@@ -1,0 +1,17 @@
+{
+  "canonical_id": "0f45a87b992093f83f6327e77e53dc84",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.0,
+  "out_of_scope_note": "Researcher interview teaser about miniaturised soft ionic power source for bio-integrated devices; materials/devices, not computational neuroscience.",
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": []
+}

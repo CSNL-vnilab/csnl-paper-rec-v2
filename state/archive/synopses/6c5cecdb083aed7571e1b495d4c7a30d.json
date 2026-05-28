@@ -1,0 +1,19 @@
+{
+  "canonical_id": "6c5cecdb083aed7571e1b495d4c7a30d",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T19:09:15+0900",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.0,
+  "synopsis": {
+    "frameworks": [],
+    "core_question": null,
+    "key_assumptions": [],
+    "manipulations": [],
+    "key_findings": [],
+    "interpretations": [],
+    "limitations_noted": [],
+    "connecting_signals": [],
+    "out_of_scope_note": "NLP / LLM finetuning for emotion-change reasoning in Chinese multi-turn dialogue (QLoRA); not computational/systems neuroscience."
+  }
+}

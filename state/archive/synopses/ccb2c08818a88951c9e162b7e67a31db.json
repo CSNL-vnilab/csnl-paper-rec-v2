@@ -1,0 +1,47 @@
+{
+  "canonical_id": "ccb2c08818a88951c9e162b7e67a31db",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "synopsis": {
+    "frameworks": [
+      {"name": "deep learning preprocessing pipeline", "role": "primary_lens", "one_line": "deep-learning modules replace classical steps of neuroimaging preprocessing."},
+      {"name": "workflow manager orchestration", "role": "extended", "one_line": "workflow manager scales pipeline execution across large neuroimaging cohorts."},
+      {"name": "state-of-the-art classical MRI pipeline", "role": "compared_against", "one_line": "benchmark pipeline against which DeepPrep's speed and robustness are measured."}
+    ],
+    "core_question": "Can a deep-learning-empowered pipeline preprocess large-scale structural and functional MRI data with markedly higher speed, scalability, and robustness than the current state of the art?",
+    "key_assumptions": [
+      "deep-learning modules can substitute classical steps (skull-stripping, registration, normalization, BOLD denoising)",
+      "a workflow manager is necessary to scale across tens of thousands of scans",
+      "multi-site and clinical cohorts are valid stress tests of robustness"
+    ],
+    "manipulations": [
+      "pipeline choice (DeepPrep vs state-of-the-art baseline)",
+      "data scale (evaluated across >55,000 scans)",
+      "cohort type (healthy volunteers, multi-site replications, clinical datasets)"
+    ],
+    "key_findings": [
+      "DeepPrep achieves roughly tenfold acceleration relative to the state-of-the-art pipeline",
+      "DeepPrep scales to >55,000 scans without loss of throughput",
+      "DeepPrep remains robust across healthy, multi-site, and clinical cohorts"
+    ],
+    "interpretations": [
+      "deep-learning-empowered preprocessing meets the scalability demands of big-data neuroimaging",
+      "deep-learning modules can replace classical steps for structural and functional MRI preprocessing"
+    ],
+    "limitations_noted": [],
+    "connecting_signals": [
+      "neuroimaging preprocessing pipeline",
+      "structural and functional MRI",
+      "skull-stripping",
+      "image registration",
+      "spatial normalization",
+      "BOLD denoising",
+      "deep learning for MRI",
+      "large-scale neuroimaging"
+    ],
+    "out_of_scope_note": null
+  }
+}

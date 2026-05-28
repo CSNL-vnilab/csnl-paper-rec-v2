@@ -1,0 +1,38 @@
+{
+  "canonical_id": "33e1f04768e0d05318e8890f95a267bb",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "neural decoding", "role": "primary_lens", "one_line": "reading out distributed neural representations to interpret encoded information"},
+    {"name": "mechanistic readout models", "role": "extended", "one_line": "models of how downstream regions actually read upstream representations"},
+    {"name": "encoding-decoding framework", "role": "context", "one_line": "brain as series of encode-decode computations supporting adaptive behavior"}
+  ],
+  "core_question": "How should neural decoding analyses be combined with mechanistic models of downstream readout to explain adaptive behavior?",
+  "key_assumptions": [
+    "neurons act in concert to produce perception, cognition, and behavior",
+    "brain areas are specialized to varying extents",
+    "distributed circuits continuously encode environmental and body-state features",
+    "downstream areas decode these representations for decisions and movement"
+  ],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [
+    "decoding analyses alone are insufficient and must be complemented with mechanistic readout models",
+    "the distributed brain can be conceptualized as serial encode-decode computations for adaptive behavior"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "neural decoding",
+    "mechanistic readout models",
+    "distributed neural representations",
+    "encoding and decoding",
+    "downstream readout",
+    "population coding",
+    "perception cognition and behavior",
+    "specialized brain areas"
+  ],
+  "out_of_scope_note": null
+}
