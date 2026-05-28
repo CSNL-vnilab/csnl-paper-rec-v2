@@ -1,0 +1,44 @@
+{
+  "canonical_id": "1a1628bc5f557dd180054ba07dedcac1",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "synopsis": {
+    "frameworks": [
+      {"name": "reference repulsion", "role": "primary_lens", "one_line": "perceptual bias where a reference skews perception of a similar feature"},
+      {"name": "late visual processing / decision stage", "role": "extended", "one_line": "locating the repulsion at a post-encoding comparison or decision stage"},
+      {"name": "early sensory encoding", "role": "compared_against", "one_line": "alternative account that places the bias at initial encoding"}
+    ],
+    "core_question": "At what stage of visual processing does an orientation reference induce repulsion of a previously seen oriented stimulus?",
+    "key_assumptions": [
+      "reference and stimulus share a comparable feature dimension (orientation)",
+      "the temporal interval between stimulus and reference indexes the processing stage involved",
+      "biases at later stages should grow with stimulus-reference delay"
+    ],
+    "manipulations": [
+      "temporal interval between oriented stimulus and subsequent reference",
+      "presence and orientation of the reference relative to the stimulus"
+    ],
+    "key_findings": [
+      "a reference presented after an oriented stimulus produces repulsion in reported orientation",
+      "repulsion magnitude increases with the stimulus-to-reference temporal interval"
+    ],
+    "interpretations": [
+      "the reference biases representations at a late processing stage, not at initial encoding",
+      "the effect likely arises from a comparison or decision stage of visual processing"
+    ],
+    "limitations_noted": [],
+    "connecting_signals": [
+      "reference repulsion",
+      "orientation perception",
+      "post-stimulus reference",
+      "late visual processing",
+      "decision stage bias",
+      "perceptual comparison",
+      "contextual bias in vision"
+    ],
+    "out_of_scope_note": null
+  }
+}

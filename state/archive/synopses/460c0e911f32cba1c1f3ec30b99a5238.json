@@ -1,0 +1,45 @@
+{
+  "canonical_id": "460c0e911f32cba1c1f3ec30b99a5238",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:30:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "synopsis": {
+    "frameworks": [
+      {"name": "public goods game", "role": "primary_lens", "one_line": "virtual-world economic game embedding a collective intelligence task"},
+      {"name": "collective intelligence", "role": "primary_lens", "one_line": "information aggregation across many contributors for group decisions"},
+      {"name": "collective action / free-rider problem", "role": "context", "one_line": "costly contribution dilemma where non-contributors benefit from others' input"}
+    ],
+    "core_question": "Does incentivizing free riders to participate improve collective intelligence relative to relying only on intrinsically motivated contributors?",
+    "key_assumptions": [
+      "individual contributions to collective intelligence tasks are costly",
+      "intrinsic motivation alone produces a selectively biased contributor pool",
+      "information aggregation accuracy depends on contributor diversity and pool size"
+    ],
+    "manipulations": [
+      "incentive scheme: incentivize all participants vs. rely only on intrinsically motivated contributors",
+      "embedding of a collective intelligence task within a large-scale virtual-world public goods game"
+    ],
+    "key_findings": [
+      "incentivizing all participants (including free riders) increased information aggregation accuracy",
+      "selective participation by intrinsically motivated agents alone yielded lower collective accuracy"
+    ],
+    "interpretations": [
+      "selective participation reduces collective intelligence by shrinking the contributor pool and its information diversity",
+      "intrinsically motivated agents are not necessarily the best participants in collective decisions"
+    ],
+    "limitations_noted": [],
+    "connecting_signals": [
+      "collective intelligence",
+      "social dilemma",
+      "public goods game",
+      "free riders",
+      "information aggregation",
+      "incentives",
+      "contributor diversity",
+      "voting and rating"
+    ],
+    "out_of_scope_note": null
+  }
+}

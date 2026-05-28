@@ -1,0 +1,43 @@
+{
+  "canonical_id": "72a4a78bdc9a554f94b4289c7085440e",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "fMRI repetition suppression", "role": "primary_lens", "one_line": "Repetition-suppression contrasts index neural sensitivity to transsaccadic feature changes."},
+    {"name": "transsaccadic perception", "role": "context", "one_line": "Continuity of object identity, orientation, and location across saccades."},
+    {"name": "dorsal/ventral functional specialization", "role": "alternative_lens", "one_line": "Occipital vs parietal cortex divide labour for intrinsic vs extrinsic object properties."}
+  ],
+  "core_question": "Do occipital and parietal cortex jointly support transsaccadic discrimination of object shape and orientation?",
+  "key_assumptions": [
+    "Repetition suppression indexes neural sensitivity to feature change",
+    "Shape and orientation are dissociable object properties",
+    "Saccades require active neural mechanisms to maintain perceptual continuity"
+  ],
+  "manipulations": [
+    "Object shape changes across saccades",
+    "Object orientation changes across saccades"
+  ],
+  "key_findings": [
+    "Cuneus and supramarginal gyrus form a cortical network engaged in transsaccadic discrimination",
+    "Cuneus is more sensitive to shape changes across the saccade",
+    "Supramarginal gyrus is more sensitive to orientation changes across the saccade"
+  ],
+  "interpretations": [
+    "Occipital and parietal cortex play complementary roles in transsaccadic perception of intrinsic versus extrinsic spatial properties"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "transsaccadic perception",
+    "fMRI repetition suppression",
+    "cuneus",
+    "supramarginal gyrus",
+    "object orientation",
+    "object shape",
+    "saccade",
+    "cortical network"
+  ],
+  "out_of_scope_note": null
+}
