@@ -1,0 +1,42 @@
+{
+  "canonical_id": "075277774d8deca8c1ab40f40e973012",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:30:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "incidental memory encoding", "role": "primary_lens", "one_line": "fixations on distractors as a potential implicit memory substrate for later search"},
+    {"name": "attentional priority / task relevance", "role": "alternative_lens", "one_line": "encoding depends on whether the item was task-relevant at fixation"}
+  ],
+  "core_question": "Do prior fixations on a distractor accelerate subsequent search when that distractor later becomes the target?",
+  "key_assumptions": [
+    "fixations index covert/overt attentional sampling of items",
+    "useful memory representations should speed subsequent visual search",
+    "the same 72-item set is used across trials"
+  ],
+  "manipulations": [
+    "whether the now-target item was previously fixated as a distractor vs never fixated",
+    "role reassignment of items from distractor to target across trials"
+  ],
+  "key_findings": [
+    "previous fixations on a now-target item did not improve subsequent search time",
+    "searching for different targets in the same set did not facilitate search for other items (prior study replicated as premise)"
+  ],
+  "interpretations": [
+    "incidental exposure during distractor fixations does not build a usable memory representation",
+    "task relevance at the time of fixation gates whether exposure yields search-useful memory"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "visual search",
+    "incidental encoding",
+    "distractor fixations",
+    "contextual cueing",
+    "implicit memory",
+    "task relevance",
+    "repeated exposure",
+    "eye movements"
+  ],
+  "out_of_scope_note": null
+}

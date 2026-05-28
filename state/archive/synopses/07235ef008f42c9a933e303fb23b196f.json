@@ -1,0 +1,46 @@
+{
+  "canonical_id": "07235ef008f42c9a933e303fb23b196f",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:30:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "stochastic resonance", "role": "primary_lens", "one_line": "added electrical noise improves weak-signal detection in sensorimotor cortex"},
+    {"name": "neuronal threshold modulation", "role": "alternative_lens", "one_line": "tRNS shifts firing threshold to change cortical excitability"},
+    {"name": "oscillation entrainment", "role": "alternative_lens", "one_line": "noise-driven engagement of endogenous cortical rhythms"}
+  ],
+  "core_question": "How does transcranial random noise stimulation modulate sensory and motor cortical circuits, from cellular mechanisms up to behavior?",
+  "key_assumptions": [
+    "noise at cellular and systems levels affects neural signal processing",
+    "exogenous electrical noise can be delivered non-invasively via transcranial stimulation",
+    "tRNS differs mechanistically from tDCS"
+  ],
+  "manipulations": [
+    "addition of transcranial electrical noise to cortical circuits",
+    "application across sensory versus motor circuits",
+    "healthy versus neurologic-patient populations"
+  ],
+  "key_findings": [
+    "tRNS produces measurable cellular and behavioral effects across sensory and motor circuits",
+    "tRNS can enhance function in both healthy individuals and neurologic patients",
+    "candidate mechanisms include stochastic resonance, threshold modulation, and oscillation entrainment"
+  ],
+  "interpretations": [
+    "tRNS is a promising but still poorly understood neuromodulation technique",
+    "behavioral enhancement can be explained by noise-based amplification of subthreshold signals"
+  ],
+  "limitations_noted": [
+    "tRNS mechanisms are less well characterized than tDCS"
+  ],
+  "connecting_signals": [
+    "transcranial random noise stimulation",
+    "stochastic resonance",
+    "neuronal threshold modulation",
+    "oscillation entrainment",
+    "cortical excitability",
+    "sensory and motor circuits",
+    "non-invasive brain stimulation"
+  ],
+  "out_of_scope_note": null
+}
