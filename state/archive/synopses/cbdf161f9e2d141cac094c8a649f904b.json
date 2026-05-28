@@ -1,0 +1,45 @@
+{
+  "canonical_id": "cbdf161f9e2d141cac094c8a649f904b",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:30:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "default-mode network / self-projection", "role": "primary_lens", "one_line": "narrative engages self-projection and theory-of-mind circuits in DMN"},
+    {"name": "inter-subject neural synchronization", "role": "extended", "one_line": "shared neural responses across listeners index narrative impact and propagation"},
+    {"name": "reward-based valuation", "role": "context", "one_line": "reward circuits assign emotional valence to narrative content"}
+  ],
+  "core_question": "How do narratives shape perception, cognition, emotion, and decision-making in the human brain, and how does individual processing relate to cultural propagation?",
+  "key_assumptions": [
+    "narratives recruit a distributed network rather than a single language module",
+    "inter-subject synchronization indexes shared cognitive processing of narrative content",
+    "neural signatures of individual processing can predict population-level spread"
+  ],
+  "manipulations": [
+    "stimulus type across narrative formats (stories, audiobooks, films, media feeds)",
+    "between-subjects comparison via inter-subject correlation analyses"
+  ],
+  "key_findings": [
+    "narratives engage default-mode regions for self-projection and theory of mind",
+    "language areas support semantic processing of narrative content",
+    "reward circuits contribute to emotional valuation during narrative",
+    "inter-subject synchronization signatures predict cultural propagation"
+  ],
+  "interpretations": [
+    "narrative processing links a distributed brain network to downstream behavioral and cultural influence",
+    "neural synchrony across individuals is a candidate biomarker for which narratives go viral"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "narrative processing",
+    "default-mode network",
+    "theory of mind",
+    "inter-subject synchronization",
+    "neural coupling",
+    "semantic processing",
+    "reward valuation",
+    "cultural propagation"
+  ],
+  "out_of_scope_note": null
+}

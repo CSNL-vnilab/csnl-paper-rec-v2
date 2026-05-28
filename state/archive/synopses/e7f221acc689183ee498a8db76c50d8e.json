@@ -1,0 +1,42 @@
+{
+  "canonical_id": "e7f221acc689183ee498a8db76c50d8e",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "somatic doctrine of tDCS polarity", "role": "primary_lens", "one_line": "anodal increases cortical excitability while cathodal decreases it"},
+    {"name": "GABAergic/glutamatergic excitation-inhibition balance", "role": "extended", "one_line": "neurotransmitter concentrations index cortical excitability state"}
+  ],
+  "core_question": "Does anodal/cathodal tDCS over auditory cortex modulate local GABA and glutamate concentrations measured by 7T MR-spectroscopy?",
+  "key_assumptions": [
+    "MRS-measured GABA and glutamate index cortical excitation-inhibition balance",
+    "tDCS effects on neurotransmitters are detectable within and immediately after stimulation",
+    "auditory cortex behaves as a canonical sensory cortex with respect to tDCS polarity"
+  ],
+  "manipulations": [
+    "tDCS polarity over auditory cortex (anodal vs cathodal)",
+    "measurement timing (before, during, after stimulation)"
+  ],
+  "key_findings": [
+    "anodal tDCS reduced GABA in targeted auditory cortex",
+    "anodal tDCS produced no significant glutamate change",
+    "cathodal tDCS produced the opposite GABA pattern"
+  ],
+  "interpretations": [
+    "directional GABA modulation by polarity matches the somatic-doctrine prediction in sensory cortex"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "transcranial direct current stimulation",
+    "auditory cortex",
+    "7T MR-spectroscopy",
+    "GABA concentration",
+    "glutamate concentration",
+    "cortical excitability",
+    "somatic doctrine",
+    "non-invasive brain stimulation"
+  ],
+  "out_of_scope_note": null
+}

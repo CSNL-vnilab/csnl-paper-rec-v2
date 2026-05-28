@@ -1,0 +1,41 @@
+{
+  "canonical_id": "dbaa6a46fc60a9394b4a36eeafad20de",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:30:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "cortico-striatal circuit modulation", "role": "primary_lens", "one_line": "cortical GABAergic inhibition gates subcortical dopamine release in basal ganglia"}
+  ],
+  "core_question": "Does anodal tDCS over DLPFC modulate cortical GABA and striatal dopamine release in a coupled manner?",
+  "key_assumptions": [
+    "anodal tDCS facilitates DLPFC neuronal activity",
+    "DLPFC GABA measurable via 7T MR spectroscopy reflects local inhibitory tone",
+    "[11C]raclopride PET displacement indexes striatal dopamine release"
+  ],
+  "manipulations": [
+    "anodal tDCS vs baseline over DLPFC",
+    "simultaneous measurement of cortical GABA and striatal dopamine"
+  ],
+  "key_findings": [
+    "anodal tDCS reduced DLPFC GABA concentration",
+    "anodal tDCS increased striatal dopamine release",
+    "GABA reduction and dopamine increase correlated across subjects"
+  ],
+  "interpretations": [
+    "cortical GABA modulation propagates to subcortical dopamine release",
+    "tDCS effects extend beyond cortex into basal ganglia-cortical circuit"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "transcranial direct current stimulation",
+    "DLPFC GABA",
+    "striatal dopamine release",
+    "7T MR spectroscopy",
+    "[11C]raclopride PET",
+    "basal ganglia-cortical circuit",
+    "cortico-subcortical coupling"
+  ],
+  "out_of_scope_note": null
+}
