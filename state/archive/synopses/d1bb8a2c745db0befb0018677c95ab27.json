@@ -1,0 +1,17 @@
+{
+  "canonical_id": "d1bb8a2c745db0befb0018677c95ab27",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7-bypass@2026-05-28",
+  "generated_at": "2026-05-28T20:44:08+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.0,
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "Plasma chemistry: direct synthesis of nitrous oxide from N2 and O2 by plasma catalysis; non-thermal-plasma reactor engineering, not computational neuroscience."
+}

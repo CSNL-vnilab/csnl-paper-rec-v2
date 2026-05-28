@@ -1,0 +1,17 @@
+{
+  "canonical_id": "c5c3ab661991246da568d6c3b6a96675",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7-bypass@2026-05-28",
+  "generated_at": "2026-05-28T20:44:08+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.0,
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "Materials engineering: Sn-assisted low-temperature growth/crystallization of germanium thin films on flexible polyimide; semiconductor/flexible-electronics fabrication, not computational neuroscience."
+}

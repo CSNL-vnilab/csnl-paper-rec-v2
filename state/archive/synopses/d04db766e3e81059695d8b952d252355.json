@@ -1,0 +1,17 @@
+{
+  "canonical_id": "d04db766e3e81059695d8b952d252355",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7-bypass@2026-05-28",
+  "generated_at": "2026-05-28T20:44:08+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.0,
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "Enzyme engineering: improving thermostability of an (R)-selective omega-transaminase for broad substrate range; biocatalysis enzyme engineering, not computational neuroscience."
+}
