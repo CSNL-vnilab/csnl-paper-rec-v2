@@ -1,0 +1,60 @@
+{
+  "canonical_id": "1598e2fd95f5a67a0500e98dac74a706",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "feature-specific channels for visual working memory",
+      "role": "primary_lens",
+      "one_line": "early feature-selective channels maintain simple visual features and are vulnerable to same-dimension distractors"
+    },
+    {
+      "name": "awareness-gated interference",
+      "role": "extended",
+      "one_line": "conscious access is required for a distractor to bias a held orientation memory"
+    },
+    {
+      "name": "signal-detection theory",
+      "role": "context",
+      "one_line": "memory reliability quantified via noise and systematic bias in orientation reports"
+    }
+  ],
+  "core_question": "Does a task-irrelevant orientation distractor bias visual short-term memory for orientation, and does this depend on awareness and task relevance?",
+  "key_assumptions": [
+    "visual short-term memory for simple features is supported by feature-specific channels at an early processing stage",
+    "memory precision and bias can be read out from orientation report distributions",
+    "dichoptic suppression can render a stimulus unconscious while preserving sensory input"
+  ],
+  "manipulations": [
+    "presence and orientation difference of a mid-delay distractor grating",
+    "task-relevance of the distractor (to-be-ignored vs second memory target)",
+    "awareness of the distractor (visible vs dichoptically suppressed)"
+  ],
+  "key_findings": [
+    "memory for the initially presented orientation became noisier when it differed from the distractor",
+    "responses were shifted toward the distractor orientation by roughly 3 degrees",
+    "when the distractor became a second memory target, the attraction bias of the first report toward it was much reduced although reliability still dropped with orientation difference",
+    "biases caused by the distractor disappeared when it was rendered invisible via dichoptic suppression"
+  ],
+  "interpretations": [
+    "feature-specific channels supporting visual short-term memory are susceptible to interference from same-dimension inputs",
+    "the systematic bias from a distractor requires conscious perception of that distractor"
+  ],
+  "limitations_noted": [
+    "title metadata in source mismatches abstract content"
+  ],
+  "connecting_signals": [
+    "visual short-term memory",
+    "orientation memory",
+    "distractor interference",
+    "feature-specific channels",
+    "memory bias",
+    "dichoptic suppression",
+    "awareness",
+    "delayed estimation"
+  ],
+  "out_of_scope_note": null
+}

@@ -1,0 +1,58 @@
+{
+  "canonical_id": "1ce360a87784720469768926ae5156d5",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "hierarchical generative model",
+      "role": "primary_lens",
+      "one_line": "parameterized stochastic generator whose samples reproduce observed patterns"
+    },
+    {
+      "name": "variational lower bound",
+      "role": "extended",
+      "one_line": "tractable surrogate replacing intractable log-likelihood under exponential mode explosion"
+    },
+    {
+      "name": "self-supervised hierarchical learning",
+      "role": "alternative_lens",
+      "one_line": "unsupervised structure discovery via layered latent representations"
+    },
+    {
+      "name": "bottom-up / top-down cortical processing",
+      "role": "context",
+      "one_line": "recognition and generative pathways mapped onto reciprocal cortical streams"
+    }
+  ],
+  "core_question": "How can one learn the parameters of a hierarchical stochastic generative model when each pattern admits exponentially many generative explanations?",
+  "key_assumptions": [
+    "patterns arise from a parameterized stochastic generative model",
+    "each observation has exponentially many latent generation paths",
+    "direct maximization of observation probability is intractable",
+    "recognition and generation can be implemented by reciprocal pathways"
+  ],
+  "manipulations": [
+    "substitution of the intractable log-likelihood with an easily computed lower bound on observation probability"
+  ],
+  "key_findings": [
+    "an easily computed lower bound on observation probability sidesteps the combinatorial explosion of generative explanations",
+    "the resulting procedure operates as a form of hierarchical self-supervised learning"
+  ],
+  "interpretations": [
+    "the recognition/generation duality may relate to the function of bottom-up and top-down cortical processing pathways"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "hierarchical generative model",
+    "variational lower bound",
+    "stochastic generative model",
+    "self-supervised learning",
+    "bottom-up top-down cortical pathways",
+    "latent structure discovery",
+    "recognition model"
+  ],
+  "out_of_scope_note": null
+}

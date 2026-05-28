@@ -1,0 +1,17 @@
+{
+  "canonical_id": "881268c2c6019ae92d419347e19050b7",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.0,
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "Survey-methodology paper in Memory journal proposing a verbal three-factor framework (cognitive state, adequacy judgement, communicative intent) for respondents' 'Don't Know' answers. No neural recording, no computational model of the brain, no perceptual/decision-making/encoding claim — sits in social-science survey methodology territory rather than computational neuroscience. Out of scope per the social-science-without-neural-or-computational-brain-model rule."
+}

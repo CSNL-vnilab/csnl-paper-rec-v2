@@ -1,0 +1,17 @@
+{
+  "canonical_id": "ba1f1d45b24d415d3a1e33c76a44d783",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T20:28:52+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.0,
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "Mathematical-logic textbook chapter on quantified (predicate) provability logic — translations of quantified modal logic into arithmetic with box read as provability; formal logic pedagogy, not computational neuroscience."
+}
