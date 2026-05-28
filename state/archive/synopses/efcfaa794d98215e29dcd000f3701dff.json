@@ -1,0 +1,58 @@
+{
+  "canonical_id": "efcfaa794d98215e29dcd000f3701dff",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:30:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "structure learning",
+      "role": "primary_lens",
+      "one_line": "stereotypes governed by probabilistic beliefs about assignment of individuals to groups"
+    },
+    {
+      "name": "Bayesian latent cause inference",
+      "role": "extended",
+      "one_line": "flexible, hierarchical group construction over latent group assignments"
+    },
+    {
+      "name": "hierarchical clustering / nested mixture",
+      "role": "alternative_lens",
+      "one_line": "nested groups enable subgrouping as refinement of a parent group"
+    }
+  ],
+  "core_question": "Why, when, and how do stereotypes change as a function of structure learning over group assignments?",
+  "key_assumptions": [
+    "stereotypes are probabilistic beliefs about assignment of individuals to groups",
+    "groups are flexibly constructed from the distribution of traits across individuals",
+    "groups can be hierarchically nested",
+    "structure learning principles govern belief updating about group identity"
+  ],
+  "manipulations": [
+    "perceived group variability",
+    "individual typicality",
+    "cognitive load",
+    "sample size"
+  ],
+  "key_findings": [
+    "the model explains subtyping by segregating deviant individuals from a group to protect its stereotype",
+    "the model explains subgrouping by organising deviant individuals into a refinement (nested subgroup)",
+    "perceived variability, typicality, cognitive load, and sample size modulate stereotype change"
+  ],
+  "interpretations": [
+    "stereotype change is naturally accounted for by structure learning over flexible, hierarchically organised group representations"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "structure learning",
+    "stereotype change",
+    "subtyping",
+    "subgrouping",
+    "latent group assignment",
+    "hierarchical group structure",
+    "perceived group variability",
+    "individual typicality"
+  ],
+  "out_of_scope_note": null
+}

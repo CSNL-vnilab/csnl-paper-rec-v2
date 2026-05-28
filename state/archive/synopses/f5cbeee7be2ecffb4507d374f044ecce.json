@@ -1,0 +1,57 @@
+{
+  "canonical_id": "f5cbeee7be2ecffb4507d374f044ecce",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:35:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "drift-diffusion / evidence accumulation",
+      "role": "primary_lens",
+      "one_line": "Decision variable accumulates noisy evidence to a bound for choice."
+    },
+    {
+      "name": "adaptive history bias",
+      "role": "extended",
+      "one_line": "Trial-history bias adjusts to environmental correlation structure."
+    },
+    {
+      "name": "starting-point vs accumulation-bias dichotomy",
+      "role": "compared_against",
+      "one_line": "Distinguishes baseline offset from biased build-up rate of DV."
+    }
+  ],
+  "core_question": "Do adaptive history biases shape the build-up rate (not baseline) of action-selective motor cortical activity during decision formation?",
+  "key_assumptions": [
+    "Motor beta lateralization functions as a neural marker of the decision variable",
+    "History biases can be captured as linear combination of recent stimuli and choices",
+    "Build-up rate vs starting point of DV are dissociable neural signatures"
+  ],
+  "manipulations": [
+    "Correlation structure of the sensory environment varied across blocks",
+    "Trial-by-trial history bias tracked via behavioral modeling",
+    "Neural decision signature recorded via MEG"
+  ],
+  "key_findings": [
+    "Participants flexibly adapted history biases to the environmental correlation structure",
+    "Adaptive history bias selectively shaped the build-up (not baseline) of action-selective motor cortical activity",
+    "Bias effect added to the impact of the current stimulus during decision formation"
+  ],
+  "interpretations": [
+    "Build-up of action plans in human motor cortical circuits is shaped by dynamic prior expectations",
+    "Such priors arise from adaptive interaction with the environment and enter via accumulation bias"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "evidence accumulation",
+    "motor beta lateralization",
+    "stimulus history bias",
+    "perceptual decision-making",
+    "MEG decision variable",
+    "environmental correlation structure",
+    "build-up rate vs starting point",
+    "action-selective cortical activity"
+  ],
+  "out_of_scope_note": null
+}
