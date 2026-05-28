@@ -1,0 +1,44 @@
+{
+  "canonical_id": "2875dec861c4abfc6fbf8164d30843e1",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "causal generative models", "role": "primary_lens", "one_line": "human-like learners build causal models of how the world produces data"},
+    {"name": "intuitive physics and psychology", "role": "primary_lens", "one_line": "learning is grounded in early-developing core theories of objects and agents"},
+    {"name": "compositionality and learning-to-learn", "role": "primary_lens", "one_line": "structured reuse of primitives enables rapid generalization to new tasks"},
+    {"name": "deep neural networks (end-to-end)", "role": "compared_against", "one_line": "pattern-recognition systems that achieve human-level task scores without these ingredients"}
+  ],
+  "core_question": "What core ingredients beyond current deep-learning practice are needed for machines to learn and think like people?",
+  "key_assumptions": [
+    "human-like intelligence is qualitatively distinct from end-to-end pattern recognition",
+    "cognitive science offers prescriptive constraints, not just inspiration, for AI design",
+    "causal, compositional structure is central to human learning and generalization"
+  ],
+  "manipulations": [
+    "contrast human cognitive competencies against capabilities of deep networks in recognition, video games, and board games"
+  ],
+  "key_findings": [
+    "deep networks match or exceed human performance on several benchmark tasks",
+    "those systems nonetheless diverge from human intelligence in crucial ways (data efficiency, generalization, causal structure)"
+  ],
+  "interpretations": [
+    "truly human-like machines must build causal world models, ground learning in intuitive physics/psychology, and exploit compositionality plus learning-to-learn"
+  ],
+  "limitations_noted": [
+    "review-and-position piece rather than a new empirical or computational result"
+  ],
+  "connecting_signals": [
+    "human-like learning",
+    "causal models of the world",
+    "intuitive physics",
+    "intuitive psychology",
+    "compositionality",
+    "learning-to-learn",
+    "rapid generalization",
+    "cognitive science for AI"
+  ],
+  "out_of_scope_note": null
+}

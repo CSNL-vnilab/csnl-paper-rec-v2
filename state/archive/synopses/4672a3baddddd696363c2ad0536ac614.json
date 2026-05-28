@@ -1,0 +1,44 @@
+{
+  "canonical_id": "4672a3baddddd696363c2ad0536ac614",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:30:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "mixed selectivity", "role": "context", "one_line": "single neurons in higher cortex tuned to many task variables simultaneously"},
+    {"name": "demixed PCA", "role": "primary_lens", "one_line": "linear decomposition isolating components tied to one task parameter each"},
+    {"name": "standard PCA", "role": "compared_against", "one_line": "variance-maximizing baseline that mixes task dimensions together"}
+  ],
+  "core_question": "How can population activity in higher cortex be decomposed so that each latent component reflects only one task parameter while preserving variance?",
+  "key_assumptions": [
+    "task parameters (stimulus, decision, time) can be treated as separable factors",
+    "task-relevant structure is linearly recoverable from population activity",
+    "preserving variance comparable to PCA is a meaningful constraint"
+  ],
+  "manipulations": [
+    "decomposition method (dPCA vs standard PCA)",
+    "cortical area analyzed (PFC, OFC, PPC)",
+    "task parameter axes (stimulus, decision, time)"
+  ],
+  "key_findings": [
+    "dPCA separates stimulus-, decision-, and time-related components cleanly in PFC, OFC, and PPC",
+    "dPCA captures variance comparable to standard PCA while demixing parameters",
+    "standard PCA mixes task dimensions that dPCA reveals as structured"
+  ],
+  "interpretations": [
+    "mixed-selectivity population responses contain task-aligned structure recoverable by parameter-specific demixing",
+    "demixing exposes task-relevant geometry obscured by variance-only methods"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "demixed PCA",
+    "mixed selectivity",
+    "population dimensionality reduction",
+    "prefrontal cortex decision encoding",
+    "memory-guided decision task",
+    "stimulus-decision-time components",
+    "task-parameter decomposition"
+  ],
+  "out_of_scope_note": null
+}

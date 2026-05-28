@@ -1,0 +1,41 @@
+{
+  "canonical_id": "98aca7c97e8f20628bff192d99419337",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "ecological valence theory", "role": "primary_lens", "one_line": "preference for a stimulus reflects weighted affective valence of objects it evokes"},
+    {"name": "object-association account of aesthetics", "role": "extended", "one_line": "texture aesthetics extend color-preference logic via learned object associations"}
+  ],
+  "core_question": "Can the ecological valence theory developed for color preference also predict preferences for visual textures?",
+  "key_assumptions": [
+    "textures evoke associated objects/entities with affective valence",
+    "preference is predicted by a weighted average of those associations",
+    "color-preference mechanisms generalize to texture aesthetics"
+  ],
+  "manipulations": [
+    "varied 120 visual textures shown to participants",
+    "collected per-texture ecological associations and their affective valence",
+    "collected per-texture preference ratings"
+  ],
+  "key_findings": [
+    "texture preference correlated strongly with weighted average affective valence of associated objects"
+  ],
+  "interpretations": [
+    "supports an object-association-based account of texture aesthetic preference",
+    "ecological valence theory generalizes from color to texture"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "visual texture preference",
+    "ecological valence theory",
+    "color preference",
+    "aesthetic preference",
+    "object associations",
+    "affective valence",
+    "stimulus-evaluation linkage"
+  ],
+  "out_of_scope_note": null
+}

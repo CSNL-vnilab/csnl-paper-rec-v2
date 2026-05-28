@@ -1,0 +1,17 @@
+{
+  "canonical_id": "a2b7a6c6e63e2c21999163368ad89c40",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:30:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.0,
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "Book review of Plautus's Rudens (Lecturae Plautinae Sarsinates XVII conference proceedings); classics, not computational neuroscience."
+}

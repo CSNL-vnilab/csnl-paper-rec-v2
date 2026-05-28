@@ -1,0 +1,46 @@
+{
+  "canonical_id": "397c5295acc9f3be5168da8a3b9eb8af",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "attractor dynamics", "role": "primary_lens", "one_line": "Bistable recurrent E-I network with two attractor states underlying UP-DOWN transitions"},
+    {"name": "spiking network model", "role": "extended", "one_line": "Mechanistic spiking model with slow synaptic adaptation gating dwell-time distribution"},
+    {"name": "neural oscillation", "role": "compared_against", "one_line": "Periodic external-drive oscillator account argued against as origin of UP-DOWN cycling"}
+  ],
+  "core_question": "Do cortical UP-DOWN transitions arise from bistability of a recurrent excitatory-inhibitory network rather than from periodic external drive?",
+  "key_assumptions": [
+    "Cortical circuit is a recurrent excitatory-inhibitory network",
+    "Slow synaptic adaptation acts on a timescale relevant to state dwell times",
+    "Spontaneous activity can be modeled as transitions between discrete attractor states"
+  ],
+  "manipulations": [
+    "Brief external stimuli delivered to probe stimulus-locked UP-state onsets",
+    "Slow synaptic adaptation strength varied in the spiking-network model",
+    "Compared spontaneous vs stimulus-triggered transition statistics"
+  ],
+  "key_findings": [
+    "Two model attractor states match observed UP-state firing rate and DOWN-state silence",
+    "Slow synaptic adaptation gates the UP/DOWN dwell-time distribution",
+    "Brief stimuli trigger UP-state onsets with stimulus-locked timing",
+    "Ongoing spontaneous transitions appear stochastic"
+  ],
+  "interpretations": [
+    "UP-DOWN transitions reflect attractor bistability rather than a periodic oscillation",
+    "Cortical spontaneous activity is a signature of bistable network dynamics"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "UP-DOWN states",
+    "bistable network",
+    "attractor dynamics",
+    "excitatory-inhibitory recurrent network",
+    "slow synaptic adaptation",
+    "spontaneous cortical activity",
+    "dwell-time distribution",
+    "stimulus-locked state transitions"
+  ],
+  "out_of_scope_note": null
+}
