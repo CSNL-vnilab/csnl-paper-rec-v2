@@ -1,0 +1,17 @@
+{
+  "canonical_id": "c3afee302c69de9e09044fd11d1c6baf",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T20:10:07+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.0,
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "Pedagogy / medical-education essay on the role of behavioral scientists teaching in medical settings, plus a Canadian health-care system overview; no neural or computational content."
+}

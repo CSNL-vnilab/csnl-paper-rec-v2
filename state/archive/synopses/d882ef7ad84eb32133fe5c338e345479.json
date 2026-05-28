@@ -1,0 +1,17 @@
+{
+  "canonical_id": "d882ef7ad84eb32133fe5c338e345479",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.0,
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "Neurostimulation methodology / biomedical optics study: monitors oxy-Hb hemodynamic responses in rat barrel cortex during anodal tDCS using fNIRS. No perceptual or cognitive task, no behavioural readout, no computational/theoretical model of neural coding or cognition. The paper's claims concern individual variability in DC-uptake speed and stimulation customization — physiological methodology rather than a theoretical framework about brain function."
+}

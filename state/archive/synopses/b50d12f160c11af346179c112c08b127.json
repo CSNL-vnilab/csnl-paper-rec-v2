@@ -1,0 +1,53 @@
+{
+  "canonical_id": "b50d12f160c11af346179c112c08b127",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "redundant-target effect / race-model inequality",
+      "role": "primary_lens",
+      "one_line": "RT speed-up for double targets tested against bound predicted by independent parallel channels"
+    },
+    {
+      "name": "independent-processing model of identity and expression",
+      "role": "compared_against",
+      "one_line": "Bruce-Young style separability of facial identity and emotion channels"
+    }
+  ],
+  "core_question": "Does aging change how facial identity and emotional expression are integrated during face processing?",
+  "key_assumptions": [
+    "identity and expression can in principle be processed by independent parallel channels",
+    "violation of race-model inequality indexes co-active / interactive processing",
+    "redundancy-gain magnitude reflects strength of cross-dimensional integration"
+  ],
+  "manipulations": [
+    "participant age group (20-30 vs 40-50 vs 60-70)",
+    "target composition (identity-only, expression-only, redundant identity+expression, neither)"
+  ],
+  "key_findings": [
+    "all age groups faster on redundant identity+expression targets than on single-target faces",
+    "redundancy gains exceeded the bound predicted by independent processing of identity and emotion",
+    "older adults showed reliably larger redundancy gains than the young group",
+    "the integration pattern held across the full adult age range"
+  ],
+  "interpretations": [
+    "facial identity and expression are processed co-actively rather than independently",
+    "greater lifetime experience with faces enhances cross-dimensional integration in older adults"
+  ],
+  "limitations_noted": [
+    "alternative explanations for the age-related gain enlargement are acknowledged"
+  ],
+  "connecting_signals": [
+    "redundancy gain",
+    "race-model inequality",
+    "facial identity and expression integration",
+    "divided attention face task",
+    "aging and face processing",
+    "co-active processing",
+    "lifespan face perception"
+  ],
+  "out_of_scope_note": null
+}

@@ -1,0 +1,51 @@
+{
+  "canonical_id": "189498b666d546025f82ad944ff1186a",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "multivariate pattern classification",
+      "role": "primary_lens",
+      "one_line": "decode distributed CNS/ANS activity patterns into discrete emotional states"
+    },
+    {
+      "name": "theoretical models of emotion",
+      "role": "context",
+      "one_line": "discrete-emotion vs dimensional accounts whose predictions MVPA can adjudicate"
+    }
+  ],
+  "core_question": "Can multivariate pattern classification of central and autonomic nervous system activity reliably identify emotion-specific biomarkers and test predictions of competing emotion theories?",
+  "key_assumptions": [
+    "distinct emotional states leave reliable multivariate signatures in CNS/ANS activity",
+    "distributed pattern information is more diagnostic of emotion than univariate mean responses",
+    "emotion theories make discriminable predictions about pattern structure"
+  ],
+  "manipulations": [
+    "review-level contrast between univariate and multivariate analytic frames",
+    "comparison across CNS vs autonomic signal modalities as classifier inputs"
+  ],
+  "key_findings": [
+    "initial MVPA studies decode CNS and ANS activity into distinct emotional states with reliable accuracy",
+    "identifying single-marker autonomic/neural signatures of emotion remains elusive under traditional approaches"
+  ],
+  "interpretations": [
+    "MVPA offers an advantageous framework for emotion-specific biomarker discovery",
+    "pattern classification can serve as a tool for adjudicating between theoretical models of emotion"
+  ],
+  "limitations_noted": [
+    "initial studies only — generalisability of decoded patterns across contexts not yet established"
+  ],
+  "connecting_signals": [
+    "multivariate pattern classification",
+    "emotion decoding",
+    "affective neuroscience biomarkers",
+    "autonomic nervous system patterns",
+    "discrete emotion theory",
+    "MVPA",
+    "neural signatures of emotion"
+  ],
+  "out_of_scope_note": null
+}

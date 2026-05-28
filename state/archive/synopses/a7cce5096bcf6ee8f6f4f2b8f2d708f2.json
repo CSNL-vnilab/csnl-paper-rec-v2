@@ -1,0 +1,65 @@
+{
+  "canonical_id": "a7cce5096bcf6ee8f6f4f2b8f2d708f2",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T12:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "valence-arousal model",
+      "role": "primary_lens",
+      "one_line": "Two-dimensional affective space with valence and arousal axes."
+    },
+    {
+      "name": "double dissociation",
+      "role": "extended",
+      "one_line": "OFC subregions track valence while amygdala preferentially tracks arousal."
+    },
+    {
+      "name": "bipolar valence continuum",
+      "role": "compared_against",
+      "one_line": "Single bipolar negative-to-positive axis fails to fit neural data."
+    },
+    {
+      "name": "hedonic-value (distance-from-neutral) model",
+      "role": "alternative_lens",
+      "one_line": "Valence as absolute distance from neutral, supported by neural responses."
+    }
+  ],
+  "core_question": "Do orbitofrontal cortex and amygdala dissociably encode valence versus arousal, and which model of valence best fits neural activity?",
+  "key_assumptions": [
+    "emotion decomposes into valence and arousal dimensions",
+    "affective word stimuli reliably evoke valence and arousal responses",
+    "BOLD signal in OFC and amygdala can index affective dimension coding"
+  ],
+  "manipulations": [
+    "valence of affective word stimuli",
+    "arousal level of affective word stimuli",
+    "alternative valence parameterizations (bipolar vs independent vs distance-from-neutral)"
+  ],
+  "key_findings": [
+    "OFC subregions correlate with valence whereas amygdala preferentially correlates with arousal",
+    "neural data support independent positive/negative axes for valence",
+    "neural data support absolute distance from neutral as a valence descriptor",
+    "neural data fail to support a bipolar valence continuum"
+  ],
+  "interpretations": [
+    "OFC/amygdala double dissociation for valence and arousal extends from chemosensory to lexical-affective domain",
+    "valence is better described by independent axes or hedonic distance than by a bipolar continuum"
+  ],
+  "limitations_noted": [
+    "title metadata in source mismatches abstract content"
+  ],
+  "connecting_signals": [
+    "valence and arousal",
+    "orbitofrontal cortex",
+    "amygdala",
+    "double dissociation",
+    "affective word stimuli",
+    "fMRI of emotion",
+    "hedonic value",
+    "bipolar valence continuum"
+  ],
+  "out_of_scope_note": null
+}
