@@ -1,0 +1,44 @@
+{
+  "canonical_id": "1593ec35d0a1101e98ecfa680b637a40",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:30:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "low-level spatial vision", "role": "primary_lens", "one_line": "shared spatial mechanisms underlie both object-distance and interpersonal-distance estimation"},
+    {"name": "geometric visual illusion", "role": "extended", "one_line": "Müller-Lyer illusion extended from line stimuli to social figure pairs"},
+    {"name": "social scene perception", "role": "context", "one_line": "proxemic cues inform inferences about interaction and relationship"}
+  ],
+  "core_question": "Does the Müller-Lyer illusion distort perceived distance between two human figures the same way it distorts non-social line distances?",
+  "key_assumptions": [
+    "interpersonal distance is a computed visual feature, not only a social inference",
+    "Müller-Lyer fins act on figure endpoints analogously to line endpoints",
+    "psychophysical estimates index the same spatial mechanism across stimulus classes"
+  ],
+  "manipulations": [
+    "Müller-Lyer fin configuration flanking pairs of human figures",
+    "social vs non-social stimulus type (figures vs classical lines)",
+    "three psychophysical experiments varying display parameters"
+  ],
+  "key_findings": [
+    "observers mis-estimated interpersonal distance in the direction predicted by Müller-Lyer",
+    "illusion magnitude for figure pairs was comparable to that for non-social stimuli",
+    "effect was consistent across all three experiments"
+  ],
+  "interpretations": [
+    "interpersonal-distance perception relies on the same low-level spatial mechanisms as classical distance perception",
+    "social scene appraisal inherits geometric biases from generic visual distance computation"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "Müller-Lyer illusion",
+    "interpersonal distance perception",
+    "proxemic cues",
+    "social scene perception",
+    "psychophysics of distance",
+    "low-level spatial mechanisms",
+    "geometric visual illusion"
+  ],
+  "out_of_scope_note": null
+}

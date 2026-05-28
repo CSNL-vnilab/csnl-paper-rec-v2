@@ -1,0 +1,43 @@
+{
+  "canonical_id": "411fb94c65752df0bd77002e7c366ecd",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T16:30:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "efficient coding", "role": "primary_lens", "one_line": "joint optimal encoding of natural-scene statistics under channel noise"},
+    {"name": "ON/OFF opponent pathways", "role": "extended", "one_line": "parallel detector grids signaling increments vs decrements across sensory space"}
+  ],
+  "core_question": "How should grids of ON and OFF detectors be spatially arranged to optimally encode natural stimuli?",
+  "key_assumptions": [
+    "sensory systems use parallel ON and OFF pathways encoding increments and decrements",
+    "encoding objective is joint efficient representation of natural-scene statistics",
+    "channel noise constrains the optimal encoder"
+  ],
+  "manipulations": [
+    "asymmetry of bright vs dark features in natural-scene statistics",
+    "channel noise level",
+    "relative spatial offset between ON and OFF mosaics"
+  ],
+  "key_findings": [
+    "optimal ON/OFF mosaic offset depends on interaction between bright/dark scene asymmetry and channel noise",
+    "empirical ON/OFF mosaic offsets across species are well predicted by the model"
+  ],
+  "interpretations": [
+    "relative arrangement of ON/OFF receptive field mosaics reflects efficient coding under noise",
+    "scene statistics and noise jointly determine cross-species mosaic geometry"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "ON/OFF pathways",
+    "receptive field mosaics",
+    "natural scene statistics",
+    "bright/dark asymmetry",
+    "channel noise",
+    "efficient coding",
+    "retinal encoding",
+    "cross-species mosaic offset"
+  ],
+  "out_of_scope_note": null
+}

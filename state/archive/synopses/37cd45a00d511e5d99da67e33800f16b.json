@@ -1,0 +1,44 @@
+{
+  "canonical_id": "37cd45a00d511e5d99da67e33800f16b",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:30:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "Neural Engineering Framework", "role": "primary_lens", "one_line": "constructive prescription that jointly determines tuning curves and recurrent weights from a chosen low-dim trajectory"},
+    {"name": "attractor dynamics", "role": "extended", "one_line": "ring attractor for orientation tuning derived as a canonical NEF instance"},
+    {"name": "low-dimensional population coding", "role": "context", "one_line": "empirical observation that neural population dimensionality is much lower than population size"}
+  ],
+  "core_question": "How can a chosen low-dimensional dynamical system (a ring) be mapped constructively onto high-dimensional neural population activity?",
+  "key_assumptions": [
+    "neural population activity lies on a low-dimensional manifold",
+    "a target low-dim trajectory and a neural basis can be chosen a priori",
+    "tuning curves and recurrent weights are jointly determined by these choices"
+  ],
+  "manipulations": [
+    "choice of 2-D low-dim dynamical system (ring)",
+    "choice of neural basis for the population code"
+  ],
+  "key_findings": [
+    "ring attractor for orientation tuning can be derived from NEF",
+    "tuning curves and recurrent weight matrix are jointly determined by the chosen low-dim trajectory and neural basis",
+    "the derivation gives a constructive prescription for high-dim to low-dim mappings"
+  ],
+  "interpretations": [
+    "mapping low-dim dynamics to high-dim neural space is a common feature of cortical computation",
+    "the ring attractor literature and the NEF tradition are formally related through this construction"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "ring attractor",
+    "Neural Engineering Framework",
+    "low-dimensional dynamics",
+    "orientation tuning",
+    "population coding",
+    "recurrent weight matrix",
+    "tuning curves",
+    "cortical computation"
+  ],
+  "out_of_scope_note": null
+}

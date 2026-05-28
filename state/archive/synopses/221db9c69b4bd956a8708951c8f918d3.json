@@ -1,0 +1,45 @@
+{
+  "canonical_id": "221db9c69b4bd956a8708951c8f918d3",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "NMDA-dependent synaptic plasticity", "role": "primary_lens", "one_line": "long-lasting cortical excitability changes mediated by NMDA receptor activation"},
+    {"name": "non-invasive brain stimulation", "role": "context", "one_line": "weak scalp currents modulate underlying cortical activity"}
+  ],
+  "core_question": "What are the immediate and after effects of anodal and cathodal tDCS on mouse primary somatosensory cortex, and what mechanism underlies the after effects?",
+  "key_assumptions": [
+    "weak transcranial currents reach and modulate S1 neuronal activity",
+    "anodal and cathodal polarities produce opposite-sign neural effects",
+    "NMDA receptor pharmacology cleanly dissociates plasticity from acute modulation"
+  ],
+  "manipulations": [
+    "tDCS polarity (anodal vs cathodal)",
+    "stimulation phase (during vs post)",
+    "pharmacological NMDA receptor block"
+  ],
+  "key_findings": [
+    "anodal tDCS increased spontaneous and evoked S1 activity during application",
+    "anodal tDCS produced long-lasting potentiation after stimulation",
+    "cathodal tDCS reduced both spontaneous and evoked activity",
+    "NMDA receptor block abolished the after effect"
+  ],
+  "interpretations": [
+    "NMDA-dependent plasticity is the mechanism underlying tDCS after effects",
+    "tDCS exerts dissociable acute modulation and lasting plasticity on sensory cortex"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "transcranial direct-current stimulation",
+    "primary somatosensory cortex",
+    "anodal stimulation",
+    "cathodal stimulation",
+    "NMDA-dependent plasticity",
+    "evoked activity",
+    "long-lasting potentiation",
+    "mouse cortical recording"
+  ],
+  "out_of_scope_note": null
+}

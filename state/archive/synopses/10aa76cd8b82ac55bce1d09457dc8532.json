@@ -1,0 +1,41 @@
+{
+  "canonical_id": "10aa76cd8b82ac55bce1d09457dc8532",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "computational head models", "role": "primary_lens", "one_line": "MRI-derived volume conductor models predict tDCS current flow through individual brain anatomy"}
+  ],
+  "core_question": "How do symmetric versus asymmetric DLPFC tDCS montages differ in current-flow focality and inter-individual variability across large-scale brain networks?",
+  "key_assumptions": [
+    "MRI-based head models faithfully predict in-brain current flow during tDCS",
+    "Brain anatomy is the primary determinant of inter-individual response variability",
+    "Predicted current at targeted regions is mechanistically linked to behavioral and fMRI outcomes"
+  ],
+  "manipulations": [
+    "electrode montage geometry (symmetric vs asymmetric DLPFC)",
+    "individual MRI dataset across 12 participants"
+  ],
+  "key_findings": [
+    "Asymmetric DLPFC montage produced more focal current flow than symmetric configuration",
+    "Asymmetric montage showed greater inter-individual variability in predicted current",
+    "Predicted current at targeted regions correlated with task-specific concurrent fMRI outcomes"
+  ],
+  "interpretations": [
+    "Montage choice trades focality against consistency of response across individuals",
+    "Individualized current-flow modeling links montage selection to functional brain-network engagement"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "transcranial direct current stimulation",
+    "DLPFC montage",
+    "computational head model",
+    "current flow focality",
+    "inter-individual variability",
+    "concurrent fMRI",
+    "large-scale brain networks"
+  ],
+  "out_of_scope_note": null
+}

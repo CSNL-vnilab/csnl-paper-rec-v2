@@ -1,0 +1,40 @@
+{
+  "canonical_id": "15f59aebcf529d489521464645933341",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:30:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "activity-dependent synaptic plasticity", "role": "primary_lens", "one_line": "LTP induction modulated by weak extracellular electric fields"},
+    {"name": "spaced learning", "role": "extended", "one_line": "repeated spaced pairings accumulate plasticity beyond single-shot induction"}
+  ],
+  "core_question": "Does pairing weak DCS with spaced LTP induction protocols amplify the small in-vitro plasticity effect to a magnitude consistent with behavioral tDCS effects?",
+  "key_assumptions": [
+    "DCS-generated electric fields modulate activity-dependent plasticity",
+    "in-vitro plasticity is a mechanistic substrate for tDCS behavioral effects",
+    "spacing of induction events can compound plasticity changes"
+  ],
+  "manipulations": [
+    "presence vs absence of weak DCS during induction",
+    "number of spaced LTP-induction pairings"
+  ],
+  "key_findings": [
+    "weak DCS paired with spaced LTP induction yields cumulative plasticity larger than either alone",
+    "the cumulative boost scales with the number of pairings"
+  ],
+  "interpretations": [
+    "spacing amplifies the weak DCS plasticity effect to a size that can plausibly underlie tDCS behavioral memory effects"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "transcranial direct current stimulation",
+    "weak electric fields",
+    "long-term potentiation",
+    "spaced learning",
+    "rat hippocampal slice",
+    "cumulative plasticity",
+    "tDCS behavioral effects"
+  ],
+  "out_of_scope_note": null
+}
