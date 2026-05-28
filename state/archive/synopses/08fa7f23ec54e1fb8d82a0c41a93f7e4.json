@@ -1,0 +1,61 @@
+{
+  "canonical_id": "08fa7f23ec54e1fb8d82a0c41a93f7e4",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T12:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "aphantasia as introspective-access deficit",
+      "role": "primary_lens",
+      "one_line": "aphantasia impairs introspective access to imagery rather than abolishing imagery itself"
+    },
+    {
+      "name": "mental imagery during reading",
+      "role": "context",
+      "one_line": "imagery-rich text evokes sensory simulation that shapes gaze on relevant words"
+    },
+    {
+      "name": "nonconscious imagery account",
+      "role": "alternative_lens",
+      "one_line": "imagery may persist nonconsciously under aphantasia and still modulate behavior"
+    }
+  ],
+  "core_question": "Do aphantasics differ from controls in eye-fixation patterns and immersion when reading imagery-rich stories?",
+  "key_assumptions": [
+    "self-reported absence of visual imagery indexes aphantasia",
+    "fixation duration on imagery-laden words indexes imagery engagement",
+    "perceptual imagery content carries sensory-rich load distinguishable from other text"
+  ],
+  "manipulations": [
+    "group: aphantasics vs controls",
+    "imagery content type within stories (e.g., perceptual vs other imagery)",
+    "two short imagery-rich stories read while eye-tracked"
+  ],
+  "key_findings": [
+    "imagery content influenced gaze fixation similarly in both groups",
+    "perceptual imagery content produced the longest fixation durations during reading",
+    "aphantasics reported less immersion despite matched fixation patterns",
+    "fixation-imagery correlation present in controls but absent or reversed in aphantasics"
+  ],
+  "interpretations": [
+    "aphantasia may primarily impair introspective access rather than imagery itself",
+    "results are consistent with a nonconscious imagery account under aphantasia"
+  ],
+  "limitations_noted": [
+    "small aphantasic sample (n=8)",
+    "fixation-imagery correlation result described as tentative"
+  ],
+  "connecting_signals": [
+    "aphantasia",
+    "mental imagery",
+    "story reading",
+    "eye-tracking fixation duration",
+    "perceptual imagery content",
+    "narrative immersion",
+    "introspective access",
+    "nonconscious imagery"
+  ],
+  "out_of_scope_note": null
+}

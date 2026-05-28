@@ -1,0 +1,17 @@
+{
+  "canonical_id": "4d4d9c99bf0f5e981b06328879a72d6e",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T20:31:10+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.0,
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "Pure mathematical-logic paper characterizing recursively-enumerable sets via lattice isomorphism and Soare's automorphism machinery; recursion theory, not computational neuroscience."
+}

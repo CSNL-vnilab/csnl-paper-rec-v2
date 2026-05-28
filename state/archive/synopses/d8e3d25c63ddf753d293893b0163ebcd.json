@@ -1,0 +1,52 @@
+{
+  "canonical_id": "d8e3d25c63ddf753d293893b0163ebcd",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "multidirectional sensory prediction",
+      "role": "primary_lens",
+      "one_line": "modalities predict each other's stimulus location without a shared reference frame"
+    },
+    {
+      "name": "common-reference-frame remapping",
+      "role": "compared_against",
+      "one_line": "all modalities remapped into a single shared coordinate frame for integration"
+    }
+  ],
+  "core_question": "How does VIP integrate visual, tactile, auditory and vestibular inputs that arrive in heterogeneous reference frames?",
+  "key_assumptions": [
+    "VIP neurons are genuinely multimodal",
+    "receptive-field reference frame can be probed by varying gaze position"
+  ],
+  "manipulations": [
+    "gaze direction across three stationary fixation targets",
+    "modality of stimulation (visual vs tactile receptive-field mapping)"
+  ],
+  "key_findings": [
+    "tactile receptive fields use a single somatotopic/head-centered frame",
+    "visual receptive fields are distributed between eye- and head-centered coordinates",
+    "no evidence of a common reference frame across modalities in VIP"
+  ],
+  "interpretations": [
+    "multisensory integration in VIP relies on multidirectional cross-modal predictions rather than coordinate alignment",
+    "this prediction-based account may generalize to other multimodal areas"
+  ],
+  "limitations_noted": [
+    "title metadata in source mismatches abstract content"
+  ],
+  "connecting_signals": [
+    "ventral intraparietal area",
+    "multisensory integration",
+    "reference frame heterogeneity",
+    "eye-centered vs head-centered coordinates",
+    "tactile receptive fields",
+    "visual receptive fields",
+    "cross-modal prediction",
+    "macaque parietal cortex"
+  ],
+  "out_of_scope_note": null
+}

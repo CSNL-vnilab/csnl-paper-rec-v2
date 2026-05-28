@@ -1,0 +1,64 @@
+{
+  "canonical_id": "0da5b353e28aafad9956ff2f252f3694",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "paradigm revision under poorly defined constraints",
+      "role": "primary_lens",
+      "one_line": "the 'hard problem' of formulating scientific problems via continual conceptual revision"
+    },
+    {
+      "name": "optimization over pre-specified objectives",
+      "role": "compared_against",
+      "one_line": "the 'easy problem' AI solves by training flexible algorithms on fixed objectives"
+    },
+    {
+      "name": "cognitive science of scientists",
+      "role": "extended",
+      "one_line": "studying how humans formulate problems to design paradigm-inferring computational agents"
+    },
+    {
+      "name": "world models",
+      "role": "context",
+      "one_line": "theme-issue framing for natural and artificial intelligence"
+    }
+  ],
+  "core_question": "How can computational agents move beyond solving pre-specified scientific problems to autonomously formulating and revising scientific paradigms?",
+  "key_assumptions": [
+    "scientific research has two parts: solving a problem and coming up with the problem",
+    "current AI optimization handles only the 'easy problem'",
+    "the 'hard problem' requires continual conceptual revision under poorly defined constraints",
+    "human scientists' cognition is a model for paradigm formation"
+  ],
+  "manipulations": [
+    "conceptual contrast between optimization-driven discovery and paradigm-formation",
+    "proposed agenda of studying scientists' cognition to inform agent design"
+  ],
+  "key_findings": [
+    "recent AI scientific discoveries reduce to training flexible algorithms on pre-specified optimization problems",
+    "this 'easy problem' regime cannot perform conceptual revision required for the 'hard problem'",
+    "progress requires cognitive-science study of how scientists formulate and update paradigms"
+  ],
+  "interpretations": [
+    "new computational agents should automatically infer and update their scientific paradigms",
+    "advancing AI-for-science demands bridging cognitive science of scientists with algorithm design"
+  ],
+  "limitations_noted": [
+    "the hard problem is beyond capacities of current scientific-discovery algorithms"
+  ],
+  "connecting_signals": [
+    "AI for science",
+    "easy problem versus hard problem",
+    "paradigm revision",
+    "problem formulation",
+    "cognitive science of scientists",
+    "computational agents for discovery",
+    "world models",
+    "conceptual revision"
+  ],
+  "out_of_scope_note": null
+}
