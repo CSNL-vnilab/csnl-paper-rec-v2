@@ -1,0 +1,17 @@
+{
+  "canonical_id": "4517637724f8b5fa389a31c676a4bda7",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T19:52:54+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.0,
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "Computer science history paper on NLP via tabled/constraint logic programming (Warren tradition); programming-languages research, not computational neuroscience."
+}

@@ -1,0 +1,45 @@
+{
+  "canonical_id": "f92438ee7055ba4dbdfec55aebc6f821",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T12:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "event segmentation theory", "role": "primary_lens", "one_line": "Salient events trigger boundary signals that update episodic memory."},
+    {"name": "deviance detection / oddball", "role": "alternative_lens", "one_line": "Salience treated as deviant-stimulus detection rather than memory update."},
+    {"name": "prefrontal-hippocampal memory network", "role": "context", "one_line": "PFC-hippocampus circuit binds temporal and spatial associations of events."}
+  ],
+  "core_question": "Does increased neural activity to salient events reflect deviance detection or a memory-update signal, and do distinct regions track distinct sub-types of saliency?",
+  "key_assumptions": [
+    "Saliency can be decomposed into value, task-relevance, and event-boundary components.",
+    "PFC-hippocampus network jointly handles event associations and deviant detection.",
+    "Oddball-in-stream paradigm dissociates these saliency sub-types."
+  ],
+  "manipulations": [
+    "Event-value saliency (reward/value of items in the stream).",
+    "Task-relevance saliency (whether deviants matter for the task).",
+    "Surprise-driven event-boundary saliency (unexpected transitions in temporal context)."
+  ],
+  "key_findings": [
+    "Medial OFC activity tracked event-value saliency.",
+    "Dorsolateral PFC activity tracked task-relevance saliency.",
+    "Hippocampus activity tracked surprise-driven event-boundary saliency."
+  ],
+  "interpretations": [
+    "The PFC-hippocampus network factorizes saliency into value, task-relevance, and event-boundary components.",
+    "Distinct regions implement dissociable sub-types of saliency rather than a unitary deviance signal."
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "event saliency",
+    "event boundary",
+    "oddball-in-stream",
+    "temporal context memory",
+    "medial orbitofrontal cortex",
+    "dorsolateral prefrontal cortex",
+    "hippocampus",
+    "surprise-driven memory update"
+  ],
+  "out_of_scope_note": null
+}

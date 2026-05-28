@@ -1,0 +1,41 @@
+{
+  "canonical_id": "6e44ef03ed56836791d86480e4101f61",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:30:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "theory of event coding", "role": "primary_lens", "one_line": "action and perception share common codes via anticipated effects"},
+    {"name": "forward models of motor control", "role": "primary_lens", "one_line": "motor preparation generates predictions about sensory consequences"}
+  ],
+  "core_question": "Does action-effect anticipation bias which percept dominates in bistable perception?",
+  "key_assumptions": [
+    "goal-directed action preparation activates representations of desired effects",
+    "identity predictions selectively influence subsequent perception",
+    "bistable stimuli have two competing percepts that can be biased"
+  ],
+  "manipulations": [
+    "congruence between anticipated action-effect and bistable percept (congruent vs incongruent)",
+    "bistable paradigm (onset binocular rivalry vs rotating-cylinder ambiguous motion)"
+  ],
+  "key_findings": [
+    "action-effect anticipation biased the initial percept in onset binocular rivalry",
+    "no comparable bias was observed in rotating-cylinder ambiguous motion"
+  ],
+  "interpretations": [
+    "forward-model predictions exert largest influence at perceptual initialization, not on continuous-resolution mechanisms"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "action-effect anticipation",
+    "bistable perception",
+    "onset binocular rivalry",
+    "ambiguous motion",
+    "forward models",
+    "identity predictions",
+    "event coding",
+    "perceptual initialization"
+  ],
+  "out_of_scope_note": null
+}

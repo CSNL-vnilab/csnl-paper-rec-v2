@@ -1,0 +1,17 @@
+{
+  "canonical_id": "72519c4b09dd081939f1a14817e347d9",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T19:53:06+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.0,
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "Education studies essay on political education of students in a German/Russian seminar context; pedagogy/civics, not computational neuroscience."
+}

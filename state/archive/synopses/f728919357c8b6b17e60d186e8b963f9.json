@@ -1,0 +1,17 @@
+{
+  "canonical_id": "f728919357c8b6b17e60d186e8b963f9",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.0,
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "Computer-vision vehicle re-identification (triplet embedding + label smoothing); pure ML, not computational neuroscience."
+}

@@ -1,0 +1,41 @@
+{
+  "canonical_id": "6e28abceaa0d1f88866af22e907c77c6",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "dopaminergic reward learning", "role": "primary_lens", "one_line": "pupil and blink as autonomic readouts of dopamine-mediated reward signaling"},
+    {"name": "reinforcement learning", "role": "context", "one_line": "brain learns from environment interactions predicting reward procurement"}
+  ],
+  "core_question": "Do pupil dilation and eye-blink rate index dopaminergic reward processing for the mother's face in 12-month-old infants?",
+  "key_assumptions": [
+    "pupil dilation and blink rate are autonomic markers of dopaminergic activity",
+    "mother is the primary source of biological and social rewards in infancy",
+    "caregiver responsiveness ratings reflect reward-value of the mother"
+  ],
+  "manipulations": [
+    "face identity: own-mother vs stranger",
+    "caregiver responsiveness ratings as continuous covariate"
+  ],
+  "key_findings": [
+    "pupils dilated more for own-mother than stranger faces",
+    "blinks were suppressed more for own-mother faces",
+    "effect magnitude scaled with caregiver responsiveness ratings"
+  ],
+  "interpretations": [
+    "pupil/blink readouts can probe dopaminergic social-reward learning in infancy"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "pupil dilation",
+    "eye-blink rate",
+    "dopaminergic reward",
+    "infant social reward",
+    "mother face vs stranger",
+    "caregiver responsiveness",
+    "autonomic markers"
+  ],
+  "out_of_scope_note": null
+}
