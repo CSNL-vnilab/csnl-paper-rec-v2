@@ -1,0 +1,40 @@
+{
+  "canonical_id": "c1d24293178dd05cad8bb6de99844116",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "neural plasticity", "role": "primary_lens", "one_line": "tDCS modulates task-specific plasticity during cognitive training."},
+    {"name": "transfer of learning", "role": "alternative_lens", "one_line": "Whether training gains generalize to untrained cognitive tasks."}
+  ],
+  "core_question": "Does tDCS stimulation intensity modulate cognitive training gains and their transfer to untrained tasks?",
+  "key_assumptions": [
+    "tDCS modulates cortical excitability in a dose-dependent manner",
+    "Multitasking training engages plasticity mechanisms susceptible to stimulation"
+  ],
+  "manipulations": [
+    "tDCS dosage at three levels (0.7, 1.0, 2.0 mA) during multitasking training",
+    "Trained vs untrained transfer tasks"
+  ],
+  "key_findings": [
+    "Higher tDCS dosage produced larger training gains on the trained task",
+    "Higher dosage did not produce significantly greater transfer to untrained tasks"
+  ],
+  "interpretations": [
+    "Stimulation dose modulates plasticity for the trained task specifically",
+    "Dose does not broaden generalization across cognitive domains"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "transcranial direct current stimulation",
+    "tDCS dosage",
+    "multitasking training",
+    "cognitive training transfer",
+    "training gains",
+    "task-specific plasticity",
+    "preregistered study"
+  ],
+  "out_of_scope_note": null
+}

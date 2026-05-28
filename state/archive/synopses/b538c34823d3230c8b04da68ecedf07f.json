@@ -1,0 +1,46 @@
+{
+  "canonical_id": "b538c34823d3230c8b04da68ecedf07f",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "active inference / expected-information-gain saccade selection", "role": "primary_lens", "one_line": "Next fixation chosen to maximize expected gain in classification certainty."},
+    {"name": "two-stream (ventral What / dorsal Where) processing", "role": "extended", "one_line": "Anatomical what/where split instantiated as foveal classifier plus peripheral saliency map."},
+    {"name": "saliency map", "role": "context", "one_line": "Peripheral 'Where' pathway computed as a saliency-style map over the visual field."},
+    {"name": "signal-detection / speed-accuracy", "role": "compared_against", "one_line": "Model output benchmarked against human visual-search speed-accuracy structure."}
+  ],
+  "core_question": "Can a dual foveal-peripheral visuomotor model implement visual search as a focal accuracy-seeking policy that reproduces human eccentricity-dependent acuity and speed-accuracy tradeoffs?",
+  "key_assumptions": [
+    "Target position and category are drawn independently from a common generative process.",
+    "Ventral and dorsal pathways factor inference into 'what to see' versus 'where to look'.",
+    "Saccade goal is to maximize expected gain in classification certainty.",
+    "Foveal acuity is high; peripheral acuity falls off with eccentricity."
+  ],
+  "manipulations": [
+    "Pathway architecture: foveal classifier ('What') vs peripheral saliency map ('Where').",
+    "Fixation location selected by the saccade policy across the image."
+  ],
+  "key_findings": [
+    "Model reproduces eccentricity-dependent acuity tradeoffs.",
+    "Model reproduces the speed-accuracy structure of human visual search.",
+    "Focal accuracy-seeking saccade policy yields effective target localization and categorization."
+  ],
+  "interpretations": [
+    "Anatomical ventral/dorsal separation is functionally consistent with a what/where factorization of visuomotor inference.",
+    "Visual search can be cast as expected-gain-in-certainty saccade selection."
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "visual search",
+    "saccade selection",
+    "foveal-peripheral tradeoff",
+    "eccentricity-dependent acuity",
+    "what/where pathways",
+    "saliency map",
+    "speed-accuracy tradeoff",
+    "expected information gain"
+  ],
+  "out_of_scope_note": null
+}
