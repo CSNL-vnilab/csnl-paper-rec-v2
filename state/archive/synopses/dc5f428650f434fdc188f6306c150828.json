@@ -1,0 +1,56 @@
+{
+  "canonical_id": "dc5f428650f434fdc188f6306c150828",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "Rate Estimation Theory",
+      "role": "extended",
+      "one_line": "representational account: animals learn stimulus-distribution structure and derive contingency from it"
+    },
+    {
+      "name": "classical associative theory",
+      "role": "alternative_lens",
+      "one_line": "conditioning via temporal contiguity with responses tracking associative strength"
+    },
+    {
+      "name": "Rescorla-Wagner model",
+      "role": "compared_against",
+      "one_line": "delta-rule associative learning whose update structure is shown to approximate rate estimation"
+    }
+  ],
+  "core_question": "Can Rate Estimation Theory's computational and conceptual difficulties be repaired while preserving its representational core, and how does the fix relate to classical associative learning?",
+  "key_assumptions": [
+    "Pavlovian conditioning is captured either by contiguity-based associations or by contingency derived from learned rate representations",
+    "Contingency requires comparing stimulus-conditional reinforcement rate to a background rate",
+    "Continuous time underlies stimulus-reinforcer relations rather than discrete trials"
+  ],
+  "manipulations": [
+    "Background reinforcement rate varied while stimulus-conditional rate is held constant (contingency without contiguity change)"
+  ],
+  "key_findings": [
+    "Rate Estimation Theory in its original form faces its own computational and conceptual problems",
+    "A revised formulation fixes these problems while retaining the theory's representational core",
+    "The repaired rate-estimation algorithm closely resembles the Rescorla-Wagner update rule",
+    "The substantive difference between the theories lies in the response rule rather than the learning rule"
+  ],
+  "interpretations": [
+    "The classical/representational dichotomy is narrower than assumed: shared learning dynamics can support either view depending on how responses are read out",
+    "Contingency-based explanations of background-rate manipulations can be preserved within an associative-style learning rule"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "Pavlovian conditioning",
+    "Rate Estimation Theory",
+    "Rescorla-Wagner model",
+    "contingency versus contiguity",
+    "background rate manipulation",
+    "associative learning rule",
+    "response rule",
+    "continuous-time conditioning"
+  ],
+  "out_of_scope_note": null
+}

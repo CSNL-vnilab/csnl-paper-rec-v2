@@ -1,0 +1,17 @@
+{
+  "canonical_id": "9d3bde77eae237266366b7ec06cdc9e8",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.0,
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "Clinical psychiatry / suicide-prevention epidemiology in 94 adults using 42-day ecological momentary assessment of self-predicted vs experienced suicidal thoughts. Although the paper frames self-prediction as prospection and computes descriptive prediction errors (experienced minus predicted severity), it does not engage a theoretical computational framework (no predictive-coding, RL, Bayesian-observer, or rate-distortion claim) and contains no neural recording or circuit-level mechanism. Best-fitting models are statistical regressions on prior ratings, not a normative model of brain function. Falls under the prompt's out-of-scope category 'Clinical case reports / clinical epidemiology with no neural-computation content.'"
+}

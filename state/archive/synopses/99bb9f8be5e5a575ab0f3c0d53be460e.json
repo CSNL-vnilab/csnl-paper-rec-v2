@@ -1,0 +1,54 @@
+{
+  "canonical_id": "99bb9f8be5e5a575ab0f3c0d53be460e",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T12:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "causal attribution",
+      "role": "compared_against",
+      "one_line": "responsibility judgments reflect causal inference over actual and counterfactual effort"
+    },
+    {
+      "name": "incentive allocation",
+      "role": "primary_lens",
+      "one_line": "reward decisions read willingness-to-exert-effort as a forward-looking motivator"
+    }
+  ],
+  "core_question": "Do people allocate bonuses to collaborators using the same computations that drive responsibility judgments?",
+  "key_assumptions": [
+    "responsibility judgments track both actual and counterfactual effort",
+    "reward and responsibility can be elicited with the same collaboration stimuli",
+    "instructed effort levels reveal an agent's willingness independently of outcome"
+  ],
+  "manipulations": [
+    "actual effort contributed by each collaborator",
+    "counterfactual capacity (how much effort agent could have contributed)",
+    "instructed effort level the agent was told to exert",
+    "compliance with effort instructions"
+  ],
+  "key_findings": [
+    "bonus allocations were driven only by actual effort contributed, not by counterfactual capacity",
+    "agents who complied with effort instructions were rewarded more",
+    "rewards were less sensitive to the precise level of effort once compliance was met",
+    "reward pattern dissociates from previously documented responsibility-judgment pattern"
+  ],
+  "interpretations": [
+    "people reward collaborators based on willingness to exert effort rather than realized contribution alone",
+    "responsibility reflects backward causal inference whereas incentives target future effort motivation"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "responsibility judgment",
+    "bonus allocation",
+    "effort attribution",
+    "willingness to exert effort",
+    "counterfactual contribution",
+    "collaboration cognition",
+    "incentive design",
+    "causal inference about past actions"
+  ],
+  "out_of_scope_note": null
+}

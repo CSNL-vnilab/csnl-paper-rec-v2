@@ -1,0 +1,58 @@
+{
+  "canonical_id": "b725c2c65e949d5d610f51768b8e5dba",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "planning model of train/recruit decisions",
+      "role": "primary_lens",
+      "one_line": "agents pick collaborators to maximize long-run returns minus hiring and training costs"
+    },
+    {
+      "name": "myopic decision models",
+      "role": "compared_against",
+      "one_line": "choose by current competence or single-step improvement, ignoring downstream task success"
+    },
+    {
+      "name": "intuitive theory of competence",
+      "role": "extended",
+      "one_line": "lay reasoning that competence is plastic and improves with task-specific practice"
+    }
+  ],
+  "core_question": "How do people decide whom to train or recruit for a collaborative task given that collaborators' competence is plastic?",
+  "key_assumptions": [
+    "competence is not static and improves with task-specific practice",
+    "collaboration entails costs of hiring and training that must be weighed against returns",
+    "decision-makers can represent both current expertise and trainability of others"
+  ],
+  "manipulations": [
+    "starting expertise of candidate collaborators",
+    "training opportunities available on the job",
+    "goal of the collaborative task",
+    "decision type (whom to train vs. whom to recruit)"
+  ],
+  "key_findings": [
+    "participants' choices were best captured by a planning model balancing collaboration returns against hiring/training costs",
+    "planning model outperformed myopic alternatives based on current strength or single-step improvability",
+    "decisions reflected neither pure current-competence selection nor pure improvability selection"
+  ],
+  "interpretations": [
+    "people use an intuitive theory of competence to plan over future returns when assembling collaborators",
+    "joint reasoning about plasticity and cost underlies team-formation decisions"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "intuitive theory of competence",
+    "planning model",
+    "myopic vs planning decisions",
+    "collaborator recruitment",
+    "training decisions",
+    "division of labor",
+    "plasticity of competence",
+    "cost-benefit team formation"
+  ],
+  "out_of_scope_note": null
+}

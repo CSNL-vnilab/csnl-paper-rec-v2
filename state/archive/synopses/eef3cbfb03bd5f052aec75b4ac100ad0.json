@@ -1,0 +1,58 @@
+{
+  "canonical_id": "eef3cbfb03bd5f052aec75b4ac100ad0",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T21:04:54+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "bounded evidence accumulation",
+      "role": "extended",
+      "one_line": "Value-based BEA extended with temporally correlated, drifting evidence samples"
+    },
+    {
+      "name": "value construction",
+      "role": "primary_lens",
+      "one_line": "Subjective values are built during deliberation, not retrieved as stable estimates"
+    },
+    {
+      "name": "drift-diffusion",
+      "role": "context",
+      "one_line": "Standard framework for choice + RT in perceptual and value decisions"
+    }
+  ],
+  "core_question": "Do subjective values drift across a value-based choice session, and can within-session revaluation be recovered from choice patterns?",
+  "key_assumptions": [
+    "Standard BEA assumes temporally uncorrelated evidence noise",
+    "Subjective value depends on internal state (desires, attention, goals) that can change",
+    "Choice + RT patterns are informative about latent value changes"
+  ],
+  "manipulations": [
+    "Reanalysis of an established two-alternative snack-preference task",
+    "Comparison of stated values vs Reval-inferred dynamic values",
+    "BEA fits with independent vs temporally correlated evidence samples"
+  ],
+  "key_findings": [
+    "Reval recovers significant within-session changes in item value over ~1 hour",
+    "Reval-derived values predict choices and response times better than stated values",
+    "Reval values better explain vmPFC BOLD signal than stated values",
+    "A BEA variant with correlated successive samples reproduces revaluation"
+  ],
+  "interpretations": [
+    "Revaluation reflects value construction during deliberation rather than retrieval of stable utilities",
+    "Temporally correlated evidence is a more appropriate noise model for value-based BEA than independent samples"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "bounded evidence accumulation",
+    "value-based decision making",
+    "serial dependence",
+    "ventromedial prefrontal cortex",
+    "revaluation",
+    "drift-diffusion model",
+    "preference choice",
+    "value construction"
+  ],
+  "out_of_scope_note": null
+}

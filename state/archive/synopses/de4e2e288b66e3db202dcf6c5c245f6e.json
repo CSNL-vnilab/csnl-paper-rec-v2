@@ -1,0 +1,55 @@
+{
+  "canonical_id": "de4e2e288b66e3db202dcf6c5c245f6e",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "Bayesian schema learning with representational splitting",
+      "role": "primary_lens",
+      "one_line": "Large prediction errors trigger splitting of representations to acquire new schemas."
+    },
+    {
+      "name": "neural network model of schema learning",
+      "role": "alternative_lens",
+      "one_line": "Connectionist account compared against the Bayesian splitting model."
+    },
+    {
+      "name": "single-representation interleaved learning",
+      "role": "compared_against",
+      "one_line": "Non-splitting account predicting interleaving is required to avoid catastrophic interference."
+    }
+  ],
+  "core_question": "Does schema learning rely on representational splitting triggered by large prediction errors, allowing blocked curricula to avoid catastrophic interference?",
+  "key_assumptions": [
+    "schemas are discrete representational units that can be split",
+    "large prediction errors signal the need for a new representation",
+    "curriculum structure (blocked vs interleaved) shapes schema composition"
+  ],
+  "manipulations": [
+    "training curriculum: blocked vs interleaved",
+    "timing of blocked training insertion: early vs late in learning"
+  ],
+  "key_findings": [
+    "blocked curricula produced better performance than interleaved curricula",
+    "a Bayesian splitting model captures the blocked-curriculum advantage",
+    "inserting blocked training early yields better learning than inserting it later"
+  ],
+  "interpretations": [
+    "catastrophic interference can be avoided by splitting representations at large prediction errors",
+    "prediction errors function to 'carve nature at its joints' across multiple schemas"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "schema learning",
+    "catastrophic interference",
+    "blocked vs interleaved training",
+    "prediction error",
+    "representational splitting",
+    "Bayesian model of learning",
+    "curriculum effects"
+  ],
+  "out_of_scope_note": null
+}

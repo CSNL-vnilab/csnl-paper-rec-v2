@@ -1,0 +1,52 @@
+{
+  "canonical_id": "accea6e2c684528141199aa72f078069",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T12:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "thalamocortical loops",
+      "role": "primary_lens",
+      "one_line": "Reciprocal thalamus-cortex circuits as substrate for cognitive and sensorimotor function."
+    },
+    {
+      "name": "cortico-basal-ganglia-thalamocortical loops",
+      "role": "primary_lens",
+      "one_line": "Closed loops through basal ganglia returning via thalamus to cortex."
+    }
+  ],
+  "core_question": "What is the comprehensive anatomical connectivity of primate mediodorsal (MD), ventral anterior (VA), and ventrolateral (VL) thalamic nuclei with the cortex?",
+  "key_assumptions": [
+    "Non-sensory thalamic nuclei contribute to cognition and sensorimotor processing via reciprocal cortical loops",
+    "Accurate connectivity maps are prerequisite for mechanistic models of thalamic function",
+    "Primate connectivity differs enough from rodent that primate-specific synthesis is needed"
+  ],
+  "manipulations": [
+    "Literature synthesis across tracer studies of MD, VA, VL connectivity in primates"
+  ],
+  "key_findings": [
+    "Prevalent view (MD↔prefrontal; VA/VL↔premotor/motor) is oversimplified",
+    "MD, VA, and VL each show diverse connections integrating information across multiple brain systems",
+    "Connectivity complexity exceeds current standard models"
+  ],
+  "interpretations": [
+    "Existing models of thalamic contribution to cognition and sensorimotor function are limited by oversimplified connectivity assumptions",
+    "Richer connectivity maps motivate new theories of thalamic integration across systems"
+  ],
+  "limitations_noted": [
+    "Existing primate connectivity data remain limited; further research needed for full characterization"
+  ],
+  "connecting_signals": [
+    "mediodorsal thalamus",
+    "ventral anterior thalamus",
+    "ventrolateral thalamus",
+    "prefrontal cortex connectivity",
+    "thalamocortical loops",
+    "cortico-basal-ganglia-thalamocortical loops",
+    "primate thalamic anatomy",
+    "sensorimotor integration"
+  ],
+  "out_of_scope_note": null
+}

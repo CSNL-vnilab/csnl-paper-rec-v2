@@ -1,0 +1,63 @@
+{
+  "canonical_id": "da59e1499ade98018c03bb9398e3abd1",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "deep meta-learning reinforcement learning",
+      "role": "primary_lens",
+      "one_line": "RL agents meta-trained to find shortest paths in novel environments."
+    },
+    {
+      "name": "transition-based navigation",
+      "role": "primary_lens",
+      "one_line": "Strategy linking proximal-state associations to support local wayfinding."
+    },
+    {
+      "name": "vector-based navigation",
+      "role": "primary_lens",
+      "one_line": "Strategy using directions between distal landmarks to guide travel."
+    },
+    {
+      "name": "place/grid cell representation",
+      "role": "context",
+      "one_line": "Mammalian navigational coding compared to learned network units."
+    }
+  ],
+  "core_question": "What strategies and representations support goal-directed human navigation in wholly novel environments, and do deep meta-learning agents converge on the same solutions?",
+  "key_assumptions": [
+    "Novel-environment wayfinding requires combining landmark memory with on-the-fly transition information.",
+    "Optimal shortest-path policies provide a normative reference for human strategy use.",
+    "Artificial agents meta-trained with RL can be compared to humans at strategy and representation levels."
+  ],
+  "manipulations": [
+    "Wholly novel (unfamiliar) environments instead of a single well-learned one.",
+    "Position along the journey (different stereotyped points within a trial).",
+    "Comparison between human participants and meta-RL deep networks on matched tasks."
+  ],
+  "key_findings": [
+    "Humans adaptively mix transition-based and vector-based strategies at stereotyped points on a journey.",
+    "Meta-RL agents trained for shortest paths show near-identical adaptive strategy mixing.",
+    "Network units specialized for vector- vs transition-based strategies emerged during training.",
+    "These units' response patterns and representational geometries resemble mammalian navigational systems."
+  ],
+  "interpretations": [
+    "Optimal novel-environment navigation relies on an adaptive mix of transition- and vector-based strategies.",
+    "Distinct representational modes in the brain support these complementary navigational strategies."
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "goal-directed navigation",
+    "novel environments",
+    "transition-based strategy",
+    "vector-based strategy",
+    "deep meta-learning reinforcement learning",
+    "place and grid cell analogs",
+    "representational geometry",
+    "specialised units"
+  ],
+  "out_of_scope_note": null
+}

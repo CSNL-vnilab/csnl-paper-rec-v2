@@ -1,0 +1,59 @@
+{
+  "canonical_id": "a7e099b0e095fe38dcbd6d2df30eaf5c",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "linear dynamical systems",
+      "role": "primary_lens",
+      "one_line": "Linear input-driven dynamics fit to PFC population responses within each context."
+    },
+    {
+      "name": "context-dependent recurrent dynamics",
+      "role": "alternative_lens",
+      "one_line": "Recurrent network whose effective dynamics reconfigure with context, using transient input amplification."
+    },
+    {
+      "name": "input-modulation / attentional gating",
+      "role": "alternative_lens",
+      "one_line": "Subtle contextual modulation of upstream sensory inputs drives flexible selection without recurrent reconfiguration."
+    }
+  ],
+  "core_question": "What dynamical mechanisms in prefrontal cortex support context-dependent selection and integration of sensory inputs?",
+  "key_assumptions": [
+    "PFC computations can be approximated within each context by linear input-driven dynamics",
+    "Population responses reflect the underlying circuit mechanism well enough to discriminate among models",
+    "Context is a discrete latent variable that reconfigures either the recurrent operator or the input gain"
+  ],
+  "manipulations": [
+    "Task context (which sensory feature is behaviorally relevant)",
+    "Model class (linear vs. unconstrained nonlinear dynamics)",
+    "Mechanism of contextual flexibility (recurrent reconfiguration vs. input modulation)"
+  ],
+  "key_findings": [
+    "Linear input-driven dynamics fit PFC responses within each context as well as unconstrained models",
+    "Two mechanisms — context-dependent recurrence with transient input amplification, and contextual modulation of inputs — fit the data equally well",
+    "Both mechanisms reveal input and recurrent-dynamics properties missing from simpler descriptions"
+  ],
+  "interpretations": [
+    "Population dynamics alone cannot disambiguate recurrent-gating from input-gating accounts of cognitive flexibility",
+    "Fitting constrained dynamical models places quantitative constraints on attentional modulation required in sensory areas to explain PFC and behavior"
+  ],
+  "limitations_noted": [
+    "Two equally consistent mechanisms remain unresolved by PFC population activity alone"
+  ],
+  "connecting_signals": [
+    "prefrontal cortex population dynamics",
+    "context-dependent computation",
+    "linear dynamical systems model",
+    "input amplification",
+    "recurrent neural dynamics",
+    "attentional input modulation",
+    "selection and integration of sensory inputs",
+    "model identifiability"
+  ],
+  "out_of_scope_note": null
+}

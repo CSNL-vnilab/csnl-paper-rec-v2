@@ -1,0 +1,17 @@
+{
+  "canonical_id": "e5e3e6084b1fb87f3afc6e69b4d74f1f",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7-bypass@2026-05-28",
+  "generated_at": "2026-05-28T21:03:42+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.0,
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "Behavioral science / climate communication: how to reinforce climate action; environmental psychology / policy commentary, not computational neuroscience."
+}
