@@ -171,6 +171,114 @@ OOS_TOKENS = (
     "lgg-1/gabarap", "autophagy receptor",
     # politics / society
     "border control", "uniform passport",
+    # === expansion 2026-05-28 P22c batch-34 (pi_network 2026 alphabet block) ===
+    # materials chemistry / electrocatalysis / batteries
+    "sers substrate", "surface-enhanced raman", "raman scattering",
+    "electrocatalysis", "electrocatalyst", "alkaline hydrogen oxidation",
+    "hydrogen evolution reaction", "her electrocatalys", "oxygen reduction reaction",
+    "perovskite", "nasicon", "sodium-ion battery", "all-solid-state battery",
+    "solid-state battery", "nanotwinned", "nanotwinning",
+    "nanofluidic", "osmotic energy", "lithium recovery", "ion-cross-phase",
+    "single-atom catalys", "interfacial microenvironment",
+    "ni3n nanosheet", "metal nitride nanosheet",
+    "metal-organic framework", "mof framework",
+    # manufacturing / printing
+    "ehd inkjet", "electrohydrodynamic inkjet", "silver nanoparticle ink",
+    "alumina ceramic substrate", "sintering densification",
+    "abrasive grain", "grinding force", "gear grinding", "milling process",
+    # bioprocess / industrial biology
+    "microbial production of", "metabolic engineering of",
+    "bioproduction of", "biocatalysis", "biocatalyst",
+    "furandimethanol", "hydroxymethylfurfural", "5-hmf ",
+    "fermentation broth", "industrial biocatalysis",
+    "biosynthesis pathway", "natural product biosynthesis",
+    "secondary metabolite extraction",
+    # food engineering
+    "gelatin gummy", "gelatin gummies", "saponin microcapsule",
+    "spray-dried microcapsul", "functional food",
+    "encapsulation efficiency",
+    # analytical chemistry / biosensing
+    "fluorescent immunoassay", "fluorescent biosens", "fluorescent immunosens",
+    "hapten design", "elisa assay", "colorimetric detection",
+    "trace detection of", "saliva biomarker", "biomarker in saliva",
+    # clinical oncology / cancer biology
+    "tumor microenvironment", "tumor immune microenvironment",
+    "ovarian carcinoma", "cell death pattern", "cell death gene",
+    "programmed cell death gene", "pcd gene signature",
+    "tcga-ov", "tcga ", "tumor progression and metastasis",
+    "prognostic biomarker", "gene-signature prognostic",
+    "hgsoc", "prognosis of patients",
+    "proximity labeling", "microbe-host", "microbe-host interaction",
+    "host-pathogen interaction",
+    # clinical cardiology / hypertension
+    "white coat effect", "white-coat effect", "white coat hypertension",
+    "arterial stiffness", "pulse wave velocity",
+    "cardiovascular risk", "cvd risk", "blood pressure variability",
+    "cuff oscillometry",
+    # control systems / engineering
+    "multi-agent system", "multi-agent systems", "switching topolog",
+    "leader-follower", "fault-tolerant control", "fault tolerant control",
+    "uniformly ultimately bounded", "lyapunov analysis",
+    "actuator fault", "stochastic disturbance",
+    "tracking error", "neural network controller",
+    "bipartite output formation",
+    # photonics / RF telecom
+    "in-band full-duplex", "self-interference cancellation",
+    "cooperative-jamming cancellation", "photonic-enabled",
+    "physical layer security", "ofdm signal", "ofdm signals",
+    "modulation recognition", "qam modulation", "mach-zehnder modulator",
+    "phase inversion mzm", "rf jamming",
+    # AI policy / governance / safety commentary
+    "malicious ai", "ai swarm", "democratic discourse",
+    "ai safety", "ai ethics",
+    # climate / geophysics / oceanography
+    "sea surface temperature", "south china sea", "diurnal sst",
+    "ocean color", "monsoon variability",
+    # power systems / electrical
+    "phasor estimation", "ct saturation", "current transformer",
+    "protection relay", "power grid", "smart grid",
+    "renewable energy power", "voltage stability",
+    # musicology / humanities / arts
+    "imitation mass", "polyphonic composition", "renaissance composer",
+    "musicology", "music theory",
+    # history of science / pedagogy textbooks
+    "history of mathematics", "history of physics", "history of biology",
+    "history of science", "philosophy of computability",
+    "godel incompleteness", "turing computability",
+    "provability logic", "recursively enumerable",
+    "lattice of recursively enumerable",
+    # politics / sociology / family studies
+    "family-systems theory", "maternal gatekeeping", "postdivorce",
+    "evolutionary psychology of mat", "broaden-and-build",
+    "positive psychology", "human flourishing",
+    "international arbitration", "peace association",
+    "suicide rate", "durkheim",
+    # general statistics methods (textbook-only)
+    "agree-disagree scale", "ad scale length",
+    "interaction effects in logistic regression",
+    "logistic regression interaction",
+    "rating scale length",
+    # NLP / text classification
+    "text classification", "spam detection", "malignant ad",
+    "shot boundary detection", "video processing",
+    "namedentity recognition", "named entity recognition",
+    "lexical semantics", "word-sense similarity",
+    "wordnet inventory",
+    # affective computing / speech ML
+    "speech spectrogram", "voice emotion", "deep cca",
+    "affective computing", "emotion classifier from speech",
+    # operations research / utility maximization
+    "network utility maximization", "cross-layer optimization",
+    "ad hoc network",
+    # nursing / pedagogy / news bulletins
+    "nursing care", "qualitative interview", "long-term illness",
+    "welsh language", "medical education",
+    # generic OOS abstract stubs
+    "summary is not available for this content",
+    "first page preview", "you do not currently have access",
+    "doi has been genuinely created in error",
+    "doi is not currently attached",
+    "advertisementnext", "publication date (print)",
 )
 
 # Hard rules (each triggers a heavy negative score, overriding anything else)

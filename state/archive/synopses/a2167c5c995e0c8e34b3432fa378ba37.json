@@ -1,0 +1,17 @@
+{
+  "canonical_id": "a2167c5c995e0c8e34b3432fa378ba37",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "python-prefilter@2026-05-28",
+  "generated_at": "2026-05-28T20:40:18+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.0,
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "keyword-classifier (score=-1, hits=-perovskite)"
+}
