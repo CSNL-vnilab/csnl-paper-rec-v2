@@ -1,0 +1,57 @@
+{
+  "canonical_id": "8ff5903c44c1d2b47914c722c5c71d31",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:30:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "bounded-memory reinforcement learning",
+      "role": "primary_lens",
+      "one_line": "reward sensitivity constrained by limited memory capacity over action values"
+    },
+    {
+      "name": "optimal perseveration",
+      "role": "primary_lens",
+      "one_line": "perseverative bias as efficient policy given finite memory cost"
+    },
+    {
+      "name": "rate-distortion",
+      "role": "context",
+      "one_line": "trade-off between reward gain and memory cost frames efficiency deviations"
+    }
+  ],
+  "core_question": "Does anhedonia reflect reduced memory capacity or suboptimal perseveration given that capacity, and does KOR antagonism alter these components?",
+  "key_assumptions": [
+    "reward insensitivity can arise from limited memory capacity",
+    "limited capacity makes perseveration toward frequent actions adaptive",
+    "deviations from optimal perseveration constitute inefficiency",
+    "KOR antagonism elevates tonic dopamine"
+  ],
+  "manipulations": [
+    "clinical group: anhedonic vs control across four datasets",
+    "pharmacological: KOR antagonist vs placebo (RCT secondary analysis)"
+  ],
+  "key_findings": [
+    "anhedonia linked to efficiency deficits but not memory capacity deficits",
+    "KOR antagonism increases both memory capacity and efficiency",
+    "perseverative bias dissociates into capacity-driven vs efficiency-driven components"
+  ],
+  "interpretations": [
+    "anhedonic reward insensitivity reflects inefficient use of memory, not its scarcity",
+    "KOR antagonism has cognitively distinct effects, only one of which maps onto anhedonia"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "anhedonia",
+    "kappa-opioid receptor antagonism",
+    "bounded-memory reinforcement learning",
+    "optimal perseveration",
+    "reward insensitivity",
+    "tonic dopamine",
+    "computational psychiatry",
+    "memory-efficiency trade-off"
+  ],
+  "out_of_scope_note": null
+}

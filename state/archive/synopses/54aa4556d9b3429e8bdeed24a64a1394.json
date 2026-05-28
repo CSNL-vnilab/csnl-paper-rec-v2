@@ -1,0 +1,55 @@
+{
+  "canonical_id": "54aa4556d9b3429e8bdeed24a64a1394",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "uncertainty-aware exploration",
+      "role": "primary_lens",
+      "one_line": "Choices weigh approaching vs avoiding uncertainty about option values."
+    },
+    {
+      "name": "resource-rational analysis",
+      "role": "primary_lens",
+      "one_line": "Exploration policy is shaped by cognitive capacity constraints."
+    },
+    {
+      "name": "exploration-exploitation tradeoff",
+      "role": "context",
+      "one_line": "Active sampling to reduce goal-relevant uncertainty during learning."
+    }
+  ],
+  "core_question": "How do humans reconcile the conflicting tendencies to approach versus avoid uncertainty when exploring?",
+  "key_assumptions": [
+    "Exploration's purpose is to reduce goal-relevant uncertainty",
+    "Cognitive capacity for processing uncertainty is limited",
+    "Choice between better-known and lesser-known options reflects uncertainty policy"
+  ],
+  "manipulations": [
+    "Overall uncertainty level about the choice options",
+    "Relative uncertainty between better-known vs lesser-known option on each trial"
+  ],
+  "key_findings": [
+    "Participants generally chose to approach uncertainty (sample lesser-known)",
+    "When overall uncertainty was highest, they switched to avoiding uncertainty",
+    "Uncertainty-avoidance was associated with faster decisions",
+    "Avoiding uncertainty did not impair learning despite lower observed information rate"
+  ],
+  "interpretations": [
+    "Balancing approach and avoidance of uncertainty reduces cognitive cost of exploration in a resource-rational manner"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "uncertainty-directed exploration",
+    "approach-avoidance of uncertainty",
+    "resource-rational exploration",
+    "active learning",
+    "capacity-constrained decision-making",
+    "exploration policy comparison",
+    "better-known vs lesser-known option"
+  ],
+  "out_of_scope_note": null
+}

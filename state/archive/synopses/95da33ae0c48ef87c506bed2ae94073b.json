@@ -1,0 +1,61 @@
+{
+  "canonical_id": "95da33ae0c48ef87c506bed2ae94073b",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:30:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "mixture-of-agents reinforcement learning",
+      "role": "extended",
+      "one_line": "Static MF/MB mixture extended with hidden Markov state to capture within-session strategy shifts."
+    },
+    {
+      "name": "model-free reinforcement learning",
+      "role": "compared_against",
+      "one_line": "MF agent contrasted with MB as one expert in the mixture."
+    },
+    {
+      "name": "model-based reinforcement learning",
+      "role": "primary_lens",
+      "one_line": "MB control dominates early exploration and later exploitation phases."
+    },
+    {
+      "name": "hidden Markov model",
+      "role": "extended",
+      "one_line": "Latent state dynamics governing temporal shifts in agent weighting."
+    }
+  ],
+  "core_question": "Can a hidden-state mixture-of-agents model capture within-session shifts in reinforcement-learning strategy?",
+  "key_assumptions": [
+    "behavior arises from competing MF and MB experts",
+    "agent contributions can change discretely over time via latent states",
+    "OFC encoding reflects the active strategy state"
+  ],
+  "manipulations": [
+    "multi-step reward-guided task in rats",
+    "fitted MoA-HMM versus static mixture-of-agents"
+  ],
+  "key_findings": [
+    "within-session progression: MB exploration to MB exploitation to disengagement",
+    "inferred hidden states predict response-time changes",
+    "inferred states predict shifts in OFC neural encoding"
+  ],
+  "interpretations": [
+    "strategy is non-stationary and dynamic within a session, not a fixed mixture",
+    "OFC encoding tracks latent strategy state rather than a single computation"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "mixture of agents",
+    "hidden Markov model",
+    "model-based vs model-free",
+    "within-session strategy shifts",
+    "orbitofrontal cortex encoding",
+    "multi-step reward task",
+    "response time dynamics",
+    "rat reinforcement learning"
+  ],
+  "out_of_scope_note": null
+}

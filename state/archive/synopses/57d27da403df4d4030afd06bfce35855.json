@@ -1,0 +1,56 @@
+{
+  "canonical_id": "57d27da403df4d4030afd06bfce35855",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:30:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "deep reinforcement learning",
+      "role": "primary_lens",
+      "one_line": "neural networks trained via deep RL posed as models of human cognitive flexibility"
+    },
+    {
+      "name": "habit-goal arbitration",
+      "role": "alternative_lens",
+      "one_line": "networks learn complementary habit and goal-based policies"
+    },
+    {
+      "name": "meta-learning",
+      "role": "extended",
+      "one_line": "flexibility meta-learned from large diverse pre-training enabling in-context adaptation"
+    }
+  ],
+  "core_question": "How can deep neural networks be made to exhibit human-like cognitive flexibility rather than converging to a fixed solution?",
+  "key_assumptions": [
+    "standard deep RL converges to a fixed policy that limits adaptation",
+    "human cognitive flexibility can be captured by network-level training regimes",
+    "flexibility arises from training procedure, not just architecture"
+  ],
+  "manipulations": [
+    "training regime: dual habit vs goal-based policies",
+    "pre-training data diversity for meta-learned in-context adaptation",
+    "level of agent control over the environment during meta-training"
+  ],
+  "key_findings": [
+    "networks can be trained to acquire complementary habit and goal-based policies",
+    "meta-learning from large diverse data enables in-context adaptation to novel inputs",
+    "deep networks can be meta-trained to adjust behaviour to their level of environmental control"
+  ],
+  "interpretations": [
+    "three training paradigms cast deep networks as viable models of human cognitive flexibility",
+    "flexibility in neural networks can be induced by training, overcoming the fixed-solution limitation"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "cognitive flexibility",
+    "deep reinforcement learning",
+    "habit-goal policies",
+    "meta-learning",
+    "in-context adaptation",
+    "controllability",
+    "model of human cognition"
+  ],
+  "out_of_scope_note": null
+}

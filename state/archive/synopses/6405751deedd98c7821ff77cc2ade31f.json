@@ -1,0 +1,57 @@
+{
+  "canonical_id": "6405751deedd98c7821ff77cc2ade31f",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "mixture-of-agents reinforcement learning",
+      "role": "primary_lens",
+      "one_line": "model-free and model-based agents combined as mixture generating behavior"
+    },
+    {
+      "name": "hidden Markov model",
+      "role": "extended",
+      "one_line": "latent states capture temporal shifts in agent mixture weights"
+    },
+    {
+      "name": "model-based vs model-free RL",
+      "role": "context",
+      "one_line": "dual-process framing of automaticity versus deliberation"
+    }
+  ],
+  "core_question": "How do contributions of model-free and model-based agents shift dynamically within a reward-learning session?",
+  "key_assumptions": [
+    "behavior arises from a mixture of competing RL agents",
+    "agent contributions can change across discrete hidden states",
+    "action values are inferred jointly with state dynamics"
+  ],
+  "manipulations": [
+    "multi-step reward-guided task in rats",
+    "within-session time as a latent-state variable"
+  ],
+  "key_findings": [
+    "rats progress from initial model-based exploration to model-based exploitation",
+    "later states show reduced task engagement",
+    "inferred hidden states predict changes in response time",
+    "inferred states predict shifts in OFC neural encoding"
+  ],
+  "interpretations": [
+    "static mixture-of-agents models miss within-session strategy shifts",
+    "MoA-HMM links latent strategy states to behavior and OFC activity"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "mixture-of-agents",
+    "model-based reinforcement learning",
+    "model-free reinforcement learning",
+    "hidden Markov model",
+    "within-session strategy shifts",
+    "OFC encoding",
+    "reward-guided decision making",
+    "response time dynamics"
+  ],
+  "out_of_scope_note": null
+}

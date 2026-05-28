@@ -1,0 +1,62 @@
+{
+  "canonical_id": "50ab00d0a1052e52f9f6c72071f52031",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T12:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "resource-rational analysis",
+      "role": "primary_lens",
+      "one_line": "rational trade-off between reward and bounded cognitive resources"
+    },
+    {
+      "name": "rational inattention",
+      "role": "primary_lens",
+      "one_line": "capacity-limited perceptual channels constrain inference"
+    },
+    {
+      "name": "policy compression",
+      "role": "primary_lens",
+      "one_line": "capacity limit applies to action-selection channels"
+    },
+    {
+      "name": "expected utility maximization",
+      "role": "compared_against",
+      "one_line": "standard rationality view that symptoms appear to violate"
+    }
+  ],
+  "core_question": "Can aspects of psychopathology be explained as resource-rational trade-offs rather than failures of rationality?",
+  "key_assumptions": [
+    "agents trade off reward against cognitive capacity",
+    "capacity limits act on perceptual and action channels",
+    "apparent irrationality may reflect optimal bounded computation"
+  ],
+  "manipulations": [
+    "review-level contrast across affective, psychotic, and neurodevelopmental disorders",
+    "comparison of effects of psychoactive medications across disorders"
+  ],
+  "key_findings": [
+    "symptoms across diverse disorders fit resource-rational predictions",
+    "rational inattention parsimoniously accounts for several perceptual symptoms",
+    "policy compression accounts for action-selection symptoms",
+    "psychoactive medication effects align with shifts in capacity trade-offs"
+  ],
+  "interpretations": [
+    "some psychopathological symptoms reflect rational resource trade-offs, not broken rationality",
+    "capacity-limited rationality unifies affective, psychotic, and neurodevelopmental phenomena"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "resource-rational analysis",
+    "rational inattention",
+    "policy compression",
+    "bounded rationality",
+    "computational psychiatry",
+    "capacity-limited inference",
+    "psychopathology",
+    "psychoactive medication effects"
+  ],
+  "out_of_scope_note": null
+}
