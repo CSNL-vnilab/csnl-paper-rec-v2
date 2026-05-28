@@ -1,0 +1,17 @@
+{
+  "canonical_id": "76a647fe0e357a8b0162eb385d4960c5",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T20:41:53+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.0,
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "Optical engineering: high-efficiency metasurfaces down to the vacuum-ultraviolet region; photonics device design, not computational neuroscience."
+}
