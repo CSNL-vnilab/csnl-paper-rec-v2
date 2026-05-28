@@ -1,0 +1,56 @@
+{
+  "canonical_id": "43bd9d27ff77d6642d2e8b93013e8ad4",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "mid-level perceptual organization",
+      "role": "primary_lens",
+      "one_line": "intermediate shape description persists across saccades to guide post-saccadic analysis"
+    },
+    {
+      "name": "Gestalt grouping",
+      "role": "extended",
+      "one_line": "contour grouping by similarity and collinearity tested as transferable cues"
+    },
+    {
+      "name": "trans-saccadic integration",
+      "role": "context",
+      "one_line": "peripheral preview information carries forward across gaze shifts"
+    }
+  ],
+  "core_question": "Does perceptual grouping of object contours extracted from a peripheral preview transfer across a saccade to facilitate post-saccadic analysis of the same object?",
+  "key_assumptions": [
+    "peripheral preview yields a usable mid-level shape description",
+    "grouping cues (similarity, collinearity) operate on a common intermediate representation",
+    "saccade timing isolates pre- vs post-saccadic processing"
+  ],
+  "manipulations": [
+    "presence vs absence of grouped contour in peripheral preview",
+    "grouping cue defining the contour (similarity vs collinearity)",
+    "match vs change of grouping cue across the saccade"
+  ],
+  "key_findings": [
+    "participants grouped contour elements faster when the same contour had been grouped in the preview",
+    "preview facilitation persisted despite a change in the grouping cue between preview and post-saccadic display"
+  ],
+  "interpretations": [
+    "an intermediate-level description of object shape is retained across gaze shifts",
+    "this trans-saccadic shape representation supports efficient and continuous scene exploration"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "trans-saccadic perception",
+    "perceptual grouping",
+    "contour integration",
+    "peripheral preview",
+    "collinearity",
+    "similarity grouping",
+    "mid-level vision",
+    "scene exploration"
+  ],
+  "out_of_scope_note": null
+}

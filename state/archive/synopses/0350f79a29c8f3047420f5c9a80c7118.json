@@ -1,0 +1,52 @@
+{
+  "canonical_id": "0350f79a29c8f3047420f5c9a80c7118",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "signal-detection theory",
+      "role": "primary_lens",
+      "one_line": "decomposes Vernier performance into sensitivity (d') and decision criterion components"
+    },
+    {
+      "name": "perceptual learning",
+      "role": "context",
+      "one_line": "practice-driven performance improvement attributed to either sensitivity or criterion shifts"
+    }
+  ],
+  "core_question": "Do different feedback types in perceptual learning selectively affect sensitivity versus decision criterion, and do these changes differ in persistence?",
+  "key_assumptions": [
+    "performance gains decompose into sensitivity and criterion components",
+    "criterion shifts are typically treated as nuisance rather than learning",
+    "Vernier discrimination indexes orientation-offset sensitivity"
+  ],
+  "manipulations": [
+    "feedback type: block feedback vs trial-wise feedback",
+    "feedback bias: unbiased vs biased trial-wise feedback",
+    "test interval: within-session vs across-overnight"
+  ],
+  "key_findings": [
+    "block feedback changes sensitivity but leaves criterion unchanged",
+    "criterion changes are confined to the training session and do not survive overnight",
+    "biased trial-wise feedback induces a sensitivity change that distorts perception (left offset perceived as right)"
+  ],
+  "interpretations": [
+    "sensitivity and criterion changes reflect dissociable learning mechanisms with different temporal stability",
+    "biased feedback can shift the perceptual encoding itself, not just response strategy"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "Vernier discrimination",
+    "perceptual learning",
+    "sensitivity vs criterion",
+    "block feedback",
+    "trial-wise feedback",
+    "biased feedback",
+    "overnight consolidation",
+    "decision criterion shift"
+  ],
+  "out_of_scope_note": null
+}

@@ -1,0 +1,55 @@
+{
+  "canonical_id": "d73cd16dea7e226f71807c23a8bc2c7c",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:30:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "signal-detection theory",
+      "role": "primary_lens",
+      "one_line": "forced-choice psychophysical thresholds index sensitivity to negative facial expressions"
+    },
+    {
+      "name": "basic emotions / universality",
+      "role": "compared_against",
+      "one_line": "view that facial configuration alone determines perceived affect"
+    },
+    {
+      "name": "BIS/BAS individual-difference framework",
+      "role": "alternative_lens",
+      "one_line": "approach/avoidance trait dimensions modulate context use in emotion perception"
+    }
+  ],
+  "core_question": "Does emotional context shift perceptual thresholds for detecting negative facial expressions, and do individual affective-processing traits modulate this contextual influence?",
+  "key_assumptions": [
+    "perceptual sensitivity to facial emotion can be operationalised as a forced-choice psychophysical threshold",
+    "emotional contexts surrounding a face supply task-relevant affective information",
+    "BIS/BAS scores index stable individual differences in affective information processing"
+  ],
+  "manipulations": [
+    "emotional context surrounding target faces (varied across trials)",
+    "observers' BIS/BAS trait scores (measured between-subjects)"
+  ],
+  "key_findings": [
+    "contextual information shifted perceptual thresholds for negative facial expressions",
+    "the magnitude of context effects on facial-emotion perception varied with individual BIS/BAS affective-processing tendencies"
+  ],
+  "interpretations": [
+    "facial-emotion perception depends jointly on facial configuration and surrounding emotional context, not configuration alone",
+    "individual differences in affective information-processing style determine how strongly context is integrated into emotion judgments"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "facial emotion perception",
+    "perceptual threshold",
+    "forced-choice psychophysics",
+    "context modulation",
+    "individual differences",
+    "BIS/BAS",
+    "affective information processing",
+    "negative facial expressions"
+  ],
+  "out_of_scope_note": null
+}

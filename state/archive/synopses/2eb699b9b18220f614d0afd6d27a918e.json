@@ -1,0 +1,49 @@
+{
+  "canonical_id": "2eb699b9b18220f614d0afd6d27a918e",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "communication-through-coherence",
+      "role": "primary_lens",
+      "one_line": "inter-areal synchrony gates information transfer according to attentional demand"
+    },
+    {
+      "name": "thalamic attentional gating",
+      "role": "extended",
+      "one_line": "pulvinar coordinates cortico-cortical synchrony rather than passively relaying"
+    }
+  ],
+  "core_question": "Does the pulvinar coordinate synchrony between interconnected cortical areas to regulate attention-dependent information transmission?",
+  "key_assumptions": [
+    "neural synchrony between cortical areas modulates information transfer",
+    "directly connected cortical sites are also linked through the pulvinar",
+    "DTI-based tractography identifies functionally interconnected cortical-pulvinar sites"
+  ],
+  "manipulations": [
+    "spatial attention deployment during a macaque attention task",
+    "simultaneous recording sites across pulvinar, V4, TEO, and LIP targeted by tractography"
+  ],
+  "key_findings": [
+    "spatial attention increased beta-band synchrony between cortical areas",
+    "pulvinar exerted increased causal influence on cortex in the same beta frequencies"
+  ],
+  "interpretations": [
+    "the pulvinar coordinates inter-areal cortical activity to enhance cortico-cortical transmission efficacy"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "pulvinar",
+    "cortico-cortical synchrony",
+    "spatial attention",
+    "beta-band coherence",
+    "V4 TEO LIP",
+    "diffusion tractography",
+    "thalamic gating",
+    "causal influence"
+  ],
+  "out_of_scope_note": null
+}
