@@ -1,0 +1,17 @@
+{
+  "canonical_id": "e3a38976f78a301c6df872b15c4e9974",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T20:05:10+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.0,
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "Evolutionary psychology review on sex-ratio mating competition (mating supply-and-demand vs faithful-as-options hypotheses); social psychology, not computational neuroscience."
+}

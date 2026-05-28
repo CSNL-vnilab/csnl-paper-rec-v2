@@ -1,0 +1,17 @@
+{
+  "canonical_id": "6928a730105c65ff3fc3acc5495f514f",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T20:04:52+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.0,
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "Affective computing: neural-network classifier of speech-spectrogram features for emotion detection; engineering ML, not computational neuroscience."
+}

@@ -1,0 +1,52 @@
+{
+  "canonical_id": "07e5fbb8345ab19b8fb9865dc309d6d0",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "efficient coding",
+      "role": "primary_lens",
+      "one_line": "compression adapts to recent stimulus statistics to match resource allocation"
+    },
+    {
+      "name": "logarithmic encoding",
+      "role": "compared_against",
+      "one_line": "static log-transform of magnitude posited as intrinsic perceptual primitive"
+    }
+  ],
+  "core_question": "Does compressive number-to-space mapping reflect a static logarithmic transform or dynamic adaptation to recent stimulus statistics?",
+  "key_assumptions": [
+    "number-line task indexes internal number-to-space mapping",
+    "recent stimulus history can reshape perceptual encoding",
+    "compression shape is a measurable signature of the underlying code"
+  ],
+  "manipulations": [
+    "recent number-stimulus distribution across blocks",
+    "stability vs variability of the stimulus distribution",
+    "adaptive number-line task parameters across 4 experiments"
+  ],
+  "key_findings": [
+    "magnitude and shape of compressive bias depend on recent stimulus distribution",
+    "bias patterns mimic efficient-coding predictions",
+    "stable distributions drive compression toward linearity"
+  ],
+  "interpretations": [
+    "number-to-space mapping is a context-adapting dynamic process",
+    "compression is not a fixed perceptual primitive nor a static logarithmic transform"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "number-line task",
+    "compressive bias",
+    "logarithmic encoding",
+    "efficient coding",
+    "stimulus distribution adaptation",
+    "number-to-space mapping",
+    "context-dependent perception",
+    "magnitude representation"
+  ],
+  "out_of_scope_note": null
+}

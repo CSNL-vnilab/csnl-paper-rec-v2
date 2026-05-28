@@ -1,0 +1,55 @@
+{
+  "canonical_id": "dfc6ab36becf7a29d12d0ae2d95f98e1",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:30:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "rate code",
+      "role": "compared_against",
+      "one_line": "treats firing rate as the neural observable carrying stimulus information"
+    },
+    {
+      "name": "spike-timing code",
+      "role": "compared_against",
+      "one_line": "treats precise spike times as the neural observable carrying information"
+    },
+    {
+      "name": "downstream-readout perspective",
+      "role": "primary_lens",
+      "one_line": "information code is defined by how postsynaptic neurons integrate inputs"
+    }
+  ],
+  "core_question": "Is the rate-versus-spike dichotomy the right way to ask how the brain encodes information?",
+  "key_assumptions": [
+    "what counts as 'the code' depends on who is reading it",
+    "downstream neurons have characteristic temporal integration windows",
+    "synaptic dynamics shape effective readout timescale"
+  ],
+  "manipulations": [
+    "shift of analytic frame from external-observer to downstream-readout",
+    "consideration of varying readout integration windows and synaptic dynamics"
+  ],
+  "key_findings": [
+    "the external-observer framing obscures the empirically relevant question",
+    "rate-vs-spike is a continuum, not a dichotomy, once readout is specified",
+    "the position on that continuum is set by the readout neuron's integration window and synaptic dynamics"
+  ],
+  "interpretations": [
+    "the productive empirical question is which downstream readouts each circuit deploys",
+    "asking whether spikes carry information beyond rates without specifying a readout is ill-posed"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "rate code vs spike-timing code",
+    "neural coding",
+    "downstream readout",
+    "synaptic integration window",
+    "synaptic dynamics",
+    "epistemology of neural coding",
+    "temporal coding continuum"
+  ],
+  "out_of_scope_note": null
+}

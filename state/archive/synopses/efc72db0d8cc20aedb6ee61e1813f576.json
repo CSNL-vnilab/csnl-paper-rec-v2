@@ -1,0 +1,52 @@
+{
+  "canonical_id": "efc72db0d8cc20aedb6ee61e1813f576",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:30:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "thalamocortical circuit development",
+      "role": "primary_lens",
+      "one_line": "MD-PFC loop assembly across embryonic and postnatal stages."
+    },
+    {
+      "name": "activity-dependent circuit refinement",
+      "role": "extended",
+      "one_line": "Postnatal refinement establishes adult thalamocortical topography."
+    }
+  ],
+  "core_question": "How does the mediodorsal thalamus to prefrontal cortex circuit develop, and how do disruptions at distinct developmental stages give rise to shared cognitive deficits?",
+  "key_assumptions": [
+    "MD serves as a fundamental subcortical relay to PFC modulating cognition",
+    "MD-PFC development follows highly conserved embryonic and postnatal stages",
+    "common cognitive endophenotypes can emerge from disruption at distinct developmental stages"
+  ],
+  "manipulations": [
+    "perturbations of axon guidance",
+    "perturbations of synaptic pruning",
+    "perturbations of thalamic neurogenesis"
+  ],
+  "key_findings": [
+    "embryonic MD undergoes a large neurogenic wave followed by axonal pathfinding into developing PFC",
+    "postnatal MD-PFC circuit undergoes activity-dependent refinement establishing adult topography",
+    "disruption across distinct developmental stages converges on working-memory and attentional-flexibility deficits in mouse models"
+  ],
+  "interpretations": [
+    "shared cognitive endophenotypes across diverse developmental perturbations imply convergent MD-PFC circuit vulnerability",
+    "MD-PFC circuit dysregulation across staged development can have detrimental cognitive consequences"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "mediodorsal thalamus",
+    "prefrontal cortex development",
+    "thalamocortical loop",
+    "axon guidance",
+    "synaptic pruning",
+    "activity-dependent refinement",
+    "working-memory deficits",
+    "attentional flexibility"
+  ],
+  "out_of_scope_note": null
+}
