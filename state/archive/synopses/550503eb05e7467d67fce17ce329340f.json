@@ -1,0 +1,56 @@
+{
+  "canonical_id": "550503eb05e7467d67fce17ce329340f",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "model-free reinforcement learning",
+      "role": "primary_lens",
+      "one_line": "cached action-value learning that repeats reward-yielding actions without environmental model"
+    },
+    {
+      "name": "model-based reinforcement learning",
+      "role": "primary_lens",
+      "one_line": "planning via a probabilistic causal model of environment transitions and rewards"
+    },
+    {
+      "name": "causal Bayesian network",
+      "role": "extended",
+      "one_line": "latent-cause inference framework applied to hidden-state estimation in RL"
+    }
+  ],
+  "core_question": "What roles does causal knowledge play in reinforcement learning, and how do model-free and model-based systems coexist in the brain?",
+  "key_assumptions": [
+    "model-free and model-based controllers operate as parallel learning systems",
+    "hidden states can be construed as latent causes generating sensory data and rewards",
+    "agents face a tradeoff between cheap-but-inaccurate and expensive-but-accurate computations"
+  ],
+  "manipulations": [
+    "review-style contrast of model-free vs model-based architectures",
+    "review of hidden state inference formalisms in RL settings"
+  ],
+  "key_findings": [
+    "evidence supports coexistence of model-free and model-based systems competing and cooperating in the brain",
+    "the brain negotiates a cost-accuracy balance between the two learning systems",
+    "hidden state inference impinges on both model-based and model-free RL via shared latent-cause representations"
+  ],
+  "interpretations": [
+    "causal knowledge is a unifying construct that links action selection with perceptual inference under uncertainty",
+    "latent-cause inference is a general mechanism shared across both RL controllers"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "model-free reinforcement learning",
+    "model-based reinforcement learning",
+    "causal models",
+    "hidden state inference",
+    "latent cause inference",
+    "dual-system arbitration",
+    "planning vs habit",
+    "probabilistic environment model"
+  ],
+  "out_of_scope_note": null
+}

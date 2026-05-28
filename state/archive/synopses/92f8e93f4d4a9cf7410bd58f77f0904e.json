@@ -1,0 +1,54 @@
+{
+  "canonical_id": "92f8e93f4d4a9cf7410bd58f77f0904e",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "ingredients of intelligence",
+      "role": "extended",
+      "one_line": "Lake et al.'s list of humanlike-intelligence ingredients, augmented here with autonomy."
+    },
+    {
+      "name": "model-based reasoning",
+      "role": "context",
+      "one_line": "Endorsed as essential building block for humanlike agents."
+    },
+    {
+      "name": "autonomous learning",
+      "role": "primary_lens",
+      "one_line": "Agents that build and exploit their own internal models with minimal hand-engineering."
+    }
+  ],
+  "core_question": "What additional ingredient beyond Lake et al.'s list is needed to scale toward humanlike intelligence in domains without ready-made formal models?",
+  "key_assumptions": [
+    "Model-based reasoning is essential for humanlike intelligence",
+    "Real-world complexity often lacks ready-made formal models",
+    "Hand-engineering does not scale to open-ended domains"
+  ],
+  "manipulations": [
+    "Conceptual addition of autonomy to Lake et al.'s ingredient list"
+  ],
+  "key_findings": [
+    "Several existing agents already exhibit progress toward autonomous humanlike abilities",
+    "Outstanding challenges remain for fully autonomous model-building agents"
+  ],
+  "interpretations": [
+    "Autonomy — agents that build and exploit their own internal models — offers the best route to scaling toward real-world humanlike intelligence"
+  ],
+  "limitations_noted": [
+    "Outstanding challenges in autonomous agent construction remain unresolved"
+  ],
+  "connecting_signals": [
+    "ingredients of intelligence",
+    "model-based reasoning",
+    "autonomous agents",
+    "humanlike intelligence",
+    "internal world models",
+    "minimal hand-engineering",
+    "scaling to real-world complexity"
+  ],
+  "out_of_scope_note": null
+}

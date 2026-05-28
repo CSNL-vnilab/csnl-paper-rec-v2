@@ -1,0 +1,56 @@
+{
+  "canonical_id": "3b421fcc4ec620dffc5a64bc6c59957a",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "model-based reasoning",
+      "role": "extended",
+      "one_line": "agents that build and exploit their own internal models autonomously"
+    },
+    {
+      "name": "autonomous learning agents",
+      "role": "primary_lens",
+      "one_line": "scaling human-like intelligence by minimizing hand-engineered priors"
+    },
+    {
+      "name": "ingredients of human-like intelligence",
+      "role": "context",
+      "one_line": "Lake et al. key-ingredients list serves as the framing they respond to"
+    }
+  ],
+  "core_question": "Should human-like machine intelligence be built on hand-engineered ingredients or on agents that autonomously learn and exploit their own internal models?",
+  "key_assumptions": [
+    "model-based reasoning is essential for human-like intelligence",
+    "ready-made formal models are unavailable for many real-world domains",
+    "autonomy (self-built models) scales better than hand engineering"
+  ],
+  "manipulations": [
+    "argumentative pivot: shift emphasis from prescribed ingredients to learned autonomy",
+    "survey of example systems progressing toward autonomous human-like abilities"
+  ],
+  "key_findings": [
+    "existing autonomous agents already exhibit progress toward human-like capabilities across several domains",
+    "outstanding challenges remain for scaling autonomous learning to real-world complexity"
+  ],
+  "interpretations": [
+    "autonomy should be added as a key ingredient alongside Lake et al.'s list",
+    "autonomous learning gives the greatest chance of success when formal models cannot be supplied"
+  ],
+  "limitations_noted": [
+    "outstanding challenges remain unresolved for scaling to real-world complexity"
+  ],
+  "connecting_signals": [
+    "autonomous learning",
+    "model-based reasoning",
+    "human-like intelligence",
+    "internal models",
+    "ingredients of intelligence",
+    "hand-engineered priors",
+    "scaling to real-world complexity"
+  ],
+  "out_of_scope_note": null
+}

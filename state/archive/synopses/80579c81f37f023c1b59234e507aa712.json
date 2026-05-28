@@ -1,0 +1,67 @@
+{
+  "canonical_id": "80579c81f37f023c1b59234e507aa712",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:30:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "latent cause inference",
+      "role": "primary_lens",
+      "one_line": "structure learning segments experience into clusters that gate memory updating"
+    },
+    {
+      "name": "Rescorla-Wagner associative learning",
+      "role": "extended",
+      "one_line": "delta-rule CS-US weights are extended to one set per latent cause"
+    },
+    {
+      "name": "Bayesian structure learning",
+      "role": "primary_lens",
+      "one_line": "posterior over latent causes inferred via Bayes' rule under a nonparametric prior"
+    },
+    {
+      "name": "memory reconsolidation",
+      "role": "compared_against",
+      "one_line": "trace-instability account reframed as inference about which latent cause is active"
+    }
+  ],
+  "core_question": "When does retrieval modify an old memory trace versus form a new one?",
+  "key_assumptions": [
+    "memory is inferential: traces store statistics tied to latent causes",
+    "simplicity (Occam) prior: few latent causes generate sensory data",
+    "contiguity prior: temporally proximate events share a latent cause",
+    "modification eligibility tracks posterior over the active latent cause"
+  ],
+  "manipulations": [
+    "presence vs absence of brief CS reexposure before extinction",
+    "timing between acquisition, reexposure, and extinction (power-law kernel)",
+    "amnestic agents (e.g., protein synthesis inhibitors) post-retrieval"
+  ],
+  "key_findings": [
+    "model reproduces major Pavlovian post-retrieval modification phenomena",
+    "cue reexposure raises posterior that acquisition cause is active, enabling update",
+    "reduces to Rescorla-Wagner when only one latent cause is inferred",
+    "captures spontaneous recovery, renewal, reinstatement via distinct latent causes"
+  ],
+  "interpretations": [
+    "memory modification reflects latent-cause inference, not intrinsic trace lability",
+    "reconsolidation phenomena unify with extinction recovery under one inferential account"
+  ],
+  "limitations_noted": [
+    "theory is at cognitive/algorithmic level; biological implementation deferred",
+    "spatial proximity in latent-cause inference omitted for simplicity"
+  ],
+  "connecting_signals": [
+    "latent cause inference",
+    "post-retrieval memory modification",
+    "Pavlovian conditioning",
+    "Rescorla-Wagner delta rule",
+    "structure learning",
+    "reconsolidation",
+    "extinction and renewal",
+    "Chinese restaurant process prior"
+  ],
+  "out_of_scope_note": null
+}

@@ -1,0 +1,62 @@
+{
+  "canonical_id": "4079b4994ac85601ad10169713372380",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:30:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "ingredients of intelligence",
+      "role": "primary_lens",
+      "one_line": "Catalogue of core cognitive building blocks needed for human-like machine intelligence."
+    },
+    {
+      "name": "intuitive physics / intuitive psychology",
+      "role": "extended",
+      "one_line": "Start-up software priors for object dynamics and agent goals invoked as ingredients."
+    },
+    {
+      "name": "compositional / causal model-building",
+      "role": "extended",
+      "one_line": "Symbolic, structured generative models supporting rapid learning from few examples."
+    },
+    {
+      "name": "sub-symbolic connectionism",
+      "role": "compared_against",
+      "one_line": "Statistical pattern learners contrasted with structured symbolic accounts."
+    }
+  ],
+  "core_question": "How should the proposed key ingredients of human-like intelligence be reconciled with classic debates over their origin, coherence, and representational format?",
+  "key_assumptions": [
+    "Human-like learning requires more than current statistical pattern recognition",
+    "Classic AI/cognitive-science debates can be moved past rather than re-fought",
+    "A short set of identifiable ingredients can be enumerated and engineered"
+  ],
+  "manipulations": [
+    "Survey commentary responses across three contrast axes: nature vs nurture, coherent theories vs theory fragments, symbolic vs sub-symbolic"
+  ],
+  "key_findings": [
+    "Commentators broadly endorsed the ingredients list but disagreed on origin and structure of those ingredients",
+    "Disagreements cluster along three classical axes: nature/nurture, coherent theories vs theory fragments, symbolic vs sub-symbolic",
+    "Additional ingredients proposed by commentators are judged important for the long run"
+  ],
+  "interpretations": [
+    "Progress requires moving beyond the three classical debates rather than taking sides within them",
+    "Engineering human-like intelligence is a long-run program requiring integration of further ingredients and attention to ethical concerns"
+  ],
+  "limitations_noted": [
+    "The proposed ingredients set is acknowledged as incomplete"
+  ],
+  "connecting_signals": [
+    "ingredients of intelligence",
+    "human-like learning",
+    "intuitive physics",
+    "intuitive psychology",
+    "compositional learning",
+    "symbolic vs sub-symbolic",
+    "nature versus nurture",
+    "engineering roadmap for AI"
+  ],
+  "out_of_scope_note": null
+}
