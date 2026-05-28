@@ -1,0 +1,42 @@
+{
+  "canonical_id": "0fc7415598bb66c4404cd5bd0fc9998d",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "binding-by-synchrony", "role": "primary_lens", "one_line": "phase-synchronous firing binds semantic features with working-memory concepts"},
+    {"name": "phase comparison mechanism", "role": "extended", "one_line": "phase relations between assemblies subserve response selection in comparison tasks"}
+  ],
+  "core_question": "How do perceptual inputs, working memory, and semantic memory interact during semantic comparison of sequential stimuli?",
+  "key_assumptions": [
+    "neural assemblies encode features and concepts via synchronous firing",
+    "phase relations carry task-relevant comparison information",
+    "semantic processing requires binding of features to working-memory concepts"
+  ],
+  "manipulations": [
+    "sequential presentation of two stimuli requiring semantic feature comparison"
+  ],
+  "key_findings": [
+    "simulated model reproduces semantic differentiation of sequential stimuli",
+    "phase-synchronous firing binds semantic features with working-memory concepts",
+    "phase comparison mechanism supports response selection"
+  ],
+  "interpretations": [
+    "binding-by-synchrony accounts extend to semantic cognition with WM interaction",
+    "task-dependent gamma-band synchronization between temporal and prefrontal cortex is predicted during semantic comparison"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "binding-by-synchrony",
+    "phase synchronization",
+    "gamma-band coherence",
+    "semantic memory",
+    "working memory",
+    "temporal-prefrontal interaction",
+    "response selection",
+    "feature binding"
+  ],
+  "out_of_scope_note": null
+}

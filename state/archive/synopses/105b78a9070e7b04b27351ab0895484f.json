@@ -1,0 +1,42 @@
+{
+  "canonical_id": "105b78a9070e7b04b27351ab0895484f",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "predictive coding", "role": "primary_lens", "one_line": "Biologically plausible alternative to backpropagation for training feedforward networks."},
+    {"name": "backpropagation", "role": "compared_against", "one_line": "Standard but biologically unrealistic gradient-based training algorithm."},
+    {"name": "artificial neural networks", "role": "context", "one_line": "Feedforward supervised learning models interpreted as abstract biological networks."}
+  ],
+  "core_question": "What is the mathematical relationship between predictive coding and backpropagation when training feedforward artificial neural networks on supervised tasks?",
+  "key_assumptions": [
+    "ANNs serve as abstract models of biological neuronal networks",
+    "Backpropagation is biologically unrealistic",
+    "Supervised learning on feedforward architectures is the relevant setting"
+  ],
+  "manipulations": [
+    "Training algorithm: predictive coding vs backpropagation",
+    "Feedforward ANN training setup"
+  ],
+  "key_findings": [
+    "Reviews and extends recent results formalizing the mathematical correspondence between predictive coding and backpropagation"
+  ],
+  "interpretations": [
+    "Findings carry implications for interpreting predictive coding as a biologically plausible training mechanism",
+    "Findings inform interpretation of deep learning models as accounts of neural information processing"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "predictive coding",
+    "backpropagation",
+    "biologically plausible learning",
+    "feedforward neural networks",
+    "supervised learning",
+    "deep learning interpretation",
+    "credit assignment",
+    "neural information processing"
+  ],
+  "out_of_scope_note": null
+}
