@@ -1,0 +1,57 @@
+{
+  "canonical_id": "64c816fdd22161acebb9053a07ae4daa",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "probabilistic population codes",
+      "role": "primary_lens",
+      "one_line": "spike patterns are modeled as samples whose likelihood the circuit estimates"
+    },
+    {
+      "name": "random sparse connectivity",
+      "role": "extended",
+      "one_line": "anatomically motivated random projections support scalable likelihood estimation"
+    },
+    {
+      "name": "sampling-based representation",
+      "role": "alternative_lens",
+      "one_line": "intrinsic neural noise is reused as a sampling mechanism for local learning"
+    }
+  ],
+  "core_question": "Can a biologically realistic, randomly connected circuit estimate the likelihood of high-dimensional spiking patterns at scale?",
+  "key_assumptions": [
+    "real cortical circuits use sparse and random connectivity",
+    "intrinsic neural noise can serve as a learning signal",
+    "likelihood estimation underlies probabilistic neural computation"
+  ],
+  "manipulations": [
+    "model architecture inspired by random sparse connectivity",
+    "local learning rule exploiting intrinsic circuit noise",
+    "slower structural rewiring and pruning of random connections"
+  ],
+  "key_findings": [
+    "model matches or exceeds current methods on >100-neuron recordings from monkey visual and prefrontal cortex",
+    "accurate likelihood estimation from a small number of training samples",
+    "structural rewiring further improves efficiency and sparseness of representations"
+  ],
+  "interpretations": [
+    "random sparse connectivity is a viable design principle for scalable probabilistic neural computation",
+    "the approach unifies neuroanatomy, machine learning, and theoretical neuroscience perspectives on neural coding"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "probabilistic neural code",
+    "likelihood estimation",
+    "random sparse connectivity",
+    "local learning rule",
+    "spiking population activity",
+    "monkey visual and prefrontal cortex",
+    "structural rewiring and pruning",
+    "scalable neural representation"
+  ],
+  "out_of_scope_note": null
+}

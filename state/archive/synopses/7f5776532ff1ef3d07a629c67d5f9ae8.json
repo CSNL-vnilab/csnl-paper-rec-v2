@@ -1,0 +1,58 @@
+{
+  "canonical_id": "7f5776532ff1ef3d07a629c67d5f9ae8",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T16:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "context-dependent choice",
+      "role": "primary_lens",
+      "one_line": "choices depend on the set of available rival options, not utilities alone"
+    },
+    {
+      "name": "decoy effects (attraction / similarity / compromise)",
+      "role": "extended",
+      "one_line": "three classic decoy biases unified as cases of a general repulsion principle"
+    },
+    {
+      "name": "value repulsion model",
+      "role": "primary_lens",
+      "one_line": "attribute values are repulsed away from context provided by rivals"
+    }
+  ],
+  "core_question": "What is the full structure of decoy influence on two-attribute choice, and can a single mechanism explain the three classic biases?",
+  "key_assumptions": [
+    "choice alternatives are described in a bidimensional attribute space (price, quality)",
+    "decoy influence can be parameterised as a function of decoy position relative to targets",
+    "individual variability in biases reflects parameters of a shared computation"
+  ],
+  "manipulations": [
+    "decoy stimulus position sampled exhaustively across two-attribute (price x quality) space",
+    "identity of the two preferred target items in incentive-compatible choices",
+    "individual participants as a large cohort"
+  ],
+  "key_findings": [
+    "decoy-influence map is highly structured beyond the three classic effects",
+    "a single simple model reproduces the full map and captures individual variability",
+    "attraction, similarity, and compromise effects emerge as special cases of one principle",
+    "the model predicts and validates a new interrelationship among the biases"
+  ],
+  "interpretations": [
+    "the three classic decoy biases share a common origin: repulsion of attribute values away from rival-option context",
+    "correlated biases across participants reflect parameters of one underlying context-repulsion computation"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "multi-alternative choice",
+    "decoy effects",
+    "attraction effect",
+    "similarity effect",
+    "compromise effect",
+    "context-dependent preference",
+    "value repulsion",
+    "bidimensional attribute space"
+  ],
+  "out_of_scope_note": null
+}

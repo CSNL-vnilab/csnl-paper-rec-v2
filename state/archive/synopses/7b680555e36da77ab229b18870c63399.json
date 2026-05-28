@@ -1,0 +1,17 @@
+{
+  "canonical_id": "7b680555e36da77ab229b18870c63399",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7-bypass@2026-05-28",
+  "generated_at": "2026-05-28T21:43:06+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.0,
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "Materials engineering: flexible/stretchable electrospun polyurethane mats with 0D-1D-2D ternary fillers; wearable electronics materials, not computational neuroscience."
+}

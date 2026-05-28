@@ -1,0 +1,56 @@
+{
+  "canonical_id": "9dff537f2f95332d57107ac1c9c6f6ec",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "disentangled representation learning",
+      "role": "primary_lens",
+      "one_line": "beta-VAE separates sensory data into interpretable latent generative factors"
+    },
+    {
+      "name": "deep supervised classification model of ventral stream",
+      "role": "compared_against",
+      "one_line": "distributed high-dimensional population code with uninterpretable single units"
+    },
+    {
+      "name": "single-unit semantic coding in IT",
+      "role": "extended",
+      "one_line": "single IT neurons map onto individual disentangled generative factors"
+    }
+  ],
+  "core_question": "Do single inferotemporal neurons encode interpretable generative factors of faces that align with an unsupervised disentangling objective?",
+  "key_assumptions": [
+    "ventral stream may be optimising a disentangling objective",
+    "interpretable latent factors (e.g. gender, hair length) are recoverable by beta-VAE",
+    "macaque IT face responses are an appropriate substrate to test the alignment"
+  ],
+  "manipulations": [
+    "model class: deep unsupervised generative (beta-VAE) vs deep supervised classifier",
+    "face images as sensory input to both model and neural recordings",
+    "reconstruction from a small number of IT cell signals"
+  ],
+  "key_findings": [
+    "remarkable correspondence between beta-VAE generative factors and single IT neuron tuning",
+    "face images can be reconstructed using signals from just a handful of IT cells"
+  ],
+  "interpretations": [
+    "the ventral visual stream may be optimising a disentangling objective",
+    "the IT neural code may be low-dimensional and semantically interpretable at the single-unit level"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "beta-VAE",
+    "disentangled representation",
+    "inferotemporal cortex face neurons",
+    "single-unit interpretability",
+    "ventral stream object coding",
+    "unsupervised generative model of vision",
+    "face reconstruction from neural activity",
+    "DNN-brain alignment"
+  ],
+  "out_of_scope_note": null
+}

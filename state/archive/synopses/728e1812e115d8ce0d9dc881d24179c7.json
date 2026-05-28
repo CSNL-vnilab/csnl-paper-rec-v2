@@ -1,0 +1,17 @@
+{
+  "canonical_id": "728e1812e115d8ce0d9dc881d24179c7",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7-bypass@2026-05-28",
+  "generated_at": "2026-05-28T21:43:06+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.0,
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "Battery materials: comparing physical and electrochemical properties of weave patterns for carbon cloth electrodes; battery materials engineering, not computational neuroscience."
+}

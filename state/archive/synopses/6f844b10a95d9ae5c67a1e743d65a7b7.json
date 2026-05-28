@@ -1,0 +1,63 @@
+{
+  "canonical_id": "6f844b10a95d9ae5c67a1e743d65a7b7",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:30:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "distributional reinforcement learning",
+      "role": "primary_lens",
+      "one_line": "learning full value distributions rather than expected values via TD backups"
+    },
+    {
+      "name": "temporal difference learning",
+      "role": "extended",
+      "one_line": "extended with a local update rule avoiding spatial non-locality"
+    },
+    {
+      "name": "successor representation",
+      "role": "alternative_lens",
+      "one_line": "linear basis from which the proposed code can be computed"
+    },
+    {
+      "name": "Laplace transform of future rewards",
+      "role": "context",
+      "one_line": "framework linking temporal discounting to a transform-domain code"
+    }
+  ],
+  "core_question": "Can distributional reinforcement learning be implemented in neural circuits using only local computations?",
+  "key_assumptions": [
+    "dopamine system implements distributional TD backups",
+    "value codes should be computable from each unit's own state alone",
+    "reward magnitude, time horizon, and discounting are separable dimensions"
+  ],
+  "manipulations": [
+    "decomposed value distributions across reward magnitude, time horizon, and temporal discounting",
+    "replaced non-local imputation step with local TD update rule",
+    "constructed code from ensemble of successor representations with multiple discounts"
+  ],
+  "key_findings": [
+    "proposed code is representationally powerful and computationally straightforward",
+    "decomposition supports a local learning rule without inter-unit state sharing",
+    "model-based computations allow immediate adjustments to changing horizons or discount factors",
+    "code can be computed linearly from successor representations with multiple temporal discounts"
+  ],
+  "interpretations": [
+    "distributional RL can be biologically plausible through dimensional decomposition and locality",
+    "hippocampal successor representations with multiple discounts may provide the substrate for this code"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "distributional reinforcement learning",
+    "temporal difference code",
+    "local learning rule",
+    "reward prediction error",
+    "successor representation",
+    "eligibility traces",
+    "temporal discounting",
+    "dopamine value coding"
+  ],
+  "out_of_scope_note": null
+}

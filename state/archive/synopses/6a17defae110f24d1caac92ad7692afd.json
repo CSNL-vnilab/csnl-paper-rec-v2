@@ -1,0 +1,60 @@
+{
+  "canonical_id": "6a17defae110f24d1caac92ad7692afd",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "efficient coding",
+      "role": "primary_lens",
+      "one_line": "Neural encoding accuracy should track adaptation-induced stimulus statistics."
+    },
+    {
+      "name": "signal-detection theory",
+      "role": "extended",
+      "one_line": "Discrimination thresholds inverted via Cramer-Rao bound to recover encoding accuracy."
+    },
+    {
+      "name": "sensory adaptation",
+      "role": "context",
+      "one_line": "Prolonged exposure reshapes orientation representation and behavior."
+    }
+  ],
+  "core_question": "How does prolonged orientation adaptation reshape neural encoding accuracy across the orientation space, and is the change consistent with efficient coding?",
+  "key_assumptions": [
+    "Psychophysical thresholds bound underlying neural encoding accuracy via Cramer-Rao.",
+    "Efficient coding predicts encoding accuracy tracks adaptation stimulus statistics.",
+    "Control adaptor matched in non-orientation aspects isolates orientation-specific effects."
+  ],
+  "manipulations": [
+    "Adaptor type: oblique 45 deg grating vs non-oriented control adaptor.",
+    "Test orientation relative to adaptor (at, perpendicular, intermediate)."
+  ],
+  "key_findings": [
+    "Thresholds at the adaptor orientation dropped substantially after adaptation.",
+    "Thresholds perpendicular to the adaptor also dropped substantially.",
+    "Encoding accuracy increased at and perpendicular to the adaptor, decreased in between.",
+    "Increase at the adaptor matches the relative stimulus frequency increase during adaptation."
+  ],
+  "interpretations": [
+    "Encoding change at the adaptor agrees with the efficient coding hypothesis.",
+    "Perpendicular accuracy gain is not explained by efficient coding alone."
+  ],
+  "limitations_noted": [
+    "Small sample (4 subjects).",
+    "Decoding side (whether the system is aware of adaptation-induced encoding changes) left open."
+  ],
+  "connecting_signals": [
+    "orientation adaptation",
+    "efficient coding hypothesis",
+    "Cramer-Rao bound",
+    "discrimination threshold",
+    "encoding accuracy",
+    "stimulus statistics",
+    "perpendicular adaptation transfer",
+    "neural representation change"
+  ],
+  "out_of_scope_note": null
+}

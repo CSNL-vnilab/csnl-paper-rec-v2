@@ -1,0 +1,57 @@
+{
+  "canonical_id": "a1354aae91ffdfd68b136f946c6a5bf2",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:30:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "temporal difference reinforcement learning",
+      "role": "primary_lens",
+      "one_line": "phasic and ramping dopamine encode reward prediction errors as TD-like signals"
+    },
+    {
+      "name": "value coding",
+      "role": "compared_against",
+      "one_line": "alternative account that ramping dopamine directly represents state value"
+    },
+    {
+      "name": "reinforcement learning",
+      "role": "context",
+      "one_line": "machine-learning framework providing the TD error formalism"
+    }
+  ],
+  "core_question": "Do slowly ramping dopamine signals represent state values or reward prediction errors, and can phasic and ramping dopamine be unified under one computation?",
+  "key_assumptions": [
+    "midbrain dopamine activity reflects a single underlying computation across timescales",
+    "value functions evolve smoothly as the animal approaches reward",
+    "RPE and value can be experimentally dissociated using virtual-reality paradigms"
+  ],
+  "manipulations": [
+    "virtual-reality task designs that disambiguate RPE from value",
+    "measurement stage along the dopamine circuit (somatic spikes, axonal calcium, striatal dopamine)",
+    "dynamic stimulus signaling gradual approach to reward"
+  ],
+  "key_findings": [
+    "ramping dopamine signals are consistent with RPEs rather than value",
+    "ramping is observed at somatic spiking, axonal calcium, and striatal dopamine stages",
+    "a dynamic approach-to-reward stimulus is sufficient to drive ramping dopamine"
+  ],
+  "interpretations": [
+    "phasic and ramping dopamine are unified as a derivative-like computation over values on a moment-by-moment basis",
+    "slow dopamine ramps need not arise independently of somatic spiking"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "reward prediction error",
+    "ramping dopamine",
+    "phasic dopamine",
+    "temporal difference learning",
+    "value function derivative",
+    "midbrain dopamine neurons",
+    "striatal dopamine release",
+    "virtual reality reward task"
+  ],
+  "out_of_scope_note": null
+}

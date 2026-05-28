@@ -1,0 +1,60 @@
+{
+  "canonical_id": "6a89acb1c14d7ebe68d857fe86114621",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "evolutionarily prepared learning",
+      "role": "primary_lens",
+      "one_line": "innate threat-relevant cues bias associative fear acquisition in humans"
+    },
+    {
+      "name": "Pavlovian fear conditioning",
+      "role": "primary_lens",
+      "one_line": "CS-US association measured via conditioned fear responses to visual cues"
+    },
+    {
+      "name": "context-dependent memory",
+      "role": "extended",
+      "one_line": "olfactory context modulates encoding and generalization of fear memory"
+    }
+  ],
+  "core_question": "Does a threat-relevant predator odor context strengthen the formation and persistence of human fear memory?",
+  "key_assumptions": [
+    "2-methyl-2-thiazoline acts as an evolutionarily prepared predator-odor cue in humans",
+    "aversiveness-matched control odor isolates threat-relevance from generic unpleasantness",
+    "cortisol indexes a biological stress mechanism linking odor to fear consolidation"
+  ],
+  "manipulations": [
+    "odor context during acquisition (predator odor vs aversiveness-matched control)",
+    "test odor context (same vs different) and extinction phase",
+    "measurement of cortisol in a separate experiment"
+  ],
+  "key_findings": [
+    "predator-odor group showed stronger conditioned fear responses to visual CS than control-odor group",
+    "enhanced fear generalized to a different odor context at test",
+    "enhancement persisted after extinction training",
+    "predator odor was associated with elevated cortisol levels"
+  ],
+  "interpretations": [
+    "innate olfactory threat cues can amplify human fear learning",
+    "odor-context modulation may contribute to maladaptive fear-memory persistence (e.g., PTSD)"
+  ],
+  "limitations_noted": [
+    "cortisol mechanism evidence comes from a separate experiment"
+  ],
+  "connecting_signals": [
+    "predator odor",
+    "2-methyl-2-thiazoline",
+    "human fear conditioning",
+    "evolutionarily prepared learning",
+    "context-dependent fear memory",
+    "extinction resistance",
+    "cortisol stress response",
+    "PTSD"
+  ],
+  "out_of_scope_note": null
+}
