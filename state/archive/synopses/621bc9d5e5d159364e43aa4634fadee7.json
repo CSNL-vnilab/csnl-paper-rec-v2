@@ -1,0 +1,17 @@
+{
+  "canonical_id": "621bc9d5e5d159364e43aa4634fadee7",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "python-prefilter@2026-05-28",
+  "generated_at": "2026-05-28T19:34:40+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.0,
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "keyword-classifier (score=-3, hits=-intraplaque hemorrhage, -carotid plaque, -carotid artery)"
+}
