@@ -1,0 +1,59 @@
+{
+  "canonical_id": "c0cf5c5ef5f007b790b7d64005e5f804",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "encoder-decoder cascade",
+      "role": "primary_lens",
+      "one_line": "perception modeled as probabilistic neural population encoding plus a decoding stage"
+    },
+    {
+      "name": "Bayesian observer",
+      "role": "alternative_lens",
+      "one_line": "decoder maximizes likelihood under an assumed encoding distribution"
+    },
+    {
+      "name": "Fisher information",
+      "role": "context",
+      "one_line": "lower bound on discriminability used to constrain decoder behavior"
+    }
+  ],
+  "core_question": "When sensory adaptation reshapes the neural encoder, must the decoder also update or can a fixed 'unaware' decoder explain perceptual biases?",
+  "key_assumptions": [
+    "perception arises from an encoder-decoder cascade",
+    "adaptation changes the encoder via gain changes in the neural population",
+    "decoder either tracks the encoder ('aware') or remains fixed ('unaware')"
+  ],
+  "manipulations": [
+    "decoder awareness (aware vs unaware of post-adaptation encoder)",
+    "sensory attribute tested (motion direction vs contrast)",
+    "encoder gain-change profile under adaptation"
+  ],
+  "key_findings": [
+    "discriminability is bounded from below by the inverse Fisher information for all decoders",
+    "estimation bias varies widely across decoders, from zero to substantial",
+    "an unaware decoder using the preadaptation encoding likelihood reproduces motion and contrast aftereffect biases"
+  ],
+  "interpretations": [
+    "adaptation-induced perceptual biases reflect temporary suboptimality of the decoder rather than encoder error",
+    "the source of decoder bias is not uniquely identifiable, but unawareness is sufficient to fit behavior"
+  ],
+  "limitations_noted": [
+    "decoder bias source cannot be uniquely constrained from behavior alone"
+  ],
+  "connecting_signals": [
+    "sensory adaptation",
+    "encoder-decoder cascade",
+    "Fisher information bound",
+    "perceptual bias and discriminability",
+    "motion aftereffect",
+    "contrast adaptation",
+    "gain change in neural population",
+    "decoder suboptimality"
+  ],
+  "out_of_scope_note": null
+}

@@ -1,0 +1,51 @@
+{
+  "canonical_id": "84b702666f62d818afd5f49ae753058d",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:30:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "predictive coding",
+      "role": "primary_lens",
+      "one_line": "brain as prediction machine driven by prediction errors across cognitive domains"
+    },
+    {
+      "name": "prediction-error coding",
+      "role": "primary_lens",
+      "one_line": "mismatch between expected and realized events drives neural and cognitive processing"
+    }
+  ],
+  "core_question": "What are the generative mechanisms by which the brain forms, tests, and updates predictions across cognitive domains?",
+  "key_assumptions": [
+    "prediction is a fundamental principle of neural computation",
+    "expectations are tested by matching them to realized events",
+    "prediction errors drive neural and cognitive processes and behavior"
+  ],
+  "manipulations": [
+    "comparison of confirmed vs violated predictions in subsequent processing"
+  ],
+  "key_findings": [
+    "multiple cognitive domains converge on prediction, preparation, anticipation, prospection, and expectation as central constructs",
+    "events that confirm predictions are processed differently from events that violate them"
+  ],
+  "interpretations": [
+    "predictive processing may be one fundamental principle of neural computation across cognition",
+    "no unified theory yet exists; open issues remain before predictive processing can be fully postulated for cognitive and neural function"
+  ],
+  "limitations_noted": [
+    "many open issues remain before a unified theory of predictive processing can be formulated"
+  ],
+  "connecting_signals": [
+    "predictive brain",
+    "prediction error",
+    "expectation violation",
+    "anticipation",
+    "prospection",
+    "predictive processing",
+    "neural computation",
+    "expectation matching"
+  ],
+  "out_of_scope_note": null
+}

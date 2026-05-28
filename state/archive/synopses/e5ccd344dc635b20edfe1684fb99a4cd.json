@@ -1,0 +1,49 @@
+{
+  "canonical_id": "e5ccd344dc635b20edfe1684fb99a4cd",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:30:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "attentional blink",
+      "role": "primary_lens",
+      "one_line": "T2 identification suffers when following T1 within ~900 ms in RSVP"
+    },
+    {
+      "name": "limited-resource attention bottleneck",
+      "role": "compared_against",
+      "one_line": "T1 and T2 compete for limited processing capacity, predicting larger blink when T1 is harder"
+    }
+  ],
+  "core_question": "Does increasing T1 perceptual difficulty (via contrast or exposure duration) modulate the magnitude of the attentional blink on T2?",
+  "key_assumptions": [
+    "T1 and T2 share limited processing resources",
+    "Prolonged T1 processing time should enlarge the blink",
+    "Perceptual difficulty can be operationalized via contrast or exposure duration"
+  ],
+  "manipulations": [
+    "T1 exposure duration (10 ms hard vs longer easy)",
+    "T1 contrast (individually titrated to match identification accuracy)",
+    "T1–T2 latency (stimulus onset asynchrony)"
+  ],
+  "key_findings": [
+    "Robust attentional blink replicated across all conditions",
+    "No difference in blink magnitude between hard, long-duration, and high-contrast T1 conditions"
+  ],
+  "interpretations": [
+    "Increasing T1 perceptual difficulty via contrast or duration is not sufficient to modulate the attentional blink"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "attentional blink",
+    "T1-T2 paradigm",
+    "perceptual difficulty",
+    "limited capacity attention",
+    "RSVP dual-target",
+    "contrast manipulation",
+    "exposure duration"
+  ],
+  "out_of_scope_note": null
+}

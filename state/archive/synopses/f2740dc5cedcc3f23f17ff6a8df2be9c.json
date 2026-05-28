@@ -1,0 +1,59 @@
+{
+  "canonical_id": "f2740dc5cedcc3f23f17ff6a8df2be9c",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "maximum-likelihood estimation",
+      "role": "primary_lens",
+      "one_line": "reliability-weighted integration of egocentric and allocentric visual cues for reach"
+    },
+    {
+      "name": "cue combination",
+      "role": "context",
+      "one_line": "multi-cue integration framework motivating reliability-based weighting"
+    },
+    {
+      "name": "landmark stability heuristic",
+      "role": "extended",
+      "one_line": "extrinsic stability of landmarks added as additional weighting factor beyond reliability"
+    }
+  ],
+  "core_question": "How are egocentric and allocentric visual cues weighted to form memory-guided reach plans, and does landmark stability modulate that weighting beyond cue reliability?",
+  "key_assumptions": [
+    "reach planning integrates egocentric and allocentric cues",
+    "reliability of cues determines their MLE weighting",
+    "landmark stability provides an additional heuristic signal",
+    "pointing variability indexes cue reliability"
+  ],
+  "manipulations": [
+    "landmark vibration amplitude (stability)",
+    "gaze-shift amplitude (egocentric reliability)",
+    "egocentric-allocentric cue conflict",
+    "three reach-to-touch task variants"
+  ],
+  "key_findings": [
+    "landmark vibration strongly shifted egocentric-allocentric weighting",
+    "vibration did not change pointing variability in control task",
+    "MLE model with stability heuristic reproduced the weighting pattern",
+    "reduced MLE without stability heuristic failed to capture the effect"
+  ],
+  "interpretations": [
+    "extrinsic cue stability heuristics matter at least as much as reliability for reach cue weighting",
+    "memory-guided reaching uses MLE-like integration augmented by a stability prior"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "maximum-likelihood cue combination",
+    "egocentric vs allocentric coding",
+    "landmark stability heuristic",
+    "memory-guided reaching",
+    "cue reliability weighting",
+    "visuomotor integration",
+    "reach planning"
+  ],
+  "out_of_scope_note": null
+}
