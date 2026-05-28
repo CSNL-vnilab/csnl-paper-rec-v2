@@ -1,0 +1,47 @@
+{
+  "canonical_id": "a83c47d457619d098f4b574adba4a007",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "NeuroAI",
+      "role": "primary_lens",
+      "one_line": "biologically grounded AI research program inspired by animal sensorimotor competence"
+    },
+    {
+      "name": "embodied Turing test",
+      "role": "extended",
+      "one_line": "benchmark requiring AI animal models to match living counterparts in sensorimotor interaction"
+    }
+  ],
+  "core_question": "What research agenda will catalyze the next generation of AI by drawing on neuroscience and evolved animal capabilities?",
+  "key_assumptions": [
+    "neuroscience has historically driven AI progress",
+    "capabilities shared across animals reflect 500+ million years of evolution",
+    "embodied sensorimotor competence is a meaningful AI benchmark"
+  ],
+  "manipulations": [
+    "proposed shift of evaluation target from human-unique skills (language, games) to animal-shared sensorimotor skills"
+  ],
+  "key_findings": [
+    "argues fundamental NeuroAI investment is needed to accelerate AI progress",
+    "introduces the embodied Turing test as a core evaluative challenge"
+  ],
+  "interpretations": [
+    "building models that pass the embodied Turing test would provide a roadmap for next-generation AI"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "NeuroAI",
+    "embodied Turing test",
+    "brain-inspired AI",
+    "sensorimotor intelligence",
+    "animal models of AI",
+    "evolution of intelligence",
+    "biological inspiration for AI"
+  ],
+  "out_of_scope_note": null
+}

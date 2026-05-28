@@ -1,0 +1,64 @@
+{
+  "canonical_id": "d5061983ce557d1d19e924fdb1bc678b",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "arousal modulation of cortical state",
+      "role": "primary_lens",
+      "one_line": "Subcortical neuromodulatory arousal continuously shapes cortical population activity"
+    },
+    {
+      "name": "pupil-linked arousal",
+      "role": "extended",
+      "one_line": "Pupil size indexes central arousal and tracks regionally specific cortical effects"
+    },
+    {
+      "name": "excitation-inhibition balance",
+      "role": "context",
+      "one_line": "Aperiodic 1/f component reflects shifts in microcircuit E/I balance"
+    },
+    {
+      "name": "locus coeruleus neuromodulation",
+      "role": "context",
+      "one_line": "Brainstem neuromodulatory system implicated as driver of arousal signals"
+    }
+  ],
+  "core_question": "How do moment-to-moment fluctuations in pupil-linked arousal relate to spatially and spectrally specific patterns of cortical population activity across the human brain?",
+  "key_assumptions": [
+    "Pupil size is a reliable peripheral index of central arousal systems",
+    "Arousal effects on cortex are heterogeneous across regions and frequency bands rather than uniform",
+    "MEG power and aperiodic structure reflect underlying microcircuit dynamics"
+  ],
+  "manipulations": [
+    "Time-locking cortical activity to peak of spontaneous pupil dilations",
+    "Comparison across cortical regions (temporal, lateral frontal, mid-frontal, occipito-parietal)",
+    "Spectral decomposition into low (2-8 Hz), intermediate (8-32 Hz), and high (>64 Hz) bands",
+    "Separation of periodic spectral peaks from aperiodic 1/f component"
+  ],
+  "key_findings": [
+    "Low-frequency (2-8 Hz) power decreases in temporal and lateral frontal cortex around pupil dilation peaks",
+    "High-frequency (>64 Hz) power increases in mid-frontal regions following the low-frequency decrease",
+    "Intermediate-band (8-32 Hz) activity in occipito-parietal cortex shows monotonic and inverted-U relationships with pupil size",
+    "Widespread changes in the aperiodic 1/f component co-occur with pupil-linked arousal fluctuations"
+  ],
+  "interpretations": [
+    "Arousal is not a homogeneous cortical modulator but exerts region- and frequency-specific influences on population activity",
+    "Pupil-coupled aperiodic changes index shifts in cortical excitation-inhibition balance, providing a basis for studying arousal modulation of cognition"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "pupil-linked arousal",
+    "neuromodulatory cortical state",
+    "MEG population dynamics",
+    "aperiodic 1/f component",
+    "excitation-inhibition balance",
+    "spontaneous pupil dilation",
+    "frequency-band specific modulation",
+    "locus coeruleus"
+  ],
+  "out_of_scope_note": null
+}
