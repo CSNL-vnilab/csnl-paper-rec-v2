@@ -1,0 +1,39 @@
+{
+  "canonical_id": "4200560bc0f486090d4ca3d9f83441cc",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:30:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "signal-detection theory", "role": "context", "one_line": "Background for treating emotion appropriateness as a graded perceptual judgment."}
+  ],
+  "core_question": "Can graphic-novel-style emotion storyboards replace written vignettes as stimuli for studying social judgments of emotion?",
+  "key_assumptions": [
+    "Context is necessary for judging emotional appropriateness",
+    "Rating distributions index judgment validity",
+    "Engagement and completion time index method efficiency"
+  ],
+  "manipulations": [
+    "Stimulus format: emotion storyboard vs written vignette (between-subject random assignment)"
+  ],
+  "key_findings": [
+    "Storyboards yielded rating distributions comparable to vignettes",
+    "Storyboards produced higher self-reported engagement",
+    "Storyboards led to shorter task completion times"
+  ],
+  "interpretations": [
+    "Emotion storyboards are a viable alternative to vignettes for context-rich emotion-judgment research"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "social judgment of emotion",
+    "emotion appropriateness",
+    "context-rich stimuli",
+    "vignette methodology",
+    "graphic narrative stimulus",
+    "rating distribution comparison",
+    "participant engagement"
+  ],
+  "out_of_scope_note": null
+}

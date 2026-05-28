@@ -1,0 +1,45 @@
+{
+  "canonical_id": "68ad41576d3cb7d691cfee404ec3a48e",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "multi-factor account of visual illusions", "role": "primary_lens", "one_line": "each illusion constitutes its own factor rather than sharing a common cause"},
+    {"name": "common-factor account of visual illusions", "role": "compared_against", "one_line": "single latent factor purported to underlie all visual illusions"},
+    {"name": "subclass account of visual illusions", "role": "compared_against", "one_line": "illusions group into a few classes such as linear-extent or distortion"},
+    {"name": "psychophysics of individual differences", "role": "context", "one_line": "stable per-observer perceptual traits assessed via test-retest reliability"}
+  ],
+  "core_question": "Are individual differences in visual illusion magnitudes stable across eyes, days, and psychophysical methods?",
+  "key_assumptions": [
+    "illusion magnitude is a measurable per-individual trait",
+    "staircase procedures yield comparable magnitude estimates",
+    "within- vs between-illusion variance partitioning indexes shared structure"
+  ],
+  "manipulations": [
+    "tested eye (left vs right)",
+    "test-retest across separate days",
+    "two different psychophysical staircase procedures"
+  ],
+  "key_findings": [
+    "strong within-illusion correlations across manipulations",
+    "weak between-illusion correlations",
+    "each illusion's magnitude is highly stable per individual across eye, time, and method"
+  ],
+  "interpretations": [
+    "results support a high-dimensional multifactorial space where each illusion is largely its own factor",
+    "evidence argues against a single common factor or coarse subclass account"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "individual differences in perception",
+    "visual illusions",
+    "test-retest reliability",
+    "psychophysical staircase",
+    "within- vs between-illusion correlations",
+    "multifactorial structure of perception",
+    "interocular stability"
+  ],
+  "out_of_scope_note": null
+}

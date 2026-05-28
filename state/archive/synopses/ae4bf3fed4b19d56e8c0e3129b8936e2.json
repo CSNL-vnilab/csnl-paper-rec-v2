@@ -1,0 +1,45 @@
+{
+  "canonical_id": "ae4bf3fed4b19d56e8c0e3129b8936e2",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "compressed sensing", "role": "primary_lens", "one_line": "sparse stimulus reconstruction from compressed downstream neural activity."},
+    {"name": "linear neuronal response model", "role": "extended", "one_line": "exploits widespread linearity of single-neuron responses to ramped inputs."},
+    {"name": "hierarchical / multi-layer cortical encoding", "role": "context", "one_line": "compressive and expansive pathways across downstream sensory layers."}
+  ],
+  "core_question": "Can downstream neuronal networks preserve and reconstruct sparse stimulus information despite compressive re-encoding across layers?",
+  "key_assumptions": [
+    "individual neuronal responses are approximately linear under sufficiently strong ramped inputs",
+    "stimuli of interest are sparse",
+    "downstream layers receive compressed signals from upstream layers"
+  ],
+  "manipulations": [
+    "structure of layer connectivity (compressive vs expansive pathways)",
+    "sparsity and form of input stimuli",
+    "neuronal network size across downstream layers"
+  ],
+  "key_findings": [
+    "downstream networks can encode stimulus inputs from their own internal activity",
+    "stimuli can be reconstructed even when upstream layers compress information",
+    "linearity of neuronal responses to ramped inputs supports this reconstruction"
+  ],
+  "interpretations": [
+    "information need not be lost across compressive cortical pathways",
+    "compressed-sensing-style reconstruction offers a mechanism for cross-layer information preservation"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "compressed sensing",
+    "sparse stimulus reconstruction",
+    "downstream neuronal network",
+    "convergent sensory layers",
+    "linear neuronal response",
+    "ramped input",
+    "multi-layer cortical encoding",
+    "information preservation across layers"
+  ],
+  "out_of_scope_note": null
+}

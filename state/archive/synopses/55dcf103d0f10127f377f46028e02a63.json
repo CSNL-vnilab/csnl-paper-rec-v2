@@ -1,0 +1,17 @@
+{
+  "canonical_id": "55dcf103d0f10127f377f46028e02a63",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:30:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.0,
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "Physics/philosophy speculation that the universe's lifecycle is a sine wave; not computational neuroscience."
+}
