@@ -1,0 +1,43 @@
+{
+  "canonical_id": "96ea7e6e84c074a235cc3e47dee29165",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "concealed information test", "role": "primary_lens", "one_line": "Probe-vs-control item paradigm indexing recognition-driven autonomic arousal."},
+    {"name": "pupillometry of emotional arousal", "role": "primary_lens", "one_line": "Pupil dilation as autonomic readout of arousal during deception."},
+    {"name": "sensory modality comparison", "role": "alternative_lens", "one_line": "Auditory versus visual probe presentation as competing input channels."}
+  ],
+  "core_question": "Does the sensory modality of probe items modulate pupil-based detection of concealed information during deception?",
+  "key_assumptions": [
+    "Deception about recognized probes elicits stronger autonomic arousal than control items.",
+    "Pupil dilation reflects this arousal differentially across modalities.",
+    "Self-selected guilt assignment yields comparable engagement across groups."
+  ],
+  "manipulations": [
+    "Group assignment (guilty theft mission vs not-guilty legal mission).",
+    "Item type (probe vs control).",
+    "Probe presentation modality (auditory vs visual)."
+  ],
+  "key_findings": [
+    "Guilty group showed larger and earlier pupil dilation peaks for probe items.",
+    "Visual modality produced stronger discrimination between probe and control responses than auditory."
+  ],
+  "interpretations": [
+    "Pupillometry indexes a sensitive concealed-information signal during deception.",
+    "The strength of this signal depends on the sensory modality of the probe."
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "pupil dilation",
+    "deception detection",
+    "concealed information test",
+    "emotional arousal",
+    "auditory vs visual probes",
+    "probe versus control items",
+    "autonomic response"
+  ],
+  "out_of_scope_note": null
+}

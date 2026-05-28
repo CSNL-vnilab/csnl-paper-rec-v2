@@ -1,0 +1,38 @@
+{
+  "canonical_id": "da45368108b8e6b195bb302b0e3ae5a3",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:30:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "finite element head modeling", "role": "primary_lens", "one_line": "Individualized FEM predicts cortical electric field magnitude from anatomy."}
+  ],
+  "core_question": "How does scalp-to-cortex distance at left primary motor cortex relate to predicted electric field magnitude in non-invasive brain stimulation?",
+  "key_assumptions": [
+    "Individualized MRI-derived anatomy is needed to predict cortical dose",
+    "Electric field at the cortical target indexes NIBS effective dose"
+  ],
+  "manipulations": [
+    "Inter-individual variation in scalp-to-cortex distance across N=50 adults"
+  ],
+  "key_findings": [
+    "Scalp-to-cortex distance showed substantial inter-individual variance",
+    "Predicted cortical current density scaled inversely with scalp-to-cortex distance"
+  ],
+  "interpretations": [
+    "Scalp-to-cortex distance should be a routinely reported covariate in NIBS studies",
+    "Scalp-to-cortex distance should inform personalized neurostimulation dosing"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "non-invasive brain stimulation",
+    "scalp-to-cortex distance",
+    "individualized head model",
+    "finite element model",
+    "primary motor cortex",
+    "personalized neurostimulation dosing",
+    "cortical electric field"
+  ],
+  "out_of_scope_note": null
+}

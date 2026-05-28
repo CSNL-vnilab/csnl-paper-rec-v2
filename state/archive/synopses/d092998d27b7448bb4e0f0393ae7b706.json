@@ -1,0 +1,41 @@
+{
+  "canonical_id": "d092998d27b7448bb4e0f0393ae7b706",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "locus coeruleus-norepinephrine arousal", "role": "context", "one_line": "pupil size as readout of arousal/effort modulating tonic and phasic responses"},
+    {"name": "covert spatial attention", "role": "primary_lens", "one_line": "attentional breadth (foveal vs peripheral) as distinct modulator of pupil baseline"}
+  ],
+  "core_question": "Do task difficulty and attentional breadth modulate tonic baseline pupil size and phasic stimulus-locked pupil response through shared or separate mechanisms?",
+  "key_assumptions": [
+    "tonic baseline and phasic stimulus-response are dissociable pupil signals",
+    "covert attentional breadth can be parametrically allocated to foveal vs peripheral locations"
+  ],
+  "manipulations": [
+    "task difficulty (easy vs hard discrimination)",
+    "attentional breadth (foveal vs peripheral covert attention)"
+  ],
+  "key_findings": [
+    "higher task difficulty increased both tonic baseline and phasic response amplitude",
+    "broader peripheral attention increased only tonic baseline, not phasic response"
+  ],
+  "interpretations": [
+    "tonic and phasic pupil modulation rely on at least partly separate mechanisms",
+    "task-difficulty engages both systems whereas attentional-breadth engages only the tonic system"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "tonic pupil size",
+    "phasic pupil response",
+    "task difficulty",
+    "attentional breadth",
+    "covert spatial attention",
+    "baseline pupil diameter",
+    "stimulus-locked pupil response",
+    "arousal effort"
+  ],
+  "out_of_scope_note": null
+}

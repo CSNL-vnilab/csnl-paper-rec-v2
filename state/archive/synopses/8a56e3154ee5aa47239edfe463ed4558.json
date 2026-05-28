@@ -1,0 +1,45 @@
+{
+  "canonical_id": "8a56e3154ee5aa47239edfe463ed4558",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "layered representation framework", "role": "primary_lens", "one_line": "brain representations as onion: behavioral, neural-pattern, causal-mechanistic layers."},
+    {"name": "representational similarity / geometry", "role": "context", "one_line": "geometry of distributed activity patterns probes the middle layer."},
+    {"name": "neural decoding", "role": "context", "one_line": "decoding accuracy treated as a behavioral-layer readout signature."},
+    {"name": "causal perturbation logic", "role": "context", "one_line": "perturbation effects probe the inner causal-mechanistic substrate."}
+  ],
+  "core_question": "What does it mean to say the brain 'represents' something, and how should empirical signatures be assigned to representational claims?",
+  "key_assumptions": [
+    "representation links neural activity to content in the world",
+    "different empirical signatures index different levels of description",
+    "behavior, neural patterns, and mechanism are separable but related layers"
+  ],
+  "manipulations": [
+    "conceptual triangulation across decoding, geometry, and perturbation evidence"
+  ],
+  "key_findings": [
+    "decoding accuracy, representational geometry, and perturbation effects probe distinct layers",
+    "conflating evidence across layers produces confusion about what 'the representation' is"
+  ],
+  "interpretations": [
+    "representational claims should be tested by triangulating across the three layers",
+    "behavioral readout, distributed activity, and causal substrate are nested but non-identical"
+  ],
+  "limitations_noted": [
+    "perspective piece sketches a framework rather than providing empirical tests"
+  ],
+  "connecting_signals": [
+    "brain representations",
+    "decoding accuracy",
+    "representational geometry",
+    "causal perturbation",
+    "levels of description",
+    "neural coding",
+    "representational content",
+    "triangulation across signatures"
+  ],
+  "out_of_scope_note": null
+}
