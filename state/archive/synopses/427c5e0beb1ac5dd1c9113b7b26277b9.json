@@ -1,0 +1,17 @@
+{
+  "canonical_id": "427c5e0beb1ac5dd1c9113b7b26277b9",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T20:36:45+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.0,
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "Clinical-bioanalytical assay: enzymatic responsive sensing for trace detection of multiple macromolecular biomarkers in saliva; point-of-care diagnostics chemistry, not computational neuroscience."
+}

@@ -1,0 +1,17 @@
+{
+  "canonical_id": "6d3595509405573e220b6c74a5e29ed7",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T20:37:12+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.0,
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "Food-processing technology: enzyme-assisted extraction of saponin microcapsules and incorporation into gelatin-based gummy confections; food engineering, not computational neuroscience."
+}
