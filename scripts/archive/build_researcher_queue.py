@@ -50,7 +50,16 @@ CHUNK_BOUNDS = {"recent": (0, 5), "mid": (5, 10), "classic": (10, 999)}
 # new batches as researchers exhaust their queues.
 # To keep the FULL archive as the candidate pool instead, pass
 # `--all-in-scope` which caps each chunk at the full in-scope set.
-_DEFAULT_CHUNK_MIX = {"recent": 30, "mid": 15, "classic": 5}
+_DEFAULT_CHUNK_MIX = {"recent": 120, "mid": 60, "classic": 20}
+# P22b (2026-05-28): bumped from {30,15,5}=50 to {120,60,20}=200. User
+# feedback: "사전에 빌드할 논문 리스트는 200편이면 충분하다" — the in-session
+# re-rank (P17) plus the per-batch belief update is what makes the queue
+# adapt; the static pool just needs enough headroom that the next 10
+# Stage-4 cycles never starve. 200 covers ~20 in-session re-ranks before
+# operator re-build is even worth considering.
+_MAX_QUEUE_PER_RESEARCHER = 1000
+# Hard cap on total queue size regardless of chunk_mix / --top / --all-in-scope.
+# User constraint: "인당 Queue 전체 크기는 1000편을 넘겨서는 안되며".
 
 # P19b — composite mode. When n_phrases is sparse (≤3), the BM25 signal
 # is high-variance and a fixed 0.30 weight on it hurts cold-start
@@ -606,8 +615,10 @@ def main() -> int:
     ap.add_argument("--top", type=int, default=None,
                     help="P19d: Top-N per chunk OVERRIDE. Default None → "
                          "use chunk_mix from researcher's verified profile "
-                         "or _DEFAULT_CHUNK_MIX={30,15,5}=50. Pass an "
-                         "integer to bump every chunk to that size.")
+                         "or _DEFAULT_CHUNK_MIX={120,60,20}=200. Pass an "
+                         "integer to bump every chunk to that size. The "
+                         "TOTAL queue is still capped at "
+                         "_MAX_QUEUE_PER_RESEARCHER=1000 regardless.")
     ap.add_argument("--apply", action="store_true")
     ap.add_argument("--backend", default=os.environ.get("CSNL_EMBED_BACKEND", "local"),
                     choices=("local", "voyage", "jina", "openai"))
@@ -623,11 +634,13 @@ def main() -> int:
                          "has ≤3 phrases (cold-start), linear otherwise. "
                          "Override for testing.")
     ap.add_argument("--all-in-scope", action="store_true",
-                    help="P19d: bypass chunk_mix limits and keep ALL "
-                         "in-scope papers in the queue (~7,500 per "
-                         "researcher). Heaviest mode; rarely needed since "
-                         "the default 50-paper queue + per-batch refresh "
-                         "covers ~5 Stage-4 cycles.")
+                    help="P19d: expand chunk_mix to the queue cap "
+                         "(_MAX_QUEUE_PER_RESEARCHER=1000, split "
+                         "proportionally to chunk_mix). Rarely needed since "
+                         "the default 200-paper queue + per-batch refresh "
+                         "covers ~20 Stage-4 cycles. (P22b: previously "
+                         "uncapped at ~7,500; capped at 1000 by user "
+                         "constraint.)")
     args = ap.parse_args()
     # Normalize researcher init.
     if args.researcher:
@@ -708,10 +721,26 @@ def main() -> int:
         if args.top is not None:
             chunk_mix = {k: args.top for k in chunk_mix}
         if args.all_in_scope:
-            # ALL in-scope papers per chunk — for one-shot rebuilds when
-            # operator wants the researcher to have the full archive as
-            # their pool and never re-trigger a rebuild.
-            chunk_mix = {k: 99999 for k in chunk_mix}
+            # P22b: bypass chunk_mix and expand to the per-researcher cap.
+            # Distribute proportionally to _DEFAULT_CHUNK_MIX (so the recent /
+            # mid / classic ratio survives). Previously this set 99999 per
+            # chunk, producing 7,000+ papers and saturating the queue with
+            # papers that have no synopsis yet.
+            total_default = sum(_DEFAULT_CHUNK_MIX.values())
+            chunk_mix = {
+                k: max(1, round(_MAX_QUEUE_PER_RESEARCHER * v / total_default))
+                for k, v in _DEFAULT_CHUNK_MIX.items()
+            }
+        # P22b: enforce the hard cap on total queue size. If the chunk_mix
+        # sums above _MAX_QUEUE_PER_RESEARCHER (because of a high --top or
+        # a profile chunk_mix from before the cap), scale every chunk down
+        # proportionally to land at or below the cap.
+        total_requested = sum(chunk_mix.values())
+        if total_requested > _MAX_QUEUE_PER_RESEARCHER:
+            scale = _MAX_QUEUE_PER_RESEARCHER / total_requested
+            chunk_mix = {k: max(1, int(v * scale)) for k, v in chunk_mix.items()}
+            print(f"[queue] {init}: chunk_mix scaled to honor cap "
+                  f"{_MAX_QUEUE_PER_RESEARCHER}: {chunk_mix}")
         # P15: build the query embedding as a weighted average of
         # per-project embeddings when the researcher specified
         # project_weights at Stage 1; otherwise fall back to one shared
