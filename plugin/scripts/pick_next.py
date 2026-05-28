@@ -207,22 +207,50 @@ def main() -> int:
         return rows
 
     for ch in chunks:
+        # P21: LEFT JOIN archive_paper_synopses so the interview turn can render
+        # a grounded Block 2 from the per-paper synopsis (core_question, key
+        # findings, frameworks) instead of having to re-derive everything from
+        # the abstract every time. The same UPSERTed synopsis is used for the
+        # auto-loop's 1205 papers (committed 2026-05-28).
+        # NOT EXISTS exclusion against archive_paper_synopses where the synopsis
+        # was marked out-of-scope (~122 papers — clinical surgery, materials
+        # science, climate, etc.) — those should never reach the interview
+        # because they would waste the researcher's time. archive_responses
+        # exclusion preserves the researcher's read/to_read/not_interested
+        # history exactly as before (independent table, never touched by the
+        # synopsis import).
         sql = f"""
             SELECT q.canonical_id, q.chunk, q.rank_in_chunk, q.similarity,
                    p.doi, p.title, p.authors_json, p.venue, p.year,
                    p.pub_date, p.is_preprint, p.abstract,
-                   f.lab_scope_tags, f.dim_tags
+                   f.lab_scope_tags, f.dim_tags,
+                   s.frameworks         AS syn_frameworks,
+                   s.core_question      AS syn_core_question,
+                   s.key_assumptions    AS syn_key_assumptions,
+                   s.manipulations      AS syn_manipulations,
+                   s.key_findings       AS syn_key_findings,
+                   s.interpretations    AS syn_interpretations,
+                   s.limitations_noted  AS syn_limitations_noted,
+                   s.connecting_signals AS syn_connecting_signals,
+                   s.abstract_coverage  AS syn_abstract_coverage,
+                   s.review_status      AS syn_review_status
               FROM {sch}.archive_researcher_queues q
               JOIN {sch}.archive_papers p
                 ON p.canonical_id = q.canonical_id
               LEFT JOIN {sch}.archive_filter_decisions f
                 ON f.canonical_id = q.canonical_id
+              LEFT JOIN {sch}.archive_paper_synopses s
+                ON s.canonical_id = q.canonical_id
              WHERE q.researcher_id = %s
                AND q.chunk = %s
                AND NOT EXISTS (
                  SELECT 1 FROM {sch}.archive_responses r
                   WHERE r.researcher_id = q.researcher_id
                     AND r.canonical_id  = q.canonical_id
+               )
+               AND NOT (
+                 s.canonical_id IS NOT NULL
+                 AND s.out_of_scope_note IS NOT NULL
                )
         """
         # No LIMIT — we need to re-rank the whole unanswered subset.
@@ -242,6 +270,27 @@ def main() -> int:
             r["lab_scope_tags"] = _j(r.get("lab_scope_tags"))
             r["dim_tags"]       = _j(r.get("dim_tags"))
             r["dim_match"]      = _j(r.get("dim_match"))
+
+            # P21: collapse syn_* columns into a nested `synopsis` object. The
+            # interview layer (SKILL.md Stage 2 Block 2) reads this object to
+            # ground the project × paper × connection rationale in
+            # paper-derived content rather than abstract-only inference.
+            # When the LEFT JOIN found no matching synopsis row (e.g. for
+            # papers ingested after the 2026-05-28 batch but not yet
+            # synopsized), syn_* are all NULL and `synopsis` becomes None so
+            # the SKILL falls back to the legacy abstract-only path.
+            syn_keys = (
+                "frameworks", "core_question", "key_assumptions",
+                "manipulations", "key_findings", "interpretations",
+                "limitations_noted", "connecting_signals",
+                "abstract_coverage", "review_status",
+            )
+            if r.get("syn_review_status") is None and r.get("syn_core_question") is None:
+                r["synopsis"] = None
+            else:
+                r["synopsis"] = {k: _j(r.get(f"syn_{k}")) for k in syn_keys}
+            for k in syn_keys:
+                r.pop(f"syn_{k}", None)
 
             # Stage this canonical_id on the session so record_choice.py can
             # verify the choice came from a recent pick_next call. If

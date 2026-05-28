@@ -34,6 +34,26 @@ operator periodically refreshes:
    `csnl_research.projects` text changes substantially. It is NOT a
    per-session or per-batch operation.
 
+6. **P21 — per-paper synopsis layer** (added 2026-05-28): every paper in the
+   classics corpus has a structured synopsis stored in
+   `archive_paper_synopses` (frameworks, core_question, key_findings,
+   interpretations, connecting_signals, limitations_noted, abstract_coverage).
+   `pick_next.py` LEFT JOINs it onto each emitted paper as the nested
+   `paper.synopsis` object. The Stage 2 Block 2 generator uses this object
+   as the primary source for the "what THIS paper does" slot when present;
+   the abstract is the fallback when `paper.synopsis is None`.
+
+   Out-of-scope papers (those with `archive_paper_synopses.out_of_scope_note
+   IS NOT NULL` — ~122 papers covering clinical surgery, battery materials,
+   climate science, etc.) are auto-excluded from the candidate pool by
+   `pick_next.py`. The researcher never sees them, saving turns.
+
+   The synopsis is content-only. The researcher's response history in
+   `archive_responses` (read / to_read / not_interested / maybe_interested
+   / skipped) is a SEPARATE table with PK (researcher_id, canonical_id) and
+   was NOT touched by the synopsis import. Re-running the synopsis import
+   preserves every prior response.
+
 ## Execution invariants (P16 hardening — applies to every turn)
 
 These rules exist because researchers will run 20+ turns over a session
@@ -510,6 +530,55 @@ Loop until `pick_next.py` returns `done:true`:
    project × model rationale on top. The pre-computed `render_ko` field is
    a **hint, not a final clause** — always rewrite it into the
    project × model shape above.
+
+   #### P21 — Use the synopsis (when present) as the primary source for slot (ii)
+
+   The queue row may carry a non-null `paper.synopsis` object (added 2026-05-28
+   from `archive_paper_synopses`, populated for ~1083 in-scope papers in the
+   classics corpus). It contains paper-derived structured content that you
+   should treat as **the primary source for slot (ii)** — the "what THIS paper
+   actually does" sentence — instead of mining the raw abstract.
+
+   Authoritative fields on `paper.synopsis`:
+   - `core_question` — one-sentence research question (good seed for slot (ii))
+   - `key_findings[]` — ≤4 complete-sentence empirical findings (each is a
+     ready-made grammatical sentence; you may use one verbatim if it fits the
+     researcher's project, or paraphrase into Korean)
+   - `interpretations[]` — ≤2 author claims about meaning (good for the
+     connection clause when the paper's interpretation aligns or contradicts
+     the researcher's model)
+   - `frameworks[].name` + `frameworks[].role` — the framework(s) this paper
+     engages, with role in `{primary_lens, alternative_lens, compared_against,
+     extended, context}`. Use this to phrase the connection clause precisely
+     (e.g. "본 논문은 efficient-coding 를 `compared_against` 위치에서 다루는데,
+     연구원님 프로젝트는 같은 framework 를 `primary_lens` 로 쓰십니다 → 같은
+     phenomenon 에 대한 framework-level dissociation 가능").
+   - `connecting_signals[]` — short noun phrases someone else would search
+     for; cross-reference these with `topics[*]` from the researcher's profile
+     to ground slot (iii).
+   - `abstract_coverage` — fraction of `key_findings + interpretations`
+     paraphrasable from the abstract (≥ 0.7 = trustworthy synopsis; < 0.5 =
+     synopsis was extracted from a thin abstract, prefer reading the original
+     abstract directly).
+
+   Slot mapping with synopsis present:
+   - **(ii) what THIS paper does** → paraphrase `synopsis.core_question` +
+     ONE specific element from `synopsis.key_findings[]` (or
+     `synopsis.manipulations[]` for design-focused papers). Format as one
+     complete Korean sentence. You may embed ≤ 8 verbatim English words from
+     `key_findings[]` inside the sentence — never as a standalone snippet.
+   - **(iii) connection clause** → look for overlap between
+     `synopsis.connecting_signals[]` / `synopsis.frameworks[*].name` and the
+     researcher's `topics[*]`. The strongest connections are framework-role
+     mismatches (extended ↔ primary_lens, compared_against ↔ primary_lens)
+     because they imply a concrete next analysis the researcher could run.
+
+   When `paper.synopsis` is null (paper not yet synopsized), fall back to
+   reading `paper.abstract` as before — the slot rules above are unchanged.
+
+   When `paper.synopsis.review_status == 'human_approved'`, the content was
+   curated by a human and you may rely on it more heavily than the
+   `auto_unreviewed` default.
 
    ### Block 3 — Uncertainty branch (only when grounding is impossible)
 
