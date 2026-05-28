@@ -1,0 +1,17 @@
+{
+  "canonical_id": "303cb829f6c36985c467dc7a2e266604",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7-bypass@2026-05-28",
+  "generated_at": "2026-05-28T21:29:28+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.0,
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "Battery materials: non-solvent-induced phase separation enables designer redox flow battery electrodes; battery materials engineering, not computational neuroscience."
+}

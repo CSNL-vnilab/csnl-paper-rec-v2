@@ -1,0 +1,48 @@
+{
+  "canonical_id": "49a98746e45515d1195c5ac5c3a31faf",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T17:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "inductive bias",
+      "role": "primary_lens",
+      "one_line": "domain-general priors that constrain learning and generalization from sparse input"
+    },
+    {
+      "name": "causal perception",
+      "role": "extended",
+      "one_line": "events are perceived as causally contingent rather than merely correlated"
+    }
+  ],
+  "core_question": "What domain-general inductive biases do people hold, and how pervasive are they across perception and reasoning?",
+  "key_assumptions": [
+    "human learners bring structured priors to perception, not blank-slate statistics",
+    "some inductive biases are domain-general rather than tied to specific content"
+  ],
+  "manipulations": [
+    "review-style examination of candidate domain-general biases (e.g., causality)",
+    "appeal to Michotte-style sparse launching-event displays as evidence"
+  ],
+  "key_findings": [
+    "causality is identified as a candidate pervasive, domain-general inductive bias",
+    "the impression of causation arises from extremely sparse visual information"
+  ],
+  "interpretations": [
+    "observers infer causal structure without rich prior knowledge of the environment",
+    "such pervasive biases plausibly shape generalization across domains"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "inductive bias",
+    "domain-general priors",
+    "causal perception",
+    "Michotte launching effect",
+    "structure learning",
+    "generalization from sparse input",
+    "perceived causality"
+  ],
+  "out_of_scope_note": null
+}

@@ -1,0 +1,66 @@
+{
+  "canonical_id": "147aa7865e2842810842bae16fd59b5c",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "functional cell-type clustering",
+      "role": "primary_lens",
+      "one_line": "lOFC neurons partition into discrete response clusters."
+    },
+    {
+      "name": "generalized linear model",
+      "role": "primary_lens",
+      "one_line": "Poisson GLM quantifies per-neuron encoding of task variables."
+    },
+    {
+      "name": "corticostriatal projection identity",
+      "role": "context",
+      "one_line": "Implicated cluster resembles identified corticostriatal cells."
+    },
+    {
+      "name": "sequential-effects / trial-by-trial learning",
+      "role": "context",
+      "one_line": "Reward-history integration as substrate for risk-history bias."
+    }
+  ],
+  "core_question": "Do distinct functional subpopulations of lateral OFC neurons integrate previous and current rewards at the time of choice?",
+  "key_assumptions": [
+    "Prefrontal response heterogeneity reduces to a few discrete clusters.",
+    "PSTH and conditional-feature clustering expose meaningful cell types.",
+    "CPD and mutual information validly index encoding strength."
+  ],
+  "manipulations": [
+    "Trial-by-trial cued reward probability and reward volume.",
+    "Left/right side randomly assigned as risky (p<1) or safe (p=1).",
+    "Clustering method: PSTH vs conditional-feature-space."
+  ],
+  "key_findings": [
+    "Both methods yield five lOFC clusters with substantial cross-method overlap on two.",
+    "Reward attributes weakly encoded; reward history, choice, and reward receipt strongly encoded across clusters.",
+    "Only one cluster encodes reward history shortly preceding choice (CPD, MI, d' agree).",
+    "That cluster also has the strongest current-outcome encoding and resembles corticostriatal cells."
+  ],
+  "interpretations": [
+    "A specific lOFC subpopulation is positioned to integrate previous and current outcomes at choice, possibly mediating sequential learning.",
+    "lOFC behavioral flexibility may derive from dedicated cell types rather than uniform coding."
+  ],
+  "limitations_noted": [
+    "Silhouette score inconclusive in this regime; gap statistic is conservative.",
+    "Projection target inferred by resemblance, not directly identified here."
+  ],
+  "connecting_signals": [
+    "lateral orbitofrontal cortex",
+    "reward history encoding",
+    "functional subpopulations",
+    "PSTH clustering",
+    "Poisson generalized linear model",
+    "coefficient of partial determination",
+    "corticostriatal projection neurons",
+    "sequential effects"
+  ],
+  "out_of_scope_note": null
+}

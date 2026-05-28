@@ -1,0 +1,17 @@
+{
+  "canonical_id": "57ddc8c421c3d8bead8d3aed5258075b",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T21:30:14+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.0,
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "Applied audience-psychology / affective-computing study using wrist PPG to derive between-subject HRV synchrony as a marker of engaging movie segments, validated by self-reported engagement in follow-up cohorts. No neural recording, no circuit- or computation-level model of perception, decision, or encoding; the paper proposes HRV synchrony as a practical authoring tool for trailer editing. Falls under the 'social/HCI study without neural data or computational model of cognition' OOS category."
+}

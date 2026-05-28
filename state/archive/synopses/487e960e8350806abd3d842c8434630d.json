@@ -1,0 +1,65 @@
+{
+  "canonical_id": "487e960e8350806abd3d842c8434630d",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "deep generative models / normalizing flows",
+      "role": "primary_lens",
+      "one_line": "Deep probability distributions as flexible approximating family for circuit parameter posteriors."
+    },
+    {
+      "name": "approximate Bayesian computation",
+      "role": "compared_against",
+      "one_line": "Conventional ABC for circuit inverse problems, contrasted on scaling and expressivity."
+    },
+    {
+      "name": "maximum entropy / variational inference",
+      "role": "alternative_lens",
+      "one_line": "EPI optimization framed as max-entropy distribution under emergent-property moment constraints."
+    },
+    {
+      "name": "stabilized supralinear network (E/I balance)",
+      "role": "context",
+      "one_line": "Used as primary visual cortex model whose parametric structure EPI dissects."
+    }
+  ],
+  "core_question": "How can one infer distributions of circuit-model parameters that produce a specified emergent computational property, rather than fitting an exemplar dataset?",
+  "key_assumptions": [
+    "Computation of interest is expressible as moment constraints on a derived statistic (the emergent property).",
+    "A deep normalizing-flow family is expressive enough to capture multimodal, curved parameter posteriors.",
+    "Maximum-entropy selection over constraint-satisfying distributions yields a principled posterior."
+  ],
+  "manipulations": [
+    "Circuit model studied (STG subcircuit, rank-2 RNN, V1 SSN, superior colliculus task-switching).",
+    "Parameter dimensionality / network size N (scalability test vs ABC and SNPE).",
+    "Specified emergent property (intermediate hub frequency, stable amplification, excitatory variability, task-switching connectivity)."
+  ],
+  "key_findings": [
+    "EPI scales to higher parameter dimension and converges more efficiently than ABC and SNPE on RNN connectivity inference.",
+    "In V1 SSN, EPI exposes how recurrent processing across neuron-type inputs shapes excitatory variability — a relationship shown to be analytically intractable.",
+    "In superior colliculus, EPI discovers two distinct connectivity regimes for task switching that reproduce optogenetic-inactivation results in different ways.",
+    "Hessian of the learned log-density at modes yields per-direction sensitivity/robustness of parameter combinations to the emergent property."
+  ],
+  "interpretations": [
+    "Emergent-property inference, by conditioning directly on the computation rather than a dataset, is better aligned with theorists' modeling goals than likelihood-on-data fitting.",
+    "Deep inference makes previously intractable interrogation of biologically realistic circuit models — including degeneracy, multimodality, and sensitivity structure — routine."
+  ],
+  "limitations_noted": [
+    "Specifying an emergent property as moment constraints requires the theorist to articulate the computation statistically, which may be non-trivial."
+  ],
+  "connecting_signals": [
+    "emergent property inference",
+    "inverse problem in circuit modeling",
+    "normalizing flows for parameter posteriors",
+    "parametric degeneracy",
+    "stabilized supralinear network",
+    "stomatogastric ganglion model",
+    "superior colliculus task switching",
+    "sensitivity-robustness Hessian analysis"
+  ],
+  "out_of_scope_note": null
+}

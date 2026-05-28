@@ -1,0 +1,56 @@
+{
+  "canonical_id": "2d0918754bb8badc814a3992f34cf83d",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "population coding",
+      "role": "primary_lens",
+      "one_line": "subpopulations within STN carry dissociable codes for kinematics versus action switches"
+    },
+    {
+      "name": "global inhibition of movement",
+      "role": "compared_against",
+      "one_line": "the view that STN broadly suppresses ongoing actions during switches"
+    },
+    {
+      "name": "beta-band motor inhibition",
+      "role": "compared_against",
+      "one_line": "the account that elevated STN beta power drives action stopping"
+    }
+  ],
+  "core_question": "Does the human subthalamic nucleus globally inhibit ongoing movement when an action plan must be replaced mid-action?",
+  "key_assumptions": [
+    "STN single-unit and LFP activity in Parkinson's patients reflect normal STN computation",
+    "an extended reaching task with mid-trajectory changes isolates action switching from action withholding"
+  ],
+  "manipulations": [
+    "ongoing reach trajectory was changed mid-action versus continued unchanged",
+    "compared switching trials to standard reaching"
+  ],
+  "key_findings": [
+    "STN firing decreased rather than increased during action switches",
+    "STN beta power and beta spike entrainment did not rise during switches",
+    "one STN subpopulation encoded movement kinematics and direction",
+    "a separate STN subpopulation encoded unexpected action switches"
+  ],
+  "interpretations": [
+    "STN does not implement a global movement-stopping signal during action replacement",
+    "STN carries an inhomogeneous population code supporting both planning and plan revision"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "subthalamic nucleus",
+    "population coding",
+    "movement kinematics",
+    "action switching",
+    "basal ganglia",
+    "beta oscillations",
+    "Parkinson's disease",
+    "reaching task"
+  ],
+  "out_of_scope_note": null
+}
