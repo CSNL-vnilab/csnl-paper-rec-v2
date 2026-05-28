@@ -110,7 +110,8 @@ def exec_sql(sql: str) -> None:
         return
     proc = subprocess.run(
         _psql_args() + ["-q", "-c", sql],
-        capture_output=True, text=True, env=_psql_env(), timeout=120,
+        capture_output=True, text=True, encoding="utf-8",
+        env=_psql_env(), timeout=120,
     )
     if proc.returncode != 0:
         raise RuntimeError(f"psql exec failed: {proc.stderr.strip()}")
@@ -147,9 +148,15 @@ def exec_many(sql: str, rows: list[tuple]) -> int:
         for v in r:
             filled = filled.replace("%s", lit(v), 1)
         stmts.append(filled if filled.rstrip().endswith(";") else filled + ";")
+    # Wrap all statements in an explicit transaction so the psql fallback path
+    # matches the psycopg2 path's chunk-atomicity. Without this, a failure on
+    # statement N leaves statements 1..N-1 committed and N+1..M skipped
+    # (codex adversarial review finding #6 — HIGH).
+    payload = "BEGIN;\n" + "\n".join(stmts) + "\nCOMMIT;\n"
     proc = subprocess.run(
-        _psql_args() + ["-q", "-c", "\n".join(stmts)],
-        capture_output=True, text=True, env=_psql_env(), timeout=120,
+        _psql_args() + ["-q", "-v", "ON_ERROR_STOP=1", "-c", payload],
+        capture_output=True, text=True, encoding="utf-8",
+        env=_psql_env(), timeout=120,
     )
     if proc.returncode != 0:
         raise RuntimeError(f"psql exec_many failed: {proc.stderr.strip()}")
@@ -169,7 +176,8 @@ def query_json(sql: str) -> list[dict]:
             conn.close()
     proc = subprocess.run(
         _psql_args() + ["-tAc", wrapped],
-        capture_output=True, text=True, env=_psql_env(), timeout=120,
+        capture_output=True, text=True, encoding="utf-8",
+        env=_psql_env(), timeout=120,
     )
     if proc.returncode != 0:
         raise RuntimeError(f"psql query failed: {proc.stderr.strip()}")
