@@ -1,0 +1,39 @@
+{
+  "canonical_id": "e5c71361a2bde99b22a323c9975f90d5",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "population forward models", "role": "primary_lens", "one_line": "generative description linking columnar selectivity to noninvasive voxel-level signal"},
+    {"name": "voxel pattern analysis", "role": "compared_against", "one_line": "data-analysis pipelines that recover selectivity from response patterns without explicit population model"}
+  ],
+  "core_question": "How should the field formalize the link between cortical-column-scale neural selectivity and noninvasive human neuroscience signals?",
+  "key_assumptions": [
+    "basic stimulus selectivity (e.g. orientation) is organized at the columnar scale",
+    "noninvasive measurements aggregate over sub-resolution neural populations",
+    "explicit generative models can connect underlying populations to measured signal"
+  ],
+  "manipulations": [],
+  "key_findings": [
+    "pattern-based analyses can recover orientation selectivity from voxel responses despite sub-voxel columnar organization",
+    "existing analysis pipelines lack explicit population-level forward models linking recoverable signal to neural populations"
+  ],
+  "interpretations": [
+    "the field should shift from data-analysis pipelines to formal population MODELS of how columnar selectivity gives rise to noninvasive signals",
+    "such generative models are needed for principled interpretation and inference from human neuroimaging data"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "population forward model",
+    "cortical columns",
+    "orientation selectivity",
+    "voxel pattern analysis",
+    "noninvasive neuroimaging",
+    "generative model of fMRI signal",
+    "sub-voxel selectivity",
+    "linking model"
+  ],
+  "out_of_scope_note": null
+}

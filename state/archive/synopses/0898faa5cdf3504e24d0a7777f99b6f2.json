@@ -1,0 +1,45 @@
+{
+  "canonical_id": "0898faa5cdf3504e24d0a7777f99b6f2",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T12:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "divisive normalization", "role": "primary_lens", "one_line": "Surround divisively inhibits center gain to bias perceived orientation."},
+    {"name": "subtractive inhibition", "role": "compared_against", "one_line": "Subtractive model fails to capture adaptation-induced orientation biases."},
+    {"name": "perceptual filling-in", "role": "context", "one_line": "Center percept replaced by surround via lateral modulation."}
+  ],
+  "core_question": "What lateral-inhibition mechanism underlies orientation filling-in in eccentric center-surround stimuli?",
+  "key_assumptions": [
+    "Filling-in reflects lateral modulation of center read-out by surround signals",
+    "Selective adaptation isolates contributions of center, surround, and combined channels",
+    "Eccentric vision recruits the same mechanisms probed by adaptation"
+  ],
+  "manipulations": [
+    "Adapter location: center pedestal vs. surround annulus vs. full disk",
+    "Adapter vs. test orientation relationship in center-surround sinusoid"
+  ],
+  "key_findings": [
+    "Surround-only adaptation biased perceived center orientation toward the surround",
+    "Center-only adaptation did not produce the orientation bias",
+    "Divisive-inhibition model fit biases across all adapter conditions",
+    "Subtractive model failed to capture the bias pattern"
+  ],
+  "interpretations": [
+    "Surround signals laterally bias center read-out via divisive gain control",
+    "Filling-in in eccentric vision is mediated by divisive, not subtractive, surround inhibition"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "lateral modulation",
+    "divisive inhibition",
+    "perceptual filling-in",
+    "center-surround interaction",
+    "orientation adaptation",
+    "eccentric vision",
+    "surround suppression",
+    "gain control"
+  ],
+  "out_of_scope_note": null
+}

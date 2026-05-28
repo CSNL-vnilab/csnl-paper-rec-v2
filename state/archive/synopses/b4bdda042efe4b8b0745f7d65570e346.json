@@ -1,0 +1,40 @@
+{
+  "canonical_id": "b4bdda042efe4b8b0745f7d65570e346",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "neurovascular-modulation", "role": "primary_lens", "one_line": "direct vascular response to transcranial current as primary tES mechanism"},
+    {"name": "neurovascular coupling", "role": "compared_against", "one_line": "classical view treating vascular change as secondary to neuronal activity"}
+  ],
+  "core_question": "Does transcranial electrical stimulation act directly on cerebral vasculature rather than only secondarily through neuronal activity?",
+  "key_assumptions": [
+    "transcranial current density concentrates in cerebrospinal fluid of subarachnoid space",
+    "cerebral vasculature lies along dural and pial surfaces where current accumulates",
+    "vascular responses to tES are ubiquitous across studies"
+  ],
+  "manipulations": [
+    "transcranial electrical stimulation applied across cortex"
+  ],
+  "key_findings": [
+    "evidence reviewed for direct vascular responses to tES independent of neuronal mediation",
+    "current concentrates in subarachnoid CSF where vasculature resides"
+  ],
+  "interpretations": [
+    "direct vascular tES effects may explain part of the variability in tES outcomes",
+    "vascular signatures could serve as new biomarkers for stimulation efficacy"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "transcranial electrical stimulation",
+    "neurovascular coupling",
+    "cerebral vasculature",
+    "subarachnoid CSF current flow",
+    "tES outcome variability",
+    "stimulation biomarkers",
+    "direct vascular response"
+  ],
+  "out_of_scope_note": null
+}

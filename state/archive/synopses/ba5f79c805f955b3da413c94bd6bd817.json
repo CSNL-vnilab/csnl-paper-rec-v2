@@ -1,0 +1,41 @@
+{
+  "canonical_id": "ba5f79c805f955b3da413c94bd6bd817",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T12:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "individualized electric-field modeling", "role": "primary_lens", "one_line": "MRI-based per-subject E-field magnitude predicts tDCS neurophysiological response"}
+  ],
+  "core_question": "Do individual electric-field magnitude and anatomical factors explain interindividual variability in tDCS-induced MEP modulation over primary motor cortex?",
+  "key_assumptions": [
+    "MEP amplitude indexes corticospinal excitability changes induced by tDCS",
+    "MRI-based finite-element modeling yields a meaningful per-subject estimate of induced E-field",
+    "scalp-cortex distance and cortical thickness modulate effective stimulation dose"
+  ],
+  "manipulations": [
+    "between-subject variation in individual induced electric-field magnitude at M1",
+    "between-subject variation in scalp-cortex distance",
+    "between-subject variation in cortical thickness"
+  ],
+  "key_findings": [
+    "interindividual variability in MEP modulation after M1 tDCS is substantial",
+    "group-level tDCS effect on TMS-MEPs reported previously is revisited at the individual level",
+    "individual E-field magnitude and anatomical factors are tested as predictors of MEP change"
+  ],
+  "interpretations": [
+    "individualized E-field modeling and anatomy may partially account for tDCS response variability"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "tDCS interindividual variability",
+    "TMS motor-evoked potentials",
+    "individualized electric-field modeling",
+    "primary motor cortex excitability",
+    "scalp-cortex distance",
+    "cortical thickness",
+    "non-invasive brain stimulation dosing"
+  ],
+  "out_of_scope_note": null
+}
