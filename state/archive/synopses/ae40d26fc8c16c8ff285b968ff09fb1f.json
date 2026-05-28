@@ -1,0 +1,17 @@
+{
+  "canonical_id": "ae40d26fc8c16c8ff285b968ff09fb1f",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.0,
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "Methodology critique / position piece on AI alignment research practices, drawing a historical analogy to 1970s ape-language research. No neural recording, no perceptual / decision-making / encoding model, no biological neural-computation content. Falls under philosophy-of-science / research-methodology commentary rather than empirical computational neuroscience."
+}

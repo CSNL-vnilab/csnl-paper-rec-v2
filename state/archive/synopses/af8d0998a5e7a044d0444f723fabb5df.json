@@ -1,0 +1,58 @@
+{
+  "canonical_id": "af8d0998a5e7a044d0444f723fabb5df",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "DNN-brain alignment",
+      "role": "primary_lens",
+      "one_line": "deep face-recognition models evaluated against human perceptual similarity"
+    },
+    {
+      "name": "representational similarity",
+      "role": "primary_lens",
+      "one_line": "model-human alignment measured via face-similarity judgments"
+    },
+    {
+      "name": "linear readout / linear transformation alignment",
+      "role": "extended",
+      "one_line": "linear mapping tested to reconcile model features with human similarity"
+    }
+  ],
+  "core_question": "Do high-performing deep face-recognition models represent faces in a way that aligns with human perceptual similarity?",
+  "key_assumptions": [
+    "human face-similarity judgments are a valid criterion for perceptual representation",
+    "model-human alignment can be probed by comparing representational similarity",
+    "a linear transformation can re-align model features to human similarity space"
+  ],
+  "manipulations": [
+    "varied face-recognition model identity (range of recognition performance levels)",
+    "applied vs withheld a linear transformation aligning model features to human similarity",
+    "measured model recognition performance before and after the alignment transformation"
+  ],
+  "key_findings": [
+    "models with high but not the highest recognition performance best matched human similarity judgments",
+    "top-performing models benefited least from linear alignment to human perception",
+    "alignment transformation reduced recognition performance for high-performing models",
+    "alignment transformation slightly improved recognition for low-performing models"
+  ],
+  "interpretations": [
+    "a trade-off exists between face-recognition ability and human-like perceptual similarity",
+    "the highest-performing models have a deeper representational mismatch with human perception"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "face recognition models",
+    "human perceptual similarity",
+    "model-human alignment",
+    "representational similarity",
+    "face-similarity judgments",
+    "linear readout alignment",
+    "performance-alignment trade-off",
+    "deep neural network face perception"
+  ],
+  "out_of_scope_note": null
+}

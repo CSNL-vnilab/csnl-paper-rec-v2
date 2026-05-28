@@ -1,0 +1,17 @@
+{
+  "canonical_id": "cca8cdad50a78ecaf59b307ea2a12c6b",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.0,
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "Pure-ML LLM-alignment interpretability paper analyzing reward models' token-level scoring across ten open-source LLMs. The abstract notes that prompt-framing sensitivity 'mirrors human cognitive biases,' but the analogy is rhetorical only — there is no biological neural recording, no perceptual/decision-making task, and no computational model of the brain. Subject matter (reward modeling, RLHF, vocabulary-space analysis of LLMs) falls under the 'pure-ML papers without biological neural content' OOS category."
+}

@@ -1,0 +1,53 @@
+{
+  "canonical_id": "f19591f33650ae581515fd15a4a2d7e6",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "theory of mind",
+      "role": "primary_lens",
+      "one_line": "Mentalizing about another agent's goal to evaluate observation utility."
+    },
+    {
+      "name": "rational utility-based decision-making",
+      "role": "primary_lens",
+      "one_line": "Weighs expected utility of social learning against self-exploration."
+    },
+    {
+      "name": "social learning",
+      "role": "extended",
+      "one_line": "Extended with an explicit decision-to-observe stage rather than reflexive copying."
+    }
+  ],
+  "core_question": "How do people decide when to engage in social learning versus non-social self-exploration?",
+  "key_assumptions": [
+    "Social learning carries time and cognitive resource costs",
+    "Observers can infer another agent's goal and predict the informativity of their future actions",
+    "Learners select actions by comparing expected utilities of social and non-social options"
+  ],
+  "manipulations": [
+    "Availability and informativity of another player's actions in a multi-player treasure hunt game",
+    "Trade-off conditions pitting social observation against self-exploration"
+  ],
+  "key_findings": [
+    "The rational mentalizing model quantitatively captures human trade-offs between social and non-social learning",
+    "Humans flexibly choose whether to observe others based on inferred goal and future-action informativity"
+  ],
+  "interpretations": [
+    "Combining utility evaluation with theory-of-mind reasoning lets agents apply social learning adaptively to reach goals more efficiently"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "adaptive social learning",
+    "theory of mind",
+    "rational mentalizing",
+    "utility of observation",
+    "social vs non-social learning trade-off",
+    "informativity of future actions",
+    "multi-player treasure hunt"
+  ],
+  "out_of_scope_note": null
+}

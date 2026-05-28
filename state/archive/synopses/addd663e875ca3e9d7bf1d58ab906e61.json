@@ -1,0 +1,58 @@
+{
+  "canonical_id": "addd663e875ca3e9d7bf1d58ab906e61",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "Bayesian model selection",
+      "role": "primary_lens",
+      "one_line": "Marginal-likelihood integration over latent causes penalizes excessive model flexibility."
+    },
+    {
+      "name": "Occam's razor",
+      "role": "primary_lens",
+      "one_line": "Simpler explanations are preferred when fit to data is comparable."
+    },
+    {
+      "name": "artificial neural networks",
+      "role": "compared_against",
+      "one_line": "ANNs fail to show the same simplicity preference even when adaptive."
+    }
+  ],
+  "core_question": "Do humans prefer simpler explanations for uncertain data in a way that matches formal model-selection theories?",
+  "key_assumptions": [
+    "Decision-making can be cast as choosing among alternative explanatory models.",
+    "Model selection should integrate over all relevant explanations, not just the best fit.",
+    "Flexibility penalties emerge naturally from marginal-likelihood computation."
+  ],
+  "manipulations": [
+    "Pairs of alternative explanations differing in complexity for the same uncertain data.",
+    "Conditions where simplicity preference is adaptive vs. maladaptive.",
+    "Human participants vs. artificial neural network agents on matched tasks."
+  ],
+  "key_findings": [
+    "People prefer the simpler of two alternative explanations for uncertain data.",
+    "Human preferences match predictions of formal model-selection theories that penalize flexibility.",
+    "Simplicity preference persists in humans even when maladaptive.",
+    "Certain artificial neural networks do not show the same persistent simplicity preference."
+  ],
+  "interpretations": [
+    "Principled statistical model selection — integrating over latent causes to avoid overfitting — may play a central role in human decision-making.",
+    "Flexibility penalties guiding human choice arise from considering the integral over all relevant explanations."
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "Occam's razor",
+    "Bayesian model selection",
+    "marginal likelihood",
+    "overfitting avoidance",
+    "simplicity preference",
+    "model complexity penalty",
+    "latent cause inference",
+    "human vs. neural network decision-making"
+  ],
+  "out_of_scope_note": null
+}

@@ -1,0 +1,54 @@
+{
+  "canonical_id": "b71d99e8859b586bd251e00e0d415a1e",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "neural toggle switch",
+      "role": "primary_lens",
+      "one_line": "circuit switch gating fear-to-anxiety and approach-vs-avoid decisions"
+    },
+    {
+      "name": "conditioned threat / Pavlovian fear",
+      "role": "context",
+      "one_line": "classical threat-learning framework underlying defensive responses"
+    },
+    {
+      "name": "cost-benefit decision",
+      "role": "context",
+      "one_line": "active avoidance weighed against reward magnitude and effort cost"
+    }
+  ],
+  "core_question": "How do brain circuits for conditioned threat, active avoidance, and reward intersect to produce approach-versus-avoid decisions?",
+  "key_assumptions": [
+    "active avoidance decisions integrate threat, cost, and reward signals",
+    "fear and anxiety are dissociable states linked by a circuit transition",
+    "shared neural substrates can be probed across these domains"
+  ],
+  "manipulations": [],
+  "key_findings": [
+    "review consolidates behavioral and circuit evidence on active avoidance and its threat interactions",
+    "active avoidance excess co-occurs across multiple psychiatric conditions"
+  ],
+  "interpretations": [
+    "a neural toggle switch model can explain fear-to-anxiety transitions and approach-vs-avoid arbitration",
+    "a unified experimental approach across threat, avoidance, and reward is needed to understand pathology"
+  ],
+  "limitations_noted": [
+    "threat, avoidance, and reward have largely been studied in silos"
+  ],
+  "connecting_signals": [
+    "active avoidance",
+    "conditioned threat",
+    "fear-to-anxiety transition",
+    "approach-avoidance conflict",
+    "cost-benefit decision",
+    "reward and threat integration",
+    "toggle switch circuit",
+    "psychiatric avoidance"
+  ],
+  "out_of_scope_note": null
+}

@@ -1,0 +1,51 @@
+{
+  "canonical_id": "d33df038dae2167785898e41dfd6e1da",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:30:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "model-based planning",
+      "role": "primary_lens",
+      "one_line": "prospective training decisions optimized over expected deployment outcome"
+    },
+    {
+      "name": "heuristic decision-making",
+      "role": "compared_against",
+      "one_line": "myopic rules based on current competence, fairness, or versatility"
+    }
+  ],
+  "core_question": "How do humans decide how to train collaborators when the optimal division of labor depends on future, not current, competence?",
+  "key_assumptions": [
+    "competence is dynamic and develops with training",
+    "optimal division of labor changes over training trajectories",
+    "decision-makers can prospect about long-term competence outcomes"
+  ],
+  "manipulations": [
+    "task goals across military-defense scenarios (land vs air attacks)",
+    "relative competences of the two teams",
+    "long-term consequences of training decisions"
+  ],
+  "key_findings": [
+    "participants divided labor according to task demands and relative competences",
+    "training decisions tracked anticipated deployment roles, not current competence",
+    "a Planning model captured choices better than competence, learning-potential, fairness, or versatility heuristics"
+  ],
+  "interpretations": [
+    "humans allocate training prospectively, optimizing for expected deployment outcome",
+    "prospection about collaborator development is central to division-of-labor decisions"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "division of labor",
+    "prospective planning",
+    "training allocation",
+    "collaborator competence",
+    "model-based vs heuristic decision-making",
+    "team assignment",
+    "expected outcome optimization"
+  ],
+  "out_of_scope_note": null
+}
