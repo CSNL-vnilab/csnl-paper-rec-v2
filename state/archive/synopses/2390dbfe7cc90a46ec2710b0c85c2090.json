@@ -1,0 +1,57 @@
+{
+  "canonical_id": "2390dbfe7cc90a46ec2710b0c85c2090",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "Rational Speech Act-style coordination model",
+      "role": "primary_lens",
+      "one_line": "Joint probabilistic inference of threshold variable and intended sentence meaning."
+    },
+    {
+      "name": "probabilistic pragmatic inference",
+      "role": "primary_lens",
+      "one_line": "Listener-speaker coordination resolves vague positive-form adjective interpretation."
+    },
+    {
+      "name": "degree semantics with free threshold variable",
+      "role": "extended",
+      "one_line": "Positive-form adjectives carry a free threshold inferred pragmatically."
+    }
+  ],
+  "core_question": "How do context-sensitivity and vagueness of positive-form relative adjectives arise from pragmatic inference over a free threshold variable?",
+  "key_assumptions": [
+    "Positive-form adjectives contain a free threshold variable in their semantics",
+    "Listeners jointly infer threshold and intended meaning via probabilistic coordination",
+    "Background statistical knowledge of the comparison class shapes interpretation"
+  ],
+  "manipulations": [
+    "Background statistical distribution of the adjective's scale (simulated)",
+    "Scale structure (open vs closed / relative vs absolute adjectives)"
+  ],
+  "key_findings": [
+    "Simulations show background statistics modulate inferred adjective threshold",
+    "Model reproduces correlation between scale structure and relative/absolute distinction",
+    "Model accommodates exceptions to the scale-structure generalization noted in prior work",
+    "Sorites paradox premise comes out compelling yet false on universal reading"
+  ],
+  "interpretations": [
+    "Vagueness and context-sensitivity emerge from threshold inference under pragmatic coordination",
+    "Probabilistic pragmatics explains the seductiveness of the sorites paradox without endorsing its premise"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "vague adjective interpretation",
+    "free threshold variable",
+    "pragmatic coordination",
+    "scale structure",
+    "relative vs absolute adjectives",
+    "sorites paradox",
+    "probabilistic semantics",
+    "comparison class statistics"
+  ],
+  "out_of_scope_note": null
+}

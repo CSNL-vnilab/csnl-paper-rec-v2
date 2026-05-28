@@ -1,0 +1,17 @@
+{
+  "canonical_id": "57910caf38e7bfb2db7e1ee9aa3ccee5",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.0,
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "Clinical-application systematic review on music and emotion regulation, framed for music therapy practice guidance. The abstract summarizes activation patterns (preferred/familiar music, singing, improvisation vs. complexity/dissonance) at a descriptive clinical level, engages no theoretical framework of perception/decision/encoding (no predictive coding, efficient coding, rate-distortion, Bayesian observer, drift-diffusion, normalization, etc.), reports no parametric manipulation or computational model, and explicitly targets implications for music therapy practice. Falls under the OOS category of clinical/therapeutic guidance without neural-computational content."
+}

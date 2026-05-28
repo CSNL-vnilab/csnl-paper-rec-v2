@@ -1,0 +1,17 @@
+{
+  "canonical_id": "0af78c091eccf3d59224e95a44d1efde",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T20:12:16+0900",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.0,
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "Survey methodology / sociological measurement comparing 5- vs. 7- vs. 11-point agree-disagree scales in European Social Survey data; survey-design methodology, not computational neuroscience."
+}

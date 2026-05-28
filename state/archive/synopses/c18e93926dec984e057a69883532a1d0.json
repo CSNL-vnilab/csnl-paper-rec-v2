@@ -1,0 +1,17 @@
+{
+  "canonical_id": "c18e93926dec984e057a69883532a1d0",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:30:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.0,
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "Finnish-language political-history commentary (response to an article on the activism of business interests on Finnish policy in the 1970s-80s) in Historiallinen Aikakauskirja; humanities/history, not computational neuroscience."
+}

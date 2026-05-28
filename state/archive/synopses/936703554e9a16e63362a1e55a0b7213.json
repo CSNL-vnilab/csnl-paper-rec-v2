@@ -1,0 +1,17 @@
+{
+  "canonical_id": "936703554e9a16e63362a1e55a0b7213",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T20:12:38+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.0,
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "HCI / usability methodology comparing classic vs. explicit-explanation think-aloud protocols for web-navigation tasks; usability testing methodology, not computational neuroscience."
+}

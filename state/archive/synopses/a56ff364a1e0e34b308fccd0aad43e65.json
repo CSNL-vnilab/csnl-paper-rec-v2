@@ -1,0 +1,58 @@
+{
+  "canonical_id": "a56ff364a1e0e34b308fccd0aad43e65",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "signal-to-noise modulation",
+      "role": "primary_lens",
+      "one_line": "NIBS indiscriminately activates neurons, shifting signal-versus-noise balance in targeted circuits."
+    },
+    {
+      "name": "lesion-method analogy",
+      "role": "alternative_lens",
+      "one_line": "NIBS treated as transient virtual lesion to infer causal role of regions."
+    },
+    {
+      "name": "state-dependent stimulation",
+      "role": "context",
+      "one_line": "Behavioural effect of NIBS depends on prevailing neural activity state."
+    }
+  ],
+  "core_question": "How should non-invasive brain stimulation be theoretically framed so that its effects on neural activity inform causal claims about cognitive processes?",
+  "key_assumptions": [
+    "NIBS transiently alters neuronal activity in stimulated regions",
+    "Large numbers of neurons are activated relatively indiscriminately",
+    "Behavioural changes reflect modulation of underlying neural computation"
+  ],
+  "manipulations": [
+    "Application of non-invasive brain stimulation to targeted cortical regions",
+    "Comparison of facilitatory versus inhibitory stimulation protocols"
+  ],
+  "key_findings": [
+    "NIBS can establish causal links between brain regions and cognitive processes, beyond correlation",
+    "Effects can be cast as modulation of the signal-to-noise relation in stimulated circuits",
+    "NIBS yields information about where, when, and how a region contributes to cognition"
+  ],
+  "interpretations": [
+    "NIBS extends lesion-style inference by adding temporal and mechanistic resolution",
+    "Understanding NIBS requires joint theory of the stimulation method and the targeted neural system"
+  ],
+  "limitations_noted": [
+    "Stimulation activates large neuronal populations relatively indiscriminately"
+  ],
+  "connecting_signals": [
+    "non-invasive brain stimulation",
+    "transcranial magnetic stimulation",
+    "signal-to-noise modulation",
+    "virtual lesion",
+    "causal inference in cognitive neuroscience",
+    "state-dependent stimulation",
+    "facilitatory and inhibitory effects",
+    "neural population activation"
+  ],
+  "out_of_scope_note": null
+}
