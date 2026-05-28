@@ -1,0 +1,63 @@
+{
+  "canonical_id": "7d20433fd60cd882e2601b1cc9d97fe3",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "efficient coding",
+      "role": "primary_lens",
+      "one_line": "sensory precision allocated according to learned stimulus statistics"
+    },
+    {
+      "name": "Bayesian observer",
+      "role": "primary_lens",
+      "one_line": "average-feature inference combining prior with efficient-coding-shaped likelihood"
+    },
+    {
+      "name": "robust averaging",
+      "role": "extended",
+      "one_line": "inlier-biased ensemble weighting reframed as consequence of encoding, not heuristic"
+    },
+    {
+      "name": "signal-detection theory",
+      "role": "context",
+      "one_line": "orientation discrimination relative to a reference element"
+    }
+  ],
+  "core_question": "Can robust averaging in ensemble perception be explained by a Bayesian observer constrained by efficient sensory coding?",
+  "key_assumptions": [
+    "observer combines prior with likelihood via Bayes rule",
+    "sensory encoding precision is optimized to learned stimulus statistics",
+    "stimulus statistics can be acquired on short experimental timescales"
+  ],
+  "manipulations": [
+    "element feature distance from the mean (inlying vs outlying)",
+    "reference element fixed vs varied within blocks",
+    "Gaussian distribution mean and variance of the element features"
+  ],
+  "key_findings": [
+    "higher weights for inlying than outlying elements",
+    "overall higher weights when the reference was fixed within blocks",
+    "higher discrimination accuracy when the distribution had a large generic mean and small variance",
+    "model also reproduced robust-averaging signatures across color and shape features"
+  ],
+  "interpretations": [
+    "robust averaging arises from inhomogeneous encoding precision of inlying vs outlying elements",
+    "efficient sensory representations can be established short-term by learning experimental stimulus statistics"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "ensemble perception",
+    "robust averaging",
+    "efficient sensory encoding",
+    "Bayesian observer model",
+    "inlier vs outlier weighting",
+    "orientation averaging",
+    "learned stimulus statistics",
+    "encoding precision"
+  ],
+  "out_of_scope_note": null
+}

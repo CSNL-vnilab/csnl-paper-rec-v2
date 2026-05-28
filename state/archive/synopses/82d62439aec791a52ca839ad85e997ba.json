@@ -1,0 +1,58 @@
+{
+  "canonical_id": "82d62439aec791a52ca839ad85e997ba",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "drift-diffusion",
+      "role": "primary_lens",
+      "one_line": "evidence accumulation toward bounds underlies the two perceptual decisions"
+    },
+    {
+      "name": "central bottleneck",
+      "role": "extended",
+      "one_line": "only one decision can be updated at a time, with buffered evidence"
+    },
+    {
+      "name": "parallel sensory acquisition",
+      "role": "primary_lens",
+      "one_line": "color and motion features are encoded simultaneously at the sensory stage"
+    }
+  ],
+  "core_question": "When two decisions must be made about one object, are the underlying evidence streams processed in parallel or serially?",
+  "key_assumptions": [
+    "perceptual decisions reflect accumulation of noisy evidence to a bound",
+    "color and motion are separable feature dimensions of the same object",
+    "response times index the temporal structure of decision formation"
+  ],
+  "manipulations": [
+    "difficulty of color decision crossed with difficulty of motion decision",
+    "dynamic random-dot stimulus carrying both color and motion information",
+    "single-object dual-decision task"
+  ],
+  "key_findings": [
+    "accuracy of one decision is unaffected by the difficulty of the other",
+    "response times reveal the two decisions do not form simultaneously",
+    "both stimulus dimensions are acquired in parallel for the initial ~0.1 s",
+    "evidence is then incorporated serially in time-multiplexed bouts"
+  ],
+  "interpretations": [
+    "a central bottleneck precludes updating more than one decision at a time",
+    "a buffer stores sensory evidence while access to the decision is blocked"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "dual decisions",
+    "color-motion task",
+    "random dot motion",
+    "time-multiplexed evidence incorporation",
+    "parallel sensory acquisition",
+    "central decision bottleneck",
+    "evidence buffer",
+    "response time decomposition"
+  ],
+  "out_of_scope_note": null
+}

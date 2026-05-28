@@ -1,0 +1,58 @@
+{
+  "canonical_id": "926a5ecdaf9ecceb50940bc316d63910",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:30:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "cost of self-control",
+      "role": "primary_lens",
+      "one_line": "self-control failure reflects cognitive costs outweighing perceived benefits of resisting temptation"
+    },
+    {
+      "name": "effort discounting",
+      "role": "alternative_lens",
+      "one_line": "subjective value of options is discounted by the effort required to obtain them"
+    },
+    {
+      "name": "opportunity cost",
+      "role": "context",
+      "one_line": "pre-commitment strategies framed as economically rational responses to anticipated self-control costs"
+    }
+  ],
+  "core_question": "Can the subjective cost of exerting self-control be quantified at the within-subject level via revealed willingness-to-pay?",
+  "key_assumptions": [
+    "self-control exertion is an effortful, cost-incurring process",
+    "subjective cost is revealed by monetary amounts a person will pay to avoid needing self-control",
+    "pre-commitment value reflects anticipated future self-control cost"
+  ],
+  "manipulations": [
+    "level of temptation in the decision task",
+    "motivational incentives",
+    "stress exposure"
+  ],
+  "key_findings": [
+    "humans pay to avoid having to exert self-control",
+    "willingness-to-pay scales with increasing temptation level",
+    "self-control cost is modulated by motivational incentives",
+    "self-control cost is modulated by stress exposure"
+  ],
+  "interpretations": [
+    "a psychophysical economic task can index moment-to-moment self-control costs within-subject",
+    "the approach validates cross-disciplinary theory linking effortful control to economic pre-commitment"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "subjective cost of self-control",
+    "willingness-to-pay",
+    "pre-commitment",
+    "temptation",
+    "effortful control",
+    "psychophysical economic task",
+    "stress modulation",
+    "motivational incentives"
+  ],
+  "out_of_scope_note": null
+}
