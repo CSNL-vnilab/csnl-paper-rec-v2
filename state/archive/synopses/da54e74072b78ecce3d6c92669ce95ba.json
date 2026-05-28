@@ -1,0 +1,54 @@
+{
+  "canonical_id": "da54e74072b78ecce3d6c92669ce95ba",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "neoclassical utility maximization",
+      "role": "compared_against",
+      "one_line": "Optimal-agent choice theory assuming no internal computational resource constraints."
+    },
+    {
+      "name": "bounded rationality / resource-constrained valuation",
+      "role": "primary_lens",
+      "one_line": "Brain implements modular valuation under severe computational resource limits."
+    },
+    {
+      "name": "common-currency decision variable",
+      "role": "extended",
+      "one_line": "Neural data validate a single decision variable computed per option during choice."
+    }
+  ],
+  "core_question": "What proximate neurobiological mechanisms produce individual decision-making behavior, and how do they explain failures of neoclassical maximization?",
+  "key_assumptions": [
+    "Decision makers compute and represent a single-decision variable per option",
+    "Human brain faces severe computational resource constraints",
+    "Valuation and choice rely on modular processing"
+  ],
+  "manipulations": [
+    "Synthesizes evidence across neurobiology, psychology, economics, and evolutionary approaches (review chapter — no experimental manipulation)"
+  ],
+  "key_findings": [
+    "Humans empirically fail to achieve maximization across health, happiness, and wealth domains",
+    "Neurobiology validates the single-decision-variable assumption from economics/psychology",
+    "Neural data reveal brain reliance on modular valuation/choice approaches under resource limits"
+  ],
+  "interpretations": [
+    "Computational resource constraints explain systematic failures of neoclassical optimization",
+    "Modular valuation mechanisms open new theoretical avenues beyond multi-parameter psychological models"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "individual differences in decision-making",
+    "proximate mechanisms",
+    "bounded rationality",
+    "computational resource constraints",
+    "common-currency decision variable",
+    "modular valuation",
+    "neuroeconomics"
+  ],
+  "out_of_scope_note": null
+}

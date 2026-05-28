@@ -1,0 +1,58 @@
+{
+  "canonical_id": "ef7f7de49950c536feb740c9951dc872",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "efficient coding",
+      "role": "primary_lens",
+      "one_line": "encoding and decoding optimally adapted to sensory input statistics"
+    },
+    {
+      "name": "Bayesian observer",
+      "role": "primary_lens",
+      "one_line": "decoding stage interprets encoded signal given input prior"
+    },
+    {
+      "name": "Wei & Stocker observer model",
+      "role": "extended",
+      "one_line": "extends 2015 perception theory to a closed-form bias-threshold link"
+    }
+  ],
+  "core_question": "Are perceptual bias and discrimination threshold independent measures, or are they tightly coupled by a single underlying law?",
+  "key_assumptions": [
+    "sensory encoding and decoding are jointly optimized to input statistics",
+    "the same input prior constrains both bias and threshold",
+    "the bias-threshold link is invariant across sensory variables"
+  ],
+  "manipulations": [
+    "sensory variable type (orientation, spatial frequency, motion direction, pursuit, heading, biological motion)",
+    "temporal context (adaptation, perceptual learning)",
+    "spatial context (surround / tilt-illusion)"
+  ],
+  "key_findings": [
+    "perceptual bias and discrimination threshold are not independent but linked",
+    "a simple mathematical relationship (up to scale and offset) predicts one from the other",
+    "the relationship holds across many published data-sets and sensory modalities",
+    "the relationship also holds under context-induced changes (adaptation, learning, surround)"
+  ],
+  "interpretations": [
+    "bias and threshold reflect a shared origin in input-statistics-adapted encoding/decoding",
+    "the derived link constitutes a new psychophysical law supporting a holistic theory of perception"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "perceptual bias",
+    "discrimination threshold",
+    "efficient coding",
+    "Bayesian decoding",
+    "input statistics prior",
+    "tilt illusion",
+    "adaptation aftereffect",
+    "psychophysical law"
+  ],
+  "out_of_scope_note": null
+}

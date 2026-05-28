@@ -1,0 +1,17 @@
+{
+  "canonical_id": "dd857ce8c8448baccd33e96e6e5dec02",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7-bypass@2026-05-28",
+  "generated_at": "2026-05-28T22:06:51+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.0,
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "Clinical interventional radiology: multimodal endovascular endoscopy in carotid atherosclerotic disease; vascular intervention research, not computational neuroscience."
+}

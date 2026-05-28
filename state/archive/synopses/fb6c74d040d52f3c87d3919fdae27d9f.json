@@ -1,0 +1,61 @@
+{
+  "canonical_id": "fb6c74d040d52f3c87d3919fdae27d9f",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "successor representation",
+      "role": "primary_lens",
+      "one_line": "value decomposed into a successor map (expected future state occupancy) times a reward predictor"
+    },
+    {
+      "name": "deep reinforcement learning",
+      "role": "extended",
+      "one_line": "end-to-end neural-network realization of successor representations from raw pixels"
+    },
+    {
+      "name": "model-free reinforcement learning",
+      "role": "compared_against",
+      "one_line": "value-function learning without explicit world-dynamics factorization"
+    },
+    {
+      "name": "model-based reinforcement learning",
+      "role": "compared_against",
+      "one_line": "value-function learning via an explicit transition model"
+    }
+  ],
+  "core_question": "Can the successor representation be generalized within an end-to-end deep reinforcement learning framework that operates on raw observations?",
+  "key_assumptions": [
+    "value can be factored as the inner product of a successor map and a reward weight vector",
+    "successor map represents expected future state occupancy from any given state",
+    "raw pixel observations suffice as the input state representation"
+  ],
+  "manipulations": [
+    "environment type (MazeBase grid-worlds vs. Doom game engine)",
+    "policy used to train successor maps (including random policy for subgoal extraction)"
+  ],
+  "key_findings": [
+    "DSR learns value functions end-to-end from raw pixels in grid-world and Doom environments",
+    "factorizing reward and world dynamics yields increased sensitivity to distal reward changes",
+    "bottleneck states (subgoals) can be extracted from successor maps trained under a random policy"
+  ],
+  "interpretations": [
+    "decomposing value into successor map plus reward predictor is a viable third path between model-free and model-based deep RL",
+    "successor maps provide a representation from which structural features like subgoals naturally emerge"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "successor representation",
+    "successor map",
+    "reward predictor",
+    "deep reinforcement learning",
+    "bottleneck states",
+    "subgoal discovery",
+    "distal reward sensitivity",
+    "transfer learning"
+  ],
+  "out_of_scope_note": null
+}

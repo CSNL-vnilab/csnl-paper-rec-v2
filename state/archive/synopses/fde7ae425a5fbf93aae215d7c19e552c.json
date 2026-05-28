@@ -1,0 +1,59 @@
+{
+  "canonical_id": "fde7ae425a5fbf93aae215d7c19e552c",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "bounded evidence accumulation",
+      "role": "primary_lens",
+      "one_line": "Noisy momentary evidence integrated to a threshold determines choice, RT and confidence."
+    },
+    {
+      "name": "drift-diffusion",
+      "role": "alternative_lens",
+      "one_line": "Diffusion of a decision variable used to model the volatility effect quantitatively."
+    },
+    {
+      "name": "signal-detection theory",
+      "role": "context",
+      "one_line": "Background framing for signal-to-noise effects on perceptual accuracy."
+    }
+  ],
+  "core_question": "Does selectively increasing the variance of momentary sensory evidence speed decisions and inflate confidence as bounded accumulation predicts?",
+  "key_assumptions": [
+    "Confidence derives from a mapping between decision variable state and probability correct",
+    "MT/MST neuronal responses represent the momentary motion evidence accumulated by the decision process",
+    "The volatility manipulation leaves mean evidence unchanged while raising its variance"
+  ],
+  "manipulations": [
+    "Doubly stochastic random-dot motion: frame-by-frame variation of coherence (high vs low volatility)",
+    "Motion strength (signed coherence) across trials",
+    "Species comparison: humans rating confidence vs monkeys using opt-out / sure-bet"
+  ],
+  "key_findings": [
+    "Neuronal recordings in MT/MST confirmed the manipulation raised response variance with little mean change",
+    "Higher volatility produced faster reaction times in both humans and monkeys",
+    "Higher volatility raised confidence over a range where accuracy was minimally impaired"
+  ],
+  "interpretations": [
+    "Results quantitatively match a bounded evidence accumulation model with increased diffusion noise",
+    "The brain does not always read out evidence reliability to recalibrate confidence and speed"
+  ],
+  "limitations_noted": [
+    "Volatility levels were randomly interleaved, so observers may not learn to adjust the DV-to-confidence mapping per condition"
+  ],
+  "connecting_signals": [
+    "evidence volatility",
+    "decision confidence",
+    "random-dot motion",
+    "MT/MST microcircuit",
+    "speed-accuracy-confidence tradeoff",
+    "bounded accumulation",
+    "doubly stochastic stimulus",
+    "decision variable readout"
+  ],
+  "out_of_scope_note": null
+}
