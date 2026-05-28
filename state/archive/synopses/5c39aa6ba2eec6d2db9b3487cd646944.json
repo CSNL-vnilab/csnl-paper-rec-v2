@@ -1,0 +1,17 @@
+{
+  "canonical_id": "5c39aa6ba2eec6d2db9b3487cd646944",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.0,
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "Personal opinion/commentary piece on the state of consciousness science (OSF preprint). No empirical content, no computational model, no neural data — a reflective essay arguing that conflation of subjective experience with general cognitive/perceptual processes plus media-driven incentive structures are damaging the field. Falls under the 'philosophy of consciousness / opinion piece without empirical content' OOS category — the lab tracks empirical computational neuroscience, not philosophy-of-science commentary."
+}

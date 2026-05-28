@@ -1,0 +1,17 @@
+{
+  "canonical_id": "9f138426ed9b354cfdd519e445072254",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.0,
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "Out of scope: large-scale behavioral study of LLM persuasiveness on political issues. Pure AI/social-science paper evaluating post-training, prompting, personalization, and scale effects on human belief change — no neural recording, no computational model of the brain, no perceptual/decision-making mechanism. Matches the preprint version (canonical_id 9404b577) and is excluded for the same reason."
+}

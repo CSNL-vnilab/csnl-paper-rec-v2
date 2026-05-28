@@ -1,0 +1,56 @@
+{
+  "canonical_id": "900f151da3d10611ce1305ebd6c0963f",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:30:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "reinforcement learning",
+      "role": "primary_lens",
+      "one_line": "TD learning with a spectrum of discount factors rather than one"
+    },
+    {
+      "name": "temporal discounting",
+      "role": "extended",
+      "one_line": "exponential discounting generalized to multiple per-neuron time constants"
+    },
+    {
+      "name": "reward prediction error coding",
+      "role": "primary_lens",
+      "one_line": "midbrain dopamine neurons encode RPE with heterogeneous timescales"
+    }
+  ],
+  "core_question": "Do dopamine neurons implement reinforcement learning at a single discount timescale or at a diversity of timescales across cells?",
+  "key_assumptions": [
+    "dopamine RPE signals can be modeled within a TD-learning framework",
+    "discount factor is a stable, cell-specific property of each neuron",
+    "classical RL with a single discount factor is the baseline to generalize"
+  ],
+  "manipulations": [
+    "two distinct behavioral tasks performed by mice",
+    "modeled RL agents endowed with a spectrum of discount factors"
+  ],
+  "key_findings": [
+    "RL agents with multiple discount timescales gain distinct computational benefits",
+    "individual dopamine neurons encode RPE with heterogeneous discount time constants",
+    "the model captures both cue-evoked transients and slower dopamine ramps",
+    "each neuron's measured discount factor is correlated across the two tasks"
+  ],
+  "interpretations": [
+    "temporal discounting is heterogeneous and cell-specific in the dopamine system",
+    "multi-timescale RL explains diversity of transient and ramping dopamine signals"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "multi-timescale reinforcement learning",
+    "dopamine reward prediction error",
+    "heterogeneous temporal discounting",
+    "discount factor diversity",
+    "dopamine ramps",
+    "cue-evoked dopamine transients",
+    "TD learning in midbrain"
+  ],
+  "out_of_scope_note": null
+}

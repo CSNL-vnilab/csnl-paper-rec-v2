@@ -1,0 +1,50 @@
+{
+  "canonical_id": "52d3c5e44987e01f2ff2d1368fa33a57",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "inverse planning theory of mind",
+      "role": "primary_lens",
+      "one_line": "rational inference of others' beliefs and desires from observed behavior"
+    },
+    {
+      "name": "resource-rational heuristics",
+      "role": "alternative_lens",
+      "one_line": "cheap approximations replace full mentalizing when computation is costly"
+    }
+  ],
+  "core_question": "When do people engage full belief inference versus heuristic shortcuts in reasoning about others?",
+  "key_assumptions": [
+    "theory of mind is computationally costly",
+    "agents can adaptively allocate cognitive resources",
+    "belief inference is unnecessary for predicting routine behavior"
+  ],
+  "manipulations": [
+    "task contexts where belief inference was necessary versus unnecessary for behavior prediction",
+    "training on tasks requiring belief sensitivity"
+  ],
+  "key_findings": [
+    "participants neglected others' beliefs when not needed for behavior prediction",
+    "belief neglect was the default mode",
+    "belief sensitivity emerged only after training requiring belief inference"
+  ],
+  "interpretations": [
+    "people adaptively allocate cognitive resources in social reasoning",
+    "belief neglect functions as a default heuristic approximating full theory of mind"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "belief neglect",
+    "theory of mind",
+    "inverse planning",
+    "resource-rational social reasoning",
+    "heuristic approximation",
+    "adaptive cognitive resource allocation",
+    "social inference"
+  ],
+  "out_of_scope_note": null
+}

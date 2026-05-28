@@ -1,0 +1,17 @@
+{
+  "canonical_id": "793e4c49a0abe17f6ee21aa3fffb9bae",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.0,
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "Methods/software release paper introducing DREDge, a registration algorithm for motion correction in high-density extracellular electrophysiology recordings. The paper is a preprocessing/infrastructure tool for spike sorting and probe-motion tracking — analogous to fMRIPrep-class pipeline releases the prompt lists as out-of-scope. It engages no theoretical framework of perception, decision-making, encoding, or cognition; contributions are algorithmic (AP/LFP-band motion estimation, registration robustness) and benchmark-style (reduced spike-sorting error, recovered evoked potentials). Useful downstream infrastructure for neural recording labs, but lacks the computational-neuroscience theoretical claim that would let it match researcher project lenses."
+}

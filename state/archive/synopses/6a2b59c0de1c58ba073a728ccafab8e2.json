@@ -1,0 +1,51 @@
+{
+  "canonical_id": "6a2b59c0de1c58ba073a728ccafab8e2",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "mesoscale functional connectivity",
+      "role": "primary_lens",
+      "one_line": "interregional functional network reorganization tracked across learning at single-unit resolution"
+    },
+    {
+      "name": "distributed coding",
+      "role": "context",
+      "one_line": "task-relevant information is distributed across multiple cortical and subcortical regions"
+    }
+  ],
+  "core_question": "How do regional nodes in a distributed brain network reorganize their functional interactions throughout decision-making learning?",
+  "key_assumptions": [
+    "interregional functional connectivity can be estimated from chronic large-scale single-unit recordings",
+    "network rank meaningfully orders regions in a learning-dependent hierarchy"
+  ],
+  "manipulations": [
+    "learning stage (across acquisition of a visual decision-making task)",
+    "trial type (correct No-Go vs other responses)"
+  ],
+  "key_findings": [
+    "learning reshaped interregional functional connectivity across 10 cortical and subcortical regions",
+    "a subnetwork involving visual and frontal regions emerged during acquisition of correct No-Go responses",
+    "visual stimulus representation became more widespread across regions with learning",
+    "a region's network rank predicted the peak timing of its visual information encoding"
+  ],
+  "interpretations": [
+    "mesoscale networks undergo dynamic restructuring during learning",
+    "functional connectivity rank influences the propagation of sensory information across the network"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "mesoscale functional network",
+    "chronic single-unit recording",
+    "ultra-flexible microelectrode array",
+    "visual decision-making learning",
+    "No-Go response acquisition",
+    "interregional connectivity reorganization",
+    "network rank",
+    "sensory information propagation"
+  ],
+  "out_of_scope_note": null
+}

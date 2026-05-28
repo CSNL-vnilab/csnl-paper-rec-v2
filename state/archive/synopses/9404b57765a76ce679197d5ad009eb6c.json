@@ -1,0 +1,17 @@
+{
+  "canonical_id": "9404b57765a76ce679197d5ad009eb6c",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.0,
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "Out of scope: large-scale political-persuasion experiment evaluating LLM persuasiveness on political issues. No neural recording, no perceptual/decision-making task, no computational model of the brain. Falls under social science / pure-ML behavioral evaluation without biological neural content."
+}
