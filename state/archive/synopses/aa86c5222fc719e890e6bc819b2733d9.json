@@ -1,0 +1,64 @@
+{
+  "canonical_id": "aa86c5222fc719e890e6bc819b2733d9",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T12:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "deep reinforcement learning",
+      "role": "primary_lens",
+      "one_line": "recurrent deep RL agent trained on observe-or-bet variants to learn control-sensitive policies"
+    },
+    {
+      "name": "meta-control / sense of control",
+      "role": "extended",
+      "one_line": "agent represents its own level of control and adapts exploration accordingly"
+    },
+    {
+      "name": "action-prediction error",
+      "role": "alternative_lens",
+      "one_line": "auxiliary self-supervised signal shaping internal hidden representations beyond reward"
+    },
+    {
+      "name": "exploration-exploitation trade-off",
+      "role": "context",
+      "one_line": "observe-or-bet task structure forces explicit explore-vs-exploit choice each trial"
+    }
+  ],
+  "core_question": "How do agents (and humans) adapt their policies in response to changes in their own level of control over outcomes?",
+  "key_assumptions": [
+    "agents must explicitly choose to observe or bet on each trial",
+    "internal hidden state can be shaped by auxiliary action-prediction error signals",
+    "level of control is a manipulable task variable distinct from reward"
+  ],
+  "manipulations": [
+    "level of control / efficacy across task settings (high vs low control)",
+    "training objective: reward-only vs reward + action-prediction-error auxiliary loss",
+    "two observe-or-bet task variants (explore-exploit balance vs control-seeking)"
+  ],
+  "key_findings": [
+    "reward-only agents fail to adapt policies across control settings",
+    "agents with action-prediction-error auxiliary training spend more time exploring in high-control settings",
+    "the same auxiliary-trained agents increase control-seeking behavior in low-control settings"
+  ],
+  "interpretations": [
+    "structuring hidden representations with action-prediction error is necessary for sensing and exploiting one's own control",
+    "credit assignment over control requires more than a scalar reward signal"
+  ],
+  "limitations_noted": [
+    "human behavioral comparison in the same tasks is stated as planned/ongoing rather than completed"
+  ],
+  "connecting_signals": [
+    "value of control",
+    "sense of agency",
+    "observe-or-bet task",
+    "deep reinforcement learning",
+    "action-prediction error",
+    "exploration-exploitation",
+    "auxiliary self-supervised loss",
+    "meta-control"
+  ],
+  "out_of_scope_note": null
+}

@@ -1,0 +1,55 @@
+{
+  "canonical_id": "982466baef073aeb1a85d94a89aed8eb",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "counterfactual reasoning",
+      "role": "primary_lens",
+      "one_line": "responsibility depends on whether alternative behavior could have altered the outcome"
+    },
+    {
+      "name": "causal attribution",
+      "role": "alternative_lens",
+      "one_line": "produced effort or force as direct cause of outcome drives responsibility"
+    },
+    {
+      "name": "dual-factor responsibility model",
+      "role": "extended",
+      "one_line": "combines produced and counterfactual effort into a single attribution account"
+    }
+  ],
+  "core_question": "How do people attribute responsibility to individuals in collaborative tasks?",
+  "key_assumptions": [
+    "responsibility judgments can be modeled from effort-related metrics",
+    "candidate metrics include produced effort, competence, force, and counterfactual effort",
+    "collaborative-task judgments are decomposable across individual contributors"
+  ],
+  "manipulations": [
+    "produced effort of each collaborator",
+    "counterfactual effort (whether alternative behavior could have altered outcome)",
+    "collaborative-task scenarios across four experiments"
+  ],
+  "key_findings": [
+    "participant judgments are best described by a model that uses both produced and counterfactual effort",
+    "models using only produced effort/force or only counterfactuals fit worse",
+    "the dual-factor pattern generalized to an independent validation dataset"
+  ],
+  "interpretations": [
+    "responsibility attribution in collaborative tasks reflects a dual-factor account combining produced and counterfactual effort"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "responsibility attribution",
+    "counterfactual effort",
+    "produced effort",
+    "blame and credit",
+    "collaborative tasks",
+    "dual-factor model",
+    "causal judgment"
+  ],
+  "out_of_scope_note": null
+}

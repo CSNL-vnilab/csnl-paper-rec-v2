@@ -1,0 +1,58 @@
+{
+  "canonical_id": "a15a7da7a9fcbfd466f2421f46b0a6b0",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T12:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "drift-diffusion",
+      "role": "extended",
+      "one_line": "Evidence accumulation extended from choice/RT/confidence to prospective difficulty judgments."
+    },
+    {
+      "name": "signal-detection theory",
+      "role": "context",
+      "one_line": "Difficulty defined as |pblue − 0.5| over stochastic color coherence."
+    },
+    {
+      "name": "Bayesian observer",
+      "role": "compared_against",
+      "one_line": "Confidence-comparison observer rejected versus absolute-accumulated-evidence comparison."
+    }
+  ],
+  "core_question": "How do observers prospectively judge which of two perceptual stimuli will be easier to decide about, without completing either decision?",
+  "key_assumptions": [
+    "Difficulty is defined by stimulus coherence distance from chance.",
+    "Observers can compare ongoing evidence streams across two stimuli in parallel.",
+    "A common bound terminates the difficulty judgment when accumulators diverge."
+  ],
+  "manipulations": [
+    "Stimulus coherence pblue varied trial-to-trial across two patches.",
+    "Patch pairings spanning equal vs. unequal difficulty.",
+    "Condition where the dominant color of each stimulus was disclosed."
+  ],
+  "key_findings": [
+    "Accuracy of difficulty judgment improved with the difference in stimulus difficulties.",
+    "Reaction times depended on individual stimulus difficulty, not solely on the difficulty difference.",
+    "When dominant colors were known, RTs depended only on the difficulty difference, as predicted.",
+    "An absolute-accumulated-evidence comparison model outperformed a confidence-comparison model."
+  ],
+  "interpretations": [
+    "Prospective difficulty judgments arise from comparing absolute accumulated evidence between stimuli, terminating at a fixed gap.",
+    "Evidence accumulation accounts extend naturally from choice/RT/confidence to prospective metacognitive judgments of difficulty."
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "prospective difficulty judgment",
+    "perceptual decision making",
+    "evidence accumulation",
+    "random dot coherence",
+    "reaction time modeling",
+    "metacognition",
+    "confidence comparison",
+    "absolute accumulated evidence"
+  ],
+  "out_of_scope_note": null
+}

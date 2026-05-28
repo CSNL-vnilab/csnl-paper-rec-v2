@@ -1,0 +1,52 @@
+{
+  "canonical_id": "bace7c3d0e7e70dddfa3f1d8f22c9d02",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "policy gradient reinforcement learning",
+      "role": "primary_lens",
+      "one_line": "memory-based policy gradient model accounting for counterfactual value updates"
+    },
+    {
+      "name": "associative memory",
+      "role": "extended",
+      "one_line": "memory for choice-option associations is recruited to value unchosen options"
+    }
+  ],
+  "core_question": "What role does associative memory play in valuing unchosen (counterfactual) options during decision-making?",
+  "key_assumptions": [
+    "unchosen options can still be valuated via counterfactual reasoning",
+    "association between choice options is held in episodic/associative memory",
+    "policy updates can be driven by memory rather than direct experience"
+  ],
+  "manipulations": [
+    "experimental interference with memory formation during choice tasks",
+    "measurement of memory for option–option associations alongside choice behavior"
+  ],
+  "key_findings": [
+    "an inverse decision bias is observed in valuation of unchosen options",
+    "the inverse decision bias correlates with memory for choice-option associations",
+    "memory interference reduces the inverse decision bias",
+    "a memory-based policy gradient model reproduces both the bias and its memory dependence"
+  ],
+  "interpretations": [
+    "associative memory plays a significant role in counterfactual valuation",
+    "decision-making and memory interact mechanistically rather than as separate systems"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "counterfactual valuation",
+    "inverse decision bias",
+    "unchosen options",
+    "associative memory",
+    "memory-based policy gradient",
+    "choice-option association",
+    "memory interference",
+    "decision-memory interaction"
+  ],
+  "out_of_scope_note": null
+}
