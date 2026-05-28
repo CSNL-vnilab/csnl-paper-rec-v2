@@ -1,0 +1,56 @@
+{
+  "canonical_id": "b5f9833e56eeca995ed01d39cd1a7c81",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "reinforcement learning",
+      "role": "primary_lens",
+      "one_line": "agents learn action-values to maximize cumulative reward over tasks"
+    },
+    {
+      "name": "rate-distortion",
+      "role": "extended",
+      "one_line": "memory precision is costly, traded off against expected-reward loss"
+    },
+    {
+      "name": "resource-rational analysis",
+      "role": "alternative_lens",
+      "one_line": "bounded agents allocate limited capacity to high-impact representations"
+    }
+  ],
+  "core_question": "How should an agent with limited memory precision allocate that precision across action-value representations to maximize expected reward?",
+  "key_assumptions": [
+    "memory precision of each action-value is costly and adjustable",
+    "biological and artificial agents face shared capacity constraints",
+    "action-values vary in their impact on cumulative reward"
+  ],
+  "manipulations": [
+    "precision (resource budget) allocated to each remembered action-value",
+    "initial resource budget at the start of learning",
+    "task type (two standard RL tasks plus a model-based planning task)"
+  ],
+  "key_findings": [
+    "DRA assigns more resources to memories with higher impact on cumulative rewards",
+    "starting with a higher resource budget yields faster learning than the eventual asymptotic budget",
+    "algorithm derived from first principles applies across standard and model-based RL tasks"
+  ],
+  "interpretations": [
+    "differential precision allocation provides a normative account of bounded-rational learning under cost",
+    "early-learning over-engagement of frontal cortex may reflect transiently higher resource budgets"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "limited memory resources",
+    "action-value precision",
+    "resource allocation in RL",
+    "cost of precise representation",
+    "model-based planning",
+    "frontal cortex engagement during learning",
+    "bounded rationality"
+  ],
+  "out_of_scope_note": null
+}

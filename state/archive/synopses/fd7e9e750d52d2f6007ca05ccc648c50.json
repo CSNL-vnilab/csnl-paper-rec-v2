@@ -1,0 +1,58 @@
+{
+  "canonical_id": "fd7e9e750d52d2f6007ca05ccc648c50",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "evidence accumulation",
+      "role": "primary_lens",
+      "one_line": "decisions formed by integrating ambiguous evidence over time"
+    },
+    {
+      "name": "signal-detection theory",
+      "role": "alternative_lens",
+      "one_line": "choice bias decomposed from sensitivity in detection tasks"
+    },
+    {
+      "name": "pupil-linked arousal",
+      "role": "extended",
+      "one_line": "phasic arousal indexed by evoked pupil dilation modulates bias"
+    }
+  ],
+  "core_question": "Does pupil-linked phasic arousal suppress choice biases during evidence-accumulation decisions across species and decision domains?",
+  "key_assumptions": [
+    "evoked pupil dilation indexes phasic arousal-system activation",
+    "choice bias can be separated from sensitivity within an accumulation framework",
+    "perceptual and memory-based decisions share common accumulation machinery"
+  ],
+  "manipulations": [
+    "phasic arousal level (high vs low pupil response trials)",
+    "bias direction (spontaneous conservative vs liberal; experimentally induced)",
+    "species (humans vs mice)",
+    "decision domain (perceptual sound-detection vs memory-based)"
+  ],
+  "key_findings": [
+    "high phasic arousal reduces impact of choice biases in sound-detection tasks",
+    "bias suppression acts on both conservative and liberal biases",
+    "effect generalizes from humans to mice",
+    "effect generalizes from perceptual to memory-based decisions"
+  ],
+  "interpretations": [
+    "phasic arousal selectively reduces biases in evidence accumulation rather than sensitivity",
+    "interplay between phasic arousal and decision-making reflects a general cross-species principle"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "pupil-linked phasic arousal",
+    "choice bias suppression",
+    "evidence accumulation bias",
+    "cross-species decision-making",
+    "perceptual vs memory-based decisions",
+    "sound-detection task",
+    "conservative and liberal bias"
+  ],
+  "out_of_scope_note": null
+}

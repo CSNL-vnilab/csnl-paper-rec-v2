@@ -1,0 +1,50 @@
+{
+  "canonical_id": "c5cfd732cafa861c351713b0a8fd2312",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T14:30:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "deep neural network models of brain",
+      "role": "primary_lens",
+      "one_line": "DNNs as learned-from-experience theories of perception, cognition, and action"
+    },
+    {
+      "name": "neural coding",
+      "role": "context",
+      "one_line": "classical program of characterising neural codes and computations"
+    }
+  ],
+  "core_question": "How can neuroscientists use deep networks to model and understand biological brains in the age of deep learning?",
+  "key_assumptions": [
+    "computations in deep networks are learned from experience, not endowed by the researcher",
+    "comparing artificial and biological systems on behaviour, learning, and representation is informative for theory"
+  ],
+  "manipulations": [
+    "perspective piece — no empirical manipulations"
+  ],
+  "key_findings": [
+    "machine learning advances open new ways of thinking about neural computation",
+    "DNNs may offer theories of perception, cognition, and action for biological brains",
+    "recent ML advances raise new research questions for systems neuroscience"
+  ],
+  "interpretations": [
+    "a DNN-based perspective could radically reshape how neuroscientists understand neural systems",
+    "the paper offers a roadmap for systems neuroscience in the age of deep learning"
+  ],
+  "limitations_noted": [
+    "conceptual and methodological challenges remain in comparing artificial and biological systems"
+  ],
+  "connecting_signals": [
+    "deep neural networks",
+    "systems neuroscience roadmap",
+    "biological vs artificial systems",
+    "neural representation comparison",
+    "learning dynamics",
+    "perception cognition action",
+    "neural codes characterisation"
+  ],
+  "out_of_scope_note": null
+}

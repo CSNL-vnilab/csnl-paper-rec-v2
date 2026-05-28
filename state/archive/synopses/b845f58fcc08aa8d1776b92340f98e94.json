@@ -1,0 +1,56 @@
+{
+  "canonical_id": "b845f58fcc08aa8d1776b92340f98e94",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "program induction",
+      "role": "primary_lens",
+      "one_line": "Social learning formalized as inferring a probabilistic program from observations."
+    },
+    {
+      "name": "Bayesian inference",
+      "role": "primary_lens",
+      "one_line": "Learners infer latent causal programs from observed examples probabilistically."
+    },
+    {
+      "name": "cultural learning",
+      "role": "context",
+      "one_line": "Cumulative culture framed via high-fidelity intergenerational transmission."
+    }
+  ],
+  "core_question": "How do humans achieve high-fidelity social learning that supports cumulative culture?",
+  "key_assumptions": [
+    "Causal processes can be represented as probabilistic programs",
+    "Learners observe not only inputs and outputs but also the execution trace",
+    "Program induction proceeds by Bayesian inference over latent programs"
+  ],
+  "manipulations": [
+    "Presence vs absence of an observed execution trace alongside input-output pairs",
+    "Single-example learning conditions across two behavioral experiments"
+  ],
+  "key_findings": [
+    "Observing an execution trace speeds up program induction even from a single example",
+    "Human judgments are structured by the execution trace as predicted by the model",
+    "Behavior tracks the model's predictions across two experiments"
+  ],
+  "interpretations": [
+    "Execution-trace observation underlies high-fidelity human social learning",
+    "Program induction unifies emulation and imitation within one mechanism"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "program induction",
+    "social learning",
+    "execution trace",
+    "probabilistic programs",
+    "cumulative culture",
+    "imitation and emulation",
+    "one-shot learning",
+    "causal process inference"
+  ],
+  "out_of_scope_note": null
+}

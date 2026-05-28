@@ -1,0 +1,50 @@
+{
+  "canonical_id": "b60c663738da23c81c390db414a81176",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "sense of agency",
+      "role": "primary_lens",
+      "one_line": "self-authorship of movement assessed via first-order and metacognitive judgments"
+    },
+    {
+      "name": "signal-detection theory",
+      "role": "context",
+      "one_line": "discrimination between self-influenced vs random motion stimuli"
+    }
+  ],
+  "core_question": "Can a short online motion-tracking task reliably quantify movement agency through first-order perceptual and second-order metacognitive judgments?",
+  "key_assumptions": [
+    "agency can be probed by distinguishing self-influenced from random trajectories",
+    "first-order perception and second-order metacognition are dissociable components of agency"
+  ],
+  "manipulations": [
+    "trajectory dependence on participant cursor movement vs random motion",
+    "task difficulty adapted online to participant performance"
+  ],
+  "key_findings": [
+    "task yields reliable first-order and metacognitive agency measures in healthy participants",
+    "online format is efficient and short compared to existing assessments"
+  ],
+  "interpretations": [
+    "the task is a promising tool for diagnosing and understanding disorders of agency"
+  ],
+  "limitations_noted": [
+    "validation limited to healthy participants in this report"
+  ],
+  "connecting_signals": [
+    "sense of agency",
+    "self-agency",
+    "motion tracking task",
+    "metacognitive judgment",
+    "first-order perception",
+    "adaptive sensorimotor task",
+    "online psychophysics",
+    "disorders of agency"
+  ],
+  "out_of_scope_note": null
+}

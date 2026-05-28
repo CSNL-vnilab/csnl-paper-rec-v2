@@ -1,0 +1,50 @@
+{
+  "canonical_id": "00c51e93f6c799fdbc0ff236e9159322",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "drift-diffusion",
+      "role": "primary_lens",
+      "one_line": "bounded accumulation model fit to perceptual choice behaviour to recover decision bounds"
+    },
+    {
+      "name": "signal-detection theory",
+      "role": "context",
+      "one_line": "decision confidence treated as internal estimate of choice correctness absent external feedback"
+    }
+  ],
+  "core_question": "Does internally computed decision confidence on one trial adjust the speed-accuracy tradeoff on the subsequent trial?",
+  "key_assumptions": [
+    "agents lack external feedback and rely on internal confidence",
+    "perceptual choices are well described by bounded evidence accumulation",
+    "decision bound is the adjustable parameter governing speed-accuracy tradeoff"
+  ],
+  "manipulations": [
+    "previous-trial reported confidence (low vs high)",
+    "three different perceptual choice tasks"
+  ],
+  "key_findings": [
+    "fitted decision bounds depended on previous-trial reported confidence",
+    "this confidence-driven bound shift was independent of objective accuracy",
+    "a centro-parietal EEG component sensitive to confidence predicted the bound increase"
+  ],
+  "interpretations": [
+    "the brain uses internal confidence signals to continuously update decision policy",
+    "low confidence raises the bound, yielding slower but more accurate subsequent decisions"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "decision confidence",
+    "speed-accuracy tradeoff",
+    "bounded accumulation model",
+    "decision bound adjustment",
+    "centro-parietal EEG",
+    "sequential decision policy",
+    "perceptual choice"
+  ],
+  "out_of_scope_note": null
+}

@@ -1,0 +1,56 @@
+{
+  "canonical_id": "e74a8d76f1d3cbc86c293fc58689dd31",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "compositional pattern description language",
+      "role": "primary_lens",
+      "one_line": "complex visual patterns built recursively from simpler primitive structures"
+    },
+    {
+      "name": "non-compositional pattern description",
+      "role": "compared_against",
+      "one_line": "flat, non-recursive descriptive model used as baseline"
+    },
+    {
+      "name": "language of thought",
+      "role": "context",
+      "one_line": "natural language taps a compositionally structured internal representation"
+    }
+  ],
+  "core_question": "Do people perceive and communicate visual patterns through a compositional description language?",
+  "key_assumptions": [
+    "patterns admit a generative grammar of simpler-to-complex composition",
+    "natural-language descriptions can be mapped to a structured pattern language",
+    "communication efficacy reflects underlying representational structure"
+  ],
+  "manipulations": [
+    "pattern type (compositional vs non-compositional)",
+    "role within dyad (describer vs redrawer)"
+  ],
+  "key_findings": [
+    "compositional patterns were communicated more effectively than non-compositional ones",
+    "the compositional model predicted which patterns were harder to describe",
+    "the model produced human-like quality ratings for participants' drawings"
+  ],
+  "interpretations": [
+    "natural language interfaces with a compositionally structured pattern description language",
+    "compositionality is a key organizing principle in perception and communication of structure"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "compositionality",
+    "communication game",
+    "pattern description",
+    "structured representations",
+    "generative grammar",
+    "describer-redrawer paradigm",
+    "language of thought",
+    "human-like quality ratings"
+  ],
+  "out_of_scope_note": null
+}
