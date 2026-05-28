@@ -1,0 +1,61 @@
+{
+  "canonical_id": "197281ea643e530eeb28be36ab51c844",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "evidence accumulation",
+      "role": "primary_lens",
+      "one_line": "pulsatile sensory increments accumulated over time to drive perceptual choice"
+    },
+    {
+      "name": "gain modulation",
+      "role": "extended",
+      "one_line": "multiplicative scaling of sensory responses by cognitive and contextual variables"
+    },
+    {
+      "name": "top-down feedback",
+      "role": "alternative_lens",
+      "one_line": "non-sensory regions feed accumulated evidence and choice signals back to early visual cortex"
+    }
+  ],
+  "core_question": "Do early sensory cortical responses to discrete evidence pulses faithfully relay stimulus information, or are their amplitudes systematically shaped by accumulated evidence, choice, and other task contexts?",
+  "key_assumptions": [
+    "cue-locked cells provide candidate momentary sensory inputs to an accumulator",
+    "per-cue response amplitudes act as multiplicative gains on a fixed impulse response",
+    "amplitude variability across cues can carry information beyond independent noise"
+  ],
+  "manipulations": [
+    "left vs right pulse sequences in a virtual T-maze accumulation task",
+    "recording site across six posterior cortical areas (V1, secondary visual areas, RSC) and layers 2/3 vs 5",
+    "head-fixation with theta-controlled vs free-viewing-angle trials"
+  ],
+  "key_findings": [
+    "only 5-15% of active neurons in V1 and secondary visual areas were cue-locked",
+    "cue-response amplitudes varied systematically with time-in-trial and behavioral context",
+    "about 50% of cue-locked cells in each area carried choice- or accumulated-evidence-dependent amplitude modulations",
+    "modulations were widespread across posterior cortex and persisted under view-angle control"
+  ],
+  "interpretations": [
+    "even earliest sensory representations of evidence pulses are gain-modulated by an accumulator and choice signal, suggesting top-down feedback from the decision process",
+    "behavioral models should treat sensory inputs as carrying temporally correlated noise rather than independent per-pulse noise"
+  ],
+  "limitations_noted": [
+    "cue-locked cells form only a small fraction of task-active neurons",
+    "limited statistical power per session for layer 5 in some areas"
+  ],
+  "connecting_signals": [
+    "pulsatile evidence accumulation",
+    "cue-locked V1 neurons",
+    "gain modulation by choice",
+    "two-photon imaging posterior cortex",
+    "virtual T-maze decision task",
+    "top-down feedback to sensory cortex",
+    "temporally correlated sensory noise",
+    "impulse response amplitude model"
+  ],
+  "out_of_scope_note": null
+}

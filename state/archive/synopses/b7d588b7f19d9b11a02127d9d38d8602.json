@@ -1,0 +1,57 @@
+{
+  "canonical_id": "b7d588b7f19d9b11a02127d9d38d8602",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "reinforcement learning",
+      "role": "primary_lens",
+      "one_line": "value updates from reward prediction errors over multi-arm bandit choices"
+    },
+    {
+      "name": "normative analysis",
+      "role": "primary_lens",
+      "one_line": "asks whether a known cognitive bias is reward-maximising under constraints"
+    },
+    {
+      "name": "bounded rationality",
+      "role": "extended",
+      "one_line": "decisions made with finite computational precision (decision noise)"
+    }
+  ],
+  "core_question": "Can a confirmatory bias in reinforcement-learning value updates be reward-maximising rather than suboptimal?",
+  "key_assumptions": [
+    "value estimates update asymmetrically depending on whether the option was chosen and the sign of the reward prediction error",
+    "decision policy is corrupted by finite computational precision (choice noise)",
+    "multi-arm bandit simulations capture the relevant trade-offs of human RL"
+  ],
+  "manipulations": [
+    "magnitude and direction of the confirmatory update bias",
+    "level of decision noise corrupting choices",
+    "bandit task settings (range of experimental configurations)"
+  ],
+  "key_findings": [
+    "confirmatory biases yield higher cumulative reward than an unbiased update rule across a wide range of settings",
+    "advantage is largest when decisions are corrupted by noise",
+    "biased learners overestimate values of better bandits and underestimate values of worse bandits"
+  ],
+  "interpretations": [
+    "apparently suboptimal asymmetric learning is reward-maximising once finite decision precision is taken into account",
+    "value separation induced by the bias makes noisy choices more robust"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "confirmation bias",
+    "reinforcement learning",
+    "reward prediction error",
+    "multi-arm bandit",
+    "asymmetric value updating",
+    "decision noise",
+    "bounded rationality",
+    "normative account"
+  ],
+  "out_of_scope_note": null
+}

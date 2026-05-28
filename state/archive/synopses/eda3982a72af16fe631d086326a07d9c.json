@@ -1,0 +1,62 @@
+{
+  "canonical_id": "eda3982a72af16fe631d086326a07d9c",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "object-centric representation learning",
+      "role": "primary_lens",
+      "one_line": "Scenes are decomposed into discrete object slots, each a disentangled latent."
+    },
+    {
+      "name": "slot attention",
+      "role": "extended",
+      "one_line": "Iterative attention-based slot binding extended with linguistic grounding."
+    },
+    {
+      "name": "language-grounded concept learning",
+      "role": "primary_lens",
+      "one_line": "Word-to-slot associations bias unsupervised object discovery toward nameable concepts."
+    },
+    {
+      "name": "MONet (mixture-of-experts scene decomposition)",
+      "role": "extended",
+      "one_line": "Generative slot-wise scene decomposition baseline augmented by language signal."
+    }
+  ],
+  "core_question": "Can language input improve the quality of unsupervised object-centric scene representations and the concepts they carry?",
+  "key_assumptions": [
+    "Scenes are compositionally decomposable into a fixed set of object slots",
+    "Words denoting categories, properties, and spatial relations can be aligned to slot-level latents",
+    "Reconstruction-only unsupervised object discovery underfits semantically meaningful concepts"
+  ],
+  "manipulations": [
+    "Presence vs absence of paired language input during representation learning",
+    "Choice of underlying language-agnostic object discovery backbone (MONet, Slot Attention)",
+    "Type of linguistic concept supplied (categories, properties, spatial relations)"
+  ],
+  "key_findings": [
+    "LORL consistently improves unsupervised object discovery performance on two datasets",
+    "Concepts induced via language transfer benefit downstream referring expression comprehension",
+    "Language-mediated training is compatible with multiple language-agnostic discovery algorithms"
+  ],
+  "interpretations": [
+    "Language acts as a weak supervisory signal that disentangles and labels object-centric latents",
+    "Concept grounding and object discovery are mutually reinforcing rather than independent"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "object-centric representation",
+    "slot attention",
+    "unsupervised object discovery",
+    "language grounding",
+    "MONet",
+    "referring expression comprehension",
+    "disentangled scene representation",
+    "concept learning from vision and language"
+  ],
+  "out_of_scope_note": null
+}

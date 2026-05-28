@@ -1,0 +1,61 @@
+{
+  "canonical_id": "0217c00e9b2d9904997b04b311d92d44",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T12:36:35+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "neuromodulation of cortical state",
+      "role": "primary_lens",
+      "one_line": "LC-NE release reshapes coordinated cortical activity in a context-dependent way"
+    },
+    {
+      "name": "noise correlations / coordinated population activity",
+      "role": "primary_lens",
+      "one_line": "pairwise spike-count correlations (rsc) as the readout of network state"
+    },
+    {
+      "name": "arousal / pupil-linked brain state",
+      "role": "alternative_lens",
+      "one_line": "pupil phase as an external index of LC activation and arousal"
+    }
+  ],
+  "core_question": "How do ongoing versus event-evoked locus coeruleus firing patterns relate to coordinated activity in anterior cingulate cortex of awake primates?",
+  "key_assumptions": [
+    "LC spiking is a proxy for endogenous NE release to ACC",
+    "Pairwise spike-count correlations index coordinated network state independent of rate changes",
+    "Pupil diameter co-varies with LC activation and arousal"
+  ],
+  "manipulations": [
+    "Type of LC activity: spontaneous (baseline) vs. sound-evoked transient",
+    "Counting window size (100 ms to 1 s) for rsc",
+    "Behavioral context: passive fixation vs. fixation with randomly presented sounds",
+    "Pupil-phase conditioning on simultaneous LC/ACC recordings"
+  ],
+  "key_findings": [
+    "ACC pairwise correlations decrease when ongoing LC activity is high",
+    "ACC pairwise correlations increase following sound-evoked transient LC responses",
+    "These rsc changes are largely independent of ACC single-unit firing-rate changes",
+    "Both effects co-vary with pupil fluctuations that track LC activation"
+  ],
+  "interpretations": [
+    "Context-dependent LC-NE engagement modulates cortical information processing via coordinated activity rather than rate",
+    "Arousal-related fluctuations partly explain ongoing reconfiguration of cortical coordination"
+  ],
+  "limitations_noted": [
+    "Effects of artificial vs. endogenous LC activation could differ, and prior work directly linking the two is sparse"
+  ],
+  "connecting_signals": [
+    "locus coeruleus norepinephrine",
+    "anterior cingulate cortex",
+    "spike-count correlations",
+    "pupil-linked arousal",
+    "neuromodulation of coordinated activity",
+    "context-dependent cortical state",
+    "evoked vs. spontaneous LC firing",
+    "non-human primate ACC recordings"
+  ],
+  "out_of_scope_note": null
+}

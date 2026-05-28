@@ -1,0 +1,61 @@
+{
+  "canonical_id": "c6176f6b73120ee0069b1455a54cab5b",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "bump-attractor / diffusing-particle working memory",
+      "role": "primary_lens",
+      "one_line": "Memory of spatial angles modeled as Brownian-diffusing particles whose variance grows linearly with delay."
+    },
+    {
+      "name": "evidence accumulation / decision variable formation",
+      "role": "extended",
+      "one_line": "Continuous decision variable computed and stored under capacity- and time-limited working memory."
+    },
+    {
+      "name": "signal-detection theory",
+      "role": "context",
+      "one_line": "Decision precision quantified via error variance as function of set size and delay."
+    }
+  ],
+  "core_question": "How do capacity and temporal limitations of working memory constrain the fidelity of a continuously valued decision variable formed by averaging multiple visual locations?",
+  "key_assumptions": [
+    "Memory of a spatial angle behaves as a diffusing particle with static plus time-dependent noise",
+    "Diffusion cost of holding N items follows sigma_N^2 = sigma_1^2 * N^A",
+    "Participants adopt one of two storage strategies (Average-then-Diffuse or Diffuse-then-Average)"
+  ],
+  "manipulations": [
+    "Set size of remembered disks (1, 2, or 5)",
+    "Delay between presentation and report (0, 1, or 6 s)",
+    "Task type (Perceived single-disk vs Computed mean angle)",
+    "Temporal structure (Simultaneous vs Sequential presentation of disks)"
+  ],
+  "key_findings": [
+    "Error variance for both Perceived and Computed reports grew linearly with delay",
+    "Computed-mean precision degraded with set size and delay, but degradation magnitude depended on strategy",
+    "Individual participants were best fit by either an AtD or a DtA storage strategy",
+    "Sequential presentation required mixture-of-strategies extensions, indicating within-trial integration of late evidence"
+  ],
+  "interpretations": [
+    "Decision variables are not stored uniformly: strategy choice (single-summary vs multi-item) governs how working-memory limits propagate to decision accuracy",
+    "Future neural and computational models of deliberative decision-making must incorporate strategy- and task-dependent working-memory constraints"
+  ],
+  "limitations_noted": [
+    "Two-model framework may not exhaust the space of plausible storage strategies, with mixtures needed for Sequential blocks"
+  ],
+  "connecting_signals": [
+    "working memory diffusion",
+    "continuous decision variable",
+    "set-size and delay effects",
+    "Average-then-Diffuse vs Diffuse-then-Average",
+    "bump-attractor model",
+    "spatial averaging task",
+    "evidence integration over time",
+    "diffusion constant scaling N^A"
+  ],
+  "out_of_scope_note": null
+}

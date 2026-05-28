@@ -1,0 +1,52 @@
+{
+  "canonical_id": "ea6eb9e0892c9ca2ef71d26fa0d7a013",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "neuroeconomic value-based decision-making",
+      "role": "primary_lens",
+      "one_line": "Willingness-to-pay quantifies in-the-moment economic valuation of drug and nondrug options."
+    },
+    {
+      "name": "craving-induced value modulation",
+      "role": "extended",
+      "one_line": "Craving multiplicatively amplifies value along a drug-relatedness dimension."
+    }
+  ],
+  "core_question": "How do moment-to-moment fluctuations in opioid craving bias the economic valuation of drug-related versus equally desirable nondrug-related options?",
+  "key_assumptions": [
+    "Willingness-to-pay indexes subjective economic value",
+    "Drug-relatedness is a graded dimension over personalized items",
+    "Craving is a separable psychological state from negative mood"
+  ],
+  "manipulations": [
+    "Time since scheduled opioid maintenance dose (shortly after vs ~24 h later)",
+    "Drug-relatedness of consumer items and foods (drug-related vs nondrug-related)",
+    "Offered quantity of the option"
+  ],
+  "key_findings": [
+    "Higher trait cravers showed higher drug-related valuation",
+    "Within-person, higher momentary craving raised drug-related valuation",
+    "Craving increased willingness-to-pay selectively for drug-related items, not for matched nondrug options",
+    "The craving-driven value boost grew with offered quantity and was separable from negative mood"
+  ],
+  "interpretations": [
+    "Craving narrows economic motivation toward the craved object by selectively, multiplicatively amplifying perceived value along a drug-relatedness dimension"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "opioid use disorder",
+    "craving",
+    "willingness-to-pay",
+    "drug-related valuation",
+    "within-person value fluctuation",
+    "neuroeconomic decision-making",
+    "multiplicative value modulation",
+    "drug-relatedness dimension"
+  ],
+  "out_of_scope_note": null
+}

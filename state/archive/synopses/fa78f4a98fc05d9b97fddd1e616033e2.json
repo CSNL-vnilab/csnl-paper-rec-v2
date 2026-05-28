@@ -1,0 +1,58 @@
+{
+  "canonical_id": "fa78f4a98fc05d9b97fddd1e616033e2",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "maximum entropy models",
+      "role": "primary_lens",
+      "one_line": "statistical-physics model fit to simultaneous spiking activity of neural populations"
+    },
+    {
+      "name": "Ising-like models of neural population",
+      "role": "primary_lens",
+      "one_line": "pairwise spin-glass description of correlated neural firing patterns"
+    },
+    {
+      "name": "statistical mechanics of neural codes",
+      "role": "context",
+      "one_line": "treating population activity as a thermodynamic system with collective states"
+    }
+  ],
+  "core_question": "Can simple statistical-physics models quantitatively capture the joint activity patterns of large real neural populations?",
+  "key_assumptions": [
+    "population activity is well-described by low-order interaction models",
+    "neurons recorded together can be treated as a statistical ensemble",
+    "model adequacy depends on how cells are sampled from tissue"
+  ],
+  "manipulations": [
+    "sampling geometry: dense local samples vs sparse samples from larger regions",
+    "population size scaled to 1000+ simultaneously recorded neurons"
+  ],
+  "key_findings": [
+    "dense samples from a small region yield extremely detailed quantitative agreement between theory and data",
+    "sparse samples from larger regions cause the models to fail",
+    "simple statistical-physics models can match population activity beyond qualitative resemblance"
+  ],
+  "interpretations": [
+    "one can aspire to precise quantitative agreement between simplifying theory and complex biological activity",
+    "sampling structure fundamentally constrains the validity of population-level statistical-physics descriptions"
+  ],
+  "limitations_noted": [
+    "models break down under sparse sampling across larger spatial regions"
+  ],
+  "connecting_signals": [
+    "maximum entropy models",
+    "pairwise Ising model",
+    "large-scale neural recordings",
+    "mouse cortex population activity",
+    "collective states of neural populations",
+    "statistical physics of neural networks",
+    "sampling geometry effects",
+    "population coding"
+  ],
+  "out_of_scope_note": null
+}
