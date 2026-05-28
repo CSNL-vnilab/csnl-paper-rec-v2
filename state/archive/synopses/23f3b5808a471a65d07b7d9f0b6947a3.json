@@ -1,0 +1,17 @@
+{
+  "canonical_id": "23f3b5808a471a65d07b7d9f0b6947a3",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.0,
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "TheScienceBreaker popular-science summary (~55 useful words after stripping submission credit). Below the 100-word threshold for grounded synopsis extraction; the underlying primary research should be matched via its own canonical_id rather than this lay-audience digest."
+}

@@ -1,0 +1,58 @@
+{
+  "canonical_id": "a49bf541ab83848d03c4c84d128ea0fa",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "task-state representation in OFC",
+      "role": "primary_lens",
+      "one_line": "lOFC encodes abstract task variables (reward history) that drive adaptive sequential biases"
+    },
+    {
+      "name": "sequential / history-dependent choice",
+      "role": "extended",
+      "one_line": "past outcomes bias current choices; this paper dissociates risky-bias from spatial win-stay/lose-shift"
+    },
+    {
+      "name": "value-based decision-making",
+      "role": "context",
+      "one_line": "choices between cued guaranteed vs probabilistic rewards as the behavioral substrate"
+    }
+  ],
+  "core_question": "Does the lateral OFC support trial-by-trial learning of all sequential biases, or only abstract task-specific ones like risk preference?",
+  "key_assumptions": [
+    "trial outcomes are statistically independent so any sequential effect is endogenous",
+    "lOFC encodes task-state variables including reward history",
+    "optogenetic inhibition during choice reporting isolates lOFC contribution to updating"
+  ],
+  "manipulations": [
+    "explicitly cued guaranteed vs probabilistic reward options",
+    "optogenetic inhibition of lOFC time-locked to choice reporting",
+    "trial-type contrast: risky-win history vs spatial win-stay/lose-shift"
+  ],
+  "key_findings": [
+    "lOFC neurons strongly encode reward history and receipt",
+    "behavior shows increased risk-taking after risky wins and spatial win-stay/lose-shift biases",
+    "lOFC inhibition eliminates the post-risky-win increase in risk preference",
+    "lOFC inhibition spares spatial sequential biases"
+  ],
+  "interpretations": [
+    "different sequential biases are neurally dissociable",
+    "lOFC supports learning of abstract task-specific biases but not spatial ones, consistent with OFC representing position in a task-state space"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "lateral orbitofrontal cortex",
+    "trial-by-trial learning",
+    "sequential bias",
+    "risky decision-making",
+    "win-stay lose-shift",
+    "reward history encoding",
+    "optogenetic inhibition",
+    "task-state representation"
+  ],
+  "out_of_scope_note": null
+}

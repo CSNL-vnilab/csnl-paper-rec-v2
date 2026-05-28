@@ -1,0 +1,61 @@
+{
+  "canonical_id": "79edd157cbe20c61332dfd7b810f1bae",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "scale-invariant temporal representation",
+      "role": "primary_lens",
+      "one_line": "logarithmically compressed timeline of past and future events"
+    },
+    {
+      "name": "reinforcement learning",
+      "role": "extended",
+      "one_line": "extends RL value estimation beyond exponential discounting to power-law"
+    },
+    {
+      "name": "model-based reinforcement learning",
+      "role": "compared_against",
+      "one_line": "criticized for linear computational cost in simulated time"
+    },
+    {
+      "name": "model-free reinforcement learning",
+      "role": "compared_against",
+      "one_line": "criticized for requiring a fixed exponential discount timescale"
+    }
+  ],
+  "core_question": "How can a natural learner compute a scale-invariant estimate of future outcomes in continuous time without committing to a single discount timescale?",
+  "key_assumptions": [
+    "future time can be represented on a logarithmically compressed scale",
+    "the timeline preserves what-will-happen-when information",
+    "the whole timeline is constructible in a single parallel operation"
+  ],
+  "manipulations": [
+    "contrast with step-wise model-based transition estimation",
+    "contrast with Bellman-equation exponential discounting"
+  ],
+  "key_findings": [
+    "proposed mechanism efficiently estimates future inputs as a function of future time on a log-compressed scale",
+    "mechanism yields a scale-invariant power-law-discounted estimate of expected future reward",
+    "entire future timeline is constructed in a single parallel operation"
+  ],
+  "interpretations": [
+    "scale-invariant timeline avoids the timescale-selection drawback of exponential discounting and the linear cost drawback of step-wise simulation",
+    "the mechanism generates concrete behavioral and neural predictions and could be incorporated into future RL algorithms"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "scale-invariant timeline",
+    "logarithmic time compression",
+    "continuous-time reinforcement learning",
+    "power-law discounting",
+    "Laplace transform of time",
+    "future-time representation",
+    "temporal context",
+    "Bellman equation alternative"
+  ],
+  "out_of_scope_note": null
+}

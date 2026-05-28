@@ -1,0 +1,49 @@
+{
+  "canonical_id": "5ac4ee3893f8aeb237d1b53352e72ced",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "program induction",
+      "role": "primary_lens",
+      "one_line": "Cultural knowledge represented as programs learned from examples."
+    },
+    {
+      "name": "Bayesian program learning",
+      "role": "context",
+      "one_line": "Inferring latent programs from observed input-output data."
+    }
+  ],
+  "core_question": "Does observing the execution trace of a cultural process, not just its input and output, accelerate program induction and thereby support high-fidelity social learning?",
+  "key_assumptions": [
+    "Cultural processes can be represented as programs",
+    "Social learners observe causal steps, not only end products",
+    "Higher-fidelity transmission supports cumulative culture"
+  ],
+  "manipulations": [
+    "Learning from input-output pairs vs. learning from full execution traces",
+    "Number of training examples (down to a single example)"
+  ],
+  "key_findings": [
+    "Observing an execution trace speeds up program induction relative to seeing only inputs and outputs",
+    "Trace-based learning succeeds even from a single example"
+  ],
+  "interpretations": [
+    "Execution-trace observation can explain the high-fidelity social learning underlying cumulative human culture",
+    "The same mechanism may unify emulation and imitation and account for ritualization in moral learning"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "program induction",
+    "execution trace",
+    "social learning",
+    "cumulative culture",
+    "one-shot learning",
+    "imitation vs emulation",
+    "ritualization"
+  ],
+  "out_of_scope_note": null
+}

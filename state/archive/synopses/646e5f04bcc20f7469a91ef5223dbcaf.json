@@ -1,0 +1,17 @@
+{
+  "canonical_id": "646e5f04bcc20f7469a91ef5223dbcaf",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T21:49:33+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.0,
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "eLife editorial decision letter (10.7554/elife.49834.sa1) accompanying the primary research article (companion canonical_id 55304df6). Decision letters are peer-review editorial documents — a one-sentence editor summary plus reviewer commentary — not the underlying research paper. The substantive scientific content (confidence-dependent reinforcement learning, trial-to-trial choice updating in perceptual decisions) is covered by the companion synopsis. Surfacing the decision letter as a separate recommendation would duplicate the primary paper at the cost of a researcher interview turn."
+}

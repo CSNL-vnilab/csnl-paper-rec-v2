@@ -1,0 +1,17 @@
+{
+  "canonical_id": "6b9a0aa855dbbc1673456b483c57fcbb",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.0,
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "Abstract is a single trailing fragment (< 30 useful words after boilerplate) — insufficient to ground key_findings or interpretations. Title and venue (Journal of Economic Behavior & Organization) suggest a choice-theoretic axiomatization of divisive normalization for discrete-choice behavior, which would be in-scope for the lab's normalization work, but the supplied abstract does not state the axioms, the equivalence claim, or the three unified models. Re-run synopsis when a fuller abstract or the introduction is ingested."
+}

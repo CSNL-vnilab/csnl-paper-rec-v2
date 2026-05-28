@@ -1,0 +1,62 @@
+{
+  "canonical_id": "47a580888181fe50db7ef833cc77c5eb",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T12:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "model-free reinforcement learning",
+      "role": "primary_lens",
+      "one_line": "value updating driven by direct cached reward associations"
+    },
+    {
+      "name": "model-based reinforcement learning",
+      "role": "primary_lens",
+      "one_line": "value updating via internal model of stimulus-outcome structure"
+    },
+    {
+      "name": "dual-process evaluation",
+      "role": "compared_against",
+      "one_line": "explicit vs implicit evaluations as two separate cognitive systems"
+    },
+    {
+      "name": "evaluative conditioning",
+      "role": "context",
+      "one_line": "stimulus-stimulus pairing as mechanism for acquiring evaluations"
+    }
+  ],
+  "core_question": "Do explicit and implicit evaluations arise from distinct learning processes, specifically model-free versus model-based reinforcement learning?",
+  "key_assumptions": [
+    "evaluation is a fundamental good-bad computation",
+    "model-free vs model-based RL distinction maps onto evaluation acquisition",
+    "revaluation paradigms can dissociate model-free from model-based updating"
+  ],
+  "manipulations": [
+    "revaluation procedure after initial conditioning",
+    "number of stimulus exposures in revaluation phase",
+    "deterministic vs probabilistic initial reinforcement"
+  ],
+  "key_findings": [
+    "explicit evaluations update via both model-free and model-based processes",
+    "implicit evaluations update only via model-free, not model-based, processes",
+    "dissociation robust across exposure counts and reinforcement schedules"
+  ],
+  "interpretations": [
+    "implicit evaluations are context-sensitive yet recalcitrant to inference-based updating",
+    "framework moves beyond dual-process and single-process accounts of evaluation"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "model-free learning",
+    "model-based learning",
+    "implicit evaluation",
+    "explicit evaluation",
+    "revaluation",
+    "evaluative conditioning",
+    "attitude updating",
+    "reinforcement learning"
+  ],
+  "out_of_scope_note": null
+}

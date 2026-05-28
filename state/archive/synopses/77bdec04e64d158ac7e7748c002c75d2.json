@@ -1,0 +1,59 @@
+{
+  "canonical_id": "77bdec04e64d158ac7e7748c002c75d2",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:30:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "intrinsic functional connectivity",
+      "role": "primary_lens",
+      "one_line": "spatially organized macroscale correlations of spontaneous cortical activity fluctuations"
+    },
+    {
+      "name": "ascending neuromodulation",
+      "role": "primary_lens",
+      "one_line": "subcortical systems with widespread cortical projections shape large-scale dynamics"
+    },
+    {
+      "name": "arousal",
+      "role": "context",
+      "one_line": "global state variable linking brainstem output to cortical correlation structure"
+    }
+  ],
+  "core_question": "How do subcortical neuromodulatory systems shape the strength, topography, and topology of intrinsic correlations of large-scale cortical activity?",
+  "key_assumptions": [
+    "intrinsic fluctuations unfold on a backbone of long-range anatomical connections",
+    "ascending neuromodulators are positioned to broadcast state signals cortex-wide",
+    "psychiatric and neurological disorders involve altered cortical dynamics tractable via neuromodulation"
+  ],
+  "manipulations": [
+    "review scope spans human, monkey, and rodent studies",
+    "emphasis on non-invasive recordings of human brain activity"
+  ],
+  "key_findings": [
+    "neuromodulatory systems reshape strength, topography, and topology of intrinsic correlations across time",
+    "shared and antagonistic principles emerge across distinct neuromodulator systems",
+    "altered intrinsic correlation patterns map onto Parkinson's disease, depression, and schizophrenia"
+  ],
+  "interpretations": [
+    "charting receptor- and neuromodulator-specific effects can constrain models of healthy brain function",
+    "principles of neuromodulatory control of intrinsic dynamics may seed mechanism-informed biomarkers and individualized treatments"
+  ],
+  "limitations_noted": [
+    "review is structured but explicitly selective rather than exhaustive",
+    "specific neuromodulator- and receptor-resolved effects remain to be charted"
+  ],
+  "connecting_signals": [
+    "intrinsic cortical activity correlations",
+    "resting-state functional connectivity",
+    "ascending neuromodulatory systems",
+    "brainstem arousal control",
+    "large-scale cortical networks",
+    "topography and topology of correlations",
+    "pharmacology of psychiatric disorders",
+    "mechanism-inspired biomarkers"
+  ],
+  "out_of_scope_note": null
+}

@@ -1,0 +1,54 @@
+{
+  "canonical_id": "5443788cbcbd39f7bb2f4d27bc9948f4",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "renormalization group",
+      "role": "primary_lens",
+      "one_line": "Phenomenological coarse-graining of neural activity to probe fixed-point structure."
+    },
+    {
+      "name": "critical phenomena",
+      "role": "primary_lens",
+      "one_line": "Scaling and non-Gaussian fixed-point distributions as signatures of criticality."
+    },
+    {
+      "name": "collective network dynamics",
+      "role": "context",
+      "one_line": "Population activity treated as an emergent collective state."
+    }
+  ],
+  "core_question": "Does the collective activity of a large neural population exhibit a nontrivial fixed point under coarse-graining?",
+  "key_assumptions": [
+    "Neural population activity admits a phenomenological coarse-graining procedure analogous to block-spin RG.",
+    "Large simultaneously recorded populations can reveal scaling laws if present.",
+    "Fixed-point structure can be diagnosed from distributions and dynamic quantities."
+  ],
+  "manipulations": [
+    "Level of coarse-graining applied to the neural population.",
+    "Static vs dynamic quantities examined under successive coarse-grainings."
+  ],
+  "key_findings": [
+    "Distributions of coarse-grained variables approach a fixed non-Gaussian form.",
+    "Evidence of scaling appears in both static and dynamic quantities."
+  ],
+  "interpretations": [
+    "The collective behavior of the hippocampal network is described by a nontrivial fixed point."
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "coarse-graining",
+    "fixed point",
+    "scaling",
+    "non-Gaussian distribution",
+    "large neural population",
+    "hippocampus",
+    "collective network behavior",
+    "criticality"
+  ],
+  "out_of_scope_note": null
+}

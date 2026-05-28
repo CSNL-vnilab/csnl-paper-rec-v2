@@ -1,0 +1,51 @@
+{
+  "canonical_id": "68f370c6e96306694f26ad13f7d30ce4",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "prospect theory",
+      "role": "compared_against",
+      "one_line": "reference-dependent value with concave gains, convex losses, tested across risky/riskless domains"
+    },
+    {
+      "name": "expected utility theory",
+      "role": "compared_against",
+      "one_line": "domain-general utility over outcomes without gain-loss reference dependence"
+    }
+  ],
+  "core_question": "Do gain-loss reflection effects predicted by prospect theory generalize from risky to riskless choice within the same subjects?",
+  "key_assumptions": [
+    "prospect theory predicts symmetric reflection effects across risky and riskless domains",
+    "reference-dependence operates via concave gains and convex losses",
+    "within-subject design isolates domain-specific deviations from individual preference heterogeneity"
+  ],
+  "manipulations": [
+    "domain of choice (risky lottery vs. riskless)",
+    "outcome valence (gains vs. losses around a reference point)",
+    "incentive-compatible payoff structure"
+  ],
+  "key_findings": [
+    "gain-loss reflection effects are observed in risky choice as predicted",
+    "the same subjects show no reflection effect under riskless choice",
+    "reference-dependence pattern is not consistent across domains within individuals"
+  ],
+  "interpretations": [
+    "a single reference-dependent utility cannot jointly describe risky and riskless choice",
+    "applying prospect-theoretic gain-loss curvature to riskless decisions is empirically unsupported"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "gain-loss reflection effect",
+    "reference-dependent utility",
+    "risky versus riskless choice",
+    "incentive-compatible experiment",
+    "within-subject domain comparison",
+    "loss aversion",
+    "descriptive choice model"
+  ],
+  "out_of_scope_note": null
+}

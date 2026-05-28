@@ -1,0 +1,56 @@
+{
+  "canonical_id": "2bd61e088dce33e39f0599c10a3f817e",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:30:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "reinforcement learning",
+      "role": "primary_lens",
+      "one_line": "dopamine encodes prediction errors driving associative learning"
+    },
+    {
+      "name": "sensory prediction error",
+      "role": "extended",
+      "one_line": "extends scalar value RPE to multidimensional identity-specific error"
+    },
+    {
+      "name": "population / ensemble coding",
+      "role": "primary_lens",
+      "one_line": "identity information carried by pattern across dopamine neurons, not single cells"
+    }
+  ],
+  "core_question": "Do dopamine neuron ensembles carry information about the specific identity of a mis-predicted sensory event, beyond a scalar prediction error?",
+  "key_assumptions": [
+    "dopamine transients support sensory-based associative learning",
+    "scalar RPE in single units cannot explain content-specific learning",
+    "downstream areas can read distributed firing patterns"
+  ],
+  "manipulations": [
+    "elicited sensory prediction errors via mis-predicted sensory events in rats",
+    "elicited sensory prediction errors in human midbrain via fMRI"
+  ],
+  "key_findings": [
+    "firing pattern across small groups of rat dopamine neurons signals the identity of the mis-predicted sensory event",
+    "human midbrain BOLD response to sensory prediction errors reflects the same identity-specific information",
+    "individual dopamine neurons and population averages do not reveal this content"
+  ],
+  "interpretations": [
+    "dopamine ensembles provide highly specific, multidimensional teaching signals",
+    "this opens new possibilities for how dopamine contributes to content-specific learning"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "dopamine prediction error",
+    "sensory prediction error",
+    "ensemble coding",
+    "identity-specific teaching signal",
+    "midbrain BOLD",
+    "associative learning",
+    "multidimensional RPE",
+    "population firing pattern"
+  ],
+  "out_of_scope_note": null
+}
