@@ -1,0 +1,17 @@
+{
+  "canonical_id": "d0cae86696db3563f775ae54c5e14368",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.0,
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "Behavioral-economics theory paper (QJE 2002, Rabin) formalizing the 'law of small numbers' bias in an economic agent's beliefs about i.i.d. signal rates and financial-analyst talent distributions. The model is about a stylized economic decision-maker's inference, not a computational model of brain function, and there is no neural recording, no perceptual/sensory encoding claim, and no circuit-level mechanism. Per scope rules, social-science/economics modeling without neural data or a brain-computation model is out-of-scope, even though the gambler's-fallacy topic overlaps superficially with Bayesian-observer work in the lab."
+}

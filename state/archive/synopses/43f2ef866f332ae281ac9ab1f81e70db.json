@@ -1,0 +1,17 @@
+{
+  "canonical_id": "43f2ef866f332ae281ac9ab1f81e70db",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T20:25:58+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.0,
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "Political-history chapter on the British peace movement (1880-1889): International Arbitration & Peace Association founding, Egypt war, IAL transformation; humanities/diplomatic history, not computational neuroscience."
+}

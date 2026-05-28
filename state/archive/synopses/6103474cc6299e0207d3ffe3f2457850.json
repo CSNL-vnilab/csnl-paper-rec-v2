@@ -1,0 +1,53 @@
+{
+  "canonical_id": "6103474cc6299e0207d3ffe3f2457850",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:30:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "intersubject correlation",
+      "role": "primary_lens",
+      "one_line": "use one brain's spatiotemporal pattern to model another brain's activity"
+    },
+    {
+      "name": "reverse correlation",
+      "role": "extended",
+      "one_line": "let brain signals pick optimal stimuli for each specialized cortical area"
+    }
+  ],
+  "core_question": "To what extent do individual brains share spatiotemporal activity patterns during free viewing of a naturalistic movie?",
+  "key_assumptions": [
+    "free viewing of a popular movie elicits ecologically valid cortical activity",
+    "voxel-by-voxel cross-subject pattern similarity indexes shared processing",
+    "emotionally arousing scenes can drive widespread cortical activation"
+  ],
+  "manipulations": [
+    "naturalistic continuous movie stimulus vs. conventional controlled paradigms",
+    "across-subject pattern modeling rather than within-subject contrasts",
+    "open-ended reverse correlation from spontaneous BOLD signals"
+  ],
+  "key_findings": [
+    "striking voxel-by-voxel synchronization across subjects during natural vision",
+    "synchronization extends beyond primary/secondary sensory cortex into association cortices",
+    "a widespread component tracks emotionally arousing scenes",
+    "regionally selective components show stimulus tuning recovered by reverse correlation"
+  ],
+  "interpretations": [
+    "individual brains tend to 'tick collectively' under naturalistic input",
+    "reverse correlation can invert conventional analysis to discover preferred stimuli for specialized areas"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "intersubject correlation",
+    "naturalistic stimuli fMRI",
+    "free viewing movie paradigm",
+    "voxel-wise synchronization",
+    "association cortex shared processing",
+    "reverse correlation cortical tuning",
+    "emotionally arousing scenes",
+    "data-driven stimulus selection"
+  ],
+  "out_of_scope_note": null
+}
