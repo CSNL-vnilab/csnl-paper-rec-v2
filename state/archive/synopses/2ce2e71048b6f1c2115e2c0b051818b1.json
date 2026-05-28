@@ -1,0 +1,57 @@
+{
+  "canonical_id": "2ce2e71048b6f1c2115e2c0b051818b1",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T12:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "deep reinforcement learning",
+      "role": "primary_lens",
+      "one_line": "Deep RL agents trained to predict action-prediction errors as a model of meta-control."
+    },
+    {
+      "name": "meta-control / action-prediction error monitoring",
+      "role": "extended",
+      "one_line": "APE monitoring extended as the inference signal for environmental controllability."
+    },
+    {
+      "name": "computational psychiatry (transdiagnostic)",
+      "role": "alternative_lens",
+      "one_line": "Mis-estimated controllability mapped onto depressive, anxious, and compulsive traits."
+    }
+  ],
+  "core_question": "How does the brain infer environmental controllability and value meta-control, and how do distortions of this process give rise to transdiagnostic psychiatric symptoms?",
+  "key_assumptions": [
+    "medial prefrontal APEs index controllability inference",
+    "meta-control value depends on estimated controllability",
+    "deep RL agents are valid in silico analogues of human meta-control"
+  ],
+  "manipulations": [
+    "agent architecture: with vs without explicit APE prediction",
+    "controllability of the reward-guided learning environment",
+    "trained bias: over- vs under-estimation of controllability"
+  ],
+  "key_findings": [
+    "only APE-predicting deep RL agents solved the controllability-adaptation task",
+    "APE-trained agents showed meta-control signatures matching humans",
+    "biased controllability estimates produced behaviour matching depressive, anxious, or compulsive trait profiles"
+  ],
+  "interpretations": [
+    "APE monitoring is a core computation for controllability inference and meta-control valuation",
+    "transdiagnostic psychiatric traits can be modelled as miscalibrated controllability estimation in deep RL"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "action prediction error",
+    "meta-control",
+    "controllability inference",
+    "deep reinforcement learning agents",
+    "medial prefrontal cortex",
+    "transdiagnostic computational psychiatry",
+    "depression anxiety compulsivity",
+    "reward-guided learning"
+  ],
+  "out_of_scope_note": null
+}

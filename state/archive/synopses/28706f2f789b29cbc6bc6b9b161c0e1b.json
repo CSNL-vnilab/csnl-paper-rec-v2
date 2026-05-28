@@ -1,0 +1,56 @@
+{
+  "canonical_id": "28706f2f789b29cbc6bc6b9b161c0e1b",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "successor representation",
+      "role": "primary_lens",
+      "one_line": "predictive state representation cached over future-state occupancy under a policy"
+    },
+    {
+      "name": "reduced successor representation",
+      "role": "extended",
+      "one_line": "random-policy SR variant proposed to produce addiction-like habitual behavior"
+    },
+    {
+      "name": "model-free reinforcement learning",
+      "role": "compared_against",
+      "one_line": "cached state-action values contrasted with (red)SR control in alcohol contexts"
+    }
+  ],
+  "core_question": "Do high-risk drinkers rely more on (reduced) successor representation strategies than low-risk drinkers, especially in alcohol-related contexts?",
+  "key_assumptions": [
+    "SR and redSR are dissociable from model-based and model-free control in human behavior",
+    "context (alcohol-related vs neutral) modulates which RL strategy is recruited",
+    "redSR under a random policy can capture addiction-like habit signatures"
+  ],
+  "manipulations": [
+    "drinking-risk group (high-risk vs low-risk drinkers)",
+    "task context (alcohol-related vs disorder-irrelevant)"
+  ],
+  "key_findings": [
+    "a reduced random-policy SR-like strategy contributes to human behavior",
+    "high-risk and low-risk drinkers do not differ in their use of (red)SR",
+    "both groups rely less on (red) random-policy SR and more on model-free control in alcohol-related contexts"
+  ],
+  "interpretations": [
+    "reduced random-policy SR supports adaptive, resource-efficient behavior",
+    "this SR-like strategy is selectively downregulated in substance-related contexts rather than being a stable addiction marker"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "successor representation",
+    "reduced SR",
+    "random-policy SR",
+    "model-free control",
+    "habitual behavior",
+    "addiction computational psychiatry",
+    "alcohol-related context",
+    "goal-directed to habitual shift"
+  ],
+  "out_of_scope_note": null
+}

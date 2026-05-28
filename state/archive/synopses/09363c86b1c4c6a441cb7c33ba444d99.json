@@ -1,0 +1,65 @@
+{
+  "canonical_id": "09363c86b1c4c6a441cb7c33ba444d99",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "Multitask Preplay",
+      "role": "primary_lens",
+      "one_line": "counterfactual replay of unpursued accessible tasks to learn predictive representations"
+    },
+    {
+      "name": "predictive representation learning",
+      "role": "extended",
+      "one_line": "successor-style predictive features extended via counterfactual preplay over alternative tasks"
+    },
+    {
+      "name": "model-based planning",
+      "role": "compared_against",
+      "one_line": "traditional planning baseline that does not preemptively simulate unpursued tasks"
+    },
+    {
+      "name": "reinforcement learning",
+      "role": "context",
+      "one_line": "agent learning framework within which preplay augments experience replay"
+    }
+  ],
+  "core_question": "Do humans (and artificial agents) preemptively learn solutions to accessible-but-unpursued tasks by counterfactually replaying experience as if pursuing them?",
+  "key_assumptions": [
+    "Humans pursue few tasks at a time but encode information useful for accessible alternatives",
+    "Experience on one task can seed counterfactual simulation of another",
+    "Predictive representations support fast adaptive performance on later tasks",
+    "Task co-occurrence structure is shared across worlds and transferable"
+  ],
+  "manipulations": [
+    "Task pursued vs accessible-but-unpursued in a small grid-world",
+    "Whether participants knew they would later need to generalize",
+    "Environment complexity: grid-world vs partially observable 2D Craftax",
+    "Algorithm class: multitask preplay vs traditional planning vs predictive-representation baselines"
+  ],
+  "key_findings": [
+    "Multitask preplay better predicts human generalization to accessible-but-unpursued tasks than planning and predictive-representation baselines",
+    "Predictive advantage holds even when participants were unaware they would need to generalize",
+    "Findings replicate from grid-world to the partially observable 2D Craftax environment",
+    "Artificial agents using multitask preplay transfer behavior to novel Craftax worlds sharing task co-occurrence structure"
+  ],
+  "interpretations": [
+    "Humans leverage current experience to preemptively solve potential future tasks via counterfactual replay",
+    "Preplay yields predictive representations that enable rapid adaptation when task demands shift"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "multitask preplay",
+    "counterfactual simulation",
+    "predictive representation",
+    "task generalization",
+    "experience replay",
+    "Craftax environment",
+    "task co-occurrence structure",
+    "preemptive learning"
+  ],
+  "out_of_scope_note": null
+}

@@ -1,0 +1,51 @@
+{
+  "canonical_id": "0e4ac3f0d63445948b532a46cb6ade63",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "curriculum learning",
+      "role": "primary_lens",
+      "one_line": "sequencing of task components to promote effective skill acquisition"
+    },
+    {
+      "name": "concept discovery vs concept implementation",
+      "role": "compared_against",
+      "one_line": "two graduable axes of complexity contrasted as curriculum strategies"
+    }
+  ],
+  "core_question": "When acquiring a complex task, which axis of complexity — discovering new concepts or implementing known concepts — should a curriculum graduate to maximize learning?",
+  "key_assumptions": [
+    "complex task mastery decomposes into concept discovery and concept implementation",
+    "video-game tasks with sequential tool/ingredient use index both axes independently",
+    "self-directed curriculum choice reveals learner preferences but not necessarily optimal strategy"
+  ],
+  "manipulations": [
+    "self-directed vs randomized curriculum assignment",
+    "graduation of concept discovery complexity (number of concepts)",
+    "graduation of concept implementation complexity (number of steps to goal)"
+  ],
+  "key_findings": [
+    "self-directed learners preferred curricula that graduated concept discovery complexity",
+    "learners assigned to graduate concept implementation complexity performed better",
+    "three randomized experiments confirmed implementation-graduated curricula outperform discovery-graduated curricula"
+  ],
+  "interpretations": [
+    "graduating concept implementation, not discovery, is the more effective curriculum strategy",
+    "learners should consolidate mastered concepts before attempting to discover new ones"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "curriculum learning",
+    "concept discovery",
+    "concept implementation",
+    "self-directed learning",
+    "skill acquisition",
+    "task complexity graduation",
+    "sequential task learning"
+  ],
+  "out_of_scope_note": null
+}

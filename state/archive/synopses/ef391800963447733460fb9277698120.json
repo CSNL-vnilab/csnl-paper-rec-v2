@@ -1,0 +1,17 @@
+{
+  "canonical_id": "ef391800963447733460fb9277698120",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.0,
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "Molecular neurobiology of major depressive disorder: identifies lipocalin-2 (LCN2) as a mediator of microglia-driven neuroinflammation in a chronic unpredictable stress mouse model, with knockdown / neutralizing-antibody manipulations alleviating depressive-like behaviors via mitochondrial-dynamics regulation. No theoretical computational-neuroscience framework (no perceptual / decision / encoding / cognitive model); content is clinical-MDD biomarker plus molecular and behavioral assays — out of lab scope per OOS rule (clinical / molecular biology without neural-computation content)."
+}

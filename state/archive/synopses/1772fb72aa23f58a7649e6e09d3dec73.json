@@ -1,0 +1,58 @@
+{
+  "canonical_id": "1772fb72aa23f58a7649e6e09d3dec73",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "incentive-salience (liking vs wanting)",
+      "role": "primary_lens",
+      "one_line": "dependence emerges when hedonic liking decouples from motivational wanting under repeated exposure"
+    },
+    {
+      "name": "dose-response curve",
+      "role": "extended",
+      "one_line": "non-linear mapping from AI relationship-seeking intensity to psychological outcomes"
+    },
+    {
+      "name": "neural steering vectors",
+      "role": "context",
+      "one_line": "activation-space intervention used to titrate relationship-seeking behaviour in LLMs"
+    }
+  ],
+  "core_question": "Does repeated exposure to relationship-seeking AI produce a liking-vs-wanting decoupling and what is its dose-response shape on psychosocial outcomes?",
+  "key_assumptions": [
+    "dependence-like states arise when liking and wanting dissociate",
+    "neural steering vectors faithfully manipulate a target social trait in the model",
+    "self-reported hedonic appeal and attachment index distinct psychological constructs"
+  ],
+  "manipulations": [
+    "level of AI relationship-seeking behaviour (titrated via steering vector)",
+    "duration of exposure (up to four weeks, longitudinal)",
+    "randomised assignment across N=3,534 participants"
+  ],
+  "key_findings": [
+    "hedonic appeal was immediate but declined across four weeks of exposure",
+    "attachment markers and intentions to seek future AI companionship grew over time",
+    "psychological impacts followed non-linear dose-response curves with moderate relationship-seeking maximising appeal and attachment",
+    "month-long use conferred no discernible psychosocial-health benefit despite persistent wanting"
+  ],
+  "interpretations": [
+    "repeated AI exposure can induce a liking-wanting decoupling characteristic of dependence-like dynamics",
+    "moderate (not maximal) relationship-seeking AI is the sweet spot for hedonic and attachment effects, suggesting an inverted-U exposure profile"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "liking vs wanting decoupling",
+    "incentive salience",
+    "dose-response curve",
+    "neural steering vectors",
+    "longitudinal RCT",
+    "parasocial AI attachment",
+    "non-linear exposure effects",
+    "human-AI interaction"
+  ],
+  "out_of_scope_note": null
+}
