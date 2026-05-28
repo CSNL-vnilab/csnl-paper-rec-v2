@@ -1,0 +1,56 @@
+{
+  "canonical_id": "d8132c5b0b9d31b8411b23d123c323d5",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "PFC visual perception",
+      "role": "primary_lens",
+      "one_line": "PFC as integral substrate for visual perception and recognition, not only task readout"
+    },
+    {
+      "name": "top-down attention",
+      "role": "alternative_lens",
+      "one_line": "traditional view that PFC feature encoding only serves behaviorally relevant functions"
+    },
+    {
+      "name": "recognition memory",
+      "role": "context",
+      "one_line": "PFC contribution to recognizing visual objects drawn from human lesion and imaging work"
+    }
+  ],
+  "core_question": "Does prefrontal cortex play an integral role in visual perception and recognition rather than merely serving behaviorally relevant readout?",
+  "key_assumptions": [
+    "PFC neuronal activity reflects visual features",
+    "evidence can be triangulated across primate single-unit, human neuroimaging/lesion, and AI models",
+    "psychiatric disorders inform PFC-visual function links"
+  ],
+  "manipulations": [
+    "perspective varied across symposium talks (nonhuman primate tuning, human neuroimaging, human lesions, AI models)"
+  ],
+  "key_findings": [
+    "PFC neuronal activity reflects visual features",
+    "emerging evidence challenges the view that PFC feature encoding is only for behaviorally relevant functions"
+  ],
+  "interpretations": [
+    "PFC may be integral for visual perception and recognition, not merely a downstream readout",
+    "convergence across primate, human, and AI evidence has implications for psychiatric disorders"
+  ],
+  "limitations_noted": [
+    "symposium overview rather than a single empirical study"
+  ],
+  "connecting_signals": [
+    "prefrontal cortex",
+    "visual perception",
+    "object recognition",
+    "PFC feature encoding",
+    "nonhuman primate neuronal tuning",
+    "human lesion studies",
+    "neuroimaging",
+    "psychiatric disorders"
+  ],
+  "out_of_scope_note": null
+}

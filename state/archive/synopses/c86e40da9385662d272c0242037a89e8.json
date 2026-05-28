@@ -1,0 +1,53 @@
+{
+  "canonical_id": "c86e40da9385662d272c0242037a89e8",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T16:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "divisive normalization",
+      "role": "primary_lens",
+      "one_line": "value coding scheme where each option's value is normalized by set-wide value"
+    },
+    {
+      "name": "rational choice theory",
+      "role": "compared_against",
+      "one_line": "baseline assuming context-independent preferences over alternatives"
+    }
+  ],
+  "core_question": "Do social choices (hiring, voting) exhibit context-dependent preferences, and which value-coding model best characterizes them?",
+  "key_assumptions": [
+    "value coding schemes from perceptual/economic choice generalize to social evaluation",
+    "candidate competence can serve as a scalar value input to choice models"
+  ],
+  "manipulations": [
+    "distractor value (high- vs low-value third candidate) in hiring scenarios",
+    "domain: hypothetical hiring decisions vs archival U.S. congressional races",
+    "model comparison across alternative value-coding schemes"
+  ],
+  "key_findings": [
+    "divisive normalization best fit choice patterns in hiring studies (1a, 1b, 1d)",
+    "with participant random effects, higher-value distractors INCREASED choice of the best candidate — opposite of normalization's prediction",
+    "in congressional elections, candidate competence effects aligned with divisive normalization"
+  ],
+  "interpretations": [
+    "mixed support for a neurobiologically-derived normalization account of social choice",
+    "high-value distractors can either help or hurt relative choice accuracy depending on condition"
+  ],
+  "limitations_noted": [
+    "distractor effect direction reversed once participant random effects were modeled"
+  ],
+  "connecting_signals": [
+    "divisive normalization",
+    "context-dependent choice",
+    "value coding",
+    "distractor effect",
+    "social decision-making",
+    "hiring decisions",
+    "electoral choice",
+    "violations of rational choice"
+  ],
+  "out_of_scope_note": null
+}

@@ -1,0 +1,57 @@
+{
+  "canonical_id": "d7e3adab92750e263123d68903773008",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "cost of action selection",
+      "role": "primary_lens",
+      "one_line": "Choosing actions incurs physical and mental effort costs that observers infer."
+    },
+    {
+      "name": "intuitive psychology",
+      "role": "primary_lens",
+      "one_line": "Children reason about others by attributing utilities and costs to actions."
+    },
+    {
+      "name": "developmental cognition",
+      "role": "context",
+      "one_line": "Tests whether preschoolers already use adult-like effort-cost inference."
+    }
+  ],
+  "core_question": "Do preschoolers incorporate mental effort, alongside physical effort, into their intuitive understanding of why others act as they do?",
+  "key_assumptions": [
+    "Action understanding involves attributing costs to bodies and minds",
+    "Mazes of varying complexity index physical and mental effort",
+    "4- to 5-year-olds can reason over effort-vs-gain trade-offs"
+  ],
+  "manipulations": [
+    "Maze complexity (simple vs complex)",
+    "Agent knowledge state (naive vs knowledgeable)",
+    "Goal type (reach external reward vs practice maze-solving)"
+  ],
+  "key_findings": [
+    "Children were sensitive to physical effort imposed by complex mazes",
+    "Children were sensitive to mental effort imposed by complex mazes",
+    "Children tracked trade-offs between effort and gain in skill"
+  ],
+  "interpretations": [
+    "The intuition that choices impose costs on bodies and minds guides children's action understanding",
+    "Mental-effort cost is part of early intuitive psychology, not a late acquisition"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "mental effort",
+    "physical effort",
+    "cost of action",
+    "intuitive psychology",
+    "preschoolers",
+    "effort-gain trade-off",
+    "action understanding",
+    "maze task"
+  ],
+  "out_of_scope_note": null
+}

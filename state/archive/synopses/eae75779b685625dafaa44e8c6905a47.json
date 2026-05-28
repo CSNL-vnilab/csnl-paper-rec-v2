@@ -1,0 +1,55 @@
+{
+  "canonical_id": "eae75779b685625dafaa44e8c6905a47",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "structural alignment",
+      "role": "primary_lens",
+      "one_line": "prior relational schema (mental line) is re-used to organize newly learned reward associations"
+    },
+    {
+      "name": "model-based reinforcement learning",
+      "role": "context",
+      "one_line": "probabilistic reward learning task supplies the new value structure being mapped"
+    },
+    {
+      "name": "transfer learning",
+      "role": "alternative_lens",
+      "one_line": "knowledge of one ordered domain (numbers) transfers to a novel ordered domain (donkeys)"
+    }
+  ],
+  "core_question": "Do humans repurpose pre-existing ordinal mental representations (e.g., the number line) to encode newly learned reward-probability rankings in the brain?",
+  "key_assumptions": [
+    "ordinal information is represented along a shared mental line across domains",
+    "reward-probability rank can be acquired through trial-and-error feedback",
+    "scalp EEG patterns can index domain-general ordinal representations"
+  ],
+  "manipulations": [
+    "stimulus type viewed (six colored donkeys vs digits 1–6)",
+    "reward probability associated with each donkey (5% to 95% across six levels)"
+  ],
+  "key_findings": [
+    "participants learned to rank donkeys by reward probability through trial and error",
+    "EEG patterns evoked by each donkey resembled the EEG pattern for the digit at the matching rank",
+    "the rank–to–rank correspondence held across the full six-item ordering"
+  ],
+  "interpretations": [
+    "newly learned reward structure is encoded by re-using a pre-existing ordinal (number-line) representation",
+    "learning exploits relational knowledge across stimuli rather than treating items as isolated associations"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "structural alignment",
+    "mental number line",
+    "probabilistic reward learning",
+    "ordinal representation",
+    "EEG representational similarity",
+    "relational knowledge transfer",
+    "rank coding"
+  ],
+  "out_of_scope_note": null
+}

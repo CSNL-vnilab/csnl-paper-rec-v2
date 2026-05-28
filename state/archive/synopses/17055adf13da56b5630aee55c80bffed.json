@@ -1,0 +1,56 @@
+{
+  "canonical_id": "17055adf13da56b5630aee55c80bffed",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "subjective inflation",
+      "role": "primary_lens",
+      "one_line": "peripheral/unattended percepts judged more reliable than matched-performance foveal/attended percepts"
+    },
+    {
+      "name": "higher-order theory of consciousness",
+      "role": "alternative_lens",
+      "one_line": "phenomenology constrained by cognitive access rather than overflowing it"
+    },
+    {
+      "name": "phenomenological overflow",
+      "role": "compared_against",
+      "one_line": "rich phenomenology said to exceed what cognitive access can report"
+    }
+  ],
+  "core_question": "Can subjective inflation explain rich-seeming visual phenomenology in the periphery without positing phenomenological overflow of cognitive access?",
+  "key_assumptions": [
+    "visual phenomenology is constrained by cognitive access",
+    "objective performance can be equated across attended/foveal and unattended/peripheral conditions",
+    "subjective reliability ratings index phenomenological richness"
+  ],
+  "manipulations": [
+    "attention (attended vs minimally attended)",
+    "eccentricity (foveal vs peripheral viewing)",
+    "matched objective performance across conditions"
+  ],
+  "key_findings": [
+    "minimally attended or peripheral percepts are rated as more subjectively reliable than attended or foveal ones when objective performance is matched",
+    "this inflation pattern recurs across the reviewed Rich vs Sparse literature"
+  ],
+  "interpretations": [
+    "subjective inflation can account for apparently rich peripheral phenomenology without invoking overflow",
+    "phenomenology is constrained by cognitive access yet inflated above what sparse sensory content would predict"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "subjective inflation",
+    "peripheral vision",
+    "phenomenological overflow",
+    "Rich vs Sparse debate",
+    "cognitive access",
+    "metacognitive confidence",
+    "attention and awareness",
+    "higher-order theory"
+  ],
+  "out_of_scope_note": null
+}
