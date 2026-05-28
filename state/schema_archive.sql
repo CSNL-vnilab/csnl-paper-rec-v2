@@ -157,7 +157,11 @@ CREATE TABLE IF NOT EXISTS __SCHEMA__.archive_responses(
   canonical_id     TEXT,
   session_id       TEXT,
   choice           TEXT CHECK (choice IN
-    ('save_later','not_relevant','already_read','tell_me_more','skipped')),
+    ('save_later','not_relevant','already_read','skipped')),
+    -- 'tell_me_more' retired 2026-05-28 alongside the 4th MCQ option.
+    -- Migration: state/migrations/2026-05-28_drop_tell_me_more.sql
+    -- For new installs this CHECK already excludes it; for existing
+    -- installs run the migration script before redeploying.
   choice_detail    JSONB,               -- e.g. citation note, why-not-relevant text
   responded_at     TEXT NOT NULL,
   PRIMARY KEY (researcher_id, canonical_id)
@@ -232,8 +236,8 @@ SELECT
     WHEN 'save_later'    THEN 'to_read'
     WHEN 'already_read'  THEN 'read'
     WHEN 'not_relevant'  THEN 'not_interested'
-    WHEN 'tell_me_more'  THEN 'maybe_interested'
     WHEN 'skipped'       THEN 'skipped'
+    -- 'tell_me_more' retired 2026-05-28; historical rows (if any) surface as raw.
     ELSE r.choice
   END AS paper_status,
   r.session_id,
@@ -243,7 +247,8 @@ FROM __SCHEMA__.archive_responses r;
 
 COMMENT ON VIEW __SCHEMA__.archive_paper_status IS
   'P19e: per-(researcher, paper) status derived from archive_responses. '
-  'Plain-Korean terms: read / to_read / not_interested / maybe_interested / skipped.';
+  'Plain-Korean terms: read / to_read / not_interested / skipped. '
+  '(maybe_interested retired 2026-05-28.)';
 
 -- =========================================================================
 -- P21 — paper synopsis layer (skeletal, framework-agnostic, sub-agent

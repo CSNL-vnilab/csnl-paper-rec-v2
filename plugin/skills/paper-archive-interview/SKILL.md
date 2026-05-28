@@ -1,5 +1,5 @@
 ---
-description: Operating procedure for the CSNL paper-archive interview. Drives the one-paper-at-a-time MCQ flow over a researcher's pre-computed queue (recent / mid / classic), with profile verification + dimension preference confirmation at the start, a deterministic 4-option MCQ per paper, an isolated explainer sub-agent for option (4), and a meta-review every 10 answers. Use whenever the paper-interview slash command is invoked, or the researcher asks to "resume the paper interview", "더 보여줘", "이어서 진행해줘".
+description: Operating procedure for the CSNL paper-archive interview. Drives the one-paper-at-a-time MCQ flow over a researcher's pre-computed queue (recent / mid / classic), with profile verification + dimension preference confirmation at the start, a deterministic 3-option MCQ per paper (read / to-read / not-interested) and a meta-review every 10 answers. Use whenever the paper-interview slash command is invoked, or the researcher asks to "resume the paper interview", "더 보여줘", "이어서 진행해줘".
 ---
 
 # paper-archive-interview — researcher procedure
@@ -12,8 +12,10 @@ operator periodically refreshes:
 1. PostgreSQL is the persistent truth source. Every MCQ writes a row to
    `archive_responses`. The `archive_paper_status` view exposes
    per-researcher per-paper status (read / to_read / not_interested /
-   maybe_interested / skipped) in plain Korean labels for operator
-   inspection via `scripts/archive/list_status.py`.
+   skipped) in plain Korean labels for operator inspection via
+   `scripts/archive/list_status.py`. (`skipped` is reserved for the
+   internal Block 3 uncertainty branch — researchers see only the 3-MCQ
+   read/to_read/not_interested options.)
 
 2. The researcher's `archive_researcher_queues` is the candidate POOL.
    It is NOT a fixed ordered list of "next 200 to show"; `pick_next.py`
@@ -49,9 +51,9 @@ operator periodically refreshes:
    `pick_next.py`. The researcher never sees them, saving turns.
 
    The synopsis is content-only. The researcher's response history in
-   `archive_responses` (read / to_read / not_interested / maybe_interested
-   / skipped) is a SEPARATE table with PK (researcher_id, canonical_id) and
-   was NOT touched by the synopsis import. Re-running the synopsis import
+   `archive_responses` (read / to_read / not_interested / skipped) is a
+   SEPARATE table with PK (researcher_id, canonical_id) and was NOT
+   touched by the synopsis import. Re-running the synopsis import
    preserves every prior response.
 
 ## Execution invariants (P16 hardening — applies to every turn)
@@ -80,7 +82,8 @@ context. Violating any of them is a bug, not a stylistic miss.
 
 4. **Sub-agent for non-trivial reasoning.** Two operations MUST run in
    their own context window (via `Agent` / `subagent_type`):
-   - Stage 3 option 4 deep-dive → `paper-explainer` agent
+   - (Stage 3 option 4 deep-dive REMOVED 2026-05-28; the 4th MCQ option
+     was retired — see Stage 3 stub below.)
    - Stage 4 belief-update computation → `belief-updater` agent
    The main interview thread only persists their outputs via the DB
    scripts. This keeps the main thread small and reproducible across
@@ -139,9 +142,7 @@ context. Violating any of them is a bug, not a stylistic miss.
 - No signatures, no farewells. End each message with the question or the
   MCQ block, nothing else.
 - Length per message: ≤ 4 short paragraphs OR the MCQ; whichever is
-  smaller. If the explainer agent (option 4) returns a longer reply,
-  preserve its verbatim quotes (text inside `"…"`) and trim only the
-  surrounding prose — never paraphrase a quote.
+  smaller.
 - **You do not edit the queue**; only the operator does. If the researcher
   protests the relevance of a paper, that goes into `choice_detail` as a
   `not_relevant` with a `reason` field — never as a queue edit.
@@ -273,7 +274,7 @@ missing parent yields `FileNotFoundError`.
    1. <init> 연구원님 주제 + 방법론 요약 확인 (잘못된 / 빠진 것 알려주세요)
    2. (활성 프로젝트 여러 개면) 프로젝트 비중 (예: 70/20/5/5)
    3. 차원 선호 — 어떤 focus/method/stim/subj 가 우선인지
-   4. 각 추천 논문 4-지선다 (저장 / 관련없음 / 이미읽음 / 더자세히)
+   4. 각 추천 논문 3-지선다 (저장 / 관련없음 / 이미읽음)
    5. 10편마다 <init> 연구원님 응답 패턴을 보고 차원 선호 자동 업데이트 (다음 큐에 반영)
 
    [경계]
@@ -625,23 +626,22 @@ Loop until `pick_next.py` returns `done:true`:
    1) 나중에 읽을 리스트에 추가
    2) 내 연구와 관련 없음
    3) 이미 읽었음
-   4) 더 자세히 소개해줘
    ```
 
    (If Block 3 was emitted instead of Block 2, the MCQ is replaced by
    the targeted clarification question — no MCQ for that paper.)
 
 5. Wait for the researcher's reply. Accept all of these as equivalent
-   choice signals (normalize to `1`/`2`/`3`/`4`):
-   - bare digit: `1`, `2`, `3`, `4`
+   choice signals (normalize to `1`/`2`/`3`):
+   - bare digit: `1`, `2`, `3`
    - punctuated: `1)`, `1.`, `(1)`, `1번`, `1 번`
-   - Korean numerals: `하나`, `둘`, `셋`, `넷`, `첫번째`, `두번째`, …
+   - Korean numerals: `하나`, `둘`, `셋`, `첫번째`, `두번째`, `세번째`
    - full option text (or first 3+ chars of it): `나중에 읽을`, `관련 없음`,
-     `이미 읽었음`, `더 자세히`
-   - common English equivalents: `save`, `not relevant`, `read`, `more`
+     `이미 읽었음`
+   - common English equivalents: `save`, `not relevant`, `read`
    - whitespace-padded variants of any of the above
    If the reply contains *no* identifiable choice signal, say in Korean
-   "1, 2, 3, 4 중 하나로만 답해주세요." and wait — **do not invent a choice**.
+   "1, 2, 3 중 하나로만 답해주세요." and wait — **do not invent a choice**.
 
 6. Map the answer to `choice`:
    - 1 → `save_later`
@@ -649,8 +649,6 @@ Loop until `pick_next.py` returns `done:true`:
      한 문장으로만 답해주세요.")
    - 3 → `already_read`   (ask one follow-up: "이 논문을 어떤 맥락에서
      활용하셨나요? 한 문장.")
-   - 4 → `tell_me_more`   (see Stage 3; the MCQ is re-presented after
-     the explainer returns).
 
 7. Build `detail_json` from the follow-up reply (or `{}` if none) and
    call `record_choice.py --init … --session … --canonical-id <cid>
@@ -660,28 +658,16 @@ Loop until `pick_next.py` returns `done:true`:
 8. If `meta_review_due == true`: run Stage 4 before showing the next
    paper.
 
-## Stage 3 — option (4) "tell me more"
+## Stage 3 — (removed 2026-05-28)
 
-You must spawn the **`paper-explainer`** agent. Try
-`subagent_type: "paper-explainer"` first; if Claude Code refuses with
-"unknown subagent", fall back to the plugin-namespaced form
-`subagent_type: "csnl-paper-archive-interview:paper-explainer"`. Pass it:
-  - the paper JSON object you got from `pick_next.py`
-  - the researcher's confirmed profile (snapshot + corrections)
-  - one sentence asking it to explain the link in ≤ 3 short Korean
-    paragraphs and to flag any risk of irrelevance.
-
-The explainer agent runs in **its own context window** so the main
-interview thread stays small. When it returns:
-- The explainer is already capped at ≤ 3 short Korean paragraphs (~280
-  chars each). If its output fits within ≤ 4 paragraphs, **pass it
-  through verbatim** — do not re-summarise.
-- If it overflows, trim *only* surrounding connectives. **Preserve every
-  span that appears inside `"…"` quotes verbatim** (the explainer is
-  required to ground itself in quoted text per `rules/03_grounding.md`;
-  paraphrasing the quote breaks the trace).
-- Then re-present the same MCQ. Do **not** auto-pick a choice on the
-  researcher's behalf.
+The previous Stage 3 ("tell me more" deep-dive via the `paper-explainer`
+agent) was removed when the MCQ collapsed from 4 options to 3. The
+deep-dive made the interview turn longer without producing a usable
+labeling signal — researchers who wanted more context were better
+served by reading the synopsis-grounded Block 2 itself (P21). If the
+researcher is genuinely unsure after Block 2, the Block 3 uncertainty
+branch (a single targeted clarification question, persisted as
+`choice='skipped' + detail_json`) is the supported path.
 
 ## Stage 4 — meta-review (every 10 answers; **active belief update**)
 
@@ -825,7 +811,9 @@ again:
 
 - Do not silently move on after a `not_relevant` — always capture the
   one-sentence reason.
-- Do not collapse the MCQ to fewer than 4 options.
+- Do not collapse the MCQ to fewer than 3 options. (As of 2026-05-28 the
+  4th option "더 자세히 소개해줘" was retired; the MCQ is exactly 3
+  options: 나중에 읽을 / 관련 없음 / 이미 읽었음.)
 - Do not show internal labels to the researcher: `canonical_id`,
   similarity score, `chunk` (`recent` / `mid` / `classic`),
   `rank_in_chunk`, `lab_scope_tags` codes, `session_id`,

@@ -4,11 +4,15 @@ plugin/scripts/record_choice.py — persist one MCQ answer.
 
 Usage:
     python plugin/scripts/record_choice.py --init <init> --session <sid> \\
-        --canonical-id <cid> --choice <save_later|not_relevant|already_read|tell_me_more|skipped> \\
+        --canonical-id <cid> --choice <save_later|not_relevant|already_read|skipped> \\
         [--detail-json '@detail.json' | '<inline json>']
 
 UPSERTs archive_responses (researcher × paper) and updates the running
 counters on archive_interview_sessions (papers_seen, choice_counts JSON).
+
+`tell_me_more` was retired 2026-05-28 (the 4th MCQ option). Existing
+historical rows with that value should be migrated away (or kept as
+deprecated read-only) via state/migrations/2026-05-28_drop_tell_me_more.sql.
 """
 from __future__ import annotations
 
@@ -20,7 +24,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from _pdb import load_env, exec_sql, query, schema  # noqa: E402
 
-_VALID = ("save_later", "not_relevant", "already_read", "tell_me_more", "skipped")
+_VALID = ("save_later", "not_relevant", "already_read", "skipped")
 
 
 def _read_arg(v: str) -> str:

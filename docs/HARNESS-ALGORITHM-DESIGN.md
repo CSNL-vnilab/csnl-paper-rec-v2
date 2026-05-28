@@ -79,8 +79,9 @@ A new operator view + script:
 
 - `state/schema_archive.sql` adds a CREATE OR REPLACE VIEW
   `vw_archive_mcq_quality` computing per-researcher 30-day MCQ
-  precision = `(save_later + tell_me_more) / (save_later + tell_me_more
-  + not_relevant)`. Activates once n ≥ 10.
+  precision = `save_later / (save_later + not_relevant)`. Activates once
+  n ≥ 10. (Original formula included `tell_me_more`; that option was
+  retired 2026-05-28 — see state/migrations/2026-05-28_drop_tell_me_more.sql.)
 - `scripts/archive/validate_drift.py` reads the view + computes the
   stale-fingerprint flags codex finding #2 calls for.
 

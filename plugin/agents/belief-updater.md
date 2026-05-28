@@ -27,20 +27,24 @@ For each response in `meta_review.recent` (latest 10):
    "evidence for". A dim tag is *reinforced* if it shows up in ≥ 3 of
    the save_later papers.
 
-2. **tell_me_more** → half-strength save_later (counts as 0.5 toward
-   the reinforcement count above).
-
-3. **not_relevant** → the paper's `dim_tags` become "evidence against"
+2. **not_relevant** → the paper's `dim_tags` become "evidence against"
    ONLY if the researcher's `choice_detail.reason` text contains an
    explicit negation/rejection keyword: 관련 없, 내 연구 아, 다른 결,
    not relevant, off topic, 안 맞. A dim tag is *downweighted* if it
    appears in ≥ 3 not_relevant papers AND at least 2 of those papers
    triggered the negation keyword.
 
-4. **already_read** → no weight change (the area is current; the
+3. **already_read** → no weight change (the area is current; the
    researcher reads it). Don't downweight.
 
-5. **skipped** → no information; ignore.
+4. **skipped** → no information for dim_tags; ignore. (`skipped` is
+   reserved for Block 3 uncertainty-branch clarification turns — the
+   useful signal there is in `choice_detail`, not in the dim_tags.)
+
+(`tell_me_more` was retired 2026-05-28 alongside the 4th MCQ option.
+Historical rows with that value, if any, should be treated as a
+weakened `save_later` for backward analysis only — do not produce them
+in new updates.)
 
 ## Computing deltas
 

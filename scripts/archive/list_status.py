@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 scripts/archive/list_status.py — operator-side view of each researcher's
-paper status (read / to_read / not_interested / maybe_interested).
+paper status (read / to_read / not_interested).
 
 The persistent knowledge base lives in csnl_paper_rec.archive_responses;
 the archive_paper_status view (P19e) exposes it in plain-Korean labels.
@@ -13,6 +13,11 @@ Usage:
     python3 scripts/archive/list_status.py JOP --status read      # only read papers
 
 Read-only. No DB writes. Korean researcher-facing labels in output.
+
+`maybe_interested` was retired 2026-05-28 (the 4th MCQ option was removed).
+The label is intentionally kept absent from _STATUS_KO; historical rows
+(if any) will surface in the count tables under the legacy key but not be
+formatted, and operators are pointed to the migration script.
 """
 from __future__ import annotations
 
@@ -26,7 +31,6 @@ _STATUS_KO = {
     "read":              "이미 읽음",
     "to_read":           "읽을 예정",
     "not_interested":    "관심 없음",
-    "maybe_interested":  "더 알아볼 만함",
     "skipped":           "건너뜀",
 }
 
@@ -93,16 +97,29 @@ def main() -> int:
         "ORDER BY researcher_id, paper_status"
     )
     by_rid: dict[str, dict[str, int]] = {}
+    seen_statuses: set[str] = set()
     for r in rows:
         by_rid.setdefault(r["researcher_id"], {})[r["paper_status"]] = int(r["n"])
-    print(f"\n{'init':6s}  " + "  ".join(f"{_STATUS_KO[s]:>10s}" for s in _STATUS_KO))
-    print("-" * 80)
+        seen_statuses.add(r["paper_status"])
+    # Column order: known statuses first (in their _STATUS_KO order), then any
+    # legacy/unknown statuses (e.g., 'maybe_interested' from rows that pre-date
+    # the 2026-05-28 migration) so they cannot vanish silently from the report.
+    # (codex adversarial review finding #10 — MEDIUM)
+    legacy = sorted(seen_statuses - set(_STATUS_KO.keys()))
+    columns = list(_STATUS_KO.keys()) + legacy
+    def _label(s: str) -> str:
+        return _STATUS_KO.get(s, s)
+    print(f"\n{'init':6s}  " + "  ".join(f"{_label(s):>10s}" for s in columns))
+    print("-" * (8 + 12 * len(columns)))
     for rid in sorted(by_rid.keys()):
         counts = by_rid[rid]
         line = f"{rid:6s}  " + "  ".join(
-            f"{counts.get(s, 0):>10d}" for s in _STATUS_KO
+            f"{counts.get(s, 0):>10d}" for s in columns
         )
         print(line)
+    if legacy:
+        print(f"\n(legacy/unknown statuses surfaced: {', '.join(legacy)} — "
+              f"likely pre-migration rows.)")
     print()
     return 0
 

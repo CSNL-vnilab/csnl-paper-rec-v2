@@ -16,9 +16,11 @@ Operator-run:
 
 Outputs a per-researcher report:
   - n MCQs (total + last 30 days)
-  - mcq_precision_30d = (save_later + tell_me_more) /
-                        (save_later + tell_me_more + not_relevant)
+  - mcq_precision_30d = save_later / (save_later + not_relevant)
     activates once n_30d >= 10
+    (tell_me_more was retired 2026-05-28 — formula simplified to count
+    only save_later as positive signal. Legacy rows are tallied below
+    for backward compatibility but no longer contribute to precision.)
   - already_read_rate_30d = already_read / (all MCQs in 30d)
   - drift flags: mcq_precision_drop / novelty_collapse / topic_shift /
                  no_fingerprint
@@ -85,7 +87,11 @@ def main() -> int:
         """)
         by_choice = {r["choice"]: int(r["n"]) for r in rows}
         n_30d  = sum(by_choice.values())
-        n_save = by_choice.get("save_later", 0) + by_choice.get("tell_me_more", 0)
+        # tell_me_more retired 2026-05-28; precision now counts save_later only.
+        # Legacy tell_me_more rows are NOT included in n_save by design — they
+        # came from a different signal regime (half-strength save) and would
+        # bias the post-cutover precision metric upward.
+        n_save = by_choice.get("save_later", 0)
         n_neg  = by_choice.get("not_relevant", 0)
         n_read = by_choice.get("already_read", 0)
         precision_30d = (n_save / (n_save + n_neg)) if (n_save + n_neg) > 0 else None
