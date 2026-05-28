@@ -1,0 +1,17 @@
+{
+  "canonical_id": "6066254a86ab52488b8a3599f29691c6",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.0,
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "Social science book chapter on epistemology and challenges in LGBTQ IPV research; sociology/social-work, not computational neuroscience."
+}

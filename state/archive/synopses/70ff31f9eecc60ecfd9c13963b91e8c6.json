@@ -1,0 +1,41 @@
+{
+  "canonical_id": "70ff31f9eecc60ecfd9c13963b91e8c6",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "Bayesian observer", "role": "compared_against", "one_line": "Surprisal under Bayes' rule wrongly equated with descriptive complexity in perception."},
+    {"name": "minimum description length", "role": "alternative_lens", "one_line": "Treats simplicity as shortest code length of a perceptual hypothesis."},
+    {"name": "structural information theory", "role": "primary_lens", "one_line": "Codes perceptual organizations by structural regularity to define simplicity."}
+  ],
+  "core_question": "Does Bayesian surprisal correctly express perceptual complexity in models of visual perceptual organization?",
+  "key_assumptions": [
+    "Perceptual organization can be analyzed via formal simplicity measures",
+    "Surprisal and description length are distinct constructs"
+  ],
+  "manipulations": [
+    "Conceptual contrast of Bayesian, MDL, and SIT formalisms applied to grouping and figure-ground phenomena"
+  ],
+  "key_findings": [
+    "Surprisal (negative log probability) is not equivalent to complexity (shortest description length)",
+    "The perceptual-organization literature has conflated Bayesian, MDL, and SIT notions of simplicity"
+  ],
+  "interpretations": [
+    "Bayesian simplicity claims in perceptual organization rest on a mistaken identification of surprisal with complexity",
+    "Each of the three views makes distinct predictions for grouping and figure-ground experiments"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "perceptual organization",
+    "simplicity principle",
+    "Bayesian observer",
+    "minimum description length",
+    "structural information theory",
+    "figure-ground",
+    "grouping",
+    "surprisal vs complexity"
+  ],
+  "out_of_scope_note": null
+}

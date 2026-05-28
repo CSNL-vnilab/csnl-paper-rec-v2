@@ -1,0 +1,42 @@
+{
+  "canonical_id": "3c4d69ae66d0db2e9ebed8625e984684",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:30:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "summary statistical representation", "role": "primary_lens", "one_line": "vision computes ensemble statistics (mean, variance) over object groups"},
+    {"name": "signal-detection theory", "role": "context", "one_line": "precision-vs-capacity trade-off framing of ensemble readout"}
+  ],
+  "core_question": "How does the visual system extract summary statistics from groups of similar objects, and what do those ensemble representations imply for the granularity of visual consciousness?",
+  "key_assumptions": [
+    "summary statistics are computed across multiple levels of perceptual analysis",
+    "ensemble coding underpins gist and scene-level inference",
+    "conscious visual representation is bounded by ensemble granularity"
+  ],
+  "manipulations": [
+    "feature dimension over which the ensemble is taken (orientation, size, emotional expression, heading)"
+  ],
+  "key_findings": [
+    "ensemble statistics for multiple feature dimensions can be extracted in a brief glance",
+    "ensemble computation shows a characteristic precision-vs-capacity trade-off",
+    "ensembles support gist perception, scene categorization, and crowd-level inference"
+  ],
+  "interpretations": [
+    "ensemble perception sets foundational limits on cognition, memory, and visual awareness",
+    "the granularity of conscious visual representation reflects ensemble-coding limits"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "ensemble perception",
+    "summary statistics",
+    "mean orientation",
+    "mean size",
+    "mean emotional expression",
+    "gist perception",
+    "scene categorization",
+    "visual consciousness granularity"
+  ],
+  "out_of_scope_note": null
+}

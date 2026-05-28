@@ -1,0 +1,42 @@
+{
+  "canonical_id": "d78b5881ff540fd026979d8d28deae46",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "efficient coding", "role": "primary_lens", "one_line": "visual system tunes contrast sensitivity to natural-image statistics of the visual field"}
+  ],
+  "core_question": "Does mouse luminance and wavelength-specific contrast sensitivity vary across the upper vs lower visual field?",
+  "key_assumptions": [
+    "behavior reflects underlying neural encoding of luminance and color contrast",
+    "natural-image statistics differ between upper and lower visual field",
+    "retinal opsin gradients shape spatial patterns of chromatic sensitivity"
+  ],
+  "manipulations": [
+    "stimulus location (upper vs lower visual field)",
+    "stimulus wavelength (short vs long)",
+    "luminance vs chromatic contrast"
+  ],
+  "key_findings": [
+    "contrast sensitivity is non-uniform across mouse visual space",
+    "upper-field stimuli show higher spatial acuity for short-wavelength light",
+    "lower-field stimuli show better luminance sensitivity"
+  ],
+  "interpretations": [
+    "asymmetries align with retinal opsin gradients and natural-image statistics",
+    "mouse vision is efficient-coding-tuned to upper/lower visual scene differences"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "mouse visual field asymmetry",
+    "wavelength-specific contrast sensitivity",
+    "upper vs lower visual field",
+    "retinal opsin gradient",
+    "natural-image statistics",
+    "efficient coding of vision",
+    "chromatic spatial acuity"
+  ],
+  "out_of_scope_note": null
+}
