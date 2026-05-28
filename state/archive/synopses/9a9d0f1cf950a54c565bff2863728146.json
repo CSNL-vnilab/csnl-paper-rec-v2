@@ -1,0 +1,17 @@
+{
+  "canonical_id": "9a9d0f1cf950a54c565bff2863728146",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7-bypass@2026-05-28",
+  "generated_at": "2026-05-28T21:23:51+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.0,
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "Analytical chemistry: extending and automating quantitative microelectrode voltammetry via oblate spheroid model; electroanalytical methods, not computational neuroscience."
+}

@@ -1,0 +1,17 @@
+{
+  "canonical_id": "6dd579b0e5b0e05bfb4d7496053dfb9f",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.0,
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "Pedagogical methods primer / tutorial guiding researchers through the workflow of behavioral experiments with human subjects (protocol design, research ethics, data collection, analysis, sharing). No theoretical framework engaged, no empirical findings, no manipulations — instructional content for beginners and experienced researchers, not a research study with neural-computation claims."
+}

@@ -1,0 +1,52 @@
+{
+  "canonical_id": "8a01c22e0a9827f7fc928080f873da06",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "evidence accumulation",
+      "role": "primary_lens",
+      "one_line": "gradual integration of noisy sensory evidence over seconds toward a decision"
+    },
+    {
+      "name": "cortical hierarchy of intrinsic timescales",
+      "role": "extended",
+      "one_line": "distributed cortical areas with distinct integration windows jointly support accumulation"
+    }
+  ],
+  "core_question": "Is recruitment of widespread cortical areas during evidence accumulation organized by their intrinsic integration timescales?",
+  "key_assumptions": [
+    "cortical areas have stable intrinsic timescales forming a hierarchy",
+    "perceptual decisions require gradual accrual of sensory evidence over time",
+    "brief optogenetic silencing isolates an area's contribution within a trial epoch"
+  ],
+  "manipulations": [
+    "cortical area silenced (many areas across the hierarchy)",
+    "timing of brief inactivation across trial epochs",
+    "evidence timescale probed (short vs long)"
+  ],
+  "key_findings": [
+    "inactivation of every tested area affected the accumulation computation",
+    "frontal inactivations produced stronger deficits at long timescales than posterior ones",
+    "some frontal silencings also altered behavioral processes beyond accumulation",
+    "wide-field Ca2+ activity revealed distinct temporal integration windows across areas"
+  ],
+  "interpretations": [
+    "intrinsic timescale hierarchy of distributed cortical areas is a core component of evidence-accumulation mechanisms"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "evidence accumulation",
+    "intrinsic timescale hierarchy",
+    "dorsal cortex",
+    "optogenetic inactivation",
+    "virtual reality navigation",
+    "frontal cortex",
+    "wide-field calcium imaging",
+    "perceptual decision-making"
+  ],
+  "out_of_scope_note": null
+}

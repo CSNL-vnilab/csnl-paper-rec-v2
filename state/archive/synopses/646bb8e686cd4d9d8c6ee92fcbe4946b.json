@@ -1,0 +1,61 @@
+{
+  "canonical_id": "646bb8e686cd4d9d8c6ee92fcbe4946b",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T21:24:21+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "grid coding",
+      "role": "primary_lens",
+      "one_line": "periodic entorhinal firing fields as a general cortical representational substrate"
+    },
+    {
+      "name": "dynamical systems theory",
+      "role": "extended",
+      "one_line": "sequence generation modeled as trajectories synthesized from multiple coupled dynamical systems"
+    },
+    {
+      "name": "compositional cognitive computation",
+      "role": "primary_lens",
+      "one_line": "novel cognitive maps built by composing reusable spatial/temporal primitives"
+    },
+    {
+      "name": "neural network architectures for compositionality",
+      "role": "context",
+      "one_line": "ML systems leveraging grid-like codes for analogous compositional generalization"
+    }
+  ],
+  "core_question": "How can grid-coded representations in the entorhinal-hippocampal system be composed to support flexible, compositional cognitive computations across space and time?",
+  "key_assumptions": [
+    "grid coding is a general principle extending beyond MEC to areas such as PFC",
+    "hippocampal place-cell sequence reactivations reflect traversals of cognitive maps",
+    "cognitive maps can be analyzed as trajectories within dynamical systems"
+  ],
+  "manipulations": [
+    "synthesis of multiple dynamical systems to produce compositional sequences",
+    "simulated experiments probing compositionality in the spatial domain",
+    "simulated experiments probing compositionality in the temporal domain"
+  ],
+  "key_findings": [
+    "grid coding generates a diversity of empirically observed hippocampal place-cell reactivation sequences",
+    "composing multiple dynamical systems reproduces compositional sequence generation in space",
+    "the same compositional mechanism reproduces compositional sequence generation in time"
+  ],
+  "interpretations": [
+    "grid-coded dynamical systems can be combined to support compositional cognitive computation",
+    "the model links entorhinal-hippocampal sequence generation to compositional techniques in machine learning"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "grid cells",
+    "place cell sequence reactivation",
+    "cognitive maps",
+    "compositional generalization",
+    "entorhinal-hippocampal system",
+    "dynamical systems of sequence generation",
+    "relational structure learning"
+  ],
+  "out_of_scope_note": null
+}
