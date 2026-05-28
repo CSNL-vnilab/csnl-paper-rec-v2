@@ -1,0 +1,39 @@
+{
+  "canonical_id": "9c06ee6ee3bd4714707887b22e1fefe7",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "default-mode network", "role": "primary_lens", "one_line": "resting-state DMN intrinsic connectivity shapes individual vicarious-reward responsiveness"},
+    {"name": "vicarious reward", "role": "context", "one_line": "vicarious experience of others' positive sensations indexed by beta-band oscillations"}
+  ],
+  "core_question": "Does resting-state functional connectivity within the default-mode network predict individual differences in the magnitude of vicarious reward responses?",
+  "key_assumptions": [
+    "beta oscillatory activity indexes vicarious reward magnitude",
+    "intra-DMN connectivity at rest reflects stable trait-like organization",
+    "individual differences in empathy have a measurable neural correlate"
+  ],
+  "manipulations": [
+    "vicarious-reward task vs resting state",
+    "across-subject variation in DMN intra-network connectivity"
+  ],
+  "key_findings": [
+    "DMN intra-network resting connectivity positively predicts beta-band vicarious-reward response magnitude across N=30 adults"
+  ],
+  "interpretations": [
+    "DMN resting-state organization shapes individual differences in vicarious reward"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "vicarious reward",
+    "default-mode network",
+    "resting-state functional connectivity",
+    "beta oscillatory activity",
+    "individual differences",
+    "empathy",
+    "intra-network connectivity"
+  ],
+  "out_of_scope_note": null
+}

@@ -1,0 +1,43 @@
+{
+  "canonical_id": "afcda799c6583ebe34b9494525a4621d",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "population coding", "role": "context", "one_line": "brain function emerges from coordinated activity across many neurons"},
+    {"name": "deep neural network decoding", "role": "alternative_lens", "one_line": "modern ML approach for behavioral decoding from neural population activity"}
+  ],
+  "core_question": "How do classic mathematical and modern machine-learning methods shape conclusions drawn from whole-brain neural recordings?",
+  "key_assumptions": [
+    "brain functions emerge from coordinated activity of many neurons",
+    "useful information can be extracted from dense WBA recordings via dimensionality reduction",
+    "method choice constrains the inferences one can draw about brain function"
+  ],
+  "manipulations": [
+    "comparison of classic linear methods (PCA, ICA) versus deep learning decoders",
+    "methodological choices applied to whole-brain activity datasets"
+  ],
+  "key_findings": [
+    "classic dimensionality-reduction tools (PCA, ICA) extract interpretable structure from WBA data",
+    "deep neural networks enable behavioral decoding from densely-recorded population activity",
+    "different methodological choices entail different assumptions about neural computation"
+  ],
+  "interpretations": [
+    "understanding brain function requires combining classic mathematical tools with modern ML approaches",
+    "method assumptions directly shape the conclusions drawn about how the brain works"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "whole-brain activity",
+    "dimensionality reduction",
+    "PCA",
+    "ICA",
+    "deep neural network decoding",
+    "population recording analysis",
+    "behavioral decoding",
+    "methodological review"
+  ],
+  "out_of_scope_note": null
+}

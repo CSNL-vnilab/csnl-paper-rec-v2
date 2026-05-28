@@ -1,0 +1,44 @@
+{
+  "canonical_id": "9f5e9d8f6213e9c87c7a0e5d5431fab9",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "predictive coding", "role": "primary_lens", "one_line": "perception as probabilistic inference combining top-down predictions with bottom-up sensory evidence"},
+    {"name": "hierarchical feedforward models", "role": "compared_against", "one_line": "perception as cascade of increasingly complex feature detectors without top-down inference"}
+  ],
+  "core_question": "Does current neurophysiological evidence actually distinguish predictive-coding accounts of perception from hierarchical feedforward alternatives?",
+  "key_assumptions": [
+    "predictive coding predicts distinct neural signatures (expectation suppression, prediction-error responses)",
+    "feedforward models offer a viable null hypothesis for the same empirical signatures",
+    "fMRI/MEG pattern signatures can in principle adjudicate between the two accounts"
+  ],
+  "manipulations": [
+    "review-level comparison of evidence types: expectation suppression, prediction-error responses, fMRI/MEG decoding signatures"
+  ],
+  "key_findings": [
+    "empirical signatures invoked for predictive coding are often also compatible with feedforward accounts",
+    "expectation suppression and prediction-error responses lack diagnostic specificity as currently measured",
+    "fMRI/MEG pattern signatures cited in support of predictive coding are similarly ambiguous"
+  ],
+  "interpretations": [
+    "current neurophysiological evidence for predictive processing as a model of perception is more limited than commonly claimed",
+    "stronger experimental designs are needed to discriminate predictive coding from hierarchical feedforward alternatives"
+  ],
+  "limitations_noted": [
+    "review focuses on adjudicating evidence rather than proposing new experiments"
+  ],
+  "connecting_signals": [
+    "predictive coding",
+    "expectation suppression",
+    "prediction-error responses",
+    "hierarchical feedforward models",
+    "top-down predictions",
+    "bottom-up sensory evidence",
+    "fMRI/MEG pattern signatures",
+    "probabilistic inference in perception"
+  ],
+  "out_of_scope_note": null
+}

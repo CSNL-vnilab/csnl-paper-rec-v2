@@ -1,0 +1,42 @@
+{
+  "canonical_id": "874b1c0411894d9608c336841ccef21a",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "Hebbian / activity-dependent plasticity", "role": "primary_lens", "one_line": "tDCS-induced M1 plasticity is gated by concurrent neural engagement."},
+    {"name": "top-down attentional gain", "role": "extended", "one_line": "Selective attention modulates the magnitude of stimulation-induced cortical change."}
+  ],
+  "core_question": "Does engaging selective attention during anodal tDCS over M1 enhance stimulation-induced cortical excitability and motor learning?",
+  "key_assumptions": [
+    "anodal tDCS over M1 can induce motor cortical plasticity",
+    "motor cortical plasticity underlies motor learning",
+    "MEP amplitude indexes corticospinal excitability"
+  ],
+  "manipulations": [
+    "attention-paired vs passive tDCS during stimulation",
+    "pre- vs post-stimulation MEP measurement",
+    "serial reaction-time task acquisition rate"
+  ],
+  "key_findings": [
+    "attention-paired tDCS produced larger MEP increases than passive tDCS",
+    "attention-paired tDCS yielded faster motor learning on the serial reaction-time task"
+  ],
+  "interpretations": [
+    "top-down attention gates the tDCS plasticity effect on M1",
+    "cognitive engagement is a determinant of stimulation-induced behavioral gain"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "transcranial direct current stimulation",
+    "primary motor cortex plasticity",
+    "selective attention",
+    "motor-evoked potentials",
+    "serial reaction-time task",
+    "motor learning",
+    "top-down gating"
+  ],
+  "out_of_scope_note": null
+}

@@ -1,0 +1,43 @@
+{
+  "canonical_id": "81f196c6c84533318a5190282849708b",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T12:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "top-down control of visual attention", "role": "primary_lens", "one_line": "cognitive-psychology models of voluntary attentional selection in primates"},
+    {"name": "transformer attention", "role": "compared_against", "one_line": "ML inductive bias inspired by but formally distinct from biological attention"},
+    {"name": "saliency-based bottom-up attention", "role": "context", "one_line": "stimulus-driven competitive selection cited as a parallel construct"}
+  ],
+  "core_question": "How do conceptual notions of attention in primate vision, cognitive psychology, and transformer-based machine learning align and diverge?",
+  "key_assumptions": [
+    "attention is the flexible control of limited computational resources",
+    "biological and ML formalisms share enough structure to be compared",
+    "top-down control and saliency are useful organizing constructs"
+  ],
+  "manipulations": [
+    "review-level contrast across primate vision, cognitive psychology, and transformer ML"
+  ],
+  "key_findings": [
+    "attention has been studied alongside awareness, vigilance, saliency, executive control, and learning",
+    "attention has been recently adopted across several machine-learning domains",
+    "biological-attention research and ML attention have a complicated conceptual relationship"
+  ],
+  "interpretations": [
+    "biological and ML attention formalisms partially align but also conceptually diverge",
+    "the transformer attention mechanism is best read as an inductive bias loosely inspired by primate top-down control"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "visual attention in primates",
+    "top-down attentional control",
+    "saliency",
+    "executive control",
+    "transformer attention mechanism",
+    "inductive bias",
+    "limited computational resources",
+    "biological vs artificial attention"
+  ],
+  "out_of_scope_note": null
+}
