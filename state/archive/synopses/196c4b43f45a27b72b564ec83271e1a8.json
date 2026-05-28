@@ -1,0 +1,57 @@
+{
+  "canonical_id": "196c4b43f45a27b72b564ec83271e1a8",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "bounded evidence accumulation",
+      "role": "primary_lens",
+      "one_line": "Sequential sampling drift-diffusion framework adapted to value-based choice"
+    },
+    {
+      "name": "value construction by deliberation",
+      "role": "extended",
+      "one_line": "Subjective values are built during sampling, not stably recalled"
+    },
+    {
+      "name": "stable-value with uncorrelated noise",
+      "role": "compared_against",
+      "one_line": "Standard BEA assumption that value noise is temporally independent"
+    }
+  ],
+  "core_question": "Are subjective values in value-based decisions stable with uncorrelated noise, or are they constructed and revalued across a session?",
+  "key_assumptions": [
+    "Choices and response times reflect a sequential sampling process",
+    "Internal states of the decision maker can change across trials",
+    "Value-based decisions need not share perceptual decisions' i.i.d. noise assumption"
+  ],
+  "manipulations": [
+    "Compared explicitly stated values to Reval-derived dynamic values",
+    "Compared BEA models with independent vs. correlated successive evidence samples"
+  ],
+  "key_findings": [
+    "Subjective item values change significantly during a short experimental session",
+    "Reval values predict choice and response time better than stated values",
+    "Reval values better explain vmPFC BOLD activity",
+    "Revaluation also emerges in BEA models with non-independent evidence samples"
+  ],
+  "interpretations": [
+    "Revaluation is a byproduct of value construction during deliberation",
+    "Serial dependencies in value-based choice arise from temporally correlated sampling, not from corrupted stable values"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "bounded evidence accumulation",
+    "drift-diffusion model",
+    "value construction",
+    "serial dependence",
+    "revaluation",
+    "ventromedial prefrontal cortex",
+    "response time modeling",
+    "value-based decision making"
+  ],
+  "out_of_scope_note": null
+}

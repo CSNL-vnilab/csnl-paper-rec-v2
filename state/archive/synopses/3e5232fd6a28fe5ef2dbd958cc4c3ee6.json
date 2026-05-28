@@ -1,0 +1,63 @@
+{
+  "canonical_id": "3e5232fd6a28fe5ef2dbd958cc4c3ee6",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "latent cause inference",
+      "role": "primary_lens",
+      "one_line": "experience is segmented into inferred latent causes supporting context-dependent learning"
+    },
+    {
+      "name": "Bayesian nonparametric inference",
+      "role": "extended",
+      "one_line": "controls a context module that assigns a unique context vector per inferred latent cause"
+    },
+    {
+      "name": "connectionist neural network",
+      "role": "primary_lens",
+      "one_line": "LCNet stores shared structure across tasks in network weights"
+    },
+    {
+      "name": "schema learning",
+      "role": "context",
+      "one_line": "curriculum effects in acquiring shared structure across contexts"
+    }
+  ],
+  "core_question": "How can splitting experience into latent causes and learning shared structure across contexts be achieved simultaneously?",
+  "key_assumptions": [
+    "experience is parsed into discrete latent causes",
+    "shared structure across contexts can be stored in shared network weights",
+    "context-specific structure is captured via per-LC context vectors",
+    "Bayesian nonparametric prior governs assignment of new latent causes"
+  ],
+  "manipulations": [
+    "task structure with shared versus context-specific components",
+    "curriculum order in schema learning",
+    "stimulus stream as naturalistic videos of daily events"
+  ],
+  "key_findings": [
+    "LCNet extracts shared structure across latent causes in function learning while avoiding catastrophic interference",
+    "LCNet captures human curriculum effects in schema learning",
+    "LCNet infers underlying event structure from naturalistic daily-event videos"
+  ],
+  "interpretations": [
+    "a context module gated by Bayesian nonparametric inference reconciles shared and context-specific learning",
+    "neural network models can implement latent-cause inference while preserving generalization across contexts"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "latent cause inference",
+    "context-dependent learning",
+    "catastrophic interference",
+    "schema learning",
+    "curriculum effects",
+    "event segmentation",
+    "Bayesian nonparametric",
+    "shared structure across tasks"
+  ],
+  "out_of_scope_note": null
+}

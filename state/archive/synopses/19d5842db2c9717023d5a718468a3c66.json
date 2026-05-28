@@ -1,0 +1,58 @@
+{
+  "canonical_id": "19d5842db2c9717023d5a718468a3c66",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:30:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "decoded neurofeedback",
+      "role": "primary_lens",
+      "one_line": "closed-loop fMRI multivoxel pattern reinforcement to alter neural representations"
+    },
+    {
+      "name": "multivoxel neuroreinforcement",
+      "role": "extended",
+      "one_line": "implicit operant pairing of latent target representation with reward"
+    },
+    {
+      "name": "exposure-based therapy",
+      "role": "compared_against",
+      "one_line": "conventional aversive exposure paradigm contrasted with nondistressing implicit alternative"
+    }
+  ],
+  "core_question": "Can multivoxel neuroreinforcement reduce amygdala threat responses to specific phobic stimuli without conscious exposure?",
+  "key_assumptions": [
+    "implicit activation of target representation can be operantly reinforced",
+    "amygdala response indexes phobic threat signature",
+    "neural decoder reliably identifies target animal representations"
+  ],
+  "manipulations": [
+    "number of neuroreinforcement sessions (1, 3, or 5)",
+    "target vs control animal phobia assignment within subjects",
+    "double-blind randomized assignment to dose conditions"
+  ],
+  "key_findings": [
+    "significant decrease in amygdala response for target phobia post-treatment",
+    "no comparable decrease for control phobia (interaction effect)",
+    "no adverse events or dropouts reported"
+  ],
+  "interpretations": [
+    "multivoxel neuroreinforcement can specifically reduce threat signatures",
+    "intervention may complement conventional psychotherapy with nondistressing experience"
+  ],
+  "limitations_noted": [
+    "single-university trial scope"
+  ],
+  "connecting_signals": [
+    "decoded neurofeedback",
+    "multivoxel neuroreinforcement",
+    "closed-loop fMRI",
+    "amygdala threat response",
+    "specific phobia intervention",
+    "implicit representation reinforcement",
+    "double-blind clinical trial"
+  ],
+  "out_of_scope_note": null
+}

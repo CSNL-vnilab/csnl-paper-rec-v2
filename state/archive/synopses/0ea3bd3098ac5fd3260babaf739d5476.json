@@ -1,0 +1,17 @@
+{
+  "canonical_id": "0ea3bd3098ac5fd3260babaf739d5476",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7-bypass@2026-05-28",
+  "generated_at": "2026-05-28T20:56:30+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.0,
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "Neurosurgical case report: interhemispheric contralateral transcallosal approach to a giant thalamic cavernous malformation; surgical technique report, not computational neuroscience."
+}

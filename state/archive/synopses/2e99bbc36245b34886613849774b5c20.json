@@ -1,0 +1,56 @@
+{
+  "canonical_id": "2e99bbc36245b34886613849774b5c20",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:30:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "Bayesian observer",
+      "role": "primary_lens",
+      "one_line": "post-choice evidence reweighting as suboptimal vs calibrated inference."
+    },
+    {
+      "name": "signal-detection theory",
+      "role": "context",
+      "one_line": "categorical clockwise/counterclockwise judgment relative to a reference."
+    },
+    {
+      "name": "post-decisional evidence integration",
+      "role": "extended",
+      "one_line": "feedback partially recalibrates congruent-evidence overweighting."
+    }
+  ],
+  "core_question": "Does incentivized feedback eliminate confirmation bias in post-choice perceptual evidence integration?",
+  "key_assumptions": [
+    "observers integrate sequential samples to estimate a hidden mean",
+    "a categorical choice can bias weighting of subsequent evidence",
+    "monetary reward + ground-truth feedback can calibrate inference"
+  ],
+  "manipulations": [
+    "presence vs absence of trial-by-trial feedback with monetary reward",
+    "categorical choice after 4 vs all 8 samples",
+    "estimate timing: immediately post-choice vs after remaining samples"
+  ],
+  "key_findings": [
+    "incentivized feedback substantially reduced confirmation bias",
+    "confirmation bias was not eliminated by feedback",
+    "post-choice evidence weighting remained choice-congruent under reward"
+  ],
+  "interpretations": [
+    "prior confirmation biases partly reflect suboptimal strategy from missing feedback",
+    "residual bias reflects a deliberate process weighting objectives beyond accuracy"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "confirmation bias",
+    "post-decisional evidence integration",
+    "perceptual choice feedback",
+    "angular mean estimation",
+    "choice-congruent weighting",
+    "incentivized calibration",
+    "two-stage psychophysical task"
+  ],
+  "out_of_scope_note": null
+}

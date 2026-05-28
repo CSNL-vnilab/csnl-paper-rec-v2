@@ -1,0 +1,61 @@
+{
+  "canonical_id": "2899d678b74856a3dd4e9ce67fd1ed4d",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "higher-order theory of subjective experience",
+      "role": "primary_lens",
+      "one_line": "subjective fear depends on prefrontal implicit metacognition over visual representations"
+    },
+    {
+      "name": "multi-voxel pattern analysis of ventral visual stream",
+      "role": "extended",
+      "one_line": "ventral stream encodes fear-correlated visual features without encoding fear experience itself"
+    },
+    {
+      "name": "multivariate information synchronization (functional connectivity)",
+      "role": "primary_lens",
+      "one_line": "PFC-visual cortex coupling indexes whether participants subjectively experience fear"
+    },
+    {
+      "name": "hardwired threat-detection account",
+      "role": "compared_against",
+      "one_line": "early perception alone does not generate subjective fear"
+    }
+  ],
+  "core_question": "Does the ventral visual stream itself generate the subjective experience of fear, or does subjective fear instead require interaction between visual cortex and prefrontal cortex?",
+  "key_assumptions": [
+    "subjective fear is dissociable from threat-feature encoding",
+    "idiosyncratic per-participant fear profiles can be used to label stimuli",
+    "multi-voxel patterns reflect feature-level visual representation",
+    "cross-region multivariate synchronization indexes information sharing"
+  ],
+  "manipulations": [
+    "fear vs no-fear participant grouping by idiosyncratic fear profile",
+    "animal images that did vs did not trigger subjective fear per individual",
+    "region-of-interest: ventral visual stream vs prefrontal cortex"
+  ],
+  "key_findings": [
+    "ventral visual stream patterns represent affectively neutral visual features statistically tied to fear ratings, not the fear experience itself",
+    "multivariate information synchronization between ventral visual and prefrontal regions distinguishes fearful from non-fearful participants"
+  ],
+  "interpretations": [
+    "subjective fear arises when visual information engages implicit metacognitive mechanisms in prefrontal cortex",
+    "early visual cortex alone is insufficient for the subjective experience of fear despite carrying threat-correlated features"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "subjective experience of fear",
+    "ventral visual stream multi-voxel patterns",
+    "prefrontal-visual cortex interaction",
+    "implicit metacognition",
+    "threat feature representation",
+    "multivariate functional connectivity",
+    "higher-order awareness"
+  ],
+  "out_of_scope_note": null
+}

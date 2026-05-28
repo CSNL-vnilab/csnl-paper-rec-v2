@@ -1,0 +1,57 @@
+{
+  "canonical_id": "1a3f75a7b24f601e3d6deb42b6593313",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "higher-order theory of consciousness",
+      "role": "primary_lens",
+      "one_line": "subjective visibility reports reflect a higher-order representation dissociable from sensory evidence"
+    },
+    {
+      "name": "signal-detection theory",
+      "role": "alternative_lens",
+      "one_line": "objective discriminability vs subjective visibility quantified across matched stimulus strengths"
+    },
+    {
+      "name": "subjective inflation",
+      "role": "extended",
+      "one_line": "inattention inflates visibility beyond what sensory accuracy predicts, extended past threshold vision"
+    }
+  ],
+  "core_question": "Does spatial attention dissociate subjective visibility reports from objective orientation-discrimination performance across stimulus strengths and types?",
+  "key_assumptions": [
+    "objective and subjective measures can be quantitatively related when discriminability is equated",
+    "area-under-the-curve over stimulus strength provides a valid index of inflation",
+    "spatial cueing manipulates attention without changing the physical stimulus"
+  ],
+  "manipulations": [
+    "attended vs unattended (spatial attentional cueing)",
+    "stimulus strength across threshold and suprathreshold levels",
+    "stimulus type across three experiments"
+  ],
+  "key_findings": [
+    "subjective visibility was higher for unattended than attended stimuli at matched orientation discriminability",
+    "the dissociation was strong and consistent across all three preregistered experiments",
+    "inflation appeared across threshold and suprathreshold stimulus strengths, not only at threshold"
+  ],
+  "interpretations": [
+    "inattention robustly inflates subjective visibility reports independent of sensory accuracy",
+    "subjective inflation is not confined to threshold vision, supporting higher-order accounts of awareness"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "subjective inflation",
+    "higher-order theory of consciousness",
+    "spatial attention cueing",
+    "objective vs subjective measures",
+    "visibility report",
+    "orientation discriminability",
+    "preregistered adversarial collaboration",
+    "area-under-the-curve psychometric"
+  ],
+  "out_of_scope_note": null
+}

@@ -1,0 +1,62 @@
+{
+  "canonical_id": "f7a95f6767a1e889d74c9c024f13b727",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "maternal immune activation",
+      "role": "primary_lens",
+      "one_line": "Gestational cytokine exposure as a perturbation to offspring neurodevelopment."
+    },
+    {
+      "name": "novelty preference / visual paired comparison",
+      "role": "extended",
+      "one_line": "Looking-time asymmetry between novel and familiar stimuli as an attention/recognition readout."
+    },
+    {
+      "name": "neonatal imitation",
+      "role": "context",
+      "one_line": "Species-typical imitation of social signals as an early developmental milestone."
+    }
+  ],
+  "core_question": "Does maternal immune activation produce detectable disruptions in attentional processing during infancy in a nonhuman primate model?",
+  "key_assumptions": [
+    "Rhesus macaques offer translational validity for human neurodevelopment.",
+    "Looking time in VPC indexes attention and stimulus processing.",
+    "Imitation at 1 week reflects species-typical social-signal processing."
+  ],
+  "manipulations": [
+    "MIA-exposed vs control offspring (gestational immune challenge).",
+    "Stimulus novelty (novel vs familiar) in VPC.",
+    "Stimulus class (abstract images at 1 month; monkey faces at 3–4 months).",
+    "Discrimination difficulty (easy vs harder novel-vs-familiar contrasts)."
+  ],
+  "key_findings": [
+    "At 1 week, MIA offspring deviated from species-typical imitation of human social signals.",
+    "At 1 month, MIA offspring looked longer at novel abstract stimuli than controls.",
+    "At 3–4 months, MIA offspring looked longer at novel monkey faces than controls.",
+    "MIA group's prolonged novelty looking was contingent on easy discriminations."
+  ],
+  "interpretations": [
+    "Early attentional processes are disrupted in MIA-exposed infants, likely yielding longer visual processing times.",
+    "Infant NHP attention markers may translate to identifying children affected by gestational infection."
+  ],
+  "limitations_noted": [
+    "Males only.",
+    "Few prior NHP MIA studies have probed infancy, limiting comparison."
+  ],
+  "connecting_signals": [
+    "maternal immune activation",
+    "nonhuman primate model",
+    "infant attention",
+    "visual paired comparison",
+    "novelty preference",
+    "neonatal imitation",
+    "neurodevelopmental disorders",
+    "rhesus macaque"
+  ],
+  "out_of_scope_note": null
+}

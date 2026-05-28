@@ -1,0 +1,57 @@
+{
+  "canonical_id": "fa4c1761f97c381e982c81d7e63d0a8c",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "compositional meta-learning",
+      "role": "primary_lens",
+      "one_line": "tasks represented as structured combinations of reusable computational components"
+    },
+    {
+      "name": "probabilistic task inference",
+      "role": "primary_lens",
+      "one_line": "Bayesian inference over generative model components identifies new task solutions"
+    },
+    {
+      "name": "generative model",
+      "role": "extended",
+      "one_line": "captures shared components and statistics across a family of related tasks"
+    }
+  ],
+  "core_question": "Can tasks be solved from minimal experience by inferring compositional structure over reusable computational components rather than updating parameters?",
+  "key_assumptions": [
+    "tasks share a common library of reusable computational components",
+    "component statistics are learnable across a task family",
+    "new tasks can be expressed as structured combinations of known components",
+    "constrained hypothesis testing suffices in place of parameter updates"
+  ],
+  "manipulations": [
+    "task family (rule learning vs motor learning)",
+    "number of examples available for the new task (down to single-example inference)"
+  ],
+  "key_findings": [
+    "the model recovers ground-truth components and their statistics in rule-learning tasks",
+    "the model recovers ground-truth components and their statistics in motor-learning tasks",
+    "new task solutions are inferred from just single examples without parameter updates"
+  ],
+  "interpretations": [
+    "meta-learning can be cast as probabilistic inference over compositional structure",
+    "structured component reuse enables rapid generalization from minimal data"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "compositional meta-learning",
+    "probabilistic task inference",
+    "generative model of components",
+    "few-shot learning",
+    "rule learning",
+    "motor learning",
+    "hypothesis testing without parameter updates",
+    "structured task representations"
+  ],
+  "out_of_scope_note": null
+}
