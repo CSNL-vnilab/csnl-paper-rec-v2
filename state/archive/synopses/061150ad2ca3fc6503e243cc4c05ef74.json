@@ -1,0 +1,60 @@
+{
+  "canonical_id": "061150ad2ca3fc6503e243cc4c05ef74",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:30:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "behavioral economics / neuroeconomics",
+      "role": "primary_lens",
+      "one_line": "decision-making decomposed into risk, intertemporal choice, consistency, and learning rate."
+    },
+    {
+      "name": "intertemporal choice (delay discounting)",
+      "role": "context",
+      "one_line": "trade-off between immediate and larger delayed rewards probed with real outcomes."
+    },
+    {
+      "name": "expected-utility / risk preference",
+      "role": "context",
+      "one_line": "propensity to choose lottery vs sure option indexes risk aversion."
+    }
+  ],
+  "core_question": "Are decision-making processes impaired in multiple sclerosis patients, and how do these impairments relate to other cognitive domains and brain structure?",
+  "key_assumptions": [
+    "behavioral-economics tasks isolate dissociable decision components (risk, patience, consistency, learning)",
+    "real-world reward outcomes elicit genuine preference signals",
+    "Brief Repeatable Battery indexes general cognitive status comparably across groups"
+  ],
+  "manipulations": [
+    "patient group (MS vs healthy controls; relapsing vs progressive)",
+    "decision domain (risk preference, choice consistency, delay of gratification, learning rate)",
+    "reward type (food vs money in real-life conditions)"
+  ],
+  "key_findings": [
+    "MS patients showed higher risk aversion than controls",
+    "trend toward steeper delay discounting (immediate over delayed rewards)",
+    "longer deliberation/reaction times, slower in progressive than relapsing patients",
+    "decision impairment correlated with verbal/visual memory, processing speed, and gray-matter volume"
+  ],
+  "interpretations": [
+    "MS produces significant decision-making impairment even at early disease stages",
+    "decision impairments may degrade patients' quality of life and social functioning"
+  ],
+  "limitations_noted": [
+    "cross-sectional design with modest control sample (n=21)"
+  ],
+  "connecting_signals": [
+    "neuroeconomic decision-making",
+    "risk aversion",
+    "delay discounting",
+    "deliberation time",
+    "multiple sclerosis cognitive impairment",
+    "gray matter volume",
+    "processing speed",
+    "choice consistency"
+  ],
+  "out_of_scope_note": null
+}

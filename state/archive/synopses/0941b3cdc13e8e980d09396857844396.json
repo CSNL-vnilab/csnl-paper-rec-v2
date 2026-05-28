@@ -1,0 +1,63 @@
+{
+  "canonical_id": "0941b3cdc13e8e980d09396857844396",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "bounded accumulation of evidence",
+      "role": "primary_lens",
+      "one_line": "log-likelihood-ratio accumulation to a bound governs both choice and strategy switches"
+    },
+    {
+      "name": "hierarchical decision-making",
+      "role": "primary_lens",
+      "one_line": "high-level strategy and trial-level choice interact across timescales"
+    },
+    {
+      "name": "active inference",
+      "role": "extended",
+      "one_line": "disambiguating negative feedback as bad information vs bad strategy"
+    },
+    {
+      "name": "signal-detection theory",
+      "role": "context",
+      "one_line": "expected accuracy on perceptual choices weights feedback evidence"
+    }
+  ],
+  "core_question": "How do subjects integrate outcomes and expected accuracy across choices to decide when to switch a higher-level decision strategy?",
+  "key_assumptions": [
+    "expected accuracy of a choice modulates the weight given to feedback",
+    "switch evidence is accumulated as log-likelihood ratio across trials",
+    "strategy is updated when accumulated evidence reaches a bound",
+    "feedback is ambiguous between limited information and wrong strategy"
+  ],
+  "manipulations": [
+    "random-dot kinematogram difficulty (perceptual uncertainty)",
+    "invisible unpredictable switches of correct stimulus-response mapping every few trials"
+  ],
+  "key_findings": [
+    "subjects treat negative feedback as evidence for a switch",
+    "feedback is weighted by the subject's expected accuracy on that trial",
+    "switch evidence accumulates across trials until a bound triggers strategy update",
+    "a single computational framework quantitatively captures all behavioral aspects"
+  ],
+  "interpretations": [
+    "bounded evidence accumulation underlies both the choice and the strategy that governs the choice",
+    "expected accuracy is the key link between hierarchical levels of decision-making"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "hierarchical decision-making",
+    "strategy switching",
+    "bounded evidence accumulation",
+    "log-likelihood ratio",
+    "expected accuracy",
+    "random-dot motion",
+    "reversal learning",
+    "multi-timescale decision"
+  ],
+  "out_of_scope_note": null
+}

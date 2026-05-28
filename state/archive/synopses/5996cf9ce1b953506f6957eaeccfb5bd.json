@@ -1,0 +1,54 @@
+{
+  "canonical_id": "5996cf9ce1b953506f6957eaeccfb5bd",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "theory of mind",
+      "role": "primary_lens",
+      "one_line": "mental-state attribution observers use to predict others' actions"
+    },
+    {
+      "name": "model-based vs habitual control",
+      "role": "extended",
+      "one_line": "dual-system distinction between planned and reinforcement-driven behavior"
+    },
+    {
+      "name": "rational planning",
+      "role": "compared_against",
+      "one_line": "treats others as goal-directed agents executing efficient plans"
+    }
+  ],
+  "core_question": "Does human theory of mind include a representation of habitual (non-planned) action, and when is it deployed?",
+  "key_assumptions": [
+    "observers infer others' behavior by attributing mental states",
+    "current rational-actor accounts treat others as efficient planners given knowledge and goals",
+    "behavior can arise from either planning or reinforcement-driven habit"
+  ],
+  "manipulations": [
+    "factors that shift the balance between habitual and planned behavior in the observed agent"
+  ],
+  "key_findings": [
+    "human theory of mind is sensitive to factors influencing whether an actor behaves habitually vs by planning",
+    "observers do not exclusively interpret others' behavior as rational planning"
+  ],
+  "interpretations": [
+    "theory of mind incorporates a theory of habitual action alongside rational planning",
+    "purely rational-actor accounts of mental-state attribution are incomplete"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "theory of mind",
+    "habitual action",
+    "rational actor model",
+    "goal-directed planning",
+    "reinforcement history",
+    "action understanding",
+    "mental state attribution",
+    "dual-system control"
+  ],
+  "out_of_scope_note": null
+}

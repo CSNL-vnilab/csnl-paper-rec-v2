@@ -1,0 +1,64 @@
+{
+  "canonical_id": "3e96189ab927cd59630e3bfbb190b1a7",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "efficient coding",
+      "role": "primary_lens",
+      "one_line": "sensory codes optimized to represent natural stimuli given downstream cost."
+    },
+    {
+      "name": "rate-distortion",
+      "role": "extended",
+      "one_line": "Lp reconstruction error of ML decoder as parametric distortion family."
+    },
+    {
+      "name": "information maximization (infomax)",
+      "role": "compared_against",
+      "one_line": "recovered as a special case of the Lp criterion."
+    },
+    {
+      "name": "Bayesian observer",
+      "role": "context",
+      "one_line": "maximum likelihood decoder supplies the reconstruction used in the loss."
+    }
+  ],
+  "core_question": "Which optimality criterion best explains tuning-curve shape in early sensory neural codes?",
+  "key_assumptions": [
+    "single neuron encodes a one-dimensional stimulus with arbitrary input distribution",
+    "downstream readout is the maximum likelihood decoder",
+    "encoder optimality is defined by Lp reconstruction error",
+    "population codes can be summarized by a meta-tuning curve"
+  ],
+  "manipulations": [
+    "exponent p of the Lp reconstruction loss",
+    "input stimulus distribution",
+    "single-neuron vs population (meta-tuning) regime"
+  ],
+  "key_findings": [
+    "analytic optimal tuning curve derived for a single neuron under arbitrary input distribution",
+    "meta-tuning-curve construction generalizes the result to a class of neural populations",
+    "Lp family contains infomax and squared-error criteria as special cases",
+    "biological early-visual tuning data are best matched by low values of p, close to the infomax limit"
+  ],
+  "interpretations": [
+    "early visual systems across animals optimize similar reconstruction-style criteria near information maximization",
+    "Lp reconstruction error unifies infomax and decoding-error views of efficient coding"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "efficient coding hypothesis",
+    "Lp reconstruction error",
+    "maximum likelihood decoder",
+    "optimal tuning curve",
+    "meta-tuning curve",
+    "information maximization",
+    "natural stimulus distribution",
+    "early visual coding"
+  ],
+  "out_of_scope_note": null
+}

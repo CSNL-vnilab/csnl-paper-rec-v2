@@ -1,0 +1,58 @@
+{
+  "canonical_id": "b4f1686743267b146dd5532019a8e17f",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:30:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "reinforcement learning",
+      "role": "primary_lens",
+      "one_line": "value-based learning of action policies from reward feedback"
+    },
+    {
+      "name": "episodic memory",
+      "role": "extended",
+      "one_line": "traces of individual events used to augment RL value estimation"
+    },
+    {
+      "name": "semantic memory",
+      "role": "compared_against",
+      "one_line": "gradual extraction of action values across many experiences"
+    }
+  ],
+  "core_question": "Can endowing reinforcement learning systems with episodic memory resolve computational limits that arise in high-dimensional, sparse, long-horizon real-world tasks?",
+  "key_assumptions": [
+    "classical RL assumes tractable low-dimensional state spaces",
+    "real-world state spaces are high-dimensional, continuous, partially observable",
+    "memory systems can be functionally dissociated into procedural, semantic, and episodic",
+    "value functions over complex states can be approximated from individual event traces"
+  ],
+  "manipulations": [
+    "review-style synthesis: contrasts purely semantic-memory RL with episodic-memory-augmented RL across tasks"
+  ],
+  "key_findings": [
+    "episodic memory enables efficient approximation of value functions over complex state spaces",
+    "episodic traces allow learning from very sparse data, including one-shot situations",
+    "episodic retrieval helps bridge long-term temporal dependencies between actions and rewards"
+  ],
+  "interpretations": [
+    "the diverse roles of memory in RL are best understood as one integrated learning system rather than separate modules",
+    "episodic memory and RL jointly address both the computational and cognitive gaps in standard RL accounts"
+  ],
+  "limitations_noted": [
+    "standard experimental RL tasks are simple and ignore key real-world features (high-dimensional, sparse, long-horizon)"
+  ],
+  "connecting_signals": [
+    "episodic memory",
+    "reinforcement learning",
+    "value function approximation",
+    "model-based RL",
+    "long-term credit assignment",
+    "one-shot learning",
+    "partially observable state spaces",
+    "integrated memory systems"
+  ],
+  "out_of_scope_note": null
+}
