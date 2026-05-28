@@ -1,0 +1,43 @@
+{
+  "canonical_id": "c866c225ddadf57f984725b1c250f656",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "reinforcement learning", "role": "primary_lens", "one_line": "reward-prediction-error learning rate links striatal dopamine to adolescent choice"},
+    {"name": "dopaminergic neuromodulation", "role": "extended", "one_line": "spontaneous eye-blink rate used as non-invasive proxy for striatal dopamine tone"}
+  ],
+  "core_question": "Does spontaneous eye-blink rate, as a proxy for striatal dopamine tone, predict reward-based decision-making in adolescents?",
+  "key_assumptions": [
+    "spontaneous eye-blink rate indexes striatal dopamine tone",
+    "ventral striatum drives adolescent reward hyper-responsiveness",
+    "reward learning is captured by RPE-based update rule"
+  ],
+  "manipulations": [
+    "individual differences in sEBR across 70 adolescents",
+    "reward magnitude / risk level in a probabilistic reward task"
+  ],
+  "key_findings": [
+    "higher sEBR predicted steeper reward-prediction-error learning rates",
+    "higher sEBR predicted greater preference for high-magnitude / high-risk rewards"
+  ],
+  "interpretations": [
+    "non-invasive sEBR extends animal dopamine-RL evidence to adolescent reward decision-making"
+  ],
+  "limitations_noted": [
+    "direct dopamine measurement in healthy adolescents not feasible; sEBR is an indirect proxy"
+  ],
+  "connecting_signals": [
+    "spontaneous eye-blink rate",
+    "striatal dopamine tone",
+    "reward prediction error",
+    "adolescent reward sensitivity",
+    "probabilistic reward task",
+    "risk preference",
+    "ventral striatum",
+    "individual differences in learning rate"
+  ],
+  "out_of_scope_note": null
+}

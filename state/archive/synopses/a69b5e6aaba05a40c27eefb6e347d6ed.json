@@ -1,0 +1,46 @@
+{
+  "canonical_id": "a69b5e6aaba05a40c27eefb6e347d6ed",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "multivariate pattern decoding", "role": "primary_lens", "one_line": "fMRI MVPA used to read out content of parietal visual representations"},
+    {"name": "two-stream (dorsal/ventral) visual processing", "role": "extended", "one_line": "extends dorsal-stream role beyond spatial attention to abstract object codes"},
+    {"name": "action-relevant visual coding", "role": "alternative_lens", "one_line": "parietal code framed as complementary action-oriented visual representation"}
+  ],
+  "core_question": "What range of visual stimulus properties is represented in the human parietal cortex, and how do those representations differ from ventral-stream codes?",
+  "key_assumptions": [
+    "fMRI multivariate decoding indexes content of cortical representations",
+    "parietal cortex traditionally seen as handling spatial/attentional properties",
+    "ventral stream is the canonical substrate for object representation"
+  ],
+  "manipulations": [
+    "object category (animate vs inanimate)",
+    "object location",
+    "object size",
+    "viewpoint"
+  ],
+  "key_findings": [
+    "parietal cortex decodes object category beyond spatial properties",
+    "parietal cortex decodes location, size, and viewpoint of objects",
+    "parietal representations are view-tolerant",
+    "parietal representations are more abstract than ventral-stream representations"
+  ],
+  "interpretations": [
+    "parietal cortex contributes a complementary, action-relevant visual code",
+    "its role exceeds spatial attention alone"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "human parietal cortex",
+    "fMRI multivariate decoding",
+    "object category representation",
+    "view-tolerant representation",
+    "dorsal stream visual coding",
+    "animate vs inanimate decoding",
+    "action-relevant visual representation"
+  ],
+  "out_of_scope_note": null
+}

@@ -1,0 +1,17 @@
+{
+  "canonical_id": "0d0405605aaedd1bb92d68c414de101d",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.0,
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "Labor economics paper (short-run elasticity of substitution between male/female workers in Italian provinces); economics, not computational neuroscience."
+}

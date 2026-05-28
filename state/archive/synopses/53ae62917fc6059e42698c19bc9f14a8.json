@@ -1,0 +1,40 @@
+{
+  "canonical_id": "53ae62917fc6059e42698c19bc9f14a8",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "valence-encoding architecture", "role": "primary_lens", "one_line": "Parallel positive/negative valence channels encode aesthetic affect in distinct regions."}
+  ],
+  "core_question": "Which neural structures encode the aesthetic pleasantness versus unpleasantness of harmonious versus disharmonious color pairings?",
+  "key_assumptions": [
+    "Color harmony judgments reflect a graded aesthetic-affective experience",
+    "Hue/chroma/lightness differences modulate perceived harmony",
+    "Positive and negative aesthetic valence may be encoded by separable substrates"
+  ],
+  "manipulations": [
+    "Harmony level of paired-color stimuli (harmonious vs disharmonious combinations)",
+    "Hue, chroma, and lightness differences between paired colors"
+  ],
+  "key_findings": [
+    "Medial orbitofrontal cortex activity scaled positively with perceived color harmony",
+    "Amygdala activity scaled with perceived disharmony"
+  ],
+  "interpretations": [
+    "A parallel valence-encoding architecture underlies aesthetic experience of color",
+    "Aesthetic and emotional aspects of color perception map onto reward- and threat-related circuits"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "color harmony",
+    "medial orbitofrontal cortex",
+    "amygdala",
+    "aesthetic valence",
+    "7T fMRI",
+    "color perception",
+    "pleasantness judgment"
+  ],
+  "out_of_scope_note": null
+}
