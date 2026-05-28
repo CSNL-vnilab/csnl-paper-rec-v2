@@ -1,0 +1,48 @@
+{
+  "canonical_id": "52c73e5b89c2245ba98c1557331f54d0",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "recurrent neural network",
+      "role": "primary_lens",
+      "one_line": "cortical circuit model coupling categorical choice and continuous estimate"
+    },
+    {
+      "name": "confirmation bias",
+      "role": "context",
+      "one_line": "post-decision bias whose neural origin the model targets"
+    }
+  ],
+  "core_question": "What neural-circuit mechanisms give rise to post-decision biases in perception, and are categorical choices and continuous estimates computed in a common cortical circuit?",
+  "key_assumptions": [
+    "post-decision biases reflect circuit-level dynamics, not just readout",
+    "categorical choice and continuous estimate may share a single circuit"
+  ],
+  "manipulations": [
+    "combined discrimination–estimation task structure",
+    "network architecture supporting both categorical and continuous outputs"
+  ],
+  "key_findings": [
+    "categorical choice induces a choice-dependent confirmation bias in the continuous estimate",
+    "categorical choice produces an overall decrease in sensitivity to subsequent sensory evidence"
+  ],
+  "interpretations": [
+    "a single neural network model can account for both post-decision biases simultaneously"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "post-decision bias",
+    "confirmation bias",
+    "discrimination-estimation task",
+    "categorical choice",
+    "continuous estimate",
+    "sensitivity reduction",
+    "neural network model",
+    "cortical circuit"
+  ],
+  "out_of_scope_note": null
+}

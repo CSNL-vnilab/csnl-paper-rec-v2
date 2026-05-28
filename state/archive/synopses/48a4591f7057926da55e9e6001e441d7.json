@@ -1,0 +1,62 @@
+{
+  "canonical_id": "48a4591f7057926da55e9e6001e441d7",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "optimal foraging theory",
+      "role": "primary_lens",
+      "one_line": "maximize rewards minus efforts per unit time as fitness objective"
+    },
+    {
+      "name": "effort discounting",
+      "role": "primary_lens",
+      "one_line": "effort cost of harvest scales decisions and movement vigor jointly"
+    },
+    {
+      "name": "movement vigor",
+      "role": "extended",
+      "one_line": "saccade and lick speed treated as economic readout of value"
+    },
+    {
+      "name": "neuromodulatory state control",
+      "role": "alternative_lens",
+      "one_line": "pupil-linked brainstem signal coordinates decision and motor circuits"
+    }
+  ],
+  "core_question": "Why do economic variables such as reward and effort jointly modulate decisions and movement vigor during foraging?",
+  "key_assumptions": [
+    "fitness is captured by reward minus effort divided by time (capture rate)",
+    "decisions and movements share a common economic currency",
+    "pupil size indexes brainstem neuromodulatory state"
+  ],
+  "manipulations": [
+    "effort cost of harvest, varied by displacing the food tube relative to the mouth"
+  ],
+  "key_findings": [
+    "higher harvest effort lengthened work duration (more stockpiling before harvest)",
+    "higher harvest effort reduced saccade and lick vigor",
+    "pupil constricted under high harvest effort and dilated as effort declined",
+    "decisions, movements, and pupil state co-varied as a global brain-state shift"
+  ],
+  "interpretations": [
+    "brainstem neuromodulatory circuits controlling pupil size alter both decision and motor computations to encourage work and conserve energy",
+    "this coordinated response improves capture rate, a fitness-relevant variable"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "foraging task",
+    "effort cost of harvest",
+    "movement vigor",
+    "saccade vigor",
+    "lick vigor",
+    "pupil size",
+    "capture rate",
+    "delayed gratification",
+    "marmoset"
+  ],
+  "out_of_scope_note": null
+}

@@ -1,0 +1,54 @@
+{
+  "canonical_id": "ef5d5569d832552316b800fe5703dc97",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "drift-diffusion",
+      "role": "primary_lens",
+      "one_line": "Single-trial scalar combining deterministic drift and stochastic diffusion in LIP population activity."
+    },
+    {
+      "name": "bounded evidence accumulation",
+      "role": "extended",
+      "one_line": "Population-derived integrator rises to a termination bound on individual decisions."
+    }
+  ],
+  "core_question": "Can the trial-by-trial drift-diffusion signal underlying a perceptual decision be observed directly in simultaneously recorded LIP population activity?",
+  "key_assumptions": [
+    "Perceptual decisions arise from temporal accumulation of noisy sensory evidence",
+    "Stochastic component of accumulation drives variability in choice and reaction time",
+    "A weighted sum of LIP neurons can recover a single decision variable"
+  ],
+  "manipulations": [
+    "Direction of random dot motion across trials",
+    "Simultaneous recording from hundreds of LIP neurons during decisions"
+  ],
+  "key_findings": [
+    "A weighted sum of LIP population activity yields a scalar combining deterministic drift and stochastic diffusion on single trials",
+    "This population-derived signal approximates the quantity governing variability in choice and reaction times",
+    "A small subset of neurons with response fields overlapping the choice targets carries the integral of noisy evidence",
+    "Direction-selective neurons with motion-stimulus response fields appear to represent the integrand"
+  ],
+  "interpretations": [
+    "Single-trial drift-diffusion is directly observable in LIP via a parsimonious two-subset architecture",
+    "State-space analyses without an explicit hypothesis would miss this low-dimensional integrator structure"
+  ],
+  "limitations_noted": [
+    "Signal requires targeting a small subset of neurons whose response fields overlap choice targets"
+  ],
+  "connecting_signals": [
+    "drift-diffusion model",
+    "lateral intraparietal cortex (LIP)",
+    "single-trial decision variable",
+    "evidence accumulation",
+    "random dot motion",
+    "population coding",
+    "termination bound",
+    "choice and reaction time variability"
+  ],
+  "out_of_scope_note": null
+}

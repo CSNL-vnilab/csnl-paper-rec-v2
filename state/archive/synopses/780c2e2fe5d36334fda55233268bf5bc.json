@@ -1,0 +1,17 @@
+{
+  "canonical_id": "780c2e2fe5d36334fda55233268bf5bc",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.0,
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "Psycholinguistics / experimental pragmatics demonstration that lay readers infer causality from natural-language correlational statements (e.g. 'X is associated with Y'). Pure language-comprehension survey with no neural recording, no computational model of cognition, and no theoretical framework from the computational-neuroscience canon (Bayesian observer, predictive coding, drift-diffusion, etc.). Falls under the 'social-science / language survey without neural or computational-brain content' out-of-scope category."
+}

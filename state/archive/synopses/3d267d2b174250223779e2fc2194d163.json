@@ -1,0 +1,58 @@
+{
+  "canonical_id": "3d267d2b174250223779e2fc2194d163",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T12:12:13+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "neuro-reinforcement (decoded neurofeedback / DecNef)",
+      "role": "primary_lens",
+      "one_line": "Implicit multi-voxel pattern reinforcement targeting category-specific representations"
+    },
+    {
+      "name": "resting-state functional connectivity",
+      "role": "primary_lens",
+      "one_line": "Intrinsic network coupling indexed by group ICA as mechanism readout"
+    },
+    {
+      "name": "amygdala reactivity model of phobia",
+      "role": "context",
+      "one_line": "Threat-response circuitry framed as treatment target"
+    }
+  ],
+  "core_question": "Do multi-voxel neuro-reinforcement effects on amygdala reactivity in phobia map onto changes in resting-state functional connectivity?",
+  "key_assumptions": [
+    "Implicit reinforcement of multi-voxel patterns can shift downstream affective responses",
+    "Group ICA recovers a stable resting network across pre/post sessions",
+    "Untargeted phobic animal serves as within-subject placebo control"
+  ],
+  "manipulations": [
+    "Targeted vs untargeted phobic-animal category (double-blind, within-subject)",
+    "Pre-treatment vs post-treatment session"
+  ],
+  "key_findings": [
+    "A visual-network-overlapping resting-state component recurred pre and post",
+    "Connectivity in higher-level visual and cognitive regions of this network increased post-treatment",
+    "Greater connectivity increases predicted greater decreases in amygdala reactivity to targeted phobic stimuli"
+  ],
+  "interpretations": [
+    "Multi-voxel neuro-reinforcement induces persisting connectivity changes beyond the targeted region",
+    "Connectivity shifts in visual/cognitive cortex may mediate downstream amygdala attenuation"
+  ],
+  "limitations_noted": [
+    "Small pilot sample (N = 11) needing replication"
+  ],
+  "connecting_signals": [
+    "multi-voxel neuro-reinforcement",
+    "decoded neurofeedback",
+    "resting-state functional connectivity",
+    "group ICA",
+    "amygdala reactivity",
+    "specific phobia",
+    "visual network",
+    "double-blind placebo control"
+  ],
+  "out_of_scope_note": null
+}

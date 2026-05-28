@@ -1,0 +1,58 @@
+{
+  "canonical_id": "8099c424bf6677314dbcc520db15e821",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:30:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "drift-diffusion / evidence accumulation",
+      "role": "primary_lens",
+      "one_line": "Decision variable accumulates noisy evidence to a bound for choice."
+    },
+    {
+      "name": "adaptive history bias",
+      "role": "extended",
+      "one_line": "Trial-history bias adjusts to environmental correlation structure."
+    },
+    {
+      "name": "starting-point vs accumulation-bias dichotomy",
+      "role": "compared_against",
+      "one_line": "Distinguishes baseline offset from biased build-up rate of DV."
+    }
+  ],
+  "core_question": "Do adaptive history biases shape the build-up rate (not baseline) of action-selective motor cortical activity during decision formation?",
+  "key_assumptions": [
+    "Motor beta lateralization functions as a neural marker of the decision variable",
+    "History biases can be captured as linear combination of recent stimuli and choices",
+    "Build-up rate vs starting point of DV are dissociable neural signatures"
+  ],
+  "manipulations": [
+    "Repetition probability of stimulus category across blocks (repetitive 0.8 / neutral 0.5 / alternating 0.2)",
+    "Motion coherence spanning psychophysical threshold",
+    "Trial-by-trial history bias inferred from behavioral model"
+  ],
+  "key_findings": [
+    "Participants flexibly adapted history biases to environmental correlation structure",
+    "Adaptive history bias selectively shaped build-up of action-selective motor cortical activity, not baseline",
+    "This bias effect added to the impact of current sensory evidence",
+    "Bias adjustment uniquely predicted individual task performance beyond sensitivity"
+  ],
+  "interpretations": [
+    "Motor cortical action-plan build-up is shaped by dynamic prior expectations from environmental adaptation",
+    "Adaptive priors enter decision formation via accumulation bias rather than starting-point offset"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "evidence accumulation",
+    "motor beta lateralization",
+    "stimulus history bias",
+    "perceptual decision-making",
+    "MEG decision variable",
+    "environmental correlation structure",
+    "build-up rate vs starting point",
+    "random dot motion task"
+  ],
+  "out_of_scope_note": null
+}

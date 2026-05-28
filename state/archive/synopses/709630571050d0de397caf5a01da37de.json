@@ -1,0 +1,17 @@
+{
+  "canonical_id": "709630571050d0de397caf5a01da37de",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.0,
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "Wearable/clinical signal-processing paper: applies Bayesian filtering within an EM framework as a state-space estimator to recover unobserved sympathetic arousal and cortisol-related energy from skin conductance (marked point process) and cortisol/heart-rate observations, with validation against fNIRS features. Aimed at wearable monitoring and closed-loop therapy delivery for neuropsychiatric/hormone disorders. Bayesian filtering is used here as a peripheral-physiology estimation tool, not as a theoretical framework about neural computation, perception, decision-making, or encoding/decoding. No neural recordings, no circuit model, no cognitive computation — out of scope for the lab's perceptual/Bayesian-observer/efficient-coding research."
+}

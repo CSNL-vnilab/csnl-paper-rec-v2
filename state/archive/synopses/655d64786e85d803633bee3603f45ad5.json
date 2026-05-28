@@ -1,0 +1,17 @@
+{
+  "canonical_id": "655d64786e85d803633bee3603f45ad5",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7-bypass@2026-05-28",
+  "generated_at": "2026-05-28T21:11:49+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.0,
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "Optical engineering: dynamic damage process of HfO2/SiO2 anti-reflection coatings under high-energy laser irradiation; thin-film coatings damage threshold, not computational neuroscience."
+}

@@ -1,0 +1,17 @@
+{
+  "canonical_id": "41ab8698f475b158a05bdf8ff93cd447",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T21:12:20+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.0,
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "Abstract is a 47-word stub for a short commentary note proposing an alternative explanation to Flesch et al. (2022); fewer than 100 useful words after stripping boilerplate, so no grounded synopsis can be extracted. Topic (task representations / prefrontal gating in macaques) is in-scope, but the supplied abstract lacks the substantive content (no manipulations, findings, or specific alternative framework named) required for a reliable skeletal extraction."
+}

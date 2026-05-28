@@ -1,0 +1,57 @@
+{
+  "canonical_id": "521f0c8b845a7e623894fd29f05386a9",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "sequential sampling",
+      "role": "primary_lens",
+      "one_line": "Decision formed by integrating a sequence of stimulus samples over time."
+    },
+    {
+      "name": "evidence accumulation",
+      "role": "primary_lens",
+      "one_line": "Per-sample weights characterize how evidence is combined into an estimate."
+    },
+    {
+      "name": "temporal interruption",
+      "role": "extended",
+      "one_line": "A break in the sample stream modifies the temporal weighting profile."
+    }
+  ],
+  "core_question": "How does a short temporal break within a sample sequence affect the subjective weighting profile of sensory integration?",
+  "key_assumptions": [
+    "Subjects integrate discrete stimulus samples toward a single estimate",
+    "Sample weighting can be recovered via regression on trial-by-trial estimates",
+    "Temporal continuity of the sequence is itself an integration-relevant variable"
+  ],
+  "manipulations": [
+    "Presence vs absence of a 1.75 s break after the 4th of 8 samples",
+    "Block design: no-break, break, and randomly interleaved blocks"
+  ],
+  "key_findings": [
+    "Interrupting the sequence did not significantly change overall estimation performance",
+    "No-break condition produced a monotonically decreasing weighting profile (primacy)",
+    "Break condition produced a 'double-primacy' profile with a second peak after the break",
+    "The double-primacy effect persisted when break and no-break trials were randomly interleaved"
+  ],
+  "interpretations": [
+    "Temporal regularity of the input shapes how sensory samples are weighted during integration",
+    "An interruption appears to reset or restart the integration window rather than degrade overall accuracy"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "sequential sensory integration",
+    "primacy weighting",
+    "recency weighting",
+    "double-primacy",
+    "temporal interruption",
+    "sample weighting profile",
+    "visual estimation task",
+    "evidence accumulation"
+  ],
+  "out_of_scope_note": null
+}

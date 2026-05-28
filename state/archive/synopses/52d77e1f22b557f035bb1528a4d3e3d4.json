@@ -1,0 +1,57 @@
+{
+  "canonical_id": "52d77e1f22b557f035bb1528a4d3e3d4",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T21:12:40+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "efficient coding",
+      "role": "primary_lens",
+      "one_line": "encoding accuracy optimized toward conditional orientation statistics within the specific surround context"
+    },
+    {
+      "name": "Fisher information",
+      "role": "extended",
+      "one_line": "lawful bias-variance-Fisher link used to recover encoding accuracy from behavior"
+    },
+    {
+      "name": "contextual gain control",
+      "role": "context",
+      "one_line": "tilt-illusion-style surround modulation of sensory neuron gain and tuning"
+    }
+  ],
+  "core_question": "Can contextual modulations of sensory encoding be characterized directly from psychophysical behavior in a tilt-illusion task, with minimal decoding assumptions?",
+  "key_assumptions": [
+    "perceptual bias, variance, and Fisher information are lawfully related",
+    "decoding requires only minimal assumptions when this lawful relation is exploited",
+    "encoding accuracy reflects the conditional stimulus statistics of the current context"
+  ],
+  "manipulations": [
+    "surround type: non-oriented filtered noise vs oriented grating",
+    "surround orientation: +30 vs -30 degrees off vertical",
+    "probe orientation estimated via line-rotation report"
+  ],
+  "key_findings": [
+    "with non-oriented surround, encoding accuracy tracked natural-scene orientation statistics",
+    "with oriented surround, encoding accuracy was boosted at the surround orientation",
+    "encoding accuracy was slightly reduced for orientations neighboring the surround"
+  ],
+  "interpretations": [
+    "contextual modulation of sensory encoding implements a form of efficient coding tuned to conditional context statistics",
+    "the bias-variance-Fisher method generalizes to estimating encoding accuracy for other perceptual variables and contexts"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "tilt illusion",
+    "contextual modulation",
+    "sensory encoding accuracy",
+    "Fisher information from behavior",
+    "perceptual bias and variance",
+    "natural scene orientation statistics",
+    "efficient coding",
+    "surround orientation"
+  ],
+  "out_of_scope_note": null
+}
