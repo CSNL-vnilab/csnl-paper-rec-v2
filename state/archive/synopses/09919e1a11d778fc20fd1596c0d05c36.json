@@ -1,0 +1,17 @@
+{
+  "canonical_id": "09919e1a11d778fc20fd1596c0d05c36",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:30:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.0,
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "Precision medicine essay on preclinical model validity for personalized treatment; medical/translational research, not computational neuroscience."
+}

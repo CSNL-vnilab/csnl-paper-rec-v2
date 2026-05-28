@@ -1,0 +1,46 @@
+{
+  "canonical_id": "2618919fe2b1a8fab92532535e513c07",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "canonical cortical microcircuit", "role": "primary_lens", "one_line": "input arrives in layer 4; output and feedback occupy superficial and deep layers"},
+    {"name": "top-down attentional modulation", "role": "primary_lens", "one_line": "feedback signals selectively bias sensory processing across cortical layers"}
+  ],
+  "core_question": "Do bottom-up sensory and top-down attentional signals occupy dissociable cortical layers in human primary visual cortex?",
+  "key_assumptions": [
+    "laminar fMRI resolves activity within distinct cortical layers of V1",
+    "BOLD signal in input layer 4 reflects feedforward sensory drive",
+    "BOLD signal in superficial and deep layers reflects feedback or output processing"
+  ],
+  "manipulations": [
+    "bottom-up sensory drive via oriented gratings",
+    "top-down attentional state during orientation-discrimination task",
+    "cortical depth (layer) as the spatial readout dimension"
+  ],
+  "key_findings": [
+    "bottom-up sensory-evoked responses peak in middle (input) layers of V1",
+    "top-down attention modulation is strongest in superficial and deep layers",
+    "the two signal types occupy dissociable laminar profiles within the same V1 voxels"
+  ],
+  "interpretations": [
+    "feedforward input and feedback attentional modulation are anatomically separable at the laminar scale in human V1",
+    "laminar fMRI can dissociate canonical input vs output/feedback compartments of cortical computation"
+  ],
+  "limitations_noted": [
+    "small sample (8 participants)"
+  ],
+  "connecting_signals": [
+    "laminar fMRI",
+    "cortical layers",
+    "primary visual cortex",
+    "top-down attention",
+    "bottom-up sensory response",
+    "orientation discrimination",
+    "feedforward feedback dissociation",
+    "input layer 4"
+  ],
+  "out_of_scope_note": null
+}
