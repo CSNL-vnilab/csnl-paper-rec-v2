@@ -1,0 +1,17 @@
+{
+  "canonical_id": "35eb3bf9e3387f29dc45a701cf5e4637",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T20:34:28+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.0,
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "Control-systems engineering: distributed fault-tolerant bipartite-output formation control for stochastic nonlinear heterogeneous multi-agent systems with Markovian switching topologies (using adaptive neural networks as universal approximators); systems-and-control theory, not computational neuroscience of the brain."
+}

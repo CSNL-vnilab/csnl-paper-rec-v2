@@ -1,0 +1,17 @@
+{
+  "canonical_id": "30b8dec4bb0c049bcef51256e7ec0020",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:30:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.0,
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "Manufacturing-engineering process optimization for electrohydrodynamic inkjet printing of silver nanoparticle ink on alumina ceramic substrates (sintering densification, COMSOL electric-field-hydrodynamics model); printed-electronics fabrication, not computational neuroscience."
+}

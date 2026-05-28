@@ -1,0 +1,17 @@
+{
+  "canonical_id": "368ced68d1406e875eef22b0e8fb93ad",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:30:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.0,
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "RF/photonics communication engineering: photonics-based simultaneous self-interference cancellation and cooperative-jamming cancellation for joint in-band full-duplex and physical-layer-security wireless communications (Mach-Zehnder-modulator approach at 2.4/5 GHz); telecommunications, not computational neuroscience."
+}

@@ -1,0 +1,58 @@
+{
+  "canonical_id": "2c10deea36dc66f93daed1f07f066e99",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "nonlinear dynamical systems",
+      "role": "primary_lens",
+      "one_line": "neural circuit modeled as nonlinear dynamical system to steer activity"
+    },
+    {
+      "name": "control theory",
+      "role": "primary_lens",
+      "one_line": "control-theoretic design of multi-site stimulation patterns"
+    },
+    {
+      "name": "recurrent network models",
+      "role": "context",
+      "one_line": "RNN circuit model used to demonstrate perturbation-design feasibility"
+    }
+  ],
+  "core_question": "Can a spatiotemporal pattern of multi-site stimulation be designed to steer neural activity and behavior toward a desired target?",
+  "key_assumptions": [
+    "effective perturbation hubs are identifiable from spontaneous activity",
+    "perturbation sites must satisfy both efficacy and selectivity criteria",
+    "circuit dynamics are tractable as a nonlinear dynamical system amenable to control"
+  ],
+  "manipulations": [
+    "choice of perturbation site (hub vs non-hub)",
+    "spatiotemporal pattern of multi-site microstimulation in RNN models"
+  ],
+  "key_findings": [
+    "hubs can be identified from short observations of spontaneous neural activity",
+    "combining dynamical systems, control theory, and data-driven methods yields efficient multi-site stimulation designs",
+    "approach is feasible in recurrent network model demonstrations"
+  ],
+  "interpretations": [
+    "model-based design can replace laborious trial-and-error perturbation selection",
+    "two-step pipeline (hub identification then control-theoretic pattern design) enables targeted causal manipulation at high spatiotemporal precision"
+  ],
+  "limitations_noted": [
+    "feasibility shown only in recurrent network model simulations, not in vivo"
+  ],
+  "connecting_signals": [
+    "causal perturbation design",
+    "multi-site microstimulation",
+    "perturbation hubs",
+    "spontaneous activity",
+    "control theory of neural circuits",
+    "nonlinear dynamical systems",
+    "recurrent network models",
+    "data-driven stimulation design"
+  ],
+  "out_of_scope_note": null
+}

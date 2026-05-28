@@ -1,0 +1,17 @@
+{
+  "canonical_id": "2ef760ed2474dcd409946f920c86dc34",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:30:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.0,
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "Materials chemistry / electrocatalysis (iridium-mediated nanotwinning of Ni3N nanosheets for alkaline hydrogen-oxidation electrocatalysis); inorganic chemistry, not computational neuroscience."
+}

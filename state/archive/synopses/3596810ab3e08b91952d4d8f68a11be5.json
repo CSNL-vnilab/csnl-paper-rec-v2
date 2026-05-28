@@ -1,0 +1,17 @@
+{
+  "canonical_id": "3596810ab3e08b91952d4d8f68a11be5",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.0,
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "Solid-state-battery materials cover article on NASICON sodium-metal all-solid-state electrolyte (Adv. Mater. 16/2026); battery materials science, not computational neuroscience."
+}
