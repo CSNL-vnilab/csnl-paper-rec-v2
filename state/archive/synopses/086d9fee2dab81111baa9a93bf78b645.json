@@ -1,0 +1,47 @@
+{
+  "canonical_id": "086d9fee2dab81111baa9a93bf78b645",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "core-knowledge systems",
+      "role": "primary_lens",
+      "one_line": "innate domain-specific systems for objects, actions, number, space, and social partners"
+    }
+  ],
+  "core_question": "What foundational mental systems underlie human cognition, and how do they shape adult thought?",
+  "key_assumptions": [
+    "cognition rests on a small set of innate, domain-specific representational systems",
+    "these systems are shared across phylogeny and ontogeny",
+    "early-emerging systems persist and constrain adult reasoning"
+  ],
+  "manipulations": [
+    "comparative synthesis across infants, non-human primates, children, and adults",
+    "cross-cultural comparison of cognitive performance"
+  ],
+  "key_findings": [
+    "four core systems represent objects, actions, number, and space",
+    "a candidate fifth system represents social partners",
+    "each system has deep evolutionary and developmental roots",
+    "these systems continue to guide adult mental life"
+  ],
+  "interpretations": [
+    "human cognition is founded on a small set of core knowledge systems",
+    "converging evidence across populations can both characterize and help transcend these systems' limits"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "core knowledge",
+    "object representation",
+    "numerical cognition",
+    "spatial cognition",
+    "social cognition",
+    "infant cognition",
+    "comparative cognition",
+    "domain-specific systems"
+  ],
+  "out_of_scope_note": null
+}

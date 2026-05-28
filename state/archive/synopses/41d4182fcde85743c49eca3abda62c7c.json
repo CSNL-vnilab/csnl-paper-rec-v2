@@ -1,0 +1,54 @@
+{
+  "canonical_id": "41d4182fcde85743c49eca3abda62c7c",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "high-gamma cortical decoding",
+      "role": "primary_lens",
+      "one_line": "Power-spectrogram decoding of ECoG to read out face information from cortex."
+    },
+    {
+      "name": "Haxby invariant/changeable face-processing model",
+      "role": "compared_against",
+      "one_line": "Dominant model assigning invariant face features to ventral and changeable to lateral temporal cortex."
+    }
+  ],
+  "core_question": "Are invariant and changeable aspects of faces represented in anatomically distinct ventral vs lateral temporal cortex, as the dominant model claims?",
+  "key_assumptions": [
+    "Spectral power modulations index local neural population activity relevant to face processing",
+    "Decoding accuracy from ECoG reflects information content of underlying cortex",
+    "Static and dynamic facial expressions tap invariant and changeable face features respectively"
+  ],
+  "manipulations": [
+    "Stimulus type: static vs dynamic facial expressions",
+    "Task-relevant attention vs no attention",
+    "Cortical site: ventral vs lateral temporal cortex",
+    "Hemisphere: left vs right"
+  ],
+  "key_findings": [
+    "Ventral temporal cortex decoded both invariant and changeable face aspects better than lateral temporal cortex",
+    "Face-vs-pattern discrimination relied on 50–150 Hz power; fear-vs-happy used 60–150 Hz and <30 Hz",
+    "Task-relevant attention boosted decoding by >10% across frequencies in ventral but not lateral cortex",
+    "Searchlight peaks were near middle fusiform gyrus, with right-hemisphere superiority"
+  ],
+  "interpretations": [
+    "Results challenge the dominant invariant/changeable anatomical dissociation between ventral and lateral temporal cortex",
+    "Ventral temporal cortex carries integrated face information modulated by attention"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "ECoG face decoding",
+    "high-gamma power",
+    "fusiform gyrus",
+    "invariant vs changeable face features",
+    "facial expression discrimination",
+    "task-relevant attention",
+    "ventral vs lateral temporal cortex",
+    "spatial searchlight decoding"
+  ],
+  "out_of_scope_note": null
+}

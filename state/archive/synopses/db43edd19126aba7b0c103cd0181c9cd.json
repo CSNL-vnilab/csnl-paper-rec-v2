@@ -1,0 +1,50 @@
+{
+  "canonical_id": "db43edd19126aba7b0c103cd0181c9cd",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "binocular fusion",
+      "role": "primary_lens",
+      "one_line": "single cyclopean percept built early from both eyes' inputs"
+    },
+    {
+      "name": "interocular suppression",
+      "role": "compared_against",
+      "one_line": "alternative account where one eye's input is suppressed under disparity"
+    }
+  ],
+  "core_question": "How do the eyes coordinate during reading and is the unified percept of text achieved by fusion or by suppression of one eye's input?",
+  "key_assumptions": [
+    "saccade metrics derive from a unified binocular visual representation",
+    "binocular coordination during reading can be probed with dichoptic word presentation"
+  ],
+  "manipulations": [
+    "dichoptic presentation of target words within normally presented sentence frames",
+    "measurement of fixation disparity (crossed vs uncrossed) during reading"
+  ],
+  "key_findings": [
+    "eyes are often misaligned during reading with ~1 character of fixation disparity on average",
+    "both crossed and uncrossed disparities occur and within-fixation vergence reduces but does not eliminate them",
+    "despite different retinal inputs, readers perceive a single non-diplopic representation of text",
+    "dichoptic target-word experiment indicates early-stage fusion rather than suppression"
+  ],
+  "interpretations": [
+    "binocular fusion (not suppression) operates at an early stage of reading-related visual processing",
+    "saccade targeting in reading is computed from a unified representation combining input from both eyes"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "fixation disparity",
+    "binocular coordination",
+    "dichoptic presentation",
+    "reading eye movements",
+    "vergence during fixation",
+    "cyclopean perception",
+    "saccade target selection"
+  ],
+  "out_of_scope_note": null
+}

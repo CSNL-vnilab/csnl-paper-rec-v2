@@ -1,0 +1,50 @@
+{
+  "canonical_id": "973fd72652b9fae3882603520507bce7",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "natural scene statistics",
+      "role": "primary_lens",
+      "one_line": "direct measurement of statistical regularities in natural environments shapes perceptual theory"
+    },
+    {
+      "name": "efficient coding",
+      "role": "alternative_lens",
+      "one_line": "perceptual systems designed by evolution and experience to match environmental statistics"
+    }
+  ],
+  "core_question": "How can direct measurement of statistical regularities in natural scenes advance our understanding of visual perception?",
+  "key_assumptions": [
+    "perceptual systems shaped by evolution and experience to match task demands",
+    "natural environment statistics constrain optimal perceptual design",
+    "scene statistics are tractably measurable with existing techniques"
+  ],
+  "manipulations": [
+    "types of natural scene statistics measured (over a 20-year span)",
+    "measurement techniques applied to natural scenes"
+  ],
+  "key_findings": [
+    "20 years of natural scene statistics measurements yielded a coherent body of regularities",
+    "multiple distinct kinds of scene statistics can be quantified with existing tools",
+    "scene-statistics findings have generated testable hypotheses, models, and experiments about vision"
+  ],
+  "interpretations": [
+    "natural scene statistics offers a principled route to understanding visual perception",
+    "linking environmental regularities to perceptual mechanism is a productive research program"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "natural scene statistics",
+    "efficient coding",
+    "visual perception",
+    "environmental regularities",
+    "perceptual system design",
+    "scene statistics measurement",
+    "evolution and experience"
+  ],
+  "out_of_scope_note": null
+}
