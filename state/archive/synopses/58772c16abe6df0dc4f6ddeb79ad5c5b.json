@@ -1,0 +1,59 @@
+{
+  "canonical_id": "58772c16abe6df0dc4f6ddeb79ad5c5b",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T21:39:51+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "model-based reinforcement learning",
+      "role": "primary_lens",
+      "one_line": "on-the-fly planning over a learned state-transition model supporting flexible adjustment"
+    },
+    {
+      "name": "model-free reinforcement learning",
+      "role": "compared_against",
+      "one_line": "cached state-action policy contrasted as the less flexible alternative"
+    },
+    {
+      "name": "neural replay",
+      "role": "extended",
+      "one_line": "sequential reactivation of state representations measured by MEG as a planning substrate"
+    }
+  ],
+  "core_question": "Do on-task (online) and off-task (offline) neural replay support the same form of planning or do they support distinct, dissociable decision strategies?",
+  "key_assumptions": [
+    "MEG-decoded sequential state representations index replay",
+    "Model-based vs model-free planning can be dissociated by responses to reward and structural task changes",
+    "Replay events can be detected via lagged cross-correlations between decoded state probabilities"
+  ],
+  "manipulations": [
+    "Changed reward values associated with states mid-experiment",
+    "Instructed swap of state positions to invalidate prior policy",
+    "Interleaved 1-move vs 2-move trials requiring different optimal first moves",
+    "Compared on-task replay following outcomes vs off-task replay during rest"
+  ],
+  "key_findings": [
+    "More flexible subjects (higher index of flexibility) showed more on-task replay coupled with re-planning of encoded trajectories",
+    "Less flexible subjects showed more off-task (rest) replay of previously preferred trajectories",
+    "On-task replay was associated with subsequent policy change at the replayed state",
+    "Off-task replay favored trajectories that had generated larger reward prediction errors"
+  ],
+  "interpretations": [
+    "Online and offline replay both participate in planning but support dissociable strategies — online replay subserves flexible model-based re-planning while offline replay consolidates a less flexible cached policy"
+  ],
+  "limitations_noted": [
+    "Causal role of the two replay modes in behavior remains to be established"
+  ],
+  "connecting_signals": [
+    "online vs offline replay",
+    "model-based planning",
+    "model-free policy",
+    "MEG decoding of state sequences",
+    "decision flexibility",
+    "reward prediction error",
+    "trajectory re-planning"
+  ],
+  "out_of_scope_note": null
+}

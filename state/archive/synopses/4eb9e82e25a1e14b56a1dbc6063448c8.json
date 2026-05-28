@@ -1,0 +1,54 @@
+{
+  "canonical_id": "4eb9e82e25a1e14b56a1dbc6063448c8",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "theory of mind",
+      "role": "primary_lens",
+      "one_line": "children infer mental causes of others' actions to predict behaviour"
+    },
+    {
+      "name": "habit vs goal-directed control",
+      "role": "extended",
+      "one_line": "dual-system distinction between reinforced habits and flexible goal pursuit"
+    },
+    {
+      "name": "reinforcement learning",
+      "role": "context",
+      "one_line": "habits framed as outcomes of long-period reinforcement on action policies"
+    }
+  ],
+  "core_question": "Do children come to understand that other agents can act habitually and thus persist in suboptimal behaviour even when they 'know better'?",
+  "key_assumptions": [
+    "habits and goal-directed behaviour can be dissociated when optimal policy changes without reinforcement",
+    "children's predictions of others' actions index their underlying mentalising model",
+    "habit attribution is a distinct competence from belief/desire reasoning"
+  ],
+  "manipulations": [
+    "child age (roughly 5 to 10 years)",
+    "scenarios where habitual policy diverges from currently optimal action"
+  ],
+  "key_findings": [
+    "all tested children predicted agents would act consistently with their goals",
+    "between ages 5 and 10, children showed increasing understanding that habits can cause persistent suboptimal action"
+  ],
+  "interpretations": [
+    "social reasoning development includes learning that people's actions can be suboptimal despite 'knowing better'",
+    "habit attribution extends ToM beyond belief- and expectation-based accounts of action prediction"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "theory of mind development",
+    "habit attribution",
+    "goal-directed behaviour",
+    "suboptimal action prediction",
+    "reinforcement and habit formation",
+    "children's social reasoning",
+    "dual-system control"
+  ],
+  "out_of_scope_note": null
+}

@@ -1,0 +1,17 @@
+{
+  "canonical_id": "5a17f881cdec67477db3615d55cb2e12",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7-bypass@2026-05-28",
+  "generated_at": "2026-05-28T21:39:02+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.0,
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "Materials engineering: nonlinear optical imaging, precise layer thinning and phase engineering in MoTe2; 2D-material processing, not computational neuroscience."
+}

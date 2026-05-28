@@ -1,0 +1,17 @@
+{
+  "canonical_id": "49ddc82f987fc9b0aee67b2b1fcfd008",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T21:39:41+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.0,
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "Supplied abstract contains only the PNAS journal boilerplate banner (journal description) with no substantive scientific content from the paper itself. Cannot ground any framework, finding, or interpretation from the provided text. Title suggests in-scope content (individualized functional connectivity for psychiatric symptom tracking) but abstract is < 100 useful words after stripping boilerplate, so synopsis cannot be produced without invention."
+}

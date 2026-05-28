@@ -1,0 +1,57 @@
+{
+  "canonical_id": "1e9b95917fbb372bcc7b183ae4dbcf42",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T21:39:31+0900",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "cognitive map",
+      "role": "primary_lens",
+      "one_line": "hippocampal place cells implement a spatial map supporting flexible navigation"
+    },
+    {
+      "name": "place cell coding",
+      "role": "primary_lens",
+      "one_line": "CA1 neurons with location-specific firing represent allocentric position"
+    },
+    {
+      "name": "environmental connectivity representation",
+      "role": "compared_against",
+      "one_line": "hypothesis that the map should encode available transitions between subspaces"
+    }
+  ],
+  "core_question": "Do hippocampal CA1 place cells encode environmental connectivity between subspaces in addition to spatial location?",
+  "key_assumptions": [
+    "flexible navigation relies on a hippocampal cognitive map",
+    "optimal navigation requires tracking both location and available inter-subspace connections",
+    "place-cell firing fields can reveal what the map explicitly represents"
+  ],
+  "manipulations": [
+    "connectivity of saloon-type doors between four geometrically identical boxes (locked one or both directions)",
+    "repetitive geometry across four arranged boxes to probe global vs local coding"
+  ],
+  "key_findings": [
+    "rats behaviourally tracked changes in environmental connectivity",
+    "CA1 place cells did not respond to connectivity changes",
+    "place cells did not represent doorways differently from other locations",
+    "place cells coded space in a global frame with minimal repetitive fields"
+  ],
+  "interpretations": [
+    "CA1 provides a spatial map that does not explicitly include environmental connectivity",
+    "the hippocampal map prioritises global allocentric location over transition structure"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "hippocampal place cells",
+    "CA1",
+    "cognitive map",
+    "environmental connectivity",
+    "global coding",
+    "repetitive geometry",
+    "spatial navigation",
+    "allocentric representation"
+  ],
+  "out_of_scope_note": null
+}
