@@ -1,0 +1,17 @@
+{
+  "canonical_id": "262f1f25a2c45806bfc8b72f3bdd3348",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T21:07:59+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.0,
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "Tissue-clearing protocol and atlas-release paper (BIO-PROTOCOL): adapts iDISCO/uDISCO clearing to rat brains and publishes a 25 um common coordinate atlas with code/data. Pure neuroimaging/preprocessing infrastructure — no perceptual, decision-making, encoding, or computational/theoretical brain-function claim. Per synopsis_prompt rule on neuroimaging/preprocessing tools and pipelines (e.g. fMRIPrep release papers), marked out-of-scope for the lab's theoretical interview queue."
+}

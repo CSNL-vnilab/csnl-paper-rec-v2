@@ -1,0 +1,59 @@
+{
+  "canonical_id": "0eaec71013341de51529b09d3046f07a",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "drift-diffusion",
+      "role": "primary_lens",
+      "one_line": "single-trial LIP population signal as deterministic drift plus stochastic diffusion"
+    },
+    {
+      "name": "bounded evidence accumulation",
+      "role": "extended",
+      "one_line": "noisy evidence integrated to a termination bound by parietal neurons"
+    },
+    {
+      "name": "population coding",
+      "role": "alternative_lens",
+      "one_line": "scalar decision variable read out as weighted sum across LIP neurons"
+    }
+  ],
+  "core_question": "Can a single-trial drift-diffusion decision variable be directly observed in LIP population activity and shown to drive choice and RT variability?",
+  "key_assumptions": [
+    "LIP carries the accumulator signal for motion-direction decisions",
+    "decision variability arises from a stochastic component of evidence accumulation",
+    "a linear weighting of population activity yields the latent decision variable"
+  ],
+  "manipulations": [
+    "simultaneous recording from hundreds of LIP neurons during single decisions",
+    "weighting subsets of neurons by response-field overlap with choice targets"
+  ],
+  "key_findings": [
+    "a scalar derived from weighted LIP population activity behaves as drift plus diffusion on single trials",
+    "this single-trial signal predicts both choice and reaction-time variability",
+    "the decision variable is carried by a small subset of LIP neurons whose response fields overlap the choice targets",
+    "these neurons integrate noisy evidence from direction-selective neurons within LIP itself"
+  ],
+  "interpretations": [
+    "single-trial DDM-like dynamics, long inferred from trial averages, are directly observable in LIP",
+    "parsimonious within-LIP integration architecture would be missed by hypothesis-free state-space analyses"
+  ],
+  "limitations_noted": [
+    "the within-LIP integration architecture is only detectable given a clear prior hypothesis"
+  ],
+  "connecting_signals": [
+    "lateral intraparietal cortex",
+    "drift-diffusion model",
+    "single-trial decision variable",
+    "perceptual decision-making",
+    "evidence accumulation",
+    "choice and reaction time variability",
+    "population decoding",
+    "stochastic diffusion"
+  ],
+  "out_of_scope_note": null
+}

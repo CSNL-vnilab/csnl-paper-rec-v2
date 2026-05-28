@@ -1,0 +1,57 @@
+{
+  "canonical_id": "f18df0547bc452d2435d6d86b5591671",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T21:07:40+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "population coding geometry",
+      "role": "primary_lens",
+      "one_line": "Sensory and noise dimensions occupy orthogonal subspaces of population activity."
+    },
+    {
+      "name": "mixed selectivity",
+      "role": "extended",
+      "one_line": "Sensory, motor, and internal variables encoded in mixed, brain-wide fashion."
+    },
+    {
+      "name": "internal-state modulation",
+      "role": "context",
+      "one_line": "Slow internal variables bias single-trial behavioral routines."
+    }
+  ],
+  "core_question": "What neural circuit mechanisms across the whole brain generate behavioral variability under invariant sensory conditions?",
+  "key_assumptions": [
+    "Single-neuron variability can coexist with robust population-level sensory encoding",
+    "Behavioral variability is decomposable into orthogonal neural dimensions",
+    "Pre-motor activity can encode time-varying internal state"
+  ],
+  "manipulations": [
+    "Moving object size across repeated presentations",
+    "Repetitions of identical visual stimuli to isolate trial-to-trial variability"
+  ],
+  "key_findings": [
+    "Visual stimuli robustly encoded at population level despite variable single-neuron activity",
+    "Noise dimensions of population activity orthogonal to sensory-encoding dimensions",
+    "Two sparse brain-wide pre-motor populations predicted response and turn direction",
+    "Predictive activity preceded stimulus onset by seconds"
+  ],
+  "interpretations": [
+    "Sensory, motor, and internal variables are mixed throughout the brain and require de-mixing at the population level",
+    "Slow internal-state signals may organize flexible behavior routines"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "whole-brain imaging",
+    "larval zebrafish",
+    "behavioral variability",
+    "population dynamics geometry",
+    "orthogonal noise subspace",
+    "mixed selectivity",
+    "pre-motor internal state",
+    "Fourier light field microscopy"
+  ],
+  "out_of_scope_note": null
+}

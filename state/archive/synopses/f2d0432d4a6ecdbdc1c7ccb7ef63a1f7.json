@@ -1,0 +1,50 @@
+{
+  "canonical_id": "f2d0432d4a6ecdbdc1c7ccb7ef63a1f7",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "cognitive map",
+      "role": "primary_lens",
+      "one_line": "spatial representations serve as a scaffold for organising abstract conceptual structure"
+    },
+    {
+      "name": "relational generalisation",
+      "role": "extended",
+      "one_line": "invariance learning extended from physical space to nonspatial feature manifolds via rotation"
+    }
+  ],
+  "core_question": "Does physical space serve as a scaffold that enables rotational generalisation of abstract relational concepts to nonspatial domains?",
+  "key_assumptions": [
+    "concepts can be represented as transition vectors on a 2D manifold",
+    "rotational invariance is a useful test of abstract generalisation",
+    "spatial representations are privileged for relational structure"
+  ],
+  "manipulations": [
+    "stimulus domain (physical space vs nonspatial feature manifold)",
+    "pre-training mapping auditory or visual features to spatial locations",
+    "rotation of transition vectors at test"
+  ],
+  "key_findings": [
+    "humans generalise to rotated exemplars in physical space but not on nonspatial feature manifolds",
+    "pre-training feature-to-location mappings enables rotational generalisation in nonspatial domains"
+  ],
+  "interpretations": [
+    "space functions as a scaffold for learning abstract conceptual invariances"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "rotational generalisation",
+    "spatial scaffold",
+    "cognitive map",
+    "abstract concepts",
+    "relational learning",
+    "feature manifold",
+    "invariance learning",
+    "transition vectors"
+  ],
+  "out_of_scope_note": null
+}

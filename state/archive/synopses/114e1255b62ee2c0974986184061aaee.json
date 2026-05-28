@@ -1,0 +1,17 @@
+{
+  "canonical_id": "114e1255b62ee2c0974986184061aaee",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T21:07:52+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.0,
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "Figshare dataset deposit, not a research article. The supplied abstract is a metadata banner (title, author list, one-line dataset description 'Behavioral dataset of rats performing a two-armed bandit task', and a pointer to the bioRxiv manuscript). Useful word count < 100 after stripping boilerplate. No grounded findings, manipulations, or theoretical framework can be extracted from this record; the actual manuscript at biorxiv.org/content/10.1101/461129v3 would need to be synopsized separately if it appears elsewhere in the corpus."
+}

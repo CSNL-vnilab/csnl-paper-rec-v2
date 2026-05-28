@@ -1,0 +1,64 @@
+{
+  "canonical_id": "ef5d556982bfa2c8d7c69cb24c0d8b9b",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "drift-diffusion",
+      "role": "primary_lens",
+      "one_line": "single-trial scalar combining deterministic drift and stochastic diffusion explains choice and RT variability."
+    },
+    {
+      "name": "bounded evidence accumulation",
+      "role": "extended",
+      "one_line": "rise-to-bound accumulation extended from trial-averaged to single-decision population readout."
+    },
+    {
+      "name": "population coding",
+      "role": "alternative_lens",
+      "one_line": "weighted sum of LIP population activity yields the decision-relevant scalar."
+    },
+    {
+      "name": "state-space analysis",
+      "role": "compared_against",
+      "one_line": "unstructured state-space methods would miss the parsimonious target- vs motion-tuned subpopulation architecture."
+    }
+  ],
+  "core_question": "Can a single-trial drift-diffusion signal be observed directly in parietal population activity during perceptual decisions?",
+  "key_assumptions": [
+    "noisy evidence is integrated over time to a termination bound",
+    "stochastic component of accumulation drives choice and RT variability",
+    "LIP population activity carries the decision variable"
+  ],
+  "manipulations": [
+    "direction of random dot motion stimuli",
+    "single-decision vs trial-averaged readout of LIP population"
+  ],
+  "key_findings": [
+    "a single scalar from weighted LIP population activity tracks drift plus diffusion on individual trials",
+    "this signal approximates the quantity responsible for variability in choice and reaction time",
+    "neurons with response fields overlapping the choice targets represent the integral of evidence",
+    "direction-selective neurons with response fields overlapping the motion stimulus represent the integrand"
+  ],
+  "interpretations": [
+    "single-trial drift-diffusion is directly observable in LIP population activity",
+    "a parsimonious two-subpopulation architecture (integrand and integral) implements the decision and would evade hypothesis-free state-space analyses"
+  ],
+  "limitations_noted": [
+    "parsimonious architecture is undetectable by state-space analyses without a prior hypothesis"
+  ],
+  "connecting_signals": [
+    "drift-diffusion",
+    "lateral intraparietal cortex",
+    "single-trial decision variable",
+    "evidence accumulation",
+    "random dot motion",
+    "population readout",
+    "choice and reaction time variability",
+    "stochastic diffusion"
+  ],
+  "out_of_scope_note": null
+}

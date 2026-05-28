@@ -1,0 +1,59 @@
+{
+  "canonical_id": "f47ee9a4637d7633292f7e5e61980675",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "in-context learning",
+      "role": "primary_lens",
+      "one_line": "rule generalisation from sequence context without weight updates"
+    },
+    {
+      "name": "in-weights learning",
+      "role": "alternative_lens",
+      "one_line": "memory-based recall of past training examples"
+    },
+    {
+      "name": "transformer networks as cognitive model",
+      "role": "compared_against",
+      "one_line": "transformers used as benchmark learner to compare with humans"
+    }
+  ],
+  "core_question": "Do humans and transformer networks learn rules from sequences in the same way under varied training distributions?",
+  "key_assumptions": [
+    "in-context and in-weights learning are dissociable strategies",
+    "training-distribution statistics (diversity, redundancy) shape which strategy dominates",
+    "transformers are a meaningful comparison class for human sequence learning"
+  ],
+  "manipulations": [
+    "diversity of training examples",
+    "redundancy of training examples",
+    "composite (balanced) vs. pure distributions",
+    "static vs. dynamic curriculum schedules"
+  ],
+  "key_findings": [
+    "humans and transformers respond very similarly across training distributions",
+    "redundancy drives in-weights learning; diversity drives in-context learning",
+    "composite distributions let both strategies operate in tandem",
+    "humans benefit from dynamic curricula emphasising diverse examples early; transformers do not"
+  ],
+  "interpretations": [
+    "shared data-distributional principles govern learning in both humans and transformers",
+    "curriculum sensitivity is a human-specific divergence from transformer learning"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "in-context learning",
+    "in-weights learning",
+    "rule learning",
+    "sequence learning",
+    "training diversity vs redundancy",
+    "curriculum learning",
+    "human-transformer alignment",
+    "generalisation"
+  ],
+  "out_of_scope_note": null
+}
