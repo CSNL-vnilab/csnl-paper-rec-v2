@@ -1,0 +1,44 @@
+{
+  "canonical_id": "30e169faf0cab463329dac9bb053bc57",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "drift-diffusion", "role": "primary_lens", "one_line": "evidence integration with arousal-gated thresholds and decision boundaries"},
+    {"name": "neuromodulatory gain control", "role": "extended", "one_line": "locus coeruleus and basal forebrain projections set global decision state"},
+    {"name": "signal-detection theory", "role": "context", "one_line": "perceptual choice bias decomposed from sensitivity"}
+  ],
+  "core_question": "Does ascending brainstem arousal dynamically modulate perceptual decision biases trial-to-trial rather than this variability being mere noise?",
+  "key_assumptions": [
+    "pupil diameter indexes global brainstem arousal state",
+    "tonic and phasic pupil components reflect dissociable neuromodulatory signals",
+    "evidence integration can be captured by a drift-diffusion process"
+  ],
+  "manipulations": [
+    "repeated presentations of the same perceptual evidence",
+    "measurement of tonic vs phasic pupil epochs around evidence onset"
+  ],
+  "key_findings": [
+    "tonic pupil predicts trial-to-trial direction and magnitude of decision bias",
+    "phasic pupil after evidence onset predicts subsequent choice variability",
+    "choice variability shifts systematically across conditions consistent with pupil-bias coupling"
+  ],
+  "interpretations": [
+    "part of decision variability reflects state-dependent brainstem arousal modulation, not noise",
+    "arousal dynamically gates evidence integration thresholds and decision boundaries"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "pupil-linked arousal",
+    "decision bias",
+    "drift-diffusion model",
+    "locus coeruleus",
+    "basal forebrain cholinergic",
+    "tonic vs phasic pupil",
+    "choice variability",
+    "evidence integration"
+  ],
+  "out_of_scope_note": null
+}

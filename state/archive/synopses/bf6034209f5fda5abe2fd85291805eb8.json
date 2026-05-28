@@ -1,0 +1,41 @@
+{
+  "canonical_id": "bf6034209f5fda5abe2fd85291805eb8",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "binocular rivalry / perceptual competition", "role": "primary_lens", "one_line": "brief mixed-image presentations induce competition between simultaneously presented categories"},
+    {"name": "deep neural network as ventral-stream model", "role": "compared_against", "one_line": "DNN softmax outputs treated as a candidate model of human perceptual choice"}
+  ],
+  "core_question": "Do DNN softmax predictions reproduce human perceptual dominance patterns for briefly presented mixed images?",
+  "key_assumptions": [
+    "brief mixed-image presentation reveals which input wins perceptual competition",
+    "DNN softmax over categories is a reasonable proxy for ventral-stream readout"
+  ],
+  "manipulations": [
+    "image category mixtures (e.g. faces vs non-faces)",
+    "low-level image properties such as contrast"
+  ],
+  "key_findings": [
+    "humans show category-level dominance (faces dominate non-faces)",
+    "high-contrast images dominate low-contrast counterparts in human perception",
+    "DNN softmax responses only partially capture these human dominance patterns"
+  ],
+  "interpretations": [
+    "human-DNN divergences pinpoint visual decision-making dimensions current ventral-stream DNNs miss"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "perceptual dominance",
+    "brief presentation",
+    "mixed images",
+    "binocular rivalry analog",
+    "deep neural network softmax",
+    "ventral stream model",
+    "face vs non-face competition",
+    "contrast dominance"
+  ],
+  "out_of_scope_note": null
+}

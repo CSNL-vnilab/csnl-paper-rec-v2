@@ -1,0 +1,38 @@
+{
+  "canonical_id": "dc8ccdfae9c587c4221198dd7e010163",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "inattentional blindness", "role": "primary_lens", "one_line": "salient unexpected events go unseen when attention is engaged elsewhere"},
+    {"name": "selective attention", "role": "context", "one_line": "task-focused attention gates which events reach awareness"}
+  ],
+  "core_question": "How do selective attention and inattentional blindness disrupt eyewitness awareness and memory for crimes and accidents?",
+  "key_assumptions": [
+    "attention is a limited resource allocated to a primary task",
+    "events that escape attention fail to enter durable memory"
+  ],
+  "manipulations": [
+    "observers engaged in a competing task vs. attending to the criminal scene"
+  ],
+  "key_findings": [
+    "task-focused observers often miss salient unexpected events (crime blindness)",
+    "memory for unattended events is correspondingly impaired"
+  ],
+  "interpretations": [
+    "legal procedures assuming comprehensive observation are unreliable when observers were not attending to the scene"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "inattentional blindness",
+    "crime blindness",
+    "eyewitness memory",
+    "selective attention",
+    "attention capture",
+    "unexpected event detection",
+    "eyewitness reliability"
+  ],
+  "out_of_scope_note": null
+}
