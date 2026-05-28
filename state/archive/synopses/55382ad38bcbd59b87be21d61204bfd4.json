@@ -1,0 +1,17 @@
+{
+  "canonical_id": "55382ad38bcbd59b87be21d61204bfd4",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T19:47:36+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 0.0,
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": [],
+  "out_of_scope_note": "Pure ML hardware-acceleration paper (self-supervised quantization of pre-trained DNNs to fixed-point for multiplier-less embedded inference); no biological neural content."
+}

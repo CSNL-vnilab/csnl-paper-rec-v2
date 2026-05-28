@@ -1,0 +1,42 @@
+{
+  "canonical_id": "47f6374150c8dcb4379d8ee1bac9c56b",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "low-dimensional shared coding", "role": "primary_lens", "one_line": "Few orthogonal perceptual axes carry arousal across sensory modalities."},
+    {"name": "cross-modal correspondence", "role": "context", "one_line": "Stimulus features in one modality map systematically onto another."}
+  ],
+  "core_question": "Do emotional-arousal expressions across voice, face, script, and music share a common low-dimensional perceptual code?",
+  "key_assumptions": [
+    "Arousal can be read out from abstract stimulus form, not only content",
+    "Perceptual dimensions are approximately orthogonal across modalities"
+  ],
+  "manipulations": [
+    "Stimulus modality (voice, face, script, music)",
+    "Cross-modal pairing of stimuli for matching judgments",
+    "Perceptual feature axes: spikiness, smoothness, periodicity"
+  ],
+  "key_findings": [
+    "Cross-modal arousal associations are stable across stimulus pairs and across subjects",
+    "Spikiness, smoothness, and periodicity account for most of the cross-modal correspondences"
+  ],
+  "interpretations": [
+    "A shared low-dimensional coding scheme for arousal survives modality crossings",
+    "Intuitive links between expressive form and emotional meaning are systematic, not idiosyncratic"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "cross-modal correspondence",
+    "emotional arousal",
+    "spikiness",
+    "smoothness",
+    "periodicity",
+    "multi-sensory coding",
+    "shape-sound symbolism",
+    "low-dimensional perceptual code"
+  ],
+  "out_of_scope_note": null
+}
