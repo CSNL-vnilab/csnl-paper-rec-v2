@@ -1,0 +1,56 @@
+{
+  "canonical_id": "25d07dbe2a80b52ac7525633bbcba345",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T00:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {
+      "name": "categorical perception",
+      "role": "primary_lens",
+      "one_line": "Cardinal axes act as perceptual categories that bias near-cardinal orientations away from them."
+    },
+    {
+      "name": "signal-detection theory",
+      "role": "alternative_lens",
+      "one_line": "Visibility manipulation via duration and masking frames orientation readout under varying sensory noise."
+    },
+    {
+      "name": "efficient coding",
+      "role": "context",
+      "one_line": "Greater sensitivity near cardinals motivates anisotropic orientation representation in the visual system."
+    }
+  ],
+  "core_question": "How does stimulus visibility modulate the illusory exaggeration of small deviations from cardinal orientations?",
+  "key_assumptions": [
+    "Orientation perception is anisotropic with privileged cardinal axes",
+    "Visibility can be controlled parametrically via stimulus duration and masking",
+    "Reproduction responses reflect the perceptual estimate of orientation"
+  ],
+  "manipulations": [
+    "Stimulus visibility level (duration and masking)",
+    "Gabor orientation relative to cardinal axes"
+  ],
+  "key_findings": [
+    "Observers reproduced orientations of very brief, low-visibility stimuli quite accurately",
+    "Illusory deviation from cardinals followed a non-monotonic pattern across visibility",
+    "Deviation magnitude was maximal at intermediate visibility, smaller at lowest and highest"
+  ],
+  "interpretations": [
+    "Low-visibility orientation processing is noisier yet paradoxically more faithful to the physical input",
+    "Categorical processing of sensory information depends on perceptual awareness"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "oblique illusion",
+    "cardinal axes anisotropy",
+    "orientation reproduction",
+    "visibility manipulation",
+    "masking and duration",
+    "categorical perception",
+    "perceptual awareness",
+    "non-monotonic sensory integration"
+  ],
+  "out_of_scope_note": null
+}
