@@ -1,0 +1,41 @@
+{
+  "canonical_id": "7f66f419c21f8f40ea56cd38aed269fd",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:00:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "neurovascular coupling", "role": "primary_lens", "one_line": "cortical hemodynamic response indexes neurostimulation-evoked activation"}
+  ],
+  "core_question": "How consistently does combined tDCS-fNIRS reveal cortical hemodynamic responses to neurostimulation across studies?",
+  "key_assumptions": [
+    "oxygenated hemoglobin tracks underlying neural activation",
+    "anodal tDCS increases excitability in the stimulated region"
+  ],
+  "manipulations": [
+    "tDCS montage",
+    "current intensity",
+    "fNIRS sampling parameters"
+  ],
+  "key_findings": [
+    "anodal tDCS produced a small but consistent increase in oxygenated hemoglobin at the stimulated region",
+    "study-design factors explained most of the between-study heterogeneity"
+  ],
+  "interpretations": [
+    "tDCS-fNIRS is a maturing biomarker for tracking online neurostimulation effects"
+  ],
+  "limitations_noted": [
+    "heterogeneity across montage, current intensity, and fNIRS sampling"
+  ],
+  "connecting_signals": [
+    "transcranial direct-current stimulation",
+    "functional near-infrared spectroscopy",
+    "oxygenated hemoglobin",
+    "cortical hemodynamic response",
+    "anodal tDCS",
+    "neurostimulation biomarker",
+    "systematic review"
+  ],
+  "out_of_scope_note": null
+}

@@ -1,0 +1,41 @@
+{
+  "canonical_id": "697a0784908884c31872b64492da678c",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:30:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "membrane polarization", "role": "primary_lens", "one_line": "tDCS modulates neuronal membrane potential to alter cortical excitability."},
+    {"name": "dopaminergic neuromodulation", "role": "context", "one_line": "Prior cathodal tDCS work linked to striatal extracellular dopamine increases."}
+  ],
+  "core_question": "How does anodal versus cathodal transcranial direct current stimulation alter single-unit firing in the rat primary motor cortex?",
+  "key_assumptions": [
+    "tDCS polarity shifts neuronal membrane potential",
+    "Extracellular single-unit firing rate indexes cortical excitability",
+    "Anesthetized rat M1 is a valid preparation for tDCS effects"
+  ],
+  "manipulations": [
+    "tDCS polarity (anodal vs cathodal)",
+    "Stimulation period vs baseline"
+  ],
+  "key_findings": [
+    "Both anodal and cathodal tDCS increased spike firing rate in M1",
+    "Cathodal tDCS produced a larger and longer-lasting firing increase than anodal"
+  ],
+  "interpretations": [
+    "Cathodal tDCS enhances cortical neuronal excitability at the single-unit level",
+    "tDCS leaves an immediate electrophysiological signature in M1 firing"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "transcranial direct current stimulation",
+    "rat primary motor cortex",
+    "single-unit recording",
+    "cathodal vs anodal polarity",
+    "cortical excitability",
+    "spike firing rate modulation",
+    "neuromodulation"
+  ],
+  "out_of_scope_note": null
+}

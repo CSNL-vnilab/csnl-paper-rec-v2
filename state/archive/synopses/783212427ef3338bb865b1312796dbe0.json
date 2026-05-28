@@ -1,0 +1,39 @@
+{
+  "canonical_id": "783212427ef3338bb865b1312796dbe0",
+  "synopsis_version": "v1.2026-05-28",
+  "generator": "opus-4-7@2026-05-28",
+  "generated_at": "2026-05-28T15:30:00+09:00",
+  "review_status": "auto_unreviewed",
+  "abstract_coverage": 1.0,
+  "frameworks": [
+    {"name": "large-scale cortical network switching", "role": "primary_lens", "one_line": "blinks index transitions between dorsal-attention and default-mode networks"},
+    {"name": "attentional refresh", "role": "extended", "one_line": "blinks trigger a transient boost in visual attention deployment"}
+  ],
+  "core_question": "Do spontaneous eye blinks produce measurable perceptual consequences that justify their high frequency?",
+  "key_assumptions": [
+    "spontaneous blinks exceed what is required for corneal tear-film maintenance",
+    "blinks can index cortical network state changes",
+    "post-blink intervals can be precisely timed relative to stimulus onset"
+  ],
+  "manipulations": [
+    "interval between spontaneous blink and visual target onset",
+    "visual discrimination task at varying post-blink delays"
+  ],
+  "key_findings": [
+    "discrimination performance was selectively enhanced for ~200 ms following a spontaneous blink"
+  ],
+  "interpretations": [
+    "spontaneous blinks trigger an attentional refresh that transiently boosts visual processing"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "spontaneous eye blinks",
+    "post-blink visual processing",
+    "attentional refresh",
+    "dorsal attention network",
+    "default-mode network",
+    "visual discrimination performance",
+    "cortical network switching"
+  ],
+  "out_of_scope_note": null
+}
