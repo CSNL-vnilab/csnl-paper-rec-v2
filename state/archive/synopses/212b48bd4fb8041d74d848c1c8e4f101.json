@@ -1,8 +1,8 @@
 {
-  "canonical_id": "6c5cecdb083aed7571e1b495d4c7a30d",
+  "canonical_id": "212b48bd4fb8041d74d848c1c8e4f101",
   "synopsis_version": "v1.2026-05-28",
   "generator": "opus-4-7@2026-05-28",
-  "generated_at": "2026-05-28T19:09:15+0900",
+  "generated_at": "2026-05-28T00:00:00+09:00",
   "review_status": "auto_unreviewed",
   "abstract_coverage": 0.0,
   "frameworks": [],
@@ -13,5 +13,5 @@
   "interpretations": [],
   "limitations_noted": [],
   "connecting_signals": [],
-  "out_of_scope_note": "NLP / LLM finetuning for emotion-change reasoning in Chinese multi-turn dialogue (QLoRA); not computational/systems neuroscience."
+  "out_of_scope_note": "RETRACTED paper — direct MRI neuronal imaging method withdrawn from publication. Should not be surfaced as a recommendation."
 }

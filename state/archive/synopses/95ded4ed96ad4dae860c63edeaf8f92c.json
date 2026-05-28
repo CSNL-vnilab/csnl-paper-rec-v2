@@ -5,37 +5,39 @@
   "generated_at": "2026-05-28T00:00:00+09:00",
   "review_status": "auto_unreviewed",
   "abstract_coverage": 1.0,
-  "synopsis": {
-    "frameworks": [
-      {"name": "simultaneous vs sequential presentation", "role": "primary_lens", "one_line": "Comparing concurrent versus serial stimulus exposure for memorization in VR."}
-    ],
-    "core_question": "Does concurrent versus sequential VR presentation of constellation drawings and labels affect memorization?",
-    "key_assumptions": [
-      "memorization can be probed by partial-cue recall (missing labels or drawings)",
-      "within-subjects design controls individual memory differences"
-    ],
-    "manipulations": [
-      "presentation mode: all 14 constellations at once vs one by one",
-      "test cue type: half labels removed vs half drawings removed"
-    ],
-    "key_findings": [
-      "simultaneous presentation produced better retention than sequential",
-      "both presentation modes reached usable accuracy"
-    ],
-    "interpretations": [
-      "stimulus concurrence benefits constellation memorization in VR"
-    ],
-    "limitations_noted": [
-      "exploratory study"
-    ],
-    "connecting_signals": [
-      "virtual reality memorization",
-      "simultaneous vs sequential presentation",
-      "constellation learning",
-      "stimulus concurrence",
-      "within-subjects retention test",
-      "partial-cue recall"
-    ],
-    "out_of_scope_note": "VR educational memorization study; HCI/learning-design focus, not core computational neuroscience but adjacent to memory/encoding paradigms."
-  }
+  "frameworks": [
+    {
+      "name": "simultaneous vs sequential presentation",
+      "role": "primary_lens",
+      "one_line": "Comparing concurrent versus serial stimulus exposure for memorization in VR."
+    }
+  ],
+  "core_question": "Does concurrent versus sequential VR presentation of constellation drawings and labels affect memorization?",
+  "key_assumptions": [
+    "memorization can be probed by partial-cue recall (missing labels or drawings)",
+    "within-subjects design controls individual memory differences"
+  ],
+  "manipulations": [
+    "presentation mode: all 14 constellations at once vs one by one",
+    "test cue type: half labels removed vs half drawings removed"
+  ],
+  "key_findings": [
+    "simultaneous presentation produced better retention than sequential",
+    "both presentation modes reached usable accuracy"
+  ],
+  "interpretations": [
+    "stimulus concurrence benefits constellation memorization in VR"
+  ],
+  "limitations_noted": [
+    "exploratory study"
+  ],
+  "connecting_signals": [
+    "virtual reality memorization",
+    "simultaneous vs sequential presentation",
+    "constellation learning",
+    "stimulus concurrence",
+    "within-subjects retention test",
+    "partial-cue recall"
+  ],
+  "out_of_scope_note": "VR educational memorization study; HCI/learning-design focus, not core computational neuroscience but adjacent to memory/encoding paradigms."
 }
