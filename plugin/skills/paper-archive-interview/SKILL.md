@@ -36,19 +36,40 @@ operator periodically refreshes:
    `csnl_research.projects` text changes substantially. It is NOT a
    per-session or per-batch operation.
 
-6. **P21 — per-paper synopsis layer** (added 2026-05-28): every paper in the
-   classics corpus has a structured synopsis stored in
-   `archive_paper_synopses` (frameworks, core_question, key_findings,
-   interpretations, connecting_signals, limitations_noted, abstract_coverage).
-   `pick_next.py` LEFT JOINs it onto each emitted paper as the nested
-   `paper.synopsis` object. The Stage 2 Block 2 generator uses this object
-   as the primary source for the "what THIS paper does" slot when present;
-   the abstract is the fallback when `paper.synopsis is None`.
+6. **P21/P22c — per-paper synopsis layer** (added 2026-05-28, extended
+   2026-05-29): every abstract-eligible paper in the archive corpus has a
+   structured synopsis stored in `archive_paper_synopses` (frameworks,
+   core_question, key_findings, interpretations, connecting_signals,
+   limitations_noted, abstract_coverage). `pick_next.py` LEFT JOINs it
+   onto each emitted paper as the nested `paper.synopsis` object. The
+   Stage 2 Block 2 generator uses this object as the primary source for
+   the "what THIS paper does" slot when present; the abstract is the
+   fallback when `paper.synopsis is None`.
+
+   Coverage state (as of P22c completion, 2026-05-29): 2063 rows total —
+   ~1324 in-scope synopses (CORE comp-neuro frameworks: efficient coding,
+   Bayesian observer, RL/RPE, evidence accumulation, etc.) + ~739
+   out-of-scope rows.
 
    Out-of-scope papers (those with `archive_paper_synopses.out_of_scope_note
-   IS NOT NULL` — ~122 papers covering clinical surgery, battery materials,
-   climate science, etc.) are auto-excluded from the candidate pool by
-   `pick_next.py`. The researcher never sees them, saving turns.
+   IS NOT NULL` — ~739 papers covering clinical surgery, battery materials,
+   2D-materials/photonics, climate, AI policy, philosophy of consciousness
+   commentary, dataset deposit stubs, etc.) are auto-excluded from the
+   candidate pool by `pick_next.py`. The researcher never sees them,
+   saving turns. Two generator tags appear in the table: `opus-4-7@<date>`
+   (LLM-judged, rich content for in-scope) and `python-prefilter@<date>` /
+   `opus-4-7-bypass@<date>` (operator-templated, used only when the OOS
+   call was unambiguous — always carry a non-null `out_of_scope_note`).
+
+   **Scope-adjacent in-scope synopses**: some synopses are genuinely
+   in-scope by computational-neuroscience criteria but engage
+   frameworks NOT in the lab's CURRENT research scope (theory of mind,
+   higher-order theories of consciousness, computational psychiatry,
+   neuroeconomic addiction). Per the operator's design, these are kept
+   in-scope at the synopsis stage and deprioritized later via per-researcher
+   fingerprint matching. If you find yourself unable to ground Block 2's
+   slot (iii) connection clause to ANY confirmed project, prefer Block 3
+   (uncertainty branch) over inventing a forced connection.
 
    The synopsis is content-only. The researcher's response history in
    `archive_responses` (read / to_read / not_interested / skipped) is a
@@ -535,8 +556,9 @@ Loop until `pick_next.py` returns `done:true`:
    #### P21 — Use the synopsis (when present) as the primary source for slot (ii)
 
    The queue row may carry a non-null `paper.synopsis` object (added 2026-05-28
-   from `archive_paper_synopses`, populated for ~1083 in-scope papers in the
-   classics corpus). It contains paper-derived structured content that you
+   from `archive_paper_synopses`, populated for ~1324 in-scope papers across
+   the classics + cwll_rec_log + pi_network corpus after P22c). It contains
+   paper-derived structured content that you
    should treat as **the primary source for slot (ii)** — the "what THIS paper
    actually does" sentence — instead of mining the raw abstract.
 

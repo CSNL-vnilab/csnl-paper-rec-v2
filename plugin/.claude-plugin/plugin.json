@@ -1,6 +1,6 @@
 {
   "name": "csnl-paper-archive-interview",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "Per-researcher interactive interview over the CSNL paper archive. Verifies the researcher's profile, walks a pre-computed top-N queue (recent ≤5y / mid 5–10y / classic >10y), records one MCQ choice per paper, runs a meta-review every 10 answers, and pushes everything to Postgres (csnl_paper_rec.archive_*).",
   "author": {
     "name": "CSNL Lab",

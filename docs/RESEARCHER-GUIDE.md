@@ -24,7 +24,7 @@
 
 #### 기존 사용자 — 새 버전으로 업데이트
 
-`/plugin list` 에서 보이는 버전이 현재 (`0.5.0`) 보다 낮으면 다음 3 줄로
+`/plugin list` 에서 보이는 버전이 현재 (`0.5.1`) 보다 낮으면 다음 3 줄로
 갱신하세요. **DB 응답 기록 (`archive_responses`) 은 절대 영향을 받지
 않습니다** — 본인이 이전에 매긴 read / to_read / not_interested 라벨이
 그대로 보존되고, 큐는 응답하지 않은 paper 부터 이어갑니다.
@@ -35,18 +35,29 @@
 /plugin install csnl-paper-archive-interview@csnl-marketplace
 ```
 
-업데이트 후 `/plugin list` 로 `csnl-paper-archive-interview@0.5.0` 확인 →
+업데이트 후 `/plugin list` 로 `csnl-paper-archive-interview@0.5.1` 확인 →
 인터뷰 재개 (`/csnl-paper-archive-interview:paper-interview <본인 init>`).
 
-**0.4.x → 0.5.0 변경 요약** (자세한 내역은 본 repo `CLAUDE.md` 의 P21 / P22
+**0.5.0 → 0.5.1 변경 요약** (자세한 내역은 본 repo `CLAUDE.md` 의 P22c
 entry):
+- **P22c**: 시놉시스 corpus 가 1,205 → 2,063 편으로 확장되었습니다 (in-scope
+  1,324 + out-of-scope 739; out-of-scope 는 인터뷰 큐에서 자동 제외).
+  cwll_rec_log + pi_network + classics 통합 풀에서 abstract 가 있는 모든
+  논문을 커버하므로 Stage 2 한국어 추천 사유의 grounding 적용 비율이
+  사실상 100% 에 근접합니다.
+- **Block 2 가이드 강화**: lab CURRENT scope (efficient coding / Bayesian
+  observer / RL / evidence accumulation) 가 아닌 scope-adjacent (Theory of
+  Mind / Higher-order consciousness / 컴퓨테이셔널 정신의학 / 신경경제학)
+  논문이 큐에 surface 되었을 때, 본인 프로젝트와 명시적 연결이 불가능하면
+  강제로 Block 2 를 생성하지 않고 Block 3 (uncertainty branch) 로 분기 —
+  거짓 연결 차단.
+
+**0.4.x → 0.5.0 변경 요약** (이전 release):
 - **P21**: 1,205 편의 framework-agnostic 시놉시스가 DB 에 적재되어,
   Stage 2 의 "왜 이 paper 인가" 한국어 추천 사유가 본 paper 의 핵심 질문 +
   실제 발견 + 사용 framework 와 본인 프로젝트의 매칭으로 grounding 됩니다.
-  abstract 만 보고 추론하던 이전 버전 대비 정확도 ↑, 환각 ↓.
-- **P22**: 4번 옵션 "더 자세히 소개해줘" 가 제거되었습니다. 3 지선다 (저장
-  / 관련 없음 / 이미 읽음) 로 단순화 — P21 synopsis 가 Block 2 안에 본문
-  인용을 이미 포함하므로 별도 deep-dive 가 필요 없어졌습니다.
+- **P22**: 4번 옵션 "더 자세히 소개해줘" 가 제거되어 3 지선다 (저장 /
+  관련 없음 / 이미 읽음) 로 단순화.
 
 기존 응답 분포는 `python3 ~/.claude/plugins/cache/csnl-marketplace/csnl-paper-archive-interview/*/scripts/doctor.py --init <본인 init>` 가 그대로 출력합니다.
 
