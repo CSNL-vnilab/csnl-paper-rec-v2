@@ -36,5 +36,12 @@
   "synopsis_version": "v1.2026-05-27",
   "generator": "opus-4-7@2026-05-27",
   "generated_at": "2026-05-27T22:10:34+09:00",
-  "review_status": "auto_unreviewed"
+  "review_status": "auto_unreviewed",
+  "frameworks": [],
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": []
 }

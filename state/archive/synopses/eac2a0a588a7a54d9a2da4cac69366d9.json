@@ -8,12 +8,7 @@
   "key_findings": [],
   "interpretations": [],
   "limitations_noted": [],
-  "connecting_signals": [
-    "orthogonal representations",
-    "context-dependent task",
-    "gating theory",
-    "neural networks"
-  ],
+  "connecting_signals": [],
   "out_of_scope_note": "Corrigendum / erratum for Flesch et al. 2022 Neuron — labeling error correction, not a research paper.",
   "generator": "opus-4-7@2026-05-27",
   "review_status": "auto_unreviewed",

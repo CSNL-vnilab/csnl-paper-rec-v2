@@ -5,42 +5,52 @@
   "generated_at": "2026-05-28T15:30:00+09:00",
   "review_status": "auto_unreviewed",
   "abstract_coverage": 1.0,
-  "synopsis": {
-    "frameworks": [
-      {"name": "shared spatial topology of peripheral vision", "role": "primary_lens", "one_line": "single underlying visual-field map governs multiple peripheral tasks"},
-      {"name": "crowding", "role": "context", "one_line": "deleterious effect of clutter on peripheral object recognition"},
-      {"name": "principal-component analysis", "role": "extended", "one_line": "used to isolate shared inter-position variance across tasks"}
-    ],
-    "core_question": "Do crowding, saccadic precision, and spatial localization share a common topology across the visual field?",
-    "key_assumptions": [
-      "task thresholds at matched eccentric locations are comparable across tasks",
-      "inter-position variance reflects underlying spatial map structure",
-      "independent task-specific noise would yield uncorrelated topologies"
-    ],
-    "manipulations": [
-      "visual-field position (eccentric locations) within observer",
-      "task type (letter crowding, saccadic landing, spatial localization)"
-    ],
-    "key_findings": [
-      "the three task thresholds co-varied across visual-field positions within each observer",
-      "one dominant PCA component captured ~75% of inter-position variance",
-      "this dominant component was shared across all three tasks"
-    ],
-    "interpretations": [
-      "peripheral crowding, saccadic precision, and spatial localization are linked by a common underlying spatial topology",
-      "task variations are not driven by independent task-specific noise sources"
-    ],
-    "limitations_noted": [],
-    "connecting_signals": [
-      "peripheral vision",
-      "crowding",
-      "saccadic precision",
-      "spatial localization",
-      "visual-field topology",
-      "eccentricity",
-      "upper vs lower visual field",
-      "inter-task correlation"
-    ],
-    "out_of_scope_note": null
-  }
+  "frameworks": [
+    {
+      "name": "shared spatial topology of peripheral vision",
+      "role": "primary_lens",
+      "one_line": "single underlying visual-field map governs multiple peripheral tasks"
+    },
+    {
+      "name": "crowding",
+      "role": "context",
+      "one_line": "deleterious effect of clutter on peripheral object recognition"
+    },
+    {
+      "name": "principal-component analysis",
+      "role": "extended",
+      "one_line": "used to isolate shared inter-position variance across tasks"
+    }
+  ],
+  "core_question": "Do crowding, saccadic precision, and spatial localization share a common topology across the visual field?",
+  "key_assumptions": [
+    "task thresholds at matched eccentric locations are comparable across tasks",
+    "inter-position variance reflects underlying spatial map structure",
+    "independent task-specific noise would yield uncorrelated topologies"
+  ],
+  "manipulations": [
+    "visual-field position (eccentric locations) within observer",
+    "task type (letter crowding, saccadic landing, spatial localization)"
+  ],
+  "key_findings": [
+    "the three task thresholds co-varied across visual-field positions within each observer",
+    "one dominant PCA component captured ~75% of inter-position variance",
+    "this dominant component was shared across all three tasks"
+  ],
+  "interpretations": [
+    "peripheral crowding, saccadic precision, and spatial localization are linked by a common underlying spatial topology",
+    "task variations are not driven by independent task-specific noise sources"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "peripheral vision",
+    "crowding",
+    "saccadic precision",
+    "spatial localization",
+    "visual-field topology",
+    "eccentricity",
+    "upper vs lower visual field",
+    "inter-task correlation"
+  ],
+  "out_of_scope_note": null
 }

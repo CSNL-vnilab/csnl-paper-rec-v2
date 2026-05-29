@@ -4,34 +4,14 @@
   "generator": "opus-4-7@2026-05-27",
   "generated_at": "2026-05-28T00:00:00+09:00",
   "review_status": "auto_unreviewed",
-  "abstract_coverage": 0.2,
-  "frameworks": [
-    {"name": "global view of consciousness", "role": "compared_against", "one_line": "global-workspace-style account argued to be insufficient on its own"},
-    {"name": "local view of consciousness", "role": "compared_against", "one_line": "local-recurrence account argued to be insufficient on its own"},
-    {"name": "synthesis (centrist) view", "role": "primary_lens", "one_line": "integrative position combining global and local accounts"},
-    {"name": "artificial intelligence research", "role": "context", "one_line": "related AI ideas cited as context for machine consciousness"}
-  ],
-  "core_question": "What theory of consciousness is consistent with reviewed evidence on NCC, attention, function, and non-human consciousness?",
-  "key_assumptions": [
-    "prior chapters' reviews of NCC, attention, function, and animal/robot consciousness constrain any adequate theory",
-    "consciousness theory must address both neural and functional levels"
-  ],
+  "abstract_coverage": 0.0,
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
   "manipulations": [],
   "key_findings": [],
-  "interpretations": [
-    "neither purely global nor purely local theories of consciousness suffice",
-    "the evidence motivates a centrist synthesis spanning the two views"
-  ],
+  "interpretations": [],
   "limitations_noted": [],
-  "connecting_signals": [
-    "consciousness theory",
-    "neural correlates of consciousness",
-    "attention and consciousness",
-    "function of consciousness",
-    "animal and machine consciousness",
-    "global vs local views",
-    "centrist synthesis",
-    "artificial intelligence and consciousness"
-  ],
+  "connecting_signals": [],
   "out_of_scope_note": "Book-chapter synthesis/manifesto (Oxford volume); no empirical findings or manipulations — reflective/integrative summary of prior chapters."
 }

@@ -5,37 +5,43 @@
   "generated_at": "2026-05-28T02:14:03+09:00",
   "review_status": "auto_unreviewed",
   "abstract_coverage": 0.1,
-  "synopsis": {
-    "frameworks": [
-      {"name": "natural image statistics", "role": "primary_lens", "one_line": "co-occurrence statistics of edge elements measured in natural scenes"},
-      {"name": "Gestalt grouping rules", "role": "compared_against", "one_line": "classical perceptual organization principles tested against image statistics"}
-    ],
-    "core_question": "Do Gestalt grouping rules for contour integration reflect the co-occurrence statistics of edge elements in natural scenes?",
-    "key_assumptions": [
-      "natural scenes contain regularities exploitable by visual system",
-      "edge elements can be characterized by position and orientation"
-    ],
-    "manipulations": [
-      "relative position and orientation between pairs of edge elements in natural images"
-    ],
-    "key_findings": [
-      "edge-element co-occurrence in natural scenes follows a geometric regularity (co-circularity)",
-      "this regularity aligns with classical Gestalt good-continuation rule"
-    ],
-    "interpretations": [
-      "Gestalt grouping rules may have emerged from the statistics of natural visual input"
-    ],
-    "limitations_noted": [],
-    "connecting_signals": [
-      "natural image statistics",
-      "Gestalt grouping",
-      "good continuation",
-      "contour integration",
-      "edge co-occurrence",
-      "co-circularity",
-      "association field",
-      "perceptual organization"
-    ],
-    "out_of_scope_note": null
-  }
+  "frameworks": [
+    {
+      "name": "natural image statistics",
+      "role": "primary_lens",
+      "one_line": "co-occurrence statistics of edge elements measured in natural scenes"
+    },
+    {
+      "name": "Gestalt grouping rules",
+      "role": "compared_against",
+      "one_line": "classical perceptual organization principles tested against image statistics"
+    }
+  ],
+  "core_question": "Do Gestalt grouping rules for contour integration reflect the co-occurrence statistics of edge elements in natural scenes?",
+  "key_assumptions": [
+    "natural scenes contain regularities exploitable by visual system",
+    "edge elements can be characterized by position and orientation"
+  ],
+  "manipulations": [
+    "relative position and orientation between pairs of edge elements in natural images"
+  ],
+  "key_findings": [
+    "edge-element co-occurrence in natural scenes follows a geometric regularity (co-circularity)",
+    "this regularity aligns with classical Gestalt good-continuation rule"
+  ],
+  "interpretations": [
+    "Gestalt grouping rules may have emerged from the statistics of natural visual input"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "natural image statistics",
+    "Gestalt grouping",
+    "good continuation",
+    "contour integration",
+    "edge co-occurrence",
+    "co-circularity",
+    "association field",
+    "perceptual organization"
+  ],
+  "out_of_scope_note": null
 }

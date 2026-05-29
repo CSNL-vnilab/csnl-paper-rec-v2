@@ -1,48 +1,14 @@
 {
-  "frameworks": [
-    {
-      "name": "efficient coding of subjective value",
-      "role": "primary_lens",
-      "one_line": "subjective valuation as information-maximizing inference under limited coding capacity"
-    },
-    {
-      "name": "Bayesian inference of value",
-      "role": "extended",
-      "one_line": "valuation as inference accounting for environmental value structure"
-    }
-  ],
-  "core_question": "Can preference-based decision variability be explained by information-maximizing inference over subjective values under capacity limits?",
-  "key_assumptions": [
-    "coding resources for value are limited",
-    "valuation reflects inference over the environmental distribution of values",
-    "decoding is statistically optimal given the encoding"
-  ],
-  "manipulations": [
-    "stimulus value structure tied to environmental statistics",
-    "conditions yielding a predicted preference illusion"
-  ],
-  "key_findings": [
-    "model captures variability in subjective value reports and preference choices",
-    "predicts a novel preference illusion confirmed empirically",
-    "same model accounts for confidence levels of value reports"
-  ],
-  "interpretations": [
-    "preference-based decisions reflect information-maximizing transmission and optimal decoding of value",
-    "apparent irrationalities follow from capacity-limited efficient value coding"
-  ],
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
+  "manipulations": [],
+  "key_findings": [],
+  "interpretations": [],
   "limitations_noted": [],
-  "connecting_signals": [
-    "efficient coding of value",
-    "subjective value",
-    "preference-based decision",
-    "preference illusion",
-    "confidence in valuation",
-    "capacity-limited coding",
-    "value inference",
-    "information maximization"
-  ],
+  "connecting_signals": [],
   "out_of_scope_note": "F1000/Faculty Opinions recommendation commentary on Polania et al.; synopsis reflects the recommended paper's abstract content.",
-  "abstract_coverage": 1.0,
+  "abstract_coverage": 0.0,
   "canonical_id": "5087967e90403a3fe3b0be98d83ee9ef",
   "synopsis_version": "v1.2026-05-27",
   "generator": "opus-4-7@2026-05-27",

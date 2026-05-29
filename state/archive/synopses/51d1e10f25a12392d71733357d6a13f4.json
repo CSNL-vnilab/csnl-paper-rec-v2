@@ -8,7 +8,7 @@
   "out_of_scope": true,
   "out_of_scope_note": "Engineering CVPR workshop paper on wearable-camera activity recognition with Bayesian networks — applied computer vision, not cognitive/perceptual neuroscience.",
   "coverage": 0.0,
-  "core_question": [],
+  "core_question": null,
   "methods": [],
   "key_findings": [],
   "theoretical_contributions": [],

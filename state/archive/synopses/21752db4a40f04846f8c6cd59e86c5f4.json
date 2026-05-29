@@ -6,14 +6,7 @@
   "key_findings": [],
   "interpretations": [],
   "limitations_noted": [],
-  "connecting_signals": [
-    "decision consistency",
-    "inferred fair market value",
-    "reference-dependent valuation",
-    "context effects in choice",
-    "ambiguous market conditions",
-    "rationality under bounded information"
-  ],
+  "connecting_signals": [],
   "out_of_scope_note": "Textbook chapter (Princeton University Press), not a primary research paper.",
   "abstract_coverage": 0.0,
   "canonical_id": "21752db4a40f04846f8c6cd59e86c5f4",

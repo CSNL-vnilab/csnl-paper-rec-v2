@@ -8,12 +8,7 @@
   "key_findings": [],
   "interpretations": [],
   "limitations_noted": [],
-  "connecting_signals": [
-    "pupil-linked arousal",
-    "decision uncertainty",
-    "serial choice bias",
-    "motion discrimination"
-  ],
+  "connecting_signals": [],
   "out_of_scope_note": "Data record / Figshare deposit accompanying Urai et al. 2017 Nat Comm; no findings of its own.",
   "generator": "opus-4-7@2026-05-27",
   "review_status": "auto_unreviewed",

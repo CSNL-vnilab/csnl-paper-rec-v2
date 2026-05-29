@@ -4,33 +4,14 @@
   "generator": "opus-4-7@2026-05-27",
   "generated_at": "2026-05-28T00:00:00+09:00",
   "review_status": "auto_unreviewed",
-  "abstract_coverage": 1.0,
-  "frameworks": [
-    {"name": "perceptual reality monitoring", "role": "primary_lens", "one_line": "functionalist account distinguishing conscious from non-conscious perceptual representations"},
-    {"name": "higher-order theory of consciousness", "role": "extended", "one_line": "empirical variant treated as the theoretical basis of reality monitoring"},
-    {"name": "alternative theories of consciousness", "role": "compared_against", "one_line": "competitors evaluated against the proposed account on plausibility"}
-  ],
-  "core_question": "What mechanism accounts for consciousness in humans, and does it extend to animals or robots?",
-  "key_assumptions": [
-    "consciousness has identifiable mechanisms in the human case",
-    "inductive generalization to other systems requires a theory of consciousness",
-    "consciousness is multiply realizable and functionalist in character"
-  ],
+  "abstract_coverage": 0.0,
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
   "manipulations": [],
   "key_findings": [],
-  "interpretations": [
-    "some animals may lack consciousness while suitably organized robots or programs could possess it",
-    "perceptual reality monitoring should be evaluated against rival theories by plausibility"
-  ],
+  "interpretations": [],
   "limitations_noted": [],
-  "connecting_signals": [
-    "consciousness in animals and robots",
-    "perceptual reality monitoring",
-    "higher-order theory of consciousness",
-    "functionalist account of consciousness",
-    "machine consciousness",
-    "theory comparison",
-    "inductive generalization across systems"
-  ],
+  "connecting_signals": [],
   "out_of_scope_note": "book chapter, theoretical / philosophical, no empirical findings"
 }

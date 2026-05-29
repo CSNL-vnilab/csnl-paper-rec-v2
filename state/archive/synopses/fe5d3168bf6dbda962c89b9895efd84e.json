@@ -1,51 +1,14 @@
 {
-  "frameworks": [
-    {
-      "name": "decoded fMRI neurofeedback",
-      "role": "primary_lens",
-      "one_line": "closed-loop targeting of specific multivoxel representations via machine-learning decoders"
-    },
-    {
-      "name": "closed-loop neurofeedback",
-      "role": "context",
-      "one_line": "real-time feedback paradigm with longstanding methodological challenges"
-    },
-    {
-      "name": "multivoxel pattern analysis",
-      "role": "extended",
-      "one_line": "MVPA decoders used to identify and reinforce target neural patterns"
-    },
-    {
-      "name": "double-blind placebo-controlled experimental design",
-      "role": "primary_lens",
-      "one_line": "rigorous trial structure adapted to neurofeedback intervention studies"
-    }
-  ],
-  "core_question": "How can rigorous decoded fMRI neurofeedback experiments be designed and implemented to address methodological challenges in the field?",
-  "key_assumptions": [
-    "specific multivoxel representations can be targeted via machine-learning decoders",
-    "unconscious occurrences of target representations can be reinforced",
-    "double-blind placebo-controlled designs are feasible in neurofeedback"
-  ],
+  "frameworks": [],
+  "core_question": null,
+  "key_assumptions": [],
   "manipulations": [],
   "key_findings": [],
-  "interpretations": [
-    "decoded fMRI neurofeedback can resolve longstanding methodological problems of classical neurofeedback",
-    "machine-learning advancements make targeting unconscious multivoxel patterns now feasible"
-  ],
+  "interpretations": [],
   "limitations_noted": [],
-  "connecting_signals": [
-    "decoded neurofeedback",
-    "closed-loop fMRI",
-    "multivoxel pattern decoding",
-    "unconscious representation targeting",
-    "double-blind placebo-controlled neurofeedback",
-    "real-time fMRI methodology",
-    "machine-learning decoders",
-    "intervention experimental design"
-  ],
+  "connecting_signals": [],
   "out_of_scope_note": "methods/tutorial paper — no empirical manipulations or findings to extract",
-  "abstract_coverage": 1.0,
+  "abstract_coverage": 0.0,
   "canonical_id": "fe5d3168bf6dbda962c89b9895efd84e",
   "synopsis_version": "v1.2026-05-27",
   "generator": "opus-4-7@2026-05-27",

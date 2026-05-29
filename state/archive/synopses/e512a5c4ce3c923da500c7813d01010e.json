@@ -5,43 +5,53 @@
   "generated_at": "2026-05-28T15:30:00+09:00",
   "review_status": "auto_unreviewed",
   "abstract_coverage": 1.0,
-  "synopsis": {
-    "frameworks": [
-      {"name": "active vision / oculomotor sampling", "role": "primary_lens", "one_line": "fixational eye movements treated as an active sampling strategy that shapes retinal input."},
-      {"name": "spatial-frequency analysis of retinal input", "role": "alternative_lens", "one_line": "characterizes how drift reshapes the temporal-spectral content of retinal stimulation."},
-      {"name": "static optics account of acuity", "role": "compared_against", "one_line": "view that resolution is set by eye optics and photoreceptor anatomy alone."}
-    ],
-    "core_question": "Do fixational eye movements contribute to high-acuity perception beyond what static ocular optics allow?",
-    "key_assumptions": [
-      "retinal image motion during fixation can be precisely measured and stabilized",
-      "high-acuity discrimination depends on the spatial-frequency content available on the retina",
-      "ocular drift can be treated as a controlled sampling process"
-    ],
-    "manipulations": [
-      "retinal image stabilization vs. natural fixational motion during a high-acuity task",
-      "stimulus spatial-frequency content",
-      "across-observer variation in fixational eye-movement precision"
-    ],
-    "key_findings": [
-      "fixational eye movements tailor retinal input to the dominant spatial frequencies of the stimulus",
-      "high-acuity performance scales with the precision of an observer's fixational eye movements",
-      "computational analyses show ocular drift improves discriminability of fine spatial detail beyond static optics"
-    ],
-    "interpretations": [
-      "oculomotor drift acts as an active sampling strategy that enhances fine pattern vision",
-      "high visual acuity is co-determined by motor control, not by optics and anatomy alone"
-    ],
-    "limitations_noted": [],
-    "connecting_signals": [
-      "fixational eye movements",
-      "ocular drift",
-      "visual acuity",
-      "retinal image stabilization",
-      "active sampling",
-      "spatial frequency content",
-      "oculomotor precision",
-      "fine pattern vision"
-    ],
-    "out_of_scope_note": null
-  }
+  "frameworks": [
+    {
+      "name": "active vision / oculomotor sampling",
+      "role": "primary_lens",
+      "one_line": "fixational eye movements treated as an active sampling strategy that shapes retinal input."
+    },
+    {
+      "name": "spatial-frequency analysis of retinal input",
+      "role": "alternative_lens",
+      "one_line": "characterizes how drift reshapes the temporal-spectral content of retinal stimulation."
+    },
+    {
+      "name": "static optics account of acuity",
+      "role": "compared_against",
+      "one_line": "view that resolution is set by eye optics and photoreceptor anatomy alone."
+    }
+  ],
+  "core_question": "Do fixational eye movements contribute to high-acuity perception beyond what static ocular optics allow?",
+  "key_assumptions": [
+    "retinal image motion during fixation can be precisely measured and stabilized",
+    "high-acuity discrimination depends on the spatial-frequency content available on the retina",
+    "ocular drift can be treated as a controlled sampling process"
+  ],
+  "manipulations": [
+    "retinal image stabilization vs. natural fixational motion during a high-acuity task",
+    "stimulus spatial-frequency content",
+    "across-observer variation in fixational eye-movement precision"
+  ],
+  "key_findings": [
+    "fixational eye movements tailor retinal input to the dominant spatial frequencies of the stimulus",
+    "high-acuity performance scales with the precision of an observer's fixational eye movements",
+    "computational analyses show ocular drift improves discriminability of fine spatial detail beyond static optics"
+  ],
+  "interpretations": [
+    "oculomotor drift acts as an active sampling strategy that enhances fine pattern vision",
+    "high visual acuity is co-determined by motor control, not by optics and anatomy alone"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "fixational eye movements",
+    "ocular drift",
+    "visual acuity",
+    "retinal image stabilization",
+    "active sampling",
+    "spatial frequency content",
+    "oculomotor precision",
+    "fine pattern vision"
+  ],
+  "out_of_scope_note": null
 }

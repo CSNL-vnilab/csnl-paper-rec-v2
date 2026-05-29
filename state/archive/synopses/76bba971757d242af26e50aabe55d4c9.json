@@ -8,12 +8,7 @@
   "key_findings": [],
   "interpretations": [],
   "limitations_noted": [],
-  "connecting_signals": [
-    "noise-induced drift",
-    "ice sheet model bias",
-    "marine ice sheet dynamics",
-    "frontal ablation variability"
-  ],
+  "connecting_signals": [],
   "out_of_scope_note": "Glaciology / climate science paper on Greenland Ice Sheet modeling and noise-induced drift in marine-terminating glaciers; not computational neuroscience.",
   "generator": "opus-4-7@2026-05-27",
   "review_status": "auto_unreviewed",

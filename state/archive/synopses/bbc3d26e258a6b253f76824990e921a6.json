@@ -22,5 +22,11 @@
   "generator": "opus-4-7@2026-05-27",
   "generated_at": "2026-05-27T23:25:22+09:00",
   "review_status": "auto_unreviewed",
-  "abstract_coverage": 1.0
+  "abstract_coverage": 0.0,
+  "frameworks": [],
+  "key_assumptions": [],
+  "manipulations": [],
+  "interpretations": [],
+  "limitations_noted": [],
+  "connecting_signals": []
 }

@@ -6,16 +6,7 @@
   "key_findings": [],
   "interpretations": [],
   "limitations_noted": [],
-  "connecting_signals": [
-    "connectionist models",
-    "perceptron history",
-    "deep convolutional neural networks",
-    "primate sensory representations",
-    "supervised concept learning",
-    "self-supervised learning",
-    "dorsal and ventral visual streams",
-    "spatial cognition in AI"
-  ],
+  "connecting_signals": [],
   "out_of_scope_note": "Textbook chapter (OUP, 'The structure of knowledge'); narrative review of memory representation, connectionism, deep networks, and dorsal/ventral streams. No empirical study, no manipulation, no finding.",
   "canonical_id": "621cb658503bb47c37fa9323e0d17062",
   "synopsis_version": "v1.2026-05-27",

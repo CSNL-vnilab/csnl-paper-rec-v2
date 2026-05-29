@@ -5,43 +5,53 @@
   "generated_at": "2026-05-28T15:30:00+09:00",
   "review_status": "auto_unreviewed",
   "abstract_coverage": 1.0,
-  "synopsis": {
-    "frameworks": [
-      {"name": "confirmation bias", "role": "primary_lens", "one_line": "selective enhancement of choice-consistent evidence during perceptual decisions"},
-      {"name": "drift-diffusion model", "role": "extended", "one_line": "evidence accumulation extended to gate spatial sampling during choice formation"},
-      {"name": "active sensing", "role": "primary_lens", "one_line": "overt eye movements treated as evidence-selection rather than passive viewing"}
-    ],
-    "core_question": "Does confirmation bias shape where observers look during perceptual decision-making, not just how they interpret evidence?",
-    "key_assumptions": [
-      "saccadic target selection reflects ongoing decision state",
-      "perceptual choice formation can be captured by drift-diffusion accumulation",
-      "confirmation bias generalizes from passive (pupil) to active (oculomotor) readouts"
-    ],
-    "manipulations": [
-      "motion-direction discrimination of noisy random-dot stimulus",
-      "saccades tracked during stimulus presentation",
-      "strength of accumulated choice signal varied across trials"
-    ],
-    "key_findings": [
-      "saccadic targets biased toward locations consistent with eventual perceptual choice",
-      "magnitude of saccadic bias scales with strength of the choice signal",
-      "drift-diffusion fit reveals interaction between choice accumulation and overt sampling"
-    ],
-    "interpretations": [
-      "same accumulated evidence that drives choice also gates spatial allocation of attention",
-      "confirmation bias operates not only in stimulus interpretation but in self-selected sampling"
-    ],
-    "limitations_noted": [],
-    "connecting_signals": [
-      "confirmation bias",
-      "active sensing",
-      "saccadic target selection",
-      "drift-diffusion modeling",
-      "perceptual decision-making",
-      "random-dot motion",
-      "overt attention allocation",
-      "evidence accumulation"
-    ],
-    "out_of_scope_note": null
-  }
+  "frameworks": [
+    {
+      "name": "confirmation bias",
+      "role": "primary_lens",
+      "one_line": "selective enhancement of choice-consistent evidence during perceptual decisions"
+    },
+    {
+      "name": "drift-diffusion model",
+      "role": "extended",
+      "one_line": "evidence accumulation extended to gate spatial sampling during choice formation"
+    },
+    {
+      "name": "active sensing",
+      "role": "primary_lens",
+      "one_line": "overt eye movements treated as evidence-selection rather than passive viewing"
+    }
+  ],
+  "core_question": "Does confirmation bias shape where observers look during perceptual decision-making, not just how they interpret evidence?",
+  "key_assumptions": [
+    "saccadic target selection reflects ongoing decision state",
+    "perceptual choice formation can be captured by drift-diffusion accumulation",
+    "confirmation bias generalizes from passive (pupil) to active (oculomotor) readouts"
+  ],
+  "manipulations": [
+    "motion-direction discrimination of noisy random-dot stimulus",
+    "saccades tracked during stimulus presentation",
+    "strength of accumulated choice signal varied across trials"
+  ],
+  "key_findings": [
+    "saccadic targets biased toward locations consistent with eventual perceptual choice",
+    "magnitude of saccadic bias scales with strength of the choice signal",
+    "drift-diffusion fit reveals interaction between choice accumulation and overt sampling"
+  ],
+  "interpretations": [
+    "same accumulated evidence that drives choice also gates spatial allocation of attention",
+    "confirmation bias operates not only in stimulus interpretation but in self-selected sampling"
+  ],
+  "limitations_noted": [],
+  "connecting_signals": [
+    "confirmation bias",
+    "active sensing",
+    "saccadic target selection",
+    "drift-diffusion modeling",
+    "perceptual decision-making",
+    "random-dot motion",
+    "overt attention allocation",
+    "evidence accumulation"
+  ],
+  "out_of_scope_note": null
 }

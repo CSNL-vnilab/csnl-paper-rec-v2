@@ -6,14 +6,7 @@
   "key_findings": [],
   "interpretations": [],
   "limitations_noted": [],
-  "connecting_signals": [
-    "definition of intelligence",
-    "artificial general intelligence",
-    "psychometric testing",
-    "robustness of AI systems",
-    "human versatility",
-    "intelligent agent"
-  ],
+  "connecting_signals": [],
   "out_of_scope_note": "Introductory book chapter to an AGI volume; discusses definitions of intelligence, history of psychometrics, and AI robustness without reporting empirical findings or engaging a specific computational-neuroscience framework.",
   "abstract_coverage": 0.0,
   "canonical_id": "104c37383e4cb7d56ffc8aecead27089",
