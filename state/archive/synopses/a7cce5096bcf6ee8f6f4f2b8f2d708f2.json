@@ -12,11 +12,6 @@
       "one_line": "Two-dimensional affective space with valence and arousal axes."
     },
     {
-      "name": "double dissociation",
-      "role": "extended",
-      "one_line": "OFC subregions track valence while amygdala preferentially tracks arousal."
-    },
-    {
       "name": "bipolar valence continuum",
       "role": "compared_against",
       "one_line": "Single bipolar negative-to-positive axis fails to fit neural data."
@@ -39,18 +34,16 @@
     "alternative valence parameterizations (bipolar vs independent vs distance-from-neutral)"
   ],
   "key_findings": [
+    "OFC processes valence whereas amygdala preferentially processes arousal (double dissociation)",
     "OFC subregions correlate with valence whereas amygdala preferentially correlates with arousal",
     "neural data support independent positive/negative axes for valence",
-    "neural data support absolute distance from neutral as a valence descriptor",
-    "neural data fail to support a bipolar valence continuum"
+    "neural data support absolute distance from neutral as a valence descriptor"
   ],
   "interpretations": [
     "OFC/amygdala double dissociation for valence and arousal extends from chemosensory to lexical-affective domain",
     "valence is better described by independent axes or hedonic distance than by a bipolar continuum"
   ],
-  "limitations_noted": [
-    "title metadata in source mismatches abstract content"
-  ],
+  "limitations_noted": [],
   "connecting_signals": [
     "valence and arousal",
     "orbitofrontal cortex",

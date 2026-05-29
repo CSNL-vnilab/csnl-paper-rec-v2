@@ -4,10 +4,13 @@
   "generator": "opus-4-7@2026-05-28",
   "generated_at": "2026-05-28T15:00:00+09:00",
   "review_status": "auto_unreviewed",
-  "abstract_coverage": 1.0,
+  "abstract_coverage": 0.75,
   "frameworks": [
-    {"name": "reinforcement learning", "role": "primary_lens", "one_line": "reward-prediction-error learning rate links striatal dopamine to adolescent choice"},
-    {"name": "dopaminergic neuromodulation", "role": "extended", "one_line": "spontaneous eye-blink rate used as non-invasive proxy for striatal dopamine tone"}
+    {
+      "name": "dopamine-linked reward sensitivity",
+      "role": "primary_lens",
+      "one_line": "eye-blink rate proxies striatal dopamine D2 receptor function"
+    }
   ],
   "core_question": "Does spontaneous eye-blink rate, as a proxy for striatal dopamine tone, predict reward-based decision-making in adolescents?",
   "key_assumptions": [
@@ -20,8 +23,8 @@
     "reward magnitude / risk level in a probabilistic reward task"
   ],
   "key_findings": [
-    "higher sEBR predicted steeper reward-prediction-error learning rates",
-    "higher sEBR predicted greater preference for high-magnitude / high-risk rewards"
+    "Increasing EBR associated with greater reward maximization in adolescents but not adults",
+    "Adolescents showed greater sensitivity to reward value than adults"
   ],
   "interpretations": [
     "non-invasive sEBR extends animal dopamine-RL evidence to adolescent reward decision-making"
@@ -30,14 +33,11 @@
     "direct dopamine measurement in healthy adolescents not feasible; sEBR is an indirect proxy"
   ],
   "connecting_signals": [
-    "spontaneous eye-blink rate",
-    "striatal dopamine tone",
-    "reward prediction error",
-    "adolescent reward sensitivity",
-    "probabilistic reward task",
-    "risk preference",
-    "ventral striatum",
-    "individual differences in learning rate"
+    "eye blink rate",
+    "striatal dopamine D2 receptor function",
+    "reward maximization",
+    "reward value sensitivity",
+    "risky decision-making task"
   ],
   "out_of_scope_note": null
 }

@@ -1,19 +1,9 @@
 {
   "frameworks": [
     {
-      "name": "prediction error / reinforcement learning from feedback",
+      "name": "prediction error",
       "role": "primary_lens",
-      "one_line": "surprise as mismatch between expected and observed choice outcome"
-    },
-    {
-      "name": "phasic arousal (locus coeruleus-noradrenergic system)",
-      "role": "primary_lens",
-      "one_line": "pupil and slow-wave ERP as readouts of arousal-encoded learning signal"
-    },
-    {
-      "name": "signal-detection / perceptual decision under uncertainty",
-      "role": "context",
-      "one_line": "elementary two-choice task with internally fluctuating confidence"
+      "one_line": "encodes mismatch between prior expectation and sensory input"
     }
   ],
   "core_question": "Do pupil dilation and the slow-wave ERP track surprise driven by intrinsic variability in decision confidence rather than external task variables?",

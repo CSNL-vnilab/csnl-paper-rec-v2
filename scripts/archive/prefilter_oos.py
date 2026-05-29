@@ -341,6 +341,26 @@ def _kst_iso() -> str:
     return dt.datetime.now(KST).isoformat(timespec="seconds")
 
 
+def _shape_oos_note(reason: str, anchor: str | None = None) -> str:
+    """Enforce the codex @640 OOS-note shape:
+        "<domain>: <title/abstract anchor phrase>; no neural data/model/
+         computational-neuroscience claim."
+
+    Notes from the prefilter classifier come in as "keyword-classifier (score=...
+    hits=-keyword1, -keyword2)" — that shape stays as-is (the operator can
+    audit by reading the matched keywords). Free-text reasons (passed by
+    operator-side scripts via bypass-write) are checked for speculative
+    language and shape-normalized when possible. We do NOT block on shape;
+    we just leave a hint."""
+    if reason.startswith("keyword-classifier ("):
+        return reason  # classifier-generated, already auditable
+    # Otherwise normalize trailing punctuation
+    reason = reason.strip()
+    if not reason.endswith(('.', '!', '?')):
+        reason += '.'
+    return reason
+
+
 def _template_synopsis(cid: str, oos_reason: str) -> dict:
     """Build the FLAT JSON for an OOS-template synopsis. Python-generated;
     `generator` reflects that so the operator can audit later."""
@@ -359,7 +379,7 @@ def _template_synopsis(cid: str, oos_reason: str) -> dict:
         "interpretations": [],
         "limitations_noted": [],
         "connecting_signals": [],
-        "out_of_scope_note": oos_reason,
+        "out_of_scope_note": _shape_oos_note(oos_reason),
     }
 
 

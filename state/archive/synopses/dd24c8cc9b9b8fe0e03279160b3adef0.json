@@ -16,7 +16,7 @@
       "one_line": "updates balance new observations against existing knowledge given uncertainty"
     },
     {
-      "name": "hippocampal predictive map",
+      "name": "hippocampal successor representation",
       "role": "context",
       "one_line": "hippocampus hypothesized to encode SR for future-reward prediction"
     }
@@ -50,7 +50,7 @@
     "prediction error",
     "uncertainty-weighted updating",
     "multi-context inference",
-    "hippocampal predictive map",
+    "hippocampal successor representation",
     "reinforcement learning",
     "generalisation across tasks"
   ],

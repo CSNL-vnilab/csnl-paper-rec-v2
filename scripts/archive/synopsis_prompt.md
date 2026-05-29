@@ -114,6 +114,30 @@ A JSON object with these fields (some may be empty):
     `linear regression`, `t-test`, `likelihood ratio test`).
   - Implementation choices (`autoencoder bottleneck`, `transformer
     encoder`) absent a theoretical claim about brain function.
+  - **Methods / closed-loop interventions** named as if they were
+    theoretical lenses. The following recurred as taxonomy leakage in
+    the @640 milestone review — they ARE NOT frameworks (codex
+    2026-05-29):
+    | Word                       | Why it is NOT a framework         |
+    | -------------------------- | --------------------------------- |
+    | `decoded neurofeedback`    | A measurement + reinforcement method (DecNef). The framework engaged is whatever the paper claims about reward + implicit representations. |
+    | `signal-detection theory`  | OK as framework ONLY if the paper uses sensitivity/criterion as its analysis lens. NOT OK when the paper merely runs a 2AFC task — "ran a 2AFC task" is method, not SDT-as-lens. |
+    | `multivoxel neuroreinforcement` | Same as DecNef — method. |
+    | `optogenetic perturbation` | Method. |
+    | `MEG / fMRI / EEG`         | Modality, not framework. |
+  - **Empirical results** named as if they were frameworks. Recurred at
+    @640 (codex 2026-05-29):
+    | Word                  | Where it belongs                        |
+    | --------------------- | --------------------------------------- |
+    | `double dissociation` | This is what the paper FINDS, not the lens it uses. → `key_findings`. |
+    | `null result`         | Same — finding, not framework. |
+    | `replication failure` | Same. |
+  - **Phenomena** named as if they were frameworks. The phenomenon under
+    investigation belongs in `core_question` + `connecting_signals`, not
+    `frameworks`. Example: `subjective inflation`, `confirmation bias`,
+    `tilt illusion` are phenomena being explained; the framework is whichever
+    theory (efficient coding / SDT / higher-order theory / cognitive-access
+    constraint / etc.) the paper actually engages to explain them.
 
   If the paper truly does not engage any theoretical framework (pure
   methods paper, tool benchmark, tutorial, software release), set
@@ -127,8 +151,18 @@ A JSON object with these fields (some may be empty):
   recipe details (no sample sizes, no rig brand).
 - `key_findings`: ≤ 4 items. What did they SHOW empirically?
 - `interpretations`: ≤ 2 items. What do the authors CONCLUDE?
-- `limitations_noted`: ≤ 2 items. Only what the authors themselves
-  state as limitations. Do not invent.
+- `limitations_noted`: ≤ 2 items. Only what the **authors themselves**
+  state as limitations in the abstract. Do not invent.
+
+  **Specifically NOT limitations** (codex 2026-05-29 — recurred at @640):
+  - Source metadata issues (e.g. "title mismatches abstract content"). If
+    you notice a metadata mismatch, flag it in the operator-side log
+    instead — leave `limitations_noted` empty.
+  - Synopsis-extraction caveats (e.g. "abstract too short to extract X").
+    If the abstract is too thin, set `out_of_scope_note` instead.
+  - Reviewer / editor observations from a wrapper record (eLife "Decision
+    letter" / "Editor's evaluation"). Those are reviewer-side, not
+    author-side.
 - `connecting_signals`: 3–8 short noun phrases that someone else might
   search for to find this paper. Use the paper's own vocabulary. These
   feed the downstream matching against researcher projects.

@@ -1,22 +1,12 @@
 {
   "frameworks": [
     {
-      "name": "decoded neurofeedback (DecNef)",
+      "name": "metacognition-conscious perception link",
       "role": "primary_lens",
-      "one_line": "fMRI multivoxel pattern reinforcement biases internal states without awareness."
-    },
-    {
-      "name": "metacognition–consciousness link hypothesis",
-      "role": "extended",
-      "one_line": "Tests whether discrimination confidence patterns drive conscious detection."
-    },
-    {
-      "name": "signal-detection (detection vs discrimination)",
-      "role": "context",
-      "one_line": "Frames the color-detection task with false-alarm metric."
+      "one_line": "tests whether discrimination confidence relates to conscious color detection"
     }
   ],
-  "core_question": "Are multivoxel patterns coding perceptual (color-discrimination) confidence causally linked to conscious detection?",
+  "core_question": "Are multivoxel patterns for perceptual confidence associated with false color detection?",
   "key_assumptions": [
     "Multivoxel patterns for discrimination confidence can be isolated and reinforced via DecNef.",
     "Discrimination confidence and detection share a common metacognitive substrate."
@@ -26,8 +16,7 @@
     "Concurrent color-detection task on mostly achromatic stimuli."
   ],
   "key_findings": [
-    "Occurrences of high color-discrimination confidence voxel patterns coincided with false alarms in detection.",
-    "Confidence-pattern activation predicted illusory color reports."
+    "High color-discrimination-confidence voxel patterns were associated with false alarms in color detection"
   ],
   "interpretations": [
     "Discrimination confidence representations contribute to conscious detection content.",
@@ -45,7 +34,7 @@
     "discrimination confidence"
   ],
   "out_of_scope_note": null,
-  "abstract_coverage": 1.0,
+  "abstract_coverage": 0.7,
   "canonical_id": "6487742a2ebdc1e59646bdc421d84806",
   "synopsis_version": "v1.2026-05-27",
   "generator": "opus-4-7@2026-05-27",
