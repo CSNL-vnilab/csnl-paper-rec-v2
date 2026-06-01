@@ -88,6 +88,9 @@ elif [ "$DOW" -eq 7 ] && [ "$HOUR" -eq 9 ] && [ "$MIN" -lt 30 ]; then
   run scripts/weekly/dry_run_preview.py --send || true
 else
   run scripts/weekly/capture_responses.py --apply || true
+  # Mirror the interview reading-list (archive_responses save_later/already_read)
+  # into the "논문 리스트" Notion DB. Reads Postgres + writes Notion only.
+  run scripts/weekly/mirror_history.py --apply || true
 fi
 
 echo "[p23] $TS done (dow=$DOW hour=$HOUR min=$MIN week=$CUR_WEEK)" >> "$LOG"

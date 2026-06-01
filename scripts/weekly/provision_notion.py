@@ -64,16 +64,25 @@ def _desired_schemas() -> dict[str, dict]:
         "Sent At":        {"type": "date"},
         "canonical_id":   {"type": "rich_text"},
     }
+    # "논문 리스트" mirrors the interview-result read/to-read list (mirror_history.py).
+    # Intuitive viz: a 읽음 checkbox (checked = 이미 읽음) + a 상태 select for
+    # colour-coded grouping. No response-time / week columns (P23 follow-up).
     history = {
-        "Researcher":     {"type": "select", "options": inits},
-        "Status":         {"type": "select", "options": response_opts,
-                           "response": True},
-        "Week":           {"type": "rich_text"},
-        "DOI":            {"type": "url"},
-        "canonical_id":   {"type": "rich_text"},
-        "Responded At":   {"type": "date"},
+        "Researcher":   {"type": "select", "options": inits},
+        "상태":          {"type": "select", "options": ["읽을 예정", "이미 읽음"]},
+        "읽음":          {"type": "checkbox"},
+        "DOI":          {"type": "url"},
+        "canonical_id": {"type": "rich_text"},
     }
     return {"digest": digest, "history": history}
+
+
+# Properties to REMOVE per DB (legacy columns no longer used). Dropping is
+# safe here because both DBs are operator-only and currently empty/rebuilt.
+_DROPS: dict[str, list[str]] = {
+    "digest":  [],
+    "history": ["Status", "Week", "Responded At"],  # old response select + unused cols
+}
 
 
 def _add_body(ptype: str, spec: dict) -> dict:
@@ -85,15 +94,24 @@ def _add_body(ptype: str, spec: dict) -> dict:
         return {"url": {}}
     if ptype == "date":
         return {"date": {}}
+    if ptype == "checkbox":
+        return {"checkbox": {}}
     raise ValueError(f"unsupported provision type: {ptype}")
 
 
-def provision(db_id: str, desired: dict, apply: bool) -> int:
+def provision(db_id: str, desired: dict, apply: bool, drop: list[str] | None = None) -> int:
     db = N.retrieve_database(db_id)
     props = db.get("properties") or {}
     name_to_type = {n: m.get("type") for n, m in props.items()}
     actions: list[str] = []
     patch: dict = {}
+
+    # 0. Drop legacy properties (setting a property to null removes it). Never
+    #    drop the title property.
+    for d in (drop or []):
+        if d in name_to_type and name_to_type[d] != "title":
+            patch[d] = None
+            actions.append(f"DROP '{d}' ({name_to_type[d]})")
 
     # 1. Rename the default title property to "Title" (idempotent).
     title_name = next((n for n, t in name_to_type.items() if t == "title"), None)
@@ -168,8 +186,8 @@ def main() -> int:
             print("[provision] NOTION_HISTORY_DB_ID not set — skipping history DB.")
 
     rc = 0
-    for _role, db_id, desired in targets:
-        rc |= provision(db_id, desired, args.apply)
+    for role, db_id, desired in targets:
+        rc |= provision(db_id, desired, args.apply, drop=_DROPS.get(role, []))
 
     if args.db in ("both", "digest") and args.apply:
         ok, probs = N.validate_digest_db(N.digest_db_id())

@@ -374,6 +374,10 @@ def p_date(iso: Optional[str]) -> dict:
     return {"date": {"start": iso}}
 
 
+def p_checkbox(value: bool) -> dict:
+    return {"checkbox": bool(value)}
+
+
 # ----------------------------------------------------- property value readers
 
 def read_response_label(page: dict, prop_name: str) -> Optional[str]:
@@ -392,6 +396,17 @@ def read_rich_text(page: dict, prop_name: str) -> str:
     prop = (page.get("properties") or {}).get(prop_name) or {}
     rt = prop.get("rich_text") or prop.get("title") or []
     return "".join(t.get("plain_text", "") for t in rt)
+
+
+def read_select(page: dict, prop_name: str) -> Optional[str]:
+    prop = (page.get("properties") or {}).get(prop_name) or {}
+    sel = prop.get("select")
+    return sel.get("name") if isinstance(sel, dict) else None
+
+
+def read_checkbox(page: dict, prop_name: str) -> bool:
+    prop = (page.get("properties") or {}).get(prop_name) or {}
+    return bool(prop.get("checkbox"))
 
 
 # --------------------------------------------------------------- validation

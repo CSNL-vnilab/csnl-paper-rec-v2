@@ -10,9 +10,11 @@ researcher has picked one of the response options it:
   (b) UPSERTs archive_responses with ON CONFLICT (researcher_id, canonical_id)
       DO NOTHING — the 무손상 contract: a pre-existing answer (from the
       interview or an earlier capture) is preserved, never overwritten, with a
-      warn log, and
-  (c) best-effort mirrors the answered paper into the "논문 리스트" history DB
-      (only when NOTION_HISTORY_DB_ID is set).
+      warn log.
+
+The "논문 리스트" history DB is NOT written here — it is mirrored from
+archive_responses (the single source of truth) by scripts/weekly/mirror_history.py,
+which the cron runs on the same ticks.
 
 Belief update: when a researcher's cumulative archive_responses count crosses a
 multiple of 10 it is FLAGGED (belief_update_due) — never auto-run. The belief
@@ -22,8 +24,8 @@ learned preferences into the following week's digest (§9).
 
 Efficiency: one paginated query of the digest DB (status for every page) rather
 than one GET per pending row. Boundary: writes archive_weekly_digests +
-archive_responses (additive, never overwrite) + optional history DB rows.
-Operator-run; --apply gates all writes.
+archive_responses (additive, never overwrite). Operator-run; --apply gates all
+writes.
 
 Usage:
     python3 scripts/weekly/capture_responses.py            # dry-run
@@ -34,7 +36,6 @@ from __future__ import annotations
 import argparse
 import json
 import sys
-from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -44,7 +45,6 @@ _REPO_ROOT = Path(__file__).resolve().parent.parent.parent
 sys.path.insert(0, str(_REPO_ROOT / "pipeline"))
 from _db import load_env, query_json, exec_many, ledger_schema  # noqa: E402
 
-KST = timezone(timedelta(hours=9))
 COOLDOWN_WEEKS = 8
 
 
@@ -79,17 +79,6 @@ def _response_totals(sch: str) -> dict[str, int]:
         f"SELECT researcher_id, count(*) n FROM {sch}.archive_responses "
         f"GROUP BY researcher_id")
     return {r["researcher_id"]: int(r["n"]) for r in rows}
-
-
-def _history_existing(db_id: str, props: dict) -> set[tuple]:
-    seen: set[tuple] = set()
-    for page in N.query_database(db_id):
-        cid = N.read_rich_text(page, props.get("canonical_id", "canonical_id")).strip()
-        sel = (page.get("properties") or {}).get(props.get("researcher", "Researcher")) or {}
-        rid = ((sel.get("select") or {}) or {}).get("name") or ""
-        if cid:
-            seen.add((rid, cid))
-    return seen
 
 
 def main() -> int:
@@ -160,19 +149,6 @@ def main() -> int:
         return 0
 
     # ---- apply ----
-    # History mirror is best-effort and MUST NOT block the primary capture: if
-    # the history DB is mis-configured, disable it and carry on (codex HIGH).
-    hist_id = N.history_db_id()
-    hist_seen: set = set()
-    if hist_id:
-        try:
-            hist_seen = _history_existing(hist_id, props)
-        except Exception as e:
-            print(f"[capture] history mirror disabled (setup failed): "
-                  f"{type(e).__name__}: {str(e)[:140]}", file=sys.stderr)
-            hist_id = None
-    today_iso = datetime.now(KST).strftime("%Y-%m-%d")
-
     affected_rids: set[str] = set()
     inserted = preserved = 0
     for c in to_capture:
@@ -207,21 +183,6 @@ def main() -> int:
         )
         inserted += 1
         affected_rids.add(c["researcher_id"])
-        if hist_id and (c["researcher_id"], c["canonical_id"]) not in hist_seen:
-            try:
-                N.create_page(hist_id, {
-                    "Title":        N.p_title(c["canonical_id"]),
-                    "Researcher":   N.p_select(c["researcher_id"]),
-                    "Status":       N.p_select(_hist_status(c["choice"])),
-                    "Week":         N.p_rich_text(c["week_iso"]),
-                    "canonical_id": N.p_rich_text(c["canonical_id"]),
-                    "Responded At": N.p_date(today_iso),
-                })
-                hist_seen.add((c["researcher_id"], c["canonical_id"]))
-            except Exception as e:
-                print(f"[capture] history mirror skip "
-                      f"{c['researcher_id']}/{c['canonical_id'][:10]}: "
-                      f"{type(e).__name__}: {str(e)[:120]}", file=sys.stderr)
 
     print(f"[capture] applied — digest updated={len(to_capture)} "
           f"archive_responses inserted={inserted} preserved={preserved}")
@@ -247,13 +208,6 @@ def main() -> int:
                   "`build_researcher_queue.py --apply` so next week's digest "
                   "reflects the learned preferences.")
     return 0
-
-
-def _hist_status(choice: str) -> str:
-    """Map an archive choice to the history DB's Status select option label
-    (the same labels send_notion / the digest DB use for the response)."""
-    inv = {v: k for k, v in N.status_choice_map().items()}  # choice -> label
-    return inv.get(choice, choice)
 
 
 if __name__ == "__main__":
