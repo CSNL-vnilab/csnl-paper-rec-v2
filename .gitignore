@@ -13,6 +13,12 @@ state/.APPROVED_*
 state/.ARCHIVE_EMBED_APPROVED
 *.log
 
+# P23 weekly Notion delivery — runtime state (per-machine; never commit)
+state/.P23_ENABLED
+state/.cron_p23.lock
+state/p23_last_build_week
+state/p23_dryrun_until
+
 # P13 archive dry-run artifacts (regenerable from --apply pipeline)
 state/archive/*.jsonl
 state/archive/*.json
