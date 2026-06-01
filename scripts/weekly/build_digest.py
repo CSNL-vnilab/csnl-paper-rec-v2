@@ -1,31 +1,33 @@
 #!/usr/bin/env python3
 """
-scripts/weekly/build_digest.py — assemble each researcher's weekly digest from
-their pre-built recommendation queue and stage it in archive_weekly_digests.
+scripts/weekly/build_digest.py — REFILL each researcher's "이번 주 논문 추천" back
+up to PAPERS_PER_DIGEST active (unread) papers, staging new rows in
+archive_weekly_digests.
 
-Design: docs/HARNESS-WEEKLY-DELIVERY-DESIGN.md §6. Per consented researcher:
-  read queue → drop already-answered / in-cooldown / out-of-scope / already-
-  staged-this-week → pick 5 papers under the tier + chunk distribution →
-  INSERT archive_weekly_digests rows (response_choice NULL, notion_page_id
-  NULL — send_notion.py fills the page id afterwards).
+P23 follow-up model (rolling 1-for-1 replace): a researcher's active set = digest
+rows with response_choice IS NULL. capture_responses marks a checked paper
+already_read (consumed) and archives its Notion page, freeing a slot. This script
+tops the active set back up:
+  - active == 0 (first fill / all consumed): pick PAPERS_PER_DIGEST honouring the
+    tier {S1,A2,B2} × chunk {recent3,mid1,classic1} distribution (the solver).
+  - active  > 0 (partial refill): add the (target − active) best-composite
+    eligible papers.
+Eligible = in the researcher's pre-built queue, NOT already in archive_responses,
+NOT already in any archive_weekly_digests row for them, and not out-of-scope.
 
-Why this slices the PRE-BUILT queue (no re-embedding here): the unattended
-weekly path is deliberately ML-free (same principle as run_weekly_cron.sh /
-DECISIONS-v3 — no heavy model, no LLM in cron). The queue's stored tier /
-composite / chunk already reflect the researcher's beliefs as of the last
-operator `build_researcher_queue.py --apply`; the design's "re-rank with new
-dim_preferences" (§9) is realised by that periodic operator rebuild (which the
-belief-update cadence should trigger), not by re-scoring inside cron.
+Why it slices the PRE-BUILT queue (no re-embedding): the unattended path is
+ML-free (DECISIONS-v3). The stored tier/composite/chunk reflect the last operator
+`build_researcher_queue.py --apply`; belief-driven re-ranking happens at that
+rebuild, not in cron.
 
-Boundary: this writes ONLY archive_weekly_digests (+ reads queues / papers /
-synopses / responses / cooldown). archive_responses is never touched here.
-Operator-run; --apply gates the DB write (dry-run otherwise).
+Boundary: writes ONLY archive_weekly_digests (+ reads queues/papers/synopses/
+responses). archive_responses is never touched here. --apply gates the write.
 
 Usage:
     python3 scripts/weekly/build_digest.py                 # dry-run, all consented
-    python3 scripts/weekly/build_digest.py --apply         # write rows
+    python3 scripts/weekly/build_digest.py --apply         # refill + write rows
     python3 scripts/weekly/build_digest.py --only JOP      # one researcher
-    python3 scripts/weekly/build_digest.py --week 2026-W23 # pin the ISO week
+    python3 scripts/weekly/build_digest.py --week 2026-W23 # pin the stamped ISO week
 """
 from __future__ import annotations
 
@@ -45,8 +47,7 @@ KST = timezone(timedelta(hours=9))
 # Distribution policy (design §3 — tunable). Both sum to PAPERS_PER_DIGEST.
 TIER_TARGETS = {"S": 1, "A": 2, "B": 2}
 CHUNK_TARGETS = {"recent": 3, "mid": 1, "classic": 1}
-PAPERS_PER_DIGEST = sum(TIER_TARGETS.values())   # 5
-COOLDOWN_WEEKS = 8
+PAPERS_PER_DIGEST = sum(TIER_TARGETS.values())   # 5 (active-set target)
 _TIER_ORDER = {"S": 0, "A": 1, "B": 2, "C": 3}
 _CHUNKS = ("recent", "mid", "classic")
 
@@ -74,20 +75,25 @@ def _enabled_researchers(sch: str, only: str | None) -> list[str]:
     return rids
 
 
-def _candidates(sch: str, rid: str, week: str) -> list[dict]:
+def _active_counts(sch: str) -> dict[str, int]:
+    """Per-researcher count of ACTIVE (unread) digest rows = the current size of
+    "이번 주 논문 추천" (response_choice IS NULL)."""
+    rows = query_json(
+        f"SELECT researcher_id, count(*) n FROM {sch}.archive_weekly_digests "
+        f"WHERE response_choice IS NULL GROUP BY researcher_id")
+    return {r["researcher_id"]: int(r["n"]) for r in rows}
+
+
+def _candidates(sch: str, rid: str) -> list[dict]:
     """Eligible queue rows for one researcher, best-composite first.
 
-    All interpolated values are internal + validated (init code, ISO week,
-    int weeks) — never researcher free-text — matching the inline-value read
-    pattern used elsewhere in scripts/ (query_json takes no params).
-
-    Validation uses real branches (NOT assert) so it survives `python -O`
-    where assert statements are stripped (codex finding)."""
+    Eligible = in the queue, not already answered (archive_responses), not
+    already in ANY archive_weekly_digests row for this researcher (so a
+    rolled-over or previously-read paper is never re-recommended), and not
+    out-of-scope. rid is the only interpolated value and is regex-validated
+    (real branch, not assert — survives `python -O`)."""
     if not _INIT_RE.match(rid or ""):
         raise ValueError(f"unsafe researcher id (not /^[A-Z]{{2,8}}$/): {rid!r}")
-    if not _WEEK_RE.match(week or ""):
-        raise ValueError(f"unsafe week (not /^\\d{{4}}-W\\d{{2}}$/): {week!r}")
-    weeks = int(COOLDOWN_WEEKS)
     return query_json(f"""
         SELECT q.canonical_id, q.chunk, q.tier, q.composite, q.similarity,
                q.rank_in_chunk,
@@ -97,13 +103,8 @@ def _candidates(sch: str, rid: str, week: str) -> list[dict]:
             ON p.canonical_id = q.canonical_id
           LEFT JOIN {sch}.archive_paper_synopses s
             ON s.canonical_id = q.canonical_id
-          LEFT JOIN {sch}.archive_paper_cooldown cd
-            ON cd.researcher_id = q.researcher_id
-           AND cd.canonical_id  = q.canonical_id
          WHERE q.researcher_id = '{rid}'
            AND s.out_of_scope_note IS NULL
-           AND (cd.last_sent_at IS NULL
-                OR cd.last_sent_at < now() - interval '{weeks} weeks')
            AND NOT EXISTS (
                  SELECT 1 FROM {sch}.archive_responses r
                   WHERE r.researcher_id = q.researcher_id
@@ -111,8 +112,7 @@ def _candidates(sch: str, rid: str, week: str) -> list[dict]:
            AND NOT EXISTS (
                  SELECT 1 FROM {sch}.archive_weekly_digests w
                   WHERE w.researcher_id = q.researcher_id
-                    AND w.canonical_id  = q.canonical_id
-                    AND w.week_iso       = '{week}')
+                    AND w.canonical_id  = q.canonical_id)
          ORDER BY q.composite DESC NULLS LAST, q.similarity DESC NULLS LAST
     """)
 
@@ -256,44 +256,53 @@ def main() -> int:
               f"Seed consent rows first.")
         return 0
 
-    print(f"[digest] week={week}  researchers={rids}  "
-          f"policy tier={TIER_TARGETS} chunk={CHUNK_TARGETS} cooldown={COOLDOWN_WEEKS}w")
+    active_counts = _active_counts(sch)
+    print(f"[digest] week={week}  researchers={rids}  target={PAPERS_PER_DIGEST}/researcher  "
+          f"active_now={{{', '.join(f'{r}:{active_counts.get(r,0)}' for r in rids)}}}")
     insert_rows: list[tuple] = []
-    underfilled: list[str] = []   # researcher → got < PAPERS_PER_DIGEST
+    underfilled: list[str] = []   # researcher → still < target after refill
     for rid in rids:
-        cands = _candidates(sch, rid, week)
-        if not cands:
-            print(f"[digest] {rid}: ⚠ 0 eligible candidates "
-                  f"(queue empty, all answered, or all in cooldown) — skipping")
-            underfilled.append(f"{rid}(0)")
+        active = active_counts.get(rid, 0)
+        deficit = PAPERS_PER_DIGEST - active
+        if deficit <= 0:
+            print(f"[digest] {rid}: {active} active — full, no refill")
             continue
-        chosen, mode = _select(cands)
+        cands = _candidates(sch, rid)
+        if not cands:
+            print(f"[digest] {rid}: active={active}, ⚠ 0 eligible candidates to "
+                  f"refill {deficit} — queue exhausted; rebuild it")
+            underfilled.append(f"{rid}({active}/{PAPERS_PER_DIGEST})")
+            continue
+        if active == 0:
+            chosen, mode = _select(cands)          # full build w/ distribution
+        else:
+            chosen, mode = cands[:deficit], "topup"  # best-composite top-up
+        chosen = chosen[:deficit]
         if not chosen:
             print(f"[digest] {rid}: ⚠ selection produced 0 papers — skipping")
-            underfilled.append(f"{rid}(0)")
+            underfilled.append(f"{rid}({active}/{PAPERS_PER_DIGEST})")
             continue
         chosen = _rank(chosen)
-        flag = "" if mode == "strict" else f"  ⚠ {mode}"
-        if len(chosen) < PAPERS_PER_DIGEST:
-            flag += f"  ⚠ only {len(chosen)}/{PAPERS_PER_DIGEST} (thin pool: {len(cands)} cand)"
-            underfilled.append(f"{rid}({len(chosen)})")
-        print(f"[digest] {rid}: {len(chosen)} papers  {_dist(chosen)}{flag}")
+        got = len(chosen)
+        flag = f"  [{mode}]"
+        if active + got < PAPERS_PER_DIGEST:
+            flag += f"  ⚠ {active+got}/{PAPERS_PER_DIGEST} (thin pool: {len(cands)} cand)"
+            underfilled.append(f"{rid}({active+got}/{PAPERS_PER_DIGEST})")
+        print(f"[digest] {rid}: active={active} +{got} new  {_dist(chosen)}{flag}")
         for r in chosen:
             title = (r.get("title") or "")[:70]
-            print(f"           #{r['_rank']} [{r.get('tier')}/{r.get('chunk')}] "
+            print(f"           +[{r.get('tier')}/{r.get('chunk')}] "
                   f"c={float(r.get('composite') or 0):.3f}  {r.get('year') or '----'}  {title}")
             insert_rows.append((week, rid, r["canonical_id"],
-                                r.get("tier") or "C", r["_rank"]))
+                                r.get("tier") or "C", active + r["_rank"]))
 
-    print(f"\n[digest] total staged rows: {len(insert_rows)} "
-          f"(expected {len(rids)}×{PAPERS_PER_DIGEST}={len(rids)*PAPERS_PER_DIGEST})")
+    print(f"\n[digest] total new rows staged: {len(insert_rows)}")
     if underfilled:
         # Loud alert so a chronically short digest never passes silently
         # (codex finding). Non-fatal by default; --strict-fill makes it fatal.
-        print(f"[digest] ⚠⚠ UNDERFILLED: {len(underfilled)} researcher(s) got "
-              f"< {PAPERS_PER_DIGEST} papers: {', '.join(underfilled)}. "
-              f"Investigate the queue (build_researcher_queue.py) / cooldown / "
-              f"answered-coverage for them.")
+        print(f"[digest] ⚠⚠ UNDERFILLED after refill: {', '.join(underfilled)}. "
+              f"Their queue is exhausted — operator should run "
+              f"build_researcher_queue.py --apply to grow it.")
     if not args.apply:
         print("[digest] dry-run only. Re-run with --apply to INSERT.")
         return 3 if (underfilled and args.strict_fill) else 0

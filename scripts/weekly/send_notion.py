@@ -29,7 +29,6 @@ from __future__ import annotations
 import argparse
 import re
 import sys
-from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -40,13 +39,7 @@ _REPO_ROOT = Path(__file__).resolve().parent.parent.parent
 sys.path.insert(0, str(_REPO_ROOT / "pipeline"))
 from _db import load_env, query_json, exec_many, ledger_schema  # noqa: E402
 
-KST = timezone(timedelta(hours=9))
 _WEEK_RE = re.compile(r"^\d{4}-W\d{2}$")
-
-
-def _current_week() -> str:
-    y, w, _ = datetime.now(KST).isocalendar()
-    return f"{y}-W{w:02d}"
 
 
 def _unsent_rows(sch: str, week: str | None) -> list[dict]:
@@ -76,32 +69,28 @@ def _unsent_rows(sch: str, week: str | None) -> list[dict]:
 
 
 def _existing_page_map(db_id: str, props: dict) -> dict[tuple, str]:
-    """{(researcher_label, week, canonical_id): page_id} for every page that
-    already exists in the digest DB — used to avoid duplicate creates."""
+    """{(researcher_label, canonical_id): page_id} for every page already in the
+    digest DB — used to avoid duplicate creates (one page per researcher×paper
+    in the rolling model)."""
     out: dict[tuple, str] = {}
     for page in N.query_database(db_id):
-        pr = page.get("properties") or {}
         cid = N.read_rich_text(page, props["canonical_id"]).strip()
-        week = N.read_rich_text(page, props["week"]).strip()
-        sel = (pr.get(props["researcher"]) or {}).get("select") or {}
-        researcher = (sel or {}).get("name") or ""
+        researcher = N.read_select(page, props["researcher"]) or ""
         if cid:
-            out[(researcher, week, cid)] = page.get("id")
+            out[(researcher, cid)] = page.get("id")
     return out
 
 
-def _properties(row: dict, props: dict, status_type: str) -> dict:
-    # The response property is provisioned as a select, but honour a real
-    # Notion `status` property too (codex finding) so a UI-converted column
-    # doesn't 400 every create.
-    pending = N.status_pending_label()
-    status_val = N.p_status(pending) if status_type == "status" else N.p_select(pending)
+def _properties(row: dict, props: dict) -> dict:
+    # Bibliographic fields split: Title (paper title) / 저자 / APA. The
+    # researcher action is the 읽음 checkbox — created unchecked.
     return {
-        props["title"]:          N.p_title(render.apa_citation(row)),
+        props["title"]:          N.p_title(render.paper_title(row)),
+        props["authors"]:        N.p_rich_text(render.authors_str(row)),
+        props["apa"]:            N.p_rich_text(render.apa_citation(row)),
         props["researcher"]:     N.p_select(row.get("researcher_label")),
-        props["week"]:           N.p_rich_text(row.get("week_iso") or ""),
         props["tier"]:           N.p_select(row.get("tier_at_send")),
-        props["status"]:         status_val,
+        props["read"]:           N.p_checkbox(False),
         props["recommendation"]: N.p_rich_text(render.recommendation_ko(row)),
         props["doi"]:            N.p_url(render.doi_url(row)),
         props["sent_at"]:        N.p_date((row.get("sent_at") or None)),
@@ -121,12 +110,10 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--apply", action="store_true")
     ap.add_argument("--week", default=None,
-                    help="Only this ISO week (e.g. 2026-W23). Default: current "
-                         "KST ISO week — so an outage cannot pile last week's "
-                         "stale rows onto this week's digest.")
-    ap.add_argument("--all-weeks", action="store_true",
-                    help="Send ALL unsent rows regardless of week (explicit "
-                         "stale-recovery mode). Overrides --week.")
+                    help="Restrict to one ISO week (e.g. 2026-W23). Default: ALL "
+                         "unsent rows — in the rolling model every staged-but-"
+                         "unsent row is an active slot that needs a Notion page, "
+                         "so leaving any unsent would wedge that slot.")
     args = ap.parse_args()
     load_env()
     sch = ledger_schema()
@@ -143,17 +130,14 @@ def main() -> int:
         print("    fix with: python3 scripts/weekly/provision_notion.py --db digest --apply",
               file=sys.stderr)
         return 2
-    db_meta = N.retrieve_database(db_id).get("properties") or {}
-    status_type = (db_meta.get(props["status"]) or {}).get("type") or "select"
 
-    week = None if args.all_weeks else (args.week or _current_week())
+    week = args.week   # None = ALL unsent rows (rolling-model default)
     rows = _unsent_rows(sch, week)
+    scope = "all weeks" if week is None else f"week {week}"
     if not rows:
-        scope = "any week" if week is None else f"week {week}"
         print(f"[send] no unsent digest rows ({scope}, notion_page_id IS NULL). "
               f"Nothing to do.")
         return 0
-    scope = "all weeks" if week is None else f"week {week}"
     print(f"[send] {len(rows)} unsent row(s) for {scope}.")
 
     if not args.apply:
@@ -168,14 +152,14 @@ def main() -> int:
     existing = _existing_page_map(db_id, props)
     created = relinked = failed = 0
     for r in rows:
-        key = (r.get("researcher_label") or "", r.get("week_iso") or "", r["canonical_id"])
+        key = (r.get("researcher_label") or "", r["canonical_id"])
         try:
             if key in existing:
                 page_id = existing[key]
                 _writeback(sch, r["digest_id"], page_id)
                 relinked += 1
             else:
-                page = N.create_page(db_id, _properties(r, props, status_type))
+                page = N.create_page(db_id, _properties(r, props))
                 page_id = page.get("id")
                 if not page_id:
                     raise N.NotionError("create returned no page id")

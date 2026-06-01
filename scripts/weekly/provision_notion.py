@@ -8,13 +8,14 @@ them with the integration; this script then adds the missing properties via the
 Notion API so the property NAMES + TYPES match the code exactly (no manual
 property-by-property setup, and no name-mismatch debugging).
 
-Idempotent: re-running makes no changes once provisioned. Non-destructive — it
-only renames the default title property to "Title" and ADDS missing properties;
-it never deletes or retypes an existing property (it warns instead).
+Idempotent: re-running makes no changes once provisioned. It renames the title
+property to "Title", ADDS missing properties, and DROPS the retired legacy ones
+(per the _DROPS list); it never retypes an existing property (warns instead).
 
-The response property ("Status") is provisioned as a SELECT, not a Notion
-`status` type: the API cannot set custom options on a real status property, but
-a select takes the exact Korean labels. capture_responses reads either type.
+Schema (P23 follow-up): bibliographic fields are split into Title (paper title) /
+저자 / APA. The researcher action is a single 읽음 checkbox (checked = read) — the
+old Status select is retired. "논문 리스트" has the same split + a 읽음 checkbox
+(no 상태 select).
 
 Usage:
     python3 scripts/weekly/provision_notion.py                 # dry-run, both DBs
@@ -47,41 +48,42 @@ def _researcher_inits() -> list[str]:
 
 def _desired_schemas() -> dict[str, dict]:
     inits = _researcher_inits()
-    # Response (Status) option labels — exactly the keys capture maps from,
-    # plus the pending default for the digest DB.
-    response_opts = list(N.status_choice_map().keys())  # 📚저장 / ❌관련없음 / ✅이미읽음
-    pending = N.status_pending_label()                  # 미응답
-
+    # P23 follow-up: bibliographic fields split into Title (paper title, the
+    # Notion title prop) + 저자 + APA. Researcher action is a single 읽음
+    # checkbox (checked = read). No Status select, no Week column.
     digest = {
         # non-title properties only; the title prop is renamed to "Title".
+        "저자":            {"type": "rich_text"},
+        "APA":            {"type": "rich_text"},
         "Researcher":     {"type": "select", "options": inits},
-        "Week":           {"type": "rich_text"},
         "Tier":           {"type": "select", "options": ["S", "A", "B", "C"]},
-        "Status":         {"type": "select", "options": [pending] + response_opts,
-                           "response": True},
+        "읽음":            {"type": "checkbox"},
         "Recommendation": {"type": "rich_text"},
         "DOI":            {"type": "url"},
         "Sent At":        {"type": "date"},
         "canonical_id":   {"type": "rich_text"},
     }
-    # "논문 리스트" mirrors the interview-result read/to-read list (mirror_history.py).
-    # Intuitive viz: a 읽음 checkbox (checked = 이미 읽음) + a 상태 select for
-    # colour-coded grouping. No response-time / week columns (P23 follow-up).
+    # "논문 리스트" mirrors the interview-result reading list (mirror_history.py).
+    # Same Title/저자/APA split; a single 읽음 checkbox (checked = 이미 읽음,
+    # unchecked = 읽을 예정). Group the Notion view by 읽음 for collapsible
+    # read / to-read sections.
     history = {
-        "Researcher":   {"type": "select", "options": inits},
-        "상태":          {"type": "select", "options": ["읽을 예정", "이미 읽음"]},
-        "읽음":          {"type": "checkbox"},
-        "DOI":          {"type": "url"},
-        "canonical_id": {"type": "rich_text"},
+        "저자":            {"type": "rich_text"},
+        "APA":            {"type": "rich_text"},
+        "Researcher":     {"type": "select", "options": inits},
+        "읽음":            {"type": "checkbox"},
+        "DOI":            {"type": "url"},
+        "canonical_id":   {"type": "rich_text"},
     }
     return {"digest": digest, "history": history}
 
 
-# Properties to REMOVE per DB (legacy columns no longer used). Dropping is
-# safe here because both DBs are operator-only and currently empty/rebuilt.
+# Properties to REMOVE per DB (legacy columns no longer used). Dropping is safe
+# here because both DBs are operator-only (digest is rebuilt; history pages keep
+# their other columns when a property is removed).
 _DROPS: dict[str, list[str]] = {
-    "digest":  [],
-    "history": ["Status", "Week", "Responded At"],  # old response select + unused cols
+    "digest":  ["Status", "Week"],                       # retired response select + weekly tag
+    "history": ["상태", "Status", "Week", "Responded At"],  # retired status select + unused cols
 }
 
 
@@ -124,16 +126,13 @@ def provision(db_id: str, desired: dict, apply: bool, drop: list[str] | None = N
     # 2. Add / reconcile each desired property.
     for name, spec in desired.items():
         ptype = spec["type"]
-        is_response = bool(spec.get("response"))
         if name not in name_to_type:
             patch[name] = _add_body(ptype, spec)
             actions.append(f"add '{name}' ({ptype})"
                            + (f" opts={spec['options']}" if ptype == "select" else ""))
             continue
         got = name_to_type[name]
-        # Response prop may already be a select OR a real status — both fine.
-        type_ok = (got == ptype) or (is_response and got in ("select", "status"))
-        if not type_ok:
+        if got != ptype:
             actions.append(f"WARN: '{name}' is '{got}', want '{ptype}' — left as-is")
             continue
         # Union select options so a partially-set-up DB gets the missing ones.
@@ -144,10 +143,6 @@ def provision(db_id: str, desired: dict, apply: bool, drop: list[str] | None = N
                 merged = [{"name": o} for o in cur if o] + [{"name": o} for o in missing]
                 patch[name] = {"select": {"options": merged}}
                 actions.append(f"add options to '{name}': {missing}")
-        elif is_response and got == "status":
-            actions.append(f"note: '{name}' is a real status property; cannot "
-                           f"set options via API — verify the labels in the UI "
-                           f"(need 저장/관련없음/이미읽음 variants).")
 
     title = N.db_title(db)
     if not actions:

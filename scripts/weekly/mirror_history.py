@@ -40,9 +40,10 @@ sys.path.insert(0, str(_REPO_ROOT / "pipeline"))
 from _db import load_env, query_json, ledger_schema  # noqa: E402
 
 # History DB property names — must match provision_notion.py _desired_schemas.
-P_TITLE, P_RESEARCHER, P_STATUS, P_READ, P_DOI, P_CID = (
-    "Title", "Researcher", "상태", "읽음", "DOI", "canonical_id")
-STATUS_TO_READ, STATUS_READ = "읽을 예정", "이미 읽음"
+# Title (paper title) / 저자 / APA are split; 읽음 checkbox is the only status
+# (checked = 이미 읽음, unchecked = 읽을 예정).
+P_TITLE, P_AUTHORS, P_APA, P_RESEARCHER, P_READ, P_DOI, P_CID = (
+    "Title", "저자", "APA", "Researcher", "읽음", "DOI", "canonical_id")
 
 
 def _desired(sch: str) -> dict[tuple, dict]:
@@ -66,26 +67,39 @@ def _desired(sch: str) -> dict[tuple, dict]:
     return out
 
 
-def _existing(hid: str) -> dict[tuple, dict]:
-    """{(researcher_id, canonical_id): {page_id, status, read}} from the DB."""
-    out: dict[tuple, dict] = {}
+def _trunc(s: str) -> str:
+    """Match _notion._truncate (2000-char cap) so drift comparison uses the same
+    string that would actually be stored — otherwise a long Title/APA would
+    re-update every run (codex finding)."""
+    s = s or ""
+    return s if len(s) <= 2000 else s[:1999] + "…"
+
+
+def _existing(hid: str) -> dict[tuple, list[dict]]:
+    """{(researcher_id, canonical_id): [ {page_id, read, title, authors, apa}, ... ]}.
+    A LIST per key so duplicate pages (e.g. legacy double-mirrors) are detected
+    and the extras archived rather than silently ignored (codex finding)."""
+    out: dict[tuple, list[dict]] = {}
     for pg in N.query_database(hid):
         cid = N.read_rich_text(pg, P_CID).strip()
         rid = N.read_select(pg, P_RESEARCHER) or ""
         if cid:
-            out[(rid, cid)] = {
+            out.setdefault((rid, cid), []).append({
                 "page_id": pg.get("id"),
-                "status":  N.read_select(pg, P_STATUS),
                 "read":    N.read_checkbox(pg, P_READ),
-            }
+                "title":   N.read_rich_text(pg, P_TITLE),
+                "authors": N.read_rich_text(pg, P_AUTHORS),
+                "apa":     N.read_rich_text(pg, P_APA),
+            })
     return out
 
 
 def _props(rid: str, cid: str, is_read: bool, paper: dict) -> dict:
     return {
-        P_TITLE:      N.p_title(render.apa_citation(paper)),
+        P_TITLE:      N.p_title(render.paper_title(paper)),
+        P_AUTHORS:    N.p_rich_text(render.authors_str(paper)),
+        P_APA:        N.p_rich_text(render.apa_citation(paper)),
         P_RESEARCHER: N.p_select(rid),
-        P_STATUS:     N.p_select(STATUS_READ if is_read else STATUS_TO_READ),
         P_READ:       N.p_checkbox(is_read),
         P_DOI:        N.p_url(render.doi_url(paper)),
         P_CID:        N.p_rich_text(cid),
@@ -95,11 +109,13 @@ def _props(rid: str, cid: str, is_read: bool, paper: dict) -> dict:
 def _validate(hid: str) -> list[str]:
     db = N.retrieve_database(hid)
     have = {n: m.get("type") for n, m in (db.get("properties") or {}).items()}
-    want = {P_RESEARCHER: "select", P_STATUS: "select", P_READ: "checkbox",
-            P_DOI: "url", P_CID: "rich_text"}
+    # The title property must be NAMED "Title" (provision renames it) — a DB
+    # whose title is still "Name"/"이름" would pass a loose check then 400 on
+    # create/update (codex finding).
+    want = {P_TITLE: "title", P_AUTHORS: "rich_text", P_APA: "rich_text",
+            P_RESEARCHER: "select", P_READ: "checkbox", P_DOI: "url",
+            P_CID: "rich_text"}
     problems = []
-    if "title" not in have.values():
-        problems.append("no title property")
     for name, typ in want.items():
         if name not in have:
             problems.append(f"missing '{name}' ({typ})")
@@ -141,22 +157,30 @@ def main() -> int:
     existing = _existing(hid)
 
     creates = [k for k in desired if k not in existing]
-    updates, archives = [], []
-    for k, e in existing.items():
+    updates: list[tuple] = []        # (key, page_id) to update (the kept page)
+    archive_pages: list[str] = []    # page ids to archive (no-longer-desired + dups)
+    for k, pages in existing.items():
         if k not in desired:
-            archives.append(k)
+            archive_pages.extend(p["page_id"] for p in pages)   # gone → archive all
             continue
-        want_read = desired[k]["is_read"]
-        want_status = STATUS_READ if want_read else STATUS_TO_READ
-        if e["read"] != want_read or e["status"] != want_status:
-            updates.append(k)
+        keep, *extras = pages
+        archive_pages.extend(p["page_id"] for p in extras)      # dedup: archive extras
+        pap = desired[k]["paper"]
+        # Update on ANY mutable-field drift (compared against the TRUNCATED text
+        # we would store) — also migrates the old single-APA pages to the split
+        # Title/저자/APA layout on first run.
+        if (keep["read"]    != desired[k]["is_read"]
+                or keep["title"]   != _trunc(render.paper_title(pap))
+                or keep["authors"] != _trunc(render.authors_str(pap))
+                or keep["apa"]     != _trunc(render.apa_citation(pap))):
+            updates.append((k, keep["page_id"]))
 
     def _split(keys):
         rr = sum(1 for k in keys if desired.get(k, {}).get("is_read"))
         return f"{len(keys)} ({rr} 이미읽음 / {len(keys)-rr} 읽을예정)"
 
-    print(f"[mirror] desired={len(desired)}  existing={len(existing)}  → "
-          f"create {_split(creates)} · update {len(updates)} · archive {len(archives)}")
+    print(f"[mirror] desired={len(desired)}  existing_keys={len(existing)}  → "
+          f"create {_split(creates)} · update {len(updates)} · archive {len(archive_pages)}")
     if not args.apply:
         for k in creates[:6]:
             rid, cid = k
@@ -177,24 +201,23 @@ def main() -> int:
             failed += 1
             print(f"[mirror] create FAIL {rid}/{cid[:10]}: {type(e).__name__}: "
                   f"{str(e)[:160]}", file=sys.stderr)
-    for k in updates:
+    for k, page_id in updates:
         rid, cid = k
         try:
-            N.update_page(existing[k]["page_id"],
+            N.update_page(page_id,
                           _props(rid, cid, desired[k]["is_read"], desired[k]["paper"]))
             updated += 1
         except Exception as e:
             failed += 1
             print(f"[mirror] update FAIL {rid}/{cid[:10]}: {type(e).__name__}: "
                   f"{str(e)[:160]}", file=sys.stderr)
-    for k in archives:
+    for page_id in archive_pages:
         try:
-            N._request("PATCH", f"/pages/{existing[k]['page_id']}",
-                       json_body={"archived": True})
+            N._request("PATCH", f"/pages/{page_id}", json_body={"archived": True})
             archived += 1
         except Exception as e:
             failed += 1
-            print(f"[mirror] archive FAIL {k}: {type(e).__name__}: {str(e)[:160]}",
+            print(f"[mirror] archive FAIL {page_id}: {type(e).__name__}: {str(e)[:160]}",
                   file=sys.stderr)
     print(f"[mirror] done — created={created} updated={updated} "
           f"archived={archived} failed={failed}")

@@ -14,9 +14,9 @@ that mutate it (send_notion.py) default to dry-run and only POST under an
 explicit `--apply`. This module itself performs no writes on import.
 
 Config (token + DB IDs) is read from the repo .env via pipeline/_db.load_env.
-Property names + the Status→choice mapping default to the design-doc spec
-(docs/HARNESS-WEEKLY-DELIVERY-DESIGN.md §5) and can be overridden without code
-edits by dropping config/notion_props.json (see _load_prop_overrides).
+Property names default to the spec and can be overridden without code edits by
+dropping config/notion_props.json (see _load_prop_overrides). The researcher
+action is a single 읽음 checkbox (P23 follow-up); there is no Status select.
 
 CLI:
     python3 scripts/weekly/_notion.py --discover            # list visible DBs
@@ -48,65 +48,41 @@ _MIN_INTERVAL_S = 0.34
 _MAX_RETRIES = 5
 
 # ---------------------------------------------------------------- prop config
-# Design §5 — "이번 주 추천" (digest) database properties. Keys are the stable
-# internal slugs the scripts use; values are the Notion property NAMES the
-# operator created. Override any of them via config/notion_props.json.
+# "이번 주 논문 추천" (digest) database properties. Keys are the stable internal
+# slugs the scripts use; values are the Notion property NAMES. Override via
+# config/notion_props.json. P23 follow-up (2026-06-01): bibliographic fields are
+# SPLIT into title / 저자 / APA, and the researcher action is a single 읽음
+# checkbox (checked = read) — the old 미응답/저장/관련없음 Status select is retired.
 _DEFAULT_DIGEST_PROPS: dict[str, str] = {
-    "title":          "Title",          # title       — APA citation (1 line)
-    "researcher":     "Researcher",     # select      — BHL/BYL/...
-    "week":           "Week",           # rich_text   — '2026-W23'
-    "tier":           "Tier",           # select      — S/A/B/C
-    "status":         "Status",         # status      — 미응답 / 📚저장 / ...
-    "recommendation": "Recommendation",  # rich_text   — Korean rationale
-    "doi":            "DOI",            # url         — paper link
-    "sent_at":        "Sent At",        # date        — staged-at
-    "canonical_id":   "canonical_id",   # rich_text   — internal index
+    "title":          "Title",          # title     — paper title (verbatim)
+    "authors":        "저자",            # rich_text — author list
+    "apa":            "APA",            # rich_text — full APA-7 citation
+    "researcher":     "Researcher",     # select    — BHL/BYL/...
+    "tier":           "Tier",           # select    — S/A/B/C
+    "read":           "읽음",            # checkbox  — researcher checks when read
+    "recommendation": "Recommendation",  # rich_text — Korean rationale
+    "doi":            "DOI",            # url       — paper link
+    "sent_at":        "Sent At",        # date      — recommended-at
+    "canonical_id":   "canonical_id",   # rich_text — internal index
 }
 
 # Expected Notion property TYPE per internal slug (used by validate()).
-# The response property ("status" slug) is provisioned as a Select (Notion's
-# API cannot set custom options on a real `status` property), so validate()
-# accepts either a select or a status type there — see _RESPONSE_OK_TYPES.
 _DIGEST_PROP_TYPES: dict[str, str] = {
     "title":          "title",
+    "authors":        "rich_text",
+    "apa":            "rich_text",
     "researcher":     "select",
-    "week":           "rich_text",
     "tier":           "select",
-    "status":         "select",
+    "read":           "checkbox",
     "recommendation": "rich_text",
     "doi":            "url",
     "sent_at":        "date",
     "canonical_id":   "rich_text",
 }
-# The response property may be a Select (what we provision) or a real Status
-# (if the operator later converts it in the UI). capture_responses reads both.
-_RESPONSE_OK_TYPES = ("select", "status")
-
-# Status property option NAME (exact, as created in Notion) → archive choice.
-# The "미응답" default option (and anything unrecognised) maps to None = still
-# pending. capture_responses.py uses classify_status() which is tolerant of
-# emoji / whitespace variants so the operator's exact label spelling is not a
-# silent failure mode.
-_DEFAULT_STATUS_CHOICE: dict[str, str] = {
-    "📚저장":     "save_later",
-    "❌관련없음":  "not_relevant",
-    "✅이미읽음":  "already_read",
-}
-STATUS_PENDING_LABEL = "미응답"
-
-# Korean labels for the response choices (operator-facing logs + history DB).
-CHOICE_KO = {
-    "save_later":   "📚 저장",
-    "not_relevant": "❌ 관련 없음",
-    "already_read": "✅ 이미 읽음",
-    "expired":      "⏳ 만료(무응답)",
-}
 
 
 def _load_prop_overrides() -> dict:
-    """Optional config/notion_props.json:
-        {"digest_props": {...}, "status_choice": {...},
-         "status_pending_label": "..."}.
+    """Optional config/notion_props.json: {"digest_props": {...}}.
     Missing file → defaults. Partial file → merge over defaults."""
     p = _REPO_ROOT / "config" / "notion_props.json"
     if not p.exists():
@@ -121,61 +97,6 @@ def _load_prop_overrides() -> dict:
 def digest_props() -> dict[str, str]:
     ov = _load_prop_overrides().get("digest_props") or {}
     return {**_DEFAULT_DIGEST_PROPS, **ov}
-
-
-def status_choice_map() -> dict[str, str]:
-    ov = _load_prop_overrides().get("status_choice") or {}
-    return {**_DEFAULT_STATUS_CHOICE, **ov}
-
-
-def status_pending_label() -> str:
-    return _load_prop_overrides().get("status_pending_label") or STATUS_PENDING_LABEL
-
-
-# ------------------------------------------------------------- status mapping
-
-def _normalize_label(s: Optional[str]) -> str:
-    """Strip whitespace + common emoji/punctuation so '📚 저장', '📚저장',
-    and '저장' all normalise to the same Korean core."""
-    if not s:
-        return ""
-    out = []
-    for ch in s:
-        if ch.isspace():
-            continue
-        # keep Hangul + ASCII letters; drop emoji / symbols
-        cp = ord(ch)
-        if 0xAC00 <= cp <= 0xD7A3 or 0x1100 <= cp <= 0x11FF or ch.isalnum():
-            out.append(ch)
-    return "".join(out)
-
-
-def classify_status(label: Optional[str]) -> Optional[str]:
-    """Map a Notion Status option NAME to an archive choice, or None if the
-    paper is still pending / unrecognised.
-
-    1. Exact match against the (config-overridable) status_choice map.
-    2. Tolerant Korean-core match (emoji/space-insensitive) so a relabelled
-       option still classifies. Order matters: check the more specific
-       Korean cores first.
-    """
-    if label is None:
-        return None
-    cmap = status_choice_map()
-    if label in cmap:
-        return cmap[label]
-    norm = _normalize_label(label)
-    if not norm or norm == _normalize_label(status_pending_label()):
-        return None
-    # Tolerant fallback by Korean core. 이미읽음 before 읽음-substring issues;
-    # 관련없음/관심없음 → not_relevant; 저장 → save_later.
-    if "이미읽음" in norm or "읽음" in norm:
-        return "already_read"
-    if "관련없음" in norm or "관심없음" in norm:
-        return "not_relevant"
-    if "저장" in norm:
-        return "save_later"
-    return None
 
 
 # ------------------------------------------------------------- HTTP transport
@@ -358,12 +279,6 @@ def p_select(name: Optional[str]) -> dict:
     return {"select": {"name": name}}
 
 
-def p_status(name: Optional[str]) -> dict:
-    if not name:
-        return {"status": None}
-    return {"status": {"name": name}}
-
-
 def p_url(url: Optional[str]) -> dict:
     return {"url": (url or None)}
 
@@ -379,18 +294,6 @@ def p_checkbox(value: bool) -> dict:
 
 
 # ----------------------------------------------------- property value readers
-
-def read_response_label(page: dict, prop_name: str) -> Optional[str]:
-    """Return the response-property option name on a retrieved page, or None.
-    Works whether the property is a Select (what we provision) or a real
-    Status (if the operator converts it later)."""
-    prop = (page.get("properties") or {}).get(prop_name) or {}
-    for kind in ("status", "select"):
-        v = prop.get(kind)
-        if isinstance(v, dict):
-            return v.get("name")
-    return None
-
 
 def read_rich_text(page: dict, prop_name: str) -> str:
     prop = (page.get("properties") or {}).get(prop_name) or {}
@@ -429,24 +332,9 @@ def validate_digest_db(db_id: str) -> tuple[bool, list[str]]:
                             f"expected type={want_type})")
             continue
         got = name_to_type[pname]
-        ok_types = _RESPONSE_OK_TYPES if slug == "status" else (want_type,)
-        if got not in ok_types:
+        if got != want_type:
             problems.append(f"property '{pname}' is type '{got}', "
-                            f"expected {'/'.join(ok_types)}")
-    # Response-property options sanity: at least the 3 response options should
-    # exist so capture_responses can classify them. Pending option is optional.
-    status_pname = wanted["status"]
-    status_meta = props.get(status_pname) or {}
-    status_type = status_meta.get("type")
-    if status_type in _RESPONSE_OK_TYPES:
-        opts = [o.get("name") for o in
-                ((status_meta.get(status_type) or {}).get("options") or [])]
-        classifiable = [o for o in opts if classify_status(o) is not None]
-        if not classifiable:
-            problems.append(
-                f"Response property '{status_pname}' has no option that maps to "
-                f"a response choice (need 저장/관련없음/이미읽음 variants); "
-                f"options seen: {opts}")
+                            f"expected '{want_type}'")
     return (len(problems) == 0), problems
 
 

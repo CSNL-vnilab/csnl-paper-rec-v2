@@ -1,31 +1,33 @@
 #!/usr/bin/env python3
 """
-scripts/weekly/capture_responses.py — poll the Notion digest DB for Status
-changes and fold them back into the ledger.
+scripts/weekly/capture_responses.py — read the 읽음 checkboxes on "이번 주 논문
+추천" and reconcile the board into the ledger (first step of the Wednesday
+routine).
 
-Design §9. For every pending digest row (response_choice IS NULL, sent within
-the cooldown window, page id present) it reads the Notion Status, and when the
-researcher has picked one of the response options it:
-  (a) UPDATEs archive_weekly_digests.response_choice / response_at, and
-  (b) UPSERTs archive_responses with ON CONFLICT (researcher_id, canonical_id)
-      DO NOTHING — the 무손상 contract: a pre-existing answer (from the
-      interview or an earlier capture) is preserved, never overwritten, with a
-      warn log.
+Reconcile-based + idempotent. It looks at every digest row that still has a
+Notion page and decides per state:
 
-The "논문 리스트" history DB is NOT written here — it is mirrored from
-archive_responses (the single source of truth) by scripts/weekly/mirror_history.py,
-which the cron runs on the same ticks.
+  • NULL row, page live, 읽음 ☑ (read)  → UPSERT archive_responses already_read
+    (ON CONFLICT DO NOTHING = 무손상) → mark digest already_read → archive the
+    Notion page (it leaves the board, freeing a slot for build to refill 1).
+  • NULL row, page live, ☐            → leave (rolls over to next week).
+  • already_read row, page still live  → LINGERING (a prior archive failed) →
+    archive the page now.
+  • NULL row, page NOT live            → ORPHAN (page externally archived/
+    deleted): fetch it; if it was checked, reconcile to already_read; if it is
+    gone (404), null its page id so send re-creates it (keeps the board full).
 
-Belief update: when a researcher's cumulative archive_responses count crosses a
-multiple of 10 it is FLAGGED (belief_update_due) — never auto-run. The belief
-updater is an LLM agent and the unattended path is LLM-free (DECISIONS-v3); the
-operator runs the update + the next queue rebuild, which is what feeds the
-learned preferences into the following week's digest (§9).
+Order within a read is mark-then-archive, so a failed archive leaves a
+self-consistent (already_read, live) state that the LINGERING branch fixes on
+the next run — build is therefore never fooled by an archived-but-still-active
+slot. archive_responses is additive-only (truth never overwritten).
 
-Efficiency: one paginated query of the digest DB (status for every page) rather
-than one GET per pending row. Boundary: writes archive_weekly_digests +
-archive_responses (additive, never overwrite). Operator-run; --apply gates all
-writes.
+Belief update: a researcher's cumulative archive_responses count crossing a
+multiple of 10 is FLAGGED in archive_weekly_belief_due (no LLM). The "논문 리스트"
+history DB is owned by mirror_history.py (run later in the routine).
+
+Boundary: writes archive_weekly_digests + archive_responses (additive); archives
+Notion pages. Operator/cron-run; --apply gates writes.
 
 Usage:
     python3 scripts/weekly/capture_responses.py            # dry-run
@@ -45,40 +47,58 @@ _REPO_ROOT = Path(__file__).resolve().parent.parent.parent
 sys.path.insert(0, str(_REPO_ROOT / "pipeline"))
 from _db import load_env, query_json, exec_many, ledger_schema  # noqa: E402
 
-COOLDOWN_WEEKS = 8
 
-
-def _pending_rows(sch: str) -> list[dict]:
+def _page_rows(sch: str) -> list[dict]:
+    """Digest rows that still carry a Notion page id (response_choice is only
+    ever NULL or 'already_read' in the rolling model)."""
     return query_json(f"""
         SELECT digest_id, week_iso, researcher_id, canonical_id,
-               notion_page_id
+               notion_page_id, response_choice
           FROM {sch}.archive_weekly_digests
-         WHERE response_choice IS NULL
-           AND notion_page_id IS NOT NULL
-           AND sent_at > now() - interval '{int(COOLDOWN_WEEKS)} weeks'
+         WHERE notion_page_id IS NOT NULL
          ORDER BY researcher_id, week_iso
     """)
 
 
-def _status_by_page(db_id: str, status_prop: str) -> dict[str, str | None]:
-    out: dict[str, str | None] = {}
-    for page in N.query_database(db_id):
-        out[page.get("id")] = N.read_response_label(page, status_prop)
-    return out
+def _read_by_page(db_id: str, read_prop: str) -> dict[str, bool]:
+    """{live_page_id: 읽음 checkbox} — query_database lists NON-archived pages."""
+    return {p.get("id"): N.read_checkbox(p, read_prop)
+            for p in N.query_database(db_id)}
 
 
 def _existing_responses(sch: str) -> dict[tuple, str]:
-    rows = query_json(
-        f"SELECT researcher_id, canonical_id, choice "
-        f"FROM {sch}.archive_responses")
+    rows = query_json(f"SELECT researcher_id, canonical_id, choice "
+                      f"FROM {sch}.archive_responses")
     return {(r["researcher_id"], r["canonical_id"]): r["choice"] for r in rows}
 
 
 def _response_totals(sch: str) -> dict[str, int]:
-    rows = query_json(
-        f"SELECT researcher_id, count(*) n FROM {sch}.archive_responses "
-        f"GROUP BY researcher_id")
+    rows = query_json(f"SELECT researcher_id, count(*) n FROM {sch}.archive_responses "
+                      f"GROUP BY researcher_id")
     return {r["researcher_id"]: int(r["n"]) for r in rows}
+
+
+def _mark_read(sch: str, c: dict, existing: dict) -> bool:
+    """Truth row FIRST (already_read, DO NOTHING), then mark the digest consumed.
+    Returns True if a NEW archive_responses row was inserted."""
+    is_new = (c["researcher_id"], c["canonical_id"]) not in existing
+    if is_new:
+        detail = {"source": "weekly_notion_checkbox", "week": c["week_iso"],
+                  "notion_page_id": c["notion_page_id"]}
+        exec_many(
+            f"INSERT INTO {sch}.archive_responses "
+            f"(researcher_id, canonical_id, session_id, choice, choice_detail, "
+            f"responded_at) VALUES (%s,%s,%s,'already_read',%s::jsonb, now()::text) "
+            f"ON CONFLICT (researcher_id, canonical_id) DO NOTHING",
+            [(c["researcher_id"], c["canonical_id"], f"weekly-{c['week_iso']}",
+              json.dumps(detail, ensure_ascii=False))],
+        )
+    exec_many(
+        f"UPDATE {sch}.archive_weekly_digests "
+        f"SET response_choice='already_read', response_at=now() WHERE digest_id=%s",
+        [(c["digest_id"],)],
+    )
+    return is_new
 
 
 def main() -> int:
@@ -89,107 +109,118 @@ def main() -> int:
     sch = ledger_schema()
     db_id = N.digest_db_id()
     props = N.digest_props()
-    status_prop = props["status"]
+    read_prop = props["read"]
 
-    pending = _pending_rows(sch)
-    if not pending:
-        print("[capture] no pending digest rows. Nothing to poll.")
+    # Abort on schema drift — otherwise read_checkbox returns False for every
+    # page and we would silently capture nothing (codex finding).
+    ok, problems = N.validate_digest_db(db_id)
+    if not ok:
+        print("[capture] ABORT — digest DB schema invalid:", file=sys.stderr)
+        for p in problems:
+            print(f"    - {p}", file=sys.stderr)
+        print("    fix: python3 scripts/weekly/provision_notion.py --db digest --apply",
+              file=sys.stderr)
+        return 2
+
+    rows = _page_rows(sch)
+    if not rows:
+        print("[capture] no digest rows with a Notion page. Nothing to check.")
         return 0
-    print(f"[capture] {len(pending)} pending row(s) to check.")
-
-    status_map = _status_by_page(db_id, status_prop)
+    live = _read_by_page(db_id, read_prop)
     existing = _existing_responses(sch)
 
-    # Plan the changes first (so dry-run and apply share one code path).
-    to_capture: list[dict] = []   # {digest_id, rid, cid, week, choice, page_id, preexisting}
-    missing_page = 0
-    for r in pending:
+    reads, lingering, orphans = [], [], []
+    for r in rows:
         pid = r["notion_page_id"]
-        if pid in status_map:
-            label = status_map[pid]
+        rc = r["response_choice"]
+        if pid in live:
+            if rc == "already_read":
+                lingering.append(r)             # read but page still on the board
+            elif rc is None and live[pid]:
+                reads.append(r)                 # newly checked → read
+            # NULL + unchecked → rolls over
         else:
-            # Page id is staged in the ledger but absent from the DB listing
-            # (page deleted/moved, or a stale id). Warn loudly + try a direct
-            # fetch before giving up — never silently lose a response (codex).
-            missing_page += 1
-            print(f"[capture] ⚠ page {pid} for {r['researcher_id']}/"
-                  f"{r['canonical_id'][:10]} missing from DB listing; "
-                  f"trying direct fetch.", file=sys.stderr)
-            try:
-                label = N.read_response_label(N.retrieve_page(pid), status_prop)
-            except Exception as e:
-                print(f"[capture]   direct fetch failed: {type(e).__name__}: "
-                      f"{str(e)[:120]} — left pending.", file=sys.stderr)
-                continue
-        choice = N.classify_status(label)
-        if choice is None:
-            continue
-        key = (r["researcher_id"], r["canonical_id"])
-        to_capture.append({**r, "label": label, "choice": choice,
-                           "preexisting": existing.get(key)})
+            if rc is None:
+                orphans.append(r)               # page externally archived/deleted
 
-    if missing_page:
-        print(f"[capture] ⚠ {missing_page} pending row(s) had a page id missing "
-              f"from the DB listing (see warnings above).")
-    if not to_capture:
-        print("[capture] no Status changes detected (all still 미응답).")
-        return 0
-
-    for c in to_capture:
-        pre = (f"  ⚠ archive_responses already has '{c['preexisting']}' — "
-               f"PRESERVED (무손상), not overwritten") if c["preexisting"] else ""
-        print(f"[capture] {c['researcher_id']} {c['canonical_id'][:10]} "
-              f"'{c['label']}' → {c['choice']}{pre}")
+    print(f"[capture] board pages={len(live)}  read(checked)={len(reads)}  "
+          f"lingering={len(lingering)}  orphan={len(orphans)}")
+    for c in reads:
+        pre = (f"  ⚠ already in archive_responses as '{existing.get((c['researcher_id'], c['canonical_id']))}'"
+               f" — PRESERVED (무손상)"
+               if (c["researcher_id"], c["canonical_id"]) in existing else "")
+        print(f"[capture] {c['researcher_id']} {c['canonical_id'][:10]} ☑ 읽음 → already_read{pre}")
 
     if not args.apply:
-        n_new = sum(1 for c in to_capture if not c["preexisting"])
-        print(f"[capture] dry-run only. Would update {len(to_capture)} digest row(s); "
-              f"{n_new} new archive_responses insert(s), "
-              f"{len(to_capture) - n_new} preserved. Re-run with --apply.")
+        n_new = sum(1 for c in reads
+                    if (c["researcher_id"], c["canonical_id"]) not in existing)
+        print(f"[capture] dry-run only. Would: read {len(reads)} "
+              f"({n_new} new archive_responses), archive {len(reads)+len(lingering)} "
+              f"page(s), reconcile {len(orphans)} orphan(s). Re-run with --apply.")
         return 0
 
-    # ---- apply ----
     affected_rids: set[str] = set()
-    inserted = preserved = 0
-    for c in to_capture:
-        if c["preexisting"]:
-            # No archive_responses write (무손상) — only the digest ledger
-            # records this week's Notion state.
-            exec_many(
-                f"UPDATE {sch}.archive_weekly_digests "
-                f"SET response_choice = %s, response_at = now() WHERE digest_id = %s",
-                [(c["choice"], c["digest_id"])],
-            )
+    inserted = preserved = archived = failed = 0
+
+    # 1. newly-read papers: mark, then archive the page.
+    for c in reads:
+        is_new = _mark_read(sch, c, existing)
+        if is_new:
+            inserted += 1
+            affected_rids.add(c["researcher_id"])
+        else:
             preserved += 1
+        try:
+            N._request("PATCH", f"/pages/{c['notion_page_id']}",
+                       json_body={"archived": True})
+            archived += 1
+        except Exception as e:
+            failed += 1
+            print(f"[capture] archive FAIL {c['researcher_id']}/{c['canonical_id'][:10]} "
+                  f"— digest already marked read; LINGERING branch retries next run: "
+                  f"{type(e).__name__}: {str(e)[:120]}", file=sys.stderr)
+
+    # 2. lingering (already_read but page still live): archive now.
+    for c in lingering:
+        try:
+            N._request("PATCH", f"/pages/{c['notion_page_id']}",
+                       json_body={"archived": True})
+            archived += 1
+        except Exception as e:
+            failed += 1
+            print(f"[capture] lingering archive FAIL {c['researcher_id']}/"
+                  f"{c['canonical_id'][:10]}: {type(e).__name__}: {str(e)[:120]}",
+                  file=sys.stderr)
+
+    # 3. orphans (NULL row, page not live): fetch + reconcile.
+    for c in orphans:
+        try:
+            page = N.retrieve_page(c["notion_page_id"])
+        except Exception as e:
+            # Page is gone (deleted) — free the slot so send re-creates it.
+            print(f"[capture] orphan {c['researcher_id']}/{c['canonical_id'][:10]}: "
+                  f"page not retrievable ({type(e).__name__}) → clearing page id "
+                  f"for re-send.", file=sys.stderr)
+            exec_many(f"UPDATE {sch}.archive_weekly_digests "
+                      f"SET notion_page_id=NULL WHERE digest_id=%s", [(c["digest_id"],)])
             continue
-        # NEW response: write the PERMANENT truth row FIRST, then mark the
-        # digest answered. If the digest UPDATE fails after this commit, the
-        # next poll sees preexisting=True and just retries the digest update —
-        # the truth row is never lost (codex CRITICAL: capture ordering).
-        detail = {"source": "weekly_notion", "week": c["week_iso"],
-                  "notion_page_id": c["notion_page_id"]}
-        exec_many(
-            f"INSERT INTO {sch}.archive_responses "
-            f"(researcher_id, canonical_id, session_id, choice, choice_detail, "
-            f"responded_at) VALUES (%s,%s,%s,%s,%s::jsonb, now()::text) "
-            f"ON CONFLICT (researcher_id, canonical_id) DO NOTHING",
-            [(c["researcher_id"], c["canonical_id"], f"weekly-{c['week_iso']}",
-              c["choice"], json.dumps(detail, ensure_ascii=False))],
-        )
-        exec_many(
-            f"UPDATE {sch}.archive_weekly_digests "
-            f"SET response_choice = %s, response_at = now() WHERE digest_id = %s",
-            [(c["choice"], c["digest_id"])],
-        )
-        inserted += 1
-        affected_rids.add(c["researcher_id"])
+        if N.read_checkbox(page, read_prop):
+            is_new = _mark_read(sch, c, existing)   # page already archived; just mark
+            if is_new:
+                inserted += 1
+                affected_rids.add(c["researcher_id"])
+            else:
+                preserved += 1
+            print(f"[capture] orphan reconciled (read): {c['researcher_id']}/"
+                  f"{c['canonical_id'][:10]}")
+        else:
+            print(f"[capture] ⚠ orphan {c['researcher_id']}/{c['canonical_id'][:10]} "
+                  f"page archived but unchecked — left active for review.",
+                  file=sys.stderr)
 
-    print(f"[capture] applied — digest updated={len(to_capture)} "
-          f"archive_responses inserted={inserted} preserved={preserved}")
+    print(f"[capture] applied — read_new={inserted} preserved={preserved} "
+          f"pages_archived={archived} failed={failed}")
 
-    # Belief-update-due: persist a DURABLE flag (no LLM) when a researcher's
-    # cumulative response count crosses a 10-multiple, so an unattended cron
-    # crossing leaves a machine-readable signal for the operator.
     if affected_rids:
         totals = _response_totals(sch)
         due = sorted(r for r in affected_rids
@@ -205,9 +236,8 @@ def main() -> int:
             print(f"[capture] belief_update_due persisted to "
                   f"archive_weekly_belief_due: {due}")
             print("[capture]   → operator: run the belief update + "
-                  "`build_researcher_queue.py --apply` so next week's digest "
-                  "reflects the learned preferences.")
-    return 0
+                  "`build_researcher_queue.py --apply`.")
+    return 1 if failed else 0
 
 
 if __name__ == "__main__":

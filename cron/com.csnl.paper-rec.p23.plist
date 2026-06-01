@@ -5,16 +5,16 @@
   <key>Label</key>
   <string>com.csnl.paper-rec.p23</string>
 
-  <!-- Fire every 30 minutes (at :00 and :30 of every hour, every day).
-       The shell wrapper self-routes by KST day/hour:
-         Mon 09:00 build+send · Sun 18:00 expire · Sun 09:00 preview ·
-         every other tick → capture_responses.
-       TZ=Asia/Seoul forces KST so the :00 ticks line up with the KST hours. -->
+  <!-- Fire once a week: Wednesday 14:00 KST (after the Wed-morning PaperBlitz).
+       The wrapper runs one pass: capture checkboxes → refill boards → send →
+       mirror. TZ=Asia/Seoul forces KST. launchd re-fires a missed slot on wake.
+       (Weekday 3 = Wednesday in launchd: 0/7=Sun, 1=Mon, 2=Tue, 3=Wed.) -->
   <key>StartCalendarInterval</key>
-  <array>
-    <dict><key>Minute</key><integer>0</integer></dict>
-    <dict><key>Minute</key><integer>30</integer></dict>
-  </array>
+  <dict>
+    <key>Weekday</key><integer>3</integer>
+    <key>Hour</key><integer>14</integer>
+    <key>Minute</key><integer>0</integer>
+  </dict>
 
   <key>WorkingDirectory</key>
   <string>/Users/csnl/Documents/claude/csnl-paper-rec</string>
@@ -38,7 +38,11 @@
   <key>StandardErrorPath</key>
   <string>/Users/csnl/Documents/claude/csnl-paper-rec/state/cron-p23.log</string>
 
+  <!-- RunAtLoad=true so a Mac that was powered off at Wed 14:00 KST runs the
+       missed routine on next boot. The wrapper's once-per-week guard
+       (state/p23_last_run_week) makes load/boot fires idempotent and only runs
+       on/after Wed 14:00 KST. -->
   <key>RunAtLoad</key>
-  <false/>
+  <true/>
 </dict>
 </plist>

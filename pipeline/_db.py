@@ -17,6 +17,7 @@ from __future__ import annotations
 
 import json
 import os
+import re
 import subprocess
 from pathlib import Path
 
@@ -50,8 +51,17 @@ def _req(key: str) -> str:
 
 
 def ledger_schema() -> str:
-    """Read-write ledger schema name (never csnl_research)."""
+    """Read-write ledger schema name (never csnl_research).
+
+    The name is interpolated into SQL strings (query_json takes no params), so
+    it is validated as a plain SQL identifier to refuse anything that could
+    break or inject — defensive even though CPR_LEDGER_SCHEMA is operator-set.
+    """
     s = os.environ.get("CPR_LEDGER_SCHEMA", "csnl_paper_rec").strip()
+    if not re.match(r"^[A-Za-z_][A-Za-z0-9_]*$", s):
+        raise RuntimeError(
+            f"Invalid ledger schema name {s!r} (must match "
+            f"^[A-Za-z_][A-Za-z0-9_]*$).")
     if s in ("csnl_research", "public", "information_schema", "pg_catalog"):
         raise RuntimeError(f"Refusing to use {s!r} as the ledger schema.")
     return s

@@ -115,6 +115,16 @@ def doi_url(paper: dict) -> Optional[str]:
     return f"https://doi.org/{doi}" if doi else None
 
 
+def paper_title(paper: dict) -> str:
+    """The paper title verbatim (the Notion 'Title' column)."""
+    return (paper.get("title") or "").strip()
+
+
+def authors_str(paper: dict) -> str:
+    """APA-style author list only (the Notion '저자' column)."""
+    return apa_authors(paper.get("authors_json"))
+
+
 def _frameworks_ko(frameworks: Any) -> str:
     fws = _as_list(frameworks)
     bits = []
