@@ -91,6 +91,7 @@ def _properties(row: dict, props: dict) -> dict:
         props["researcher"]:     N.p_select(row.get("researcher_label")),
         props["tier"]:           N.p_select(row.get("tier_at_send")),
         props["read"]:           N.p_checkbox(False),
+        props["present"]:        N.p_checkbox(False),
         props["recommendation"]: N.p_rich_text(render.recommendation_ko(row)),
         props["doi"]:            N.p_url(render.doi_url(row)),
         props["sent_at"]:        N.p_date((row.get("sent_at") or None)),

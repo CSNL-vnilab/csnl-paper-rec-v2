@@ -17,6 +17,7 @@ state/.ARCHIVE_EMBED_APPROVED
 state/.P23_ENABLED
 state/.cron_p23.lock
 state/p23_last_run_week
+state/p23_last_present_day
 
 # P13 archive dry-run artifacts (regenerable from --apply pipeline)
 state/archive/*.jsonl

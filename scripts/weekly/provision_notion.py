@@ -58,6 +58,7 @@ def _desired_schemas() -> dict[str, dict]:
         "Researcher":     {"type": "select", "options": inits},
         "Tier":           {"type": "select", "options": ["S", "A", "B", "C"]},
         "읽음":            {"type": "checkbox"},
+        "발표 예정":        {"type": "checkbox"},
         "Recommendation": {"type": "rich_text"},
         "DOI":            {"type": "url"},
         "Sent At":        {"type": "date"},

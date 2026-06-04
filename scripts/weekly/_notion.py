@@ -60,6 +60,7 @@ _DEFAULT_DIGEST_PROPS: dict[str, str] = {
     "researcher":     "Researcher",     # select    — BHL/BYL/...
     "tier":           "Tier",           # select    — S/A/B/C
     "read":           "읽음",            # checkbox  — researcher checks when read
+    "present":        "발표 예정",        # checkbox  — researcher flags PaperBlitz pick
     "recommendation": "Recommendation",  # rich_text — Korean rationale
     "doi":            "DOI",            # url       — paper link
     "sent_at":        "Sent At",        # date      — recommended-at
@@ -74,6 +75,7 @@ _DIGEST_PROP_TYPES: dict[str, str] = {
     "researcher":     "select",
     "tier":           "select",
     "read":           "checkbox",
+    "present":        "checkbox",
     "recommendation": "rich_text",
     "doi":            "url",
     "sent_at":        "date",

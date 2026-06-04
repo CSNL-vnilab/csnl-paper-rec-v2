@@ -5,16 +5,15 @@
   <key>Label</key>
   <string>com.csnl.paper-rec.p23</string>
 
-  <!-- Fire once a week: Wednesday 14:00 KST (after the Wed-morning PaperBlitz).
-       The wrapper runs one pass: capture checkboxes → refill boards → send →
-       mirror. TZ=Asia/Seoul forces KST. launchd re-fires a missed slot on wake.
-       (Weekday 3 = Wednesday in launchd: 0/7=Sun, 1=Mon, 2=Tue, 3=Wed.) -->
+  <!-- Wednesday (Weekday 3; 0/7=Sun): 08:00 KST = PaperBlitz present-day email;
+       14:00 KST = the weekly routine (capture → refill → send → mirror) + the
+       new-recs email. TZ=Asia/Seoul forces KST. The wrapper routes by hour and
+       guards once-per-week / once-per-day. launchd re-fires a missed slot on wake. -->
   <key>StartCalendarInterval</key>
-  <dict>
-    <key>Weekday</key><integer>3</integer>
-    <key>Hour</key><integer>14</integer>
-    <key>Minute</key><integer>0</integer>
-  </dict>
+  <array>
+    <dict><key>Weekday</key><integer>3</integer><key>Hour</key><integer>8</integer><key>Minute</key><integer>0</integer></dict>
+    <dict><key>Weekday</key><integer>3</integer><key>Hour</key><integer>14</integer><key>Minute</key><integer>0</integer></dict>
+  </array>
 
   <key>WorkingDirectory</key>
   <string>/Users/csnl/Documents/claude/csnl-paper-rec</string>
