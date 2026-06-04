@@ -114,6 +114,12 @@ def _pref_code_set(prefs: dict) -> set[str]:
     return out
 
 
+# P26d — reasoning-gate composite bonus, mirroring
+# scripts/archive/build_researcher_queue.py _RELEVANCE_BONUS so the interview
+# re-rank honors the gate's A/B/C judgement (not cosine+dim alone). Keep in sync.
+_RELEVANCE_BONUS = {"A": 0.04, "B": 0.03, "C": 0.03}
+
+
 def _composite(cos: float, dim_score: float, n_combos: int) -> float:
     bonus = min(_MAX_COMBO_BONUS, _COMBO_STEP * n_combos)
     return _W_COS * max(0.0, cos) + _W_DIM * dim_score + bonus
@@ -148,6 +154,21 @@ def _latest_prefs(sch: str, init: str) -> dict:
     return v or {}
 
 
+def _load_relevance(sch: str, init: str) -> dict:
+    """P26d — {canonical_id: relevance_type} for this researcher's reasoning-gate
+    A/B/C judgements (archive_relevance_decisions). Empty on any error → behaves
+    exactly like pre-P26d (no bonus)."""
+    try:
+        rows = query(
+            f"SELECT canonical_id, relevance_type FROM {sch}.archive_relevance_decisions "
+            f"WHERE researcher_id = %s AND relevance_type IN ('A','B','C')",
+            (init,),
+        )
+    except Exception:
+        return {}
+    return {r["canonical_id"]: r["relevance_type"] for r in rows}
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--init", required=True)
@@ -172,6 +193,7 @@ def main() -> int:
     prefs = _latest_prefs(sch, args.init)
     combos = _load_taxonomy_combos() if prefs else []
     pref_codes = _pref_code_set(prefs) if prefs else set()
+    relevance = _load_relevance(sch, args.init)  # P26d reasoning-gate bonus
 
     def _refresh(rows: list[dict]) -> list[dict]:
         """Recompute composite + tier for each row against latest prefs.
@@ -193,6 +215,12 @@ def main() -> int:
             chits = _combo_hits(pdims, plab, combos, pref_codes)
             fresh_comp = _composite(cos, ds, len(chits))
             fresh_tier = _tier(cos, ds, len(chits))
+            # P26d — mirror the build-time reasoning-gate bonus so a gate-relevant
+            # paper (A/B/C) is nudged up in the interview re-rank too (build uses
+            # the same _RELEVANCE_BONUS). No decision → +0 (pre-P26d behaviour).
+            _rt = relevance.get(r.get("canonical_id"))
+            if _rt:
+                fresh_comp = round(fresh_comp + _RELEVANCE_BONUS[_rt], 4)
             r["composite"]  = fresh_comp
             r["tier"]       = fresh_tier
             r["dim_match"]  = {
