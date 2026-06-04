@@ -431,6 +431,47 @@ def _load_paper_lab_tags() -> dict[str, list[str]]:
     return out
 
 
+def _load_relevance_decisions(init: str) -> dict[str, str]:
+    """P26d — return {canonical_id: relevance_type} for this researcher's
+    reasoning-gate A/B/C judgements (archive_relevance_decisions).
+
+    These DRIVE inclusion: a paper the gate deemed relevant (A=aim,
+    B=phenomenon, C=mechanism/theory) is EXEMPT from the COS_FLOOR cutoff
+    and gets a composite bonus, so cross-domain / cross-species papers the
+    gate liked but cosine would drop still surface. 'none' decisions are
+    intentionally NOT loaded (they neither boost nor exempt). Returns {} on
+    any error so the legacy cosine-only path is fully preserved."""
+    sys.path.insert(0, str(_REPO_ROOT / "pipeline"))
+    from _db import query_json  # noqa: E402
+    try:
+        rows = query_json(
+            "SELECT canonical_id, relevance_type "
+            "FROM csnl_paper_rec.archive_relevance_decisions "
+            f"WHERE researcher_id = '{init}' "
+            "  AND relevance_type IN ('A','B','C')"
+        )
+    except Exception as e:
+        print(f"[queue] {init}: relevance-decision load failed ({e}); "
+              f"falling back to cosine-only", file=sys.stderr)
+        return {}
+    return {r["canonical_id"]: r["relevance_type"] for r in rows}
+
+
+# P26d — composite bonus per reasoning-gate relevance type.
+# Tuned DOWN after a 7-researcher strict queue review: the original
+# A:.15/B,C:.10 was ≈ the entire S-tier composite spread, so one gate tick beat
+# a real cosine/fingerprint advantage. Combined with gate-coverage ASYMMETRY
+# (scouts judged only live candidates; strong archive classics are rt=None =
+# absent, NOT rejected), it inverted on-thesis archive papers below gated-but-
+# secondary live papers (JOP rate-distortion classics, MSY categorical-rep,
+# SMJ Torralba'06; BYL 27/27 inversions). Lowered to a gentle below-spread
+# nudge — live papers already populate the date-based 'recent' chunk, so this
+# surfaces gate-relevant papers without burying ungated archive. STRUCTURAL fix
+# deferred to P26e: gate-judge high-cosine archive candidates too (symmetric),
+# after which a larger bonus would be fair. Floor-exemption (below) is kept.
+_RELEVANCE_BONUS = {"A": 0.04, "B": 0.03, "C": 0.03}
+
+
 def _load_latest_profile(init: str) -> dict:
     """Return latest archive_profile_verifications row for init (or {})."""
     sys.path.insert(0, str(_REPO_ROOT / "pipeline"))
@@ -723,6 +764,14 @@ def main() -> int:
             print(f"[queue] {init}: empty interest text — skipping")
             continue
 
+        # P26d — reasoning-gate relevance decisions for this researcher.
+        # {canonical_id: 'A'|'B'|'C'}. Drives COS_FLOOR exemption + composite
+        # bonus below. Empty dict => identical behavior to pre-P26d.
+        relevance = _load_relevance_decisions(init)
+        if relevance:
+            print(f"[queue] {init}: reasoning-gate relevance decisions "
+                  f"loaded={len(relevance)} (A/B/C; exempt floor + bonus)")
+
         # P14: load latest verified profile (dim_preferences + chunk_mix).
         # P19a: prefer the researcher's fingerprint when present.
         # Auto-derive from interest text if neither is available.
@@ -846,10 +895,17 @@ def main() -> int:
             if fp_phrases:
                 kw_score, kw_matched = _bm25_score(papers[c] or {}, fp_phrases)
             kw_norm = math.tanh(kw_score / 25.0) if fp_phrases else 0.0
+            # P26d — reasoning-gate exemption: a paper the gate judged
+            # relevant (A/B/C) stays eligible even below COS_FLOOR. This is
+            # the whole point of the gate-driven path — surface cross-domain
+            # / cross-species papers cosine would otherwise drop. Papers
+            # WITHOUT a gate decision keep the exact pre-P26d floor logic.
+            gate_relevant = c in relevance
             # Floor: hard 0.18 when no fingerprint; soft otherwise.
-            if not fp_phrases and cos < COS_FLOOR:
+            if not gate_relevant and not fp_phrases and cos < COS_FLOOR:
                 continue
-            if fp_phrases and cos < COS_FLOOR and kw_norm < 0.20 and mode == "linear":
+            if not gate_relevant and fp_phrases and cos < COS_FLOOR \
+                    and kw_norm < 0.20 and mode == "linear":
                 # in linear mode, neither signal carries this paper — skip.
                 # in RRF mode keep it; RRF reorders by rank fusion.
                 continue
@@ -894,6 +950,14 @@ def main() -> int:
             else:
                 comp = _composite(cos, ds, len(chits),
                                   kw_bm25=row["kw_score"] if fp_phrases else None)
+            # P26d — reasoning-gate composite bonus. The gate (not cosine)
+            # drives inclusion, so a gate-relevant paper is lifted in the
+            # ranking: A=+0.15, B/C=+0.10. Papers WITHOUT a gate decision get
+            # +0 (no behavior change). Applied after the mode-specific comp so
+            # it is uniform across linear / RRF.
+            rel_type = relevance.get(c)
+            if rel_type:
+                comp = round(comp + _RELEVANCE_BONUS[rel_type], 4)
             tier_abs = _tier(cos, ds, len(chits)) if taxonomy else "B"
             chunk = _chunk_for(papers[c] or {}, today)
             top_signals: list[dict] = []
