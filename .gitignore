@@ -26,6 +26,7 @@ state/archive/_tmp/
 state/archive/queues/
 state/archive/profiles/
 state/archive/discovery_run/
+state/archive/synopses/
 
 # P15: taxonomy moved into plugin/data/taxonomy.json (ships with marketplace
 # install). state/archive/ now only contains regenerable dry-run artifacts,
