@@ -950,11 +950,11 @@ def main() -> int:
             else:
                 comp = _composite(cos, ds, len(chits),
                                   kw_bm25=row["kw_score"] if fp_phrases else None)
-            # P26d — reasoning-gate composite bonus. The gate (not cosine)
-            # drives inclusion, so a gate-relevant paper is lifted in the
-            # ranking: A=+0.15, B/C=+0.10. Papers WITHOUT a gate decision get
-            # +0 (no behavior change). Applied after the mode-specific comp so
-            # it is uniform across linear / RRF.
+            # P26d — reasoning-gate composite bonus (see _RELEVANCE_BONUS:
+            # A=+0.04, B/C=+0.03, tuned down from .15/.10 after the strict
+            # review). The gate nudges inclusion; papers WITHOUT a gate decision
+            # get +0 (no behavior change). Applied after the mode-specific comp
+            # so it is uniform across linear / RRF.
             rel_type = relevance.get(c)
             if rel_type:
                 comp = round(comp + _RELEVANCE_BONUS[rel_type], 4)
@@ -1004,6 +1004,30 @@ def main() -> int:
         for chunk_name, cands in per_chunk.items():
             for cand in cands:
                 cand["tier_absolute"] = cand["tier"]
+
+        # P26e — collapse preprint/published duplicates (same title_norm) ACROSS
+        # ALL chunks for this researcher: keep the single highest-composite
+        # record, drop the rest. Must be global (not per-chunk) because a pair
+        # can straddle recent/mid chunks when preprint and published versions
+        # carry different years. (14 such pairs surfaced after the live ingest.)
+        _best_cid_by_tn: dict[str, str] = {}
+        _best_comp_by_tn: dict[str, float] = {}
+        for _cands in per_chunk.values():
+            for _it in _cands:
+                _tn = ((papers.get(_it["canonical_id"]) or {}).get("title_norm") or "").strip()
+                if not _tn:
+                    continue
+                _comp = _it["composite"] or 0.0
+                if _tn not in _best_comp_by_tn or _comp > _best_comp_by_tn[_tn]:
+                    _best_comp_by_tn[_tn] = _comp
+                    _best_cid_by_tn[_tn] = _it["canonical_id"]
+        _keep_cids = set(_best_cid_by_tn.values())
+        for _ch in list(per_chunk.keys()):
+            per_chunk[_ch] = [
+                _it for _it in per_chunk[_ch]
+                if not ((papers.get(_it["canonical_id"]) or {}).get("title_norm") or "").strip()
+                or _it["canonical_id"] in _keep_cids
+            ]
 
         rows_out: list[dict] = []
         token = str(uuid.uuid4())
