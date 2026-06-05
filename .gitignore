@@ -50,3 +50,4 @@ __pycache__/
 
 # node (playwright/pdfjs crawl stack)
 node_modules/
+state/archive/surveys/
