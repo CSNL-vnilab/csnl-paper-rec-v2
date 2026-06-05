@@ -259,6 +259,78 @@ def update_page(page_id: str, properties: dict) -> dict:
                     json_body={"properties": properties})
 
 
+# ----------------------------------------------------- page tree (P25 surveys)
+# The weekly digest/history live in *databases*. The researcher survey pages,
+# by contrast, are ordinary content pages nested under the "CSNL 논문 추천" page
+# (the parent the integration can write to). These helpers cover page-parented
+# page creation + block-children read/append/clear, which the digest flow never
+# needed. They perform no writes on import.
+
+def database_parent_page_id(db: dict) -> Optional[str]:
+    """Return the page_id a database lives under, or None if it is workspace-
+    level / parented by something else. Notion `parent` shapes vary by version
+    (page_id | data_source_id-with-database parent | workspace)."""
+    parent = db.get("parent") or {}
+    pid = parent.get("page_id")
+    return pid or None
+
+
+def create_child_page(parent_page_id: str, title: str,
+                      children: Optional[list] = None) -> dict:
+    """Create a content page under another page. `children` (≤100 blocks) is
+    optional; more blocks are appended separately via append_block_children."""
+    body: dict[str, Any] = {
+        "parent": {"page_id": parent_page_id},
+        "properties": {"title": {"title": [
+            {"type": "text", "text": {"content": _truncate(title)}}]}},
+    }
+    if children:
+        body["children"] = children
+    return _request("POST", "/pages", json_body=body)
+
+
+def list_block_children(block_id: str, page_size: int = 100) -> list[dict]:
+    """List a block/page's direct children, paginating."""
+    out: list[dict] = []
+    cursor = None
+    while True:
+        q = f"?page_size={page_size}"
+        if cursor:
+            q += f"&start_cursor={cursor}"
+        j = _request("GET", f"/blocks/{block_id}/children{q}")
+        out.extend(j.get("results", []))
+        if not j.get("has_more"):
+            break
+        cursor = j.get("next_cursor")
+        if not cursor:
+            break
+    return out
+
+
+def append_block_children(block_id: str, children: list) -> dict:
+    """Append up to 100 blocks to a page/block. The caller must chunk to ≤100."""
+    return _request("PATCH", f"/blocks/{block_id}/children",
+                    json_body={"children": children})
+
+
+def delete_block(block_id: str) -> dict:
+    """Archive (soft-delete) a single block. Used to clear a page before a
+    content replace so re-running --apply does not duplicate content."""
+    return _request("DELETE", f"/blocks/{block_id}")
+
+
+def find_child_page_by_title(parent_page_id: str, title: str) -> Optional[dict]:
+    """Return the first direct child page whose title matches exactly, else
+    None. Used for idempotent create-or-replace of the container + per-
+    researcher pages."""
+    for blk in list_block_children(parent_page_id):
+        if blk.get("type") != "child_page":
+            continue
+        if (blk.get("child_page") or {}).get("title") == title:
+            return blk
+    return None
+
+
 # ----------------------------------------------------- property value builders
 
 def _truncate(s: str, n: int = 2000) -> str:
