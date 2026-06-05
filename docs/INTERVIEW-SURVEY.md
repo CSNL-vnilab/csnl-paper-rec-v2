@@ -4,7 +4,16 @@ core fields, truth-in-advertising (current engine = priority rerank; tuple-
 admission/exclude/definition matching is the P28 build spec), MSY blank handling.
 One more cycle (c3) remains, then pre-fill per researcher with [확인필요] flags. -->
 
-# CSNL 논문 추천 — 연구 프로파일 정밀 설문 (v5)
+# CSNL 논문 추천 — 연구 프로파일 정밀 설문 (v6)
+
+<!-- v6 — operator round 2: 지도교수=SHL(이상훈) default; ban arbitrary Korean
+translation of academic terms; B8′ demands a minimal mechanism/direction
+speculation w/ examples (not vague "어떻게"), 미정 allowed; exclusions reframed to
+phenomenon/research-focus mismatch (NOT domain/species) + mandatory structured
+contrast template + de-weighted as past-answer reference (PI confirms);
+phenomenon = THE connection criterion, cross-species/domain welcome; encourage
+미정 for exploratory parts; don't over-weight juniors' prior answers. -->
+
 
 <!-- v4 — operator correction: the purpose is to recommend papers that can be
 GENUINELY CONNECTED to the research (shared aim/phenomenon/mechanism, incl.
@@ -33,6 +42,13 @@ domain×phenomenon×task (N/A-금지 only there). Opus burden/pedantry review ne
 > 우연히 겹치는 것 — 과거 범위-밖 추천의 원인)을 가르는 **잣대**이지, 좁히는
 > 필터가 아닙니다. ⇒ 다른 종/도메인 논문도 *진짜 연결되면 계속 추천*되고, §H 에서
 > 본인이 **명시적으로 빼는 것만** 제외됩니다.
+>
+> **★★ 연결의 핵심 기준 = phenomenon(research focus).** 피험자가 human 이 아니어도
+> (AI / rodent / primate / clinical) 또는 domain 이 달라도 (value / emotion / face /
+> gender / biological motion 등) 그 **현상(research focus)** 이 연결되면 충분히
+> 도움이 됩니다 — **종·도메인만으로 자동 배제하지 않습니다.** 배제(§H)는 *"논문의
+> phenomenon/research-focus 가 내 것과 다르다"* 일 때만 의미가 있습니다(종·도메인이
+> 달라서가 아니라).
 
 **작성 방법 — 꼭 읽어주세요**
 - 표기: **[자동]** = 메모리로 자신 있게 채운 값(맞으면 그대로 두기, 틀리면 ✗ 후
@@ -48,7 +64,10 @@ domain×phenomenon×task (N/A-금지 only there). Opus burden/pedantry review ne
   대신 **구체적으로** 부탁드립니다(모르면 `N/A`, 빈칸 금지).
 - **연결 anchor = B-요약 튜플의 domain×phenomenon×task 는 N/A 금지** — 이게 있어야
   추천이 "연결"됩니다. 나머지(metric·조건·방향 등)는 해당 없으면 `N/A`.
-- 용어는 **본인이 실제 쓰는 정확한 명칭**으로.
+- 용어는 **본인이 실제 쓰는 정확한 명칭**으로. **학술 용어는 원어(영어) 그대로 —
+  임의 한글 번역 금지** (예: "serial dependence" → "연속 의존성" ✗).
+- **미정·탐색 중인 부분은 "미정"으로 두셔도 됩니다** — 무리하게 추측으로 메우지
+  마세요(단, §B 의 domain×phenomenon×task 연결 anchor 는 채워주세요).
 
 > (작동 방식, 정직하게) 현재 엔진은 키워드 substring 으로 추천 **우선순위**를
 > 높이는 수준입니다. 이 설문이 만드는 정밀 메모리를 **실제로 좁히는 매칭**(아래
@@ -64,7 +83,7 @@ domain×phenomenon×task (N/A-금지 only there). Opus burden/pedantry review ne
 |---|---|---|---|
 | 이름(이니셜) | | [ ] | |
 | 직책 | | [ ] | |
-| 소속 lab / 지도교수 | | [ ] | |
+| 소속 lab / 지도교수 | CSNL / **이상훈 (SHL, Sang-Hun Lee)** — 전원 동일 [자동] | [ ] | |
 | active 프로젝트 수 | | [ ] | |
 | 주 연구 한 문장 | | [ ] | |
 
@@ -107,9 +126,15 @@ domain×phenomenon×task (N/A-금지 only there). Opus burden/pedantry review ne
   autocorrelation / EEG band amp(band) / alpha phase / pupil diameter_ → ______ [ ]
 - **B8. (유형1) 가설 한 문장**(템플릿): "**[B1]**에서 **[B3]**로 **[B6]**을 비교하면
   **[B5]**이 **[B7]**로 **[방향]** 나타날 것" → ______ [ ]
-- **B8′. (유형2) 탐구 질문 / 관심 현상**(방향 예측 불필요): "**[B1]**에서 **[B3]**로
-  **[B5]**(들)이 어떻게 나타나는지 탐색 — 방향 예측: 미정" → ______ [ ]
-  *(유형1·2 중 본인에 해당하는 한 줄만)*
+- **B8′. (유형2) 탐구 질문 + 최소 메커니즘/방향 speculation** — "어떻게"로만 두지
+  말고 **가능한 메커니즘이나 방향을 한 조각이라도** 적어주세요 (확정 아니어도 OK,
+  정말 없으면 "미정"). 예시:
+  > ▸ "post-decisional bias 는 attraction 을, perceptual carryover 는 repulsion 을
+  >   일으켜 서로 상충하는 힘으로 bias 를 만든다"
+  > ▸ "ITI/ISI 가 길수록(또는 실험조건 X 가 클수록) [B5] bias 가 커진다"
+  > ▸ "두 조건이 attraction vs repulsion 으로 갈릴 것"
+  → ______ [ ]
+  *(유형1·2 중 해당하는 것 한 줄. 메커니즘이 떠오르면 유형1처럼 방향을 적어도 좋습니다.)*
 - **B9. 배경**: ______ [ ]
 - **B10. Seed paper**: ______ [ ]
 
@@ -139,18 +164,25 @@ domain×phenomenon×task (N/A-금지 only there). Opus burden/pedantry review ne
 
 **H1. in-scope 한 단락**: ______ [ ]
 
-**H2–H4. 제외 목록** — **각 행이 known_negatives 1건**이 됩니다. 구체적으로,
-한 항목당 한 행. (유형 = domain / phenomenon / method / population / topic /
-anti-example(실제 "오면 안 되는" 논문 제목) / adjacent(인접하지만 관심 없음))
+**H2–H4. 제외 목록** *(신중히 — 종·도메인만으로 빼지 마세요)* — 각 행이
+known_negatives 1건. **배제 기준은 "논문의 phenomenon/research-focus 가 내 것과
+다르다"**이지, 종·도메인이 달라서가 아닙니다(다른 도메인·종도 현상만 맞으면 도움).
+**"왜 아닌가"는 반드시 구체적 대조**로 적어주세요 — 추상적 사유("관심 없음", "거리
+멈")는 AI 가 근거를 추론할 수 없어 적용되지 않습니다. 템플릿:
+> "내 research-focus 는 **[내 domain]의 [내 phenomenon]**인데, 이 논문은
+> **[논문 domain]의 [논문 phenomenon]**을 다룬다 → 내 phenomenon([X])에서 벗어남."
 
-| 제외 항목 (구체) | 유형 | 왜 아닌가 (한 줄) |
+| 제외 항목 (구체) | 유형 | 왜 아닌가 (구체 대조 — 위 템플릿) |
 |---|---|---|
-| _예: value-based decision·reinforcement learning_ | topic | 가치기반 의사결정은 내 지각/추정 범위 밖 |
-| _예: navigation / grid·place cell_ | topic | |
-| _예: multi-item WM capacity_ | phenomenon | |
-| _(실제로 추천돼서 안 됐던 논문 제목)_ | anti-example | |
-| _(인접하지만 관심 없는 주제)_ | adjacent | |
+| _예: value-based choice (선호 형성)_ | phenomenon | "내 focus 는 perceptual estimation bias 인데, 이 논문은 value-based choice 의 선호 형성을 다룸 → 내 phenomenon 밖" |
+| _(실제로 추천됐는데 아니었던 논문 제목)_ | anti-example | "내 [domain]의 [phenomenon]인데 이 논문은 [domain′]의 [phenomenon′] → 내 phenomenon 밖" |
 | | | |
+
+> *(유형 = phenomenon / research-focus / method(보조 한정) / anti-example / adjacent.
+> **domain·species·population 단독은 제외 사유가 아님** — 그건 환영 대상이라 §H5 도
+> 기본 ○.)*
+> *(사전기입된 제외 항목은 **과거 인터뷰 응답 참고용** — 종·도메인 기준으로 너무
+> 넓게 빼지 않았는지 재확인해 주세요. 최종은 PI(SHL) 컨펌 예정.)*
 
 **H5. 종/집단/방법 허용도** *(대부분 비워도 됩니다)* — 시스템 기본은 *현상·메커니즘이
 맞으면 종 불문 추천*입니다. **좁히고 싶은 행만** △(현상·메커니즘이 정확히 맞을 때만)
