@@ -4,7 +4,7 @@ core fields, truth-in-advertising (current engine = priority rerank; tuple-
 admission/exclude/definition matching is the P28 build spec), MSY blank handling.
 One more cycle (c3) remains, then pre-fill per researcher with [확인필요] flags. -->
 
-# CSNL 논문 추천 — 연구 프로파일 정밀 설문 (v4)
+# CSNL 논문 추천 — 연구 프로파일 정밀 설문 (v5)
 
 <!-- v4 — operator correction: the purpose is to recommend papers that can be
 GENUINELY CONNECTED to the research (shared aim/phenomenon/mechanism, incl.
@@ -12,7 +12,11 @@ cross-domain/species/method), NOT papers that must EXACTLY match the tuples.
 Specificity = the yardstick that separates a genuine connection from a spurious
 (word-overlap) one — not an exact-match filter. So "admission invariant" → a
 CONNECTION invariant; the tuple is the connection ANCHOR, not a match gate.
-(v3 = 3-cycle Opus 4.8 + GPT-5.5 review.) -->
+(v3 = 3-cycle Opus 4.8 + GPT-5.5 review.)
+v5 — exploratory/framework block type (B 유형2; directional prediction optional),
+ban-vague-language rule + uncertainty-is-the-researcher's-responsibility,
+[자동]/【확인필요】 confidence convention, connection anchor narrowed to
+domain×phenomenon×task (N/A-금지 only there). Opus burden/pedantry review next. -->
 
 
 ## 들어가며 (연구원께)
@@ -31,14 +35,19 @@ CONNECTION invariant; the tuple is the connection ANCHOR, not a match gate.
 > 본인이 **명시적으로 빼는 것만** 제외됩니다.
 
 **작성 방법 — 꼭 읽어주세요**
-- 사전기입 항목 옆 `[ ]` 에 **✓(맞음)/✗(틀림)** 표시. **빈 [ ] = 미확인 → 메모리
-  미반영.** (과거 rubber-stamp 방지)
-- 직접 새로 쓴 답(사전기입이 비었거나 단어조각이라 본인이 작성)은 ✓ 없이도
-  저장됩니다. **사전기입이 단어조각/엉터리면 ✗ 후 다시 써주세요.**
-- `【확인필요】` = 추정값. 틀리면 바로 수정.
-- **B 섹션의 핵심 칸(B1·B3·B5·B7·B8)과 B-요약 튜플은 `N/A` 금지** — 비우면 그
-  가설 블록은 *저장되지 않습니다*(불완전 튜플은 추천 근거가 될 수 없음). 그 외
-  항목은 해당 없으면 `N/A`.
+- 표기: **[자동]** = 메모리로 자신 있게 채운 값(맞으면 그대로 두기, 틀리면 ✗ 후
+  수정) · **【확인필요】** = 추정이라 *반드시* 확인. 직접 새로 쓴 답은 ✓ 없이도
+  저장됩니다.
+- **★ 애매한 표현 금지:** "잘 / 적당히 / 다양한 / 관련된 / 등등 / ~수도 있다 /
+  ~를 보려고 한다" 같은 모호어·감정적 묘사 금지 → **구체적·확정적**으로.
+  예) ✗ "serial dependence 를 잘 보려고 한다" → ✓ "oriented-Gabor delayed-
+  estimation 에서 직전 자극 방향과 현재 오차의 DoG amplitude 를 측정한다".
+- **★ 정확도 = 입력의 구체성:** 비우거나 애매하게 둔 항목은 **메모리에 반영되지
+  않습니다** — 빈칸을 엔진이 추측해 넓게 추천하던 것이 과거 범위-밖 문제의 원인
+  이었습니다. 추천 정확도는 여기 입력의 구체성에 직접 달려 있으니, 빈칸/애매어
+  대신 **구체적으로** 부탁드립니다(모르면 `N/A`, 빈칸 금지).
+- **연결 anchor = B-요약 튜플의 domain×phenomenon×task 는 N/A 금지** — 이게 있어야
+  추천이 "연결"됩니다. 나머지(metric·조건·방향 등)는 해당 없으면 `N/A`.
 - 용어는 **본인이 실제 쓰는 정확한 명칭**으로.
 
 > (작동 방식, 정직하게) 현재 엔진은 키워드 substring 으로 추천 **우선순위**를
@@ -61,10 +70,20 @@ CONNECTION invariant; the tuple is the connection ANCHOR, not a match gate.
 
 ---
 
-## B. 핵심 가설 (가설/프로젝트별 블록 — atomic) ★최우선·핵심칸 N/A 금지
+## B. 핵심 가설/주제 (프로젝트별 블록 — atomic) ★최우선
 
-> **비중 큰 프로젝트 최대 3개**만 블록 작성(많으면 핵심 3개). 각 블록에 **가설 ID**
-> (A1, A2, …)를 부여하세요 — 이 ID 가 추천의 **원자 단위**가 됩니다.
+> **비중 큰 프로젝트 최대 3개**만 블록 작성. 각 블록에 **가설 ID**(A1, A2, …)를
+> 부여 — 이 ID 가 추천 연결의 **원자 단위**입니다.
+>
+> **블록 유형** — 명제형 가설이 *아니어도 괜찮습니다.* 각 블록 첫 줄에 유형 표시:
+> - **[유형1 명제형]** — 방향 예측이 있는 가설. B1–B10 작성(B8 예측 포함).
+> - **[유형2 탐색형/프레임워크형]** — 아직 narrow 안 됨 / 현상을 explore·발견하는
+>   연구 / falsifiable 하지 않은 framework. B1–B7 을 *채울 수 있는 만큼* 구체적으로
+>   (특히 **domain·phenomenon·task**) + B8 대신 **B8′**(탐구 질문/관심 현상, 방향
+>   예측 불필요) + B9·B10. "방향 예측 미정"이라 써도 됩니다. **domain×phenomenon×
+>   task 만 구체적이면 연결 추천은 유형1과 동일하게 작동**합니다(예측은 순위
+>   refiner 일 뿐 연결 조건이 아님). ※ 단, "탐색형"이라도 *무엇을* 보는지(domain·
+>   현상·과제)는 애매어 없이 구체적으로 — 그게 연결의 anchor 입니다.
 
 ### ▣ 가설 #A1   (사전기입 시 각 칸 [✓/✗])
 
@@ -83,11 +102,14 @@ CONNECTION invariant; the tuple is the connection ANCHOR, not a match gate.
   fallacy …_ → ______ [ ]
 - **B6. 비교 조건**: _same vs diff position / low vs high contrast / same vs diff
   task / set-size / categorical vs continuous …_ → ______ [ ]
-- **B7. 정량화 지표** *필수*: _DoG amp·width / bias slope / θ̂−θ / circular SD·
+- **B7. 정량화 지표** (유형1 권장 · 유형2 미정 가능): _DoG amp·width / bias slope / θ̂−θ / circular SD·
   var(θ̂) / regression β / d′ / JND·threshold / decoding acc / BOLD
   autocorrelation / EEG band amp(band) / alpha phase / pupil diameter_ → ______ [ ]
-- **B8. 가설 한 문장**(템플릿, 필수): "**[B1]**에서 **[B3]**로 **[B6]**을 비교하면
+- **B8. (유형1) 가설 한 문장**(템플릿): "**[B1]**에서 **[B3]**로 **[B6]**을 비교하면
   **[B5]**이 **[B7]**로 **[방향]** 나타날 것" → ______ [ ]
+- **B8′. (유형2) 탐구 질문 / 관심 현상**(방향 예측 불필요): "**[B1]**에서 **[B3]**로
+  **[B5]**(들)이 어떻게 나타나는지 탐색 — 방향 예측: 미정" → ______ [ ]
+  *(유형1·2 중 본인에 해당하는 한 줄만)*
 - **B9. 배경**: ______ [ ]
 - **B10. Seed paper**: ______ [ ]
 
@@ -108,8 +130,8 @@ CONNECTION invariant; the tuple is the connection ANCHOR, not a match gate.
 | A2 | | | | | | |
 | A3 | | | | | | |
 
-> (굵은 3열 = admission key, N/A 금지. 방향 = 예측 부호/유형, 예: attractive /
-> repulsive / 증가 / 감소 / n.s.)
+> (굵은 3열 = 연결 anchor, N/A 금지. 방향(refiner) = 예측 부호/유형, 예: attractive /
+> repulsive / 증가 / 감소 / n.s. / **탐색·미정**[유형2]. 모르면 비워도 됩니다.)
 
 ---
 
@@ -130,9 +152,9 @@ anti-example(실제 "오면 안 되는" 논문 제목) / adjacent(인접하지�
 | _(인접하지만 관심 없는 주제)_ | adjacent | |
 | | | |
 
-**H5. 종/집단/방법 허용도** — **기본 비움 = 미확인(△로 간주)**. 각 칸에 ✓표
-하고 **○(환영)/△(현상·메커니즘이 정확히 내 것과 맞을 때만)/✕(제외)** 중 하나를
-적으세요. **✕/△ 면 "이런 논문" 예 1개 필수**.
+**H5. 종/집단/방법 허용도** *(대부분 비워도 됩니다)* — 시스템 기본은 *현상·메커니즘이
+맞으면 종 불문 추천*입니다. **좁히고 싶은 행만** △(현상·메커니즘이 정확히 맞을 때만)
+또는 ✕(제외)로 표시하고 그 행에만 "이런 논문" 예 1개. 나머지는 빈칸=기본(○) 유지.
 
 | 대상 | ○/△/✕ | [✓확인] | ✕·△ 제외 예 (필수) |
 |---|---|---|---|
@@ -150,15 +172,16 @@ anti-example(실제 "오면 안 되는" 논문 제목) / adjacent(인접하지�
 
 ## G. 키워드 + 과학적 정의 (+ 가설 바인딩)
 
-> 키워드는 **어느 가설 ID 와 묶이는지** 적어야 그 가설의 추천에만 작용합니다.
-> 묶이지 않은(general) 키워드는 *단독으로 논문을 통과시키지 못하고* 순위 보정에만
-> 쓰입니다(context-only).
+> 키워드는 추천 **순위 보정(reranker)**에 쓰입니다(단독으로 논문을 통과시키진
+> 않음). 키워드 *나열*은 가볍게 — 단, **매칭이 헷갈리는 핵심 5개 정도만** 본인
+> operational 정의를 적어주세요(같은 단어가 연구자마다 뜻이 달라서). '제외 의미'·
+> 가설바인딩·출처는 **선택**(충돌하는 용어만).
 
-| 키워드 | operational 정의(필수, 1문장) | **제외 의미**(이 단어가 아닌 것) | 묶이는 가설ID | 출처 |
+| 키워드 | operational 정의 (★핵심 5개만 필수) | 제외 의미 (충돌 용어만·선택) | 가설ID(선택) | 출처(선택) |
 |---|---|---|---|---|
 | _history effect_ | 직전 *자극*이 현재 *지각*을 끄는 효과 | 반응 priming 아님 | A1 | F&W 2014 |
 | | | | | |
-| (10–20개) | | | | |
+| (핵심 위주, 너무 많지 않게) | | | | |
 
 - 헷갈리지만 본인은 구분하는 용어쌍: ______
 
