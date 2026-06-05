@@ -4,7 +4,16 @@ core fields, truth-in-advertising (current engine = priority rerank; tuple-
 admission/exclude/definition matching is the P28 build spec), MSY blank handling.
 One more cycle (c3) remains, then pre-fill per researcher with [확인필요] flags. -->
 
-# CSNL 논문 추천 — 연구 프로파일 정밀 설문 (v6)
+# CSNL 논문 추천 — 연구 프로파일 정밀 설문 (v7)
+
+<!-- v7 — operator round 3: per-project framing (each project=가설ID=연결 단위);
+domain·species = PRIORITY signal, NOT rejection (same domain + neurotypical human
+= default top priority; cross-domain/species ranked lower, never rejected; reject =
+phenomenon-mismatch only; §H5 reframed to priority); academic terms written in FULL
+in the DB — avoid abbreviations, spell out when used (e.g. functional Magnetic
+Resonance Imaging (fMRI)); NO question-count limit — uniform full specificity for
+all researchers (§G definition for every keyword; §D full). Flag-tiering kept. -->
+
 
 <!-- v6 — operator round 2: 지도교수=SHL(이상훈) default; ban arbitrary Korean
 translation of academic terms; B8′ demands a minimal mechanism/direction
@@ -49,6 +58,11 @@ domain×phenomenon×task (N/A-금지 only there). Opus burden/pedantry review ne
 > 도움이 됩니다 — **종·도메인만으로 자동 배제하지 않습니다.** 배제(§H)는 *"논문의
 > phenomenon/research-focus 가 내 것과 다르다"* 일 때만 의미가 있습니다(종·도메인이
 > 달라서가 아니라).
+>
+> **domain·species 는 *우선순위(priority)* 신호일 뿐 기각 기준이 아닙니다** —
+> *동일 domain + neurotypical human = default(최우선)*, 다른 domain·species
+> (AI · rodent · primate · clinical, 또는 value · emotion · face · gender ·
+> biological motion 등 다른 domain)는 **순위만 낮아질 뿐 계속 추천**됩니다.
 
 **작성 방법 — 꼭 읽어주세요**
 - 표기: **[자동]** = 메모리로 자신 있게 채운 값(맞으면 그대로 두기, 틀리면 ✗ 후
@@ -66,6 +80,12 @@ domain×phenomenon×task (N/A-금지 only there). Opus burden/pedantry review ne
   추천이 "연결"됩니다. 나머지(metric·조건·방향 등)는 해당 없으면 `N/A`.
 - 용어는 **본인이 실제 쓰는 정확한 명칭**으로. **학술 용어는 원어(영어) 그대로 —
   임의 한글 번역 금지** (예: "serial dependence" → "연속 의존성" ✗).
+- **약자 지양 · 전체 명칭(full term) 표기**: 약자를 쓸 땐 **전체 명칭을 병기**하세요 —
+  예) functional Magnetic Resonance Imaging (fMRI), drift-diffusion model (DDM),
+  working memory (WM), rate-distortion theory (RDT), inter-stimulus interval (ISI).
+  (DB 에 용어가 온전히 남도록.)
+- 이 설문은 연구원의 **프로젝트별 프로파일**입니다 — 각 프로젝트(가설 ID)가 추천
+  연결의 단위입니다(프로젝트마다 별도 블록·인터뷰).
 - **미정·탐색 중인 부분은 "미정"으로 두셔도 됩니다** — 무리하게 추측으로 메우지
   마세요(단, §B 의 domain×phenomenon×task 연결 anchor 는 채워주세요).
 
@@ -184,9 +204,12 @@ known_negatives 1건. **배제 기준은 "논문의 phenomenon/research-focus �
 > *(사전기입된 제외 항목은 **과거 인터뷰 응답 참고용** — 종·도메인 기준으로 너무
 > 넓게 빼지 않았는지 재확인해 주세요. 최종은 PI(SHL) 컨펌 예정.)*
 
-**H5. 종/집단/방법 허용도** *(대부분 비워도 됩니다)* — 시스템 기본은 *현상·메커니즘이
-맞으면 종 불문 추천*입니다. **좁히고 싶은 행만** △(현상·메커니즘이 정확히 맞을 때만)
-또는 ✕(제외)로 표시하고 그 행에만 "이런 논문" 예 1개. 나머지는 빈칸=기본(○) 유지.
+**H5. 종/집단/방법 — 우선순위 선호** *(대부분 비워도 됩니다)* — **종·도메인은
+기각(reject)이 아니라 우선순위(priority) 신호**입니다. 기본: *동일 domain +
+neurotypical human 이 최우선*, 그 외(macaque · rodent · clinical · AI 등)는 *순위만
+낮을 뿐 계속 추천*됩니다. **순위를 특히 낮추고 싶은 행만** △ 로 표시하세요. ✕(완전
+제외)는 *phenomenon 자체가 거의 무관*할 때만(드묾) — **종·도메인만으로 ✕ 금지**
+(그건 우선순위로 처리됩니다).
 
 | 대상 | ○/△/✕ | [✓확인] | ✕·△ 제외 예 (필수) |
 |---|---|---|---|
@@ -205,11 +228,11 @@ known_negatives 1건. **배제 기준은 "논문의 phenomenon/research-focus �
 ## G. 키워드 + 과학적 정의 (+ 가설 바인딩)
 
 > 키워드는 추천 **순위 보정(reranker)**에 쓰입니다(단독으로 논문을 통과시키진
-> 않음). 키워드 *나열*은 가볍게 — 단, **매칭이 헷갈리는 핵심 5개 정도만** 본인
-> operational 정의를 적어주세요(같은 단어가 연구자마다 뜻이 달라서). '제외 의미'·
-> 가설바인딩·출처는 **선택**(충돌하는 용어만).
+> 않음). **나열한 각 키워드에 본인 operational 정의를 적어주세요** — 같은 단어가
+> 연구자마다 뜻이 달라 정의가 매칭 정확도를 좌우합니다(정의 개수에 상한 없음).
+> 제외 의미는 충돌하는 용어 위주로, 가설바인딩·출처는 여유 되는 만큼.
 
-| 키워드 | operational 정의 (★핵심 5개만 필수) | 제외 의미 (충돌 용어만·선택) | 가설ID(선택) | 출처(선택) |
+| 키워드 | operational 정의 (각 키워드 권장) | 제외 의미 (충돌 용어) | 가설ID | 출처 |
 |---|---|---|---|---|
 | _history effect_ | 직전 *자극*이 현재 *지각*을 끄는 효과 | 반응 priming 아님 | A1 | F&W 2014 |
 | | | | | |
@@ -283,8 +306,10 @@ ______ [ ]
    진짜로 연결되면 후보. **genuine 판정 = same-job**: 예) 같은 메커니즘 이름이 *본인
    현상에 실제로 쓰일 때만* C; 단어만 겹치는 spurious 연결은 제외.
 2. **H-veto**: H2–H4 hard-negative / H5 ✕ 에 걸리면 제외(다른 신호 무시).
-3. **H5 △**: 그 종/방법은 연결이 *특히 강할 때만*(phenomenon·mechanism 이 명확히
-   일치) 채택.
+3. **domain · species = priority rerankers (NOT veto)**: 동일 domain + neurotypical
+   human = 최우선; 다른 domain · species(AI / rodent / primate / clinical, 또는
+   cross-domain value/emotion/face 등)는 *순위만 낮을 뿐 채택*된다. H5 ✕(veto)는
+   phenomenon 자체가 무관할 때만(드묾) — 종·도메인 단독으로는 veto 하지 않는다.
 4. **Rerankers**(단독 채택 불가): metric·condition·direction·model(E)·keyword-unbound
    (G)·PI(D)·method(F)·theory·seed 는 *연결된* 논문의 **순위**만 조정.
 5. **definition-aware**: G 정의/제외의미로 spurious(동단어) 연결 차단.
