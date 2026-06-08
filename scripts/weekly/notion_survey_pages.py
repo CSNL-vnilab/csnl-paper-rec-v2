@@ -174,6 +174,203 @@ def _strip_residual_markers(s: str) -> str:
     return s
 
 
+# ===========================================================================
+# Flag-token colour-coding + URL/DOI link detection (rich_text decoration)
+# ===========================================================================
+# Two decorations applied to EVERY emitted rich_text segment (paragraph, to_do,
+# callout, table cell, heading, quote, bullet) as a final post-pass, AFTER the
+# scaffolding strip so the counts reflect what actually ships:
+#
+#   (1) Flag colour-coding — the three reviewer-facing status tokens get their
+#       own rich_text segment carrying a Notion *_background colour, while the
+#       surrounding text keeps default colour. This COMPOSES with bold/italic:
+#       we split each already-built segment (preserving its bold/italic/code
+#       annotations) and merge the colour into the matched token's sub-segment,
+#       so a token that landed inside a **bold** span is coloured AND stays bold
+#       rather than being double-processed.
+#         [자동]      → green_background   (auto-filled from memory)
+#         【확인필요】 → yellow_background  (synthesised — needs confirmation)
+#         (직접 작성) → red_background     (blank — researcher writes it)
+#
+#   (2) Link detection — bare http(s)/www URLs, doi.org URLs, and bare DOI
+#       strings (10.NNNN/…) become clickable via a Notion text.link. A bare DOI
+#       resolves through https://doi.org/. Identifier/formula text is NEVER
+#       touched: the URL/DOI patterns cannot match Unicode math like 'σ_abs',
+#       'θ̂−θ', 'α=±3.3', 'var(θ̂)', and the residual-'_'-strip still guards
+#       identifiers separately, so those pass through verbatim.
+
+# token  -> Notion background-colour annotation value
+_FLAG_COLORS: dict[str, str] = {
+    "[자동]": "green_background",
+    "【확인필요】": "yellow_background",
+    "(직접 작성)": "red_background",
+}
+# The three tokens, longest first so alternation is unambiguous, each escaped
+# (they contain regex metacharacters: '[', ']', '(', ')').
+_FLAG_RE = re.compile(
+    "|".join(re.escape(tok) for tok in
+             sorted(_FLAG_COLORS, key=len, reverse=True)))
+
+
+# A bare URL: http(s):// or a bare 'www.'/'doi.org/' host, run up to whitespace
+# or a closing wrapper. Trailing sentence punctuation is trimmed back (below).
+# 'doi.org/…' is included so a scheme-less DOI URL is captured as ONE link
+# rather than leaving a stranded 'doi.org/' before the bare-DOI match.
+_URL_RE = re.compile(r"(?:https?://|www\.|doi\.org/)[^\s<>()\[\]{}「」『』《》]+",
+                     re.IGNORECASE)
+# A bare DOI: '10.' + registrant + '/' + suffix. The suffix runs until
+# whitespace or a closing wrapper / Korean particle boundary. DOIs never contain
+# spaces; this stops at the first whitespace so trailing prose is not swallowed.
+# Anchored on a non-digit/start so it does not fire mid-number.
+_DOI_RE = re.compile(r"\b10\.\d{4,9}/[^\s<>()\[\]{}「」『』《》,;]+",
+                     re.IGNORECASE)
+# Punctuation that should not be part of a captured URL/DOI when it sits at the
+# very end (sentence/clause tail). Stripped off and kept as plain text.
+_URL_TAIL = ".,;:·。、)]}>』」》"
+# A markdown inline link: [label](url). label may hold anything but ']'; url
+# anything but ')'. Detected on plain runs only.
+_MD_LINK_RE = re.compile(r"\[([^\]]+)\]\((https?://[^)\s]+|"
+                         r"(?:www\.|doi\.org/)[^)\s]+|10\.\d{4,9}/[^)\s]+)\)")
+
+
+def _link_url(raw: str) -> str:
+    """Normalise a detected link token into an absolute href.
+    'www.x' -> https; a bare DOI -> the doi.org resolver; otherwise as-is."""
+    low = raw.lower()
+    if low.startswith(("http://", "https://")):
+        return raw
+    if low.startswith("www."):
+        return "https://" + raw
+    if low.startswith("doi.org/"):
+        return "https://" + raw
+    if low.startswith("10."):
+        return "https://doi.org/" + raw
+    return raw
+
+
+def _split_flags(seg: dict) -> list[dict]:
+    """Split one rich_text segment so each flag token becomes its own segment
+    carrying the matching *_background colour, while inheriting the host
+    segment's bold/italic/code annotations. Non-text segments and segments with
+    no flag token pass through unchanged. The host's existing colour (if any) is
+    preserved on the surrounding runs."""
+    if seg.get("type") != "text":
+        return [seg]
+    content = seg.get("text", {}).get("content", "")
+    if not content or not _FLAG_RE.search(content):
+        return [seg]
+    base_ann = seg.get("annotations") or {}
+    base_link = seg.get("text", {}).get("link")
+    out: list[dict] = []
+    pos = 0
+
+    def _emit(piece: str, color: Optional[str]) -> None:
+        if piece == "":
+            return
+        ann = dict(base_ann)
+        if color:
+            ann["color"] = color
+        txt: dict[str, Any] = {"content": piece}
+        if base_link:
+            txt["link"] = base_link
+        o: dict[str, Any] = {"type": "text", "text": txt}
+        if ann:
+            o["annotations"] = ann
+        out.append(o)
+
+    for m in _FLAG_RE.finditer(content):
+        if m.start() > pos:
+            _emit(content[pos:m.start()], None)
+        _emit(m.group(0), _FLAG_COLORS[m.group(0)])
+        pos = m.end()
+    if pos < len(content):
+        _emit(content[pos:], None)
+    return out
+
+
+def _split_links(seg: dict) -> list[dict]:
+    """Split one rich_text segment so each bare URL / DOI / markdown link gets a
+    Notion text.link (clickable), inheriting the host segment's annotations.
+    A markdown '[label](url)' becomes a single linked 'label' segment. Segments
+    that already carry a link, non-text segments, or runs with no URL/DOI pass
+    through unchanged. Identifier/formula text is never matched."""
+    if seg.get("type") != "text":
+        return [seg]
+    txt = seg.get("text", {})
+    if txt.get("link"):                       # already linked (e.g. md link)
+        return [seg]
+    content = txt.get("content", "")
+    if not content:
+        return [seg]
+    base_ann = seg.get("annotations") or {}
+
+    # Build a list of (start, end, label, href) matches across the three forms,
+    # markdown links first (they consume the bracketed label), then bare URL,
+    # then bare DOI; overlapping later matches are skipped.
+    spans: list[tuple[int, int, str, str]] = []
+    for m in _MD_LINK_RE.finditer(content):
+        spans.append((m.start(), m.end(), m.group(1), _link_url(m.group(2))))
+    for rx in (_URL_RE, _DOI_RE):
+        for m in rx.finditer(content):
+            s, e = m.start(), m.end()
+            tok = m.group(0)
+            # trim trailing sentence punctuation back out of the link
+            while tok and tok[-1] in _URL_TAIL:
+                tok = tok[:-1]
+                e -= 1
+            if not tok:
+                continue
+            spans.append((s, e, tok, _link_url(tok)))
+    if not spans:
+        return [seg]
+    spans.sort(key=lambda t: (t[0], -(t[1] - t[0])))
+
+    out: list[dict] = []
+    pos = 0
+
+    def _plain(piece: str) -> None:
+        if piece == "":
+            return
+        o: dict[str, Any] = {"type": "text", "text": {"content": piece}}
+        if base_ann:
+            o["annotations"] = dict(base_ann)
+        out.append(o)
+
+    def _linked(label: str, href: str) -> None:
+        if label == "":
+            return
+        o: dict[str, Any] = {"type": "text",
+                             "text": {"content": label, "link": {"url": href}}}
+        if base_ann:
+            o["annotations"] = dict(base_ann)
+        out.append(o)
+
+    for s, e, label, href in spans:
+        if s < pos:               # overlaps an already-consumed span — skip
+            continue
+        if s > pos:
+            _plain(content[pos:s])
+        _linked(label, href)
+        pos = e
+    if pos < len(content):
+        _plain(content[pos:])
+    return out
+
+
+def _decorate_rich_text(rt: list[dict]) -> list[dict]:
+    """Apply link detection then flag colour-coding to a rich_text array.
+    Order: links first (so a flag token never lands inside a URL — they don't
+    overlap, but this keeps the split boundaries clean), then flags. Each pass
+    expands segments; both preserve host annotations/links. Returns a new list."""
+    linked: list[dict] = []
+    for seg in rt:
+        linked.extend(_split_links(seg))
+    flagged: list[dict] = []
+    for seg in linked:
+        flagged.extend(_split_flags(seg))
+    return flagged
+
+
 def _split_len(s: str, n: int = MAX_RICH_TEXT_LEN) -> list[str]:
     """Split a string into ≤n-char chunks (Notion caps each text segment)."""
     if len(s) <= n:
@@ -840,10 +1037,19 @@ def _scrub_rich_text(rt: list[dict]) -> list[dict]:
     return out
 
 
+def _scrub_and_decorate(rt: list[dict]) -> list[dict]:
+    """Final per-run transform: strip residual scaffolding (drops pure-
+    scaffolding segments), THEN decorate — apply URL/DOI links and flag colour-
+    coding. Scaffolding runs first so the flag counts reflect what truly ships
+    and a stripped '______'/'[ ]' never sits inside a coloured/linked span."""
+    return _decorate_rich_text(_scrub_rich_text(rt))
+
+
 def _scrub_block_scaffolding(blocks: list[dict]) -> None:
-    """Final pass: scrub residual scaffolding from EVERY text-bearing block —
-    paragraph / heading_1..3 / quote / callout / bulleted_/numbered_list_item /
-    to_do label / AND each table cell's rich_text. Mutates blocks in place."""
+    """Final pass: scrub residual scaffolding AND decorate (colour the flag
+    tokens + linkify URLs/DOIs) for EVERY text-bearing block — paragraph /
+    heading_1..3 / quote / callout / bulleted_/numbered_list_item / to_do label
+    / AND each table cell's rich_text. Mutates blocks in place."""
     for b in blocks:
         t = b.get("type")
         obj = b.get(t)
@@ -852,11 +1058,11 @@ def _scrub_block_scaffolding(blocks: list[dict]) -> None:
         if t == "table":
             for row in obj.get("children", []):
                 tr = row.get("table_row", {})
-                tr["cells"] = [_scrub_rich_text(cell)
+                tr["cells"] = [_scrub_and_decorate(cell)
                                for cell in tr.get("cells", [])]
             continue
         if "rich_text" in obj:
-            obj["rich_text"] = _scrub_rich_text(obj["rich_text"])
+            obj["rich_text"] = _scrub_and_decorate(obj["rich_text"])
 
 
 # ===========================================================================
@@ -885,6 +1091,99 @@ def _insert_section_dividers(blocks: list[dict]) -> list[dict]:
             if prev is not None and prev not in ("divider", "heading_1"):
                 out.append(_divider())
         out.append(b)
+    return out
+
+
+# ===========================================================================
+# Top count-summary callout ("채움 현황 — …")
+# ===========================================================================
+# A single coloured callout placed right after the page-title heading_1 (before
+# 들어가며) so the researcher sees, at a glance, how many fields are auto-filled
+# vs need confirmation vs blank. Counts are taken from the FINAL decorated
+# blocks — i.e. the number of segments actually carrying each flag colour — so
+# they are exactly the tokens that ship (operator appendix + HTML comments were
+# already stripped upstream by preprocess()).
+#
+# READABILITY note (honest limitation): the Notion API exposes NO per-block font
+# size or line-height control (block typography is fixed by the Notion client /
+# page theme), so we cannot widen line spacing or shrink fonts programmatically.
+# What we CAN do for breathing room — and do — is structural: this top banner
+# callout + the section/per-project dividers from _insert_section_dividers. We
+# deliberately do NOT add a divider after every field (that over-divides and
+# reads worse); dividers sit only at heading_2/heading_3 boundaries.
+
+# Order in the summary (matches the convention intro): green → yellow → red.
+_FLAG_SUMMARY_ORDER = ["[자동]", "【확인필요】", "(직접 작성)"]
+_COLOR_TO_FLAG = {v: k for k, v in _FLAG_COLORS.items()}
+
+
+def _count_emitted_flags(blocks: list[dict]) -> dict[str, int]:
+    """Count emitted flag tokens by scanning every block's rich_text (incl.
+    table cells) for segments that ARE a flag token (text == the token and the
+    matching *_background colour). One such segment == one emitted body token.
+
+    Matching on the exact token text (not merely the colour) makes this
+    idempotent: the top summary callout's own spans are shaped 'TOKEN N' (e.g.
+    '[자동] 65'), so they are NOT recounted — the function returns the same body
+    count whether called before or after the summary callout is inserted."""
+    counts = {tok: 0 for tok in _FLAG_COLORS}
+
+    def _scan(rt: list[dict]) -> None:
+        for seg in rt:
+            if seg.get("type") != "text":
+                continue
+            content = seg.get("text", {}).get("content", "")
+            color = (seg.get("annotations") or {}).get("color")
+            if content in _FLAG_COLORS and color == _FLAG_COLORS[content]:
+                counts[content] += 1
+
+    for b in blocks:
+        t = b.get("type")
+        obj = b.get(t, {}) or {}
+        if t == "table":
+            for row in obj.get("children", []):
+                for cell in row.get("table_row", {}).get("cells", []):
+                    _scan(cell)
+        elif isinstance(obj.get("rich_text"), list):
+            _scan(obj["rich_text"])
+    return counts
+
+
+def _summary_callout(counts: dict[str, int]) -> dict:
+    """Build the '채움 현황 — [자동] N · 【확인필요】 M · (직접 작성) K' callout, each
+    'TOKEN N' span carrying the token's matching background colour. Plain '채움
+    현황 — ' lead and ' · ' separators keep default colour."""
+    rt: list[dict] = [{"type": "text",
+                       "text": {"content": "채움 현황 — "},
+                       "annotations": {"bold": True}}]
+    for i, tok in enumerate(_FLAG_SUMMARY_ORDER):
+        if i:
+            rt.append({"type": "text", "text": {"content": " · "}})
+        rt.append({"type": "text",
+                   "text": {"content": f"{tok} {counts.get(tok, 0)}"},
+                   "annotations": {"bold": True,
+                                   "color": _FLAG_COLORS[tok]}})
+    # A neutral icon + soft gray ground so the summary reads as a banner, not a
+    # to-fill answer box (those are gray with a ✍️ pen — use a different glyph).
+    return _notion.block_callout(rt, icon="🧭", color="gray_background")
+
+
+def _insert_summary_callout(blocks: list[dict]) -> list[dict]:
+    """Insert the count-summary callout right after the FIRST heading_1 (the
+    page title), before 들어가며. If there is no heading_1 (shouldn't happen),
+    prepend it at the very top. Returns a new list; idempotent enough that a
+    re-run would simply recompute identical counts."""
+    counts = _count_emitted_flags(blocks)
+    callout = _summary_callout(counts)
+    out: list[dict] = []
+    inserted = False
+    for b in blocks:
+        out.append(b)
+        if not inserted and b.get("type") == "heading_1":
+            out.append(callout)
+            inserted = True
+    if not inserted:
+        out.insert(0, callout)
     return out
 
 
@@ -1174,6 +1473,10 @@ def build_survey_blocks(init: str) -> tuple[list[dict], list[str]]:
     _scrub_block_scaffolding(blocks)
     # Visual separation: dividers before each section / per-project heading.
     blocks = _insert_section_dividers(blocks)
+    # Top banner: count-summary callout right after the title (after decoration,
+    # so the flag colours it tallies are the ones that actually ship). Inserted
+    # after the divider pass so it sits flush under the heading_1, before 들어가며.
+    blocks = _insert_summary_callout(blocks)
     return blocks, warnings
 
 
@@ -1414,6 +1717,158 @@ def _scan_annotations(built: dict[str, list[dict]]) -> int:
     return grand
 
 
+def _iter_block_segments(blocks: list[dict]):
+    """Yield (block_index, type_label, segment_dict) for EVERY rich_text segment
+    across all blocks, incl. each table cell. Used by the colour/link reports."""
+    for idx, b in enumerate(blocks):
+        t = b.get("type")
+        obj = b.get(t, {}) or {}
+        if t == "table":
+            for ri, row in enumerate(obj.get("children", [])):
+                for ci, cell in enumerate(row.get("table_row", {})
+                                          .get("cells", [])):
+                    for seg in cell:
+                        yield idx, f"table[r{ri}c{ci}]", seg
+            continue
+        rt = obj.get("rich_text")
+        if isinstance(rt, list):
+            for seg in rt:
+                yield idx, t, seg
+
+
+def _report_flag_counts(built: dict[str, list[dict]]) -> None:
+    """(a) Per-file flag-token counts — exactly the numbers the top callout
+    shows (counted from the emitted coloured segments)."""
+    print("-" * 72)
+    print("REPORT (a) — per-file flag counts (the top '채움 현황' callout numbers):")
+    print(f"    {'file':<5}  {'[자동]':>8}  {'【확인필요】':>10}  "
+          f"{'(직접 작성)':>10}")
+    tot = {tok: 0 for tok in _FLAG_COLORS}
+    for init in sorted(built):
+        c = _count_emitted_flags(built[init])
+        for tok in tot:
+            tot[tok] += c[tok]
+        print(f"    {init:<5}  {c['[자동]']:>8}  {c['【확인필요】']:>10}  "
+              f"{c['(직접 작성)']:>10}")
+    print(f"    {'ALL':<5}  {tot['[자동]']:>8}  {tot['【확인필요】']:>10}  "
+          f"{tot['(직접 작성)']:>10}")
+
+
+# The top-summary banner emits coloured spans shaped 'TOKEN N' (e.g. '[자동] 42').
+# The colour-bleed check accepts these so they are not mistaken for a body bleed.
+_SUMMARY_SPAN_RE = re.compile(
+    "(?:" + "|".join(re.escape(t) for t in _FLAG_COLORS) + r")\s+\d+")
+
+
+def _report_flag_colors(built: dict[str, list[dict]]) -> int:
+    """(b) Confirm colour annotations were applied — verify every flag token is
+    emitted as its OWN segment carrying the matching *_background colour, and
+    print a couple of sample coloured segments (text + colour) per file.
+    Returns the count of MIS-coloured flag segments (must be 0)."""
+    print("-" * 72)
+    print("REPORT (b) — colour annotations applied (sample coloured segments):")
+    mismatches = 0
+    for init in sorted(built):
+        samples: list[str] = []
+        seen_colors: set[str] = set()
+        for idx, t, seg in _iter_block_segments(built[init]):
+            if seg.get("type") != "text":
+                continue
+            content = seg.get("text", {}).get("content", "")
+            color = (seg.get("annotations") or {}).get("color")
+            # A flag token must be its own segment with the right colour.
+            if content in _FLAG_COLORS:
+                want = _FLAG_COLORS[content]
+                if color != want:
+                    mismatches += 1
+                    print(f"    [{init}] #{idx} {t}: token {content!r} colour="
+                          f"{color!r} EXPECTED {want!r}  ** MISMATCH **")
+                elif want not in seen_colors:
+                    seen_colors.add(want)
+                    bold = bool((seg.get("annotations") or {}).get("bold"))
+                    samples.append(f"{content!r} -> {color}"
+                                   + ("  (+bold)" if bold else ""))
+            # A coloured segment whose text is NOT a flag token would be a split
+            # bug (colour bled onto surrounding text) — EXCEPT the top summary
+            # callout, whose coloured spans are intentionally 'TOKEN N' (token +
+            # count). Recognise that shape and skip it.
+            elif color in _COLOR_TO_FLAG:
+                want_tok = _COLOR_TO_FLAG[color]
+                if _SUMMARY_SPAN_RE.fullmatch(content):
+                    continue  # the count-summary banner span, not a bleed
+                mismatches += 1
+                print(f"    [{init}] #{idx} {t}: colour {color!r} (for "
+                      f"{want_tok!r}) on non-token text {content[:40]!r}  "
+                      f"** BLEED **")
+        n_seg = sum(1 for _ in _iter_block_segments(built[init]))
+        print(f"    {init}: {len(seen_colors)}/3 flag colours present "
+              f"({n_seg} segs); samples: "
+              + (" | ".join(samples) if samples else "(none)"))
+    if mismatches == 0:
+        print("    -> every flag token is its own correctly-coloured segment; "
+              "no colour bleed. ✓")
+    return mismatches
+
+
+def _report_links(built: dict[str, list[dict]]) -> None:
+    """(c) Links detected per file — count of segments carrying a text.link plus
+    one sample (label -> href)."""
+    print("-" * 72)
+    print("REPORT (c) — links detected (clickable URL/DOI segments):")
+    for init in sorted(built):
+        n = 0
+        sample = ""
+        for idx, t, seg in _iter_block_segments(built[init]):
+            link = (seg.get("text") or {}).get("link")
+            if isinstance(link, dict) and link.get("url"):
+                n += 1
+                if not sample:
+                    label = seg.get("text", {}).get("content", "")
+                    sample = f"{label[:50]!r} -> {link['url']}"
+        print(f"    {init}: {n} link(s)" + (f"  e.g. {sample}" if sample else ""))
+
+
+# Math/formula identifiers that MUST survive verbatim (never altered by the
+# residual-'_'-strip or the URL/DOI linkifier). Keyed by the file where they
+# occur; the report confirms each token still appears intact in some emitted
+# rich_text run.
+_MATH_TOKENS: dict[str, list[str]] = {
+    "JOP": ["σ_abs", "σ_abs_leak", "(α)=±3.3"],
+    "BYL": ["θ̂ − θ", "var(θ̂)"],
+    "BHL": ["θ̂ − θ"],
+    "JYK": ["θ̂−θ", "var(θ̂)"],
+    "MSY": ["var(θ̂)"],
+    "SYJ": ["θ̂−θ"],
+}
+
+
+def _report_math_identifiers(built: dict[str, list[dict]]) -> int:
+    """(e) Confirm formula/identifier text passed through verbatim. For each
+    known math token, check it appears in some emitted run of its file. Returns
+    the number of MISSING tokens (must be 0)."""
+    print("-" * 72)
+    print("REPORT (e) — math identifiers survive verbatim "
+          "(σ_abs, θ̂, var(θ̂), α=±3.3 …):")
+    missing = 0
+    for init in sorted(built):
+        toks = _MATH_TOKENS.get(init)
+        if not toks:
+            continue
+        haystacks = [s for _i, _t, s in _iter_block_texts(built[init])]
+        joined = "\n".join(haystacks)
+        results = []
+        for tok in toks:
+            ok = tok in joined
+            if not ok:
+                missing += 1
+            results.append(f"{tok}{'✓' if ok else ' ✗MISSING'}")
+        print(f"    {init}: " + "  ·  ".join(results))
+    if missing == 0:
+        print("    -> all formula/identifier tokens intact "
+              "(underscores + Unicode math preserved). ✓")
+    return missing
+
+
 def dry_run(targets: list[str], dump: Optional[list[str]] = None,
             parent_lookup: bool = True) -> int:
     print("=" * 72)
@@ -1464,6 +1919,23 @@ def dry_run(targets: list[str], dump: Optional[list[str]] = None,
     for init in dump_targets:
         if init in built:
             _print_sample_dumps(init, built[init])
+
+    # Feature reports (flag colours, links, math identifiers) — the deliverables
+    # for this extension. (a) the top-callout numbers, (b) colour annotations
+    # applied (+ samples), (c) links detected, (e) math identifiers survive.
+    if built:
+        _report_flag_counts(built)
+        color_mis = _report_flag_colors(built)
+        _report_links(built)
+        math_missing = _report_math_identifiers(built)
+        if color_mis > 0:
+            any_warn = True
+            print(f"\n  *** {color_mis} flag segment(s) MIS-COLOURED / colour "
+                  f"bleed — fix before --apply. ***")
+        if math_missing > 0:
+            any_warn = True
+            print(f"\n  *** {math_missing} math identifier(s) ALTERED/MISSING — "
+                  f"fix before --apply. ***")
 
     # Integrity scans on the emitted blocks (the point of this fix). Both the
     # residual-marker scan and the form-marker scan must be 0; annotated

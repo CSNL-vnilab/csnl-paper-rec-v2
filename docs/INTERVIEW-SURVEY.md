@@ -4,7 +4,14 @@ core fields, truth-in-advertising (current engine = priority rerank; tuple-
 admission/exclude/definition matching is the P28 build spec), MSY blank handling.
 One more cycle (c3) remains, then pre-fill per researcher with [확인필요] flags. -->
 
-# CSNL 논문 추천 — 연구 프로파일 정밀 설문 (v11)
+# CSNL 논문 추천 — 연구 프로파일 정밀 설문 (v12)
+
+<!-- v12 — operator round 8: §분석방법 재구성(행동 curve-fitting 통합 + fMRI
+GLM/retinotopy/RSA/MVPA/neural manifold 구분, full term + abbreviation); PI-컨펌
+문구 삭제 → "모르면 지도교수·사수 확인, 미확정만 미정" 규칙; 플래그 컬러(컨버터:
+[자동]=초록·【확인필요】=노랑·(직접 작성)=빨강 배경 + 페이지 상단 카운트); 줄간격/링크/
+수식 렌더 점검; 사전채움 근거 = 라이브 PostgresDB(csnl_research·dim_preferences·
+archive_responses) 재검증. -->
 
 <!-- v11 — operator round 7: 가독성 리팩터 — 알파벳 섹션 헤더(A–I) → 직관적 한글 이름
 + 섹션별 한 줄 안내; §-교차참조 및 내부 용어(가설ID · connection anchor · refiner 등)
@@ -69,10 +76,12 @@ domain×phenomenon×task (N/A-금지 only there). Opus burden/pedantry review ne
 
 **작성 방법**
 - **[자동]** = 기존 메모리에서 채운 값(맞으면 그대로, 틀리면 ✗ 후 수정) ·
-  **【확인필요】** = 추정값이니 확인 부탁드립니다 · 직접 쓰신 답은 그대로 저장됩니다.
-- **애매한 표현은 피해주세요**("잘 / 적당히 / 다양한 / 관련된" 등) → 구체적으로. 모르거나
-  탐색 중이면 **"미정"** 으로 두셔도 됩니다(단, "연구 프로젝트별 핵심 주제"의
-  domain × phenomenon × task 는 꼭 채워주세요).
+  **【확인필요】** = 추정값이니 확인 부탁드립니다 · **(직접 작성)** = 비어 있으니 채워
+  주세요 · 직접 쓰신 답은 그대로 저장됩니다.
+- **애매한 표현은 피해주세요**("잘 / 적당히 / 다양한 / 관련된" 등) → 구체적으로 적어주세요.
+  잘 모르시는 부분은 지도교수님·사수께 정확한 내용을 확인해 채워주시고, **아직 확정되지
+  않은 부분만 "미정"** 으로 두세요(단, "연구 프로젝트별 핵심 주제"의 domain × phenomenon
+  × task 는 꼭 채워주세요).
 - **학술 용어는 원어(영어)** 로, **약자는 전체 명칭을 함께** 적어주세요(예: functional
   Magnetic Resonance Imaging (fMRI)).
 - 이 설문은 **프로젝트별** 프로파일입니다 — 각 프로젝트가 한 블록입니다.
@@ -204,7 +213,7 @@ research-focus 가 내 것과 다르다"**이지, 종·도메인이 달라서가
 > **domain·species·population·method 만으로는 제외 사유가 되지 않습니다** — 오히려
 > 환영 대상입니다.)*
 > *(사전기입된 제외 항목은 **과거 인터뷰 응답을 참고한 것**이니, 종·도메인 기준으로
-> 너무 넓게 빼지 않았는지 다시 확인해 주세요. 최종은 PI(SHL) 가 컨펌할 예정입니다.)*
+> 너무 넓게 빼지 않았는지 다시 확인해 주세요. 확신이 없으면 지도교수님·사수께 확인 부탁드립니다.)*
 
 ---
 
@@ -275,10 +284,17 @@ Psychtoolbox): ______ [ ]
 
 ## 선호하는 분석 방법
 
-자주 쓰시는 분석 방법을 골라주세요(해당 항목에 체크).
+자주 쓰시는 분석 방법을 골라주세요(해당 항목에 체크 · 복수 가능).
 
-☐regression(mixed) ☐psychometric fit ☐DoG fit ☐MDS ☐PCA ☐RSA ☐MCMC/HBM
-☐bootstrap/permutation ☐decoding(SVM/LDA) ☐time-frequency ☐GLM(fMRI) ☐기타_
+**행동 / 심리물리 (behavioral / psychophysics)**: ☐ psychometric / behavioral curve fitting (multiple linear regression · difference-of-Gaussians (DoG) fit · 심리측정함수 fit 포함) ☐ mixed-effects regression (linear / logistic) ☐ multidimensional scaling (MDS) ☐ signal detection theory (SDT) ☐ bootstrap / permutation test
+
+**계산 모델 적합 (model fitting)**: ☐ maximum likelihood estimation (MLE) ☐ Bayesian / Markov Chain Monte Carlo (MCMC) ☐ hierarchical Bayesian model (HBM)
+
+**fMRI**: ☐ general linear model (GLM) ☐ retinotopy / population receptive field (pRF) mapping ☐ representational similarity analysis (RSA) ☐ multi-voxel pattern analysis (MVPA) / decoding ☐ neural manifold / dimensionality reduction (principal component analysis (PCA) 등) ☐ functional connectivity
+
+**EEG / MEG**: ☐ time-frequency analysis ☐ event-related potential (ERP) / event-related field (ERF) ☐ decoding (support vector machine (SVM) / linear discriminant analysis (LDA))
+
+**기타**: ______
 
 ---
 
