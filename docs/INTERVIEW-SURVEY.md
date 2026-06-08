@@ -4,7 +4,15 @@ core fields, truth-in-advertising (current engine = priority rerank; tuple-
 admission/exclude/definition matching is the P28 build spec), MSY blank handling.
 One more cycle (c3) remains, then pre-fill per researcher with [확인필요] flags. -->
 
-# CSNL 논문 추천 — 연구 프로파일 정밀 설문 (v7)
+# CSNL 논문 추천 — 연구 프로파일 정밀 설문 (v8)
+
+<!-- v8 — operator round 4: §H5(종/방법 우선순위 표) DELETED — 종(species)은 어떤
+기준도 아님(종 불문 functional brain; recurrent neural network (RNN) + functional
+Magnetic Resonance Imaging (fMRI) + monkey electrophysiology 한 논문 공존). §G 는
+온톨로지 인터뷰가 아님 → 모든 키워드 정의 요구 폐지, **중의적(polysemous) 용어에만**
+정의 요청(G1 목록 + G2 중의어 정의; 예 'bias','reference'). §E computational model =
+확정된 것만, 공란 허용(추측 금지). §I = 단답·메모리 필수만(이론 프레임 ✓ + 형태 선호
+✓ 2항만; 추상 개방형 질문 제거). -->
 
 <!-- v7 — operator round 3: per-project framing (each project=가설ID=연결 단위);
 domain·species = PRIORITY signal, NOT rejection (same domain + neurotypical human
@@ -59,10 +67,13 @@ domain×phenomenon×task (N/A-금지 only there). Opus burden/pedantry review ne
 > phenomenon/research-focus 가 내 것과 다르다"* 일 때만 의미가 있습니다(종·도메인이
 > 달라서가 아니라).
 >
-> **domain·species 는 *우선순위(priority)* 신호일 뿐 기각 기준이 아닙니다** —
-> *동일 domain + neurotypical human = default(최우선)*, 다른 domain·species
-> (AI · rodent · primate · clinical, 또는 value · emotion · face · gender ·
-> biological motion 등 다른 domain)는 **순위만 낮아질 뿐 계속 추천**됩니다.
+> **종(species)은 제외도 우선순위도 아닙니다** — 우리는 종 불문 **기능적 뇌
+> (functional brain)**에 관심이 있고, 최근 논문은 recurrent neural network (RNN) +
+> functional Magnetic Resonance Imaging (fMRI) + monkey electrophysiology 를 한
+> 논문에 함께 싣기도 합니다. **domain** 만 약한 *우선순위* 신호입니다(동일 domain +
+> neurotypical human = default 최우선; value · emotion · face · gender · biological
+> motion 등 다른 domain 은 순위만 낮을 뿐 계속 추천). **기각은 오직 phenomenon /
+> research-focus mismatch(§H) 일 때만.**
 
 **작성 방법 — 꼭 읽어주세요**
 - 표기: **[자동]** = 메모리로 자신 있게 채운 값(맞으면 그대로 두기, 틀리면 ✗ 후
@@ -182,6 +193,12 @@ domain×phenomenon×task (N/A-금지 only there). Opus burden/pedantry review ne
 
 ## H. 연구 범위 & 제외 (★ 범위-밖 차단)
 
+> **종(species)·측정기법(method)은 제외 기준이 아닙니다** — 종 불문 functional brain
+> 이 관심사이고(human / monkey / rodent / AI 모두), 한 논문이 recurrent neural
+> network (RNN) + functional Magnetic Resonance Imaging (fMRI) + monkey
+> electrophysiology 를 함께 다루기도 합니다. 따라서 아래 제외는 **phenomenon /
+> research-focus 가 다를 때만** 의미가 있습니다(종·도메인·기법으로는 빼지 않음).
+
 **H1. in-scope 한 단락**: ______ [ ]
 
 **H2–H4. 제외 목록** *(신중히 — 종·도메인만으로 빼지 마세요)* — 각 행이
@@ -198,47 +215,32 @@ known_negatives 1건. **배제 기준은 "논문의 phenomenon/research-focus �
 | _(실제로 추천됐는데 아니었던 논문 제목)_ | anti-example | "내 [domain]의 [phenomenon]인데 이 논문은 [domain′]의 [phenomenon′] → 내 phenomenon 밖" |
 | | | |
 
-> *(유형 = phenomenon / research-focus / method(보조 한정) / anti-example / adjacent.
-> **domain·species·population 단독은 제외 사유가 아님** — 그건 환영 대상이라 §H5 도
-> 기본 ○.)*
+> *(유형 = phenomenon / research-focus / anti-example / adjacent.
+> **domain·species·population·method 단독은 제외 사유가 아님** — 그건 환영 대상입니다.)*
 > *(사전기입된 제외 항목은 **과거 인터뷰 응답 참고용** — 종·도메인 기준으로 너무
 > 넓게 빼지 않았는지 재확인해 주세요. 최종은 PI(SHL) 컨펌 예정.)*
 
-**H5. 종/집단/방법 — 우선순위 선호** *(대부분 비워도 됩니다)* — **종·도메인은
-기각(reject)이 아니라 우선순위(priority) 신호**입니다. 기본: *동일 domain +
-neurotypical human 이 최우선*, 그 외(macaque · rodent · clinical · AI 등)는 *순위만
-낮을 뿐 계속 추천*됩니다. **순위를 특히 낮추고 싶은 행만** △ 로 표시하세요. ✕(완전
-제외)는 *phenomenon 자체가 거의 무관*할 때만(드묾) — **종·도메인만으로 ✕ 금지**
-(그건 우선순위로 처리됩니다).
-
-| 대상 | ○/△/✕ | [✓확인] | ✕·△ 제외 예 (필수) |
-|---|---|---|---|
-| 비인간 영장류(macaque) | | [ ] | |
-| 설치류(rat/mouse) | | [ ] | |
-| 임상·정신질환 집단 | | [ ] | |
-| 발달(아동/영유아) | | [ ] | |
-| AI/ML·인공신경망 | | [ ] | |
-| 로보틱스 | | [ ] | |
-| 계산모델-only(데이터 없음) | | [ ] | |
-| 순수 이론/리뷰 | | [ ] | |
-| 비인간 modality(단일세포·calcium 등) | | [ ] | |
-
 ---
 
-## G. 키워드 + 과학적 정의 (+ 가설 바인딩)
+## G. 키워드 (+ 중의적 용어만 정의)
 
 > 키워드는 추천 **순위 보정(reranker)**에 쓰입니다(단독으로 논문을 통과시키진
-> 않음). **나열한 각 키워드에 본인 operational 정의를 적어주세요** — 같은 단어가
-> 연구자마다 뜻이 달라 정의가 매칭 정확도를 좌우합니다(정의 개수에 상한 없음).
-> 제외 의미는 충돌하는 용어 위주로, 가설바인딩·출처는 여유 되는 만큼.
+> 않음). **이건 용어 사전(ontology) 인터뷰가 아닙니다** — 모든 키워드에 정의를 달
+> 필요는 없습니다. G1 목록은 맞으면 그대로(틀리면 ✗, 빠진 건 추가), **G2 에는
+> 실험·가설에 따라 뜻이 달라지는 *중의적 용어*에만** 정의를 적어주세요.
 
-| 키워드 | operational 정의 (각 키워드 권장) | 제외 의미 (충돌 용어) | 가설ID | 출처 |
-|---|---|---|---|---|
-| _history effect_ | 직전 *자극*이 현재 *지각*을 끄는 효과 | 반응 priming 아님 | A1 | F&W 2014 |
-| | | | | |
-| (핵심 위주, 너무 많지 않게) | | | | |
+**G1. 키워드 목록** (사전기입 — 맞으면 그대로, 틀리면 ✗, 추가 환영):
+______
 
-- 헷갈리지만 본인은 구분하는 용어쌍: ______
+**G2. 중의적 용어만 정의** — 같은 단어가 실험/가설에 따라 의미가 갈리는 것만.
+예) "**bias**" = attractive / repulsive / estimation 중 무엇? · "**reference**" =
+reference frame / reference stimulus 중 무엇? · "gain", "adaptation", "normalization",
+"tuning" 등. 의미가 분명한 용어(예: "serial dependence")는 **정의 불필요**.
+
+| 중의적 용어 | 본인 연구에서의 operational 정의 | (선택) 헷갈리는 옆 용어 — 아닌 것 |
+|---|---|---|
+| _예: bias_ | _attractive bias = 추정이 직전 자극 쪽으로 끌림_ | _repulsion / response priming 아님_ |
+| | | |
 
 ---
 
@@ -260,13 +262,16 @@ ______ [ ]
 
 ---
 
-## E. Computational modeling (모델↔현상↔방식 3종 필수)
+## E. Computational modeling (확정된 것만 · 공란 가능)
 
-- 사용/관심: ☐한다 ☐안한다 ☐읽기만(추천 원함)
+> 후보 모델이 많고 아직 고르지 않았을 수 있습니다. **현재 실제로 쓰거나 확정한
+> 모델이 있을 때만** 적어주세요 — 없으면 **공란으로 두셔도 됩니다**(추측으로 채우지
+> 마세요).
 
-| 모델(정확히) | 적용 현상(가설ID) | 사용방식 | [✓/✗] |
+- 사용/관심: ☐한다 ☐안한다 ☐읽기만(추천 원함) ☐미정
+
+| 모델(정확히, 확정된 것만) | 적용 현상(가설ID) | 사용방식 | [✓/✗] |
 |---|---|---|---|
-| _efficient coding (Fisher info)_ | A1 (cardinal bias) | ☐적용 ☐검증 ☐확장 ☐반론 | [ ] |
 | | | ☐적용 ☐검증 ☐확장 ☐반론 | [ ] |
 
 - 모델링 논문 추천: ☐적극 ☐가끔 ☐거의 불필요
@@ -280,14 +285,15 @@ ______ [ ]
 
 ---
 
-## I. 보편 심화 질문
+## I. 메모리 설계용 추가 항목 (단답)
 
-1. 5년 내 핵심 질문 1–2개: ______
-2. 큰 이론 프레임(efficient coding/Bayesian brain/predictive coding/attractor…): ______
-3. 최근 1–2년 흥미로웠던 논문 3편(저자(연도))+왜: ______
-4. 형태 선호: ☐empirical ☐neuro ☐modeling ☐methods ☐review ☐preprint
-5. 빈도/난이도 선호: ______
-6. (자유) 추천 중 좋았던/나빴던 구체 예 + 바라는 점: ______
+> 메모리 구축에 직접 필요한 2가지만. 해당 칸에 ✓(복수 가능).
+
+1. **이론 프레임**: ☐efficient coding ☐Bayesian / ideal-observer ☐predictive coding
+   ☐attractor / recurrent neural network (RNN) dynamics ☐reinforcement learning
+   ☐signal detection theory ☐기타: ______
+2. **추천 논문 형태 선호**: ☐empirical(행동) ☐neuro(fMRI / EEG / electrophysiology)
+   ☐modeling ☐methods ☐review ☐preprint
 
 ---
 
@@ -305,11 +311,13 @@ ______ [ ]
    없다** — 다른 도메인·종·방법이라도 그 튜플 요소(특히 phenomenon·mechanism)에
    진짜로 연결되면 후보. **genuine 판정 = same-job**: 예) 같은 메커니즘 이름이 *본인
    현상에 실제로 쓰일 때만* C; 단어만 겹치는 spurious 연결은 제외.
-2. **H-veto**: H2–H4 hard-negative / H5 ✕ 에 걸리면 제외(다른 신호 무시).
-3. **domain · species = priority rerankers (NOT veto)**: 동일 domain + neurotypical
-   human = 최우선; 다른 domain · species(AI / rodent / primate / clinical, 또는
-   cross-domain value/emotion/face 등)는 *순위만 낮을 뿐 채택*된다. H5 ✕(veto)는
-   phenomenon 자체가 무관할 때만(드묾) — 종·도메인 단독으로는 veto 하지 않는다.
+2. **H-veto**: H2–H4 hard-negative(= phenomenon/research-focus mismatch)에 걸리면
+   제외(다른 신호 무시). 종·도메인·기법은 veto 가 아니다.
+3. **species = 비기준 · domain = priority reranker (NOT veto)**: 종(species)은 채택
+   /순위 어디에도 영향 없음(종 불문 functional brain; RNN + fMRI + monkey
+   electrophysiology 공존). domain 만 약한 우선순위(동일 domain + neurotypical human
+   = 최우선; 다른 domain — value/emotion/face 등 — 은 순위만 낮을 뿐 채택). veto 는
+   phenomenon mismatch 일 때만.
 4. **Rerankers**(단독 채택 불가): metric·condition·direction·model(E)·keyword-unbound
    (G)·PI(D)·method(F)·theory·seed 는 *연결된* 논문의 **순위**만 조정.
 5. **definition-aware**: G 정의/제외의미로 spurious(동단어) 연결 차단.
@@ -321,7 +329,6 @@ ______ [ ]
 | `known_negatives` 컬럼 / per-researcher exclude pass | **미구현** (P24 follow-up ①) |
 | aim-tuple admission (substring → conjunction) | **미구현** (현재 build_researcher_queue 는 substring+positive-only) |
 | fingerprint `definition` 필드 + subtractive scoring | **미구현** (현재 matcher 는 정의 무시) |
-| H5 species/clinical override gate | **미구현** |
 | keyword↔aim 바인딩 enforcement | **미구현** |
 
 ### C. 응답 → 메모리 매핑
@@ -333,7 +340,6 @@ ______ [ ]
 | B5 + G | `fingerprints/<INIT>.json` (+`definition`,`bound_aim` 필드 신설); 정의-anchored |
 | B9/B10 | open_questions, seed → snowball anchor |
 | H1–H4 | known_negatives(+exclude pass 신설) |
-| H5 | researcher species/method override(✕ veto / △ tuple-gated); 기본 비움=미확인 |
 | C | profile.infra |
 | D | PI rerank(+aim 바인딩); negative PI deprioritize |
 | E | mechanisms_theories; **same-job**(모델이 그 가설 현상에 쓰일 때만 C) |
