@@ -4,7 +4,14 @@ core fields, truth-in-advertising (current engine = priority rerank; tuple-
 admission/exclude/definition matching is the P28 build spec), MSY blank handling.
 One more cycle (c3) remains, then pre-fill per researcher with [확인필요] flags. -->
 
-# CSNL 논문 추천 — 연구 프로파일 정밀 설문 (v8)
+# CSNL 논문 추천 — 연구 프로파일 정밀 설문 (v9)
+
+<!-- v9 — operator round 5: 들어가며 compressed (long 오해-금지 blockquote → one 핵심
+note); +mechanism axis (B8m field per block + B-요약 mechanism column; refiner cols
+dropped → B-요약 5-col); §H exclusions optional; §A "주 연구 한 문장" ★필수; §C
+single-colon; design/readability polish. RENDERING: the Notion API renders typed
+blocks, NOT markdown — the converter emits native to_do / callout / table (so
+[ ]/☐/______ become real checkboxes/answer-boxes/tables, not literal text). -->
 
 <!-- v8 — operator round 4: §H5(종/방법 우선순위 표) DELETED — 종(species)은 어떤
 기준도 아님(종 불문 functional brain; recurrent neural network (RNN) + functional
