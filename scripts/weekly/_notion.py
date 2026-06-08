@@ -319,6 +319,37 @@ def delete_block(block_id: str) -> dict:
     return _request("DELETE", f"/blocks/{block_id}")
 
 
+# ------------------------------------------------ interactive content blocks
+# The survey publisher (notion_survey_pages.py) turns markdown form elements
+# into NATIVE interactive Notion blocks instead of literal "[ ]" / "☐" /
+# "______" text: every checkbox option becomes a clickable to_do, every
+# free-text blank becomes a "type here" callout. These two builders keep that
+# block shape in one place. `rich_text` is a pre-built rich_text array (the
+# caller owns inline formatting); they perform no writes.
+
+# A soft gray gives the answer box an obvious "fill me in" affordance without
+# shouting. Notion's block colour enum uses the *_background suffix.
+CALLOUT_BG = "gray_background"
+CALLOUT_ICON = "✍️"
+
+
+def block_to_do(rich_text: list, checked: bool = False) -> dict:
+    """A clickable checkbox line (to_do block). `checked` reflects whether the
+    source option was pre-marked (☑/☒/✓/[x]); the researcher toggles it."""
+    return {"object": "block", "type": "to_do",
+            "to_do": {"rich_text": rich_text, "checked": bool(checked)}}
+
+
+def block_callout(rich_text: list, *, icon: str = CALLOUT_ICON,
+                  color: str = CALLOUT_BG) -> dict:
+    """A tinted callout box used as the obvious free-text answer area. The
+    researcher clicks in and types; any pre-filled value is shown inside."""
+    return {"object": "block", "type": "callout",
+            "callout": {"rich_text": rich_text,
+                        "icon": {"type": "emoji", "emoji": icon},
+                        "color": color}}
+
+
 def find_child_page_by_title(parent_page_id: str, title: str) -> Optional[dict]:
     """Return the first direct child page whose title matches exactly, else
     None. Used for idempotent create-or-replace of the container + per-

@@ -4,7 +4,17 @@ core fields, truth-in-advertising (current engine = priority rerank; tuple-
 admission/exclude/definition matching is the P28 build spec), MSY blank handling.
 One more cycle (c3) remains, then pre-fill per researcher with [확인필요] flags. -->
 
-# CSNL 논문 추천 — 연구 프로파일 정밀 설문 (v9)
+# CSNL 논문 추천 — 연구 프로파일 정밀 설문 (v11)
+
+<!-- v11 — operator round 7: 가독성 리팩터 — 알파벳 섹션 헤더(A–I) → 직관적 한글 이름
++ 섹션별 한 줄 안내; §-교차참조 및 내부 용어(가설ID · connection anchor · refiner 등)
+제거; B1–B10 필드 코드 제거; ▣ 가설 #A → 프로젝트 N. 컨버터: 마크다운 `*` 누출 수정
+(re.DOTALL + _italic_ 지원 + 잔여 마커 strip) + 섹션/프로젝트 divider 간격. -->
+
+<!-- v10 — operator round 6: §I (이론 프레임 + 형태 선호) DELETED — theory-frame 보기가
+적고 편향적이며 mechanism 은 B8m(블록별)이 담당. 들어가며 추가 압축 + AI/세션 메타
+프레이밍 제거(설문은 오직 연구자 research memory 를 체계적으로 빌드하는 추가설문).
+§H note 의 RNN+fMRI+monkey 예시 제거. -->
 
 <!-- v9 — operator round 5: 들어가며 compressed (long 오해-금지 blockquote → one 핵심
 note); +mechanism axis (B8m field per block + B-요약 mechanism column; refiner cols
@@ -54,31 +64,24 @@ domain×phenomenon×task (N/A-금지 only there). Opus burden/pedantry review ne
 
 ## 들어가며 (연구원께)
 
-과거 자동 추출 프로파일이 너무 넓어 **연구 범위를 벗어난** 추천이 많았습니다. 아래를
-**구체적으로** 적어주시면 그 내용으로 추천 메모리(Postgres)를 다시 구축합니다.
-
-> **핵심:** 구체성은 *정확히 일치하는 논문만* 받기 위한 것이 아니라, **진짜 연결**
-> (공유 aim·현상·메커니즘)과 *단어만 겹치는 허울뿐인 연결*을 가르는 잣대입니다.
-> **연결의 기준은 phenomenon(research focus)** 입니다 — 이것만 맞으면 domain·종·방법이
-> 달라도 추천합니다(value/face …, rodent/monkey/AI, recurrent neural network (RNN)/
-> functional Magnetic Resonance Imaging (fMRI)/electrophysiology). **종은 기준이
-> 아니고(종 불문 functional brain), 기각은 §H 의 phenomenon mismatch 일 때뿐**입니다.
+연구자님의 연구 프로파일을 더 체계적으로 정리해 논문 추천 메모리(Postgres)에
+반영하기 위한 추가 설문입니다. 아래를 **구체적으로** 적어주세요.
 
 **작성 방법**
-- **[자동]** = 메모리에서 채운 값입니다(맞으면 그대로 두시고, 틀리면 ✗ 후 수정) ·
-  **【확인필요】** = 추정값이니 확인 부탁드립니다 · 직접 쓰신 답은 ✓ 없이 저장됩니다.
-- **애매한 표현은 피해주세요**("잘 / 적당히 / 다양한 / 관련된" 등) → 구체적으로 적어
-  주세요. 모르면 `N/A` 로 표시하시고, 빈칸은 남기지 말아주세요(빈칸은 메모리에
-  반영되지 않습니다).
+- **[자동]** = 기존 메모리에서 채운 값(맞으면 그대로, 틀리면 ✗ 후 수정) ·
+  **【확인필요】** = 추정값이니 확인 부탁드립니다 · 직접 쓰신 답은 그대로 저장됩니다.
+- **애매한 표현은 피해주세요**("잘 / 적당히 / 다양한 / 관련된" 등) → 구체적으로. 모르거나
+  탐색 중이면 **"미정"** 으로 두셔도 됩니다(단, "연구 프로젝트별 핵심 주제"의
+  domain × phenomenon × task 는 꼭 채워주세요).
 - **학술 용어는 원어(영어)** 로, **약자는 전체 명칭을 함께** 적어주세요(예: functional
   Magnetic Resonance Imaging (fMRI)).
-- 이 설문은 **프로젝트별** 프로파일입니다 — 각 프로젝트(가설 ID)가 추천 연결의
-  단위가 됩니다. 탐색 중인 부분은 **"미정"** 으로 두셔도 됩니다(단, §B 의 domain ×
-  phenomenon × task 는 꼭 채워주세요).
+- 이 설문은 **프로젝트별** 프로파일입니다 — 각 프로젝트가 한 블록입니다.
 
 ---
 
-## A. 기본 정보
+## 기본 정보
+
+이름·직책·소속과 현재 진행 중인 연구를 한 문장으로 적어주세요.
 
 | 항목 | 사전기입 | [✓/✗] | (수정) |
 |---|---|---|---|
@@ -90,98 +93,100 @@ domain×phenomenon×task (N/A-금지 only there). Opus burden/pedantry review ne
 
 ---
 
-## B. 핵심 가설/주제 (프로젝트별 블록 — atomic) ★최우선
+## 연구 프로젝트별 핵심 주제 ★최우선
 
-> **비중 큰 프로젝트 최대 3개**만 블록으로 작성해 주세요. 각 블록에 **가설 ID**(A1,
-> A2, …)를 부여합니다 — 이 ID 가 추천 연결의 **원자 단위**입니다.
+진행 중인 프로젝트마다 무엇을(domain) 어떤 과제(task)로 보고 어떤 현상(phenomenon)을
+연구하는지 적어주세요. 추천이 여기에 맞춰집니다.
+
+> **비중 큰 프로젝트 최대 3개**만 블록으로 작성해 주세요. 각 블록을 **프로젝트 1,
+> 프로젝트 2 …** 로 번호를 붙입니다 — 이 프로젝트 단위로 논문이 연결됩니다.
 >
 > **블록 유형** — 명제형 가설이 *아니어도 괜찮습니다.* 각 블록 첫 줄에 유형을 표시해
 > 주세요:
-> - **[유형1 명제형]** — 방향 예측이 있는 가설. B1–B10 을 작성합니다(B8 예측 포함).
+> - **[유형1 명제형]** — 방향 예측이 있는 가설. Domain~Seed paper 항목을 모두 작성합니다(가설 한 문장 포함).
 > - **[유형2 탐색형/프레임워크형]** — 아직 narrow 되지 않았거나, 현상을 explore·발견
->   하는 연구이거나, falsifiable 하지 않은 framework. B1–B7 을 *채울 수 있는 만큼*
->   구체적으로(특히 **domain·phenomenon·task**) 적고, B8 대신 **B8′**(탐구 질문/관심
->   현상 — 방향 예측 불필요)과 B9·B10 을 적습니다. "방향 예측 미정"이라고 쓰셔도
+>   하는 연구이거나, falsifiable 하지 않은 framework. Domain~정량화 지표 항목을 *채울 수 있는 만큼*
+>   구체적으로(특히 **domain·phenomenon·task**) 적고, 가설 한 문장 대신 **탐구 질문**(관심
+>   현상 — 방향 예측 불필요)과 배경·Seed paper 를 적습니다. "방향 예측 미정"이라고 쓰셔도
 >   됩니다. **domain×phenomenon×task 만 구체적이면 연결 추천은 유형1과 똑같이
->   작동**합니다(예측은 순위 refiner 일 뿐, 연결 조건은 아닙니다). ※ 단, "탐색형"
+>   작동**합니다(예측은 순위를 다듬을 뿐, 연결 조건은 아닙니다). ※ 단, "탐색형"
 >   이어도 *무엇을* 보는지(domain·현상·과제)는 애매한 표현 없이 구체적으로 적어주세요
->   — 그것이 연결의 anchor 입니다.
+>   — 그것이 연결의 기준점입니다.
 
-### ▣ 가설 #A1   (사전기입 시 각 칸 [✓/✗])
+### 프로젝트 1   (사전기입 시 각 칸 [✓/✗])
 
-- **B1. Domain**(무엇을 지각/추정/기억) *필수*: _orientation / spatial frequency /
+- **Domain**(무엇을 지각/추정/기억) *필수*: _orientation / spatial frequency /
   motion / numerosity / duration / color / contrast / depth / face identity /
   expression / size / position …_ → ______ [ ]
-- **B2. Population/종**: _신경전형 성인 / 아동 / 임상(명시) / 인간만_ → ______ [ ]
-- **B3. Task + 자극** *필수*: paradigm _2AFC / detection / delayed estimation
+- **Population (대상/종)**: _신경전형 성인 / 아동 / 임상(명시) / 인간만_ → ______ [ ]
+- **Task + 자극** *필수*: paradigm _2AFC / detection / delayed estimation
   (adjustment) / match-to-sample / continuous report / n-back / magnitude
   estimation / categorization / search_ → ______ ; 자극 _Gabor/RDK/dot-array/
   face-morph…_ → ______ ; 시행구조(ISI/지연) → ______ [ ]
-- **B4. 동시측정**: ☐행동 ☐fMRI(_T) ☐EEG/MEG ☐eye ☐pupil ☐tES ☐기타_ [ ]
-- **B5. Phenomenon** *필수*: _cardinal/oblique bias / serial dependence
+- **동시측정**: ☐행동 ☐fMRI(_T) ☐EEG/MEG ☐eye ☐pupil ☐tES ☐기타_ [ ]
+- **Phenomenon (현상)** *필수*: _cardinal/oblique bias / serial dependence
   (attractive|repulsive) / central-tendency bias / adaptation aftereffect /
   variability(precision) / error rate / swap error / history effect / gambler's
   fallacy …_ → ______ [ ]
-- **B6. 비교 조건**: _same vs diff position / low vs high contrast / same vs diff
+- **비교 조건**: _same vs diff position / low vs high contrast / same vs diff
   task / set-size / categorical vs continuous …_ → ______ [ ]
-- **B7. 정량화 지표** (유형1 권장 · 유형2 미정 가능): _DoG amp·width / bias slope / θ̂−θ / circular SD·
+- **정량화 지표** (유형1 권장 · 유형2 미정 가능): _DoG amp·width / bias slope / θ̂−θ / circular SD·
   var(θ̂) / regression β / d′ / JND·threshold / decoding acc / BOLD
   autocorrelation / EEG band amp(band) / alpha phase / pupil diameter_ → ______ [ ]
-- **B8. (유형1) 가설 한 문장**(템플릿): "**[B1]**에서 **[B3]**로 **[B6]**을 비교하면
-  **[B5]**이 **[B7]**로 **[방향]** 나타날 것" → ______ [ ]
-- **B8′. (유형2) 탐구 질문 + 최소한의 메커니즘/방향 speculation** — 막연히 "어떻게"로
+- **(유형1) 가설 한 문장**(템플릿): "**Domain**에서 **Task**로 **비교 조건**을 비교하면
+  **Phenomenon**이 **지표**로 **방향** 나타날 것" → ______ [ ]
+- **(유형2) 탐구 질문 + 최소한의 메커니즘/방향 speculation** — 막연히 "어떻게"로
   두지 마시고, **가능한 메커니즘이나 방향을 한 조각이라도** 적어주세요(확정이 아니어도
   좋고, 정말 없으면 "미정"). 예시:
   > ▸ "post-decisional bias 는 attraction 을, perceptual carryover 는 repulsion 을
   >   일으켜 서로 상충하는 힘으로 bias 를 만든다"
-  > ▸ "ITI/ISI 가 길수록(또는 실험조건 X 가 클수록) [B5] bias 가 커진다"
+  > ▸ "ITI/ISI 가 길수록(또는 실험조건 X 가 클수록) Phenomenon(현상)의 bias 가 커진다"
   > ▸ "두 조건이 attraction vs repulsion 으로 갈릴 것이다"
   → ______ [ ]
   *(유형1·2 중 해당하는 한 줄만 적으세요. 메커니즘이 떠오르면 유형1처럼 방향까지 적어도
   좋습니다.)*
-- **B8m. (공통) 메커니즘 / 계산이론** *(있으면 적고, 미정도 가능)*: 이 현상을 만든다고
+- **메커니즘 / 계산이론 (있으면)** *(있으면 적고, 미정도 가능)*: 이 현상을 만든다고
   보시는 계산 원리·메커니즘입니다 — 예: efficient coding, Bayesian cue combination,
   attractor dynamics, divisive normalization, post-decisional bias. **연결의 한 축**
   이며, 없으면 "미정"으로 두세요. → ______ [ ]
-- **B9. 배경**: ______ [ ]
-- **B10. Seed paper**: ______ [ ]
+- **배경**: ______ [ ]
+- **Seed paper**: ______ [ ]
 
-### ▣ 가설 #A2 / #A3 … (복제)
+### 프로젝트 2 / 프로젝트 3 … (복제)
 
-### ▣ B-요약: 가설 튜플 표 (★ admission 의 원자 단위 · N/A 금지)
+### 프로젝트 한눈에 보기
 
-> 각 블록을 **한 줄 튜플**로 요약해 주세요. 이 튜플이 추천의 **연결 기준점
-> (connection anchor)** 입니다 — 논문이 *정확히 일치*해야 하는 것이 아니라, 이 튜플의
+> 각 프로젝트를 **한 줄로** 요약해 주세요. 이 한 줄이 추천의 **연결 기준점**입니다 —
+> 논문이 *정확히 일치*해야 하는 것이 아니라, 이 한 줄의
 > 요소(특히 phenomenon·mechanism)에 **진짜로 연결**되면 추천 후보가 됩니다(연결만
 > genuine 하면 다른 도메인·종·방법도 괜찮습니다). domain×phenomenon×task = 연결
-> anchor(필수 3요소, N/A 금지)이고, mechanism/계산이론 = 추가 연결축(미정 가능)입니다.
-> (metric·조건·방향 같은 순위 refiner 는 위 B 블록에 이미 적으셨으니 여기서는 생략합니다.)
+> 기준점(필수 3요소, 반드시 채워주세요)이고, mechanism/계산이론 = 추가 연결축(미정 가능)입니다.
+> (지표·조건·방향 같은 순위 보정 항목은 위 프로젝트 블록에 이미 적으셨으니 여기서는 생략합니다.)
 > domain 과 phenomenon 을 따로 떼어 적으면 허울뿐인 조합이 생기므로, **반드시 한 행에
 > 묶어** 적어주세요.
 
-| 가설ID | **domain** | **phenomenon** | **task** | mechanism/계산이론 |
+| 프로젝트 | **domain** | **phenomenon** | **task** | mechanism/계산이론 |
 |---|---|---|---|---|
-| A1 | | | | |
-| A2 | | | | |
-| A3 | | | | |
+| 1 | | | | |
+| 2 | | | | |
+| 3 | | | | |
 
-> (굵은 3열 = 연결 anchor 로 N/A 금지. **mechanism/계산이론** = 추가 연결축(미정 가능).
+> (굵은 3열 = 연결 기준점이므로 꼭 채워주세요. **mechanism/계산이론** = 추가 연결축(미정 가능).
 > 모르면 비워두셔도 됩니다.)
 
 ---
 
-## H. 연구 범위 & 제외 (★ 범위-밖 차단)
+## 추천에서 빼고 싶은 주제 (선택)
 
-> **종(species)·측정기법(method)은 제외 기준이 아닙니다** — 종을 불문하고 functional
-> brain 이 관심사이고(human / monkey / rodent / AI 모두), 한 논문이 recurrent neural
-> network (RNN) + functional Magnetic Resonance Imaging (fMRI) + monkey
-> electrophysiology 를 함께 다루기도 합니다. 따라서 아래 제외는 **phenomenon /
+내 연구 범위와 추천에서 빼고 싶은 주제를 적어주세요. 없으면 비워두셔도 됩니다.
+
+> **종(species)·측정기법(method)은 제외 기준이 아닙니다** — 아래 제외는 **phenomenon /
 > research-focus 가 다를 때만** 의미가 있습니다(종·도메인·기법만으로는 빼지 않습니다).
 
-**H1. in-scope 한 단락**: ______ [ ]
+**내 연구 범위 한 단락**: ______ [ ]
 
-**H2–H4. 제외 목록** *(★ 선택 — 없으면 비워두셔도 되고, 특히 추천 이력이 적으면
-건너뛰세요)* — 각 행이 known_negatives 1건입니다. **배제 기준은 "논문의 phenomenon/
+**빼고 싶은 주제 목록** *(★ 선택 — 없으면 비워두셔도 되고, 특히 추천 이력이 적으면
+건너뛰세요)* — 각 행이 빼고 싶은 주제 1건입니다. **배제 기준은 "논문의 phenomenon/
 research-focus 가 내 것과 다르다"**이지, 종·도메인이 달라서가 아닙니다(도메인·종이
 달라도 현상만 맞으면 도움이 됩니다). 적으실 때는 **"왜 아닌가"를 구체적 대조로** 적어
 주세요 — "관심 없음", "거리가 멈" 같은 추상적 사유로는 AI 가 근거를 추론할 수
@@ -203,17 +208,19 @@ research-focus 가 내 것과 다르다"**이지, 종·도메인이 달라서가
 
 ---
 
-## G. 키워드 (+ 중의적 용어만 정의)
+## 검색 키워드
 
-> 키워드는 추천 **순위 보정(reranker)**에 쓰입니다(키워드만으로 논문을 통과시키지는
+내 연구를 잘 나타내는 키워드를 적어주세요. 뜻이 갈리는 용어만 따로 설명해주시면 됩니다.
+
+> 키워드는 추천 **순위 보정**에 쓰입니다(키워드만으로 논문을 통과시키지는
 > 않습니다). **이건 용어 사전(ontology) 인터뷰가 아니므로**, 모든 키워드에 정의를 달
-> 필요는 없습니다. G1 목록은 맞으면 그대로 두시고(틀리면 ✗, 빠진 것은 추가), **G2 에는
+> 필요는 없습니다. 키워드 목록은 맞으면 그대로 두시고(틀리면 ✗, 빠진 것은 추가), **중의어 정의에는
 > 실험·가설에 따라 뜻이 달라지는 *중의적 용어*에만** 정의를 적어주세요.
 
-**G1. 키워드 목록** (사전기입 — 맞으면 그대로 두시고, 틀리면 ✗, 추가 환영):
+**키워드 목록** (사전기입 — 맞으면 그대로 두시고, 틀리면 ✗, 추가 환영):
 ______
 
-**G2. 중의적 용어만 정의** — 같은 단어가 실험·가설에 따라 의미가 갈리는 것만 적어주세요.
+**중의적 용어만 정의** — 같은 단어가 실험·가설에 따라 의미가 갈리는 것만 적어주세요.
 예) "**bias**" = attractive / repulsive / estimation 중 무엇인지 · "**reference**" =
 reference frame / reference stimulus 중 무엇인지 · "gain", "adaptation",
 "normalization", "tuning" 등. 의미가 분명한 용어(예: "serial dependence")는 **정의가
@@ -226,16 +233,20 @@ reference frame / reference stimulus 중 무엇인지 · "gain", "adaptation",
 
 ---
 
-## C. 실험 인프라 (한 줄)
+## 실험 장비·환경
+
+보유하거나 사용하시는 실험 장비·소프트웨어 환경을 한 줄로 적어주세요.
 
 보유하거나 사용하시는 장비·환경 (예 — 7T fMRI@OO · 64ch EEG · EyeLink 1000 · tDCS ·
 Psychtoolbox): ______ [ ]
 
 ---
 
-## D. 관심 그룹 / PI
+## 관심 있는 연구자 (PI)
 
-| 주목하는 PI(이름+소속) | 내 어느 가설ID/현상과 연결되나 (필수) | [✓/✗] |
+논문을 주목하는 PI(연구책임자)와, 그분이 내 어느 프로젝트·현상과 연결되는지 적어주세요.
+
+| 주목하는 PI(이름+소속) | 내 어느 프로젝트/현상과 연결되나 (필수) | [✓/✗] |
 |---|---|---|
 | | | [ ] |
 | (5–10명) | | [ ] |
@@ -244,7 +255,9 @@ Psychtoolbox): ______ [ ]
 
 ---
 
-## E. Computational modeling (확정된 것만 · 공란 가능)
+## 계산 모델 (computational model)
+
+지금 실제로 쓰고 있거나 확정한 계산 모델이 있으면 적어주세요. 없으면 비워두셔도 됩니다.
 
 > 후보 모델이 많아 아직 고르지 않으셨을 수도 있습니다. **지금 실제로 쓰고 있거나
 > 확정한 모델이 있을 때만** 적어주세요 — 없으면 **공란으로 두셔도 됩니다**(추측으로
@@ -252,7 +265,7 @@ Psychtoolbox): ______ [ ]
 
 - modeling 을 직접 하시나요: ☐한다 ☐안한다 ☐읽기만(추천 원함) ☐미정
 
-| 모델(정확한 이름, 확정된 것만) | 적용 현상(가설ID) | 사용 방식 | [✓/✗] |
+| 모델(정확한 이름, 확정된 것만) | 적용 현상(프로젝트) | 사용 방식 | [✓/✗] |
 |---|---|---|---|
 | | | ☐적용 ☐검증 ☐확장 ☐반론 | [ ] |
 
@@ -260,22 +273,12 @@ Psychtoolbox): ______ [ ]
 
 ---
 
-## F. 선호 분석 방법론 (method-only 는 약한 신호)
+## 선호하는 분석 방법
+
+자주 쓰시는 분석 방법을 골라주세요(해당 항목에 체크).
 
 ☐regression(mixed) ☐psychometric fit ☐DoG fit ☐MDS ☐PCA ☐RSA ☐MCMC/HBM
 ☐bootstrap/permutation ☐decoding(SVM/LDA) ☐time-frequency ☐GLM(fMRI) ☐기타_
-
----
-
-## I. 메모리 설계용 추가 항목 (단답)
-
-> 메모리 구축에 직접 필요한 2가지입니다. 해당하는 칸에 ✓ 해주세요(복수 선택 가능).
-
-1. **이론 프레임**: ☐efficient coding ☐Bayesian / ideal-observer ☐predictive coding
-   ☐attractor / recurrent neural network (RNN) dynamics ☐reinforcement learning
-   ☐signal detection theory ☐기타: ______
-2. **추천 논문 형태 선호**: ☐empirical(행동) ☐neuro(fMRI / EEG / electrophysiology)
-   ☐modeling ☐methods ☐review ☐preprint
 
 ---
 
@@ -326,7 +329,6 @@ Psychtoolbox): ______ [ ]
 | D | PI rerank(+aim 바인딩); negative PI deprioritize |
 | E | computational_models (확정 모델만); mechanism 은 B8m/B-요약 가 primary. **same-job**(모델이 그 가설 현상에 쓰일 때만 C) |
 | F | method rerank(약) |
-| I | theory_frame, recency/format 선호 |
 
 > 핵심: **genuine 연결(튜플 anchor) admits · H vetoes · spurious(단어만 겹침)
 > 차단 · 나머지는 rerank.** 목표는 *좁히기*가 아니라 *연결 정확도*다 — 다른 도메인·
