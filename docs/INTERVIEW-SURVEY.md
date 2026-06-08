@@ -4,7 +4,14 @@ core fields, truth-in-advertising (current engine = priority rerank; tuple-
 admission/exclude/definition matching is the P28 build spec), MSY blank handling.
 One more cycle (c3) remains, then pre-fill per researcher with [확인필요] flags. -->
 
-# CSNL 논문 추천 — 연구 프로파일 정밀 설문 (v12)
+# CSNL 논문 추천 — 연구 프로파일 정밀 설문 (v13)
+
+<!-- v13 — operator round 9: §분석방법 2축 재분류 — (1)데이터 종류(behavior/eye-tracking/
+neural/ANN) 먼저, (2)각 안에서 큰 범주 approach(descriptive model fitting · hypothesis
+testing · normative model+parameter recovery · decoding · state-space/manifold ·
+representational alignment · encoding model)로 — 지엽적 method 나열 폐지, full term+abbr.
+컨버터: 줄바꿈/띄어쓰기 버그 수정(emphasis·flag 인접 공백/구분자 보존 = Bug A, 블록 내
+soft-wrap newline→space = Bug B; "작성 방법" 문장 절단 해소). -->
 
 <!-- v12 — operator round 8: §분석방법 재구성(행동 curve-fitting 통합 + fMRI
 GLM/retinotopy/RSA/MVPA/neural manifold 구분, full term + abbreviation); PI-컨펌
@@ -74,17 +81,11 @@ domain×phenomenon×task (N/A-금지 only there). Opus burden/pedantry review ne
 연구자님의 연구 프로파일을 더 체계적으로 정리해 논문 추천 메모리(Postgres)에
 반영하기 위한 추가 설문입니다. 아래를 **구체적으로** 적어주세요.
 
-**작성 방법**
-- **[자동]** = 기존 메모리에서 채운 값(맞으면 그대로, 틀리면 ✗ 후 수정) ·
-  **【확인필요】** = 추정값이니 확인 부탁드립니다 · **(직접 작성)** = 비어 있으니 채워
-  주세요 · 직접 쓰신 답은 그대로 저장됩니다.
-- **애매한 표현은 피해주세요**("잘 / 적당히 / 다양한 / 관련된" 등) → 구체적으로 적어주세요.
-  잘 모르시는 부분은 지도교수님·사수께 정확한 내용을 확인해 채워주시고, **아직 확정되지
-  않은 부분만 "미정"** 으로 두세요(단, "연구 프로젝트별 핵심 주제"의 domain × phenomenon
-  × task 는 꼭 채워주세요).
-- **학술 용어는 원어(영어)** 로, **약자는 전체 명칭을 함께** 적어주세요(예: functional
-  Magnetic Resonance Imaging (fMRI)).
-- 이 설문은 **프로젝트별** 프로파일입니다 — 각 프로젝트가 한 블록입니다.
+**작성 방법 — 입력 방식 안내**
+- **☐ 체크박스**: **맞거나 본인에게 해당하면 체크 ☑, 틀리거나 해당 없거나 모르면 비워두세요.** (미리 채워진 값이 틀리면 글자를 고친 뒤 체크하시면 됩니다.)
+- **✍️ 회색 답변 상자 · 표(table)**: 칸을 클릭해 직접 입력하세요(해당 없으면 비워두셔도 됩니다).
+- **색 표시**(미리 채운 값의 신뢰도): [자동] = 초록(메모리로 확인된 값, 맞으면 그대로) · 【확인필요】 = 노랑(꼭 확인해 주세요) · (직접 작성) = 빨강(비어 있으니 채워주세요).
+- 학술 용어는 **원어(영어)**로(약자는 전체 명칭 병기, 예: functional Magnetic Resonance Imaging (fMRI)). 잘 모르는 부분은 지도교수·사수께 확인하고, **아직 확정 안 된 것만 "미정"**. 이 설문은 **프로젝트별**이며, "연구 프로젝트별 핵심 주제"의 domain × phenomenon × task 는 꼭 채워주세요.
 
 ---
 
@@ -282,17 +283,17 @@ Psychtoolbox): ______ [ ]
 
 ---
 
-## 선호하는 분석 방법
+## 관심 방법론
 
-자주 쓰시는 분석 방법을 골라주세요(해당 항목에 체크 · 복수 가능).
+먼저 (1) **어떤 데이터**를 분석하시는지 고르고, 그 안에서 (2) **어떤 방식**으로 분석하시는지 큰 범주로 골라주세요(복수 가능 · 데이터 종류만 고르고 방식은 비워두셔도 됩니다). 큰 범주만 고르시면 되고, 괄호 안은 세부 기법 예시입니다.
 
-**행동 / 심리물리 (behavioral / psychophysics)**: ☐ psychometric / behavioral curve fitting (multiple linear regression · difference-of-Gaussians (DoG) fit · 심리측정함수 fit 포함) ☐ mixed-effects regression (linear / logistic) ☐ multidimensional scaling (MDS) ☐ signal detection theory (SDT) ☐ bootstrap / permutation test
+**행동 (behavior)**: ☐ descriptive psychophysics / curve fitting (심리물리 곡선에서 지표 추출; psychometric function fitting · signal detection theory (SDT), d-prime · difference-of-Gaussians (DoG) curve fitting) ☐ sequential-sampling / evidence-accumulation modeling (선택·반응시간 동시 모델링; drift-diffusion model (DDM) · leaky competing accumulator (LCA) · hierarchical DDM (HDDM)) ☐ estimation / bias modeling (연속 추정의 bias·precision; mixture model of estimation error · bias–variance decomposition) ☐ normative / ideal-observer modeling (규범적 관찰자 기반; Bayesian observer / ideal-observer model · efficient-coding model · parameter recovery) ☐ statistical hypothesis testing (t-test · analysis of variance (ANOVA) · (generalized) linear mixed-effects model (GLMM))
 
-**계산 모델 적합 (model fitting)**: ☐ maximum likelihood estimation (MLE) ☐ Bayesian / Markov Chain Monte Carlo (MCMC) ☐ hierarchical Bayesian model (HBM)
+**시선·동공 (eye-tracking / pupillometry)**: ☐ descriptive fixation / saccade metrics (고정·도약 지표; fixation duration · saccade amplitude · microsaccade rate · scanpath) ☐ pupillometry (동공 기반 각성·인지부하; pupil diameter / dilation · tonic vs phasic pupil · locus-coeruleus–norepinephrine (LC-NE) arousal index) ☐ gaze dynamics / state-space (시선 궤적 동역학; hidden Markov model (HMM) of fixation states) ☐ statistical hypothesis testing ((generalized) linear mixed-effects model (GLMM) · cluster-based permutation test)
 
-**fMRI**: ☐ general linear model (GLM) ☐ retinotopy / population receptive field (pRF) mapping ☐ representational similarity analysis (RSA) ☐ multi-voxel pattern analysis (MVPA) / decoding ☐ neural manifold / dimensionality reduction (principal component analysis (PCA) 등) ☐ functional connectivity
+**신경 (neural — fMRI 주력; electroencephalography (EEG) / magnetoencephalography (MEG); electrophysiology)**: ☐ encoding models (자극·특징 → 반응; general linear model (GLM) · population receptive field (pRF) / retinotopy · voxelwise encoding model) ☐ decoding / multivariate pattern analysis (반응 → 자극 분류·복원; multi-voxel pattern analysis (MVPA) · searchlight · inverted encoding model (IEM)) ☐ representational alignment (표상 구조 비교; representational similarity analysis (RSA) with representational dissimilarity matrix (RDM)) ☐ connectivity modeling (영역 간 결합; functional connectivity · effective/causal — dynamic causal modeling (DCM) / directed-graph (DAG) causal discovery) ☐ state-space / neural manifold (저차원 집단 동역학; demixed principal component analysis (dPCA) · neural manifold) ☐ univariate statistical testing (단변량; mass-univariate GLM · cluster-based permutation test)
 
-**EEG / MEG**: ☐ time-frequency analysis ☐ event-related potential (ERP) / event-related field (ERF) ☐ decoding (support vector machine (SVM) / linear discriminant analysis (LDA))
+**인공신경망 (artificial neural network, ANN)**: ☐ task-trained network modeling (과제 학습 회로; recurrent neural network (RNN) · convolutional neural network (CNN) as cortical model) ☐ representational alignment (뇌·모델 표상 비교; representational similarity analysis (RSA) · centered kernel alignment (CKA)) ☐ state-space / latent dynamics (잠재 상태공간; fixed-point / attractor analysis · neural manifold) ☐ decoding / probing (내부 표상 probing; linear probe · diagnostic classifier) ☐ training dynamics (학습 과정; learning-curve / representation-trajectory analysis)
 
 **기타**: ______
 

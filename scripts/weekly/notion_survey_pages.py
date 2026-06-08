@@ -400,6 +400,29 @@ def _rt(content: str, *, bold: bool = False, italic: bool = False,
     return objs
 
 
+# Intra-block soft-wrap join (BUG B). A single logical block (paragraph, bullet,
+# to_do label, callout, quote) merges its source lines with '\n' before reaching
+# here; those newlines are markdown line-WRAPPING, not real breaks, so each must
+# collapse to a single SPACE so the sentence flows (Korean wraps at 어절 bounda-
+# ries → space-join is correct, e.g. '메모리(Postgres)에\n반영하기' →
+# '메모리(Postgres)에 반영하기'). After the join, runs of 2+ horizontal whitespace
+# are collapsed to one space (the join can abut an existing trailing/leading
+# space). This only ever sees within-block text: code fences use _code() (never
+# this path) and table cells are single-line, so no real block boundary is merged.
+_SOFTWRAP_WS_RE = re.compile(r"[ 	]{2,}")
+
+
+def _join_softwrap(text: str) -> str:
+    """Convert intra-block soft-wrap newlines to single spaces, then collapse any
+    resulting double horizontal-whitespace. Used at the start of inline_rich_text
+    so every text-bearing block (NOT code; table cells are single-line) reads as
+    flowing prose instead of literal mid-sentence line breaks."""
+    if "\n" not in text:
+        return text
+    text = text.replace("\n", " ")
+    return _SOFTWRAP_WS_RE.sub(" ", text)
+
+
 def inline_rich_text(text: str) -> list[dict]:
     """Convert a line of inline markdown into a Notion rich_text array.
 
@@ -411,6 +434,11 @@ def inline_rich_text(text: str) -> list[dict]:
     if text is None:
         return []
     text = text.replace("\r", "")
+    # BUG B: collapse intra-block soft-wrap newlines to a single space FIRST, so
+    # the existing DOTALL emphasis spans (which already cross newlines) now match
+    # across a space and no '\n' survives as a literal Notion line break. Recursive
+    # calls on inner spans re-run this harmlessly (idempotent: inner has no '\n').
+    text = _join_softwrap(text)
     out: list[dict] = []
     pos = 0
     for m in _INLINE_RE.finditer(text):
@@ -972,6 +1000,17 @@ _SCAF_UNCHECKED_BOX_RE = re.compile(r"☐\s*")
 _SCAF_CHECKED_BOX_RE = re.compile(r"[☑☒]\s*")
 # Collapse the double spaces / dangling separators a strip can leave behind.
 _SCAF_MULTISPACE_RE = re.compile(r"[ \t]{2,}")
+# Does this run contain ANY scaffolding token that the strip would remove? Used
+# to gate the whitespace-mutating cleanups (BUG A): a run with NO scaffolding is
+# returned with its original boundary whitespace intact, so genuine prose spaces
+# and ' · ' separators around an adjacent **bold**/flag segment are never eaten.
+# (The flag tokens [자동]/【확인필요】 are KEPT, not stripped, so they do NOT count.)
+_SCAF_ANY_RE = re.compile(r"[☐☑☒]|\[\s*✓\s*/\s*✗\s*\]|\[[ \t]*\]|_{2,}"
+                          r"|(?:→|->)\s*_{2,}")
+# A run of leading / trailing horizontal whitespace (preserved verbatim across
+# the scaffolding-strip so a boundary space between rich_text segments survives).
+_LEAD_WS_RE = re.compile(r"^[ \t]+")
+_TRAIL_WS_RE = re.compile(r"[ \t]+$")
 
 
 def _strip_scaffolding_text(s: str, *, strip_markers: bool = False) -> str:
@@ -988,6 +1027,20 @@ def _strip_scaffolding_text(s: str, *, strip_markers: bool = False) -> str:
         return s
     if strip_markers:
         s = _strip_residual_markers(s)
+    # BUG A: a rich_text segment is only a PIECE of a larger logical line, so the
+    # space (or ' · ') that lands at a segment's edge is the real character that
+    # separates it from the adjacent **bold**/flag segment — it must NOT be eaten.
+    # If this run carries NO scaffolding token, there is nothing to strip and no
+    # stranded whitespace to tidy, so return it verbatim (boundary spaces intact).
+    if not _SCAF_ANY_RE.search(s):
+        return s
+    # Scaffolding IS present. Capture the run's original outer whitespace so a real
+    # boundary space adjacent to (but not part of) the scaffolding is restored
+    # afterwards, then strip + tidy on the interior only.
+    lead = _LEAD_WS_RE.match(s)
+    lead_ws = lead.group(0) if lead else ""
+    trail = _TRAIL_WS_RE.search(s)
+    trail_ws = trail.group(0) if trail else ""
     s = _SCAF_CHECK_COL_RE.sub("", s)          # '[✓/✗]'  →  (drop)
     s = _SCAF_CHECKED_BOX_RE.sub("[x] ", s)     # '☑'/'☒' →  '[x] '
     s = _SCAF_UNCHECKED_BOX_RE.sub("", s)       # '☐'     →  (drop)
@@ -1006,7 +1059,11 @@ def _strip_scaffolding_text(s: str, *, strip_markers: bool = False) -> str:
     s = re.sub(r"\s+([)）\]】])", r"\1", s)
     # a space that now sits just after an opening paren, e.g. '( 예' → '(예'.
     s = re.sub(r"([(（\[【])\s+", r"\1", s)
-    return s.rstrip()
+    # Restore the ORIGINAL outer whitespace the run arrived with (the cleanups
+    # above, incl. the old trailing rstrip, would otherwise drop a real boundary
+    # space). The interior is fully tidied; only the edges are made verbatim.
+    core = s.strip(" \t")
+    return lead_ws + core + trail_ws
 
 
 def _scrub_rich_text(rt: list[dict]) -> list[dict]:
