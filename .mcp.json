@@ -1,0 +1,10 @@
+{
+  "$comment": "P33 (2026-07-20): project-scoped MCP servers for the paper-rec harness. paper-search-mcp (openags, MIT, pure-Python, keyless) wraps 27 scholarly sources incl. PubMed/bioRxiv/medRxiv/Crossref/DOAJ/CORE that crawl.mjs lacks. Node-free. Used by the operator's ATTENDED deep-scout only; the unattended weekly cron uses scripts/archive/fetch_new_papers.py (pure requests, no MCP). Install: python3 -m pip install --user paper-search-mcp. Remove this file to unwire.",
+  "mcpServers": {
+    "paper-search": {
+      "command": "python3",
+      "args": ["-m", "paper_search_mcp.server"],
+      "env": {}
+    }
+  }
+}

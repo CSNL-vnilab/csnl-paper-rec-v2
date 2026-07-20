@@ -41,6 +41,11 @@ from pathlib import Path
 _REPO_ROOT = Path(__file__).resolve().parent.parent.parent
 sys.path.insert(0, str(_REPO_ROOT / "pipeline"))
 from _db import load_env, query_json, exec_many, ledger_schema  # noqa: E402
+# same_work: pure preprint<->published twin test (real-DOI-equal OR strong
+# title match when a DOI is synthetic/None). Import is side-effect-free — no
+# DB connection at load — so the module still imports offline for unit tests.
+sys.path.insert(0, str(_REPO_ROOT / "scripts" / "archive"))
+from _common import same_work, _token_set_ratio as _RAPIDFUZZ  # noqa: E402
 
 KST = timezone(timedelta(hours=9))
 
@@ -87,23 +92,28 @@ def _active_counts(sch: str) -> dict[str, int]:
 def _candidates(sch: str, rid: str) -> list[dict]:
     """Eligible queue rows for one researcher, best-composite first.
 
-    Eligible = in the queue, not already answered (archive_responses), not
-    already in ANY archive_weekly_digests row for this researcher (so a
+    Eligible = in the queue written by the authoritative builder ('brq' —
+    build_researcher_queue.py; the parked P28 recommend.py writes 'p28' and is
+    deliberately NOT read here, MF-1), not already answered (archive_responses),
+    not already in ANY archive_weekly_digests row for this researcher (so a
     rolled-over or previously-read paper is never re-recommended), and not
-    out-of-scope. rid is the only interpolated value and is regex-validated
-    (real branch, not assert — survives `python -O`)."""
+    out-of-scope. Returns doi + title_norm too so _drop_same_work() can run the
+    same_work() twin test against the researcher's known works. rid is the only
+    interpolated value and is regex-validated (real branch, not assert —
+    survives `python -O`)."""
     if not _INIT_RE.match(rid or ""):
         raise ValueError(f"unsafe researcher id (not /^[A-Z]{{2,8}}$/): {rid!r}")
     return query_json(f"""
         SELECT q.canonical_id, q.chunk, q.tier, q.composite, q.similarity,
                q.rank_in_chunk,
-               p.title, p.year, p.doi
+               p.title, p.year, p.doi, p.title_norm
           FROM {sch}.archive_researcher_queues q
           JOIN {sch}.archive_papers p
             ON p.canonical_id = q.canonical_id
           LEFT JOIN {sch}.archive_paper_synopses s
             ON s.canonical_id = q.canonical_id
          WHERE q.researcher_id = '{rid}'
+           AND q.builder = 'brq'
            AND s.out_of_scope_note IS NULL
            AND NOT EXISTS (
                  SELECT 1 FROM {sch}.archive_responses r
@@ -117,7 +127,58 @@ def _candidates(sch: str, rid: str) -> list[dict]:
     """)
 
 
+def _known_works(sch: str, rid: str) -> list[dict]:
+    """Every work this researcher already KNOWS — answered (archive_responses)
+    or previously staged in a digest (archive_weekly_digests) — as
+    {doi, title_norm} dicts for the same_work() twin test.
+
+    The cheap canonical_id NOT EXISTS guards in _candidates already drop exact
+    re-recommends; this set is what the same_work() pass compares against to
+    ALSO drop a preprint<->published (or cross-source) TWIN that slipped
+    through because it carries a *different* canonical_id (MF-2). Reads only —
+    the same archive_responses/archive_weekly_digests read plane build_digest
+    already uses; no new prod path, no write. rid regex-validated (real branch,
+    survives `python -O`)."""
+    if not _INIT_RE.match(rid or ""):
+        raise ValueError(f"unsafe researcher id (not /^[A-Z]{{2,8}}$/): {rid!r}")
+    return query_json(f"""
+        SELECT p.doi, p.title_norm
+          FROM {sch}.archive_responses r
+          JOIN {sch}.archive_papers p ON p.canonical_id = r.canonical_id
+         WHERE r.researcher_id = '{rid}'
+        UNION
+        SELECT p.doi, p.title_norm
+          FROM {sch}.archive_weekly_digests w
+          JOIN {sch}.archive_papers p ON p.canonical_id = w.canonical_id
+         WHERE w.researcher_id = '{rid}'
+    """)
+
+
 # --------------------------------------------------------------- selection
+
+
+def _drop_same_work(cands: list[dict], known: list[dict]) -> list[dict]:
+    """Drop any candidate that is the SAME WORK as a paper the researcher
+    already knows (answered or past-digest), closing the preprint<->published
+    twin leak that the canonical_id NOT EXISTS SQL guards miss because the twin
+    carries a *different* canonical_id (MF-2).
+
+    Pure function (no DB): _common.same_work() over {doi, title_norm} dicts —
+    merges on equal real DOI, or a strong rapidfuzz title match when a DOI is
+    synthetic/None; it NEVER title-merges two distinct real DOIs, and a blank
+    title on the DOI-missing side keeps both. Applied to the whole candidate
+    list up front so BOTH refill paths (active==0 solver AND active>0
+    best-composite top-up) are twin-suppressed. Survivors keep original order.
+    """
+    if not known:
+        return list(cands)
+    kept: list[dict] = []
+    for c in cands:
+        if any(same_work(c, k) for k in known):
+            continue
+        kept.append(c)
+    return kept
+
 
 def _compositions(total: int, parts: int):
     """Yield every non-negative integer tuple of length `parts` summing to
@@ -242,6 +303,15 @@ def main() -> int:
                          "so the chain still sends the rows that were staged.")
     args = ap.parse_args()
 
+    # MF-2 guard visibility: same_work()'s fuzzy title branch is a no-op without
+    # rapidfuzz, so a read/rejected preprint's DRIFTED-title published twin could
+    # slip back into the digest. Real-DOI-equal twins are still caught. Warn so
+    # the operator knows to `pip install rapidfuzz` for full twin suppression.
+    if _RAPIDFUZZ is None:
+        print("[digest] WARN: rapidfuzz not installed — same-work twin suppression "
+              "(drifted-title preprint<->published) is INERT (MF-2); install with "
+              "`pip install --user rapidfuzz`.", file=sys.stderr)
+
     load_env()
     sch = ledger_schema()
     week = args.week or iso_week(datetime.now(KST))
@@ -268,6 +338,12 @@ def main() -> int:
             print(f"[digest] {rid}: {active} active — full, no refill")
             continue
         cands = _candidates(sch, rid)
+        # Same-work (twin) pass: the canonical_id NOT EXISTS SQL guards in
+        # _candidates catch exact re-recommends; this drops a preprint<->
+        # published twin whose canonical_id differs (MF-2). Applied to the full
+        # candidate list before the active-branch split so the top-up path is
+        # suppressed too. Filtered count feeds the underfill/"0 eligible" logic.
+        cands = _drop_same_work(cands, _known_works(sch, rid))
         if not cands:
             print(f"[digest] {rid}: active={active}, ⚠ 0 eligible candidates to "
                   f"refill {deficit} — queue exhausted; rebuild it")

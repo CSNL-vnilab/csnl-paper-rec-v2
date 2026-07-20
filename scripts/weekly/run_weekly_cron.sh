@@ -14,6 +14,17 @@
 #
 # Gate: state/.P23_ENABLED. DB writes are the OPERATOR's launchd process via
 # .env creds (not agent-held access).
+#
+# ---- cron interlock (P33 · MF-4): deterministic re-slice ONLY ----
+# The discovery track (fetch_new_papers.py + the archive_discovery_watermark
+# advance — any discovery_watermark write) and the queue rebuild
+# (build_researcher_queue.py, recommend.py) are OPERATOR-'!' ONLY and MUST NEVER
+# be wired into this cron. Per DECISIONS-v3 the unattended path carries no
+# ML/LLM and never sends autonomously; Property-2 "continuous tracking" is
+# operator-cadenced (attended), not cron-automated. This routine re-slices
+# pre-built queues only (capture → build_digest → send → mirror → notify) — it
+# never rebuilds a queue and never fetches papers. Acceptance gate: a grep of
+# those four names in this file, excluding this comment block, must be 0.
 
 set -euo pipefail
 export TZ="Asia/Seoul"

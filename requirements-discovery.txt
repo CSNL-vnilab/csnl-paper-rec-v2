@@ -1,0 +1,34 @@
+# csnl-paper-rec-v2 — DISCOVERY-only Python deps (P33, MF-8/B3).
+#
+# This is the ATTENDED operator deep-scout / discovery stack — NOT the
+# unattended weekly-cron runtime. It is deliberately kept SEPARATE from:
+#   - requirements.txt        (core pipeline: pyyaml/requests/pypdf/rapidfuzz)
+#   - plugin/requirements.txt (interview plugin: psycopg2-binary only)
+# so the cron/interview paths stay minimal and this heavier scholarly-search
+# stack is installed only on the operator workstation that runs discovery.
+#
+# Operator install (attended, on demand):
+#     python3 -m pip install --user -r requirements-discovery.txt
+#
+# Consumers: scripts/archive/fetch_new_papers.py (pure-requests adapter over
+# paper_search_mcp.academic_platforms.* — imports bs4/feedparser/httpx/lxml/
+# requests directly) and the paper-search MCP server wired in .mcp.json for
+# the attended scout. Discovery is operator-`!` ONLY (DECISIONS-v3: no
+# ML/LLM in cron, no autonomous send); nothing here is auto-installed and
+# fetch_new_papers.py must NEVER be added to run_weekly_cron.sh (B4).
+
+# --- primary ---
+paper-search-mcp>=0.1.4   # openags, MIT, keyless; wraps 27 scholarly sources (PubMed/bioRxiv/medRxiv/Crossref/DOAJ/EuropePMC/arXiv/Semantic/...)
+rapidfuzz>=3.5            # same-work title dedup (_common.same_work); matches core requirements.txt floor
+
+# --- transitive runtime, pinned explicitly ---
+# paper-search-mcp pulls these in, but fetch_new_papers.py's adapter imports
+# them directly, so pin known-good floors instead of relying on the resolver.
+# (fastmcp + mcp also ship with paper-search-mcp for its MCP-server mode used
+#  by the attended .mcp.json scout; not pinned here — the pure-requests fetch
+#  path does not import them.)
+beautifulsoup4>=4.12     # HTML parsing (DOAJ / scraped listings)
+feedparser>=6.0          # arXiv Atom feed parsing
+httpx>=0.24              # async HTTP client used by several source clients
+lxml>=5.0                # fast XML/HTML backend for bs4/feedparser
+requests>=2.31           # synchronous HTTP funnel; matches core requirements.txt floor

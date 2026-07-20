@@ -27,6 +27,16 @@ sys.path.insert(0, str(_REPO_ROOT / "pipeline"))
 
 KST = timezone(timedelta(hours=9))
 
+# Optional fuzzy-match dependency (discovery/dedup only — see
+# requirements-discovery.txt). Import-guarded so the core attended path and
+# the JSONL helpers keep working without it; same_work() degrades to a
+# conservative NO-merge when it is absent so a missing dep can never
+# false-collapse two distinct works.
+try:  # pragma: no cover - trivial import guard
+    from rapidfuzz.fuzz import token_set_ratio as _token_set_ratio
+except Exception:  # pragma: no cover - optional dep absent
+    _token_set_ratio = None
+
 
 # ----------------------------------------------------------------- helpers
 
@@ -38,12 +48,47 @@ _DOI_RE = re.compile(r"\b10\.\d{3,}\/[^\s\"<>()]+", re.IGNORECASE)
 
 
 def norm_doi(raw: Optional[str]) -> Optional[str]:
+    """Normalise a DOI (or synthetic id): strip the DOI URL prefix and trailing
+    punctuation, then lowercase.
+
+    **PK-STABLE (MF-C):** this feeds canonical_id(), the archive_papers primary
+    key, so its output must not drift. A leading 'doi:' prefix is intentionally
+    NOT stripped here — doing so would shift the PK for any 'doi:'-prefixed row
+    and orphan it (and its canonical_id-keyed archive_responses). The
+    comparison-only 'doi:' strip lives in _cmp_doi() and is used by same_work /
+    dedup only, never by canonical_id.
+
+    A synthetic arXiv id ('arxiv:<id>') is preserved (lowercased). Returns None
+    for empty input.
+    """
     if not raw:
         return None
     s = str(raw).strip()
     s = re.sub(r"^https?:\/\/(dx\.)?doi\.org\/", "", s, flags=re.IGNORECASE)
     s = s.strip().rstrip(".").rstrip(",").rstrip(";").rstrip(")")
     return s.lower() or None
+
+
+def _cmp_doi(raw: Optional[str]) -> Optional[str]:
+    """Comparison-only DOI form for same-work dedup: norm_doi() then strip a
+    leading 'doi:' so two string forms of one DOI ('doi:10.x' vs '10.x')
+    compare equal. NOT used by canonical_id() — keeping the strip out of
+    norm_doi() preserves canonical_id PK stability (MF-C)."""
+    nd = norm_doi(raw)
+    if nd is None:
+        return None
+    return re.sub(r"^doi:\s*", "", nd) or None
+
+
+def is_arxiv_synthetic(doi: Optional[str]) -> bool:
+    """True iff the normalised id is a synthetic arXiv key 'arxiv:<id>'.
+
+    Synthetic keys are minted for preprints that have no real DOI; a paper
+    carrying one is treated as *DOI-less* for same_work() purposes (it can
+    only merge via a strong title match, never via DOI equality).
+    """
+    nd = norm_doi(doi)
+    return bool(nd) and nd.startswith("arxiv:")
 
 
 def extract_doi_from_text(text: str) -> Optional[str]:
@@ -107,6 +152,158 @@ def canonical_id(doi: Optional[str], title: Optional[str], year: Optional[int]) 
     else:
         key = "ttl:" + norm_title(title) + "|" + (str(year) if year else "")
     return hashlib.sha256(key.encode("utf-8")).hexdigest()[:32]
+
+
+# ------------------------------------------------------- same-work dedup (P33)
+# Collapse a preprint<->published (or duplicate-source) *twin* while NEVER
+# merging two genuinely distinct works. The invariant (see MF-6):
+#   * two REAL DOIs => authoritative: equal-DOI merges, different-DOI never
+#     merges (a shared/near title is not enough — real DOIs disagree => keep);
+#   * a synthetic/None DOI on either side => the DOI cannot arbitrate, so fall
+#     back to a STRONG fuzzy title match, and only when BOTH titles are
+#     non-blank (a blank title is never a merge key).
+
+def same_work(a: dict, b: dict, fuzz: int = 92) -> bool:
+    """Deterministic, pure twin test over two {doi,title_norm} dicts.
+
+    TRUE iff:
+      * both sides carry a real (non-synthetic, non-None) DOI and those DOIs
+        are equal after norm_doi; OR
+      * at least one side has a synthetic/None DOI, both title_norm values are
+        non-blank, and rapidfuzz.token_set_ratio(titles) >= `fuzz`.
+
+    Two real-but-different DOIs => FALSE (never title-merge). A blank title on
+    either side (when a DOI is missing/synthetic) => FALSE. If rapidfuzz is
+    unavailable the title branch conservatively returns FALSE (no merge).
+    """
+    da = _cmp_doi(a.get("doi"))
+    db = _cmp_doi(b.get("doi"))
+    a_real = da is not None and not da.startswith("arxiv:")
+    b_real = db is not None and not db.startswith("arxiv:")
+    if a_real and b_real:
+        # Real DOIs are authoritative: equal => same work, differ => distinct.
+        return da == db
+    # At least one side cannot be arbitrated by DOI -> require a strong title
+    # match with both titles present.
+    ta = (a.get("title_norm") or "").strip()
+    tb = (b.get("title_norm") or "").strip()
+    if not ta or not tb:
+        return False
+    if _token_set_ratio is None:
+        return False
+    return _token_set_ratio(ta, tb) >= fuzz
+
+
+def dedup_same_work(records, composite_key: str = "composite") -> list:
+    """Collapse provably-same-work records, keeping the max-`composite_key`
+    representative of each group; return survivors in stable order (each group
+    emitted at the position of its first-appearing member).
+
+    Grouping: real-DOI-equal records are grouped first, then synthetic/None-DOI
+    records with a non-blank title are pairwise-merged into any same_work()
+    match (union-find, so twins chain transitively). Records with no reliable
+    key at all — no real DOI AND a blank title_norm — are ALL kept (they can
+    never be a merge key, so they never collapse).
+    """
+    records = list(records)
+    n = len(records)
+    if n <= 1:
+        return records
+
+    def _composite(r) -> float:
+        try:
+            return float(r.get(composite_key))
+        except (TypeError, ValueError):
+            return float("-inf")
+
+    def _real_doi(r) -> Optional[str]:
+        d = _cmp_doi(r.get("doi"))   # comparison form (MF-C: strips 'doi:' w/o touching PK)
+        if d is None or d.startswith("arxiv:"):
+            return None
+        return d
+
+    def _title(r) -> str:
+        return (r.get("title_norm") or "").strip()
+
+    # --- union-find over record indices -----------------------------------
+    parent = list(range(n))
+
+    def find(i: int) -> int:
+        while parent[i] != i:
+            parent[i] = parent[parent[i]]
+            i = parent[i]
+        return i
+
+    def union(i: int, j: int) -> None:
+        ri, rj = find(i), find(j)
+        if ri == rj:
+            return
+        # Keep the smaller index as root for deterministic grouping.
+        if ri < rj:
+            parent[rj] = ri
+        else:
+            parent[ri] = rj
+
+    # Pass 1: group by identical real DOI (authoritative, O(n)).
+    by_doi: dict[str, int] = {}
+    for i, r in enumerate(records):
+        d = _real_doi(r)
+        if d is None:
+            continue
+        if d in by_doi:
+            union(i, by_doi[d])
+        else:
+            by_doi[d] = i
+
+    # Each component carries AT MOST ONE distinct real DOI (Pass 1 grouped only
+    # equal-DOI records). Track it so Pass 2 can never let a synthetic twin
+    # bridge two different real DOIs into one group — the invariant "two
+    # real-but-different DOIs never merge" must hold transitively, not just
+    # pairwise (same_work() only sees a pair).
+    comp_doi: dict[int, str] = {}
+    for i in range(n):
+        d = _real_doi(records[i])
+        if d is not None:
+            comp_doi[find(i)] = d
+
+    # Pass 2: synthetic/None-DOI records with a real title merge into any
+    # same_work() match, EXCEPT a merge that would put two distinct real DOIs
+    # in the same component (forbidden — skip it).
+    syn_idx = [i for i, r in enumerate(records)
+               if _real_doi(r) is None and _title(r)]
+    for a in syn_idx:
+        for b in range(n):
+            if b == a:
+                continue
+            ra, rb = find(a), find(b)
+            if ra == rb or not same_work(records[a], records[b]):
+                continue
+            da_c, db_c = comp_doi.get(ra), comp_doi.get(rb)
+            if da_c is not None and db_c is not None and da_c != db_c:
+                continue  # would fuse two distinct real DOIs -> refuse
+            union(a, b)
+            merged = da_c if da_c is not None else db_c
+            comp_doi.pop(ra, None)
+            comp_doi.pop(rb, None)
+            if merged is not None:
+                comp_doi[find(a)] = merged
+
+    # --- collapse: max-composite representative per group -----------------
+    best: dict[int, int] = {}
+    for i in range(n):
+        root = find(i)
+        if root not in best or _composite(records[i]) > _composite(records[best[root]]):
+            best[root] = i
+
+    out = []
+    seen_roots: set[int] = set()
+    for i in range(n):
+        root = find(i)
+        if root in seen_roots:
+            continue
+        seen_roots.add(root)
+        out.append(records[best[root]])
+    return out
 
 
 # ------------------------------------------------------------ record schema

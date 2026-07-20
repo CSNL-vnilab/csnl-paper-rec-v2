@@ -1106,8 +1106,8 @@ def main() -> int:
             INSERT INTO {sch}.archive_researcher_queues
               (researcher_id, canonical_id, chunk, rank_in_chunk,
                similarity, built_at, build_token,
-               tier, composite, dim_match)
-            VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s::jsonb)
+               tier, composite, dim_match, builder)
+            VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s::jsonb,'brq')
             ON CONFLICT (researcher_id, canonical_id) DO UPDATE SET
               chunk          = EXCLUDED.chunk,
               rank_in_chunk  = EXCLUDED.rank_in_chunk,
@@ -1116,14 +1116,20 @@ def main() -> int:
               build_token    = EXCLUDED.build_token,
               tier           = EXCLUDED.tier,
               composite      = EXCLUDED.composite,
-              dim_match      = EXCLUDED.dim_match;
+              dim_match      = EXCLUDED.dim_match,
+              builder        = EXCLUDED.builder
+            WHERE {sch}.archive_researcher_queues.builder = EXCLUDED.builder;
         """
+        # MF-B: the DO UPDATE WHERE builder=EXCLUDED.builder guard makes a PK
+        # conflict on a row owned by the OTHER builder a no-op, so brq and the
+        # parked p28 never flip each other's rows (the PK has no builder column).
         # Prune by build_token — guaranteed unique per build run (UUIDv4),
         # so two builds running in the same wall-clock second do not
         # accidentally retain each other's rows.
         prune_sql = f"""
             DELETE FROM {sch}.archive_researcher_queues
              WHERE researcher_id = %s
+               AND builder = 'brq'
                AND (build_token IS NULL OR build_token <> %s);
         """
         n_total = 0
