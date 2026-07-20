@@ -123,6 +123,7 @@ def preprocess(md: str) -> str:
 # '_…_' emphasis.
 _INLINE_RE = re.compile(
     r"(?P<code>`[^`]+?`)"
+    r"|(?P<eq>\$[^$\n]+?\$)"
     r"|(?P<bold>\*\*.+?\*\*)"
     r"|(?P<ubold>(?<!\w)__(?=\S)(?!_).+?__(?!\w))"
     r"|(?P<italic>\*(?!\s)(?:[^*]|\*\*)+?\*)"
@@ -446,6 +447,13 @@ def inline_rich_text(text: str) -> list[dict]:
             out.extend(_rt(_strip_residual_markers(text[pos:m.start()])))
         if m.group("code") is not None:
             out.extend(_rt(m.group("code")[1:-1], code=True))
+        elif m.group("eq") is not None:
+            # Inline KaTeX equation: $...$ → Notion equation rich_text segment.
+            # Non-text segment — _split_links/_split_flags skip it untouched.
+            expr = m.group("eq")[1:-1].strip()
+            if expr:
+                out.append({"type": "equation",
+                            "equation": {"expression": expr}})
         elif m.group("bold") is not None:
             # Allow nested italic inside **bold** by recursing, then OR-in bold.
             inner = m.group("bold")[2:-2]

@@ -148,7 +148,7 @@ P21 synopsis 기반 Block 2 가 본문 인용까지 포함하므로 제거):
 | --- | --- | --- |
 | **실시간** | 자동 | 응답 즉시 `archive_responses` 기록. 다음 paper 가 새 prefs 반영 (P17 in-session re-rank). |
 | **매 10 응답** | 자동 | Stage 4 belief 업데이트: dim weights 조정, `archive_meta_reviews` 기록, 다음 paper 부터 즉시 반영. |
-| **월 1회** | 운영자 | `archive-feedback-analyst` (P20 예정) 가 응답 + queue feedback 분석 → 제안 (새 키워드 / 가중치 / 큐 확장). 모든 변경은 운영자 검토 후 `apply_evolution.py` 로 적용. 자동 적용 없음. |
+| **월 1회** | 운영자 | 피드백 분석 pass (P24 부터 운영자-실행 Opus 팬아웃으로 수행; `apply_evolution.py` 는 `scripts/_legacy/` 로 은퇴) 가 응답 + queue feedback 분석 → 제안 (새 키워드 / 가중치 / 큐 확장). 모든 변경은 운영자 검토 후 `recommend.py` / `build_researcher_queue.py` 재빌드로 적용. 자동 적용 없음. |
 | **분기 1회** | 연구원 + 운영자 | retrospective 설문 5분: 지난 3개월 추천을 (a) 저장만 / (b) 일부 읽음 / (c) 완독 / (d) 인용 / (e) 논문 작성 활용 했는지. **비순환적 ground truth** — 알고리즘 정성 평가 기준. |
 | **수시** | 운영자 | csnl_research.projects 업데이트 (본인이 자가-아카이브로 새 프로젝트 추가 등) → 다음 큐 빌드에서 fingerprint 자동 재추출. |
 

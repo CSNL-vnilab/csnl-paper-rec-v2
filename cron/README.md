@@ -1,18 +1,41 @@
-# Cron install — `csnl-paper-rec-v2` weekly automation
+# Cron install — `csnl-paper-rec`
+
+> **⚠ RETIRED v3 doc below (kept for history).** The three v3 Slack crons this
+> file documented (`com.csnl.paper-rec.{weekly,tick,evolution}`) are **deleted**
+> (plists git-removed; `run_weekly_cron.sh`/`cron_tick.py`/`apply_evolution.py`
+> moved to `scripts/_legacy/`; the `state/.CRON_ENABLED` gate is gone). They no
+> longer run and must not be reinstalled without the R2 "v3 retired vs.
+> break-glass" decision. Everything from "What runs and when" onward is
+> **historical** and refers to files that have moved or been removed.
+
+## Live crons (current — KST)
+
+| plist | When | Wrapper | Gate | Purpose |
+|---|---|---|---|---|
+| `cron/com.csnl.paper-rec.p23.plist` | **Wed 08:00 + Wed 14:00** | `scripts/weekly/run_weekly_cron.sh` | `state/.P23_ENABLED` (**absent = dormant, no send**) | P23 weekly Notion digest: `capture → build → send → mirror → notify`, rolling replace-to-5 |
+| `cron/com.csnl.paper-rec.grm.plist` | **Wed 15:00** (retries) | `scripts/weekly/run_grm_ingest.sh` | `state/.GRM_INGEST_ENABLED` (present = on) | P31 GRM NAS → `archive_meeting_materials` weekly ingest |
+
+Both wrappers self-guard on host timezone (lab Mac = KST), a once-per-week
+stamp (`state/p23_last_run_week` / `state/grm_last_run_week`), and a lockfile.
+`launchctl` on the lab Mac needs Full Disk Access (see `[[macos-launchd-tcc-fda]]`).
+
+---
+
+## RETIRED — v3 Slack automation (historical; do not install)
 
 macOS launchd integration for the Friday-weekly recurring recommendation +
 multi-turn conversation + evolution loop. Re-opens the manual-only gate per
-`docs/DECISIONS-v3.md` — read it before installing.
+`docs/DECISIONS-v3.md`.
 
-## What runs and when (KST)
+### What ran and when (KST) — v3, retired
 
 | plist | When | Script | Purpose |
 |---|---|---|---|
-| `com.csnl.paper-rec.weekly`    | every **Friday 14:00** | `scripts/run_weekly_cron.sh`    | start cycle, build interest+briefs, send initial DMs (uses pre-existing Opus drafts at `state/runs/<RID>/08_dm_drafts.json` if present; otherwise notifies operator and skips this week) |
-| `com.csnl.paper-rec.tick`      | every **4 h** (00/04/08/12/16/20) | `scripts/run_tick_cron.sh` → `cron_tick.py` | state machine: fetch replies, classify, send acks/reminders, advance state |
-| `com.csnl.paper-rec.evolution` | every **Thursday 23:00**  | `scripts/run_evolution_cron.sh` → `apply_evolution.py` | end-of-cycle: confirm exclusions, ≥2-signal pattern flags, silence-streak flags |
+| `com.csnl.paper-rec.weekly`    | every **Friday 14:00** | `scripts/_legacy/run_weekly_cron.sh`    | start cycle, build interest+briefs, send initial DMs |
+| `com.csnl.paper-rec.tick`      | every **4 h** (00/04/08/12/16/20) | `scripts/_legacy/run_tick_cron.sh` → `_legacy/cron_tick.py` | state machine: fetch replies, classify, send acks/reminders |
+| `com.csnl.paper-rec.evolution` | every **Thursday 23:00**  | `scripts/_legacy/run_evolution_cron.sh` → `_legacy/apply_evolution.py` | end-of-cycle rule-based evolution |
 
-All three honor `state/.CRON_ENABLED` (silent exit if absent), the lockfile
+All three honored `state/.CRON_ENABLED` (now removed), the lockfile
 `state/.cron_*.lock`, and the tone-lint + dedup + gate inside `deliver.py`.
 TZ pinned to `Asia/Seoul` in each plist.
 

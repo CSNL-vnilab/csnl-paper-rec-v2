@@ -259,6 +259,14 @@ def update_page(page_id: str, properties: dict) -> dict:
                     json_body={"properties": properties})
 
 
+def set_page_icon(page_id: str, emoji: str) -> dict:
+    """Set a page's icon to an emoji (PATCH /pages/{id}). `icon` is a top-level
+    page field, not a property, so this is separate from update_page(). Idempotent
+    — re-setting the same emoji is a server-side no-op."""
+    return _request("PATCH", f"/pages/{page_id}",
+                    json_body={"icon": {"type": "emoji", "emoji": emoji}})
+
+
 # ----------------------------------------------------- page tree (P25 surveys)
 # The weekly digest/history live in *databases*. The researcher survey pages,
 # by contrast, are ordinary content pages nested under the "CSNL 논문 추천" page

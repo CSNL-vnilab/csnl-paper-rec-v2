@@ -24,6 +24,7 @@ state/archive/*.jsonl
 state/archive/*.json
 state/archive/_tmp/
 state/archive/queues/
+state/archive/queues_p28/
 state/archive/profiles/
 state/archive/discovery_run/
 state/archive/synopses/
@@ -51,3 +52,18 @@ __pycache__/
 # node (playwright/pdfjs crawl stack)
 node_modules/
 state/archive/surveys/
+
+# P31 GRM cron runtime state (per-machine; never commit — mirrors P23 runtime)
+state/.GRM_INGEST_ENABLED
+state/grm_last_run_week
+
+# P32 dead-table quarantine backups (local reversibility artifact — parity dumps)
+state/archive/_backup_p32/
+
+# P33: guard against stray 0-byte shell-accident files at repo root
+# (e.g. a heredoc/redirect typo creating files named '#', 'the', 'token', …)
+/\#
+/enable
+/soft
+/the
+/token
