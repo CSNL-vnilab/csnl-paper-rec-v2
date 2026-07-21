@@ -42,10 +42,14 @@ ALERT="state/grm_alert.log"     # gitignored (*.log) — greppable failure trail
 # SMTP is deliberately not used here: SMTP_USER/PASS/FROM are empty in .env.
 notify_operator() {
   msg="$1"
-  /usr/bin/osascript -e \
-    "display notification \"${msg}\" with title \"CSNL GRM ingest\" subtitle \"action needed\"" \
-    >/dev/null 2>&1 || true
+  # The marker file is the RELIABLE channel — write it first and unconditionally.
   echo "[grm-alert] $TS $msg" >> "$ALERT" 2>/dev/null || true
+  # The GUI notification is best-effort and DETACHED: osascript can block on a
+  # TCC/automation prompt (observed hanging for >2min interactively), and a cron
+  # wrapper must never wait on that. Backgrounded, so it can't stall the run.
+  { /usr/bin/osascript -e \
+      "display notification \"${msg}\" with title \"CSNL GRM ingest\" subtitle \"action needed\"" \
+      >/dev/null 2>&1 || true; } &
 }
 
 if [ ! -f "state/.GRM_INGEST_ENABLED" ]; then
