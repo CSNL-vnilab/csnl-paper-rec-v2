@@ -31,6 +31,22 @@ cd "$ROOT"
 PY="${PYTHON:-python3}"
 LOG="state/cron-grm.log"
 TS="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+ALERT="state/grm_alert.log"     # gitignored (*.log) — greppable failure trail
+
+# notify_operator "<short reason>"
+# A silent rc=3 hid a five-week outage (2026-06-17 .. 2026-07-21): the ingest
+# kept "retrying" into a log nobody tailed. A failure must actively ASK a human
+# to act. Best-effort, never fatal:
+#   - a macOS notification to whoever is at the console right now
+#   - a persistent marker file so the failure cannot hide in a log tail
+# SMTP is deliberately not used here: SMTP_USER/PASS/FROM are empty in .env.
+notify_operator() {
+  msg="$1"
+  /usr/bin/osascript -e \
+    "display notification \"${msg}\" with title \"CSNL GRM ingest\" subtitle \"action needed\"" \
+    >/dev/null 2>&1 || true
+  echo "[grm-alert] $TS $msg" >> "$ALERT" 2>/dev/null || true
+}
 
 if [ ! -f "state/.GRM_INGEST_ENABLED" ]; then
   echo "[grm] $TS state/.GRM_INGEST_ENABLED absent — silent exit" >> "$LOG"
@@ -78,5 +94,10 @@ if "$PY" scripts/weekly/ingest_grm_nas.py --weeks 4 --apply --no-notion >> "$LOG
 else
   rc=$?
   echo "[grm] $TS ingest exited rc=$rc — NOT marking week done (will retry)" >> "$LOG"
+  case "$rc" in
+    3) notify_operator "NAS not mounted. Open Finder > Go > Connect to Server and mount the CSNL_new share as this user (another user's mount is private), then the weekly GRM ingest will retry." ;;
+    2) notify_operator "Database/migration unreachable (rc=2) — GRM ingest could not apply. See state/cron-grm.log." ;;
+    *) notify_operator "GRM ingest failed (rc=$rc). See state/cron-grm.log." ;;
+  esac
   exit "$rc"
 fi

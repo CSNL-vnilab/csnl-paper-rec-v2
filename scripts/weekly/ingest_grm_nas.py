@@ -81,10 +81,55 @@ _REPO_ROOT = _HERE.parent.parent
 sys.path.insert(0, str(_REPO_ROOT / "pipeline"))
 sys.path.insert(0, str(_HERE))
 
-# NAS layout (mounted share). Overridable for testing / a different mount.
-NAS_BASE = Path(os.environ.get("GRM_NAS_BASE",
-                               "/Volumes/CSNL_new-1/GRM/2026"))
-NAS_FOLDER_PREFIX = "GRM/2026"          # stored nas_folder = 'GRM/2026/<date>'
+# NAS layout (mounted share). Resolved at runtime — see _resolve_nas_base().
+LEGACY_NAS_VOLUME = "/Volumes/CSNL_new-1"   # historical hardcode; fallback only
+
+
+def _resolve_nas_base(year: str, volumes_root: str = "/Volumes") -> Path:
+    """Locate the mounted GRM/<year> directory without hardcoding a volume.
+
+    macOS mounts an SMB share **per user** and mode-700, so one lab member's
+    mount is unreadable to another. When a second user mounts the SAME share,
+    macOS appends a collision-avoiding suffix: the first mounter gets
+    '/Volumes/CSNL_new', the second '/Volumes/CSNL_new-1', the third '-2'.
+    Which name *this* account ends up with therefore depends on who mounted
+    first, so the old hardcoded '/Volumes/CSNL_new-1' was a race between lab
+    members — it broke whenever the mount order changed or nobody had mounted.
+
+    Resolution order:
+      1. GRM_NAS_BASE — an explicit override always wins (testing, odd mounts).
+      2. scan /Volumes for a READABLE <volume>/GRM/<year>; sorted, so the pick
+         is deterministic when several are readable. Another user's mode-700
+         mount raises EACCES on traversal and is skipped.
+      3. fall back to the legacy path, so the caller's "not mounted" message
+         still names something concrete.
+    """
+    override = os.environ.get("GRM_NAS_BASE")
+    if override:
+        return Path(override)
+
+    rel = Path("GRM") / year
+    try:
+        volumes = sorted(Path(volumes_root).iterdir())
+    except OSError:
+        volumes = []
+
+    for vol in volumes:
+        candidate = vol / rel
+        try:
+            if candidate.is_dir() and os.access(candidate, os.R_OK | os.X_OK):
+                return candidate
+        except OSError:
+            continue            # another user's mode-700 mount -> EACCES; skip
+
+    return Path(LEGACY_NAS_VOLUME) / rel
+
+
+# Year is overridable and defaults to the CURRENT year, so the ingest does not
+# silently stop finding material the moment the calendar rolls over.
+NAS_YEAR = os.environ.get("GRM_NAS_YEAR") or str(datetime.now().year)
+NAS_BASE = _resolve_nas_base(NAS_YEAR)
+NAS_FOLDER_PREFIX = f"GRM/{NAS_YEAR}"   # stored nas_folder = 'GRM/<year>/<date>'
 
 ALLOWED_EXT = {"pdf", "pptx", "ppt", "key"}
 KIND_WORDS = {"GRM", "PB", "PAPERBLITZ", "PAPER", "BLITZ"}
@@ -196,8 +241,10 @@ def classify(name: str) -> tuple[Optional[str], Optional[str], Optional[str]]:
 
 def _target_dirs(args) -> list[Path]:
     if not NAS_BASE.exists():
-        print(f"[grm] NAS base not mounted: {NAS_BASE} — nothing to scan "
-              f"(set GRM_NAS_BASE or mount the share).", file=sys.stderr)
+        print(f"[grm] NAS base not mounted: {NAS_BASE} — nothing to scan. "
+              f"Scanned /Volumes for a readable */GRM/{NAS_YEAR}; another "
+              f"user's mount is mode-700 and cannot be used. Mount the share "
+              f"as this user, or set GRM_NAS_BASE.", file=sys.stderr)
         return []
     if args.date:
         if not _DATE_DIR_RE.match(args.date):
@@ -532,7 +579,9 @@ def main() -> int:
             if not NAS_BASE.exists():
                 print(f"[grm] NAS not mounted ({NAS_BASE}) — cannot apply. "
                       f"Returning rc=3 so the weekly wrapper retries (week NOT "
-                      f"marked done); mount the share or set GRM_NAS_BASE.",
+                      f"marked done). Scanned /Volumes for a readable "
+                      f"*/GRM/{NAS_YEAR}; mount the share as this user (another "
+                      f"user's mount is mode-700), or set GRM_NAS_BASE.",
                       file=sys.stderr)
                 return 3
             print("[grm] no materials found to apply (folder(s) mounted but "
