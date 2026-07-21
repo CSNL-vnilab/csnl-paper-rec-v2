@@ -48,6 +48,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import re
 import sys
 from dataclasses import dataclass
 from datetime import date, datetime, timedelta
@@ -225,18 +226,50 @@ def build_s2_recommendation_body(
     return body
 
 
+# Strict public-paper-ID allowlist for the S2 egress guardrail. ONLY these three
+# shapes may leave the machine in a recommendations body. Anything else — a
+# researcher initial ('BHL'), a name, an email, a mailto, an ntn_/env secret —
+# fails closed. '@' is additionally rejected outright (defence in depth, since a
+# DOI suffix is otherwise permissive).
+_S2_ID_RE = re.compile(
+    r"^(?:DOI:10\.\d+/\S+"                     # DOI:10.<registrant>/<suffix>
+    r"|ARXIV:[A-Za-z0-9][A-Za-z0-9._/\-]*"     # ARXIV:<id>
+    r"|CorpusId:[0-9]+"                        # CorpusId:<digits>
+    r")$"
+)
+_S2_ID_MAXLEN = 256
+
+
 def egress_is_clean(body: dict) -> bool:
-    """True iff `body` is safe to send: exactly the two allowed ID-list keys,
-    every value a plain `DOI:`/`ARXIV:`/`CorpusId:`-style string with no email
-    ('@') leakage. Any extra key (researcher_id, mailto, env, ...) => False.
+    """True iff `body` is safe to POST to Semantic Scholar — STRICT ALLOWLIST.
+
+    Requires: only the permitted ID-list keys; each present key maps to a *list*
+    (never a bare str); every element a str <= 256 chars matching `DOI:10.x/...`,
+    `ARXIV:<id>` or `CorpusId:<digits>`, containing no '@'.
+
+    Fail-closed hardening (P33 guardrail fix). The previous version only rejected
+    extra keys and '@'-shaped values, leaving two holes:
+      (a) a bare researcher identifier such as 'BHL' PASSED (it is a str with
+          no '@'), so an identity string could ride out in an ID list;
+      (b) a raw-string body {"positivePaperIds": "BHL"} was CHAR-ITERATED —
+          'B','H','L' each look like clean strings — and also PASSED.
+    Both now fail. This is the boundary that keeps researcher identity and .env
+    values out of a third-party request body; it must fail closed, not open.
     """
     if not isinstance(body, dict):
         return False
     if set(body.keys()) - _S2_ALLOWED_BODY_KEYS:
         return False
     for k in _S2_ALLOWED_BODY_KEYS:
-        for v in body.get(k, []) or []:
-            if not isinstance(v, str) or "@" in v:
+        if k not in body:
+            continue
+        vals = body[k]
+        if not isinstance(vals, list):   # a bare str would be char-iterated
+            return False
+        for v in vals:
+            if not isinstance(v, str) or len(v) > _S2_ID_MAXLEN:
+                return False
+            if "@" in v or not _S2_ID_RE.match(v):
                 return False
     return True
 

@@ -299,6 +299,28 @@ def test_s2_built_body_never_contains_identity_or_env():
         assert "@" not in v
 
 
+def test_s2_egress_strict_allowlist_rejects_non_id_values():
+    """Guardrail hardening: the egress check is a STRICT public-ID allowlist, not
+    merely an '@'/extra-key filter. A bare researcher initial, a Korean name, or
+    an env-looking secret must FAIL even though none of them contains '@'."""
+    for bad in ("BHL", "박준오", "ntn_secret_token_value", "10.1/a", "DOI:", "", "   "):
+        assert F.egress_is_clean({"positivePaperIds": ["DOI:10.1/ok", bad]}) is False, bad
+
+
+def test_s2_egress_rejects_bare_string_value_not_char_iterated():
+    """A raw-string body used to be char-iterated ('B','H','L' each look clean)
+    and PASSED. Each key's value must be a list."""
+    assert F.egress_is_clean({"positivePaperIds": "BHL"}) is False
+    assert F.egress_is_clean(
+        {"positivePaperIds": ["DOI:10.1/ok"], "negativePaperIds": "BHL"}) is False
+
+
+def test_s2_egress_rejects_oversized_and_accepts_the_three_legit_shapes():
+    assert F.egress_is_clean({"positivePaperIds": ["DOI:10.1/" + "x" * 300]}) is False
+    assert F.egress_is_clean({"positivePaperIds": [
+        "DOI:10.1038/s41593-024-1", "ARXIV:2401.12345", "CorpusId:123456"]}) is True
+
+
 # =========================================================================
 # (v) migration lint  — static, string-aware; NO DB
 # =========================================================================
