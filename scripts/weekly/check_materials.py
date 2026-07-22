@@ -28,10 +28,41 @@ WHY THIS FILE IS CATALOG-DRIVEN
         directories.grm_archive.path_template   -> GRM/GRM Archive/{YYYY}_GRM/…
         directories.grm_archive.date_dir_forms  -> ORDERED day-folder parser
         initials.<INIT>.dirs.mm / .aliases      -> per-person folder + alias
+        initials.<INIT>.dirs_absent             -> subtrees this person LEGITIMATELY
+                                                   has none of  ->  NOT an accusation
         matching_policy.*                       -> tokenise, never anchor
 
   FAIL CLOSED: if the catalog is missing, unreadable or malformed the script
   reports the error and sends NOTHING.  It never falls back to the broken rule.
+
+A FOLDER THAT WAS NEVER THERE IS NOT A GAP
+  The BYL-33 fix repaired date parsing; the *folder-missing* branch was still an
+  accusation for everyone.  `MM/JSL` and `MM/JHR` are recorded in the catalog's
+  own `dirs_absent` ("subtrees this person legitimately has none of") — both are
+  active postdocs with live addresses, so the moment SMTP appears they are told
+  material is missing from a folder they do not have.  This file now consults
+  `dirs_absent` (and `dirs.mm`) BEFORE reporting a folder-missing gap:
+    * `dirs_absent` covers MM  -> NO gap, NO email (one operator-facing warning)
+    * …unless that entry carries an explicit human adjudication ("… is a TRUE
+      gap, not a rule bug", as the catalog records for BHL) -> real gap
+    * `dirs.mm` recorded null, or the person is absent from the catalog
+                               -> ADVISORY gap: printed, never emailed
+  A new naming convention, a new person, a folder that appears later: all of
+  these stay catalog edits, never code changes.
+
+PRE-SEND SAFETY INTERLOCK (this script must not mail nonsense the moment an
+SMTP password appears — the harm is one-way and lands on a researcher):
+  1. --audit must have PASSED, recently, against THIS catalog and THIS share.
+     `--audit` writes state/materials_audit_ok.json on PASS and removes it on
+     FAIL; --send refuses without a fresh, matching stamp.  --force does NOT
+     bypass this (it only bypasses the once-per-week stamp).
+  2. Implausible per-person miss rates are refused: telling someone that
+     > --max-missing-rate of their meetings have no material (SK: 27 of 28) is a
+     matcher/catalog defect, not a fact about that person.  The whole send is
+     refused when the lab-wide rate is implausible too.
+  Both interlocks are evaluated (and printed) in dry-run, so the operator sees
+  the block BEFORE arming credentials.  --to-self routes to the operator only,
+  so it bypasses both, loudly.
 
 Rules (docs/CSNL-INFO.md §3a/§3b — narrative; the catalog is the machine view):
   * a `Meeting: [INIT]` (MM) event  -> MM/{INIT}/ must hold a deck for that date
@@ -64,11 +95,12 @@ USAGE
 
 EXIT CODES
     0 ok · 2 send blocked (SMTP) · 3 NAS not reachable · 4 catalog fail-closed
-    5 audit assertion failed
+    5 audit assertion failed · 6 pre-send interlock refused the send
 """
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import os
 import re
@@ -95,12 +127,24 @@ from ingest_grm_nas import _resolve_nas_base  # noqa: E402
 INFO_DOC = _REPO_ROOT / "docs" / "CSNL-INFO.md"
 CATALOG = Path(os.environ.get("NAS_CATALOG") or (_REPO_ROOT / "config" / "nas_catalog.json"))
 WEEK_STAMP = _REPO_ROOT / "state" / "materials_last_notified_week"
+AUDIT_STAMP = _REPO_ROOT / "state" / "materials_audit_ok.json"
 DEFAULT_LOOKBACK_WEEKS = 4
+
+# --- pre-send interlock knobs -------------------------------------------------
+# A researcher told that > this fraction of their meetings has no material is
+# almost certainly reading a matcher/catalog defect, not a fact (SK: 27 of 28).
+DEFAULT_MAX_MISSING_RATE = 0.5
+# …but 1-of-1 and 2-of-2 are ordinary. Only rates backed by this many meeting
+# days are treated as evidence of a systematic failure.
+RATE_MIN_GAP_DAYS = 3
+RATE_MIN_GAP_DAYS_LAB = 5          # same idea, lab-wide
+DEFAULT_AUDIT_MAX_AGE_DAYS = 14
 
 EXIT_SMTP = 2
 EXIT_NO_NAS = 3
 EXIT_CATALOG = 4
 EXIT_AUDIT = 5
+EXIT_INTERLOCK = 6
 
 
 # ====================================================================== catalog
@@ -192,6 +236,49 @@ def _compile_dir_forms(forms: list) -> list[re.Pattern]:
     if not out:
         raise CatalogError("grm_archive.date_dir_forms.forms is empty")
     return out
+
+
+# ------------------------------------------------------- recorded folder absence
+# `initials.<INIT>.dirs_absent` is prose-annotated by design ("MM/BHL — genuinely
+# does not exist; an MM calendar event for BHL is a TRUE gap, not a rule bug").
+# The DEFAULT reading is the schema's own: "subtrees this person legitimately has
+# none of" -> absence is expected, so it is never an accusation. Only an explicit
+# human adjudication flips it back into a reportable gap.
+_TRUE_GAP_MARKERS = ("true gap", "real gap", "genuine gap", "진짜 gap")
+_ABSENT_ALL = ("everything", "all", "*")
+
+
+@dataclass(frozen=True)
+class Absence:
+    """The catalog's recorded position on a person's missing MM folder."""
+    initial: str
+    token: str        # the catalog path token, e.g. 'MM/JSL' / 'everything'
+    text: str         # the whole entry, adjudication comment included
+    true_gap: bool    # catalog explicitly adjudicates the absence AS a real gap
+    source: str       # 'dirs_absent' | 'dirs.mm=null' | 'not-in-catalog'
+
+    @property
+    def suppress(self) -> bool:
+        """No gap at all — the catalog affirmatively says this is normal."""
+        return self.source == "dirs_absent" and not self.true_gap
+
+
+def _absent_entry(entry) -> tuple[str, str, Optional[bool]]:
+    """One `dirs_absent` element -> (path token, full text, explicit flag|None).
+
+    Accepts the prose form actually in the catalog and a machine form
+    ({"path": "MM/JSL", "true_gap": false, "note": "…"}) so a future edit can be
+    unambiguous without a code change."""
+    if isinstance(entry, dict):
+        tok = str(entry.get("path") or entry.get("dir") or "")
+        note = str(entry.get("note") or entry.get("why") or "")
+        flag = entry.get("true_gap")
+        return _nfc(tok).strip().strip("/"), _nfc(f"{tok} {note}"), \
+            (bool(flag) if flag is not None else None)
+    text = _nfc(str(entry))
+    # 'MM/BHL — genuinely does not exist; …' / 'MM/JSL' / 'MM/SK (alias)'
+    head = re.split(r"\s+[—–-]\s+|\s+\(|[;,]", text, maxsplit=1)[0]
+    return head.strip().strip("/"), text, None
 
 
 @dataclass
@@ -362,6 +449,41 @@ class Catalog:
             out.append(tpl)
         return out
 
+    def mm_absence(self, initial: str) -> Optional[Absence]:
+        """What the catalog says about this person having NO MM folder.
+
+        None  -> the catalog expects a folder here; its absence is a real gap.
+        .suppress -> recorded as a legitimate absence: report nothing, mail
+                     nothing (JSL / JHR / SYJ / MJC …).
+        .true_gap -> recorded as absent AND adjudicated a real gap (BHL).
+        source 'dirs.mm=null' / 'not-in-catalog' -> no positive evidence either
+                     way; advisory only, never emailed.
+
+        Called ONLY on the folder-missing branch: when the folder exists this is
+        irrelevant, and a missing deck inside an existing folder is a real gap."""
+        init = _nfc(initial).upper()
+        rec = self.initials.get(init)
+        if not isinstance(rec, dict):
+            return Absence(init, "", f"nas_catalog.json has no initials.{init}",
+                           False, "not-in-catalog")
+
+        wanted = {c.casefold().strip("/") for c in self.mm_dir_candidates(init)}
+        wanted.add(f"{self.mm_root_rel}/{init}".casefold().strip("/"))
+        raw = rec.get("dirs_absent")
+        for entry in (raw if isinstance(raw, list) else []):
+            tok, text, flag = _absent_entry(entry)
+            low = tok.casefold()
+            if low in _ABSENT_ALL or low in wanted:
+                true_gap = flag if flag is not None else \
+                    any(m in text.casefold() for m in _TRUE_GAP_MARKERS)
+                return Absence(init, tok, text, true_gap, "dirs_absent")
+
+        dirs = rec.get("dirs")
+        if isinstance(dirs, dict) and "mm" in dirs and dirs["mm"] is None:
+            return Absence(init, "", f"initials.{init}.dirs.mm = null",
+                           False, "dirs.mm=null")
+        return None
+
     def aliases(self, initial: str) -> list[str]:
         rec = self.initials.get(initial.upper()) or {}
         al = rec.get("aliases") if isinstance(rec, dict) else None
@@ -448,6 +570,9 @@ class Report:
     checked_mm: int = 0
     checked_grm: int = 0
     warnings: list[str] = field(default_factory=list)
+    # {INIT: {'YYYY-MM-DD', …}} — the denominator of the plausibility interlock.
+    checked_days: dict = field(default_factory=dict)
+    suppressed: dict = field(default_factory=dict)   # {INIT: n folder-missing not reported}
 
     def by_person(self, include_advisory: bool = False) -> dict[str, list[Gap]]:
         out: dict[str, list[Gap]] = {}
@@ -456,6 +581,17 @@ class Report:
                 continue
             out.setdefault(g.initial, []).append(g)
         return out
+
+    def note_checked(self, initial: str, day: str) -> None:
+        self.checked_days.setdefault(initial, set()).add(day)
+
+    def miss_rate(self, initial: str) -> tuple[int, int]:
+        """(meeting days reported as missing, meeting days checked) for one
+        person. Counted in DAYS so one event can never contribute twice."""
+        gap_days = {g.meeting_date for g in self.gaps
+                    if g.initial == initial and not g.advisory}
+        days = self.checked_days.get(initial) or set()
+        return len(gap_days), max(len(days), len(gap_days))
 
 
 # ------------------------------------------------------------------- registry
@@ -676,6 +812,42 @@ def load_events(args) -> list[dict]:
 
 
 # ---------------------------------------------------------------------- checker
+def _warn_once(rep: Report, msg: str) -> None:
+    if msg not in rep.warnings:
+        rep.warnings.append(msg)
+
+
+def _report_folder_absence(rep: Report, cat: Catalog, init: str, shown: str,
+                           day: str, why: str) -> bool:
+    """The person's MM folder is not on the share. Is that a reportable gap?
+
+    True  -> the catalog expects a folder here (or adjudicated the absence a
+             real gap): the caller appends a normal, emailable gap.
+    False -> already handled here. Either the catalog records the absence as
+             legitimate (nothing at all: no gap, no email — the JSL/JHR case), or
+             it has no evidence, in which case an ADVISORY gap is recorded so the
+             operator sees it and the researcher never does."""
+    absence = cat.mm_absence(init)
+    if absence is None:
+        return True
+    if absence.true_gap:
+        _warn_once(rep, f"{init}: MM 폴더 부재를 카탈로그가 실제 누락으로 판정했습니다 "
+                        f"— 그대로 보고합니다 ({absence.token})")
+        return True
+    if absence.suppress:
+        rep.suppressed[init] = rep.suppressed.get(init, 0) + 1
+        _warn_once(rep, f"{init}: 카탈로그 dirs_absent 가 '{absence.token}' 를 "
+                        f"정상적인 부재로 기록 — 자료 누락으로 보고하지 않습니다 (발송 없음)")
+        return False
+    rep.gaps.append(Gap(init, "mm", day, shown,
+                        f"{why} — 카탈로그가 이 사람의 MM 폴더를 확인해 주지 못했습니다 "
+                        f"({absence.source}); 운영자 확인 필요, 발송 대상 아님",
+                        advisory=True))
+    _warn_once(rep, f"{init}: {absence.source} — MM 폴더 부재를 advisory 로만 처리했습니다 "
+                    f"(config/nas_catalog.json 의 initials.{init} 를 채우면 판정됩니다)")
+    return False
+
+
 def build_report(events: list[dict], cat: Catalog, share_root: Path,
                  share_how: str, weeks: int, pb_advisory: bool = True) -> Report:
     end = date.today()
@@ -701,13 +873,18 @@ def build_report(events: list[dict], cat: Catalog, share_root: Path,
 
         if ev.get("kind") == "mm":
             rep.checked_mm += 1
+            rep.note_checked(init, d)
             ok, why = mm_material_present(cat, share_root, init, d)
             if not ok:
-                _folder, shown = resolve_mm_folder(cat, share_root, init)
+                folder, shown = resolve_mm_folder(cat, share_root, init)
+                if folder is None and not _report_folder_absence(rep, cat, init,
+                                                                 str(shown), d, why):
+                    continue          # catalog says the folder was never there
                 rep.gaps.append(Gap(init, "mm", d, str(shown), why))
 
         elif ev.get("kind") == "grm":
             rep.checked_grm += 1
+            rep.note_checked(init, d)
             day = datetime.strptime(d, "%Y-%m-%d").date()
             dirs, warns = grm_day_dirs(cat, share_root, day, year_cache)
             for w in warns:
@@ -786,6 +963,98 @@ def week_already_sent(week: str) -> bool:
         return False
 
 
+# ------------------------------------------------------------------- interlock
+def implausible_people(rep: Report, max_rate: float) -> dict[str, str]:
+    """{INIT: reason} for everyone whose miss rate is not believable.
+
+    Telling one person that most of their meetings left no material is what a
+    broken matcher looks like from the inside (BYL 33/33 before the date fix;
+    SK 27/28 today, against a folder holding exactly one file). It is never
+    something to put in a researcher's inbox unreviewed."""
+    out: dict[str, str] = {}
+    for init in sorted(rep.by_person()):
+        miss, seen = rep.miss_rate(init)
+        if miss >= RATE_MIN_GAP_DAYS and seen and (miss / seen) > max_rate:
+            out[init] = (f"{miss}/{seen} 일정({miss / seen:.0%})이 자료 없음으로 나옵니다 "
+                         f"— 임계 {max_rate:.0%} 초과. 매처/카탈로그 결함일 가능성이 높습니다")
+    return out
+
+
+def implausible_lab(rep: Report, max_rate: float) -> Optional[str]:
+    """Same test lab-wide: a systemic matcher failure must stop the whole send,
+    not just the worst-hit person."""
+    miss = sum(rep.miss_rate(init)[0] for init in rep.by_person())
+    seen = sum(len(v) for v in rep.checked_days.values())
+    if miss >= RATE_MIN_GAP_DAYS_LAB and seen and (miss / seen) > max_rate:
+        return (f"랩 전체 {miss}/{seen} 일정({miss / seen:.0%})이 자료 없음 — 임계 "
+                f"{max_rate:.0%} 초과. 개인 문제가 아니라 매처/카탈로그 결함입니다")
+    return None
+
+
+def _catalog_sha(cat: Catalog) -> str:
+    try:
+        return hashlib.sha256(cat.path.read_bytes()).hexdigest()
+    except OSError:
+        return ""
+
+
+def write_audit_stamp(cat: Catalog, share_root: Path) -> None:
+    """Record a PASS. The send gate re-checks catalog identity + share root, so
+    a stamp cannot vouch for a catalog or a share it never saw."""
+    try:
+        AUDIT_STAMP.parent.mkdir(parents=True, exist_ok=True)
+        AUDIT_STAMP.write_text(json.dumps({
+            "when": datetime.now().isoformat(timespec="seconds"),
+            "catalog": str(cat.path), "catalog_version": cat.version,
+            "catalog_sha256": _catalog_sha(cat), "share_root": str(share_root),
+        }, ensure_ascii=False, indent=2), encoding="utf-8")
+        print(f"[audit] stamp written: {AUDIT_STAMP}")
+    except OSError as e:
+        print(f"[audit] stamp 기록 실패 ({e}) — --send 는 계속 차단됩니다", file=sys.stderr)
+
+
+def clear_audit_stamp(reason: str) -> None:
+    """A failed audit invalidates every earlier PASS."""
+    try:
+        if AUDIT_STAMP.exists():
+            AUDIT_STAMP.unlink()
+            print(f"[audit] 이전 stamp 를 제거했습니다 ({reason}) — --send 차단")
+    except OSError:
+        pass
+
+
+def audit_gate(cat: Catalog, share_root: Path,
+               max_age_days: int) -> tuple[bool, str]:
+    """Has --audit passed recently, for THIS catalog and THIS share?"""
+    try:
+        st = json.loads(AUDIT_STAMP.read_text(encoding="utf-8"))
+    except FileNotFoundError:
+        return False, (f"--audit 통과 기록이 없습니다 ({AUDIT_STAMP}). "
+                       f"먼저 `python3 scripts/weekly/check_materials.py --audit` 를 "
+                       f"실행하세요 (읽기 전용)")
+    except (OSError, json.JSONDecodeError) as e:
+        return False, f"audit stamp 를 읽을 수 없습니다 ({e})"
+    if not isinstance(st, dict):
+        return False, "audit stamp 형식이 올바르지 않습니다"
+
+    sha = _catalog_sha(cat)
+    if not sha or st.get("catalog_sha256") != sha:
+        return False, ("audit 이후 config/nas_catalog.json 이 바뀌었습니다 "
+                       "— 매처가 달라졌으므로 --audit 를 다시 실행하세요")
+    if st.get("share_root") != str(share_root):
+        return False, (f"audit 는 {st.get('share_root')!r} 에서 통과했는데 지금은 "
+                       f"{str(share_root)!r} 입니다 — 다시 실행하세요")
+    try:
+        when = datetime.fromisoformat(str(st.get("when")))
+    except (TypeError, ValueError):
+        return False, "audit stamp 의 시각을 읽을 수 없습니다"
+    age = (datetime.now() - when).days
+    if age > max_age_days:
+        return False, (f"audit 통과가 {age}일 전입니다 (허용 {max_age_days}일) "
+                       f"— 다시 실행하세요")
+    return True, f"{when:%Y-%m-%d %H:%M} 통과 · catalog v{st.get('catalog_version')}"
+
+
 # ------------------------------------------------------------------------ audit
 def audit(cat: Catalog, share_root: Path, min_ratio: float = 0.9) -> int:
     """Verify the catalog-driven matcher against the REAL share, read-only.
@@ -849,6 +1118,7 @@ def audit(cat: Catalog, share_root: Path, min_ratio: float = 0.9) -> int:
 
     # --- assertions -------------------------------------------------------
     failures: list[str] = []
+    warns_soft: list[str] = []
     for init in ("BYL", "SMJ"):
         if init not in per_init:
             failures.append(f"{init}: no MM folder found — cannot verify the fix")
@@ -860,6 +1130,39 @@ def audit(cat: Catalog, share_root: Path, min_ratio: float = 0.9) -> int:
             failures.append(f"{init}: new rule {new} did not improve on old {old}")
     if tot_new < tot_old:
         failures.append(f"TOTAL regressed: new {tot_new} < old {tot_old}")
+
+    # --- MM folder policy: who may be told a folder is missing ------------
+    # NOT a tautology in either direction:
+    #   * a `dirs.mm` the catalog records but the share no longer has = the
+    #     BYL-33 failure mode returning as a rename (33 false accusations);
+    #   * a `dirs_absent` entry for a folder that now EXISTS = silent
+    #     suppression of real gaps forever.
+    # Both FAIL. The per-person decision column is what --send will actually do.
+    print("\n[audit] MM 폴더 정책 — 폴더가 없을 때 이 사람에게 메일을 보내는가")
+    print(f"  {'INIT':<6}{'folder':<9}{'catalog':<17}decision")
+    for init in sorted(cat.initials):
+        folder, _shown = resolve_mm_folder(cat, share_root, init)
+        absence = cat.mm_absence(init)
+        src = absence.source if absence else "dirs.mm=set"
+        if folder is not None:
+            decision = "n/a (폴더 있음)"
+            if absence is not None and absence.source == "dirs_absent":
+                msg = (f"{init}: dirs_absent 는 '{absence.token}' 가 없다고 하는데 "
+                       f"{folder} 가 실제로 존재합니다 — 카탈로그가 낡아 실제 누락을 "
+                       f"영구히 숨깁니다")
+                (failures if not absence.true_gap else warns_soft).append(msg)
+        elif absence is None:
+            decision = "GAP → 메일 (카탈로그가 폴더를 기대함)"
+            failures.append(f"{init}: dirs.mm 이 가리키는 폴더가 공유에 없습니다 "
+                            f"— 이 사람은 다음 --send 에서 전량 누락으로 통보됩니다")
+        elif absence.true_gap:
+            decision = "GAP → 메일 (카탈로그가 실제 누락으로 판정)"
+        elif absence.suppress:
+            decision = "억제 — gap 없음, 메일 없음"
+        else:
+            decision = "advisory — 보고만, 메일 없음"
+        print(f"  {init:<6}{'present' if folder is not None else 'absent':<9}"
+              f"{src:<17}{decision}")
 
     # --- GRM: both year conventions must resolve --------------------------
     print("\n[audit] GRM year conventions (day folders discovered per year)")
@@ -904,11 +1207,15 @@ def audit(cat: Catalog, share_root: Path, min_ratio: float = 0.9) -> int:
                             f"grm={g} pb={p} — expected both")
 
     print()
+    for w in warns_soft:
+        print(f"[audit] warn — {w}", file=sys.stderr)
     if failures:
         for f in failures:
             print(f"[audit] FAIL — {f}", file=sys.stderr)
+        clear_audit_stamp("audit FAIL")
         return EXIT_AUDIT
     print("[audit] PASS — catalog-driven matcher verified against the live share.")
+    write_audit_stamp(cat, share_root)
     return 0
 
 
@@ -920,7 +1227,16 @@ def main() -> int:
     ap.add_argument("--send", action="store_true", help="actually email (gated)")
     ap.add_argument("--to-self", action="store_true",
                     help="smoke test: route every note to SMTP_FROM/SMTP_USER")
-    ap.add_argument("--force", action="store_true", help="ignore the once-per-week stamp")
+    ap.add_argument("--force", action="store_true",
+                    help="ignore the once-per-week stamp (does NOT bypass the "
+                         "pre-send interlock)")
+    ap.add_argument("--max-missing-rate", type=float, default=DEFAULT_MAX_MISSING_RATE,
+                    help="refuse to mail anyone who would be told more than this "
+                         f"fraction of their meetings has no material "
+                         f"(default {DEFAULT_MAX_MISSING_RATE:.2f})")
+    ap.add_argument("--audit-max-age-days", type=int, default=DEFAULT_AUDIT_MAX_AGE_DAYS,
+                    help=f"how stale a passing --audit may be before --send is "
+                         f"refused (default {DEFAULT_AUDIT_MAX_AGE_DAYS})")
     ap.add_argument("--json", action="store_true", help="print the report as JSON")
     ap.add_argument("--audit", action="store_true",
                     help="verify the matcher against the real share (read-only)")
@@ -957,6 +1273,10 @@ def main() -> int:
     rep = build_report(load_events(args), cat, share_root, how, args.weeks,
                        pb_advisory=not args.include_pb)
 
+    blocked = implausible_people(rep, args.max_missing_rate)
+    lab_block = implausible_lab(rep, args.max_missing_rate)
+    gate_ok, gate_why = audit_gate(cat, share_root, args.audit_max_age_days)
+
     if args.json:
         print(json.dumps({
             "window": [rep.window_start, rep.window_end],
@@ -966,6 +1286,10 @@ def main() -> int:
                         "measured_at": rep.catalog_measured_at},
             "checked": {"mm": rep.checked_mm, "grm": rep.checked_grm},
             "warnings": rep.warnings,
+            "suppressed_folder_absent": rep.suppressed,
+            "interlock": {"audit_gate_ok": gate_ok, "audit_gate": gate_why,
+                          "max_missing_rate": args.max_missing_rate,
+                          "blocked": blocked, "lab_blocked": lab_block},
             "gaps": [vars(g) for g in rep.gaps],
         }, ensure_ascii=False, indent=2))
         return 0
@@ -984,10 +1308,23 @@ def main() -> int:
     print(f"[materials] checked MM={rep.checked_mm} GRM={rep.checked_grm} · "
           f"gaps={len(rep.gaps) - len(advisory)} (+{len(advisory)} advisory)")
     for w in rep.warnings:
-        print(f"[materials] warn: {w}")
+        if w not in cat.notes:          # catalog notes already went to stderr
+            print(f"[materials] warn: {w}")
     for g in sorted(advisory, key=lambda x: (x.initial, x.meeting_date)):
         print(f"[materials] advisory (not emailed) {g.initial} {g.meeting_date} "
               f"{g.kind} — {g.detail}")
+    for init, n in sorted(rep.suppressed.items()):
+        print(f"[materials] {init}: 폴더 부재 {n}건 — 카탈로그가 정상 부재로 기록 "
+              f"(gap 없음, 메일 없음)")
+
+    # Interlocks are printed in dry-run too: the operator must be able to see the
+    # block BEFORE the credentials exist, not discover it from a researcher.
+    print(f"[materials] 사전 안전장치 · audit gate: "
+          f"{'OK — ' + gate_why if gate_ok else 'NOT SATISFIED — ' + gate_why}")
+    for init, why_block in sorted(blocked.items()):
+        print(f"[materials] INTERLOCK {init}: {why_block} — 발송하지 않습니다")
+    if lab_block:
+        print(f"[materials] INTERLOCK (lab-wide): {lab_block} — 전체 발송을 중단합니다")
 
     mailable = rep.by_person()
     if not mailable:
@@ -999,33 +1336,83 @@ def main() -> int:
         print(f"[materials] {week} 에 이미 발송했습니다 — 주 1회 제한 (--force 로 우회)")
         return 0
 
+    # --- pre-send interlock (real recipients only) ------------------------
+    # --to-self routes everything to the operator's own address, so it is a
+    # diagnostic, not an outbound risk: it bypasses, loudly.
+    if args.send and not args.to_self:
+        if lab_block:
+            print("[materials] 발송 중단 — 랩 전체 누락률이 비현실적입니다. "
+                  "`--audit` 로 매처를 확인하고 config/nas_catalog.json 을 고치세요.",
+                  file=sys.stderr)
+            return EXIT_INTERLOCK
+        if not gate_ok:
+            print(f"[materials] 발송 중단 — {gate_why}", file=sys.stderr)
+            print("[materials] --force 는 주 1회 제한만 우회합니다; 이 게이트는 "
+                  "--audit 통과로만 열립니다.", file=sys.stderr)
+            return EXIT_INTERLOCK
+    elif args.send and args.to_self:
+        if not gate_ok or blocked or lab_block:
+            print("[materials] --to-self: 사전 안전장치를 우회합니다 (수신자는 운영자 "
+                  "본인). 실제 발송 전에 --audit 를 통과시키세요.", file=sys.stderr)
+
     ok, why = smtp_ready()
     sent = 0
-    for init, gaps in sorted(mailable.items()):
-        person = people.get(init)
-        if not person:
-            print(f"[materials] {init}: active 명단에 없음 — 건너뜀 ({len(gaps)}건)")
-            continue
-        subject, body = compose(init, person, gaps)
-        to_addr = (os.environ.get("SMTP_FROM") or os.environ.get("SMTP_USER")) \
-            if args.to_self else person.get("email")
-        if not to_addr:
-            print(f"[materials] {init}: 이메일 주소 없음 — 건너뜀 ({len(gaps)}건)")
-            continue
+    failed: list[str] = []
+    try:
+        for init, gaps in sorted(mailable.items()):
+            person = people.get(init)
+            if not person:
+                print(f"[materials] {init}: active 명단에 없음 — 건너뜀 ({len(gaps)}건)")
+                continue
+            if init in blocked and not args.to_self:
+                print(f"[materials] {init}: 사전 안전장치로 건너뜀 ({len(gaps)}건) "
+                      f"— {blocked[init]}")
+                continue
+            subject, body = compose(init, person, gaps)
+            to_addr = (os.environ.get("SMTP_FROM") or os.environ.get("SMTP_USER")) \
+                if args.to_self else person.get("email")
+            if not to_addr:
+                print(f"[materials] {init}: 이메일 주소 없음 — 건너뜀 ({len(gaps)}건)")
+                continue
 
-        if not args.send:
-            print(f"\n--- DRY-RUN → {to_addr} ---\nSubject: {subject}\n{body}")
-            continue
-        if not ok:
-            print(f"[materials] 발송 불가: {why}", file=sys.stderr)
-            return EXIT_SMTP
-        send_mail(to_addr, subject, body)
-        print(f"[materials] sent → {to_addr} ({len(gaps)}건)")
-        sent += 1
+            if not args.send:
+                print(f"\n--- DRY-RUN → {to_addr} ---\nSubject: {subject}\n{body}")
+                continue
+            if not ok:
+                print(f"[materials] 발송 불가: {why}", file=sys.stderr)
+                return EXIT_SMTP
+            # A mid-list SMTP refusal used to propagate, leaving the once-per-week
+            # stamp unwritten — so the next run re-mailed everyone already served.
+            try:
+                send_mail(to_addr, subject, body)
+            except (smtplib.SMTPException, OSError, ssl.SSLError) as e:
+                failed.append(f"{init} ({e.__class__.__name__}: {e})")
+                print(f"[materials] {init}: 발송 실패 — {e}", file=sys.stderr)
+                if isinstance(e, (smtplib.SMTPAuthenticationError,
+                                  smtplib.SMTPConnectError, ConnectionError)):
+                    print("[materials] 접속/인증 실패이므로 나머지 발송을 중단합니다.",
+                          file=sys.stderr)
+                    break
+                continue
+            print(f"[materials] sent → {to_addr} ({len(gaps)}건)")
+            sent += 1
+    finally:
+        # Written even if something above raised: one partial run must never
+        # become a second full run.
+        if args.send and sent and not args.to_self:
+            try:
+                WEEK_STAMP.parent.mkdir(parents=True, exist_ok=True)
+                WEEK_STAMP.write_text(week, encoding="utf-8")
+            except OSError as e:
+                print(f"[materials] 주간 stamp 기록 실패 ({e}) — 다음 실행이 재발송할 수 "
+                      f"있으니 {WEEK_STAMP} 에 '{week}' 를 직접 기록하세요", file=sys.stderr)
 
-    if args.send and sent and not args.to_self:
-        WEEK_STAMP.parent.mkdir(parents=True, exist_ok=True)
-        WEEK_STAMP.write_text(week, encoding="utf-8")
+    if failed:
+        print(f"[materials] 발송 실패 {len(failed)}건: {', '.join(failed)}",
+              file=sys.stderr)
+        return EXIT_SMTP
+    if args.send and blocked and not args.to_self:
+        return EXIT_INTERLOCK
     return 0
 
 

@@ -15,6 +15,7 @@ import hashlib
 import json
 import os
 import re
+import stat
 import sys
 import unicodedata
 from dataclasses import dataclass, asdict, field
@@ -656,10 +657,12 @@ def new_walk_stats() -> dict:
     return {
         "dirs_yielded": 0,
         "files_seen": 0,
-        "pruned": {},            # NFC dir name -> times pruned
+        "pruned": {},            # NFC name -> times pruned (dirs and junk files)
         "shallow_stopped": {},   # NFC dir name -> times listed-but-not-recursed
         "symlinks_skipped": [],  # capped sample of full paths
         "symlinks_skipped_n": 0,
+        "loops_blocked": [],     # capped sample of paths caught by the inode guard
+        "loops_blocked_n": 0,
         "errors": [],            # capped sample of (path, repr(exc))
         "errors_n": 0,
     }
@@ -691,12 +694,31 @@ def safe_walk(
          The share root contains 'CSNL_new-1' -> /Volumes/CSNL_new-1; any
          walker that follows it recurses forever over 86TiB. This is
          STRUCTURAL (an unnamed loop symlink is caught too), not just the
-         name prune. A symlink whose target is a regular file is still
-         reported in `filenames` — reading it cannot recurse.
+         name prune, and it is backed by a second, independent inode
+         (st_dev, st_ino) ancestor guard.
+
+         ⚠ MEASURED 2026-07-22 on the live SMB mount: `os.scandir()` LIES
+         about symlinks here. For the real self-symlink, DirEntry reports
+         `is_symlink() == False`, `is_dir(follow_symlinks=False) == False`
+         and even `is_file() == True` — the SMB client hands back a
+         regular-file d_type, so Python never falls back to lstat. The
+         descent decision therefore NEVER trusts DirEntry: every directory
+         candidate is confirmed with os.lstat() (authoritative), which costs
+         one extra syscall per subdirectory and none per file.
+
+         An entry DETECTED as a symlink is skipped entirely (never yielded as
+         a dir, never as a file) and counted in `stats['symlinks_skipped']`,
+         so a dropped link is auditable rather than silent. Corollary of the
+         measurement above: on a mount that misreports a symlink as a regular
+         file it lands in `filenames` unless its name is in the prune set —
+         harmless (a file is never descended), but do not assume every
+         `filenames` entry is a regular file; that is true of os.walk too.
       2. **Prune set** — `nas_prune_names()` (built-in floor UNION the
          catalog's walk_rules.never_descend) is dropped from `dirnames`
          before yielding, so both recycle-bin shadow copies and the EACCES
-         'Temp_188_BRL' subtree stay out of every count.
+         'Temp_188_BRL' subtree stay out of every count. The same names are
+         also dropped from `filenames`, which is what keeps a d_type-misread
+         'CSNL_new-1' symlink from masquerading as a file on this share.
       3. **Unreadable directories are skipped, never fatal.** PermissionError
          (Temp_188_BRL is EACCES even as `csnl`) and any other OSError are
          recorded in `stats` / passed to `on_error` and the walk continues.
@@ -747,11 +769,31 @@ def safe_walk(
             except Exception:      # a broken callback must not kill the walk
                 pass
 
-    # (path, depth, stop_after) — LIFO; stop_after marks a shallow directory
-    # that is yielded but whose children are never visited.
-    stack = [(os.fspath(root), 0, False)]
+    def _skip_link(path: str) -> None:
+        if st is not None:
+            st["symlinks_skipped_n"] = st.get("symlinks_skipped_n", 0) + 1
+            _stats_append(st, "symlinks_skipped", path)
+
+    def _prune_hit(key: str) -> None:
+        if st is not None:
+            st["pruned"][key] = st["pruned"].get(key, 0) + 1
+
+    def _inode_key(lst) -> Optional[tuple]:
+        # st_ino can be 0 / unreliable on some network mounts; only use it as a
+        # loop key when it is truthy, so a degenerate FS cannot mass-prune.
+        return (lst.st_dev, lst.st_ino) if getattr(lst, "st_ino", 0) else None
+
+    root_path = os.fspath(root)
+    try:
+        _root_key = _inode_key(os.lstat(root_path))
+    except OSError:
+        _root_key = None
+    # (path, depth, stop_after, ancestors) — LIFO. `stop_after` marks a shallow
+    # directory that is yielded but whose children are never visited;
+    # `ancestors` is the (dev, ino) chain used as the loop guard.
+    stack = [(root_path, 0, False, (_root_key,) if _root_key else ())]
     while stack:
-        dirpath, depth, stop_after = stack.pop()
+        dirpath, depth, stop_after, ancestors = stack.pop()
         try:
             with os.scandir(dirpath) as it:
                 entries = list(it)
@@ -760,40 +802,51 @@ def safe_walk(
             continue
 
         dirnames: list = []
+        dir_keys: dict = {}             # name -> (dev, ino) for the descent step
         filenames: list = []
         for entry in entries:
             name = entry.name
+            key = nfc(name)
+            full = os.path.join(dirpath, name)
+
+            # Fast path: a d_type that already says "symlink" (local disks).
             try:
-                is_link = entry.is_symlink()
-            except OSError as exc:      # unreadable entry -> treat as opaque, skip
-                _err(os.path.join(dirpath, name), exc)
-                continue
-            if is_link:
-                # NEVER descend a symlink (guarantee 1). Keep it only if it
-                # points at a regular file.
-                if st is not None:
-                    st["symlinks_skipped_n"] = st.get("symlinks_skipped_n", 0) + 1
-                    _stats_append(st, "symlinks_skipped", os.path.join(dirpath, name))
-                try:
-                    if entry.is_file():          # follows the link (one stat, no recursion)
-                        filenames.append(name)
-                except OSError:
-                    pass
-                continue
-            try:
-                is_dir = entry.is_dir(follow_symlinks=False)
-            except OSError as exc:
-                _err(os.path.join(dirpath, name), exc)
-                continue
-            if is_dir:
-                key = nfc(name)
-                if key in prune_set:
-                    if st is not None:
-                        st["pruned"][key] = st["pruned"].get(key, 0) + 1
+                if entry.is_symlink():
+                    _skip_link(full)
                     continue
-                dirnames.append(name)
-            else:
+                looks_dir = entry.is_dir(follow_symlinks=False)
+            except OSError as exc:      # unreadable entry -> treat as opaque, skip
+                _err(full, exc)
+                continue
+
+            if not looks_dir:
+                # d_type says file. It may still be a symlink (SMB misreports
+                # them as regular files), but a file is never descended, so the
+                # loop risk is nil; drop it only if its NAME is known junk.
+                if key in prune_set:
+                    _prune_hit(key)
+                    continue
                 filenames.append(name)
+                continue
+
+            # Directory candidate -> confirm with lstat. NEVER trust d_type for
+            # the descent decision (see the docstring's MEASURED note).
+            try:
+                lst = os.lstat(full)
+            except OSError as exc:
+                _err(full, exc)
+                continue
+            if stat.S_ISLNK(lst.st_mode):
+                _skip_link(full)
+                continue
+            if not stat.S_ISDIR(lst.st_mode):
+                filenames.append(name)
+                continue
+            if key in prune_set:
+                _prune_hit(key)
+                continue
+            dirnames.append(name)
+            dir_keys[name] = _inode_key(lst)
 
         if st is not None:
             st["dirs_yielded"] = st.get("dirs_yielded", 0) + 1
@@ -810,9 +863,20 @@ def safe_walk(
         # matches the listing order.
         for name in reversed(dirnames):
             key = nfc(name)
+            child = os.path.join(dirpath, name)
+            ckey = dir_keys.get(name)
+            if ckey is not None and ckey in ancestors:
+                # Second, independent loop guard: this directory IS one of its
+                # own ancestors. Catches a cycle even when symlink detection
+                # fails outright (bind mount, lying d_type, hardlinked dir).
+                if st is not None:
+                    st["loops_blocked_n"] = st.get("loops_blocked_n", 0) + 1
+                    _stats_append(st, "loops_blocked", child)
+                continue
+            child_anc = (ancestors + (ckey,)) if ckey is not None else ancestors
             if key in shallow_set:
                 if st is not None:
                     st["shallow_stopped"][key] = st["shallow_stopped"].get(key, 0) + 1
-                stack.append((os.path.join(dirpath, name), depth + 1, True))
+                stack.append((child, depth + 1, True, child_anc))
                 continue
-            stack.append((os.path.join(dirpath, name), depth + 1, False))
+            stack.append((child, depth + 1, False, child_anc))

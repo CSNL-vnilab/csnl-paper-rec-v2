@@ -242,11 +242,96 @@ def test_safe_walk_symlink_guard_is_structural_not_name_based(tmp_path):
     assert any("#recycle" in d for d in dirs), "prune=() should re-admit the bin"
 
 
-def test_safe_walk_keeps_a_symlink_to_a_regular_file(tmp_path):
+def test_safe_walk_skips_detected_symlinks_but_records_them(tmp_path):
+    """Contract: anything DETECTED as a symlink is dropped from both lists —
+    never silently, always counted, so an audit can see what was skipped."""
     root = _mk_tree(tmp_path)
-    walked, _ = _walk(root)
-    top = [f for d, _, f in walked if d == str(root)][0]
-    assert "shortcut.pptx" in top               # reading it cannot recurse
+    walked, st = _walk(root)
+    top_dirs, top_files = [(dn, fn) for d, dn, fn in walked if d == str(root)][0]
+    assert "shortcut.pptx" not in top_files
+    assert "shortcut.pptx" not in top_dirs
+    assert any(p.endswith("shortcut.pptx") for p in st["symlinks_skipped"])
+    assert st["symlinks_skipped_n"] == 3        # CSNL_new-1, loop_link, shortcut
+
+
+class _LyingScandir:
+    """Simulate the MEASURED SMB d_type lie: DirEntry never admits a symlink.
+
+    `mode='dir'` additionally claims every symlink is a plain directory (the
+    AFP / Linux-style lie), which is the dangerous direction — it pushes the
+    entry onto the descent path so only os.lstat() can still save the walk.
+    """
+
+    real = staticmethod(os.scandir)
+
+    def __init__(self, path, mode="file"):
+        self._it = _LyingScandir.real(path)
+        self._mode = mode
+
+    class _Entry:
+        def __init__(self, e, mode):
+            self.name, self._e, self._mode = e.name, e, mode
+
+        def is_symlink(self):
+            return False                                     # the lie
+
+        def is_dir(self, follow_symlinks=True):
+            if self._e.is_symlink() and self._mode == "dir":
+                return True
+            return self._e.is_dir(follow_symlinks=follow_symlinks)
+
+        def is_file(self, follow_symlinks=True):
+            return self._e.is_file(follow_symlinks=follow_symlinks)
+
+    def __enter__(self):
+        return (_LyingScandir._Entry(e, self._mode) for e in self._it.__enter__())
+
+    def __exit__(self, *a):
+        return self._it.__exit__(*a)
+
+
+@pytest.mark.parametrize("mode", ["file", "dir"])
+def test_safe_walk_descent_does_not_trust_dirent_type(tmp_path, monkeypatch, mode):
+    """MEASURED 2026-07-22 on the live SMB mount: os.scandir() reports the real
+    self-symlink as is_symlink()==False / is_dir(nofollow)==False /
+    is_file()==True. With DirEntry lying in either direction the walk must
+    still refuse to descend, because the descent decision comes from
+    os.lstat(), not from d_type."""
+    root = _mk_tree(tmp_path)
+    monkeypatch.setattr(os, "scandir", lambda p: _LyingScandir(p, mode))
+    st = C.new_walk_stats()
+    dirs = [d for d, _, _ in C.safe_walk(root, prune=(), stats=st)]  # name guard OFF
+    assert len(dirs) == len(set(dirs)), "a directory was visited twice"
+    assert not any(Path(d).name in ("CSNL_new-1", "loop_link") for d in dirs)
+    if mode == "dir":
+        # the dangerous lie: caught by lstat alone
+        assert st["symlinks_skipped_n"] >= 2
+    assert str(root / "Memory" / "Papers") in dirs      # real tree still walked
+
+
+def test_safe_walk_inode_guard_catches_a_cycle_symlink_detection_would_miss(tmp_path,
+                                                                            monkeypatch):
+    """Defence in depth. Defeat EVERY symlink signal — d_type AND lstat's
+    S_ISLNK — so the loop symlink looks like an ordinary directory at every
+    layer. The (dev, ino) ancestor guard must still terminate the walk. Without
+    it this test would hang instead of failing."""
+    import types
+    import _common as _c
+    root = _mk_tree(tmp_path)
+    real_stat = _c.stat
+    fake_stat = types.SimpleNamespace(
+        S_ISLNK=lambda mode: False,                        # "nothing is a link"
+        S_ISDIR=lambda mode: real_stat.S_ISDIR(mode) or real_stat.S_ISLNK(mode),
+    )
+    monkeypatch.setattr(os, "scandir", lambda p: _LyingScandir(p, "dir"))
+    monkeypatch.setattr(_c, "stat", fake_stat)             # module-local rebind
+
+    st = C.new_walk_stats()
+    dirs = [d for d, _, _ in C.safe_walk(root, prune=(), stats=st)]  # NO max_depth
+    assert st["loops_blocked_n"] >= 1
+    assert st["symlinks_skipped_n"] == 0, "premise: no symlink was detectable"
+    assert len(dirs) < 60, "walk terminated, but explored more than expected"
+    assert str(root / "Memory" / "Papers") in dirs
 
 
 def test_safe_walk_prunes_both_recycle_shadow_copies(tmp_path):
@@ -457,13 +542,58 @@ def test_live_bounded_walk_does_not_follow_the_share_root_symlink():
     rel = [os.path.relpath(d, base) for d in dirs]
     assert "." in rel                                             # the root was walked
     assert not any(p.split(os.sep)[0] == "CSNL_new-1" for p in rel if p != ".")
-    for _, dirnames, _ in walked:
-        keys = [C.nfc(x) for x in dirnames]
-        assert "CSNL_new-1" not in keys                           # never even offered
+    root_dirs, root_files = [(dn, fn) for d, dn, fn in walked if d == str(base)][0]
+    for lst in (root_dirs, root_files):
+        keys = [C.nfc(x) for x in lst]
+        assert "CSNL_new-1" not in keys        # neither descended nor offered
         assert "#recycle" not in keys
         assert "@Recycle" not in keys
-    assert st["symlinks_skipped_n"] >= 1
-    assert st["pruned"], "no prune fired on the real share root"
+        assert "Temp_188_BRL" not in keys
+    assert st["pruned"].get("CSNL_new-1") == 1
+    assert st["pruned"].get("#recycle") == 1
+    assert st["pruned"].get("@Recycle") == 1
+    print(f"\n[live] default walk: dirs={st['dirs_yielded']} files={st['files_seen']} "
+          f"pruned={dict(st['pruned'])} symlinks={st['symlinks_skipped_n']} "
+          f"loops={st['loops_blocked_n']} errors={st['errors_n']}")
+
+
+@pytest.mark.skipif(os.environ.get("CSNL_NAS_LIVE") != "1",
+                    reason="live NAS walk is opt-in (CSNL_NAS_LIVE=1)")
+def test_live_symlink_is_not_followed_even_with_the_name_prune_disabled():
+    """The structural proof, on the real share: turn the name guard OFF and the
+    self-symlink must STILL not be descended.
+
+    MEASURED here: this SMB mount reports the symlink with a regular-file
+    d_type, so safe_walk classifies it as a file — and files are never
+    descended. On a mount that reports it as a directory the lstat confirm
+    catches it instead. Either way the loop cannot happen; this test asserts
+    the outcome, not the mechanism. It also live-exercises the EACCES
+    tolerance via Temp_188_BRL."""
+    base = _resolve_nas_base()
+    if base is None:
+        pytest.skip("NAS share not mounted (do NOT mount from an agent)")
+    if not (base / "CSNL_new-1").is_symlink():
+        pytest.skip("share root no longer carries the self-symlink")
+
+    st = C.new_walk_stats()
+    walked = list(C.safe_walk(base, prune=(), max_depth=1, stats=st))   # guard OFF
+    dirs = [d for d, _, _ in walked]
+    rel = [os.path.relpath(d, base) for d in dirs]
+    assert len(dirs) == len(set(dirs))
+    assert not any(p.split(os.sep)[0] == "CSNL_new-1" for p in rel if p != ".")
+    root_dirs = [dn for d, dn, _ in walked if d == str(base)][0]
+    assert "CSNL_new-1" not in [C.nfc(x) for x in root_dirs]     # not a descent target
+    # with the prune off the recycle shadow copies ARE walked -> the prune is
+    # what saves the counts, and it is catalog data, not code.
+    assert any(p.split(os.sep)[0] == "#recycle" for p in rel if p != ".")
+    # EACCES subtree: recorded, not fatal (guarantee 3) — the walk finished.
+    denied = base / "Temp_188_BRL"
+    if denied.is_dir() and not os.access(denied, os.R_OK):
+        assert st["errors_n"] >= 1
+        assert any("Temp_188_BRL" in p for p, _ in st["errors"])
+    print(f"\n[live] prune-off walk: dirs={st['dirs_yielded']} "
+          f"symlinks={st['symlinks_skipped_n']} loops={st['loops_blocked_n']} "
+          f"errors={st['errors_n']} sample_err={st['errors'][:1]}")
 
 
 @pytest.mark.skipif(os.environ.get("CSNL_NAS_LIVE") != "1",
@@ -486,8 +616,10 @@ def test_live_memory_papers_are_nfd_and_nfc_restores_conformance():
     raw_ok = sum(1 for n in names if PAPER_RE.match(n))
     nfc_ok = sum(1 for n in names if PAPER_RE.match(C.nfc(n)))
     assert nfc_ok > raw_ok
-    assert nfc_ok / len(names) > 0.99                              # catalog: 99.94%
-    assert nfc_ok - raw_ok >= len(non_nfc) - 5                     # NFD == the misses
+    assert raw_ok / len(names) < 0.99                               # catalog: 98.09%
+    assert nfc_ok / len(names) > 0.998                              # catalog: 99.94%
+    # every name the fix recovers is an NFD name (the gain cannot exceed them)
+    assert 0 < nfc_ok - raw_ok <= len(non_nfc)
     print(f"\n[live] Memory/Papers pdfs={len(names)} non_nfc={len(non_nfc)} "
           f"raw={raw_ok}/{len(names)}={raw_ok/len(names):.4%} "
           f"nfc={nfc_ok}/{len(names)}={nfc_ok/len(names):.4%}")
