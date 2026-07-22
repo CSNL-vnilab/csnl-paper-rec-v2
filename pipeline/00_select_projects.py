@@ -22,7 +22,16 @@ sys.path.insert(0, os.path.dirname(__file__))
 from _util import dump_stage, kst_now_str, resolve_run_id
 
 # ---------------------------------------------------------------------------
-# Exact query from BUILD_SPEC.md — do not modify
+# Query from BUILD_SPEC.md — do not modify except for the eligibility predicate
+# below, amended once by P34 S5 (NULL-tolerance) and kept identical at all call
+# sites.
+#
+# `csnl_research.projects.phase` is FREE TEXT written only by csnl-ops: no CHECK,
+# no enum type (live values already include 'mapping (Stage 1 broad map)' and
+# 'deprecated_stub'). This whitelist is therefore a CLOSED LIST OVER AN OPEN
+# VOCABULARY. `NULL IN (...)` evaluates to NULL, never true, so an unset phase
+# silently deleted a live project (SMJ/visual_search, confidence_avg 0.95, the
+# freshest row in the table). NULL must stay eligible.
 # ---------------------------------------------------------------------------
 _QUERY = """
 SELECT init, project_slug, title, phase, confidence_avg,
@@ -30,7 +39,7 @@ SELECT init, project_slug, title, phase, confidence_avg,
        purpose_jsonb, background_jsonb, connected_graph_jsonb,
        manipulation_variables_jsonb, modalities_jsonb
 FROM csnl_research.projects
-WHERE phase IN ('data_collection','analysis','manuscript_draft')
+WHERE (phase IS NULL OR phase IN ('data_collection','analysis','manuscript_draft'))
   AND confidence_avg >= 0.7
 ORDER BY init, project_slug
 """

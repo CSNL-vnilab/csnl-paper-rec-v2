@@ -125,9 +125,17 @@ def _fetch_active_researchers() -> list[str]:
     sys.path.insert(0, str(_REPO_ROOT / "pipeline"))
     from _db import load_env, query_json
     load_env()
+    # Eligibility predicate (P34 S5) — kept identical at every call site.
+    # `csnl_research.projects.phase` is FREE TEXT written only by csnl-ops: no
+    # CHECK, no enum type (live values already include 'mapping (Stage 1 broad
+    # map)' and 'deprecated_stub'). This whitelist is therefore a CLOSED LIST
+    # OVER AN OPEN VOCABULARY. `NULL IN (...)` is NULL, never true, so an unset
+    # phase silently deleted a live project (SMJ/visual_search, conf 0.95).
+    # NULL must stay eligible.
     rows = query_json(
         "SELECT DISTINCT init FROM csnl_research.projects "
-        "WHERE phase IN ('data_collection','analysis','manuscript_draft') "
+        "WHERE (phase IS NULL "
+        "       OR phase IN ('data_collection','analysis','manuscript_draft')) "
         "  AND confidence_avg >= 0.7 ORDER BY init"
     )
     return [r["init"] for r in rows]
@@ -146,7 +154,11 @@ def _fetch_projects(init: str) -> list[dict]:
                connected_graph_jsonb::text AS cg_text
           FROM csnl_research.projects
          WHERE init = '{init}'
-           AND phase IN ('data_collection','analysis','manuscript_draft')
+           -- Eligibility predicate (P34 S5) — see _fetch_active_researchers:
+           -- `phase` is free text written only by csnl-ops (no CHECK, no enum),
+           -- a closed whitelist over an open vocabulary; NULL stays eligible.
+           AND (phase IS NULL
+                OR phase IN ('data_collection','analysis','manuscript_draft'))
            AND confidence_avg >= 0.7
          ORDER BY project_slug
     """)

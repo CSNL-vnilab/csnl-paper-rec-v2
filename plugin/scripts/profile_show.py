@@ -20,6 +20,13 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from _pdb import load_env, query, exec_sql, schema  # noqa: E402
 
+# Eligibility predicate (P34 S5) — kept identical at every call site.
+# `csnl_research.projects.phase` is FREE TEXT written only by csnl-ops: no CHECK,
+# no enum type (live values already include 'mapping (Stage 1 broad map)' and
+# 'deprecated_stub'). This whitelist is therefore a CLOSED LIST OVER AN OPEN
+# VOCABULARY. `NULL IN (...)` evaluates to NULL, never true, so an unset phase
+# silently deleted a live project (SMJ/visual_search, confidence_avg 0.95, the
+# freshest row in the table). NULL must stay eligible.
 _PROJ_QUERY = """
 SELECT init, project_slug, title, phase, confidence_avg,
        purpose_jsonb, background_jsonb, connected_graph_jsonb,
@@ -27,7 +34,7 @@ SELECT init, project_slug, title, phase, confidence_avg,
        to_char(last_updated_at AT TIME ZONE 'Asia/Seoul','YYYY-MM-DD HH24:MI') AS last_updated_kst
 FROM csnl_research.projects
 WHERE init = %s
-  AND phase IN ('data_collection','analysis','manuscript_draft')
+  AND (phase IS NULL OR phase IN ('data_collection','analysis','manuscript_draft'))
   AND confidence_avg >= 0.7
 ORDER BY project_slug
 """

@@ -100,13 +100,20 @@ BM25_K1, BM25_B = 1.2, 0.75
 
 # -------------------------------------------------------- researcher interest
 
+# Eligibility predicate (P34 S5) — kept identical at every call site.
+# `csnl_research.projects.phase` is FREE TEXT written only by csnl-ops: no CHECK,
+# no enum type (live values already include 'mapping (Stage 1 broad map)' and
+# 'deprecated_stub'). This whitelist is therefore a CLOSED LIST OVER AN OPEN
+# VOCABULARY. `NULL IN (...)` evaluates to NULL, never true, so an unset phase
+# silently deleted a live project (SMJ/visual_search, confidence_avg 0.95, the
+# freshest row in the table). NULL must stay eligible.
 _INTEREST_QUERY = """
 SELECT init, project_slug, title, phase, confidence_avg,
        purpose_jsonb, background_jsonb, connected_graph_jsonb,
        manipulation_variables_jsonb, modalities_jsonb
 FROM csnl_research.projects
 WHERE init = %s
-  AND phase IN ('data_collection','analysis','manuscript_draft')
+  AND (phase IS NULL OR phase IN ('data_collection','analysis','manuscript_draft'))
   AND confidence_avg >= 0.7
 ORDER BY project_slug
 """
@@ -186,9 +193,13 @@ def _list_researchers() -> list[str]:
     sys.path.insert(0, str(_REPO_ROOT / "pipeline"))
     from _db import load_env, query_json  # noqa: E402
     load_env()
+    # Eligibility predicate (P34 S5) — see _INTEREST_QUERY: `phase` is free text
+    # written only by csnl-ops (no CHECK, no enum), so this whitelist is a closed
+    # list over an open vocabulary and NULL must stay eligible.
     rows = query_json(
         "SELECT DISTINCT init FROM csnl_research.projects "
-        "WHERE phase IN ('data_collection','analysis','manuscript_draft') "
+        "WHERE (phase IS NULL "
+        "       OR phase IN ('data_collection','analysis','manuscript_draft')) "
         "  AND confidence_avg >= 0.7 ORDER BY init"
     )
     return [r["init"] for r in rows]

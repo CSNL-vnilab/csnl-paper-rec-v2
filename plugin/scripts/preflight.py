@@ -87,11 +87,19 @@ def main() -> int:
                         f"누락된 테이블: {missing}. 운영자에게 문의해주세요.")
 
     # 3. Active projects.
+    # Eligibility predicate (P34 S5) — kept identical at every call site.
+    # `csnl_research.projects.phase` is FREE TEXT written only by csnl-ops: no
+    # CHECK, no enum type (live values already include 'mapping (Stage 1 broad
+    # map)' and 'deprecated_stub'). This whitelist is therefore a CLOSED LIST
+    # OVER AN OPEN VOCABULARY. `NULL IN (...)` is NULL, never true, so an unset
+    # phase silently deleted a live project (SMJ/visual_search, conf 0.95) — and
+    # this call site then blamed the researcher for it. NULL must stay eligible.
     projs = query(
         "SELECT project_slug, title, phase, confidence_avg "
         "FROM csnl_research.projects "
         "WHERE init = %s "
-        "  AND phase IN ('data_collection','analysis','manuscript_draft') "
+        "  AND (phase IS NULL "
+        "       OR phase IN ('data_collection','analysis','manuscript_draft')) "
         "  AND confidence_avg >= 0.7 "
         "ORDER BY project_slug",
         (init,),
