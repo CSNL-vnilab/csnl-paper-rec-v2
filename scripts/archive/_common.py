@@ -13,13 +13,14 @@ from __future__ import annotations
 
 import hashlib
 import json
+import os
 import re
 import sys
 import unicodedata
 from dataclasses import dataclass, asdict, field
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
-from typing import Optional
+from typing import Callable, Iterable, Iterator, Optional
 
 # Make pipeline/_db.py importable from the archive scripts.
 _REPO_ROOT = Path(__file__).resolve().parent.parent.parent
@@ -490,3 +491,328 @@ def parse_filename(name: str) -> dict:
         out["title"] = stem.replace("_", " ").strip()
         out["looks_truncated"] = (len(stem) < 30 and "_" not in stem)
     return out
+
+
+# ======================================================================
+# P34 — NAS filesystem safety helpers (share-wide)
+# ----------------------------------------------------------------------
+# Two problems measured on the live share (state/archive/_explore/batch02):
+#
+#   N6-3  filenames are stored **NFD** (decomposed). Python's `\w` /
+#         `[^\W\d_]` exclude combining marks (category Mn), so an NFD
+#         'Á' (= 'A' + U+0301) silently fails a name regex and the file
+#         becomes invisible. Memory/Papers conformance: 98.09% raw ->
+#         99.94% after NFC (4865/4868). Fix = nfc() BOTH sides.
+#
+#   N6-2  the share root holds a **self-referential symlink**
+#         'CSNL_new-1' -> /Volumes/CSNL_new-1, plus two recycle bins
+#         ('#recycle', '@Recycle') that are full SHADOW COPIES of the
+#         tree, plus 'Temp_188_BRL' which raises EACCES. A naive walker
+#         loops forever, double-counts 86TiB, or aborts. Fix = safe_walk().
+#
+# Both helpers are ADDITIVE and independent of the canonical_id / norm_doi
+# / same_work family above (which is PK-stable and untouched).
+#
+# Data, not hardcode (operator directive 2026-07-21): the prune / shallow
+# name lists live in config/nas_catalog.json. The built-in defaults below
+# are a floor — the catalog is UNIONed onto them, so a catalog edit can
+# only ever widen the guard, never silently disable the self-symlink trap.
+# ======================================================================
+
+NAS_CATALOG_PATH = _REPO_ROOT / "config" / "nas_catalog.json"
+
+# Floor prune set (verified traps). A catalog edit adds to this; it cannot
+# remove from it. Every one of these either loops, double-counts, or raises.
+NAS_PRUNE_DIRS_DEFAULT: frozenset = frozenset({
+    "CSNL_new-1",       # self-referential symlink at share root -> infinite loop
+    "._CSNL_new-1",     # AppleDouble sidecar of that symlink
+    "#recycle",         # Synology recycle bin — shadow copy of the whole tree
+    "@Recycle",         # QNAP recycle bin — second shadow copy
+    ".Trashes",         # macOS trash
+    ".TemporaryItems",  # macOS scratch
+    ".AppleDB",         # SMB/AFP metadata
+    ".@upload_cache",   # Synology upload scratch
+    "Temp_188_BRL",     # EACCES even as `csnl` — unguarded walk raises
+})
+
+# Directories we may LIST but must not recurse into (raw imaging: tens of
+# thousands of DICOM files behind them).
+NAS_SHALLOW_DIRS_DEFAULT: frozenset = frozenset({
+    "fMRI_DICOM", "fMRI_DICOM_USB", "SNUBIC", "Skope_SNUBIC",
+})
+
+# Bound the diagnostic lists carried in `stats` so a pathological tree can
+# never balloon memory.
+_STATS_LIST_CAP = 128
+
+_CATALOG_CACHE: dict = {}
+
+
+def nfc(value) -> str:
+    """NFC-normalise a NAS filename / path **for comparison**.
+
+    The share stores names in NFD, so `"Ásgeirsson" (NFC) != "Ásgeirsson" (NFD)`
+    as Python strings even though they render identically. Normalise BOTH
+    sides of every comparison, regex match, dict key and DB write:
+
+        if nfc(entry.name) == nfc(catalog_name): ...
+        m = PAT.match(nfc(filename))
+
+    Accepts str / os.PathLike / None. None (and any falsy value) -> "".
+
+    ⚠ The result is a COMPARISON key, not an I/O path. Keep the raw name
+    from os.scandir()/os.listdir() for open()/stat() — a remote SMB share is
+    not guaranteed to resolve the re-composed form. safe_walk() therefore
+    yields RAW names and only NFC-normalises internally when matching.
+    """
+    if value is None:
+        return ""
+    if isinstance(value, str):
+        s = value
+    elif hasattr(value, "__fspath__"):
+        s = os.fspath(value)
+        if isinstance(s, bytes):
+            s = s.decode("utf-8", "surrogateescape")
+    else:
+        s = str(value)
+    if not s:
+        return ""
+    return unicodedata.normalize("NFC", s)
+
+
+def nfc_eq(a, b) -> bool:
+    """True iff two names are equal once NFC-normalised (see nfc())."""
+    return nfc(a) == nfc(b)
+
+
+def load_nas_catalog(path=None, *, refresh: bool = False) -> dict:
+    """Load config/nas_catalog.json — the observed-reality metadata catalog.
+
+    Cached per resolved path. Returns {} when the file is missing, unreadable
+    or malformed: callers then fall back to the conservative built-in
+    defaults, so a broken catalog can never widen a walk.
+    """
+    p = Path(path) if path is not None else NAS_CATALOG_PATH
+    key = str(p)
+    if not refresh and key in _CATALOG_CACHE:
+        return _CATALOG_CACHE[key]
+    data: dict = {}
+    try:
+        with p.open("r", encoding="utf-8") as f:
+            loaded = json.load(f)
+        if isinstance(loaded, dict):
+            data = loaded
+    except (OSError, ValueError):
+        data = {}
+    _CATALOG_CACHE[key] = data
+    return data
+
+
+def _catalog_walk_names(catalog, section: str) -> list:
+    """Pull dir names out of catalog['walk_rules'][section], tolerating both
+    shapes the catalog uses: a list of {"name": ..., "why": ...} records
+    (never_descend) and a {"names": [...]} object (never_walk_deep)."""
+    if catalog is None:
+        catalog = load_nas_catalog()
+    if not isinstance(catalog, dict):
+        return []
+    rules = catalog.get("walk_rules")
+    if not isinstance(rules, dict):
+        return []
+    node = rules.get(section)
+    if isinstance(node, dict):
+        node = node.get("names")
+    if not isinstance(node, (list, tuple, set, frozenset)):
+        return []
+    out = []
+    for item in node:
+        if isinstance(item, dict):
+            item = item.get("name")
+        if isinstance(item, str) and item:
+            out.append(item)
+    return out
+
+
+def nas_prune_names(catalog=None) -> frozenset:
+    """Directory names a NAS walker must never descend into (NFC keys).
+
+    UNION of NAS_PRUNE_DIRS_DEFAULT and catalog walk_rules.never_descend —
+    the union direction is deliberate: recording a NEW trap is a data edit,
+    but no data edit can delete a verified trap out of the guard.
+    """
+    names = set(NAS_PRUNE_DIRS_DEFAULT) | set(_catalog_walk_names(catalog, "never_descend"))
+    return frozenset(nfc(n) for n in names)
+
+
+def nas_shallow_names(catalog=None) -> frozenset:
+    """Directory names that may be LISTED but not recursed into (NFC keys).
+    UNION of NAS_SHALLOW_DIRS_DEFAULT and catalog walk_rules.never_walk_deep."""
+    names = set(NAS_SHALLOW_DIRS_DEFAULT) | set(_catalog_walk_names(catalog, "never_walk_deep"))
+    return frozenset(nfc(n) for n in names)
+
+
+def new_walk_stats() -> dict:
+    """Fresh counter dict accepted by safe_walk(stats=...)."""
+    return {
+        "dirs_yielded": 0,
+        "files_seen": 0,
+        "pruned": {},            # NFC dir name -> times pruned
+        "shallow_stopped": {},   # NFC dir name -> times listed-but-not-recursed
+        "symlinks_skipped": [],  # capped sample of full paths
+        "symlinks_skipped_n": 0,
+        "errors": [],            # capped sample of (path, repr(exc))
+        "errors_n": 0,
+    }
+
+
+def _stats_append(stats: dict, key: str, value) -> None:
+    lst = stats.get(key)
+    if isinstance(lst, list) and len(lst) < _STATS_LIST_CAP:
+        lst.append(value)
+
+
+def safe_walk(
+    root,
+    *,
+    prune: Optional[Iterable] = None,
+    extra_prune: Iterable = (),
+    shallow: Optional[Iterable] = None,
+    max_depth: Optional[int] = None,
+    on_error: Optional[Callable] = None,
+    stats: Optional[dict] = None,
+    catalog: Optional[dict] = None,
+) -> Iterator:
+    """os.walk() replacement that survives the CSNL NAS.
+
+    Yields ``(dirpath, dirnames, filenames)`` top-down, exactly like os.walk,
+    with three non-negotiable guarantees (measured in batch02/N6-2):
+
+      1. **Symlinks are never followed and never reported as directories.**
+         The share root contains 'CSNL_new-1' -> /Volumes/CSNL_new-1; any
+         walker that follows it recurses forever over 86TiB. This is
+         STRUCTURAL (an unnamed loop symlink is caught too), not just the
+         name prune. A symlink whose target is a regular file is still
+         reported in `filenames` — reading it cannot recurse.
+      2. **Prune set** — `nas_prune_names()` (built-in floor UNION the
+         catalog's walk_rules.never_descend) is dropped from `dirnames`
+         before yielding, so both recycle-bin shadow copies and the EACCES
+         'Temp_188_BRL' subtree stay out of every count.
+      3. **Unreadable directories are skipped, never fatal.** PermissionError
+         (Temp_188_BRL is EACCES even as `csnl`) and any other OSError are
+         recorded in `stats` / passed to `on_error` and the walk continues.
+
+    Names are yielded RAW (i.e. possibly NFD) so `os.path.join(dirpath, name)`
+    stays openable; matching against the prune/shallow sets is NFC-aware
+    internally, so a catalog entry like 'PACS설치 파일' matches its NFD
+    on-disk form. Callers doing their own name matching must use nfc().
+
+    Args:
+      root:        directory to walk (str | Path). Never hardcode a /Volumes
+                   name — resolve the mount at runtime (catalog mount.resolve_rule).
+      prune:       override the prune set entirely (default: nas_prune_names()).
+      extra_prune: names to prune IN ADDITION to `prune`.
+      shallow:     names to list but not recurse into (default:
+                   nas_shallow_names(); pass () to disable). A shallow dir IS
+                   yielded — its children are named but never visited, so a
+                   caller must not re-walk that tuple's `dirnames` itself.
+      max_depth:   None = unlimited. 0 = root only; 1 = root + its children.
+      on_error:    called with the OSError for each unreadable directory.
+      stats:       dict updated in place (see new_walk_stats()).
+      catalog:     pre-loaded catalog dict (default: load_nas_catalog()).
+
+    There is deliberately NO follow_symlinks argument: enabling it is the bug.
+
+    Like os.walk, mutating the yielded `dirnames` list in place prunes the
+    corresponding subtrees.
+    """
+    if catalog is None:
+        catalog = load_nas_catalog()
+    prune_src = nas_prune_names(catalog) if prune is None else prune
+    prune_set = frozenset(nfc(n) for n in prune_src) | frozenset(nfc(n) for n in extra_prune)
+    shallow_src = nas_shallow_names(catalog) if shallow is None else shallow
+    shallow_set = frozenset(nfc(n) for n in shallow_src)
+
+    st = stats if isinstance(stats, dict) else None
+    if st is not None:
+        for k, v in new_walk_stats().items():
+            st.setdefault(k, v)
+
+    def _err(path: str, exc: BaseException) -> None:
+        if st is not None:
+            st["errors_n"] = st.get("errors_n", 0) + 1
+            _stats_append(st, "errors", (path, repr(exc)))
+        if on_error is not None:
+            try:
+                on_error(exc)
+            except Exception:      # a broken callback must not kill the walk
+                pass
+
+    # (path, depth, stop_after) — LIFO; stop_after marks a shallow directory
+    # that is yielded but whose children are never visited.
+    stack = [(os.fspath(root), 0, False)]
+    while stack:
+        dirpath, depth, stop_after = stack.pop()
+        try:
+            with os.scandir(dirpath) as it:
+                entries = list(it)
+        except OSError as exc:          # PermissionError / FileNotFound / ENOTDIR / stale mount
+            _err(dirpath, exc)
+            continue
+
+        dirnames: list = []
+        filenames: list = []
+        for entry in entries:
+            name = entry.name
+            try:
+                is_link = entry.is_symlink()
+            except OSError as exc:      # unreadable entry -> treat as opaque, skip
+                _err(os.path.join(dirpath, name), exc)
+                continue
+            if is_link:
+                # NEVER descend a symlink (guarantee 1). Keep it only if it
+                # points at a regular file.
+                if st is not None:
+                    st["symlinks_skipped_n"] = st.get("symlinks_skipped_n", 0) + 1
+                    _stats_append(st, "symlinks_skipped", os.path.join(dirpath, name))
+                try:
+                    if entry.is_file():          # follows the link (one stat, no recursion)
+                        filenames.append(name)
+                except OSError:
+                    pass
+                continue
+            try:
+                is_dir = entry.is_dir(follow_symlinks=False)
+            except OSError as exc:
+                _err(os.path.join(dirpath, name), exc)
+                continue
+            if is_dir:
+                key = nfc(name)
+                if key in prune_set:
+                    if st is not None:
+                        st["pruned"][key] = st["pruned"].get(key, 0) + 1
+                    continue
+                dirnames.append(name)
+            else:
+                filenames.append(name)
+
+        if st is not None:
+            st["dirs_yielded"] = st.get("dirs_yielded", 0) + 1
+            st["files_seen"] = st.get("files_seen", 0) + len(filenames)
+
+        yield dirpath, dirnames, filenames
+
+        if stop_after:
+            continue
+        if max_depth is not None and depth >= max_depth:
+            continue
+        # Read dirnames AFTER the yield so in-place caller pruning is honoured
+        # (os.walk semantics). Push reversed so the walk order is stable and
+        # matches the listing order.
+        for name in reversed(dirnames):
+            key = nfc(name)
+            if key in shallow_set:
+                if st is not None:
+                    st["shallow_stopped"][key] = st["shallow_stopped"].get(key, 0) + 1
+                stack.append((os.path.join(dirpath, name), depth + 1, True))
+                continue
+            stack.append((os.path.join(dirpath, name), depth + 1, False))

@@ -1,0 +1,1014 @@
+{
+  "_doc": "P34 NAS metadata catalog — OBSERVED reality recorded as DATA, not hardcoded in code.",
+  "_principle": [
+    "Operator directive 2026-07-21: do NOT over-hardcode / over-hard-parse. Rigid regexes make real",
+    "material unfindable because the lab's naming is inconsistent. Instead: record what is ACTUALLY",
+    "observed (patterns + counterexamples + samples + coverage) here, and let code match tolerantly,",
+    "guided by this catalog. A new convention should be a catalog edit, never a code change.",
+    "Never hardcode a /Volumes/... path: the volume name depends on mount order (resolve at runtime)."
+  ],
+  "_key_convention": "Keys beginning with '_' are documentation for humans. Consumers MUST skip them when iterating (e.g. `for init, rec in catalog['initials'].items() if not init.startswith('_')`).",
+  "_schema": "config/nas_catalog.schema.json",
+  "version": 1,
+  "measured_at": "2026-07-22",
+  "confidence_levels": {
+    "verified": "re-measured directly against the live share on `measured_at` by the catalog author (F3-catalog).",
+    "sampled": "measured by a batch02 explorer on 2026-07-22 and cited below; not independently re-measured here. Treat counts as accurate ±small drift.",
+    "assumed": "inferred from a single observation, a document, or reasoning. Do NOT build a hard gate on these."
+  },
+
+  "evidence": {
+    "_doc": "Where each block of this catalog comes from. Read these before editing anything here.",
+    "batch02_reports": {
+      "N1-paperblitz": "state/archive/_explore/batch02/N1-paperblitz.md — GRM/PaperBlitz.{MD,json}, per-presenter deck counts, bundled-era attribution, rationale-text corpus",
+      "N2-grm": "state/archive/_explore/batch02/N2-grm.md — /GRM tree audit, classify() deviation rate, year-folder drift, GRM_magazine",
+      "N3-mm": "state/archive/_explore/batch02/N3-mm.md — /MM per-person filename conventions, measured failure of the yymmdd-substring rule",
+      "N4-memory": "state/archive/_explore/batch02/N4-memory.md — /Memory structured tree, MetaData registry, per-researcher Context/ reading lists",
+      "N5-cwll": "state/archive/_explore/batch02/N5-cwll.md — /Memory/CWLL weekly letters, initial-alias adjudication, citations_log mis-resolution",
+      "N6-map": "state/archive/_explore/batch02/N6-map.md — share-wide breadth map, walker hazards, NFD finding"
+    },
+    "reverified_here": [
+      "share root entry list + self-symlink target",
+      "MM/: folder set, per-person date-token form counts, meeting-day counts, lock stubs, extensions, literal 'MM_yymmdd.pptx' glob = 0",
+      "GRM/: absence of GRM/2025, GRM/2026 folder count + ^\\d{8}$ conformance, GRM Archive per-year conventions, nested 'Paper Blitz/' subdir count, GRM_magazine listing",
+      "GRM/2026: extension histogram, ~$ lock stub count, dotfile count, the one directory-entry, PB-token file list and how many carry an initial",
+      "PaperBlitz.json: totals, any-position vs strict-prefix attribution counts, the published contributors block, 2026 session source_files",
+      "Memory/Papers: entry count, NFD count, ASCII-regex conformance before vs after NFC",
+      "Memory/GRM_archive/_by_presenter: directory name list"
+    ]
+  },
+
+  "mount": {
+    "host": "147.47.70.15",
+    "share": "CSNL_new",
+    "protocols_open": ["smb/445", "afp/548"],
+    "resolve_at_runtime": "scripts/weekly/ingest_grm_nas._resolve_nas_base()",
+    "resolve_rule": "Do NOT hardcode a volume name. macOS mounts SMB per-user mode-700; a second mount of the same share gets '-1', a third '-2'. Resolve by probing /Volumes/* for a directory that contains BOTH 'GRM/' and 'MM/'.",
+    "observed_mounts_2026_07_22": [
+      { "device": "//joonoh@147.47.70.15/CSNL_new", "path": "/Volumes/CSNL_new-1", "mounted_by": "csnl", "usable": true },
+      { "device": "//ksemperor97@192.168.2.2/CSNL_new", "path": "/Volumes/CSNL_new", "mounted_by": "sjk", "usable": false, "note": "another user's mount — mode-700, not readable by us. Probing for GRM/+MM/ correctly rejects it." }
+    ],
+    "capacity": { "total": "140Ti", "used": "86Ti", "pct": 62 },
+    "auth_note": "ONE attempt only; the NAS auto-bans repeated logins. Never re-auth or re-mount from an agent. If no /Volumes entry qualifies, FAIL LOUDLY — do not try to mount.",
+    "concurrency_note": "Max ~3 concurrent NAS readers. Prefer one sequential pass; sample to confirm rather than re-crawling.",
+    "confidence": "verified"
+  },
+
+  "unicode": {
+    "_doc": "The single most common silent-miss class on this share.",
+    "storage_form": "NFD (decomposed)",
+    "rule": "NFC-normalise BOTH sides before any filename comparison, regex match, dict key, or DB write. `unicodedata.normalize('NFC', name)`.",
+    "why": "Python's \\w and [^\\W\\d_] exclude combining marks (category Mn), so a NFD 'Á' (A + U+0301) fails an ASCII-ish name regex.",
+    "measured": {
+      "path": "Memory/Papers/",
+      "entries": 4880,
+      "pdf_files": 4868,
+      "non_nfc_names": 99,
+      "regex_conformance_raw": "4775 / 4868 = 98.09%",
+      "regex_conformance_after_nfc": "4865 / 4868 = 99.94%",
+      "regex_used": "^([^\\W\\d_][^\\W\\d]*(?:[-'’][^\\W\\d]+)*)_((?:1[89]|20)\\d{2})_(.+)\\.pdf$  with re.UNICODE",
+      "residual_3": ["Landwehr_2011.pdf (no title)", "Unknown_1996_.pdf (empty title)", "._2010_Older_Animals_Unable_to_Distinguish.pdf (AppleDouble)"]
+    },
+    "examples_nfd": ["Ásgeirsson_2017_...pdf", "ÅKERSTEDT_2005_...pdf", "Barabási_2012_The_network_takeover_v2.pdf", "Bänziger", "Başar", "Brückner", "deCheveigné", "Chládková", "Dähne", "Darquié"],
+    "also_applies_to": ["Korean filenames (special_GRM_정새미_2026.04.08.pdf, JHR중견연차보고서2026.pdf, paper blitz_정하옴_0702.pptx)", "every other subtree, not just Memory/Papers"],
+    "confidence": "verified"
+  },
+
+  "walk_rules": {
+    "_doc": "Non-negotiable. Three of these will hang or double-count an unguarded walker; one raises.",
+    "follow_symlinks": false,
+    "normalize": "NFC",
+    "never_descend": [
+      { "name": "CSNL_new-1", "why": "SELF-REFERENTIAL SYMLINK at share root -> /Volumes/CSNL_new-1. Any followed walk recurses forever.", "confidence": "verified" },
+      { "name": "._CSNL_new-1", "why": "AppleDouble sidecar for the symlink", "confidence": "verified" },
+      { "name": "#recycle", "why": "Synology recycle bin — a full SHADOW COPY of the tree (649, GRM, MM, Memory, Server, ...). Doubles every count.", "confidence": "verified" },
+      { "name": "@Recycle", "why": "QNAP recycle bin — second shadow copy (GRM, Grant, Server, people, results, zz.nii 424MB)", "confidence": "verified" },
+      { "name": ".Trashes", "why": "macOS trash", "confidence": "verified" },
+      { "name": ".AppleDB", "why": "SMB/AFP metadata", "confidence": "verified" },
+      { "name": ".TemporaryItems", "why": "macOS scratch", "confidence": "verified" },
+      { "name": ".@upload_cache", "why": "Synology upload scratch", "confidence": "verified" },
+      { "name": "Temp_188_BRL", "why": "EACCES even as user `csnl` — an unguarded walk raises PermissionError and aborts", "confidence": "sampled", "evidence": "N6-map §1" }
+    ],
+    "never_walk_deep": {
+      "_doc": "Directory names may be listed at depth 1; do NOT recurse (raw imaging, tens of thousands of DICOM files).",
+      "names": ["fMRI_DICOM", "fMRI_DICOM_USB", "SNUBIC", "Skope_SNUBIC"],
+      "confidence": "verified"
+    },
+    "os_walk_hint": "os.walk(base, followlinks=False) then `dirs[:] = [d for d in dirs if d not in PRUNE]`, and wrap iteration in try/OSError so an EACCES subtree warns instead of aborting.",
+    "_share_root_entries_note": "The list below is NFC-normalised (as every string in this catalog is). 'PACS설치 파일' is stored NFD on the share — comparing it raw against os.listdir() FAILS. This entry is itself a live demonstration of unicode.rule: NFC-normalise both sides.",
+    "share_root_entries_2026_07_22": ["#recycle", ".@upload_cache", ".AppleDB", ".DS_Store", ".TemporaryItems", ".Trashes", "._CSNL_new-1", "649", "@Recycle", "AI_workspace", "BCS_Events", "CSNL_new-1", "GPU", "GRM", "Grant", "MM", "MRI_Tutorial_bySK", "Memory", "PACS설치 파일", "Photo", "SNUBIC", "Server", "Server_191", "Skope_SNUBIC", "Temp_188_BRL", "Untitled.pdf", "fMRI_DICOM", "fMRI_DICOM_USB", "group-volume", "people"],
+    "confidence": "verified"
+  },
+
+  "ignore_rules": {
+    "_doc": "What is NOT material, regardless of directory. Consumers must apply all three before counting or reporting a gap.",
+    "lock_stubs": {
+      "pattern_prefix": "~$",
+      "meaning": "Microsoft Office lock/owner stub written while a deck is open. Exactly 165 bytes. Presence does NOT mean the deck was saved.",
+      "measured": { "MM/JOP": 8, "GRM/2026 (all 26 day-folders)": 12 },
+      "examples": ["~$MM260709_JOP.pptx", "~$Paper Blitz_0107.pptx", "~$BYL_GRM(26.05.06).pptx"],
+      "orphan_hazard": "~$BYL_GRM(26.05.06).pptx survives while the real BYL_GRM(26.05.06).pptx no longer exists on the share — a substring rule would report the deck 'present'.",
+      "confidence": "verified"
+    },
+    "dotfiles": {
+      "pattern_prefix": ".",
+      "measured": { "MM/ + MM/JOP": ".DS_Store x2", "GRM/2026": 4 },
+      "examples": [".DS_Store", "._2010_Older_Animals_....pdf (AppleDouble)", "Thumbs.db"],
+      "note": "Also treat AppleDouble '._<name>' as non-material even though it does not start with a bare dot in every listing context; and 'Thumbs.db' (Windows) which starts with neither.",
+      "extra_names": ["Thumbs.db", "desktop.ini", ".DS_Store"],
+      "confidence": "verified"
+    },
+    "extension_allow_list": {
+      "_doc": "Presentation/document material. Anything else is not a meeting deck.",
+      "allow": [".pptx", ".ppt", ".pdf", ".key", ".docx"],
+      "why_key": ".key (Keynote) is real and single-file on this SMB share — SK and JSL use it; entry.is_file() behaves correctly (SK_260708.key = 133 MB regular file, NOT a macOS package).",
+      "why_docx": "MSY files proposals as .docx inside MM/MSY/.",
+      "observed_outside_allow_list": {
+        "GRM/2026": { ".hwpx": 1, "_note": "JHR중견연차보고서2026.hwpx — a grant annual report (Hangul). Deliberately excluded; if a 'report' kind is ever added, widen there, not here." },
+        "GRM Archive + 2026_GRM": [".mp4", ".m4a", ".zoom", ".conf", ".tag"],
+        "misc": [".rdf", ".bib", ".csv", ".txt", ".json", ".md", ".exe", ".neprot", ".nii", ".hwpx"]
+      },
+      "measured_extension_histogram_GRM_2026": { ".pptx": 39, ".pdf": 31, ".key": 8, ".docx": 1, ".hwpx": 1 },
+      "confidence": "verified"
+    },
+    "directories_are_not_files": {
+      "rule": "A directory entry inside a date folder must be RECORDED (with reason) rather than silently skipped — it can be a presenter's slide bundle.",
+      "observed": ["GRM/2026/20260318/JSL_260317  (JSL's bundle; a flat iterdir + is_file() guard drops it with no trace)"],
+      "confidence": "verified"
+    },
+    "not_material_but_valuable": {
+      "_doc": "Files that fail the 'is it a deck?' test but are real signal. Do not classify as material; do not discard either.",
+      "paper_pdfs_in_meeting_folders": {
+        "zotero_export_patterns": ["<FirstAuthor> 등 - <Year> - <Title truncated>.pdf", "<Author> et al. - <Year> - <Title truncated>.pdf"],
+        "examples": ["GRM/2026/20260422/Gu 등 - 2025 - Attractor dynamics of working memory explain ….pdf", "MM/BYL/TaylorBays_JNeurosci2018_StimulusSpecificBIasWM.pdf"],
+        "meaning": "an observed read — same truth class as archive_responses.already_read",
+        "confidence": "verified"
+      },
+      "manuscripts": { "examples": ["GRM/2026/20260422/KimEtal_Merged_20Apr2026.pdf"], "confidence": "sampled", "evidence": "N2-grm §2a" }
+    }
+  },
+
+  "matching_policy": {
+    "_doc": "How code should USE this catalog. The point of the catalog is that these are knobs in data, not branches in code.",
+    "order": [
+      "1. NFC-normalise the filename.",
+      "2. Apply ignore_rules (lock stub / dotfile / extension allow-list).",
+      "3. Tokenise the stem on [_\\-. ()]+ — do NOT anchor a regex to ^ or $. Both token orders occur ('260715_JOP' and 'JOP_260701').",
+      "4. Find a date token by trying directories.<x>.date_token_forms IN ORDER (most specific first) and stop at the first form that yields any date — otherwise '2025.08.14' is re-read as YY.MM.DD.",
+      "5. Find an initial token by whole-token match against initials{} (aliases included), case-insensitively; also try korean_name and romanised_name.",
+      "6. Prefer the FOLDER date over the filename date where both exist — filename yy is frequently wrong (250225_AIWorkshop.pptx sits in 20260225; JSL_240422.pptx in 20260422)."
+    ],
+    "never": [
+      "Never require a leading-initial prefix — it loses SK 27→1, JSL 24→8, SMJ 25→7 (measured on PaperBlitz source_files).",
+      "Never require an anchored `$` after the date — 'JOP_260325_part1.pptx' and 'MSY_260422_MSY.key' both break.",
+      "Never match a kind token as a substring — 'AIGRM' contains 'grm' and manufactures presenter_name='AIGRM'.",
+      "Never coin a presenter from an unknown token — 'special', 'Special', 'AIGRM' all became fake presenters this way.",
+      "Never treat 'no extractable text / no filename token' as 'no material'."
+    ],
+    "attribution_measured": {
+      "corpus": "GRM/PaperBlitz.json source_files (n=267)",
+      "strict_leading_prefix ^([A-Z]{2,4})[_\\-\\s]": "108 / 267 = 40%",
+      "any_position_whole_token": "209 / 267 = 78%",
+      "remainder": "58 — genuinely lab-wide bundled decks named like '250924.pptx' / 'Paper Blitz (1).pptx'",
+      "confidence": "verified"
+    },
+    "noise_tokens": {
+      "_doc": "Tokens that must NEVER become a presenter. Extend this list, not the code.",
+      "tokens": ["PB", "PAPERBLITZ", "BLITZ", "PAPER", "GRM", "AIGRM", "AI", "MM", "RM", "SPECIAL", "ABSTRACT", "PART", "PART1", "PART2", "PART3", "MERGED", "WORKSHOP", "RAG", "MCP", "DEEPPREP", "NOTEBOOKLM", "MEETING", "PROPOSAL", "RESEARCH", "RESEARCHMEETING", "POST", "UPDATED", "FINAL", "CSNL", "NAME", "THUMBS", "PB250716", "연차보고서", "중견"],
+      "note": "'RAG' also appears as a _by_presenter directory name — it is a parser artifact there too, not a person.",
+      "confidence": "sampled",
+      "evidence": "N2-grm §2b/§8, N5-cwll §2.3"
+    }
+  },
+
+  "initials": {
+    "_shape": {
+      "<INIT>": {
+        "full_name": "str",
+        "korean_name": "str|null",
+        "status": "active|senior|alumni|pi|unknown",
+        "rec_target": "bool — is this person a paper-recommendation target?",
+        "in_repo_registry": "bool — present in config/researchers.yaml",
+        "aliases": ["tokens actually seen on disk / calendar / slides"],
+        "do_not_merge": ["initials that LOOK like an alias of this one but are a DIFFERENT PERSON"],
+        "dirs": { "mm": "MM/<INIT>", "memory": "Memory/<INIT>", "people": "people/<INIT>", "by_presenter": "Memory/GRM_archive/_by_presenter/<INIT>" },
+        "dirs_absent": ["subtrees this person legitimately has none of"],
+        "observed_filename_tokens": ["how THIS person's files actually look"],
+        "counts": { "<stream>": 0 },
+        "evidence": "where observed",
+        "confidence": "verified|sampled|assumed"
+      }
+    },
+
+    "_alias_policy": {
+      "_doc": "READ THIS BEFORE MERGING ANY TWO INITIALS. Merging attributes one person's reading to another and permanently poisons archive_responses / fingerprints.",
+      "default": "DO NOT MERGE. Two initials are the same person only if listed in this catalog's `aliases`.",
+      "adjudication_method": "Co-occurrence in the same CWLL weekly letter proves two initials are different people. Disjoint contiguous date ranges + agreement across a second independent stream (Memory/GRM_archive/_by_presenter) supports a merge.",
+      "merge_allowed": [
+        { "from": "LBY", "to": "BYL", "why": "0 co-occurrence in any CWLL letter; date ranges contiguous and disjoint (LBY 2024-10→2025-02, BYL 2025-02-26→2026-03); _by_presenter has BYL and no LBY; docs/CSNL-INFO.md independently records BYL's GRM-archive alias 'LBY_'.", "confidence": "sampled", "evidence": "N5-cwll §5" },
+        { "from": "MinJin", "to": "MJC", "why": "GRM_magazine_20260527.pdf renders '발표 MJC … 최민진'; MinJin_260526.pdf is the same week's deck.", "confidence": "sampled", "evidence": "N2-grm §2c/§6" },
+        { "from": "RJH", "to": "JHR", "why": "same person 류주형; filenames use JHR, GRM_magazine_20260617.pdf renders RJH (transposed).", "confidence": "sampled", "evidence": "N2-grm §2c/§6" },
+        { "from": "정새미", "to": "SMJ", "why": "Korean name in filename (special_GRM_정새미_2026.04.08.pdf) matches config/researchers.yaml SMJ 정새미.", "confidence": "verified" },
+        { "from": "박준오", "to": "JOP", "why": "slides sign with the Korean name; researchers.yaml JOP 박준오.", "confidence": "sampled", "evidence": "N1-paperblitz §5b, N4-memory §2" },
+        { "from": "정하옴", "to": "HOJ", "why": "paper blitz_정하옴_0702.pptx alongside PB_HOJ_*.pptx", "confidence": "sampled", "evidence": "N1-paperblitz §7.1" },
+        { "from": "황현주", "to": "HJH", "why": "paper blitz_황현주_0702.pptx alongside PB_HJH_250716.pptx", "confidence": "sampled", "evidence": "N1-paperblitz §7.1" },
+        { "from": "KY", "to": "SK", "why": "Memory/MetaData/registry.json name_mapping: 'SK = 김성제 / Sungje Kim / KY(old) / \"Jey Kim\"(Slack)'.", "confidence": "sampled", "evidence": "N4-memory §1" }
+      ],
+      "do_not_merge": [
+        { "pair": ["MS", "MSY"], "verdict": "DIFFERENT PEOPLE", "why": "date ranges OVERLAP (MS 2023-05→2025-07, MSY 2024-12→2026-01); Memory/GRM_archive/_by_presenter has BOTH an MS/ and an MSY/ directory. MSY = 여민수 is a current rec target; MS is not. Merging would attribute an alumnus's reading to MSY — the researcher whose profile is already the thinnest.", "confidence": "verified", "evidence": "N5-cwll §5 + _by_presenter dir list re-verified 2026-07-22" },
+        { "pair": ["HL", "BHL"], "verdict": "DIFFERENT PEOPLE", "why": "HL 2020-12→2023-12 (alumnus), BHL 2025-07→2026-01 (current). _by_presenter has HL/ (26 files) and NO BHL/. Merging would give BHL an alumnus's 46 CWLL entries.", "confidence": "verified", "evidence": "N5-cwll §5 + _by_presenter dir list re-verified 2026-07-22" },
+        { "pair": ["BYL", "BHL"], "verdict": "DIFFERENT PEOPLE", "why": "이보연 Boyun vs 이보현 Bohyun. Memory/MetaData/registry.json name_mapping states verbatim 'NOT same as BYL'. One-character difference, both active rec targets — the worst confusion on the share.", "confidence": "sampled", "evidence": "N4-memory §1" },
+        { "pair": ["JsL", "JWL"], "verdict": "DIFFERENT PEOPLE", "why": "co-occur in 46 of the same CWLL letters — co-occurrence is proof.", "confidence": "sampled", "evidence": "N5-cwll §5" },
+        { "pair": ["JsL", "JSL"], "verdict": "UNRESOLVED — leave separate", "why": "0 co-occurrence, ranges nearly contiguous (JsL →2023-12, JSL 2023-11→). Neither is a rec target, so the cost of leaving them split is zero and the cost of a wrong merge is not.", "confidence": "assumed", "evidence": "N5-cwll §5" },
+        { "pair": ["LS", "SHL"], "verdict": "PROBABLE SAME (the PI) — but do NOT auto-merge", "why": "'CSNL Weekly LS Letter' + _by_presenter/LS/ (33 files) both point at the PI 이상훈, whose initial elsewhere is SHL. Neither is a rec target; no consumer needs the merge.", "confidence": "assumed", "evidence": "N5-cwll §5, N6-map §2, N2-grm §6" }
+      ],
+      "not_people": {
+        "_doc": "Directory/token names produced by Memory/GRM_archive/_tools/parser.py mis-extracting Zoom recording filenames. NEVER create a person, a queue, or a fingerprint for these.",
+        "tokens": ["EDM", "QE", "RAG", "DHY", "YDH", "HJ", "JS"],
+        "caution": "EVA/Eva, JA and Josh look like the same class but are NOT — they appear in the CWLL 'Name' column as real recurring contributors (Eva n=60, JA n=61, Josh). English given names / initials used in place of a 3-letter initial. They need a name→INIT row before use, but they are people.",
+        "confidence": "sampled",
+        "evidence": "N6-map §3.2 (artifact claim) reconciled against N5-cwll §3 (Eva/JA/Josh are real)"
+      }
+    },
+
+    "_registry_gap_summary": {
+      "_doc": "The operator directive's core case: initials seen on the share that the repo registry does not know.",
+      "in_researchers_yaml": ["JOP", "BYL", "MSY", "SMJ", "JYK", "BHL", "SYJ", "SK", "JSL"],
+      "recurring_on_share_but_absent_from_researchers_yaml": ["MJC", "JHR", "HJH", "HOJ", "SHP", "HYL", "SHL"],
+      "impact": "A registry-gated ingest silently drops MJC — the 3rd-most-active PaperBlitz presenter (24 of 267 source files) — plus 8 JHR, 3 HJH, 2 HOJ, 1 SHP files, and manufactures NULL/junk presenters for them.",
+      "confidence": "verified"
+    },
+
+    "BHL": {
+      "full_name": "Bohyun Lee",
+      "korean_name": "이보현",
+      "status": "active",
+      "rec_target": true,
+      "in_repo_registry": true,
+      "aliases": ["이보현"],
+      "do_not_merge": ["HL", "BYL"],
+      "dirs": { "memory": "Memory/BHL/DistractorEffect", "people": null, "by_presenter": null, "mm": null },
+      "dirs_absent": ["MM/BHL — genuinely does not exist; an MM calendar event for BHL is a TRUE gap, not a rule bug", "Memory/GRM_archive/_by_presenter/BHL", "Memory/MetaData/members/BHL.json"],
+      "observed_filename_tokens": ["PB_250716_BHL.pptx", "PB_250917_BHL.pptx", "PB_250924_BHL"],
+      "counts": { "pb_source_files": 7, "cwll_entries": 18, "context_pdfs": 7 },
+      "notes": ["Shares a paradigm with SYJ: Memory/BHL/DistractorEffect/template.json and Memory/SYJ/Distractor_Effect/template.json are BYTE-IDENTICAL (604 B). A naive ingest creates duplicate projects and identical aims for two people.", "researchers.yaml treats SYJ+BHL as ONE recommendation unit."],
+      "evidence": "N1 §3, N5 §3, N4 §2/§3",
+      "confidence": "sampled"
+    },
+    "BYL": {
+      "full_name": "Boyun Lee",
+      "korean_name": "이보연",
+      "status": "active",
+      "rec_target": true,
+      "in_repo_registry": true,
+      "aliases": ["LBY", "이보연"],
+      "do_not_merge": ["BHL"],
+      "dirs": { "mm": "MM/BYL", "memory": "Memory/BYL/biasVar", "people": "people/BYL", "by_presenter": "Memory/GRM_archive/_by_presenter/BYL" },
+      "dirs_absent": [],
+      "observed_filename_tokens": ["BYL_ResearchMeeting(26.02.05).pptx", "BYL_ResearchMeeting(24.12.26) 보완.pptx", "BYL_ResearchMeeting(25.02.28) (1).pptx", "BYL_ NiStocker(2025.09.24).pptx", "BYL_TaylorBays2018(...)", "BYL_ Sims2015(2025.07.16).pptx", "BYL_260408.pdf", "BYL_260506.pptx", "BYL_specialGRM.pptx", "BYL_grm_250108.pptx"],
+      "counts": { "mm_files": 53, "mm_meeting_days": 33, "pb_source_files": 28, "cwll_entries": "36 (+10 as LBY)", "context_pdfs": 88, "by_presenter_files": 2 },
+      "notes": ["Only researcher whose PB filenames carry the paper identity essentially completely (28/28, author-year form).", "Note the literal space after the underscore in 'BYL_ NiStocker' / 'BYL_ vanDenBerg et al' — tokenise, do not slice.", "MM/BYL/TaylorBays_JNeurosci2018_StimulusSpecificBIasWM.pdf is a PAPER parked in the MM folder, not a deck — an observed read."],
+      "evidence": "N3 §2 (re-verified), N1 §3/§4a, N5 §3/§5, N4 §3",
+      "confidence": "verified"
+    },
+    "JOP": {
+      "full_name": "Joonoh Park",
+      "korean_name": "박준오",
+      "status": "active",
+      "rec_target": true,
+      "in_repo_registry": true,
+      "aliases": ["박준오"],
+      "do_not_merge": [],
+      "dirs": { "mm": "MM/JOP", "memory": "Memory/JOP/{GranNMDS,GranRDT,RingRepSca,Time,Time2Dist,Uncertainty,tDCS,_shared}", "people": "people/JOP", "by_presenter": "Memory/GRM_archive/_by_presenter/JOP" },
+      "dirs_absent": [],
+      "observed_filename_tokens": ["MM260714_JOP.pptx", "MM250113_JOP_post.pdf", "MM_2401101_JOP.pptx (7-digit typo)", "RM2025_JOP.pptx", "PB250716_JOP.pptx", "JOP_Whitney2014.pptx", "JOP_PB260429.pdf", "JOP_AI_Blitz_260204.pdf", "260715_JOP.pptx", "JOP_260325_part1.pptx", "JOP_260325_Part3.pptx", "JOP_260408.pdf"],
+      "counts": { "mm_files": 53, "mm_material_files": 44, "mm_lock_stubs": 8, "mm_meeting_days": 32, "pb_source_files": 24, "cwll_entries": 16, "context_pdfs": 8 },
+      "notes": ["Only person whose MM naming matches the legacy documented rule shape (MM{yymmdd}_{INIT}), which is why the broken rule was never noticed.", "Owns all 8 MM lock stubs on the share.", "Mixed case in 'part1'/'Part3' — match case-insensitively.", "Richest Memory/ tree: README.md + template_*.json + kb_*.json per project, with research_flow lineage."],
+      "evidence": "N3 §2 (re-verified), N1 §3, N2 §2a, N4 §2",
+      "confidence": "verified"
+    },
+    "JYK": {
+      "full_name": "Jungye Kim",
+      "korean_name": "김정예",
+      "status": "active",
+      "rec_target": true,
+      "in_repo_registry": true,
+      "aliases": [],
+      "do_not_merge": [],
+      "dirs": { "mm": "MM/JYK", "memory": "Memory/JYK/RNN", "people": "people/JYK", "by_presenter": "Memory/GRM_archive/_by_presenter/JYK" },
+      "dirs_absent": [],
+      "observed_filename_tokens": ["260106_anchor (1).pptx", "260223_sigbase (1).pptx", "260327_ssb_traj.pptx", "260331_anchorrev.pptx", "260512_loss.pptx", "JYK_DeepPrep.pptx", "260408_중견_JYK.pptx", "JYK_260701.pdf"],
+      "counts": { "mm_files": 6, "mm_meeting_days": 6, "pb_source_files": 1, "cwll_entries": 38, "context_pdfs": 4, "by_presenter_files": 2 },
+      "notes": ["MM filename slugs ARE her project vocabulary (anchor / sigbase / ssb_traj / anchorrev / loss) — better ground truth than the frozen registry label 'RNN'.", "Exactly 1 PaperBlitz deck but 38 CWLL entries — the two sources cover each other's holes; a PB-only ingest gets nothing for the researcher with the worst measured queue precision.", "Memory/JYK/RNN/template.json is INVALID JSON (researcher-edited 2026-06-04) — any ingester must tolerate and report, not crash."],
+      "evidence": "N3 §2/§7 (re-verified), N1 §3, N5 §3, N4 §2/§8",
+      "confidence": "verified"
+    },
+    "MSY": {
+      "full_name": "Minsu Yeo",
+      "korean_name": "여민수",
+      "status": "active",
+      "rec_target": true,
+      "in_repo_registry": true,
+      "aliases": [],
+      "do_not_merge": ["MS"],
+      "dirs": { "mm": "MM/MSY", "memory": "Memory/MSY (FLAT — Code/Context/Data/Results directly under the initial, no project level)", "people": "people/MSY", "by_presenter": "Memory/GRM_archive/_by_presenter/MSY" },
+      "dirs_absent": [],
+      "observed_filename_tokens": ["240919 meeting.pptx", "240927 proposal.docx", "260506 meeting_catmag.pptx", "260320 ... FaMo ...", "MSY_PB_250716.pptx", "MSY_PB_250924.pptx", "MSY_260107.pptx", "MSY_260422_MSY.key", "260408 GRM_MSY.pptx"],
+      "counts": { "mm_files": 49, "mm_meeting_days": 43, "pb_source_files": 24, "cwll_entries": 43, "context_pdfs": 21, "by_presenter_files": 2 },
+      "notes": ["MM/MSY is a MIXED workspace, not MM-only: it also holds 7 GRM decks + proposals/instructions/results/stimuli. 49 files → 43 dated days ≠ 43 milestone meetings. Do not treat the file count as an MM completeness count.", "Space-separated date token ('240919 meeting.pptx') — a '_'-only tokeniser misses every one.", "Never interviewed; the repo knows MSY only by code-module names. Memory/ + Memory/HSL_MSY/ can bootstrap the profile without an interview.", "MS is a DIFFERENT PERSON (see _alias_policy.do_not_merge)."],
+      "evidence": "N3 §2/§5 (re-verified), N1 §3, N5 §3/§5, N4 §4",
+      "confidence": "verified"
+    },
+    "SMJ": {
+      "full_name": "Saemi Jung",
+      "korean_name": "정새미",
+      "status": "active",
+      "rec_target": true,
+      "in_repo_registry": true,
+      "aliases": ["정새미", "새미 정"],
+      "do_not_merge": [],
+      "dirs": { "mm": "MM/SMJ", "memory": "Memory/SMJ", "people": "people/SMJ", "by_presenter": "Memory/GRM_archive/_by_presenter/SMJ" },
+      "dirs_absent": [],
+      "observed_filename_tokens": ["Research Meeting - 260224.pptx", "Research Meeting_09_19_2025.pptx", "Research Meeting_2025.08.14.pptx", "Research Meeting_SMJ_2026.04.17.pptx", "Blitz_SMJ_2025.07.16.pptx", "250326_SMJ_Population....pptx", "SMJ_Predictive coding in the visual cortex_ a functional interpretation....pptx", "special_GRM_정새미_2026.04.08.pdf"],
+      "counts": { "mm_files": 7, "mm_meeting_days": 7, "pb_source_files": 25, "cwll_entries": 40, "context_pdfs": 1, "by_presenter_files": 4 },
+      "notes": ["THREE mutually incompatible date forms inside one 7-file folder (YYYY.MM.DD x5, MM_DD_YYYY x1, yymmdd x1). The clearest single argument for a form LIST rather than one regex.", "'Research Meeting' contains a space and no initial in most files — the folder is the only attribution.", "Some PB filenames carry the FULL paper title, not an author-year token.", "Korean-name files (special_GRM_정새미_...) resolve for free if code matches korean_name."],
+      "evidence": "N3 §2 (re-verified), N1 §4a, N2 §2b, N5 §3",
+      "confidence": "verified"
+    },
+    "SYJ": {
+      "full_name": "Sooyoung Jo",
+      "korean_name": "조수영",
+      "status": "active",
+      "rec_target": true,
+      "in_repo_registry": true,
+      "aliases": [],
+      "do_not_merge": [],
+      "dirs": { "memory": "Memory/SYJ/{Distractor_Effect,Serial_dependence}", "people": "people/SYJ", "mm": null, "by_presenter": null },
+      "dirs_absent": ["MM/SYJ", "Memory/GRM_archive/_by_presenter/SYJ", "Memory/MetaData/members/SYJ.json"],
+      "observed_filename_tokens": ["PB_SYJ_250716.pptx", "SYJ_250625.pptx", "PB_SYJ_250924"],
+      "counts": { "pb_source_files": 13, "cwll_entries": 4, "context_pdfs": 7 },
+      "notes": ["Missing from docs/CSNL-INFO.md §2 (the list check_materials.py trusts) although present in config/researchers.yaml — so active_people() never resolves SYJ and any SYJ gap prints '명단에 없음'. Registry inconsistency, not a NAS fact.", "Her 7 Context/ PDFs are IDENTICAL to BHL's 7 — shared paradigm, dedupe before treating as two independent positive sets.", "people/SYJ/Read_PB/SYJ_save_later_papers.txt is our OWN archive_responses hand-exported back onto the NAS (46 papers, 2026-07-07) — a stale duplicate that will drift; do not re-ingest it as independent evidence."],
+      "evidence": "N3 §6, N1 §3, N5 §3, N4 §3, N6 §3.4",
+      "confidence": "sampled"
+    },
+    "SK": {
+      "full_name": "Sungje Kim",
+      "korean_name": "김성제",
+      "status": "senior",
+      "rec_target": false,
+      "in_repo_registry": true,
+      "aliases": ["KY", "Jey Kim"],
+      "do_not_merge": [],
+      "dirs": { "mm": "MM/SK", "memory": "Memory/SK/{WMRepresentation_24_updated,Screen_Retinotopy}", "people": "people/SK", "by_presenter": "Memory/GRM_archive/_by_presenter/SK" },
+      "dirs_absent": [],
+      "observed_filename_tokens": ["260529_VSSpos+7T.key", "250716_PaperBlitz_SK_Xu.pptx", "250305_PaperBlitz_SK_V4motorpreparation.pptx", "260506_PaperBlitz_SK_Carricarte2025.pdf", "SK_260318.key", "SK_260422.key", "SK_260708.key"],
+      "counts": { "mm_files": 1, "mm_meeting_days": 1, "pb_source_files": 27, "cwll_entries": 84, "by_presenter_files": 31 },
+      "notes": ["The single worst case for a leading-prefix matcher: PaperBlitz.json's own contributors block reports SK = 1 session; the true count from source_files is 27 (26x undercount), because his files are '{yymmdd}_PaperBlitz_SK_{Topic}'.", "Uses .key (Keynote) almost exclusively — an allow-list without .key loses him entirely.", "Has an MM folder and a 2026-05-29 deck but gets no recommendations (senior).", "Presented GRM 2026-07-08 (magazine)."],
+      "evidence": "N1 §3, N3 §2/§6 (re-verified), N2 §5, N5 §3",
+      "confidence": "verified"
+    },
+    "JSL": {
+      "full_name": "Jaeseob Lim",
+      "korean_name": "임재섭",
+      "status": "senior",
+      "rec_target": false,
+      "in_repo_registry": true,
+      "aliases": [],
+      "do_not_merge": ["JsL"],
+      "dirs": { "memory": "Memory/JSL", "people": "people/JSL", "by_presenter": "Memory/GRM_archive/_by_presenter/JSL", "mm": null },
+      "dirs_absent": ["MM/JSL"],
+      "observed_filename_tokens": ["JSL_Teng and Kravitz - 2019 - Visual working memory directly alters perception.pdf", "250325_JSL.pptx", "PB_JSL_250625.pptx", "JSL_260407.key", "JSL_240422.pptx", "JSL_260317 (a DIRECTORY, not a file)"],
+      "counts": { "pb_source_files": 24, "cwll_entries": 60, "by_presenter_files": 25 },
+      "notes": ["Mentor of the SYJ+BHL unit.", "GRM/2026/20260318/JSL_260317 is a DIRECTORY — the one directory-entry in the whole 2026 tree.", "Filename yy is sometimes a year off (JSL_240422.pptx lives in 20260422); trust the folder date."],
+      "evidence": "N1 §3, N2 §3/§4, N5 §3",
+      "confidence": "verified"
+    },
+    "MJC": {
+      "full_name": "Minjin Choi",
+      "korean_name": "최민진",
+      "status": "active",
+      "rec_target": false,
+      "in_repo_registry": false,
+      "aliases": ["MinJin", "MJ", "최민진"],
+      "do_not_merge": [],
+      "dirs": { "memory": "Memory/MJC (FLAT)", "people": "people/MJC", "by_presenter": "Memory/GRM_archive/_by_presenter/MJC", "mm": null },
+      "dirs_absent": ["MM/MJC"],
+      "observed_filename_tokens": ["MJC_PB250423_Wimmer.pptx", "MJC_SchurginWixtedBrady2020.pdf", "MJC_250716.pptx", "MJC_250716_PB.key", "PB250305_MJC.key", "PB_MJC_250625.key", "MJC_PB_260107.pdf", "MinJin_260526.pdf", "MJC_260407_연차보고서.pdf"],
+      "counts": { "pb_source_files": 24, "cwll_entries": 81, "by_presenter_files": 5 },
+      "notes": ["★ THE headline registry gap: 3rd-most-active PaperBlitz presenter (24 of 267 source files, tied with JOP/MSY) and 81 CWLL entries, yet absent from config/researchers.yaml entirely — so a registry-gated ingest drops all of it and manufactures a NULL/'MinJin' presenter for the rest.", "Presented GRM 2026-05-27 (magazine): VWM bias curve = two components, CANN extension.", "Registry project code disagreement: MetaData/registry.json says 'SeqVWM', docs/CSNL-INFO.md §6 says 'VWM_Contrast'.", "Not currently a recommendation target — ingest as material/summary, do NOT create queue signal, unless the operator promotes."],
+      "evidence": "N1 §3/§7.2, N2 §2c/§6, N5 §3, N6 §4.5",
+      "confidence": "verified"
+    },
+    "JHR": {
+      "full_name": "Juhyoung Ryu",
+      "korean_name": "류주형",
+      "status": "active",
+      "rec_target": false,
+      "in_repo_registry": false,
+      "aliases": ["RJH", "류주형"],
+      "do_not_merge": [],
+      "dirs": { "memory": "Memory/JHR/Psychophysics_PPS", "people": "people/JHR", "by_presenter": "Memory/GRM_archive/_by_presenter/JHR", "mm": null },
+      "dirs_absent": ["MM/JHR"],
+      "observed_filename_tokens": ["JHR_260211.pdf", "JHR_260318.key", "JHR_260422.pdf", "JHR_260617.pdf", "PB_JHR_...", "JHR중견연차보고서2026.pdf", "JHR중견연차보고서2026.hwpx"],
+      "counts": { "pb_source_files": 8, "cwll_entries": 80, "by_presenter_files": 22 },
+      "notes": ["Postdoc. The initials are TRANSPOSED between streams: filenames use JHR, GRM_magazine_20260617.pdf renders RJH. Alias both, pick JHR as canonical (it is what the filesystem uses).", "Korean-name filenames run the initials straight into Hangul with no separator ('JHR중견연차보고서2026.pdf') — a [_\\-. ]+ tokeniser will not split it; match the initial as a prefix run of the NFC-normalised stem too."],
+      "evidence": "N2 §2c/§6, N1 §3, N5 §3",
+      "confidence": "verified"
+    },
+    "HJH": {
+      "full_name": "Hyunju Hwang",
+      "korean_name": "황현주",
+      "status": "unknown",
+      "rec_target": false,
+      "in_repo_registry": false,
+      "aliases": ["황현주"],
+      "do_not_merge": [],
+      "dirs": { "by_presenter": null, "mm": null, "memory": null, "people": null },
+      "dirs_absent": ["MM/HJH", "Memory/GRM_archive/_by_presenter/HJH"],
+      "observed_filename_tokens": ["PB_HJH_250716.pptx", "paper blitz_황현주_0702.pptx"],
+      "counts": { "pb_source_files": 3, "cwll_entries": "3-41 (low-n bucket)" },
+      "notes": ["Recurring PB presenter absent from every repo registry. Korean-name filename form uses a lowercase 'paper blitz_' prefix with a space."],
+      "evidence": "N1 §3/§7.1, N2 §5, N5 §3",
+      "confidence": "verified"
+    },
+    "HOJ": {
+      "full_name": null,
+      "korean_name": "정하옴",
+      "status": "unknown",
+      "rec_target": false,
+      "in_repo_registry": false,
+      "aliases": ["정하옴"],
+      "do_not_merge": [],
+      "dirs": { "by_presenter": null, "mm": null, "memory": null, "people": null },
+      "dirs_absent": ["MM/HOJ", "Memory/GRM_archive/_by_presenter/HOJ"],
+      "observed_filename_tokens": ["Paper blitz_HOJ_250716.pptx", "paper blitz_정하옴_0702.pptx"],
+      "counts": { "pb_source_files": 2 },
+      "notes": ["PaperBlitz.json's own contributors block reports HOJ as absent ('—') while source_files carry 2 — another reason to re-derive attribution from source_files rather than reading contributors."],
+      "evidence": "N1 §3/§7.1, N2 §5",
+      "confidence": "verified"
+    },
+    "SHP": {
+      "full_name": null,
+      "korean_name": null,
+      "status": "unknown",
+      "rec_target": false,
+      "in_repo_registry": false,
+      "aliases": [],
+      "do_not_merge": [],
+      "dirs": {},
+      "dirs_absent": ["MM/SHP", "Memory/GRM_archive/_by_presenter/SHP"],
+      "observed_filename_tokens": ["<INIT>-tagged PaperBlitz deck, 1 file"],
+      "counts": { "pb_source_files": 1 },
+      "notes": ["Single observation. Recorded so the token resolves to a known-unknown person rather than being coined as a junk presenter or dropped."],
+      "evidence": "N1 §3, N2 §5",
+      "confidence": "verified"
+    },
+    "HYL": {
+      "full_name": null,
+      "korean_name": null,
+      "status": "unknown",
+      "rec_target": false,
+      "in_repo_registry": false,
+      "aliases": [],
+      "do_not_merge": ["BHL", "BYL", "HL"],
+      "dirs": {},
+      "dirs_absent": ["everything — no directory anywhere on the share"],
+      "observed_filename_tokens": ["(none — appears only as an in-slide corner label)"],
+      "counts": { "slide_label_runs": 1 },
+      "notes": ["Appears ONLY as a slide-corner initial inside PB_260429.pdf (pages 2-4). Not in researchers.yaml, not in PaperBlitz.json contributors, no filename anywhere. Could be a typo for BHL/HL or a real visitor.", "Recorded specifically so bundled-era label-run detection does not silently map it onto BHL. Leave the segment's presenter NULL until a human adjudicates."],
+      "evidence": "N1 §5c/§7.2",
+      "confidence": "assumed"
+    },
+    "SHL": {
+      "full_name": "Sang-Hun Lee",
+      "korean_name": "이상훈",
+      "status": "pi",
+      "rec_target": false,
+      "in_repo_registry": false,
+      "aliases": ["LS (probable — the 'Weekly LS Letter' author; NOT auto-merged)"],
+      "do_not_merge": [],
+      "dirs": { "by_presenter": "Memory/GRM_archive/_by_presenter/LS (33 files, if LS==SHL)" },
+      "dirs_absent": ["MM/SHL"],
+      "observed_filename_tokens": ["(authors CWLL letters; appears as a 쟁점 attribution initial inside GRM magazines)"],
+      "counts": { "cwll_letters_authored": 237 },
+      "notes": ["PI. Appears as a critique attributor in GRM_magazine 쟁점 sections alongside JSL/SK.", "Memory/CWLL is his 7-year weekly recommendation letter series — the highest-yield per-researcher preference corpus on the share.", "PB/CWLL scheduling is SMJ's operational area and out of this harness's scope (rules/00)."],
+      "evidence": "N2 §6, N5 §1/§5, N6 §2",
+      "confidence": "sampled"
+    },
+    "HL": {
+      "full_name": null,
+      "korean_name": null,
+      "status": "alumni",
+      "rec_target": false,
+      "in_repo_registry": false,
+      "aliases": [],
+      "do_not_merge": ["BHL"],
+      "dirs": { "by_presenter": "Memory/GRM_archive/_by_presenter/HL" },
+      "dirs_absent": ["MM/HL"],
+      "observed_filename_tokens": ["HL_{yymmdd}.{pdf,pptx,key,mp4}"],
+      "counts": { "cwll_entries": 46, "by_presenter_files": 26 },
+      "notes": ["★ DO-NOT-MERGE with BHL. Active 2020-12→2023-12 (alumnus); BHL active 2025-07→. Merging hands an alumnus's 46 CWLL entries to a current rec target."],
+      "evidence": "N5 §5 (re-verified: _by_presenter has HL/ and no BHL/)",
+      "confidence": "verified"
+    },
+    "MS": {
+      "full_name": null,
+      "korean_name": null,
+      "status": "alumni",
+      "rec_target": false,
+      "in_repo_registry": false,
+      "aliases": [],
+      "do_not_merge": ["MSY"],
+      "dirs": { "by_presenter": "Memory/GRM_archive/_by_presenter/MS" },
+      "dirs_absent": ["MM/MS"],
+      "observed_filename_tokens": ["MS_{yymmdd}.{pdf,pptx,key,mp4}"],
+      "counts": { "cwll_entries": "n≥3, active 2023-05→2025-07", "by_presenter_files": 7 },
+      "notes": ["★ DO-NOT-MERGE with MSY. Date ranges OVERLAP MSY's (2024-12→2026-01) and both MS/ and MSY/ exist as separate _by_presenter directories."],
+      "evidence": "N5 §5 (re-verified: _by_presenter has both MS/ and MSY/)",
+      "confidence": "verified"
+    },
+    "_other_initials_seen": {
+      "_doc": "Real recurring tokens in CWLL / _by_presenter that are NOT rec targets and have no per-person entry here yet. Listed so a matcher recognises them as people (rather than coining junk) without promoting them.",
+      "cwll_name_column": ["DY", "DYK", "Eva", "HG", "HSL", "JA", "JK", "JsL", "JWL", "Josh", "KY", "PCH", "SEL", "SYY", "WJM"],
+      "by_presenter_dirs": ["DY", "EVA", "HG", "HSL", "JA", "JWL", "JYA", "LS"],
+      "memory_dirs": ["DG", "HG", "HJL", "HSL", "JYA", "KY", "LS", "BRL (a grant/project, not a person)"],
+      "restricted": { "HSL": "Memory/MetaData/registry.json marks HSL 'RESTRICTED — do not reference in posts'." },
+      "confidence": "sampled",
+      "evidence": "N5 §3/§5, N6 §2/§3.2, N4 §1"
+    }
+  },
+
+  "directories": {
+    "_shape": {
+      "<logical name>": {
+        "path_template": "GRM/{year}/{YYYYMMDD}",
+        "purpose": "str",
+        "observed_patterns": [
+          { "regex_or_glob": "str", "meaning": "grm|pb|mm|other", "frequency": "n of m sampled", "examples": ["..."] }
+        ],
+        "deviations": ["real filenames that break the assumed rule — the reason we do not hardcode"],
+        "date_encoding": "yymmdd|YYYYMMDD|none|mixed",
+        "coverage": { "date_range": "str", "count": 0 },
+        "confidence": "verified|sampled|assumed"
+      }
+    },
+
+    "mm": {
+      "path_template": "MM/{INIT}/",
+      "purpose": "Milestone Meeting (개인 미팅) decks — the source check_materials.py uses to decide what to tell a researcher is missing by email.",
+      "structure": "FLAT. No subfolders anywhere (find -maxdepth 3 -type d returns the 6 initial dirs only). No index/aggregate file.",
+      "folders_present": ["BYL", "JOP", "JYK", "MSY", "SK", "SMJ"],
+      "folders_absent": ["BHL", "SYJ", "and every other active member — a folder-missing gap is a TRUE gap, not a rule bug"],
+      "date_encoding": "mixed — per person, see per_initial",
+      "the_broken_rule": {
+        "documented_as": "MM/{INIT}/MM_yymmdd.pptx  (docs/CSNL-INFO.md §3a)",
+        "measured": "a literal `MM_yymmdd.pptx` glob matches ZERO files in ANY of the 6 folders",
+        "current_code_rule": "scripts/weekly/check_materials.py::mm_material_present — substring test for the bare yymmdd token",
+        "current_code_accuracy": "83 / 122 real meeting-days = 68%. Every one of the 39 misses is a FALSE '자료 없음' emailed to a researcher (BYL 0/33, SMJ 1/7).",
+        "catalog_driven_accuracy": "122 / 122 = 100% with the date_token_forms list below, 0 ambiguous files, 4 legitimately undated files correctly ignored",
+        "confidence": "verified"
+      },
+      "date_token_forms": {
+        "_doc": "TRY IN THIS ORDER (most specific → least) and STOP at the first form that yields any date, or '2025.08.14' gets re-read as YY.MM.DD. Each pattern is guarded by (?<!\\d) … (?!\\d) plus a 20\\d{2} year anchor so 'TaylorBays_JNeurosci2018' and 'VSSpos+7T' do not false-match.",
+        "forms": [
+          { "id": "YYYY.MM.DD", "regex": "(?<!\\d)(20\\d{2})[.\\-_](\\d{1,2})[.\\-_](\\d{1,2})(?!\\d)", "order": "y, m, d", "examples": ["Research Meeting_2025.08.14.pptx", "special_GRM_정새미_2026.04.08.pdf"], "total_matches": 5 },
+          { "id": "MM_DD_YYYY", "regex": "(?<!\\d)(\\d{1,2})[._\\-](\\d{1,2})[._\\-](20\\d{2})(?!\\d)", "order": "m, d, y", "examples": ["Research Meeting_09_19_2025.pptx"], "total_matches": 1 },
+          { "id": "YY.MM.DD", "regex": "(?<!\\d)(\\d{2})[.\\-](\\d{2})[.\\-](\\d{2})(?!\\d)", "order": "yy, m, d (+2000)", "examples": ["BYL_ResearchMeeting(26.02.05).pptx"], "total_matches": 52 },
+          { "id": "yymmdd", "regex": "(?<!\\d)(\\d{2})(\\d{2})(\\d{2})(?!\\d)", "order": "yy, m, d (+2000)", "examples": ["MM260714_JOP.pptx", "260512_loss.pptx", "240919 meeting.pptx", "260529_VSSpos+7T.key", "Research Meeting - 260224.pptx"], "total_matches": 98 }
+        ],
+        "confidence": "verified"
+      },
+      "per_initial": {
+        "_doc": "Per-person conventions, measured 2026-07-22 by direct listing. `date_forms` counts are per matching FILE, `meeting_days` is distinct dates. The whole point of this block: there is no single MM rule.",
+        "BYL": {
+          "pattern": "{INIT}_ResearchMeeting({YY.MM.DD}){suffix}.{pptx,pdf}",
+          "date_forms": { "YY.MM.DD": 52 },
+          "files_total": 53, "material_files": 53, "lock_stubs": 0, "dotfiles": 0,
+          "meeting_days": 33, "first": "2024-12-03", "last": "2026-06-12",
+          "extensions": [".pdf", ".pptx"],
+          "examples": ["BYL_ResearchMeeting(24.12.03).pptx", "BYL_ResearchMeeting(24.12.26) 보완.pptx", "BYL_ResearchMeeting(25.02.28) (1).pptx", "BYL_ResearchMeeting(26.02.05).pptx"],
+          "counterexamples": ["TaylorBays_JNeurosci2018_StimulusSpecificBIasWM.pdf — a PAPER parked in the folder, correctly dateless; must NOT be counted as a deck and must NOT false-match on '2018'"],
+          "current_rule_hits": "0 / 33 — the dotted YY.MM.DD never contains the '260205'-style substring",
+          "confidence": "verified"
+        },
+        "JOP": {
+          "pattern": "MM{yymmdd}_{INIT}[_post].{pptx,pdf}",
+          "date_forms": { "yymmdd": 41 },
+          "files_total": 53, "material_files": 44, "lock_stubs": 8, "dotfiles": 1,
+          "meeting_days": 32, "first": "2024-09-27", "last": "2026-07-14",
+          "extensions": [".pdf", ".pptx"],
+          "examples": ["MM241206_JOP.pptx", "MM250113_JOP.pptx", "MM250113_JOP_post.pdf", "MM260714_JOP.pptx"],
+          "counterexamples": ["RM2025_JOP.pptx and RM2025_JOP_post.pptx — legitimately undated", "MM_2401101_JOP.pptx — 7-digit typo, mtime 2024-11-03, probably meant 241101; leave unparsed rather than guessing", "8x '~$MM*.pptx' 165-byte Office lock stubs — a substring rule reports the deck 'present' when it was opened and never saved"],
+          "current_rule_hits": "32 / 32 — works only because JOP happens to use a bare yymmdd",
+          "confidence": "verified"
+        },
+        "JYK": {
+          "pattern": "{yymmdd}_{slug}[ (N)].pptx   — slug is her own project vocabulary",
+          "date_forms": { "yymmdd": 6 },
+          "files_total": 6, "material_files": 6, "lock_stubs": 0, "dotfiles": 0,
+          "meeting_days": 6, "first": "2026-01-06", "last": "2026-06-12",
+          "extensions": [".pptx"],
+          "examples": ["260106_anchor (1).pptx", "260223_sigbase (1).pptx", "260327_ssb_traj.pptx", "260331_anchorrev.pptx", "260512_loss.pptx"],
+          "counterexamples": [],
+          "current_rule_hits": "6 / 6",
+          "signal_note": "the slugs (anchor / sigbase / ssb_traj / anchorrev / loss) are dated fingerprint phrases — better than the frozen registry label 'RNN'",
+          "confidence": "verified"
+        },
+        "MSY": {
+          "pattern": "{yymmdd} {slug}.{pptx,pdf,docx}   — SPACE separator, no initial in the name",
+          "date_forms": { "yymmdd": 49 },
+          "files_total": 49, "material_files": 49, "lock_stubs": 0, "dotfiles": 0,
+          "meeting_days": 43, "first": "2024-09-19", "last": "2026-05-06",
+          "extensions": [".docx", ".pdf", ".pptx"],
+          "examples": ["240919 meeting.pptx", "240927 meeting.pptx", "240927 proposal.docx", "260506 meeting_catmag.pptx", "260320 ... FaMo ...", "251226 ... refocus ...", "260408 GRM_MSY.pptx"],
+          "counterexamples": ["The folder is a MIXED workspace: it also holds 7 GRM decks, proposals, instructions, results and stimuli. 49 files → 43 dated days, but NOT 43 milestone meetings. Do not use the file count as a completeness count.", "260408 GRM_MSY.pptx also exists in GRM/2026/20260408/ — same file, two homes; dedupe on content or path, not on name"],
+          "current_rule_hits": "43 / 43",
+          "signal_note": "slugs reveal TWO parallel 2026 projects: catmag (in the registry) and FaMo (not in the registry at all)",
+          "confidence": "verified"
+        },
+        "SK": {
+          "pattern": "{yymmdd}_{slug}.key",
+          "date_forms": { "yymmdd": 1 },
+          "files_total": 1, "material_files": 1, "lock_stubs": 0, "dotfiles": 0,
+          "meeting_days": 1, "first": "2026-05-29", "last": "2026-05-29",
+          "extensions": [".key"],
+          "examples": ["260529_VSSpos+7T.key"],
+          "counterexamples": ["'+7T' must not be read as a date — the (?<!\\d)…(?!\\d) guard is what prevents it"],
+          "current_rule_hits": "1 / 1",
+          "registry_note": "SK has an MM folder but is absent from docs/CSNL-INFO.md §3a's `observed:` line and gets no recommendations (senior)",
+          "confidence": "verified"
+        },
+        "SMJ": {
+          "pattern": "Research Meeting[_{INIT}][_ -]{DATE}.pptx — THREE date forms in a 7-file folder",
+          "date_forms": { "YYYY.MM.DD": 5, "MM_DD_YYYY": 1, "yymmdd": 1 },
+          "files_total": 7, "material_files": 7, "lock_stubs": 0, "dotfiles": 0,
+          "meeting_days": 7, "first": "2025-07-07", "last": "2026-04-17",
+          "extensions": [".pptx"],
+          "examples": ["Research Meeting_2025.08.14.pptx", "Research Meeting_2025.12.30.pptx", "Research Meeting_2026.04.17.pptx", "Research Meeting_09_19_2025.pptx", "Research Meeting - 260224.pptx", "Research Meeting_SMJ_2025.07.07.pptx", "Research Meeting_SMJ_2025.08.28.pptx"],
+          "examples_are_the_complete_folder": true,
+          "counterexamples": ["No initial in 5 of 7 filenames — the FOLDER is the only attribution", "' - ' separator with spaces on both sides", "the optional '_SMJ_' infix appears in only 2 of 7 files, so an initial-bearing pattern matches under a third of them"],
+          "current_rule_hits": "1 / 7 — only the one bare-yymmdd file matches",
+          "confidence": "verified"
+        }
+      },
+      "suffix_noise": {
+        "_doc": "Real trailing junk that must not break matching. Match the date token anywhere, never anchor to end-of-stem.",
+        "observed": ["(1)", "(2)", " 보완", "_updated2", "_post", "_HLreviwed", "- main experiment", " 2"],
+        "confidence": "sampled",
+        "evidence": "N3-mm §2"
+      },
+      "tolerance_knob": {
+        "tol_days": 0,
+        "rationale": "Encoded filename dates land Mon–Fri with no dominant weekday (BYL Fri 11 / Thu 8 / Tue 7 / Wed 7; JOP Fri 12 / Mon 7 / Wed 6), i.e. MM really is irregular 1:1. Ship 0; if the operator's --json run against csnl_ops.milestone_meetings shows residual gaps clustering at ±1, raise to 1 HERE, not in code.",
+        "unverified": "The agent does not touch prod DB, so 'filename date == calendar meeting_date' was never confirmed.",
+        "confidence": "assumed"
+      },
+      "coverage": { "date_range": "2024-09-19 .. 2026-07-14", "folders": 6, "material_files": 160, "meeting_days": 122 },
+      "confidence": "verified"
+    },
+
+    "grm_current": {
+      "path_template": "GRM/{YYYY}/{YYYYMMDD}/",
+      "purpose": "Live weekly lab-meeting drop folder (Wed: PaperBlitz ~10:00, GRM ~11:30).",
+      "critical": "ONLY {YYYY} == 2026 exists. There is NO GRM/2025 — see grm_archive. Code that scans GRM/{YYYY} for a historical year sees zero files and reports 100% missing.",
+      "observed_patterns": [
+        { "regex_or_glob": "^\\d{8}$", "meaning": "date folder", "frequency": "26 of 26 (100%)", "examples": ["20260107", "20260304", "20260722"] },
+        { "regex_or_glob": "{INIT}_{yymmdd}[_{suffix}].{pptx,pdf,key}", "meaning": "grm", "frequency": "common", "examples": ["JYK_260701.pdf", "BYL_260506.pptx", "JOP_260325_part1.pptx", "MSY_260422_MSY.key", "JHR_260318.key"] },
+        { "regex_or_glob": "{yymmdd}[_ ]{INIT}.{pptx,pdf,key}", "meaning": "grm (DATE-FIRST — the reverse order)", "frequency": "common", "examples": ["260715_JOP.pptx", "260408 GRM_MSY.pptx", "260408_중견_JYK.pptx"] },
+        { "regex_or_glob": "PB[_ ]?{yymmdd|YYYYMMDD}.{pptx,pdf}", "meaning": "pb (lab-wide bundle, presenter NULL)", "frequency": "24 of 33 PB-token files", "examples": ["PB_260715.pptx", "PB_20260527.pptx", "PB_260107.pdf", "PB.pptx", "PB (1).pptx"] },
+        { "regex_or_glob": "Paper Blitz( \\(N\\))?(_{MMDD})?.pptx", "meaning": "pb (lab-wide bundle)", "frequency": "9", "examples": ["Paper Blitz (1).pptx", "Paper Blitz (1) 2.pptx", "Paper Blitz_0107.pptx", "Paper Blitz.pptx"] },
+        { "regex_or_glob": "{INIT}_PB{...} | {yymmdd}_PaperBlitz_{INIT}_{Topic}", "meaning": "pb WITH a presenter", "frequency": "4 of 33 in 2026", "examples": ["MJC_PB_260107.pdf", "JOP_PB260429.pdf", "JOP_AI_Blitz_260204.pdf", "260506_PaperBlitz_SK_Carricarte2025.pdf"] }
+      ],
+      "deviations": [
+        "'260715_JOP.pptx' — date FIRST; an anchored ^[a-z]{2,8}_ initial regex misses it",
+        "'JOP_260325_part1.pptx' / 'Part3' — an anchored `$` after the date kills every suffixed file (and 'part' is mixed-case)",
+        "'MSY_260422_MSY.key' — trailing repeat of the initial breaks the same anchored regex",
+        "'JOP_PB260429.pdf' / 'MJC_PB_260107.pdf' — PB is MID-name, so a ^PB prefix test misses the presenter-bearing files",
+        "'JOP_AI_Blitz_260204.pdf' — 'AI_Blitz', the literal 'paperblitz' is absent",
+        "'260311_AIGRM_deepprep.key' — substring 'grm' inside 'AIGRM' manufactures presenter_name='AIGRM'",
+        "'special_GRM_정새미_2026.04.08.pdf' — presenter is the KOREAN NAME (=SMJ); a fallback 'first non-noise alpha run' coins presenter='special'",
+        "'Special_GRM_Abstract_2026-04-22.pdf' — coins presenter='Special'; the real presenter is not in the name at all",
+        "'250225_AIWorkshop.pptx' in folder 20260225 and 'JSL_240422.pptx' in 20260422 — filename yy is often WRONG; trust the folder date",
+        "'JSL_260407.key' filed under 20260408 — slides dated the day before the meeting; the folder is still authoritative",
+        "'GRM/2026/20260318/JSL_260317' is a DIRECTORY, not a file — a flat iterdir + is_file() guard drops it with no trace",
+        "'~$BYL_GRM(26.05.06).pptx' is an ORPHANED lock stub — the real BYL_GRM(26.05.06).pptx no longer exists (the surviving deck is BYL_260506.pptx)",
+        "grant reports ('JHR중견연차보고서2026.pdf/.hwpx', 'MJC_260407_연차보고서.pdf', '26년도 연차보고서_김성제.docx') and AI-workshop decks ('260224_RAG_NotebookLM.pptx', '260311_MCP.pptx') have no kind token — they are neither grm nor pb",
+        "Zotero paper exports ('Gu 등 - 2025 - Attractor dynamics …pdf') and manuscripts ('KimEtal_Merged_20Apr2026.pdf') sit alongside the slides"
+      ],
+      "measured_classification": {
+        "corpus": "all 25 folders of GRM/2026 as of N2-grm's run",
+        "entries": 80, "files": 79, "directories": 1,
+        "classified": 61, "of_which": { "pb": 26, "grm": 35 },
+        "unclassified_despite_allowed_extension": 16,
+        "deviation_rate": "16 / 77 = 20.8% dropped, of which 7 are core GRM/PB material",
+        "confidence": "sampled",
+        "evidence": "N2-grm §2"
+      },
+      "date_encoding": "YYYYMMDD (folder) / yymmdd or YYYYMMDD or MMDD (filename, unreliable)",
+      "coverage": {
+        "date_range": "2026-01-07 .. 2026-07-22",
+        "count": 26,
+        "expected_wednesdays": 29,
+        "missing_folders": ["20260218", "20260603", "20260624"],
+        "empty_folder": ["20260304"],
+        "rule": "Absence is NORMAL (holiday / no meeting). A missing folder must be a WARN, never an error.",
+        "weeks_with_no_PB_file_at_all": ["20260225", "20260304", "20260311", "20260318", "20260325", "20260408", "20260422"],
+        "steady_state_normal_week": "exactly 2 files — one GRM deck + one PB_{yymmdd}.pptx (see 20260610, 20260617, 20260701, 20260708, 20260715)"
+      },
+      "confidence": "verified"
+    },
+
+    "grm_archive": {
+      "path_template": "GRM/GRM Archive/{YYYY}_GRM/{DATEDIR}/",
+      "purpose": "Historical GRM. THE SECOND YEAR-FOLDER CONVENTION — 2025 and earlier live here, not under GRM/{YYYY}.",
+      "critical": "There is NO GRM/2025. Any backfill or completeness check over 2025 that only walks GRM/{YYYY} sees zero files.",
+      "note_on_the_space": "The directory name contains a literal space: 'GRM Archive'. Quote it.",
+      "per_year": {
+        "2022_GRM": { "entries": 22, "match_YYYYMMDD": 0, "convention": "YYYY.MM.DD dotted", "examples": ["2022.04.05", "2022.08.16", "2022.08.23"], "confidence": "verified" },
+        "2023_GRM": { "entries": 52, "match_YYYYMMDD": 0, "convention": "YYYY.MM.DD dotted", "examples": ["2023.01.12", "2023.01.19", "2023.01.26"], "confidence": "verified" },
+        "2024_GRM": { "entries": 26, "match_YYYYMMDD": 16, "convention": "MIXED — YYYYMMDD + 'YYYY-MM-DD HH.MM.SS GRM' Zoom dirs + suffixed", "examples": ["20240124", "2024-03-27", "2024-02-21 09.58.48 GRM", "20240131_GRM개선안"], "confidence": "verified" },
+        "2025_GRM": { "entries": 47, "match_YYYYMMDD": 46, "convention": "YYYYMMDD slide folders — the archive year that actually holds material", "examples": ["20250108", "20250115", "20250122_gGRM (the one suffixed exception)"], "confidence": "verified" },
+        "2026_GRM": { "entries": 18, "match_YYYYMMDD": 0, "convention": "Zoom RECORDING dirs, NOT slides", "examples": ["2026-03-18 09.54.46 CSNL GRM", "2026-05-06 09.51.01 CSNL GRM", "… 새미 정's Zoom Meeting"], "contents": ["double_click_to_convert_01.zoom", "zoomver.tag", "video*.mp4", "audio*.m4a", "recording.conf"], "warning": "DO NOT treat 2026_GRM as a materials source — it duplicates nothing and classifies as nothing.", "confidence": "verified" },
+        "2026_AI_Workshop": { "entries": 7, "match_YYYYMMDD": 3, "convention": "mixed YYYYMMDD dirs + Zoom dirs + loose .m4a/.mp4/recording.conf", "examples": ["20260225", "20260311", "20260318", "2026-04-01 10.01.17 CSNL GRM"], "confidence": "verified" }
+      },
+      "date_dir_forms": {
+        "_doc": "TRY IN ORDER. A single ^\\d{8}$ rule makes 2022+2023 (74 folders) 100% invisible.",
+        "forms": ["^(\\d{8})$", "^(\\d{4})\\.(\\d{2})\\.(\\d{2})$", "^(\\d{4})-(\\d{2})-(\\d{2})(?:\\s+\\d{2}\\.\\d{2}\\.\\d{2}.*)?$", "^(\\d{8})_.*$  (suffix: 20250122_gGRM, 20240131_GRM개선안)"],
+        "confidence": "verified"
+      },
+      "nested_paperblitz_subdir": {
+        "_doc": "★ The richest presenter→paper record on the share, and INVISIBLE to a non-recursive iterdir().",
+        "path": "GRM/GRM Archive/2025_GRM/{YYYYMMDD}/Paper Blitz/",
+        "measured": "32 of 47 2025_GRM date folders contain a nested 'Paper Blitz/' (once 'PaperBlitz/') subdirectory",
+        "sample_listing": { "folder": "2025_GRM/20250625/Paper Blitz", "files": ["250625.pptx", "250625_PaperBlitz_SK_Xu24.pptx", "MSY_PB_250625.pptx", "PB_JSL_250625.pptx", "PB_MJC_250625.key", "SYJ_250625.pptx"] },
+        "action": "descend ONE level into a child directory whose NFC-normalised, space-stripped, lowercased name == 'paperblitz'",
+        "confidence": "verified"
+      },
+      "date_encoding": "mixed",
+      "coverage": { "date_range": "2022-04-05 .. 2026-05-06", "count": 172 },
+      "confidence": "verified"
+    },
+
+    "grm_magazine": {
+      "path_template": "GRM/GRM_magazine/GRM_magazine_{YYYYMMDD}.pdf",
+      "purpose": "Korean long-form LLM-authored narrative digest of one GRM week. Fixed structure: cover (date · presenter initial · headline · abstract · 개념도) → 한눈에 (질문/과제/결과/쟁점) → 맥락·INTRO → figure-by-figure. Extracts cleanly with pypdf, no OCR.",
+      "observed_patterns": [{ "regex_or_glob": "^GRM_magazine_(\\d{8})\\.pdf$", "meaning": "other", "frequency": "6 of 6 (100%)", "examples": ["GRM_magazine_20260527.pdf", "GRM_magazine_20260715.pdf"] }],
+      "deviations": ["Undocumented in docs/CSNL-INFO.md §3b entirely."],
+      "value": [
+        "AUTHORITATIVE PRESENTER LABEL — repairs every presenter_initial IS NULL row (MinJin→MJC, JHR→RJH/류주형, 'special'→SMJ).",
+        "FREE COMPLETENESS ORACLE — presence of GRM_magazine_{D}.pdf ⇔ a GRM happened that week; all 6 magazine dates have a matching non-empty GRM/2026 folder and there is no magazine for the 3 missing Wednesdays.",
+        "States each researcher's CURRENT question, the competing models, and the unresolved objection — the aims/phenomena/mechanisms fields P28's survey elicits, but observed and refreshed weekly. Names cited papers inline (e.g. Sohn & Lee 2013).",
+        "The 쟁점 section attributes each senior critique by initial (JSL, SK, SHL) — i.e. it also encodes who cares about what."
+      ],
+      "presenters_measured": { "20260527": "MJC", "20260610": "BHL", "20260617": "RJH (=JHR)", "20260701": "JYK", "20260708": "SK", "20260715": "JOP" },
+      "date_encoding": "YYYYMMDD",
+      "coverage": { "date_range": "2026-05-27 .. 2026-07-15", "count": 6, "gap": "starts only at 2026-05-27 — no magazine oracle for 20260107..20260520" },
+      "confidence": "verified"
+    },
+
+    "paperblitz_catalog": {
+      "path_template": "GRM/PaperBlitz.{MD,json}",
+      "purpose": "Derived session index for the PaperBlitz series (LibreOffice headless → pypdf concat). A SESSION index, not a paper index — it never names a paper.",
+      "schema_json": "schema_version, generated_at, lab, series, context, started, latest, totals{sessions,by_year,source_files,output_pages}, contributors[{presenter,sessions,files}], sessions[{yymmdd, date, year, date_folder(ABS PATH), output_pdf, output_pages, output_size_bytes, output_mtime, source_files[], source_count, contributors[], has_bundled}]",
+      "md_adds": "per-file PAGE COUNTS (the JSON has none). Parse: re.findall(r'`([^`]+)`\\s*\\((\\d+) pp\\)', block) where block = md.split(f'- **{date}**')[1].split('\\n- **')[0]",
+      "totals": { "sessions": 51, "by_year": { "2025": 42, "2026": 9 }, "source_files": 267, "output_pages": 2110, "started": "2025-02-26", "latest": "2026-04-29", "generated_at": "2026-04-29T17:36:13" },
+      "two_year_folder_conventions": {
+        "_doc": "The catalog's own date_folder values prove BOTH conventions coexist — 42 sessions under 'GRM Archive/2025_GRM', 9 under 'GRM/2026'.",
+        "2025": "/…/GRM/GRM Archive/2025_GRM/{YYYYMMDD}/",
+        "2026": "/…/GRM/2026/{YYYYMMDD}/",
+        "confidence": "verified"
+      },
+      "deviations": [
+        "★ The published `contributors` block is WRONG. It reports SK = 1 session; re-deriving from source_files gives 27 (26x undercount). Also SMJ 23 vs 25, JSL 21 vs 24, MJC 23 vs 24, HOJ absent vs 2. Its extractor only understood a LEADING ^INIT_ prefix. NEVER read contributors — re-derive from source_files.",
+        "STALE: latest = 2026-04-29 while GRM/2026 has folders through 20260722 (~11 uncatalogued sessions). Always re-scan the folders; treat the catalog as a hint.",
+        "LOSSY: GRM/2026/20260429/JOP_PB260429.pdf existed 7 h before the catalog ran and is ABSENT from that session's source_files — the cataloguer's PB detection missed the '{INIT}_PB{date}.pdf' form.",
+        "MD/JSON DRIFT: MD lists 50 sessions, JSON 51. The extra is 2025-09-03 (1 file, 6 pp), added in the 3 h between runs, so it has no MD page-count block (trivially derivable: single file = all pages).",
+        "DERIVED ARTIFACT: if anyone re-runs the concatenation with a different file set or sort order, every page range shifts. Persist page_start/page_end AND the source filename AND output_mtime at ingest so drift is detectable.",
+        "absolute paths inside date_folder / output_pdf embed '/Volumes/CSNL_new-1' — re-root them at runtime, never trust them"
+      ],
+      "attribution_measured_here": {
+        "any_position_whole_token": { "BYL": 28, "SK": 27, "SMJ": 25, "JOP": 24, "JSL": 24, "MJC": 24, "MSY": 24, "SYJ": 13, "JHR": 8, "BHL": 7, "HJH": 3, "HOJ": 2, "JYK": 1, "SHP": 1 },
+        "published_contributors_block": { "BYL": 28, "JOP": 24, "MSY": 24, "MJC": 23, "SMJ": 23, "JSL": 21, "SYJ": 13, "JHR": 8, "BHL": 7, "HJH": 3, "JYK": 1, "SK": 1, "SHP": 1 },
+        "recompute_rule": "case-insensitively split the NFC-normalised filename on non-alphanumerics, take the first token in the known-initial set, plus the korean_name map",
+        "unattributable": "58 files — genuinely lab-wide bundles ('250924.pptx', 'Paper Blitz (1).pptx'). Leave presenter NULL; do not fabricate.",
+        "confidence": "verified"
+      },
+      "pb_source_filename_forms": {
+        "_doc": "All observed in one 2025 folder (2025_GRM/20250716/Paper Blitz/) — six mutually different shapes for one weekly artifact.",
+        "forms": ["{INIT}_ {AuthorYear}({YYYY.MM.DD}).pptx   e.g. 'BYL_ Sims2015(2025.07.16).pptx' (note the space after '_')", "Blitz_{INIT}_{YYYY.MM.DD}.pptx", "{INIT}_{yymmdd}[_PB].{pptx,key}", "{INIT}_PB_{yymmdd}.pptx", "PB{yymmdd}_{INIT}.pptx / PB_{yymmdd}_{INIT}.pptx / PB_{INIT}_{yymmdd}.pptx", "Paper blitz_{INIT}_{yymmdd}.pptx / paper blitz_{KOREAN_NAME}_{MMDD}.pptx", "{yymmdd}_PaperBlitz_{INIT}_{Topic}.pptx", "{yymmdd}.pptx  (no presenter at all — the bundle)"],
+        "confidence": "verified"
+      },
+      "era_split": {
+        "_doc": "★ Attribution difficulty changes hard partway through. Record as data because it determines which ingest path applies.",
+        "individual_deck_era": { "range": "2025-02-26 .. 2025-10-15", "sessions": 32, "rule": "each researcher uploads {INIT}_….pptx — presenter is IN THE FILENAME" },
+        "bundled_only_era": { "range": "> 2025-10-15", "sessions": 19, "rule": "one 'Paper Blitz_{yymmdd}.pptx' for the whole lab — presenter recoverable only from IN-SLIDE corner labels" },
+        "per_presenter_attribution_ends_in_2026": {
+          "measured_2026_07_22": "of 33 PB-token files across all 26 GRM/2026 day folders, only 4 carry a known initial",
+          "the_four": ["20260107/MJC_PB_260107.pdf", "20260204/JOP_AI_Blitz_260204.pdf", "20260429/JOP_PB260429.pdf", "20260506/260506_PaperBlitz_SK_Carricarte2025.pdf"],
+          "everything_else": "PB_{yymmdd}.pptx / PB.pptx / PB (1).pptx / Paper Blitz (N).pptx — lab-wide bundles, presenter NULL",
+          "implication": "From 2026 onward the ONLY PB attribution routes are (a) in-slide label-run detection inside the merged PDF, or (b) the GRM magazine. Filename attribution is a 2025 phenomenon plus 4 stragglers.",
+          "confidence": "verified"
+        },
+        "bundled_label_quality": { "PB_260429.pdf": "clean runs — HYL p2-4, BHL p5-6, BYL p7-9, JHR p10-12, JSL p16-23, JYK p24-28, MSY p29-31", "PB_251217.pdf": "sparse — SMJ x1, BHL x1, JYK x1, 박준오 x1 out of 29 pp", "PB_260128.pdf": "partial — BYL x8, SMJ x2, JSL x2, JHR x2, BHL x2 out of 65 pp", "rule": "initial-label run detection (a label starts that presenter's run until the next label); leave unlabeled runs NULL — expect partial coverage, do not fabricate", "confidence": "sampled", "evidence": "N1-paperblitz §5c" }
+      },
+      "paper_identity_yield": {
+        "_doc": "Honest ceiling. Do NOT design an ingest that requires hard identity.",
+        "neither_file_contains": ["a DOI field", "a title field", "a citation field"],
+        "filename_yield": "a residual paper token ≥4 chars survives in only 67 of 209 named files; complete for BYL (28/28), topic-slug for SK (25/27), full titles for SMJ (7/25), ZERO for BHL / MSY / SYJ (date-only names)",
+        "slide_text_yield": "estimated well under 20% of decks carry a DOI or a full APA line; titles mostly live inside screenshot images and are not extractable",
+        "empty_text_pages": "15/80 (2025-07-16), 9/29 (2025-12-17) extract to empty text — 'no text' is NOT 'no interest'",
+        "pypdf_artifacts": ["T ake-away", "aligment", "Identity relatedIdentity irrelevant", "Korean with injected spaces: '유추 (Analogy) 란'"],
+        "confidence": "sampled",
+        "evidence": "N1-paperblitz §4"
+      },
+      "rationale_marker_vocabulary": {
+        "_doc": "Mixed KR/EN markers for the per-presenter 'why I chose this paper' text — the reason-text P24 concluded is the real lever. Whitespace-tolerant matching required (see pypdf artifacts).",
+        "motivation": ["Motivation", "motivation:", "Why I chose this paper", "I chose this paper because", "읽은 이유", "선정이유", "Recommended to read", "recommended by"],
+        "outcome": ["Takeaway", "Take away", "Take-away", "T ake-away", "Key Takeaway", "내용 정리", "Summary:"],
+        "suggested_regex_note": "e.g. [Tt]\\s*ake[\\s\\-]?away — do not trust token boundaries",
+        "confidence": "sampled",
+        "evidence": "N1-paperblitz §5b"
+      },
+      "date_encoding": "yymmdd + ISO date, both present per session",
+      "coverage": { "date_range": "2025-02-26 .. 2026-04-29", "count": 51 },
+      "confidence": "verified"
+    },
+
+    "memory_papers": {
+      "path_template": "Memory/Papers/",
+      "purpose": "The classics corpus the archive harness ingests.",
+      "observed_patterns": [{ "regex_or_glob": "{Author}_{YYYY}_{Title}[_{hash6}].pdf", "meaning": "other", "frequency": "4865 of 4868 pdf = 99.94% after NFC", "examples": ["Abrahamyan_2016_Adaptable history biases in human perceptual decisions.pdf"] }],
+      "deviations": [
+        "★ scripts/archive/ingest_classics.py DEFAULT_ROOT = '/Volumes/Papers' — a path that DOES NOT EXIST. A re-run without CSNL_CLASSICS_ROOT= silently targets a dead path.",
+        "99 of 4880 entries are NFD — see the top-level `unicode` block. ASCII regex conformance 98.09% → 99.94% after NFC.",
+        "Some names carry a 6-hex dedup suffix ('…nested data_46584f.pdf') that lands INSIDE the parsed title and hurts same_work title-drift matching. Strip _[0-9a-f]{6}$ before norm_title.",
+        "3 genuine non-conformers: Landwehr_2011.pdf (no title), Unknown_1996_.pdf (empty title), ._2010_… (AppleDouble)",
+        "repo classics_papers.jsonl has 6,100 lines vs 4,868 files on disk — worth reconciling"
+      ],
+      "date_encoding": "none (year is inside the filename)",
+      "coverage": { "count": 4868, "entries": 4880, "year_distribution": "1840s 1 · 1910s-50s 26 · 1960s 17 · 70s 32 · 80s 82 · 90s 160 · 2000s 1085 · 2010s 3104 · 2020s 265" },
+      "confidence": "verified"
+    },
+
+    "memory_cwll": {
+      "path_template": "Memory/CWLL/",
+      "purpose": "PI's weekly letter series — per-researcher APA reference + the member's OWN Keywords line + their written summary. The highest-yield per-researcher preference corpus on the share.",
+      "layout": { "pdfs/": "237 files, 256 MB, 2019-01-28 .. 2026-03-18", "logs/": "citations_log.csv (1996 rows) · metadata_log.csv (237) · download_log.csv · inventory.csv · organize_log.csv · final_report.md", "zotero_import/": "cwll_references.bib (1373 entries) · doi_list.txt (1373 DOIs)", "Claude_context_individual/": "EMPTY (0 files) — any code assuming content here silently no-ops" },
+      "observed_patterns": [
+        { "regex_or_glob": "^(\\d{4}-\\d{2}-\\d{2})_Weekly_LS_Letter_{Mon}{n}.pdf", "meaning": "other", "frequency": "2019-2020 era", "examples": ["2019-01-28_Weekly_LS_Letter_Jan4.pdf"] },
+        { "regex_or_glob": "^(\\d{4}-\\d{2}-\\d{2})_CSNL_Weekly_LS_Letter[_{yymmdd}|_{YYYY.MM.DD}|_v2].pdf", "meaning": "other", "frequency": "2020-11+", "examples": ["2026-03-18_CSNL_Weekly_LS_Letter_2026.03.18.pdf"] }
+      ],
+      "deviations": [
+        "★ The YYYY-MM-DD PREFIX is the reliable date for all 237. The SUFFIX varies (_210112, _2026.03.18, _v2, bare) — never parse the suffix.",
+        "TWO DOCUMENT ERAS: 'table era' (2020-12-15 →, Name | Journals & Comments, with an explicit Keywords: line) vs 'numbered-list era' (2019-01 → ~2020-11, INIT SUFFIXED with a colon, curly-quoted title, NO Keywords). A checker that requires 'Keywords:' reports ~90 false failures on the 2019-2020 letters.",
+        "EMPTY TEMPLATE ROWS: 2025 letters ship blank 'Keywords :' placeholder rows for members who skipped. Naive parsing attributed 11 entries to JYK in one letter. Filter: keyword line ≥3 chars AND ≥80 non-space chars of trailing prose AND a 4-digit year in the reference.",
+        "NO-SPACE EXTRACTION: pypdf yields 'CSNLWeeklyLSLetter' / 'serialdependence' for 2023 (11/13 files) and 2024 (10/10). Strip all whitespace before comparing.",
+        "PAGE-HEADER FALSE STARTS: 'CSNL' and 'Name' match a bare-initial regex — blacklist them.",
+        "TWO INITIAL LAYOUTS: 2021 puts the initial on its own line; 2023+ inline before the first author.",
+        "DUPLICATE SUBMISSIONS ARE MEANINGFUL (MSY submitted Karras 2020 three times) — repeat = strength, do not collapse.",
+        "★★ citations_log.csv / doi_list.txt / cwll_references.bib are ~12% WRONG (HIGH-confidence rows 10% mismatch, MEDIUM 33%; 2019 23%). Crossref TITLE-SEARCH resolution on title-less era-1 blocks returned Acta Materialia / Corrosion Science / oncology papers stamped HIGH. scripts/archive/ingest_rec_log.py consumed exactly this column, so ~130-160 bogus rows are already in the merged corpus. DO NOT import cwll_references.bib into Zotero as final_report.md instructs.",
+        "known gaps in the letter series: 2022-04→2022-08 and 2024-01→2024-09 (neither NAS nor Gmail)"
+      ],
+      "date_encoding": "YYYY-MM-DD (filename prefix)",
+      "coverage": { "date_range": "2019-01-28 .. 2026-03-18", "count": 237, "per_year": { "2019": 46, "2020": 55, "2021": 42, "2022": 17, "2023": 13, "2024": 10, "2025": 49, "2026": 5 }, "cheap_slice": "the 148 files ≤300 KB = 15 MB and cover 2021-01 → 2026-03 essentially completely" },
+      "confidence": "sampled",
+      "evidence": "N5-cwll (whole report)"
+    },
+
+    "memory_metadata": {
+      "path_template": "Memory/MetaData/",
+      "purpose": "Master index + identity map + per-member structured project metadata. Generated by a 3-phase agent pipeline on 2026-04-01; regenerable via _pipeline/SKILL.md.",
+      "layout": { "registry.json": "members → group → projects → meta_file; infrastructure; ★ name_mapping (the identity disambiguation table)", "members/{INIT}.json": "15 files: BYL DG HG HJL HSL JHR JOP JSL JYA JYK KY MJC MSY SK SMJ", "infrastructure/": "CRC.json CWLL.json Grant.json SfM.json", "reviews/": "review_2026-04-01.json — per-member quality_scores (JOP 100, SK 90, JYK 90, MJC 75, JHR 50, MSY/BYL/SMJ/JSL 35) usable as a confidence prior", "_pipeline/": "SKILL.md scan_agent.md pooling_agent.md review_agent.md" },
+      "deviations": [
+        "COVERAGE GAP: no BHL.json and no SYJ.json, yet both are rec targets.",
+        "STALE INVENTORY (last_updated 2026-04-01): misses Memory/BHL/DistractorEffect (2026-05-18), Memory/SYJ/* (2026-05-18 / 2026-06-09), Memory/HSL_MSY (2026-05-11), SK/Screen_Retinotopy, _lab_ai_harness, 회의록. Good SCHEMA + IDENTITY source, bad inventory.",
+        "registry.json declares mount_point '/Volumes/CSNL_new/Memory' — the same mount-order race; resolve at runtime.",
+        "project-code disagreement with docs/CSNL-INFO.md §6: MSY 'CatVsMag' vs 'CatMag'; BYL 'biasVar' vs 'BiasVar'; MJC 'SeqVWM' vs 'VWM_Contrast'."
+      ],
+      "identity_value": "registry.json name_mapping resolves the lab's worst traps verbatim: 'BYL = 이보연 Boyun', 'BHL = 이보현 Bohyun — NOT same as BYL', 'SK = 김성제 / Sungje Kim / KY(old) / \"Jey Kim\"(Slack)', 'HSL: RESTRICTED — do not reference in posts'.",
+      "date_encoding": "none",
+      "coverage": { "count": 15, "date_range": "generated 2026-04-01" },
+      "confidence": "sampled",
+      "evidence": "N4-memory §1, N6-map §2"
+    },
+
+    "memory_projects": {
+      "path_template": "Memory/{INIT}/{PROJECT}/{Code,Context,Data,Results}/",
+      "purpose": "Per-researcher project workspace with a researcher-filled metadata JSON. Context/ is the per-researcher curated reading list.",
+      "observed_patterns": [
+        { "regex_or_glob": "template.json | template_{Project}.json | project.json | kb_{project}.json", "meaning": "other", "frequency": "49 config files at depth ≤3, 48 parse as JSON", "examples": ["template_GranRDT.json (JOP)", "template_SD.json (JSL)", "project.json (SMJ, JHR, CRC, Eyelink)", "kb_time2dist.json (JOP)"] },
+        { "regex_or_glob": "Context/*.pdf", "meaning": "other", "frequency": "184 total, 136 after lab-noise filter", "examples": ["Fukuda et al. - Working Memory Content Is Distorted by Its Use in ….pdf", "Wei&Stocker(2015).pdf", "s42003-024-05846-x.pdf"] }
+      ],
+      "deviations": [
+        "FLAT researchers: MSY, KY, HSL_MSY, BRL, MJC and partly SK put Code/Context/Data/Results DIRECTLY under the initial with NO project level. A Memory/{INIT}/{PROJECT}/ glob silently misses all of them — accept depth 1 AND depth 2.",
+        "★ The '\"researcher의 이니셜\"' FIELD IS UNRELIABLE AS A KEY — mismatches the folder in 13 of 48 files (placeholder '여기에 이니셜을 입력하세요' in BHL/DistractorEffect and SYJ/Distractor_Effect; Korean name '박준오' in all six JOP kb_*.json; 'SK' in BRL/, 'HSL' in HSL_MSY/, 'JWR' in CRC/, 'JWL' in SfM/, '해당 없음' in Eyelink/). KEY ON THE FOLDER NAME.",
+        "Memory/JYK/RNN/template.json is INVALID JSON (researcher-edited 2026-06-04, 'publication_or_manuscript_url:' with no value). A bare json.load raises — tolerate and report.",
+        "BHL/DistractorEffect/template.json and SYJ/Distractor_Effect/template.json are BYTE-IDENTICAL (604 B) — one shared paradigm, two researchers. A naive ingest creates a duplicate project and identical aims.",
+        "publication_or_manuscript_url is often the untouched template placeholder ('여기에 출판된 논문의 DOI 주소…') — treat as null, not a URL.",
+        "Memory/7T/ is EMPTY.",
+        "Memory/Batch/GRM Archive/ is a DUPLICATE of Memory/GRM_archive — dedupe or double-count.",
+        "Context/ PDFs need lab-noise filtering: ^(Grant_|GRM_|Meeting_|Ref_list|\\[신규\\]|[A-Z]{2,3}_\\d{6}\\.pdf|\\d{6} )"
+      ],
+      "context_pdf_counts": { "BYL": 88, "MSY": 21, "JOP": 8, "BHL": 7, "SYJ": 7, "JYK": 4, "SMJ": 1, "_total_filtered": 136, "_total_raw": 184, "_note": "BHL's 7 and SYJ's 7 are the SAME files (shared paradigm) — dedupe before treating as independent positives", "_resolvability": "29 of 136 (21%) match a publisher-ID regex resolvable to a DOI with zero I/O; the other 79% need a first-page DOI probe — do that operator-attended or after a local copy (107 SMB PDF opens is exactly the traffic to avoid)" },
+      "date_encoding": "none",
+      "coverage": { "count": 49, "date_range": "config mtimes 2025-xx .. 2026-06-09" },
+      "confidence": "sampled",
+      "evidence": "N4-memory §2/§3"
+    },
+
+    "memory_by_presenter": {
+      "path_template": "Memory/GRM_archive/_by_presenter/{INIT}/{INIT}_{yymmdd}.{pdf,pptx,key,mp4}",
+      "purpose": "Already-normalised per-presenter GRM index, built by Memory/GRM_archive/_tools/parser.py.",
+      "observed_patterns": [{ "regex_or_glob": "{INIT}_{yymmdd}\\.(pdf|pptx|key|mp4)", "meaning": "grm", "frequency": "225 of 291 with pdf|pptx|key; the other 66 are .mp4 Zoom recordings matching the same stem → effectively 100%", "examples": ["JOP_250716.pdf", "SK_260318.key"] }],
+      "dirs_observed": ["BYL", "DHY", "DY", "EDM", "EVA", "HG", "HJ", "HSL", "HL", "JA", "JHR", "JOP", "JS", "JSL", "JWL", "JYA", "JYK", "LS", "MJC", "MS", "MSY", "QE", "RAG", "SK", "SMJ", "YDH"],
+      "deviations": [
+        "★ Directory names are NOT a person whitelist. EDM, QE, RAG, DHY, YDH, HJ, JS are token MIS-EXTRACTIONS by _tools/parser.py from Zoom recording names. Whitelist against initials{} in this catalog, never trust the directory name.",
+        "BUT: EVA, JA, MS, HL, LS ARE real (corroborated by the CWLL Name column) — do not blanket-reject short/odd names.",
+        "Memory/Batch/GRM Archive/ is a duplicate of this whole tree."
+      ],
+      "per_dir_counts": { "LS": 33, "SK": 31, "HL": 26, "JYA": 26, "JSL": 25, "JWL": 25, "DY": 22, "EVA": 22, "JHR": 22, "JOP": 17, "MS": 7, "HSL": 6, "MJC": 5, "SMJ": 4, "JA": 3, "JS": 3, "BYL": 2, "HG": 2, "JYK": 2, "MSY": 2, "DHY": 1, "EDM": 1, "HJ": 1, "QE": 1, "RAG": 1, "YDH": 1 },
+      "date_encoding": "yymmdd",
+      "coverage": { "count": 291, "dirs": 26 },
+      "confidence": "sampled",
+      "evidence": "N6-map §3.2 (dir list re-verified here)"
+    },
+
+    "people": {
+      "path_template": "people/{INIT}/<freeform>/",
+      "purpose": "Free-form personal workspace, 14 member dirs. Mostly code/data, but holds reading signal.",
+      "observed_patterns": [{ "regex_or_glob": "(free-form — no convention)", "meaning": "other", "frequency": "14 dirs", "examples": ["people/SYJ/Read_PB/SYJ_save_later_papers.txt", "people/JOP/JA_Zotero/My Library.rdf"] }],
+      "deviations": ["people/SYJ/Read_PB/SYJ_save_later_papers.txt (9,223 B, 2026-07-07) is our OWN archive_responses exported back onto the NAS by hand (46 papers). It is a STALE DUPLICATE that will drift from the DB — do not re-ingest as independent evidence. Line 3 of the list is corrupted ('\\ 4.' — item 3 lost)."],
+      "date_encoding": "none",
+      "coverage": { "count": 14 },
+      "confidence": "sampled",
+      "evidence": "N6-map §1/§3.4"
+    },
+
+    "fmri_dicom": {
+      "path_template": "fMRI_DICOM/{YYYYMMDD}_{token}/",
+      "purpose": "Raw imaging sessions. NAMES ONLY — never walk deep.",
+      "observed_patterns": [{ "regex_or_glob": "^(\\d{8})_(.+)$", "meaning": "other", "frequency": "20 dirs", "examples": ["20250430_Phantom_Fmap", "20250502_pacstest", "20250901_JSL_Neck_TOF_JSL_Neck_TOF_19950901"] }],
+      "deviations": ["the {token} is FREE-FORM and is often NOT an initial (Phantom_Fmap, pacstest) — do not derive a presenter from it", "fMRI_DICOM_USB uses a doubled-name scanner-export pattern {TAG}_{TAG}_{YYYYMMDD}"],
+      "date_encoding": "YYYYMMDD",
+      "coverage": { "count": 20 },
+      "confidence": "sampled",
+      "evidence": "N6-map §1"
+    },
+
+    "_ops_and_junk": {
+      "_doc": "Recorded so a walker classifies them instead of tripping over them. None is research-relevant.",
+      "ops": {
+        "Server/": "lab admin — 14 dirs (Chores_forLab, Classes, Conferences, Evaluation_Meetings, Experiment_Documents, Grant, IRB, Meeting, Milestones, RNN_study, Reviews, Software, Workshop, project)",
+        "Grant/": "13 grant dirs + two .sb-cc7dabfc-* sandbox turds",
+        "AI_workspace/": "6 loose files — Apr-2026 local-LLM benchmark scratchpad",
+        "GPU/ · BCS_Events/ · Photo/": "infrastructure / outreach / photos",
+        "649/": "room 649 (Slab) rig config — NIC/ door_Slab/ window_Slab/. UNDOCUMENTED in docs/CSNL-INFO.md §3",
+        "MRI_Tutorial_bySK/": "SK's 6-week fMRI teaching course. UNDOCUMENTED",
+        "PACS설치 파일/": "ViewRex3 DICOM viewer installer + Korean manuals, 259 MB .exe. UNDOCUMENTED"
+      },
+      "junk": {
+        "#recycle · @Recycle": "two recycle bins, each a shadow copy of the tree — MUST be pruned (see walk_rules)",
+        "CSNL_new-1": "self-referential symlink → /Volumes/CSNL_new-1 — MUST NOT be followed",
+        "._CSNL_new-1": "AppleDouble sidecar for the symlink",
+        "Temp_188_BRL": "EACCES — prune or an unguarded walk raises",
+        "Server_191": "1,020-byte macOS Alias file (not a dir) pointing at afp://…/Server_191 — dead pointer",
+        "Untitled.pdf": "1.9 MB stray PDF at share root, no /Title metadata, mtime 2026-02-24",
+        "group-volume/": "User-Driven-Content-Generation/r.suvorov — third-party code drop, not lab output",
+        ".@upload_cache · .AppleDB · .TemporaryItems · .Trashes · .DS_Store": "SMB/macOS detritus"
+      },
+      "confidence": "verified"
+    }
+  },
+
+  "known_repo_defects": {
+    "_doc": "Places where repo code/doc contradicts this catalog. Fix the CODE to read this file — do not copy these facts into the code.",
+    "items": [
+      { "where": "scripts/weekly/check_materials.py::mm_material_present", "defect": "yymmdd-substring test + no junk filter", "impact": "83/122 meeting-days = 68%; BYL 0/33 and SMJ 1/7 would be emailed as false '자료 없음'; a 165-byte ~$ lock stub counts as 'present'", "fix": "drive off directories.mm.date_token_forms + ignore_rules; print the ISO date in `detail`, not the yymmdd token", "confidence": "verified" },
+      { "where": "docs/CSNL-INFO.md §3a", "defect": "filename: 'MM_yymmdd.pptx'; observed: BYL/JOP/JYK/SMJ", "impact": "the glob matches ZERO files; MSY (49 files) and SK were missed from the folder list", "fix": "point at this catalog; §3a is already self-marked verified:false", "confidence": "verified" },
+      { "where": "scripts/weekly/ingest_grm_nas.py:231", "defect": "returns ('pb', None, None) — 'PB = whole lab → no presenter'", "impact": "false for 122/267 PB files that carry the presenter in the filename", "fix": "run _extract_presenter for kind='pb' too; keep NULL only for genuine bundles", "confidence": "sampled" },
+      { "where": "scripts/weekly/ingest_grm_nas.py (_INITDATE_RE / _PB_PREFIX_RE / grm substring / NOISE_WORDS)", "defect": "anchored ^…$ regexes, prefix-only PB detection, substring 'grm', no Korean-name matching", "impact": "20.8% of allowed-extension files dropped in GRM/2026; junk presenters 'AIGRM'/'special'/'Special'", "fix": "tokenise + match against this catalog's initials{} and matching_policy.noise_tokens", "confidence": "sampled" },
+      { "where": "scripts/weekly/ingest_grm_nas.py::_scan_folder", "defect": "non-recursive, and `if not entry.is_file(): continue` before the extension check", "impact": "GRM/2026/20260318/JSL_260317 vanishes with no trace in `skipped`; the 32 nested 'Paper Blitz/' dirs in 2025_GRM are invisible", "fix": "record directories with a reason; descend one level into a 'Paper Blitz'-named child", "confidence": "verified" },
+      { "where": "scripts/weekly/ingest_grm_nas.py (year scan)", "defect": "scans GRM/2026 only", "impact": "any 2025 backfill sees zero files because there is no GRM/2025", "fix": "also walk GRM/GRM Archive/{YYYY}_GRM/ with grm_archive.date_dir_forms", "confidence": "verified" },
+      { "where": "scripts/archive/ingest_classics.py:42", "defect": "DEFAULT_ROOT = '/Volumes/Papers' — does not exist", "impact": "a re-run without CSNL_CLASSICS_ROOT= silently targets a dead path", "fix": "resolve at runtime; the real root is <base>/Memory/Papers", "confidence": "sampled" },
+      { "where": "scripts/archive/ingest_rec_log.py", "defect": "consumes only metadata_log.csv[dois] — a column measured ~10% wrong at HIGH confidence (23% for 2019) — and discards attribution, keywords and summary", "impact": "~130-160 bogus rows already in the merged corpus, none adjudicated by the lab_irrelev filter", "fix": "re-resolve DOIs from the APA strings; parse the letters themselves", "confidence": "sampled" },
+      { "where": "config/researchers.yaml + docs/CSNL-INFO.md §2", "defect": "MJC/JHR/HJH/HOJ/SHP/SHL absent from both; SYJ present in researchers.yaml but absent from §2 (which check_materials.py trusts); SK present in §2 but absent from researchers.yaml", "impact": "active_people() never resolves SYJ; MJC's 24 PB decks + 81 CWLL entries are dropped or junk-attributed", "fix": "reconcile against initials{} here", "confidence": "verified" },
+      { "where": "anywhere a NAS filename is compared", "defect": "no NFC normalisation", "impact": "silent misses on every diacritic and Korean name", "fix": "unicodedata.normalize('NFC', name) first — see the `unicode` block", "confidence": "verified" },
+      { "where": "state/schema_archive.sql:58", "defect": "archive_paper_sources.source CHECK IN ('classics_smb','cwll_rec_log','pi_network')", "impact": "inserting 'paperblitz' FAILS", "fix": "use archive_meeting_summaries (no such constraint) or add an idempotent ALTER first", "confidence": "sampled" }
+    ]
+  },
+
+  "consumers": [
+    "scripts/weekly/check_materials.py  — must read this instead of embedding MM/GRM/PB rules (directories.mm.date_token_forms + ignore_rules + initials{}.dirs_absent)",
+    "scripts/weekly/ingest_grm_nas.py   — classify() should consult directories.grm_current.observed_patterns + matching_policy.noise_tokens + initials{} aliases/korean_name",
+    "scripts/archive/ingest_classics.py — resolve DEFAULT_ROOT via mount.resolve_rule; apply unicode.rule",
+    "any NAS-traversing script          — MUST apply walk_rules (prune set + follow_symlinks:false) and unicode.rule",
+    "docs/CSNL-INFO.md §2/§3a/§3b       — narrative view; this file is the machine view. §3a/§3b are measured WRONG here; fix them from this file, not the reverse."
+  ],
+
+  "maintenance": {
+    "how_to_add_a_new_naming_convention": "Add a form to the relevant directories.<x>.observed_patterns or date_token_forms WITH an example, a counterexample if any, a frequency, and a confidence. Do NOT add a branch to code.",
+    "how_to_add_a_person": "Add an initials.<INIT> entry with aliases + do_not_merge + dirs + evidence + confidence. If it looks like an alias of an existing initial, first satisfy initials._alias_policy.adjudication_method and record the verdict in merge_allowed or do_not_merge.",
+    "how_to_re_verify": "Re-run a bounded read-only listing (no file contents needed for anything marked 'verified' here): share root, MM/*, GRM/2026/*, GRM/GRM Archive/*, GRM/GRM_magazine, GRM/PaperBlitz.json, Memory/Papers (names only), Memory/GRM_archive/_by_presenter. That is ~15 directory listings and one 37 KB JSON read. Update measured_at.",
+    "nas_discipline": "Never mount or re-authenticate. Max ~3 concurrent readers. Sample to confirm; do not re-crawl."
+  }
+}
