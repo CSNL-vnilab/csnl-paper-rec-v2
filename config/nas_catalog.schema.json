@@ -1,0 +1,51 @@
+{
+  "_doc": "P34 NAS metadata catalog — OBSERVED reality recorded as DATA, not hardcoded in code.",
+  "_principle": [
+    "Operator directive 2026-07-21: do NOT over-hardcode / over-hard-parse. Rigid regexes make real",
+    "material unfindable because the lab's naming is inconsistent. Instead: record what is ACTUALLY",
+    "observed (patterns + counterexamples + samples + coverage) here, and let code match tolerantly,",
+    "guided by this catalog. A new convention should be a catalog edit, never a code change.",
+    "Never hardcode a /Volumes/... path: the volume name depends on mount order (resolve at runtime)."
+  ],
+  "version": 1,
+  "mount": {
+    "host": "147.47.70.15",
+    "share": "CSNL_new",
+    "protocols_open": ["smb/445", "afp/548"],
+    "resolve_at_runtime": "scripts/weekly/ingest_grm_nas._resolve_nas_base()",
+    "auth_note": "ONE attempt only; the NAS auto-bans repeated logins. Never re-auth from an agent."
+  },
+  "initials": {
+    "_shape": {
+      "<INIT>": {
+        "full_name": "str",
+        "status": "active|alumni|unknown",
+        "aliases": ["tokens actually seen on disk / calendar, e.g. MJ, MinJin, KY, LBY"],
+        "dirs": { "mm": "MM/<INIT>", "memory": "Memory/<INIT>", "people": "people/<INIT>" },
+        "dirs_absent": ["subtrees this person legitimately has none of"],
+        "observed_filename_tokens": ["how THIS person's files actually look"],
+        "evidence": "where observed"
+      }
+    }
+  },
+  "directories": {
+    "_shape": {
+      "<logical name>": {
+        "path_template": "GRM/{year}/{YYYYMMDD}",
+        "purpose": "str",
+        "observed_patterns": [
+          { "regex_or_glob": "str", "meaning": "grm|pb|mm|other", "frequency": "n of m sampled", "examples": ["..."] }
+        ],
+        "deviations": ["real filenames that break the assumed rule — the reason we do not hardcode"],
+        "date_encoding": "yymmdd|YYYYMMDD|none|mixed",
+        "coverage": { "date_range": "str", "count": 0 },
+        "confidence": "verified|sampled|assumed"
+      }
+    }
+  },
+  "consumers": [
+    "scripts/weekly/check_materials.py  — must read this instead of embedding MM/GRM/PB rules",
+    "scripts/weekly/ingest_grm_nas.py   — classify() should consult observed_patterns",
+    "docs/CSNL-INFO.md §3a/§3b          — narrative view; this file is the machine view"
+  ]
+}

@@ -1,39 +1,25 @@
--- state/schema_v3.sql — v3 cron pipeline schema extensions.
--- Idempotent; applied by scripts/init_db_v3.py (or re-run scripts/init_db.py
--- which now applies both base + v3). Schema templated via __SCHEMA__ token
--- substituted with $CPR_LEDGER_SCHEMA (default csnl_paper_rec).
-
--- Per (cycle_id, member_init) state machine. Drives cron_tick.py.
-CREATE TABLE IF NOT EXISTS __SCHEMA__.cycle_state(
-  cycle_id        TEXT,    -- 'YYYYMMDD' (the Friday date of cycle start)
-  member_init     TEXT,
-  unit_id         TEXT,
-  state           TEXT CHECK (state IN
-    ('pending_send','awaiting_initial_reply','reminded',
-     'awaiting_decision','decided','passed','timeout','no_rec')),
-  rid             TEXT,    -- the run_id of this cycle's active rec
-  paper_doi       TEXT,    -- the recommended paper this cycle
-  paper_title     TEXT,
-  picked_alt_doi  TEXT,    -- if researcher picked an alternate; null otherwise
-  reply_count     INTEGER DEFAULT 0,
-  last_action_at  TEXT,    -- ISO KST timestamp of last cron-fired action
-  next_action_at  TEXT,    -- ISO KST when cron should next consider this row
-  last_reply_ts   TEXT,    -- highest Slack ts processed (idempotency for replies)
-  notes           TEXT,
-  PRIMARY KEY (cycle_id, member_init)
-);
-
--- Audit log of rule-based evolutions applied at end-of-cycle.
-CREATE TABLE IF NOT EXISTS __SCHEMA__.evolution_log(
-  id            TEXT PRIMARY KEY,
-  applied_at    TEXT,
-  cycle_id      TEXT,
-  change_type   TEXT,    -- 'exclusion_keyword'|'read_doi'|'query_seed_drop'|'criteria'
-  unit_id       TEXT,
-  detail_json   TEXT,    -- the before/after, and the supporting feedback rows
-  source        TEXT     -- 'feedback' | 'silence_pattern' | 'manual'
-);
-
-CREATE INDEX IF NOT EXISTS ix_cycle_state_state ON __SCHEMA__.cycle_state(state);
-CREATE INDEX IF NOT EXISTS ix_cycle_state_cycle ON __SCHEMA__.cycle_state(cycle_id);
-CREATE INDEX IF NOT EXISTS ix_evol_cycle        ON __SCHEMA__.evolution_log(cycle_id);
+-- state/schema_v3.sql — RETIRED. Tombstone only: this file defines NO objects.
+--
+-- QUARANTINED BY P32 (2026-06-12) — DO NOT RECREATE.
+-- This file used to hold the v3 Slack-cron pipeline extensions:
+--     cycle_state    (per-(cycle_id, member_init) state machine)
+--     evolution_log  (rule-based end-of-cycle evolution audit)
+--   + ix_cycle_state_state / ix_cycle_state_cycle / ix_evol_cycle
+--
+-- P32 verified both tables 0-row / 0-live-code-reference / 0-FK / 0-view-
+-- dependency and renamed them `cycle_state_dead` / `evolution_log_dead` in
+-- the ledger. Their create-if-not-exists blocks were left here by mistake,
+-- so any `python3 scripts/init_db.py` run silently RESURRECTED both
+-- under their original names (and init_db's verifier demanded them). The DDL
+-- is removed here to end that drift; scripts/init_db.py no longer applies
+-- this file at all.
+--
+-- The only remaining consumers of these two tables are the already-retired
+-- Slack scripts under scripts/_legacy/ (cron_tick.py, apply_evolution.py,
+-- run_weekly_cron.sh, run_evolution_cron.sh). They are not wired to any live
+-- path; the P23 Notion delivery harness replaced them.
+--
+-- Do NOT re-add DDL here. Reviving the v3 cron path requires an explicit,
+-- operator-approved migration under state/migrations/ (and a decision on
+-- whether to rename the `*_dead` tables back rather than create empty ones).
+-- Everything above is reversible via git history for this file.

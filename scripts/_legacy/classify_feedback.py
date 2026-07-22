@@ -19,7 +19,9 @@ import re
 import sys
 from pathlib import Path
 
-_ROOT = Path(__file__).resolve().parent.parent
+# parents[2] (not parent.parent) — this file was retired from scripts/ into
+# scripts/_legacy/ and sits one level deeper; _ROOT must still be the repo root.
+_ROOT = Path(__file__).resolve().parents[2]
 
 # Korean/English cue lexicon — conservative; ambiguous cases stay "thread_reply"
 CUES = {

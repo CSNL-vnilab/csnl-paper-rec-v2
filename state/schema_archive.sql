@@ -287,55 +287,36 @@ COMMENT ON TABLE __SCHEMA__.archive_paper_synopses IS
   'Read by pick_next.py and rendered by SKILL.md Stage 2 Block 2.';
 
 -- =========================================================================
--- P19b — evolution-workflow foundation (3 new tables, schema only).
+-- P19b — evolution-workflow foundation (1 remaining table, schema only).
 -- See docs/HARNESS-ALGORITHM-DESIGN.md "evolution workflow" + Opus reviewer's
--- Part 2 design. These tables HOLD the signals that the future
--- `archive-feedback-analyst` agent (P20) will read. They are NOT yet
+-- Part 2 design. This table HOLDS the signals that the future
+-- `archive-feedback-analyst` agent (P20) will read. It is NOT yet
 -- written by any plugin script — the schema lands first so the operator
 -- can manually populate during cold-start while the agent gets built.
+--
+-- QUARANTINED BY P32 (2026-06-12) — DO NOT RECREATE.
+-- The other two P19b tables were never written by anything and were verified
+-- 0-row / 0-code-reference / 0-FK / 0-view-dependency, then renamed in the
+-- ledger to `archive_queue_feedback_dead` / `archive_outcome_signals_dead`:
+--     (1) archive_queue_feedback  — free-text queue feedback (Stage 4 /
+--         session-close prose); index ix_arch_queue_fb_rid
+--     (2) archive_outcome_signals — quarterly retrospective outcome survey
+--         (read/cite/use); index ix_arch_outcome_rid
+-- Their create-if-not-exists blocks were left here by mistake, so any
+-- `python3 scripts/init_db.py` run silently RESURRECTED both under their
+-- original names. The DDL is removed to end that drift; the names are also
+-- gone from scripts/init_db.py `_TABLES` (its post-apply verifier no longer
+-- demands them). Reviving either one requires an explicit, operator-approved
+-- migration under state/migrations/ — and a decision on whether to rename
+-- the `*_dead` tables back rather than create empty ones. Reversible via git.
 -- =========================================================================
-
--- (1) Free-text feedback channel — researcher writes prose about the queue
--- itself (not about a specific paper). Captured at Stage 4 meta-review OR at
--- session-close via an optional prompt. Plugin will write here once the
--- corresponding scripts ship in P20; the table is allowlist-compatible.
-CREATE TABLE IF NOT EXISTS __SCHEMA__.archive_queue_feedback(
-  id              TEXT PRIMARY KEY,       -- uuid
-  researcher_id   TEXT NOT NULL,
-  session_id      TEXT,
-  feedback_kind   TEXT NOT NULL CHECK (feedback_kind IN
-    ('too_classic','too_recent','wrong_topic','wrong_method',
-     'queue_thin','too_familiar','other')),
-  free_text       TEXT,
-  collected_at    TEXT NOT NULL,           -- ISO KST
-  source          TEXT CHECK (source IN
-    ('meta_review','session_close','retrospective','operator'))
-);
-CREATE INDEX IF NOT EXISTS ix_arch_queue_fb_rid
-  ON __SCHEMA__.archive_queue_feedback(researcher_id, collected_at DESC);
-
--- (2) Retrospective outcome signals — non-circular ground truth (codex #9).
--- Quarterly survey: "of papers recommended in the last 3 months, did you
--- read / cite / use it?" Collected via a new slash command at P20.
-CREATE TABLE IF NOT EXISTS __SCHEMA__.archive_outcome_signals(
-  id              TEXT PRIMARY KEY,
-  researcher_id   TEXT NOT NULL,
-  canonical_id    TEXT NOT NULL,
-  survey_period   TEXT NOT NULL,           -- e.g. '2026-Q3'
-  outcome         TEXT NOT NULL CHECK (outcome IN
-    ('not_read','read_skim','read_full','cited','will_cite','discussed','dropped')),
-  collected_at    TEXT NOT NULL,
-  notes           TEXT,
-  UNIQUE (researcher_id, canonical_id, survey_period)
-);
-CREATE INDEX IF NOT EXISTS ix_arch_outcome_rid
-  ON __SCHEMA__.archive_outcome_signals(researcher_id, survey_period);
 
 -- (3) Evolution proposal ledger — every operator-gated change to the
 -- archive layer (lexicon adds, taxonomy edits, composite-weight re-calibration,
 -- queue-growth requests) lands here. Operator-only writes via the future
--- apply_evolution.py script. Mirrors the existing `evolution_log` table from
--- v3 but scoped to the archive layer with richer fields.
+-- apply_evolution.py script. Mirrors the retired v3 evolution-audit table
+-- (quarantined by P32, see state/schema_v3.sql) but scoped to the archive
+-- layer with richer fields.
 CREATE TABLE IF NOT EXISTS __SCHEMA__.archive_evolution_proposals(
   id                  TEXT PRIMARY KEY,
   proposed_at         TEXT NOT NULL,

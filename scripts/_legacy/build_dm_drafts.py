@@ -23,7 +23,10 @@ import re
 import sys
 from pathlib import Path
 
-_ROOT = Path(__file__).resolve().parent.parent
+# parents[2] (not parent.parent) — this file was retired from scripts/ into
+# scripts/_legacy/ and sits one level deeper; _ROOT must still be the repo root
+# (rules/01_tone.md BANNED_TERMS is read relative to it).
+_ROOT = Path(__file__).resolve().parents[2]
 RID = sys.argv[1] if len(sys.argv) > 1 else "20260519-1539"
 rd = _ROOT / "state" / "runs" / RID
 

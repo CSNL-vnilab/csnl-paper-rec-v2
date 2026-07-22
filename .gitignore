@@ -67,3 +67,6 @@ state/archive/_backup_p32/
 /soft
 /the
 /token
+
+# P34 autonomous exploration records (raw; distilled output lands in docs/)
+state/archive/_explore/

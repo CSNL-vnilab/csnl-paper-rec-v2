@@ -77,18 +77,38 @@ Plus the two correctness bugs that destabilize recommendations:
 
 ### R-SOURCES — free discovery sources + tooling (the "search new info" pillar)
 
-Investigated 2026-07-20 (web-verified). Runtime is **Python-only (no node)**, keyless, no paid keys.
+Investigated 2026-07-20 (web-verified). Runtime is **Python-only (no node)** and **keyless-by-default** — it runs with no credentials at all; two *free* keys (OpenAlex, Semantic Scholar) each unlock one extra source / rate tier. No paid keys anywhere. See "Credentials" below for exactly which variables the code reads.
 
 **Two-tier discovery:**
-- **Unattended weekly cron (pure Python, node-free, keyless)** — new `scripts/archive/fetch_new_papers.py`:
+- **Unattended weekly cron (pure Python, node-free, runs keyless)** — new `scripts/archive/fetch_new_papers.py`:
   - **Behaviour-based core = Semantic Scholar Recommendations API** (`POST /recommendations/v1/papers/`, keyless). Feed **positive = each researcher's `save_later`+`already_read` canonical→S2 IDs, negative = `not_relevant` IDs** → returns new (~≤60d) relevant papers. This *is* the "기존 정보(읽음/관심없음) 기반 새 논문 검색" requirement, natively.
-  - **Breadth = direct free APIs** (arXiv, Europe PMC, PubMed, bioRxiv/medRxiv, Crossref, DOAJ) — reuse the vetted per-source clients in `paper_search_mcp.academic_platforms.*` (imported, not reimplemented), filtered incrementally by the **R-WATERMARK** cursor.
+  - **Breadth = direct free APIs** (arXiv, Europe PMC, PubMed, bioRxiv/medRxiv, Crossref, DOAJ — plus OpenAlex **when `OPENALEX_API_KEY` is set**) — reuse the vetted per-source clients in `paper_search_mcp.academic_platforms.*` (imported, not reimplemented), filtered incrementally by the **R-WATERMARK** cursor.
   - Every hit → title_norm/DOI dedup (**R-DEDUP**) → `archive_relevance_decisions`/queue-input.
 - **Attended operator deep-scout** — `paper-search-mcp` (installed `pip install --user paper-search-mcp`; wired in `.mcp.json`; 27 sources incl. PubMed/bioRxiv/medRxiv/Crossref/DOAJ that `crawl.mjs` lacks) + `crawl.mjs` full-text (needs node).
 
 **Verdicts on the named tools:** **alphaXiv** = OAuth-gated MCP only, no RSS/REST → *not* viable for keyless cron (substitute: arXiv native category RSS + S2 ranking). **SciSpace** = enterprise-only, no free API → dropped.
 
-**⚠ Operator action:** **OpenAlex now requires a free API key (since 2026-02-13)** — `crawl.mjs`'s OpenAlex path 409s without it. Add `OPENALEX_API_KEY` to `.env` (free at openalex.org/settings/api); the Python fetcher + `crawl.mjs` read it. Until then the fetcher relies on the keyless sources (S2/arXiv/EuropePMC/PubMed/bioRxiv/Crossref/DOAJ).
+#### Credentials — what the code actually reads (G7, corrected 2026-07-21)
+
+An earlier revision of this line claimed "the Python fetcher + `crawl.mjs` read `OPENALEX_API_KEY`". That was **false on both counts** — a repo-wide grep found the string only in this document (`state/archive/_explore/batch01/D-gaps.md` §2.3). Half of it is now true; the state below is verified, not aspirational.
+
+| Variable | Read by | Absent → |
+|---|---|---|
+| `OPENALEX_API_KEY` | ✅ `fetch_new_papers.py` (`OPENALEX_KEY_ENV` → `resolve_api_keys()` → `import_searchers()` gate → `apply_api_key()` sets the session's `api_key` query param) | source `openalex` **skipped**, one explanatory log line per run; the other 8 sources run unchanged |
+| `OPENALEX_API_KEY` | ❌ **`pipeline/crawl.mjs` still does NOT read it** (`srcOpenAlex` sends `&mailto=` only, `crawl.mjs:74-77`) — and `mailto` is no longer a polite-pool lever. Its OpenAlex path will 409 once the free credits run out. Node is not installed, so `crawl.mjs` is dormant; wiring it is a separate unit. | 409 after ~100 requests (see below) |
+| `SEMANTIC_SCHOLAR_API_KEY` (alias `S2_API_KEY`) | ✅ `fetch_new_papers.py` — `s2_recommend(api_key=None)` resolves it from the env and sends `x-api-key`; the breadth `semantic` source is keyed too, because `paper_search_mcp`'s `SemanticSearcher.get_api_key()` reads the same variable from `os.environ` and `load_dotenv_once()` puts the repo `.env` there | unauthenticated, lower rate limit, warned once — **not** fatal |
+| `CSNL_POLITE_MAILTO` / `CROSSREF_MAILTO` / `OPENALEX_MAILTO` | ✅ `fetch_new_papers.py` `--mailto` default (`resolve_mailto()`) | falls back to the placeholder `lab@example.org`, which the dry-run flags in-line |
+
+**⚠ Operator action:** **OpenAlex has required a free API key since 2026-02-13** (the `mailto` polite pool was retired; an unkeyed caller gets ~100 free credits and *then* a **terminal** HTTP 409 — it does not fail on request 1, so an unkeyed cron fails silently-late). Get the free key at <https://openalex.org/settings/api> and add `OPENALEX_API_KEY=…` to `.env`. Until then the fetcher runs on its keyless sources (S2/arXiv/EuropePMC/PubMed/bioRxiv/medRxiv/Crossref/DOAJ) and simply omits `openalex` — degraded, never broken.
+
+**Key handling rules (enforced in code):**
+- Keys are read from the **environment only** — `os.environ`, with the repo `.env` loaded as a no-overwrite fallback. There is deliberately **no `--openalex-key` / `--s2-api-key` CLI flag**: argv is world-readable via `ps` and persists in shell history.
+- Key **values are never printed**; status is reported as `present` / `ABSENT` by `ApiKeys.status_lines()`, in both dry-run and `--apply`.
+- A source that is skipped for want of a key is recorded in `no_advance[...] = 'no_key'`, exactly like a failed source: **it must not advance its watermark or stamp `last_success_at`** (it never ran).
+- `--require-keys` turns the graceful degradation off — exit `2` unless both keys are set, for an operator who wants a hard failure instead of a quiet partial fetch.
+- The vendored clients swallow a non-200 and return `[]`; a keyed source that fetches 0 rows therefore also prints a "re-check the key — an exhausted/invalid key returns 409, reported as empty" hint.
+
+**Still open (not this unit):** `--s2` only prints the recommendation *plan* — `s2_recommend()` is not yet called from `_apply()`, so the behaviour-based S2 core above is built and egress-guarded but not wired into the fetch loop. `pipeline/crawl.mjs` needs the same one-line `api_key` wiring (and Node installed) before its OpenAlex path is usable.
 
 ### Go-live (operator `!`, gated — hand-off)
 ```

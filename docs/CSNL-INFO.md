@@ -5,8 +5,17 @@
 > This file is the basis for the weekly material-completeness check and its email guidance
 > (`scripts/weekly/check_materials.py` + `scripts/weekly/notify.py`).
 >
-> Machine-readable consumer note: `notify.py` reads addresses from
-> `config/researchers.yaml`, which is kept in sync with §2 below.
+> Machine-readable consumer note — **§2 below is the source of truth for member
+> addresses**, and the two consumers reach it differently:
+> * `scripts/weekly/check_materials.py` parses the fenced YAML block of *this* file
+>   and takes `email` straight from §2 (active members only).
+> * `scripts/weekly/notify.py` does **not** read this file. It reads
+>   `config/researchers.yaml` → `researchers.<INIT>.email`, which is a **manual
+>   mirror** of §2 — nothing syncs the two automatically. When an address changes,
+>   edit §2 first, then copy it into `config/researchers.yaml`.
+>
+> Known divergence: `config/researchers.yaml` carries **SYJ (조수영)**, who has no
+> row in §2; that entry's `email` is therefore `""` and notify skips SYJ.
 >
 > ⚠ Contains member email addresses — private repo only; do not publish.
 

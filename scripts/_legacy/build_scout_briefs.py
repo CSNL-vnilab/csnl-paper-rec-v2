@@ -17,7 +17,9 @@ import json
 import sys
 from pathlib import Path
 
-_ROOT = Path(__file__).resolve().parent.parent
+# parents[2] (not parent.parent) — this file was retired from scripts/ into
+# scripts/_legacy/ and sits one level deeper; _ROOT must still be the repo root.
+_ROOT = Path(__file__).resolve().parents[2]
 _PHASES = {"data_collection", "analysis", "manuscript_draft"}
 
 

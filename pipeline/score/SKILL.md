@@ -25,9 +25,28 @@ scoring philosophy to the project-DB-driven csnl-paper-rec pipeline.
 
 ## Input
 
-`state/runs/<RUN_ID>/05_deduped.json` — output of `pipeline/04_dedup.py`.
+> **v1 depth playbook.** This file is retained (per `docs/HARNESS-DESIGN-v2.md`
+> Phase 4) for the D1–D5 rubric and its anti-hallucination rules — the rubric is
+> live, the stage plumbing described here is not. The v1 input
+> `05_deduped.json` and the `pipeline/04_dedup.py` that was to produce it
+> **were never written in this repo**.
 
-Shape per unit:
+**Live input.** The scoring is done by the `unit-scout` agent in the same pass
+that discovered the candidates, over the candidate list it holds in-session
+before writing `state/runs/<RID>/scout_<unit>.json`. Dedup has already been
+applied at that point, against the unit brief's `dedup_terms`
+(`scripts/dedup_snapshot.py` → `_dedup_snapshot.json`), per
+`rules/04_dedup_feedback.md`. Read `.claude/skills/paper-rec-scout/SKILL.md`
+for the procedure the scout follows; read this file for how to score.
+
+One divergence to respect: v1 scored from abstracts (`abstract_quote`), while
+v2 requires the scout to have **read the full text** and to quote it — an
+abstract-only candidate is capped at composite 6
+(`.claude/skills/paper-rec-scout/SKILL.md` §Step 3). Everything else in the
+rubric carries over as written.
+
+Shape per unit (the v1 `05_deduped.json` element; the v2 scout carries the same
+fields, plus `fulltext_mode` / `fulltext_chars` / `quote` / `grounding`):
 ```json
 {
   "unit_id": "JOP",
@@ -201,7 +220,8 @@ Rank all candidates in the unit by `paper_score` descending.
 }
 ```
 
-**Shape rules (fixed by BUILD_SPEC contract):**
+**Shape rules (fixed by the v1 BUILD_SPEC contract — that spec file lives in
+the predecessor repo, not here):**
 - `top` is either a full scored paper object or `null`.
 - `carryover` is a list of 0–5 scored paper objects (may be empty).
 - `no_rec_reason` is `null` when `top` is present; one of
@@ -214,9 +234,15 @@ Rank all candidates in the unit by `paper_score` descending.
 
 ## Handoff
 
-After writing `06_scored.json`, proceed to `pipeline/post/SKILL.md` to draft
+After writing the scored result, proceed to `pipeline/post/SKILL.md` to draft
 Korean channel messages. The operator's Opus agent team continues in the same
 session — no new API call, no script.
+
+In v2 the scored result is not `06_scored.json`; the scout writes
+`state/runs/<RID>/scout_<unit>.json` (`candidates[]` composite-ranked, `top` =
+rank 1 or `null`, `reason` in place of `no_rec_reason`), and `draft-writer`
+reads its `top`. The `06_scored.json` name below is the v1 artifact and is kept
+only so the example summary reads as originally written.
 
 Print a summary before handing off:
 ```

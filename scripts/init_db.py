@@ -20,8 +20,19 @@ from _db import load_env, exec_sql, query_json, ledger_schema  # noqa: E402
 
 _REPO_ROOT = Path(__file__).resolve().parent.parent
 _SCHEMA_SQL         = _REPO_ROOT / "state" / "schema.sql"
-_SCHEMA_V3_SQL      = _REPO_ROOT / "state" / "schema_v3.sql"        # cron/state machine
 _SCHEMA_ARCHIVE_SQL = _REPO_ROOT / "state" / "schema_archive.sql"  # P13 archive layer
+
+# QUARANTINED BY P32 (2026-06-12) — DO NOT RECREATE.
+# Four tables were renamed `<t>_dead` in the ledger after being verified
+# 0-row / 0-code-reference / 0-FK / 0-view-dependency:
+#     cycle_state, evolution_log,
+#     archive_queue_feedback, archive_outcome_signals
+# Their DDL is gone from state/schema_v3.sql + state/schema_archive.sql and
+# their names are gone from _TABLES below, so this script can no longer
+# resurrect them empty (and no longer fails verification for their absence).
+# state/schema_v3.sql held ONLY cycle_state + evolution_log, so it is now a
+# tombstone with no objects and is deliberately NOT applied here.
+# Reviving any of them needs an explicit, operator-approved migration.
 
 _TABLES = (
     "paper_recommendations",
@@ -29,9 +40,6 @@ _TABLES = (
     "paper_recommendations_read",
     "feedback_events",
     "exclusion_rules",
-    # v3 additions (cron state machine + evolution audit)
-    "cycle_state",
-    "evolution_log",
     # P13 archive layer (interview/marketplace plugin reference data)
     "archive_papers",
     "archive_paper_sources",
@@ -45,8 +53,8 @@ _TABLES = (
     # P14 dimension tagging (composite ranking + chunk mix)
     "archive_paper_dim_tags",
     # P19b evolution-workflow foundation
-    "archive_queue_feedback",
-    "archive_outcome_signals",
+    # (archive_queue_feedback / archive_outcome_signals: quarantined by P32,
+    #  see the note above — intentionally absent)
     "archive_evolution_proposals",
 )
 
@@ -61,10 +69,8 @@ def main() -> int:
     ddl = _SCHEMA_SQL.read_text(encoding="utf-8").replace("__SCHEMA__", schema)
     print(f"[init_db] applying ledger schema '{schema}' (idempotent)…")
     exec_sql(ddl)
-    if _SCHEMA_V3_SQL.exists():
-        ddl_v3 = _SCHEMA_V3_SQL.read_text(encoding="utf-8").replace("__SCHEMA__", schema)
-        print(f"[init_db] applying v3 cron schema extensions…")
-        exec_sql(ddl_v3)
+    # NOTE: state/schema_v3.sql is NOT applied — it is a P32 tombstone with no
+    # objects left (see the quarantine note at the top of this file).
     if _SCHEMA_ARCHIVE_SQL.exists():
         ddl_arc = _SCHEMA_ARCHIVE_SQL.read_text(encoding="utf-8").replace("__SCHEMA__", schema)
         print(f"[init_db] applying P13 archive schema (papers + queues + responses)…")

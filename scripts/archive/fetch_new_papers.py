@@ -29,6 +29,29 @@ WHAT THIS FILE DOES (fetch only):
      researcher's pos(save/read)/neg(not_relevant) lists, 429/Retry-After
      backoff, post-filter by pub_date. EGRESS RULE: the request body carries
      ONLY public paper IDs — never researcher_id / name / email / any .env value.
+  5. API KEYS — resolved from the ENVIRONMENT ONLY (process env, with the repo
+     `.env` loaded as a no-overwrite fallback). See "CREDENTIALS" below.
+
+CREDENTIALS (G7 — these are read, not merely documented):
+  * `OPENALEX_API_KEY` — REQUIRED by OpenAlex since 2026-02-13 (the `mailto`
+    polite pool was discontinued; an unkeyed caller gets ~100 free credits and
+    then a *terminal* HTTP 409 — it does NOT fail on request 1). Free key:
+    <https://openalex.org/settings/api>. When the key is ABSENT the `openalex`
+    source is SKIPPED with one clear log line per run and every other source
+    runs normally (degrade, never crash). When present it is threaded into the
+    searcher's session as the `api_key` query param.
+  * `SEMANTIC_SCHOLAR_API_KEY` (alias `S2_API_KEY`) — OPTIONAL. Two consumers:
+    (a) `s2_recommend()` sends it as `x-api-key`; (b) the breadth `semantic`
+    source — `paper_search_mcp`'s SemanticSearcher reads the same variable out
+    of `os.environ` itself, so loading the repo `.env` here keys that path too.
+    Absent -> unauthenticated access at a lower rate limit (logged, not fatal).
+  * Polite-pool mailto — `CSNL_POLITE_MAILTO` / `CROSSREF_MAILTO` /
+    `OPENALEX_MAILTO` override the `--mailto` default; the built-in default is
+    a placeholder and is warned about (a fake mailto gets you demoted).
+  NO key is ever accepted on the command line and none is ever printed: argv is
+  world-readable via `ps` and lands in shell history. Presence is reported as
+  `present` / `ABSENT`; the value never leaves this process except in the
+  request it authenticates.
 
 BOUNDARIES (P33, non-negotiable):
   * DEFAULT = dry-run (prints the plan; NO network, NO DB).
@@ -48,6 +71,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import os
 import re
 import sys
 from dataclasses import dataclass
@@ -57,6 +81,7 @@ from typing import Optional
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent.parent
+sys.path.insert(0, str(ROOT / "pipeline"))   # `_db` lives here (WatermarkStore)
 sys.path.insert(0, str(HERE))
 
 # _common is pure (no DB connection at import). We reuse the FIXED P33 contracts:
@@ -106,6 +131,26 @@ _PRETTY_SOURCE = {
 # The S2 recommendations body is allowed EXACTLY these keys and nothing else.
 _S2_ALLOWED_BODY_KEYS = frozenset({"positivePaperIds", "negativePaperIds"})
 
+# --- credential env-var names (G7) -----------------------------------------
+OPENALEX_KEY_ENV = "OPENALEX_API_KEY"
+S2_KEY_ENVS = ("SEMANTIC_SCHOLAR_API_KEY", "S2_API_KEY")
+MAILTO_ENVS = ("CSNL_POLITE_MAILTO", "CROSSREF_MAILTO", "OPENALEX_MAILTO")
+
+OPENALEX_KEY_URL = "https://openalex.org/settings/api"
+# One sentence the operator can act on, reused by dry-run and --apply.
+OPENALEX_ABSENT_MSG = (
+    f"{OPENALEX_KEY_ENV} absent -> source 'openalex' SKIPPED. OpenAlex has "
+    "required a key since 2026-02-13 (the mailto polite pool was retired; an "
+    "unkeyed caller gets ~100 credits then a terminal HTTP 409). Free key at "
+    f"{OPENALEX_KEY_URL} -> add `{OPENALEX_KEY_ENV}=...` to .env. All other "
+    "sources are keyless and run normally."
+)
+S2_ABSENT_MSG = (
+    f"{S2_KEY_ENVS[0]} absent -> Semantic Scholar used UNAUTHENTICATED "
+    "(shared, much lower rate limit; 429s are retried with backoff). Free key: "
+    "https://www.semanticscholar.org/product/api -> add it to .env."
+)
+
 
 # ---------------------------------------------------------------------------
 # Source registry — adapter specs over paper_search_mcp clients.
@@ -118,6 +163,7 @@ class SourceSpec:
     mode: str          # 'query' (topic search) | 'firehose' (date-window sweep)
     preprint: bool = False
     browser_ua: bool = False   # DOAJ sits behind Cloudflare -> browser UA
+    key_env: Optional[str] = None   # HARD requirement: no key -> source skipped
 
 
 SOURCES: tuple[SourceSpec, ...] = (
@@ -129,7 +175,100 @@ SOURCES: tuple[SourceSpec, ...] = (
     SourceSpec("semantic", "semantic", "SemanticSearcher", "query"),
     SourceSpec("biorxiv", "biorxiv", "BioRxivSearcher", "firehose", preprint=True),
     SourceSpec("medrxiv", "medrxiv", "MedRxivSearcher", "firehose", preprint=True),
+    # Key-gated: skipped (with one log line) whenever OPENALEX_API_KEY is unset,
+    # so the fetcher's behaviour today is byte-identical to before this source
+    # existed — and becomes richer the moment the operator drops the key in.
+    SourceSpec("openalex", "openalex", "OpenAlexSearcher", "query",
+               key_env=OPENALEX_KEY_ENV),
 )
+
+
+# ===========================================================================
+# Credentials — environment ONLY (never argv, never printed).
+# ===========================================================================
+
+_ENV_LOADED = False
+
+
+def load_dotenv_once(path: Optional[Path] = None) -> None:
+    """Load `KEY=VALUE` lines from the repo `.env` into os.environ (NO overwrite).
+
+    Same contract as `pipeline/_db.load_env`, re-implemented here so that merely
+    resolving an API key never imports `_db` (which would pull psycopg2/psql into
+    the pure dry-run path). Idempotent; a missing .env is not an error."""
+    global _ENV_LOADED
+    if _ENV_LOADED:
+        return
+    _ENV_LOADED = True
+    env_path = path or (ROOT / ".env")
+    try:
+        if not env_path.exists():
+            return
+        for raw in env_path.read_text(encoding="utf-8").splitlines():
+            line = raw.strip()
+            if not line or line.startswith("#") or "=" not in line:
+                continue
+            key, _, val = line.partition("=")
+            key, val = key.strip(), val.strip().strip('"').strip("'")
+            if key and key not in os.environ:
+                os.environ[key] = val
+    except OSError:
+        return  # unreadable .env degrades to "process env only"
+
+
+def env_first(*names: str) -> Optional[str]:
+    """First non-empty value among `names` in the environment (.env loaded), or
+    None. Whitespace-only counts as absent."""
+    load_dotenv_once()
+    for n in names:
+        v = (os.environ.get(n) or "").strip()
+        if v:
+            return v
+    return None
+
+
+@dataclass(frozen=True)
+class ApiKeys:
+    """Resolved credentials. Values are NEVER logged — only `present`/`ABSENT`."""
+    openalex: Optional[str] = None
+    s2: Optional[str] = None
+
+    def for_env(self, key_env: Optional[str]) -> Optional[str]:
+        if key_env == OPENALEX_KEY_ENV:
+            return self.openalex
+        if key_env in S2_KEY_ENVS:
+            return self.s2
+        return None
+
+    def status_lines(self) -> list[str]:
+        """Operator-facing, secret-free status + the exact remediation."""
+        out = [
+            f"  {OPENALEX_KEY_ENV}: {'present' if self.openalex else 'ABSENT'}",
+            f"  {S2_KEY_ENVS[0]}: {'present' if self.s2 else 'ABSENT'}",
+        ]
+        if not self.openalex:
+            out.append("  ! " + OPENALEX_ABSENT_MSG)
+        if not self.s2:
+            out.append("  ! " + S2_ABSENT_MSG)
+        return out
+
+
+def resolve_api_keys() -> ApiKeys:
+    """Read every credential this fetcher can use from the environment.
+
+    Environment only — no CLI flag carries a key (argv is visible in `ps` and
+    persists in shell history). The repo `.env` is loaded as a no-overwrite
+    fallback, which ALSO keys `paper_search_mcp`'s SemanticSearcher: it calls
+    `get_env('SEMANTIC_SCHOLAR_API_KEY')`, which reads `os.environ`."""
+    return ApiKeys(
+        openalex=env_first(OPENALEX_KEY_ENV),
+        s2=env_first(*S2_KEY_ENVS),
+    )
+
+
+def resolve_mailto(default: str = DEFAULT_MAILTO) -> str:
+    """Polite-pool contact address from the environment, else the placeholder."""
+    return env_first(*MAILTO_ENVS) or default
 
 
 # ===========================================================================
@@ -409,23 +548,66 @@ def retry_after_seconds(resp, attempt: int, *, base: float = 2.0, cap: float = 6
 # These are only exercised by the OPERATOR under --apply.
 # ===========================================================================
 
-def import_searchers() -> dict:
+def import_searchers(keys: Optional[ApiKeys] = None, *, verbose: bool = True) -> dict:
     """Import-guard smoke: assert each expected *Searcher class + .search exists.
 
     Returns {name: (class, search-signature)}. Raises on a missing class/method
     so the operator learns immediately that `requirements-discovery.txt` is not
-    installed. NO instantiation, NO network."""
+    installed. NO instantiation, NO network.
+
+    KEY GATE: a spec with `key_env` whose key is absent is OMITTED from the
+    result (one clear log line, printed once per run) instead of being imported
+    and then failing at request 101 with OpenAlex's terminal 409. Callers treat
+    a missing name as 'source not attempted' -> its watermark must not advance."""
     import importlib
     import inspect
 
+    keys = keys if keys is not None else resolve_api_keys()
     out = {}
     for s in SOURCES:
+        if s.key_env and not keys.for_env(s.key_env):
+            if verbose:   # `--apply` already printed the status block
+                print(f"[keys] {OPENALEX_ABSENT_MSG}" if s.key_env == OPENALEX_KEY_ENV
+                      else f"[keys] {s.key_env} absent -> source '{s.name}' SKIPPED.")
+            continue
         mod = importlib.import_module("paper_search_mcp.academic_platforms." + s.module)
         cls = getattr(mod, s.cls)
         if not hasattr(cls, "search"):
             raise AttributeError(f"{s.cls} has no .search method")
         out[s.name] = (cls, inspect.signature(cls.search))
     return out
+
+
+def apply_api_key(spec: SourceSpec, searcher, keys: ApiKeys, mailto: str) -> bool:
+    """Thread the resolved credential into an instantiated searcher's session.
+
+    OpenAlex authenticates with an `api_key` query parameter; `requests.Session`
+    merges `session.params` into every request the upstream client makes, so the
+    vendored `OpenAlexSearcher` needs no patching. `mailto` is sent alongside as
+    plain contact courtesy (it is no longer a rate-limit lever, but OpenAlex
+    still uses it to reach a misbehaving client).
+
+    Semantic Scholar needs nothing here: its client calls
+    `get_env('SEMANTIC_SCHOLAR_API_KEY')` per request, and `load_dotenv_once()`
+    has already put the repo `.env` value into `os.environ`.
+
+    Returns True iff a credential was attached. Never logs the key."""
+    if not spec.key_env:
+        return False
+    key = keys.for_env(spec.key_env)
+    if not key:
+        return False
+    sess = getattr(searcher, "session", None)
+    if sess is None:
+        return False
+    try:
+        params = dict(getattr(sess, "params", None) or {})
+        params["api_key"] = key
+        params.setdefault("mailto", mailto)
+        sess.params = params
+    except Exception:
+        return False
+    return True
 
 
 class PolitenessFunnel:
@@ -530,16 +712,30 @@ class WatermarkStore:
 # S2 recommendations (network, operator-gated) — pure body-builder above.
 # ===========================================================================
 
+_S2_KEYLESS_WARNED = False
+
+
 def s2_recommend(pos_dois, neg_dois, *, funnel: PolitenessFunnel, limit: int = 50,
                  api_key: Optional[str] = None,
                  min_pub_date: Optional[date] = None) -> list:
     """Seed the S2 recommendations endpoint with pos/neg DOI lists; post-filter
     by pub_date (recency is NOT native to the POST). Refuses to send a body that
     fails the egress check. 429/Retry-After backoff. Returns a list of raw S2
-    recommendedPapers dicts (operator wires them into found records)."""
+    recommendedPapers dicts (operator wires them into found records).
+
+    `api_key=None` (the default) means RESOLVE FROM THE ENVIRONMENT — the key is
+    never a CLI argument. Absent -> unauthenticated call, warned once per run,
+    never fatal: S2 recommendations work keyless at a lower rate limit."""
+    global _S2_KEYLESS_WARNED
     import time
 
     import requests  # transitively pinned by requirements-discovery.txt
+
+    if api_key is None:
+        api_key = resolve_api_keys().s2
+    if not api_key and not _S2_KEYLESS_WARNED:
+        _S2_KEYLESS_WARNED = True
+        print(f"[keys] {S2_ABSENT_MSG}")
 
     body = build_s2_recommendation_body(pos_dois, neg_dois)
     if not egress_is_clean(body):
@@ -607,28 +803,42 @@ def load_inputs(init: str) -> Optional[dict]:
 # ===========================================================================
 
 def run_all_for_researcher(init: str, inp: dict, *, funnel: PolitenessFunnel,
-                           searchers: dict, args) -> tuple[list, dict]:
-    """Fetch across all sources for one researcher. Returns (records, failed_map).
+                           searchers: dict, args,
+                           keys: Optional[ApiKeys] = None) -> tuple[list, dict]:
+    """Fetch across all sources for one researcher. Returns (records, no_advance).
+
+    `no_advance` maps source -> reason ('failed' | 'no_key') for every source
+    that DID NOT complete a successful request this run. Both reasons mean the
+    same thing to the cursor: a source that never ran must not advance its
+    watermark (and must not stamp `last_success_at`).
 
     Per-source try/except ISOLATION lives here: a source that raises is logged
-    and skipped (its watermark won't advance), never fatal to the run."""
+    and skipped, never fatal to the run."""
+    keys = keys if keys is not None else resolve_api_keys()
     terms = inp.get("query_terms") or []
     fire_terms = inp.get("biorxiv_profile_terms") or terms
     query = " OR ".join(f'"{t}"' for t in terms) if terms else ""
     records: list[dict] = []
-    failed: dict[str, bool] = {}
+    no_advance: dict[str, str] = {}
     for spec in SOURCES:
         if args.source and spec.name != args.source:
+            continue
+        if spec.name not in searchers:
+            # Not offered by import_searchers(): a key-gated source with no
+            # credential (already explained once per run — don't spam it per
+            # researcher) or, for a keyless spec, a caller-restricted map.
+            no_advance[spec.name] = "no_key" if spec.key_env else "not_available"
             continue
         cls = searchers[spec.name][0]
         try:
             searcher = cls()
             funnel.tune(searcher, browser_ua=spec.browser_ua)
+            apply_api_key(spec, searcher, keys, funnel.mailto)
             papers = fetch_source(spec, searcher, query=query, funnel=funnel,
                                   max_results=args.max_results,
                                   firehose_days=args.firehose_days)
         except Exception as exc:  # per-source isolation — log + skip, never fatal
-            failed[spec.name] = True
+            no_advance[spec.name] = "failed"
             print(f"  [{init}/{spec.name}] FAILED (skipped): {exc.__class__.__name__}: {exc}")
             continue
         kept_papers = papers
@@ -643,15 +853,35 @@ def run_all_for_researcher(init: str, inp: dict, *, funnel: PolitenessFunnel,
             records.append(paper_to_record(p, source_api=spec.name))
         print(f"  [{init}/{spec.name}] ok: {len(kept_papers)} kept "
               f"(of {len(papers)} fetched)")
-    return dedup_records(records), failed
+        if spec.key_env and not papers:
+            # The vendored clients swallow a non-200 and return [] — for a keyed
+            # source an empty batch is the shape a credit-exhausted 409 takes.
+            print(f"  [{init}/{spec.name}] note: 0 fetched with a key present — "
+                  f"if this persists, re-check {spec.key_env} (an exhausted or "
+                  "invalid key returns HTTP 409, which the client reports as empty).")
+    return dedup_records(records), no_advance
 
 
-def _dry_run(args) -> None:
+def _selected_specs(args) -> list:
+    return [s for s in SOURCES if not args.source or s.name == args.source]
+
+
+def _dry_run(args, keys: ApiKeys) -> None:
     print("DRY-RUN (no network, no DB). fetch_new_papers.py — plan:")
-    print(f"  sources: {', '.join(s.name for s in SOURCES if not args.source or s.name == args.source)}")
+    live, gated = [], []
+    for s in _selected_specs(args):
+        (live if (not s.key_env or keys.for_env(s.key_env)) else gated).append(s.name)
+    print(f"  sources (will run): {', '.join(live) if live else '(none)'}")
+    if gated:
+        print(f"  sources (SKIPPED, no key): {', '.join(gated)}")
+    print("  keys (values never printed):")
+    for line in keys.status_lines():
+        print(line)
     print(f"  max_results/source={args.max_results}  firehose_days={args.firehose_days}  "
           f"lookback/overlap={args.lookback_days}d")
-    print(f"  mailto (polite pool)={args.mailto}   S2 seeds={'on' if args.s2 else 'off'}")
+    print(f"  mailto (polite pool)={args.mailto}"
+          f"{'  [PLACEHOLDER — set CSNL_POLITE_MAILTO or pass --mailto]' if args.mailto == DEFAULT_MAILTO else ''}"
+          f"   S2 seeds={'on' if args.s2 else 'off'}")
     inits = args.init.split(",") if args.init else [
         p.stem for p in sorted(INPUTS.glob("*.json"))]
     if not inits:
@@ -670,13 +900,18 @@ def _dry_run(args) -> None:
             clean = egress_is_clean(body)
             print(f"      S2 body: pos={len(body['positivePaperIds'])} "
                   f"neg={len(body.get('negativePaperIds', []))} egress_clean={clean}")
+    if args.s2:
+        print(f"      S2 auth: {'keyed' if keys.s2 else 'unauthenticated (lower rate limit)'}")
     print("\nDefault is dry-run. The OPERATOR runs `--apply` (attended) to fetch + "
           "write found/*.jsonl; this harness session does not.")
 
 
-def _apply(args) -> None:
+def _apply(args, keys: ApiKeys) -> None:
     # Operator-only path (attended). The agent never reaches here.
-    searchers = import_searchers()  # import-guard smoke
+    print("[keys] credential status (values never printed):")
+    for line in keys.status_lines():
+        print(line)
+    searchers = import_searchers(keys, verbose=False)  # import-guard smoke + key gate
     funnel = PolitenessFunnel(args.mailto, min_interval=args.min_interval,
                               timeout=args.timeout)
     wm = None if args.no_watermark else WatermarkStore()
@@ -689,8 +924,8 @@ def _apply(args) -> None:
         if inp is None:
             print(f"[{init}] no inputs file — skipped")
             continue
-        records, failed = run_all_for_researcher(
-            init, inp, funnel=funnel, searchers=searchers, args=args)
+        records, no_advance = run_all_for_researcher(
+            init, inp, funnel=funnel, searchers=searchers, args=args, keys=keys)
         # commit-then-advance: write the JSONL FIRST.
         out_fp = FOUND / f"{init}.jsonl"
         with out_fp.open("w", encoding="utf-8") as f:
@@ -703,8 +938,8 @@ def _apply(args) -> None:
             for spec in SOURCES:
                 if args.source and spec.name != args.source:
                     continue
-                if failed.get(spec.name):
-                    continue  # failed source: cursor stays put
+                if no_advance.get(spec.name):
+                    continue  # failed / key-gated source: cursor stays put
                 qh = query_hash(spec.name, terms)
                 stored = wm.read(spec.name, qh)
                 batch_dates = [
@@ -730,15 +965,30 @@ def main(argv=None) -> int:
     ap.add_argument("--lookback-days", dest="lookback_days", type=int, default=DEFAULT_OVERLAP_DAYS)
     ap.add_argument("--min-interval", dest="min_interval", type=float, default=1.0)
     ap.add_argument("--timeout", type=int, default=25)
-    ap.add_argument("--mailto", default=DEFAULT_MAILTO)
+    ap.add_argument("--mailto", default=resolve_mailto(),
+                    help=f"polite-pool contact address (env: {'/'.join(MAILTO_ENVS)}).")
     ap.add_argument("--s2", action="store_true", help="include the S2 recommendations seed plan.")
     ap.add_argument("--no-watermark", dest="no_watermark", action="store_true",
                     help="OPERATOR: skip the watermark DB read/advance.")
+    # NOTE: there is deliberately NO --openalex-key / --s2-api-key flag. Keys come
+    # from the environment (.env) only: argv is readable by any local process via
+    # `ps` and is persisted in shell history.
+    ap.add_argument("--require-keys", dest="require_keys", action="store_true",
+                    help=f"exit 2 unless {OPENALEX_KEY_ENV} and {S2_KEY_ENVS[0]} are "
+                         "both set (default: degrade — skip openalex, S2 keyless).")
     args = ap.parse_args(argv)
+    keys = resolve_api_keys()
+    if args.require_keys:
+        missing = [n for n, v in ((OPENALEX_KEY_ENV, keys.openalex),
+                                  (S2_KEY_ENVS[0], keys.s2)) if not v]
+        if missing:
+            print(f"--require-keys: missing {', '.join(missing)} — set them in .env "
+                  f"({OPENALEX_KEY_URL} for OpenAlex). Refusing to run degraded.")
+            return 2
     if args.apply:
-        _apply(args)
+        _apply(args, keys)
     else:
-        _dry_run(args)
+        _dry_run(args, keys)
     return 0
 
 

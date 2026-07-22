@@ -24,16 +24,27 @@ units:
     members: [SYJ, BHL]
     note: "JSL 후속 공동연구 — 한 추천 단위, 두 채널/DM 전달"
 
-# `email`: fill each with the researcher's address to activate the weekly
-# PaperBlitz email (scripts/weekly/notify.py). Empty → that researcher is
-# skipped by notify (Slack/Notion still work). SMTP creds live in .env.
+# `email`: consumed by scripts/weekly/notify.py (weekly PaperBlitz mail).
+# Empty → notify prints a warning and SKIPS that researcher (Slack/Notion
+# unaffected). SMTP creds live in .env; with creds absent notify stays
+# dry-run regardless of what is filled here.
+#
+# SOURCE OF TRUTH = docs/CSNL-INFO.md §2 (`researchers:` master list).
+# The addresses below are a MANUAL mirror of that list — there is no code
+# that syncs them. Change §2 first, then copy the value here.
+# (scripts/weekly/check_materials.py reads §2 directly and never looks at
+# this file, so a stale copy here silently diverges from the nudge mail.)
 researchers:
-  JOP: { name: 박준오, init_claude_channel: C0B3FTHAVR8, dm_channel: D0AMRACTLBH, email: "" }
-  BYL: { name: 이보연, init_claude_channel: C0B3DRPBP9C, dm_channel: D0AN6PMLWCS, email: "" }
-  MSY: { name: 여민수, init_claude_channel: C0B4A6WAGNL, dm_channel: D0AP128V9DE, email: "" }
-  SMJ: { name: 정새미, init_claude_channel: C0B39GQK067, dm_channel: D0AN0CHTJP5, email: "" }
-  JYK: { name: 김정예, init_claude_channel: C0B3FTKE4HY, dm_channel: D0AN3B8K0CD, email: "" }
-  BHL: { name: 이보현, init_claude_channel: C0B39GVLKCK, dm_channel: D0AN6PXAESE, email: "" }
+  JOP: { name: 박준오, init_claude_channel: C0B3FTHAVR8, dm_channel: D0AMRACTLBH, email: "joonop99@snu.ac.kr" }
+  BYL: { name: 이보연, init_claude_channel: C0B3DRPBP9C, dm_channel: D0AN6PMLWCS, email: "bolee0755@gmail.com" }
+  MSY: { name: 여민수, init_claude_channel: C0B4A6WAGNL, dm_channel: D0AP128V9DE, email: "mike1224@snu.ac.kr" }
+  SMJ: { name: 정새미, init_claude_channel: C0B39GQK067, dm_channel: D0AN0CHTJP5, email: "jsaemi22@gmail.com" }
+  JYK: { name: 김정예, init_claude_channel: C0B3FTKE4HY, dm_channel: D0AN3B8K0CD, email: "jy061100@gmail.com" }
+  BHL: { name: 이보현, init_claude_channel: C0B39GVLKCK, dm_channel: D0AN6PXAESE, email: "leebohyun2002@gmail.com" }
+  # SYJ (조수영) is NOT in docs/CSNL-INFO.md §2 — the master list has no row
+  # for this initial, so no address can be sourced without the operator.
+  # Left "" deliberately: notify.py skips SYJ with a warning until §2 gains
+  # an SYJ row and the address is mirrored here. Do NOT guess an address.
   SYJ: { name: 조수영, init_claude_channel: C0B3FTNR00J, dm_channel: D0AN4N0278E, email: "" }
 
 # dm_channel values ported from researcher-archiver-plugin/config/researchers.yaml

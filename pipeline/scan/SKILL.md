@@ -255,10 +255,35 @@ Stage 3 complete — 03_candidates.json written
   SMJ      : 8 candidates  (strict: 8, relaxed: 0)
   JYK      : 19 candidates (strict: 19, relaxed: 0)
   SYJ+BHL  : 27 candidates (strict: 27, relaxed: 0)
-Total: 122 candidates → pipeline/04_dedup.py next
+Total: 122 candidates → dedup next
 ```
 
 ## Handoff
 
-Pass `state/runs/<RUN_ID>/03_candidates.json` to `pipeline/03_verify.py`
-(Stage 4 — Crossref title/DOI ground-truth verification) via `scripts/run_manual.py`.
+> **Read this before following the stage numbering above.** This file is a
+> **v1 depth playbook**, retained (per `docs/HARNESS-DESIGN-v2.md` Phase 4)
+> for its query construction and window/dedup detail — not as a runnable
+> stage. The v1 chain it hands off to
+> (`03_candidates.json` → `pipeline/03_verify.py` → `pipeline/04_dedup.py` →
+> `05_deduped.json`, driven by `scripts/run_manual.py`) **was never written
+> in this repo**; `pipeline/` contains only `00_select_projects.py`,
+> `01_extract_topics.py`, `_db.py`, `_util.py`, `crawl.mjs` and these three
+> `SKILL.md` playbooks.
+
+**Live equivalent.** In v2 there is no discover→verify→dedup→score hand-off
+between scripts. One `unit-scout` agent per unit does the whole span in a
+single pass and writes `state/runs/<RID>/scout_<unit>.json`:
+
+1. query formulation → `node pipeline/crawl.mjs search --query … --since-journal …
+   --since-preprint …` (this file's §APIs and §Execution Walkthrough remain the
+   reference for *how* to formulate and window those queries),
+2. `node pipeline/crawl.mjs fulltext --doi …` and an actual read (no
+   Crossref verification stage exists — see `rules/02_date_filters.md`
+   §Verification step),
+3. dedup against the unit brief's `dedup_terms` (from
+   `scripts/dedup_snapshot.py`) per `rules/04_dedup_feedback.md`,
+4. D1–D5 scoring per `pipeline/score/SKILL.md`.
+
+The procedure a scout actually follows is
+`.claude/skills/paper-rec-scout/SKILL.md`; the orchestration around it is
+`.claude/skills/paper-rec-orchestrator/SKILL.md`.

@@ -1,5 +1,5 @@
 {
-  "_provenance": "Ported read-only snapshot from csnl-paper-scout/data/reading-db/ (csnl_library_import.json + study_paper_reading_db.json). Generated 2026-05-18 by scripts/port_assets.sh. DO NOT EDIT — refresh by re-running port_assets.sh.",
+  "_provenance": "Ported read-only snapshot from csnl-paper-scout/data/reading-db/ (csnl_library_import.json + study_paper_reading_db.json), generated 2026-05-18. FROZEN: the port script (v1 scripts/port_assets.sh) was never carried over to this repo, so there is no way to re-run it here — refreshing means re-deriving from the predecessor repo by hand. DO NOT EDIT. Consumer: scripts/dedup_snapshot.py reads entries[] each run into state/runs/<RID>/_dedup_snapshot.json under reading_db; see rules/04_dedup_feedback.md.",
   "entries": [
     {
       "doi": "10.1016/j.cortex.2016.07.021",

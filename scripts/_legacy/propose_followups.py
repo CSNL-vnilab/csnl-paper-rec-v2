@@ -17,7 +17,10 @@ import re
 import sys
 from pathlib import Path
 
-_ROOT = Path(__file__).resolve().parent.parent
+# parents[2] (not parent.parent) — this file was retired from scripts/ into
+# scripts/_legacy/ and sits one level deeper; _ROOT must still be the repo root
+# (rules/01_tone.md BANNED_TERMS is read relative to it).
+_ROOT = Path(__file__).resolve().parents[2]
 DISPLAY = {"JOP": "박준오", "BYL": "이보연", "MSY": "여민수", "SMJ": "정새미",
            "JYK": "김정예", "SYJ": "조수영", "BHL": "이보현"}
 
