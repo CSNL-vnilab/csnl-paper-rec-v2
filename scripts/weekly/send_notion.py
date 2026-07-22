@@ -23,22 +23,32 @@ Tone lint (rules/01_tone.md): this is the only channel that currently reaches a
 researcher, so it carries the mechanical BANNED_TERMS backstop that rules/01:12
 declares (see scripts/weekly/_tone_lint.py — all five older parser copies sit on
 the retired Slack path). Every researcher-visible string is checked BEFORE the
-Notion write. A hit in harness-authored prose (the Korean rationale, assembled
-from the Opus-generated synopsis) ABORTS that row loudly and leaves it unsent;
-a hit confined to verbatim bibliographic metadata is reported as a warning,
-because rules/01:16 curates the set precisely so it "never false-positives on a
-legitimate paper title or author" — pass --strict-lint to abort on those too.
+Notion write, but WHAT blocks is narrow, on two axes (P34/L3-1):
+
+  * by severity — only identity/signature markers (`— claude`, `anthropic`,
+    `gpt-5`, `as an ai`, coined internal-ops tokens) are fatal. Style/hype words
+    (`robust`, `holistic`, `leverage`, `훌륭`) warn and send.
+  * by provenance — only text this harness/its offline agents composed is
+    eligible to be fatal. The paper's own title, authors, venue and abstract
+    excerpt are quoted third-party science: reported, never blocking, exactly as
+    rules/01:16 intends ("never false-positives on a legitimate paper title or
+    author" — an author named Claude, a paper about GPT).
+
+Pass --strict-lint to promote every advisory hit to fatal (operator triage; it
+re-creates the over-blocking, so it is off by default).
 If rules/01_tone.md cannot be read the whole run aborts (rc=2, fail-closed).
 
 Usage:
     python3 scripts/weekly/send_notion.py                 # dry-run (all unsent)
     python3 scripts/weekly/send_notion.py --apply         # create + link
     python3 scripts/weekly/send_notion.py --week 2026-W23 --apply
-    python3 scripts/weekly/send_notion.py --strict-lint   # metadata hits fatal too
+    python3 scripts/weekly/send_notion.py --strict-lint   # advisory hits fatal too
+    python3 scripts/weekly/send_notion.py --self-test     # offline; no DB/Notion
 """
 from __future__ import annotations
 
 import argparse
+import json
 import re
 import sys
 from pathlib import Path
@@ -114,41 +124,186 @@ def _properties(row: dict, props: dict) -> dict:
 
 # --------------------------------------------------------------- tone backstop
 
-def _visible_text(row: dict) -> tuple[dict[str, str], dict[str, str]]:
-    """Split every researcher-visible string on this row into
-    (authored, verbatim).
+# Prefixes render.recommendation_ko() uses when it has NO synopsis and falls
+# back to the paper's own abstract (render.py:163-171). Belt-and-braces: if the
+# rendered text starts with one of these, it is quoted source text no matter
+# what the row columns say.
+_QUOTE_PREFIXES = ("📄 초록 발췌:", "(시놉시스")
 
-    authored — text this harness composed. `recommendation_ko` is assembled from
-      the per-paper synopsis, which an Opus fan-out wrote (P21/P22c), so it is
-      exactly where a model self-reference or AI-jargon token could leak.
-    verbatim — third-party bibliographic data reproduced as-is. rules/01:16
-      exempts these from the hard set (an author named Claude, a paper about
-      GPT), so hits here warn instead of blocking, unless --strict-lint.
+
+def _seq(v) -> list:
+    """list-ish view of a jsonb column (psycopg2 gives a list, the psql
+    fallback a JSON string). Local, so this file does not reach into render's
+    privates."""
+    if v is None:
+        return []
+    if isinstance(v, str):
+        try:
+            v = json.loads(v)
+        except Exception:
+            return [v]
+    return list(v) if isinstance(v, (list, tuple)) else [v]
+
+
+def _rationale_is_synopsis(row: dict) -> bool:
+    """True when render.recommendation_ko() renders SYNOPSIS text.
+
+    Mirrors that function's own condition (render.py:154-172): it emits synopsis
+    lines when any of core_question / key_findings / frameworks /
+    connecting_signals has content, and otherwise falls back to a verbatim
+    abstract excerpt (or a static "no information" notice).
+
+    That distinction is the whole provenance question. The synopsis was written
+    by the offline Opus fan-out (P21/P22c) — harness-side prose, so an identity
+    leak there is real. The abstract excerpt is the paper's own words quoted, so
+    it must never be able to block a send: rules/01:16 explicitly protects "a
+    paper about GPT", and 18 live queue rows currently take that fallback path.
     """
-    authored = {
-        "추천 근거": render.recommendation_ko(row),
-    }
-    verbatim = {
+    if (row.get("core_question") or "").strip():
+        return True
+    for key in ("key_findings", "connecting_signals"):
+        if any(str(x).strip() for x in _seq(row.get(key))):
+            return True
+    return any(isinstance(fw, dict) and (fw.get("name") or "").strip()
+               for fw in _seq(row.get("frameworks")))
+
+
+def _visible_text(row: dict) -> tuple[dict[str, str], dict[str, str]]:
+    """Split every researcher-visible string on this row into (authored, quoted).
+
+    authored — text this harness or its offline agents composed: the Korean
+      rationale, when it is rendered from the per-paper synopsis. This is where
+      a model self-reference could actually leak, so it is the only bucket that
+      may produce a FATAL violation.
+    quoted — third-party text reproduced as-is: the paper's own title, author
+      list, APA citation (which carries the title and venue), and the abstract
+      excerpt when the rationale falls back to it. rules/01:16 exempts these
+      from the hard set, so hits here warn instead of blocking unless
+      --strict-lint.
+    """
+    quoted = {
         "title":  render.paper_title(row),
         "저자":    render.authors_str(row),
         "APA":    render.apa_citation(row),
     }
-    return authored, verbatim
+    authored: dict[str, str] = {}
+    rationale = render.recommendation_ko(row)
+    # If render.py ever changes its fallback condition, fail toward "quoted":
+    # a mis-bucketed row must warn, never wedge a researcher's slot.
+    if _rationale_is_synopsis(row) and not rationale.startswith(_QUOTE_PREFIXES):
+        authored["추천 근거"] = rationale
+    else:
+        quoted["추천 근거(초록 인용)"] = rationale
+    return authored, quoted
 
 
-def _lint_row(row: dict, banned: list[str], strict: bool
+def _lint_row(row: dict, banned, strict: bool = False
               ) -> tuple[list[T.Violation], list[T.Violation]]:
-    """-> (fatal, advisory). Pure; no I/O."""
-    authored, verbatim = _visible_text(row)
-    fatal = T.check_fields(authored, banned)
-    meta = T.check_fields(verbatim, banned)
+    """-> (fatal, advisory). Pure; no I/O.
+
+    fatal    = identity/signature markers in agent-authored prose ONLY.
+    advisory = everything else: style/hype words anywhere, and any hit at all in
+               quoted bibliographic text. Reported, never blocking.
+
+    `banned` may be a raw term list or a pre-computed T.TermSplit.
+    """
+    sp = T.as_split(banned)
+    authored, quoted = _visible_text(row)
+    fatal = T.check_fields(authored, sp.fatal, severity=T.FATAL)
+    advisory = (T.check_fields(authored, sp.advisory)
+                + T.check_fields(quoted, sp.all))
     if strict:
-        return fatal + meta, []
-    return fatal, meta
+        return fatal + advisory, []
+    return fatal, advisory
 
 
 def _row_label(row: dict) -> str:
     return f"{row.get('researcher_id')}/{str(row.get('canonical_id') or '')[:10]}"
+
+
+def _self_test() -> int:
+    """Offline assertions for the lint provenance/severity contract (P34/L3-1).
+
+    No DB, no Notion, no .env — safe to run anywhere, including CI.
+    """
+    if not __debug__:                 # python -O strips every assert below
+        print("[send] --self-test refuses to run under -O/PYTHONOPTIMIZE: the "
+              "assertions would be stripped and it would 'pass' vacuously.",
+              file=sys.stderr)
+        return 2
+    banned = T.split_terms()          # fail-closed if rules/01 is unreadable
+    assert banned.fatal and banned.advisory
+
+    # A real row from the live board that the first port of the lint BLOCKED.
+    real = {
+        "researcher_id": "SMJ", "canonical_id": "0" * 32, "tier_at_send": "S",
+        "title": "FixGrower: An efficient and robust curriculum for shaping "
+                 "fixation behaviour",
+        "authors_json": ["Jane Roe"], "year": 2024, "venue": "eLife",
+        "doi": "10.0000/x",
+        "core_question": "고정 행동을 형성하는 커리큘럼이 robust 한가?",
+        "key_findings": ["holistic 한 학습 곡선이 관찰됨"],
+        "connecting_signals": ["fixation", "curriculum"],
+        "frameworks": [{"name": "holistic matching model",
+                        "role": "primary_lens"}],
+    }
+    fatal, adv = _lint_row(real, banned)
+    assert fatal == [], f"paper vocabulary must not block a send: {fatal}"
+    assert {v.term for v in adv} >= {"robust", "holistic"}, adv
+    assert all(v.severity == T.ADVISORY for v in adv), adv
+
+    # …but an identity leak in the agent-authored rationale still hard-blocks.
+    for probe in ("\n— Claude", " As an AI, I cannot ", " anthropic ",
+                  " (claude) ", " 언어모델로서 ", " q_hash "):
+        leak = dict(real, core_question=real["core_question"] + probe)
+        f, _ = _lint_row(leak, banned)
+        assert f, f"identity leak not blocked: {probe!r}"
+        assert all(v.severity == T.FATAL and v.field == "추천 근거" for v in f), f
+
+    # The paper's OWN title/authors/abstract can carry any term without blocking
+    # (rules/01:16 — an author named Claude, a paper about GPT).
+    meta = dict(real,
+                title="GPT-4 as a robust holistic model of anthropic reasoning",
+                authors_json=["Claude Shannon", "Anthropic Author"])
+    f, a = _lint_row(meta, banned)
+    assert f == [], f"quoted bibliographic text must never block: {f}"
+    assert {v.term for v in a} >= {"gpt-4", "anthropic", "robust"}, a
+
+    # No synopsis -> the rationale IS the paper's abstract, quoted. Still no block.
+    fallback = {"researcher_id": "X", "canonical_id": "1" * 32, "title": "T",
+                "authors_json": [], "abstract": "We show a robust, holistic "
+                "evaluation of GPT-4 and Claude Opus as an AI reviewer."}
+    assert not _rationale_is_synopsis(fallback)
+    authored, quoted = _visible_text(fallback)
+    assert authored == {}, authored
+    assert "추천 근거(초록 인용)" in quoted, quoted
+    f, a = _lint_row(fallback, banned)
+    assert f == [], f"abstract excerpt must never block a send: {f}"
+    assert {v.term for v in a} >= {"claude opus", "gpt-4", "as an ai"}, a
+    assert _rationale_is_synopsis(real)
+
+    # Drift alarm: our column-level condition must agree with what render.py
+    # actually emits, on both branches (marker prefixes = the fallback path).
+    for _row in (real, fallback, {}, {"key_findings": ["x"]},
+                 {"frameworks": [{"name": "n"}]}, {"connecting_signals": ["s"]},
+                 {"frameworks": [{"role": "context"}]}):
+        _txt = render.recommendation_ko(_row)
+        assert _rationale_is_synopsis(_row) is not _txt.startswith(_QUOTE_PREFIXES), (
+            "render.recommendation_ko() no longer agrees with "
+            f"_rationale_is_synopsis(); re-sync the provenance split: {_row}")
+    assert _seq('["a","b"]') == ["a", "b"] and _seq(None) == [] and _seq("x") == ["x"]
+
+    # --strict-lint remains available as the operator's escape hatch.
+    f, a = _lint_row(real, banned, strict=True)
+    assert f and a == [], (f, a)
+
+    # A raw term list is still accepted (back-compat with T.load_banned_terms()).
+    f2, a2 = _lint_row(real, T.load_banned_terms())
+    assert f2 == [] and {v.term for v in a2} == {v.term for v in adv}
+
+    print("send_notion.py self-test OK — fatal set is identity-only and scoped "
+          "to agent-authored prose; quoted paper text cannot block a send.")
+    return 0
 
 
 def _writeback(sch: str, digest_id: int, page_id: str) -> None:
@@ -168,11 +323,19 @@ def main() -> int:
                          "unsent row is an active slot that needs a Notion page, "
                          "so leaving any unsent would wedge that slot.")
     ap.add_argument("--strict-lint", action="store_true",
-                    help="Treat a BANNED_TERMS hit in verbatim bibliographic "
-                         "metadata (title/authors/APA) as fatal too. Default: "
-                         "those warn only — rules/01:16 curates the set to not "
-                         "false-positive on legitimate paper metadata.")
+                    help="Promote every advisory hit (style/hype words, and any "
+                         "hit in quoted title/authors/APA/abstract) to fatal. "
+                         "Default: only identity/signature markers in "
+                         "agent-authored prose block a send — rules/01:16 "
+                         "curates the set to not false-positive on legitimate "
+                         "paper metadata, and blocking a real paper wedges the "
+                         "researcher's slot (P34/L3-1).")
+    ap.add_argument("--self-test", action="store_true",
+                    help="Run the offline lint-provenance assertions and exit. "
+                         "Touches no DB, no Notion, no .env.")
     args = ap.parse_args()
+    if args.self_test:
+        return _self_test()
     load_env()
     sch = ledger_schema()
     db_id = N.digest_db_id()
@@ -181,7 +344,7 @@ def main() -> int:
     # Tone backstop (rules/01_tone.md). Fail CLOSED: an unreadable rules file
     # must never degrade into "lint skipped" on the one live researcher channel.
     try:
-        banned = T.load_banned_terms()
+        banned = T.split_terms()
     except T.ToneLintUnavailable as e:
         print(f"[send] ABORT — tone lint unavailable: {e}", file=sys.stderr)
         print("    rules/01_tone.md must carry a fenced ```BANNED_TERMS``` block "
@@ -189,7 +352,9 @@ def main() -> int:
               file=sys.stderr)
         return 2
     print(f"[send] tone lint armed — {len(banned)} banned term(s) from "
-          f"rules/01_tone.md" + (" [strict]" if args.strict_lint else ""))
+          f"rules/01_tone.md: {len(banned.fatal)} fatal (identity/signature, "
+          f"agent-authored text only) / {len(banned.advisory)} advisory"
+          + (" [strict: advisory hits block too]" if args.strict_lint else ""))
 
     # Hard gate: never POST against a mis-shaped DB. Also learn the response
     # property's actual type so we build the right value shape.
@@ -228,11 +393,11 @@ def main() -> int:
                 print(T.format_violations(fatal), file=sys.stderr)
             if advisory:
                 n_warn += 1
-                print(f"[send] lint warn (metadata) {_row_label(r)}",
+                print(f"[send] lint warn (non-blocking) {_row_label(r)}",
                       file=sys.stderr)
                 print(T.format_violations(advisory), file=sys.stderr)
         print(f"[send] tone lint: {n_fatal} row(s) would be BLOCKED, "
-              f"{n_warn} with metadata warnings.")
+              f"{n_warn} with non-blocking warnings.")
         print("[send] dry-run only. Re-run with --apply to create Notion rows.")
         return 1 if n_fatal else 0
 
@@ -246,13 +411,18 @@ def main() -> int:
         # correct the source synopsis, not to bypass this.
         fatal, advisory = _lint_row(r, banned, args.strict_lint)
         if advisory:
-            print(f"[send] lint warn (metadata) {_row_label(r)}", file=sys.stderr)
+            print(f"[send] lint warn (non-blocking) {_row_label(r)}",
+                  file=sys.stderr)
             print(T.format_violations(advisory), file=sys.stderr)
         if fatal:
             blocked += 1
             print(f"[send] LINT BLOCK — NOT SENT {_row_label(r)} "
                   f"(rules/01_tone.md BANNED_TERMS)", file=sys.stderr)
             print(T.format_violations(fatal), file=sys.stderr)
+            print("    This row keeps notion_page_id IS NULL, and build_digest "
+                  "still counts it as an ACTIVE slot — the researcher's board "
+                  "silently runs short until the source synopsis is fixed. Do "
+                  "not clear it by relaxing the lint.", file=sys.stderr)
             if key in existing:
                 print(f"    NOTE: a Notion page already exists for this row "
                       f"({existing[key]}); it was NOT relinked. Remove or edit "

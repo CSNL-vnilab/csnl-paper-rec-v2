@@ -17,10 +17,49 @@ all, so the documented backstop had no executor. This module is that executor.
 
 Contract
 --------
-`rules/01_tone.md` is the single source of truth: the term list is *parsed*, never
-hardcoded here. The fenced block is read verbatim (one term per line, blank lines
-dropped) exactly as `deliver.py:63-72` reads it, so all copies stay bit-identical
-in behaviour.
+`rules/01_tone.md` is the single source of truth for *which* terms exist: the
+list is *parsed*, never hardcoded here. The fenced block is read verbatim (one
+term per line, blank lines dropped) exactly as `deliver.py:63-72` reads it, so
+all copies stay bit-identical in behaviour.
+
+Severity is decided HERE, not in the rules file (P34/L3-1)
+-----------------------------------------------------------
+The first port of this backstop treated all 43 terms as equally fatal. Measured
+against live data that blocked **69 of 1400 queue rows and 7 of the 35 rows on
+the active board, for 6 of 7 researchers** — every one of them on `robust`,
+`holistic` or `leverage` appearing in *the paper's own* title/synopsis
+("Robust averaging protects decisions from noise…", "Holistic Bayesian model
+of perceptual adaptation…", three of them the researcher's S-tier pick). A
+blocked row never gets a `notion_page_id`, so `build_digest._active_counts`
+keeps counting it as an occupied slot and the board silently shrinks. Blocking
+those is not a tone save; it censors the science and wedges the slot.
+
+rules/01:12-17 already says the set is curated so it "never false-positives on
+a legitimate paper title or author". So the terms split by *what they identify*:
+
+* `severity == FATAL` — **identity / signature markers**: the authoring system
+  naming itself (`claude`, `anthropic`, `chatgpt`, `openai`, `gpt-4/5`,
+  `as an ai`, `언어모델로서`, the `— claude` signature forms) plus coined
+  internal-ops identifiers that cannot occur in natural prose (`safe_memory`,
+  `q_hash`, `memev`, …). These are never a paper's own vocabulary, so blocking
+  costs nothing and leaking one is a hard boundary breach (CLAUDE.md: 연구자
+  노출 텍스트에 내부 용어/서명 금지). Verified: **0 occurrences across the whole
+  live corpus** (titles + abstracts + synopses).
+* `severity == ADVISORY` — **style / hype words** (`robust`, `comprehensive`,
+  `holistic`, `synergy`, `leverage`, `delve`, `meticulous`, `tapestry`,
+  `훌륭`, `매우 적합`, …) and ordinary English words that are also real science
+  vocabulary (`subagent`, `orchestrator` — both appear in hierarchical-RL and
+  cell-biology writing). These are layer-1 (drafting agent) concerns; the
+  backstop reports them and does not stop a send.
+
+A term the classifier does not recognise defaults to ADVISORY — adding a term
+to rules/01 can therefore never silently wedge the board, it can only add a
+warning. Making a *new* term fatal is a deliberate edit to `_IDENTITY_PATTERNS`.
+
+The second half of the fix lives in the caller: severity is only half the story
+if the check is pointed at quoted source text. `send_notion._visible_text()`
+lints the agent-authored rationale, and treats the paper's own title / authors /
+venue / abstract excerpt as quoted (advisory only).
 
 Design constraints
 ------------------
@@ -29,6 +68,8 @@ Design constraints
 * **Fail-closed.** If `rules/01_tone.md` is missing, unreadable, or carries no
   `BANNED_TERMS` block, `load_banned_terms()` raises `ToneLintUnavailable`.
   Callers on a send path must treat that as ABORT, never as "lint skipped".
+  Fail-closed still holds after the split: an unreadable rules file yields no
+  terms at all, fatal or advisory, and the send aborts.
 * **Data contract only.** This checks the curated hard-unsafe substring set and
   nothing else. It deliberately does NOT enforce the prose-style rules (emoji,
   `!`, greeting form) — the Notion digest intentionally uses emoji section
@@ -53,6 +94,33 @@ _WS_RE = re.compile(r"\s+")
 
 _EXCERPT_PAD = 32
 
+# ------------------------------------------------------------------ severity
+FATAL = "fatal"
+ADVISORY = "advisory"
+
+# Applied to the TERMS PARSED OUT OF rules/01_tone.md — never to researcher-
+# facing text. It can therefore only re-classify an already-curated term; it can
+# never introduce a new match. That is why it is allowed to be generous.
+_IDENTITY_PATTERNS = (
+    r"claude",
+    r"anthropic",
+    r"chatgpt",
+    r"openai",
+    r"gpt[\s\-_.]?\d*",                 # gpt-4, gpt-5, gpt 4o, bare gpt
+    r"as\s+an\s+ai",
+    r"\bai\s*(assistant|어시스턴트)",
+    r"언어\s*모델",                       # 언어모델로서 / 대규모 언어 모델로서
+    r"인공지능",
+    r"^[\-—–]\s*\S+$",                  # a bare signature line: "— <name>"
+)
+_IDENTITY_RE = re.compile("|".join(_IDENTITY_PATTERNS), re.I)
+
+# Coined internal-ops identifiers. snake_case cannot occur in natural prose;
+# `memev` and friends are invented tokens. Measured 0 hits across the live
+# corpus, so treating them as fatal costs no recommendation slot.
+_INTERNAL_TOKEN_RE = re.compile(r"^[A-Za-z][A-Za-z0-9]*(?:_[A-Za-z0-9]+)+$")
+_COINED_INTERNAL = frozenset({"memev"})
+
 
 class ToneLintUnavailable(RuntimeError):
     """rules/01_tone.md is missing/unreadable, or has no BANNED_TERMS block.
@@ -68,10 +136,25 @@ class Violation(NamedTuple):
     index: int
     excerpt: str
     field: str = ""
+    severity: str = ADVISORY
 
     def describe(self) -> str:
         where = f"{self.field}: " if self.field else ""
-        return f"{where}banned term {self.term!r} @{self.index} … {self.excerpt} …"
+        return (f"{where}[{self.severity}] banned term {self.term!r} "
+                f"@{self.index} … {self.excerpt} …")
+
+
+class TermSplit(NamedTuple):
+    """The BANNED_TERMS list partitioned by severity (see module docstring)."""
+    fatal: tuple[str, ...]
+    advisory: tuple[str, ...]
+
+    @property
+    def all(self) -> list[str]:
+        return list(self.fatal) + list(self.advisory)
+
+    def __len__(self) -> int:            # so len(banned) keeps reading naturally
+        return len(self.fatal) + len(self.advisory)
 
 
 # --------------------------------------------------------------------- parsing
@@ -98,10 +181,49 @@ def load_banned_terms(path: Path | str | None = None) -> list[str]:
     return terms
 
 
+# ------------------------------------------------------------- classification
+
+def term_severity(term: str) -> str:
+    """FATAL for identity/signature/internal-ops markers, ADVISORY otherwise.
+
+    Unrecognised terms default to ADVISORY on purpose: adding a word to
+    rules/01_tone.md must never be able to silently wedge a researcher's board
+    (P34/L3-1). Promoting a term to fatal is an explicit edit here.
+    """
+    t = (term or "").strip()
+    if not t:
+        return ADVISORY
+    if _IDENTITY_RE.search(t):
+        return FATAL
+    if t.lower() in _COINED_INTERNAL or _INTERNAL_TOKEN_RE.match(t):
+        return FATAL
+    return ADVISORY
+
+
+def split_terms(terms: Sequence[str] | None = None) -> TermSplit:
+    """Partition BANNED_TERMS into (fatal, advisory), preserving file order.
+
+    `terms=None` loads rules/01_tone.md, so this is also a fail-closed entry
+    point (raises ToneLintUnavailable).
+    """
+    if terms is None:
+        terms = load_banned_terms()
+    fatal = tuple(t for t in terms if term_severity(t) == FATAL)
+    adv = tuple(t for t in terms if term_severity(t) != FATAL)
+    return TermSplit(fatal=fatal, advisory=adv)
+
+
+def as_split(terms: TermSplit | Sequence[str] | None) -> TermSplit:
+    """Accept either a raw term list or an already-partitioned TermSplit."""
+    if isinstance(terms, TermSplit):
+        return terms
+    return split_terms(terms)
+
+
 # -------------------------------------------------------------------- checking
 
 def _scan(haystack: str, terms: Sequence[str], field: str,
-          seen: set[str]) -> list[Violation]:
+          seen: set[str], severity: str = ADVISORY) -> list[Violation]:
     low = haystack.lower()
     out: list[Violation] = []
     for t in terms:
@@ -116,18 +238,20 @@ def _scan(haystack: str, terms: Sequence[str], field: str,
         hi = min(len(haystack), i + len(t) + _EXCERPT_PAD)
         out.append(Violation(term=t, index=i,
                              excerpt=_WS_RE.sub(" ", haystack[lo:hi]).strip(),
-                             field=field))
+                             field=field, severity=severity))
     return out
 
 
 def check(text: str, terms: Sequence[str] | None = None,
-          field: str = "") -> list[Violation]:
+          field: str = "", severity: str = ADVISORY) -> list[Violation]:
     """Pure check: return every banned term present in `text` (case-insensitive
     substring), one Violation per distinct term.
 
     `terms=None` loads rules/01_tone.md (and therefore may raise
     ToneLintUnavailable — that is the fail-closed path). Callers that lint many
-    strings should load once and pass the list in.
+    strings should load once and pass the list in. `severity` only labels the
+    returned Violations — pass `split_terms().fatal` with `severity=FATAL` to
+    run the blocking half, `.advisory` for the reporting half.
 
     Beyond `deliver.py`'s plain substring pass, a second pass runs over a
     whitespace-collapsed copy so a multi-word term split across a line break
@@ -141,21 +265,22 @@ def check(text: str, terms: Sequence[str] | None = None,
     if not src:
         return []
     seen: set[str] = set()
-    hits = _scan(src, terms, field, seen)
+    hits = _scan(src, terms, field, seen, severity)
     flat = _WS_RE.sub(" ", src)
     if flat != src:
-        hits.extend(_scan(flat, terms, field, seen))
+        hits.extend(_scan(flat, terms, field, seen, severity))
     return hits
 
 
 def check_fields(fields: Mapping[str, str],
-                 terms: Sequence[str] | None = None) -> list[Violation]:
+                 terms: Sequence[str] | None = None,
+                 severity: str = ADVISORY) -> list[Violation]:
     """check() over a {label: text} mapping, tagging each Violation.field."""
     if terms is None:
         terms = load_banned_terms()
     out: list[Violation] = []
     for label, text in fields.items():
-        out.extend(check(text, terms, field=label))
+        out.extend(check(text, terms, field=label, severity=severity))
     return out
 
 
@@ -213,6 +338,49 @@ if __name__ == "__main__":
     assert [(v.field, v.term) for v in _fv] == [("a", "openai")], _fv
     assert check("", _terms) == [] and check(None, _terms) == []
 
+    # ---- severity split (P34/L3-1) ----------------------------------------
+    _sp = split_terms(_terms)
+    assert len(_sp) == len(_terms), (len(_sp), len(_terms))
+    assert set(_sp.fatal).isdisjoint(_sp.advisory), "a term cannot be both"
+    assert sorted(_sp.all) == sorted(_terms), "split must be a partition"
+
+    # identity / signature / coined-internal -> FATAL
+    for _t in ("— claude", "- claude", "—claude", "(claude)", "claude opus",
+               "claude sonnet", "claude haiku", "claude code", "anthropic",
+               "chatgpt", "openai", "gpt-4", "gpt-5", "as an ai",
+               "ai assistant", "ai 어시스턴트", "언어모델로서",
+               "대규모 언어 모델로서", "safe_memory", "member_uncertainty",
+               "nas_inventory", "fire_lock", "q_hash", "memev",
+               "harness_runner", "exploration_plan"):
+        assert term_severity(_t) == FATAL, f"{_t!r} must be fatal"
+        assert _t in _sp.fatal, f"{_t!r} missing from rules/01 fatal set"
+
+    # style / hype / real science vocabulary -> ADVISORY (never blocks a send)
+    for _t in ("robust", "comprehensive", "holistic", "synergy", "leverage",
+               "delve", "tapestry", "meticulous", "navigate the complexities",
+               "훌륭", "최고의", "매우 적합", "강력히 추천", "놀라운",
+               "감사합니다", "subagent", "orchestrator"):
+        assert term_severity(_t) == ADVISORY, f"{_t!r} must NOT block a send"
+        assert _t in _sp.advisory, f"{_t!r} missing from rules/01 advisory set"
+
+    # the L3-1 regression itself: a real paper title is advisory-only
+    _paper = ("Robust averaging protects decisions from noise; a holistic "
+              "model that leverages efficient coding")
+    assert [v.term for v in check(_paper, _sp.fatal, severity=FATAL)] == [], \
+        "paper vocabulary must never hit the fatal set"
+    assert {v.term for v in check(_paper, _sp.advisory)} == \
+        {"robust", "holistic", "leverage"}, "…but must still be reported"
+
+    # …while a real identity leak still hard-blocks
+    _leak = check(_paper + "\n— Claude", _sp.fatal, field="추천 근거",
+                  severity=FATAL)
+    assert [v.term for v in _leak] == ["— claude"], _leak
+    assert _leak[0].severity == FATAL and "fatal" in _leak[0].describe()
+
+    # unknown terms default to advisory — a rules edit can never wedge a board
+    assert term_severity("완전히새로운금지어") == ADVISORY
+    assert term_severity("") == ADVISORY
+
     # fail-closed
     try:
         load_banned_terms(_REPO_ROOT / "rules" / "__nope__.md")
@@ -220,7 +388,14 @@ if __name__ == "__main__":
         pass
     else:
         raise AssertionError("missing rules file must raise ToneLintUnavailable")
+    try:
+        split_terms(load_banned_terms(_REPO_ROOT / "rules" / "__nope__.md"))
+    except ToneLintUnavailable:
+        pass
+    else:
+        raise AssertionError("split_terms must inherit the fail-closed path")
 
     assert cap_check("framework framework") == ["framework>1"]
     print(f"_tone_lint.py self-test OK — {len(_terms)} terms from "
-          f"{RULES_FILE.relative_to(_REPO_ROOT)}")
+          f"{RULES_FILE.relative_to(_REPO_ROOT)} "
+          f"({len(_sp.fatal)} fatal / {len(_sp.advisory)} advisory)")
