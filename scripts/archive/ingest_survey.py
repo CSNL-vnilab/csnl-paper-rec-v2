@@ -407,7 +407,13 @@ def parse_aims(project_blocks: list[tuple[dict, list[dict]]],
         if not m:
             continue
         ordn = m.group(1)
-        aim_id = f"P{ordn}"
+        # aim_id is the PK together with researcher_id, so it MUST be unique per
+        # researcher. The project-heading ordinal is NOT reliably unique — a
+        # malformed or duplicated heading (BYL's v13 survey carries two '프로젝트 2'
+        # blocks, the 2nd a low-confidence parse artifact) collides and violates
+        # archive_survey_aims_pkey, aborting the whole load. Use a running counter
+        # over successfully-parsed aims; the heading ordinal stays in raw_jsonb.
+        aim_id = f"P{len(aims) + 1}"
         tym = _TYPE_RE.search(htext)
         hyp_type = tym.group(1) if tym else "unknown"
         cnm = _CODENAME_RE.search(htext)
@@ -498,7 +504,8 @@ def parse_aims(project_blocks: list[tuple[dict, list[dict]]],
             "measures": measures,
             "confidence": aim_conf,
             "raw_jsonb": {"fields": raw_fields, "summary_row": s.get("_raw"),
-                          "field_confidence": field_conf, "head": htext},
+                          "field_confidence": field_conf, "head": htext,
+                          "project_ordinal": ordn},
         })
     return aims
 
