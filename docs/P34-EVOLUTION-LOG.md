@@ -371,3 +371,33 @@ genuine two-option decision.
 **Dormant, unreferenced:** the P32 backlog — 44 actions, 12 closed 2026-06-12, **32 never
 re-triaged** and not referenced anywhere in the P34 documents. Fold them in or formally retire
 them; an unreferenced 32-item backlog is indistinguishable from lost work.
+
+---
+
+## Batch 8-11 outcomes (2026-07-24) — incident closed + recommender consumes the survey (eval-gated)
+
+**MM false-alarm (live incident):** csnl-ops chased researchers + cc'd the PI about slides that
+EXIST on the NAS. Root cause: `milestone_meetings.slides_submitted` is flipped only by a dead node
+resolver (Vercel can't see the LAN NAS). Fixed: `reconcile_mm_slides.py` (catalog-driven, NAS-read-
+only, False→True only) flipped the **24 stale flags**; escalation PR #19 merged (first notice never
+cc's the PI; students only); chaser stays disabled until the reconciler is scheduled ahead of it.
+
+**Survey memory — supply AND consumption (the review's real bottleneck):**
+- Loaded `archive_survey_*` (fixed a PK-collision that had silently aborted the whole load):
+  **7/7 coverage** (MSY cold-started from the ops summary, confidence=low).
+- The AUTHORITATIVE `brq` builder now consumes it — `grep -c archive_survey build_researcher_queue.py`
+  **0 → 6**. Survey grounds the query embedding (50% blend) + seeds fingerprints (15 TF-IDF-junk
+  phrases → 40-50 real anchors; JOP's curated anchors protected from eviction).
+- **eval_recommender.py** (new, temporal held-out, deduped pool, less-circular) GATED the apply.
+  Result recall@50: **SMJ 43→79, BHL 0→7, BYL 0→3, SYJ 0→8, JOP flat; JYK 57→29 (regressed)**.
+- Honored the gate PER-RESEARCHER: applied survey grounding to the 6 it helps; **JYK held at
+  baseline** (his discriminator is a stance axis — his lever is the p28 negatives, not grounding).
+  Encoded durably as `SURVEY_GROUNDING_EXCLUDE={'JYK'}` so the go-live command can't regress him.
+  Final gate: **PASS** (no target regresses; JYK 57→57).
+
+**Built, not yet applied:** recommend.py (parked p28) negatives/PI/def consumption with the P24
+saved-phenomenon-shield fixed; keyless `backfill_abstracts.py` (the 2,399/9,015 abstract ceiling).
+
+**NAS blueprint** (`docs/P34-NAS-BLUEPRINT.md`): nas_index + local-only read-only MCP + reuse-the-
+ingesters router, under two hard constraints — efficiency (index conventions not contents) and
+**NAS read-only + no path egress off-lab** (operator 2026-07-24).

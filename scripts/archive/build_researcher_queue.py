@@ -234,6 +234,16 @@ _SURVEY_PLACEHOLDERS = {"미정", "tbd", "n/a", "na", "none", "없음", "-", "�
 # project prose, defeating the "prefer researcher-confirmed interest" intent.
 SURVEY_BLEND_W = 0.5
 
+# P34 eval-gated exception: survey grounding measurably REGRESSED JYK's held-out
+# recall@50 (57%→29%) while helping the other 6 (SMJ 43%→79%, BHL/BYL/SYJ up).
+# JYK's discriminator is a STANCE axis, not a positive-vocabulary one — adding his
+# RNN/attractor terms broadens his query into his own rejected stances. His lever
+# is the survey NEGATIVES (the parked p28 veto), not this positive grounding. So
+# `--survey-grounding on` skips grounding for these researchers until that lands,
+# and the documented `--all --apply --survey-grounding on` go-live cannot regress
+# him. Re-evaluate with eval_recommender.py before removing anyone. (docs/P34-*)
+SURVEY_GROUNDING_EXCLUDE = {"JYK"}
+
 
 def _valid_init(init: str) -> bool:
     """Match the archive_survey_* CHECK (^[A-Z]{2,8}$). query_json interpolates
@@ -890,7 +900,7 @@ def main() -> int:
         # and (c) the embedding blend below. `--survey-grounding off` restores
         # the exact pre-P34 projects-only path for the eval baseline.
         survey_text, survey_meta = ("", {})
-        if args.survey_grounding == "on":
+        if args.survey_grounding == "on" and init not in SURVEY_GROUNDING_EXCLUDE:
             survey_text, survey_meta = _fetch_survey_grounding(init)
         if not project_text.strip() and not survey_text.strip():
             print(f"[queue] {init}: empty interest text "
