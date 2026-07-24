@@ -205,6 +205,110 @@ def _list_researchers() -> list[str]:
     return [r["init"] for r in rows]
 
 
+# ------------------------------------------------ P34/S9 survey grounding
+# The AUTHORITATIVE 'brq' builder grounds the query embedding on
+# csnl_research.projects (foreign, operator-authored prose that decays as a
+# researcher's focus moves). The P28 survey memory (archive_survey_*) is what
+# the researcher THEMSELVES confirmed in the v13 profile survey. This block
+# pulls the survey aims (the connection anchors) + the researcher's controlled
+# keyword vocabulary and folds them into the query vector as ADDITIVE grounding.
+#
+# Scope: this is EMBEDDING grounding ONLY. It does NOT feed a veto or a
+# ranking weight, so it stays clear of the P24 landmine (never veto on a
+# shared connecting_signal). Survey negatives / definition-aware subtraction /
+# hard vetoes remain the P28 recommender's job — nothing here rejects a paper.
+_SURVEY_AIM_FIELDS = ("domain", "phenomenon", "task", "mechanism")
+
+# Field values that are pure placeholders (an exploratory 유형2 aim may leave a
+# field as "미정"/TBD). Skip when the value normalizes to one of these ALONE —
+# embedding the literal token "undecided" as an interest is noise. Values that
+# merely CONTAIN a flag (e.g. "... cortical encoding 【확인필요】") are kept: they
+# carry real content and the constant bracket offset is inert under cosine.
+_SURVEY_PLACEHOLDERS = {"미정", "tbd", "n/a", "na", "none", "없음", "-", "—", "?"}
+
+# Weight on the survey vector; (1 - W) on the projects vector. Equal blend:
+# researcher-confirmed survey interests count as much as the entire (decaying)
+# ops-project representation. Encoding the two texts SEPARATELY and averaging
+# the unit vectors gives the survey a length-INDEPENDENT 50% — a raw text
+# concat would under-weight the handful of short survey phrases against long
+# project prose, defeating the "prefer researcher-confirmed interest" intent.
+SURVEY_BLEND_W = 0.5
+
+
+def _valid_init(init: str) -> bool:
+    """Match the archive_survey_* CHECK (^[A-Z]{2,8}$). query_json interpolates
+    the init directly (no bind params), so refuse anything that is not a plain
+    researcher code before it reaches SQL."""
+    return bool(init) and init.isalpha() and init.isupper() and 2 <= len(init) <= 8
+
+
+def _fetch_survey_grounding(init: str) -> tuple[str, dict]:
+    """P34/S9 — researcher-CONFIRMED interests from the P28 survey memory
+    (archive_survey_aims domain/phenomenon/task/mechanism + archive_survey_
+    keywords). READ-ONLY. Returns ("", {}) on any error OR when the researcher
+    has no survey rows (e.g. MSY blank), so the caller falls back to
+    csnl_research.projects unchanged.
+
+    Returns (survey_text, meta) where survey_text is the newline-joined
+    grounding string fed to the embedding backend, and meta carries the term
+    inventory for the operator log / offline verification."""
+    if not _valid_init(init):
+        return ("", {})
+    sys.path.insert(0, str(_REPO_ROOT / "pipeline"))
+    from _db import query_json  # noqa: E402
+    try:
+        aims = query_json(
+            "SELECT domain, phenomenon, task, mechanism "
+            "FROM csnl_paper_rec.archive_survey_aims "
+            f"WHERE researcher_id = '{init}' ORDER BY aim_id") or []
+        kws = query_json(
+            "SELECT keyword FROM csnl_paper_rec.archive_survey_keywords "
+            f"WHERE researcher_id = '{init}' ORDER BY keyword") or []
+    except Exception as e:
+        print(f"[queue] {init}: survey grounding load failed ({e}); "
+              f"falling back to projects-only", file=sys.stderr)
+        return ("", {})
+    aim_terms: list[str] = []
+    for a in aims:
+        for f in _SURVEY_AIM_FIELDS:
+            v = (a.get(f) or "").strip()
+            if v and v.lower() not in _SURVEY_PLACEHOLDERS:
+                aim_terms.append(v)
+    kw_terms = [(k.get("keyword") or "").strip() for k in kws]
+    kw_terms = [k for k in kw_terms
+                if k and k.lower() not in _SURVEY_PLACEHOLDERS]
+    terms = aim_terms + kw_terms
+    survey_text = "\n".join(terms).strip()
+    meta = {
+        "n_aims":     len(aims),
+        "n_keywords": len(kw_terms),
+        "aim_terms":  aim_terms,
+        "kw_terms":   kw_terms,
+        "terms":      terms,
+    }
+    return (survey_text, meta)
+
+
+def _blend_query_vectors(proj_vec, survey_vec, w: float = SURVEY_BLEND_W):
+    """L2-normalize each query vector then weighted-average (survey weight w,
+    projects weight 1-w). Cosine ranking is scale-invariant, so the output
+    need not be re-normalized. Returns a plain python list."""
+    try:
+        import numpy as np
+        p = np.asarray(proj_vec, dtype="float32")
+        s = np.asarray(survey_vec, dtype="float32")
+        pn = float(np.linalg.norm(p)) or 1.0
+        sn = float(np.linalg.norm(s)) or 1.0
+        return ((1.0 - w) * (p / pn) + w * (s / sn)).tolist()
+    except ImportError:
+        def _norm(v: list[float]) -> list[float]:
+            n = math.sqrt(sum(x * x for x in v)) or 1.0
+            return [x / n for x in v]
+        pn = _norm(list(proj_vec))
+        sn = _norm(list(survey_vec))
+        return [(1.0 - w) * pi + w * si for pi, si in zip(pn, sn)]
+
+
 # --------------------------------------------------------- embeddings
 
 def _iter_jsonl(path: Path):
@@ -703,6 +807,16 @@ def main() -> int:
                          "Embedding the researcher's interest text via a "
                          "third-party API needs the same operator gate as "
                          "the archive embedding pass.")
+    ap.add_argument("--survey-grounding", choices=("on", "off"), default="on",
+                    dest="survey_grounding",
+                    help="P34/S9: additive query-embedding grounding from the "
+                         "P28 survey memory (archive_survey_aims + archive_"
+                         "survey_keywords). 'on' (default) blends the "
+                         "researcher-CONFIRMED interests into the query vector "
+                         "as an equal-weight partner to the (decaying) "
+                         "csnl_research.projects prose; 'off' reproduces the "
+                         "pre-P34 projects-only baseline for the A/B eval gate. "
+                         "MSY (blank survey) is projects-only either way.")
     ap.add_argument("--composite-mode", default=COMPOSITE_MODE,
                     choices=("linear", "rrf", "auto"),
                     help="P19b: 'auto' (default) picks RRF when fingerprint "
@@ -770,10 +884,29 @@ def main() -> int:
         if not rows:
             print(f"[queue] {init}: no active projects — skipping")
             continue
-        text = "\n\n".join(_interest_text_from_row(r) for r in rows)
-        if not text.strip():
-            print(f"[queue] {init}: empty interest text — skipping")
+        project_text = "\n\n".join(_interest_text_from_row(r) for r in rows)
+        # P34/S9 — additive survey grounding (researcher-CONFIRMED interests).
+        # Fetched here so it is available to (a) the skip guard, (b) the log,
+        # and (c) the embedding blend below. `--survey-grounding off` restores
+        # the exact pre-P34 projects-only path for the eval baseline.
+        survey_text, survey_meta = ("", {})
+        if args.survey_grounding == "on":
+            survey_text, survey_meta = _fetch_survey_grounding(init)
+        if not project_text.strip() and not survey_text.strip():
+            print(f"[queue] {init}: empty interest text "
+                  f"(no projects, no survey) — skipping")
             continue
+        if survey_text.strip() and project_text.strip():
+            grounding_source = "survey+projects"
+        elif survey_text.strip():
+            grounding_source = "survey-only"
+        else:
+            grounding_source = "projects-only"
+        # `text` stays the PROJECT prose — dim-pref derivation + per-project
+        # weighting below read it; survey grounding is folded in at the query-
+        # vector level only (see the encode/blend block), so those paths are
+        # untouched.
+        text = project_text
 
         # P26d — reasoning-gate relevance decisions for this researcher.
         # {canonical_id: 'A'|'B'|'C'}. Drives COS_FLOOR exemption + composite
@@ -838,36 +971,59 @@ def main() -> int:
               f"chunk_mix={chunk_mix}  "
               f"focus_top={[c for c, _ in focus_by_weight[:3]]}  "
               f"project_weights={project_weights or 'uniform'}")
+        # P34/S9 — log WHICH source grounded this researcher's query embedding.
+        print(f"[queue] {init}: grounding={grounding_source}  "
+              f"survey_aims={survey_meta.get('n_aims', 0)}  "
+              f"survey_keywords={survey_meta.get('n_keywords', 0)}  "
+              f"query_chars(project={len(project_text)}, "
+              f"survey={len(survey_text)})")
 
-        if project_weights and len(rows) >= 2:
-            # Encode each project's interest text separately, average with
-            # supplied weights. Skips zero-weight projects.
-            try:
-                import numpy as np
-            except ImportError:
-                np = None
-            per_proj_text = {r.get("project_slug") or r.get("title"):
-                             _interest_text_from_row(r) for r in rows}
-            slugs = [s for s in per_proj_text if per_proj_text[s].strip()
-                     and project_weights.get(s, 0) > 0]
-            if slugs:
-                vecs = backend.encode([per_proj_text[s] for s in slugs])
-                wsum = sum(project_weights[s] for s in slugs) or 1.0
-                if np is not None:
-                    arr = np.asarray(vecs, dtype="float32")
-                    w = np.asarray([project_weights[s] for s in slugs],
-                                   dtype="float32").reshape(-1, 1)
-                    qv = (arr * w / wsum).sum(axis=0).tolist()
+        # --- project-based query vector (existing logic, unchanged) ---
+        proj_qv = None
+        if project_text.strip():
+            if project_weights and len(rows) >= 2:
+                # Encode each project's interest text separately, average with
+                # supplied weights. Skips zero-weight projects.
+                try:
+                    import numpy as np
+                except ImportError:
+                    np = None
+                per_proj_text = {r.get("project_slug") or r.get("title"):
+                                 _interest_text_from_row(r) for r in rows}
+                slugs = [s for s in per_proj_text if per_proj_text[s].strip()
+                         and project_weights.get(s, 0) > 0]
+                if slugs:
+                    vecs = backend.encode([per_proj_text[s] for s in slugs])
+                    wsum = sum(project_weights[s] for s in slugs) or 1.0
+                    if np is not None:
+                        arr = np.asarray(vecs, dtype="float32")
+                        w = np.asarray([project_weights[s] for s in slugs],
+                                       dtype="float32").reshape(-1, 1)
+                        proj_qv = (arr * w / wsum).sum(axis=0).tolist()
+                    else:
+                        proj_qv = [0.0] * len(vecs[0])
+                        for v, s in zip(vecs, slugs):
+                            ww = project_weights[s] / wsum
+                            for i, val in enumerate(v):
+                                proj_qv[i] += ww * float(val)
                 else:
-                    qv = [0.0] * len(vecs[0])
-                    for v, s in zip(vecs, slugs):
-                        ww = project_weights[s] / wsum
-                        for i, val in enumerate(v):
-                            qv[i] += ww * float(val)
+                    proj_qv = backend.encode([text])[0]
             else:
-                qv = backend.encode([text])[0]
+                proj_qv = backend.encode([text])[0]
+
+        # --- P34/S9: additive survey grounding (equal-weight embedding blend).
+        # The survey text is encoded SEPARATELY and blended into the query
+        # vector, so grounding applies identically to the single-text and the
+        # project-weighted paths, and short survey phrases keep a length-
+        # independent 50% against long project prose. When there is no survey
+        # (projects-only, e.g. MSY) or --survey-grounding off, qv == proj_qv,
+        # i.e. exact pre-P34 behavior.
+        if survey_text.strip():
+            survey_qv = backend.encode([survey_text])[0]
+            qv = (_blend_query_vectors(proj_qv, survey_qv)
+                  if proj_qv is not None else survey_qv)
         else:
-            qv = backend.encode([text])[0]
+            qv = proj_qv
 
         # Candidate set: in-scope, embedded, present in archive.
         cids = [c for c, f in filters.items() if f.get("is_lab_relevant", True)]

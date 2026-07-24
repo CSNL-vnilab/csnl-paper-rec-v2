@@ -24,8 +24,13 @@ PIPELINE (per researcher)
                        A=aim(domain+task) / B=phenomenon / C=mechanism+framework.
                        STRONG → admit; clear-NONE → reject; BORDERLINE → the LLM
                        reasoning-gate (P26-style same-job test).
-  4. veto            : drop a candidate whose phenomenon/research-focus matches a
-                       negatives row (the always-missing per-researcher exclude).
+  4. negatives       : the always-missing per-researcher exclude. A negatives row
+                       whose excl_topic SPECIFICALLY matches a candidate's
+                       phenomenon/research-focus HARD-vetoes it ONLY when
+                       confidence='high' AND the candidate is not a SAVED
+                       phenomenon (join archive_responses save/read — the P24
+                       landmine guard); every other match is a DEPRIORITISE prior
+                       (a rerank penalty, never a drop).
   5. def-aware       : for ambiguous keywords (operational_def + conflict_term),
                        penalise a match made in the conflict_term's sense.
   6. rerank          : w·connection + w·mechanism + w·keyword(def-aware) +
@@ -48,9 +53,13 @@ LLM REASONING-GATE — boundary-safe (NO LLM in the unattended path)
         borderline pairs default to REJECT (conservative — never over-admit on a
         cache miss). This is the cron-safe, zero-LLM path.
 
-BOUNDARY: csnl_research read-only; archive_responses is READ-ONLY and only touched
-under the gated --use-behaviour flag (default OFF); default dry-run (writes JSONL
-only); --apply UPSERTs archive_researcher_queues as the PARKED builder='p28' —
+BOUNDARY: csnl_research read-only; archive_responses is READ-ONLY. It is read on
+the db path (and the DB-reading --use-behaviour path) as the saved-phenomenon veto
+guard — save/read rows only — so a stated exclusion never drops a phenomenon the
+researcher SAVED; --use-behaviour (default OFF) additionally turns not_relevant
+reasons into extra negatives + a rerank boost. The prefill-only path stays fully
+offline. Default dry-run (writes JSONL only); --apply UPSERTs
+archive_researcher_queues as the PARKED builder='p28' —
 pruning only its own rows so it never deletes brq's authoritative queue (P28 not
 live; --apply stays operator-gated). No researcher-facing send (.P23_ENABLED gate
 stays off, owned elsewhere). Tier is derived from connection strength (R-TIER),
@@ -112,6 +121,14 @@ W_BEHAVIOUR = 0.08    # MF-7 (GATED): boost toward saved/read-paper signals. The
                       # validate_drift before promotion (it changes rankings).
 DEF_PENALTY = 0.50    # multiplicative penalty for a wrong-sense keyword match
 RECENCY_TIER = {"recent": 1.0, "mid": 0.6, "classic": 0.4}
+
+# --- negatives: confidence-gated veto + DEPRIORITISE priors (P24 landmine) ---
+# Survey negatives are DEPRIORITISE priors BY DEFAULT — a multiplicative rerank
+# penalty, never a drop. Only confidence='high' negatives may HARD-veto, and even
+# then never on a phenomenon the researcher has SAVED (see _negatives_effect).
+NEG_DEPRIO = 0.65        # per matched deprioritise-negative (multiplicative)
+NEG_DEPRIO_FLOOR = 0.35  # floor so stacked deprios down-rank but never nuke a
+                         #   genuinely-connected paper to zero
 
 # Generic words that must NOT carry a connection on their own (the C-axis
 # over-fire vector from the P26 review: model-name / generic methodology word).
@@ -322,6 +339,47 @@ def _specific(matched: list[str]) -> list[str]:
     return out
 
 
+def _content_tokens(phrase: str) -> set[str]:
+    """The meaningful CONTENT tokens of a phrase: length ≥ 4 and not stop-ish.
+    Glue / prepositions / generic domain words ('memory', 'model', 'bias',
+    'neural', 'network' is kept but 'neural' is stop-ish) are dropped, so two
+    phrases that differ ONLY by such tokens ('serial bias' vs 'serial
+    dependence') share the same content set and are NOT treated as distinct
+    concepts. Used by the saved-phenomenon shield's distinctness test."""
+    return {t for t in phrase.split() if len(t) >= 4 and t not in _STOPish}
+
+
+def _saved_shield(saved_hits: list[str], anchor: list[str]) -> bool:
+    """Does a SAVED phenomenon genuinely, DISTINCTLY shield this paper from a hard
+    veto? True iff some saved hit is a SPECIFIC (multiword, non-glue) phrase that
+    contributes ≥ 1 CONTENT token the veto anchor does NOT — i.e. a real saved
+    phenomenon distinct from the excluded topic, not the same concept in other
+    words.
+
+    Closes the circular hole (adversarial review V-veto HIGH): the old test asked
+    only whether a saved hit was a non-substring of the anchor, so a paper whose
+    ONLY tie to a saved phenomenon was a generic/stop-word variant of the very
+    phrase that triggered the negative ('serial bias' vs the excluded 'serial
+    dependence', or a lone generic 'working memory') still counted as a distinct
+    shield and a genuinely off-focus paper survived a high-confidence veto. Here a
+    saved hit must (1) be multiword non-glue (`_specific`) AND (2) carry specific
+    content beyond the anchor, else it does NOT shield and the negative falls
+    through to a DEPRIORITISE prior / hard veto as its confidence dictates.
+
+    `anchor` is the phrases that ACTUALLY matched and triggered the veto (`spec`),
+    not the full excl_topic prose — so a negative's contrast wording (neg#6's
+    '(attractor·WM 연결 없음)') can't wrongly strip a genuine attractor shield.
+    Pure."""
+    anchor_content: set[str] = set()
+    for a in anchor:
+        anchor_content |= _content_tokens(a)
+    for h in _specific(saved_hits):          # multiword, non-glue only
+        hc = _content_tokens(h)
+        if hc and (hc - anchor_content):     # has specific content the anchor lacks
+            return True
+    return False
+
+
 def connection(paper_norm: str, aim: Aim) -> dict:
     """Score the genuine connection of a paper to one aim, with admission gated
     on SPECIFIC PHENOMENON evidence (the appendix's same-job rule + the
@@ -391,38 +449,87 @@ def _derive_tier(conn: dict) -> str:
 # Veto (per-researcher negatives) + definition-aware subtraction
 # ===========================================================================
 
-def _veto(paper_norm: str, negatives: list[dict], conn_score: float,
-          conn_specific: bool) -> Optional[dict]:
-    """Return the matched negative (veto) or None. Fires ONLY on phenomenon/
-    research-focus/anti-example negatives (never species/domain/method).
+def _negatives_effect(paper_norm: str, negatives: list[dict], conn_score: float,
+                      conn_specific: bool, saved_hits: list[str],
+                      is_saved: bool) -> dict:
+    """P24-safe consumption of the per-researcher survey negatives.
 
-    Adversarial-review C2 fix — the anchor is the structured `excl_topic` ONLY,
-    NOT the free contrast prose (whose glue words 'mechanism / pattern / only /
-    abstract / rate' became false veto triggers and killed genuine task-matched
-    papers). A SPECIFIC (multiword) excl_topic phrase must match — a generic
-    unigram never vetoes. Guards:
-      * a STRONG genuine connection (≥STRONG_CONN) is never lexically vetoed;
-      * a paper with a SPECIFIC phenomenon connection needs the exclusion to
-        CLEARLY dominate (≥ conn+0.20) before it is dropped;
+    Fires ONLY on phenomenon/research-focus/anti-example negatives (never
+    species/domain/method). Each candidate negative is matched on its structured
+    `excl_topic` ONLY — NOT the free contrast prose (adversarial-review C2: glue
+    words 'mechanism / pattern / only / rate' were false triggers) — and must
+    produce a SPECIFIC (multiword, non-glue) match at ≥ VETO_THRESH that clears
+    the same margin/dominance guards the P28b veto always had:
+      * a STRONG genuine connection (≥STRONG_CONN) is never lexically dropped;
+      * a SPECIFIC-phenomenon connection needs the exclusion to CLEARLY dominate
+        (≥ conn+0.20) before it can drop;
       * otherwise the exclusion must outscore the connection (≥ conn+0.10) or be
-        very strong on its own (≥0.70)."""
-    best: Optional[dict] = None
+        very strong on its own (≥0.70).
+
+    A negative that clears those guards is then classified, honoring the P24
+    landmine (survey/behaviour save-signals overlap on shared phrases, so a
+    stated exclusion must NEVER silently kill a saved phenomenon):
+      * HARD VETO (drop) ONLY when confidence=='high' AND the paper is NOT
+        shielded by the researcher's SAVE behaviour — the paper is itself a saved
+        paper (`is_saved`), or it connects on a SAVED phenomenon that is a
+        SPECIFIC (multiword, non-glue) phrase carrying content the negative's
+        matched anchor does NOT (`_saved_shield`). A saved hit whose only tie is a
+        generic / stop-word variant of the phrase that triggered the negative
+        ('serial bias' vs the excluded 'serial dependence') is NOT a distinct
+        shield — the V-veto circular hole — so it falls through to DEPRIORITISE /
+        veto. save/read behaviour outranks a stated exclusion only on a GENUINELY
+        distinct saved phenomenon.
+      * otherwise → a DEPRIORITISE prior: a multiplicative rerank penalty
+        (down-rank, never drop). This is the DEFAULT for every medium/low
+        negative AND for a high-confidence one shielded by save behaviour.
+
+    Returns {'veto': <neg>|None, 'mult': float∈[floor,1], 'deprio': [...],
+    'notes': [...]}. Pure — `saved_hits`/`is_saved` are precomputed by the caller
+    from a READ-ONLY archive_responses join."""
+    best_veto: Optional[dict] = None
+    deprio: list[dict] = []
     for n in negatives:
         ntype = (n.get("neg_type") or "").lower()
         if ntype and ntype not in ("phenomenon", "research-focus", "anti-example"):
             continue
         anchor = _phrases(n.get("excl_topic") or "")        # excl_topic ONLY
         score, matched = _overlap(paper_norm, anchor)
-        if not _specific(matched) or score < VETO_THRESH:   # require a SPECIFIC match
+        spec = _specific(matched)
+        if not spec or score < VETO_THRESH:                 # require a SPECIFIC match
             continue
         if conn_score >= STRONG_CONN:
             continue
         margin = 0.20 if conn_specific else 0.10
-        if score >= conn_score + margin or score >= 0.70:
-            if best is None or score > best["score"]:
-                best = {"neg_id": n["neg_id"], "score": round(score, 3),
-                        "matched": _specific(matched)[:4], "type": ntype or "?"}
-    return best
+        if not (score >= conn_score + margin or score >= 0.70):
+            continue
+        conf = (n.get("confidence") or "").lower()
+        # Saved-phenomenon shield (landmine): the researcher literally saved THIS
+        # paper (`is_saved`), or the paper connects on a saved phrase that is a
+        # SPECIFIC (multiword, non-glue) phenomenon carrying content the veto
+        # anchor lacks (`_saved_shield`, checked against the MATCHED anchor `spec`).
+        # The circular case is now fully closed: a saved hit that is the same
+        # concept as the anchor in other words ('serial bias' vs the excluded
+        # 'serial dependence'), a stop-word variant, or a lone generic phrase does
+        # NOT shield — it would otherwise let a genuinely off-focus paper survive a
+        # high-confidence veto (V-veto HIGH). Behaviour negatives (--use-behaviour,
+        # reason-text force-tagged confidence='high') flow through here too, so the
+        # same distinctness rule guards their hard veto.
+        shielded = is_saved or _saved_shield(saved_hits, spec)
+        entry = {"neg_id": n["neg_id"], "score": round(score, 3),
+                 "matched": spec[:4], "type": ntype or "?",
+                 "confidence": conf or "?", "shielded": bool(shielded)}
+        if conf == "high" and not shielded:
+            if best_veto is None or score > best_veto["score"]:
+                best_veto = entry
+        else:
+            deprio.append(entry)                            # DEPRIORITISE prior
+    mult = 1.0
+    for _ in deprio:
+        mult *= NEG_DEPRIO
+    mult = max(NEG_DEPRIO_FLOOR, round(mult, 4))
+    notes = [f"neg#{d['neg_id']}({d['confidence']}"
+             + (";saved-shield" if d["shielded"] else "") + ")" for d in deprio]
+    return {"veto": best_veto, "mult": mult, "deprio": deprio, "notes": notes}
 
 
 def _def_penalty(paper_norm: str, keywords: list[dict]) -> tuple[float, list[str]]:
@@ -566,7 +673,12 @@ def _behaviour_negatives(responses: list[dict]) -> list[dict]:
         if not reason.strip():
             continue                      # no reason ⇒ no veto (landmine guard)
         out.append({"neg_id": f"beh:{r.get('canonical_id')}",
-                    "neg_type": "anti-example", "excl_topic": reason})
+                    "neg_type": "anti-example", "excl_topic": reason,
+                    # an explicit not_relevant WITH a stated reason is a hard
+                    # behavioural rejection → 'high' so it retains the hard-veto
+                    # capability the pre-confidence-gate _veto gave it (KEEP
+                    # --use-behaviour semantics); still saved-shield-guarded.
+                    "confidence": "high"})
     return out
 
 
@@ -601,6 +713,27 @@ def load_behaviour(init: str, synopses: dict) -> dict:
             "pos_phrases": _behaviour_positive_phrases(resp, synopses)}
 
 
+def load_saved(init: str, synopses: dict) -> dict:
+    """READ-ONLY landmine guard input (ALWAYS-ON on the db path — NOT gated behind
+    --use-behaviour): this researcher's SAVED papers (save_later/already_read)
+    from archive_responses → {ids, phrases}. The negatives' hard-veto is shielded
+    from a saved phenomenon with these (never veto a phenomenon the researcher has
+    SAVED). `ids` protects the exact saved paper; `phrases` (its synopsis
+    signals/frameworks) generalise the shield to NEW papers on the same saved
+    phenomenon. archive_responses is READ ONLY; csnl_research untouched. Distinct
+    from load_behaviour (which — gated — ALSO turns not_relevant reasons into extra
+    negatives + adds a rerank boost); this reads only the positive save rows."""
+    from _db import load_env, query_json, ledger_schema  # noqa: E402
+    load_env()
+    sch = ledger_schema()
+    resp = query_json(
+        f"SELECT canonical_id, choice, choice_detail "
+        f"FROM {sch}.archive_responses WHERE researcher_id='{init}' "
+        f"AND choice IN ('save_later','already_read')") or []
+    ids = {r.get("canonical_id") for r in resp if r.get("canonical_id")}
+    return {"ids": ids, "phrases": _behaviour_positive_phrases(resp, synopses)}
+
+
 # ===========================================================================
 # Main per-researcher build
 # ===========================================================================
@@ -609,13 +742,24 @@ def recommend_one(init: str, mem: dict, papers: dict, filters: dict,
                   synopses: dict, today: datetime,
                   embeddings: Optional[dict], gate_mode: str,
                   gate_cache: dict, gate_emit: list, log: list,
-                  behaviour: Optional[dict] = None) -> list[dict]:
+                  behaviour: Optional[dict] = None,
+                  saved: Optional[dict] = None) -> list[dict]:
     aims = _build_aims(mem)
     if not aims:
         log.append(f"{init}: no aims (survey blank?) — skipping, legacy builder owns this researcher")
         return []
     negatives = mem["negatives"]
     keywords = mem["keywords"]
+
+    # ---- SAVED-phenomenon guard (P24 landmine, READ-ONLY archive_responses).
+    # saved_ids protects the exact saved paper; saved_phrases generalise the
+    # shield to new papers on the same saved phenomenon. Empty offline (prefill,
+    # no --use-behaviour) → guard is a no-op and negatives behave as before.
+    saved_ids: set = (saved or {}).get("ids") or set()
+    saved_phrases: list[str] = (saved or {}).get("phrases") or []
+    if saved_ids or saved_phrases:
+        log.append(f"{init}: saved-phenomenon guard ON — {len(saved_ids)} saved "
+                   f"papers, {len(saved_phrases)} saved phrases shield the veto")
 
     # ---- behaviour (MF-7, GATED) — EXTEND negatives + prep boost phrases.
     # Inert unless --use-behaviour built a `behaviour` dict (default OFF): with
@@ -671,7 +815,8 @@ def recommend_one(init: str, mem: dict, papers: dict, filters: dict,
                f"(in_scope={len(in_scope)})")
 
     # ---- per-candidate: best connection over aims → admit/veto/rerank ----
-    n_admit = n_borderline_admit = n_gate_emit = n_reject = n_veto = 0
+    n_admit = n_borderline_admit = n_gate_emit = n_reject = n_veto = n_deprio = 0
+    n_shield = 0
     rows: list[dict] = []
     for c in cand:
         paper = papers[c]
@@ -700,13 +845,23 @@ def recommend_one(init: str, mem: dict, papers: dict, filters: dict,
         conn = best["conn"]
         decision = best["decision"]
 
-        # ---- veto FIRST (before the gate) — a paper that aligns with an
-        # excluded phenomenon is dropped here, so it never wastes an Opus
-        # same-job judgement and a borderline veto-match can't be gate-admitted.
-        v = _veto(pnorm, negatives, conn["score"], conn.get("specB", False))
-        if v:
+        # ---- negatives FIRST (before the gate) — a HIGH-confidence exclusion
+        # drops the paper here (so it never wastes an Opus same-job judgement and
+        # a borderline veto-match can't be gate-admitted); a medium/low or
+        # saved-shielded exclusion becomes a DEPRIORITISE penalty applied in the
+        # rerank composite below (down-rank, never drop). Landmine guard: a
+        # SAVED phenomenon is never hard-vetoed.
+        is_saved = c in saved_ids
+        saved_hits = _specific(_overlap(pnorm, saved_phrases)[1]) if saved_phrases else []
+        neg = _negatives_effect(pnorm, negatives, conn["score"],
+                                conn.get("specB", False), saved_hits, is_saved)
+        if neg["veto"]:
             n_veto += 1
             continue
+        if neg["deprio"]:
+            n_deprio += 1
+            if any(d["shielded"] for d in neg["deprio"]):
+                n_shield += 1
 
         # ---- LLM reasoning-gate on borderline ----
         if decision == "borderline":
@@ -772,6 +927,7 @@ def recommend_one(init: str, mem: dict, papers: dict, filters: dict,
         if conn["axis"] == "B":
             composite += W_AXIS_B
         composite *= def_mult
+        composite *= neg["mult"]  # DEPRIORITISE prior (survey/behaviour negatives)
         if pi_sig < 0:
             composite *= 0.7      # negative-PI deprioritise (never drops)
         composite = round(composite, 4)
@@ -781,6 +937,9 @@ def recommend_one(init: str, mem: dict, papers: dict, filters: dict,
                 "pi": round(pi_sig, 2), "method": round(method_sig, 2),
                 "domain_priority": round(dom_sig, 2),
                 "decision": "gated" if conn.get("gated") else best["decision"]}
+        if neg["deprio"]:
+            prov["neg_deprio"] = neg["notes"]
+            prov["neg_mult"] = neg["mult"]
         if behaviour:
             prov["behaviour_boost"] = round(beh_sig, 2)
         rows.append({
@@ -794,7 +953,8 @@ def recommend_one(init: str, mem: dict, papers: dict, filters: dict,
         })
 
     log.append(f"{init}: admit={n_admit} borderline→admit={n_borderline_admit} "
-               f"gate_emit={n_gate_emit} veto={n_veto} reject={n_reject} "
+               f"gate_emit={n_gate_emit} veto={n_veto} deprio={n_deprio} "
+               f"(saved-shielded={n_shield}) reject={n_reject} "
                f"→ ranked={len(rows)}")
 
     # ---- chunk, rank, cap ----
@@ -957,9 +1117,16 @@ def main() -> int:
     for init in targets:
         mem = load_memory(init, args.profile_source)
         behaviour = load_behaviour(init, synopses) if args.use_behaviour else None
+        # SAVED-phenomenon guard (P24 landmine): read-only archive_responses join,
+        # ALWAYS-ON whenever the DB is reachable (db profile source OR the already
+        # DB-reading --use-behaviour path). Stays fully offline / empty on the
+        # prefill-only path, where the negatives keep their prior behaviour.
+        saved = (load_saved(init, synopses)
+                 if (args.profile_source == "db" or args.use_behaviour)
+                 else {"ids": set(), "phrases": []})
         rows = recommend_one(init, mem, papers, filters, synopses, today,
                              embeddings, args.gate_mode, gate_cache, gate_emit, log,
-                             behaviour)
+                             behaviour, saved)
         tokens[init] = str(uuid.uuid4())
         for r in rows:
             r["build_token"] = tokens[init]

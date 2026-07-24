@@ -51,6 +51,16 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("researcher", nargs="?", default=None)
     ap.add_argument("--window-days", type=int, default=30)
+    # Held-out recommender eval (eval_recommender.py) — a *less-circular*
+    # ranking metric appended below the descriptive precision_30d report.
+    ap.add_argument("--held-out", dest="held_out", action="store_true", default=True,
+                    help="append the held-out recommender eval (default on)")
+    ap.add_argument("--no-held-out", dest="held_out", action="store_false",
+                    help="skip the held-out recommender eval")
+    ap.add_argument("--holdout-frac", type=float, default=0.3,
+                    help="newest fraction of each researcher's labels held out (default 0.3)")
+    ap.add_argument("--order", choices=("composite", "presentation"), default="composite",
+                    help="held-out ranking order (default composite = model score)")
     args = ap.parse_args()
 
     sys.path.insert(0, str(_REPO_ROOT / "pipeline"))
@@ -126,6 +136,27 @@ def main() -> int:
         print(f"{init:6s}  {n_all:>6d}  {n_30d:>6d}  "
               f"{_fmt_pct(precision_30d):>14s}  {_fmt_pct(already_read_rate):>17s}  "
               f"{','.join(flags) if flags else '—'}")
+
+    # ------------------------------------------------------------------ #
+    # Held-out recommender eval (extend, do not duplicate) — the
+    # precision_30d above only tests papers the policy already showed and
+    # has no ranking notion; eval_recommender adds a temporal-holdout
+    # recall@k / MRR / precision@5 scoreboard over archive_researcher_queues.
+    # ------------------------------------------------------------------ #
+    if args.held_out:
+        print()
+        print("=" * 80)
+        try:
+            sys.path.insert(0, str(Path(__file__).resolve().parent))
+            import eval_recommender as _ev
+            board = _ev.compute_scoreboard(
+                inits, holdout_frac=args.holdout_frac, order=args.order)
+            _ev.print_scoreboard(board, order=args.order)
+            print("\n(held-out eval is *less-circular* than precision_30d, not "
+                  "non-circular — labels are still policy-selected; see "
+                  "eval_recommender.py docstring.)")
+        except Exception as e:  # never let the eval break the drift report
+            print(f"[held-out eval skipped: {e}]")
 
     return 0
 
