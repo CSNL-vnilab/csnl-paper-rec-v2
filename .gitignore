@@ -70,3 +70,6 @@ state/archive/_backup_p32/
 
 # P34 autonomous exploration records (raw; distilled output lands in docs/)
 state/archive/_explore/
+
+# P34 MM-slides reconciler runtime artifact
+state/reconcile_mm_slides.jsonl
