@@ -401,3 +401,13 @@ saved-phenomenon-shield fixed; keyless `backfill_abstracts.py` (the 2,399/9,015 
 **NAS blueprint** (`docs/P34-NAS-BLUEPRINT.md`): nas_index + local-only read-only MCP + reuse-the-
 ingesters router, under two hard constraints — efficiency (index conventions not contents) and
 **NAS read-only + no path egress off-lab** (operator 2026-07-24).
+
+## Batch follow-up (2026-07-25) — abstract backfill widened the candidate pool 2.4×
+
+Keyless abstract backfill (Crossref/EuropePMC/PubMed, err=0) filled **4,483** null/short abstracts
+(rollback manifest saved). Usable-abstract pool 2,399 → **6,882** (26.6% → 76.3%); RECOMMENDABLE
+pool (usable ∩ embedded) ~2,399 → **5,798** (a further 1,084 await compute_embeddings — a bonus).
+Rebuilt all 7 queues on the widened pool (JYK auto-excluded from survey grounding by the durable
+guard); the held-out eval gate **PASSES** (BHL 0→7, SMJ 43→79, JYK 57→57, no target regresses).
+The pool-widening's value is forward-looking (more/newer candidates) and additive — the backward-
+looking held-out recall is unchanged because held-out positives were already in the old pool.

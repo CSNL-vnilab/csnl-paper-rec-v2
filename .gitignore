@@ -73,3 +73,6 @@ state/archive/_explore/
 
 # P34 MM-slides reconciler runtime artifact
 state/reconcile_mm_slides.jsonl
+
+# P34 abstract-backfill rollback manifests (runtime; reversible via the manifest)
+state/archive/backfill_run/
