@@ -459,3 +459,85 @@ weeks; csnl-ops's GH Actions crons work. Constraint: anything touching the NAS i
 (`.P23_ENABLED` absent) and the launchd failures have a known cause (TCC / Full Disk Access, per
 your own memory note). Migrating the scheduler of a system that is intentionally not running yet
 is premature; do it as part of turning delivery on, alongside B5.
+
+---
+
+## P34 NAS-blueprint decisions
+
+> From batch09 (`docs/P34-NAS-BLUEPRINT.md`, synthesizing D1-index / D2-router / D3-explore).
+> These gate the NAS **natural-language index** + **auto-router**. Same format:
+> *what's blocked · why it matters · options · my recommendation.* None block P34.1–P34.4 (the
+> read-only index + retrieval MCP, operator goal (1)) — those can proceed on the recommendations
+> as written. The router phases (P34.5–P34.8) want N1–N3 answered; N6 is a one-time deployment check.
+
+**N1. Index home + schema — confirm `csnl_paper_rec.nas_index`.** *Blocked:* the migration
+(P34.2) and every downstream consumer. *Why:* it fixes the PK contract and where three new objects
+live. *Options:* (1) `csnl_paper_rec.{nas_index, nas_index_runs, archive_nas_artifacts}` with
+`PK = sha1(nfc(share-relative rel_path))` — mount-independent, mirrors `archive_meeting_materials`
+style, all writes stay in the schema paper-rec owns; (2) put the locator in `csnl_core`/a shared
+schema for csnl-ops to co-read. **Rec: Option 1.** Same argument as E1/E2 — keep NAS-derived state
+in the schema paper-rec writes; csnl-ops can read it cross-schema if ever needed. No absolute
+`/Volumes/…` path is ever stored (volume name drifts by mount order).
+
+**N2. Refresh cadence — piggy-back the Wednesday routine, or a separate operator `!`?**
+*Blocked:* P34.7 (cron) and how fresh retrieval is. *Why:* an *unattended* walk still touches the
+NAS, and E3 already flagged the launchd/FDA fragility. *Options:* (1) chain `index_nas.py --refresh`
+→ `route_new_nas_files.py` onto the existing Wed launchd tick (one NAS touch/week, gated by a new
+`.NAS_ENABLED` marker); (2) keep it a manual operator `!` step until go-live, cron later.
+**Rec: Option 2 now → Option 1 at go-live**, exactly parallel to E3 — the delivery cron is
+deliberately dormant, so don't stand up a second unattended NAS-touching job before the first one is
+turned on. Ship the indexer + read-only MCP (goal 1) as an operator-run step immediately; add the
+cron when `.P23_ENABLED`/`.NAS_ENABLED` flip together. **Quick refresh** walks only mutable subtrees
+(`GRM/<year>`, `MM`, `Memory/*/Context`, `people`); `Memory/Papers` (~4.9k, near-static) only on
+`--full`.
+
+**N3. MM slides — extend the ingester, or leave MM presence-only?** *Blocked:* P34.6, and whether
+MM decks route at all. *Why:* MM decks are `MM/<INIT>/MM260714_JOP.pptx` (date in the **filename**,
+one folder per person), but `ingest_grm_nas` is date-*folder* driven and its `classify()` would
+mistag an MM deck as `grm`. *Options:* (1) **extend, not fork** — add `kind='mm'` + an MM scan mode
+(root `MM/<INIT>/`, date-from-filename, presenter from folder) writing the same
+`archive_meeting_materials` table; (2) leave MM to `check_materials.py` (presence-only, no ingest) —
+the index still *locates* MM decks via `nas_index`, they just don't get the full per-deck ingest.
+**Rec: Option 1** — MM is a first-class meeting stream (memory `csnl-weekly-cadence`), reuse beats a
+gap; it's a bounded extension of a script the operator already runs `!`.
+
+**N4. Manuscript detection — heuristic tokens, or an operator allow-list per researcher?**
+*Blocked:* the `manuscript` lane precision (P34.1 catalog + P34.5 router). *Why:* D3 found the
+**`.docx` extension is a false-positive trap** — most `.docx` are experiment-info / IRB-consent /
+notes, and manuscripts have **no dedicated home** (they scatter across `people/{INIT}/…/{Manuscript|
+writing|submissions|Revision|Thesis}` + stray `Context/Manuscript_*.pdf`). *Options:* (1) the D3
+precedence rule — require a manuscript **folder-token OR filename section-token**, never extension
+alone (catalog data, self-maintaining); (2) an explicit operator allow-list of manuscript folders
+per researcher (precise but standing maintenance, and stale the moment someone makes a new folder).
+**Rec: Option 1** — it is a catalog edit, keeps IRB/notes out of the lane, and a miss is fixed by
+adding a token, not editing code. Accept that `owner`/`date` for manuscripts are **low-confidence**
+(folder-initial only; author-surname clusters like `LeeYeoLee`/`GuEtAl` do **not** map to a lab
+initial; author-year `GuEtAl2024` is a citation year, not a draft date).
+
+**N5. `experiment_code` recall depth + data granularity — how deep, one row per what?**
+*Blocked:* index row-count vs findability (P34.3), and the code pointer grain (P34.5b). *Why:* full
+`Code/` trees are large/noisy and contain **vendored toolboxes** (`bads-master`, `mcmcstat`,
+`dynamic_bias`, `Gu_et_al`) that must not be attributed to the researcher; `Data/`/`Results/` are
+piles of `.mat`/`.csv`. *Options:* (1) index code as **one pointer row per `Code/` dir / repo root**
+(not per file) + prune the toolbox list, and record `data` at **directory-session grain**, not
+per-file; (2) index every code/data file (full recall, but thousands of library + output rows).
+**Rec: Option 1** — a repo is thousands of files; a pointer + owner + `git_remote` is enough to route
+and retrieve, and it is the efficiency constraint made concrete. (`data` stays coarse; DICOM is
+already shallow-listed by name only.)
+
+**N6. Local-runner Full Disk Access — confirm before the cron (deployment check, not a design
+choice).** *Blocked:* P34.7 only. *Why:* launchd jobs touching `~/Documents` + an SMB mount die
+`exit 126 "Operation not permitted"` **without FDA** — the documented cause of the dead v3 crons
+(memory `macos-launchd-tcc-fda`), and the same risk E3 raised. *Action:* before enabling
+`.NAS_ENABLED`, grant the launchd-spawned shell Full Disk Access on the lab Mac and verify a manual
+`launchctl kickstart` run reads the share. No code decision — a go-live prerequisite bundled with B5/E3.
+
+**N7. Expose the read-only `nas-index` MCP to all models — yes; keep the write-side router MCP
+operator-only.** *Blocked:* `.mcp.json` registration (P34.4 vs P34.8). *Why:* operator goal (1) is
+"any model can retrieve by NL," but routing tools **write**. *Options:* (1) register **one**
+read-only `nas-index` server (`nas_search`/`nas_get`, DB-read only, never returns file bytes, never
+walks the NAS) broadly — the shareable surface — and **defer** the write-side `nas-router` MCP to an
+attended operator facade only; (2) register both now. **Rec: Option 1** — the broadly-reachable
+surface stays strictly read-only over a locator table (no write, no NAS, no bytes), so wide exposure
+carries no risk; the router's write tools are reachable only in an operator session. This is the
+clean security posture and it fully satisfies goal (1) without waiting on the router phases.
